@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Presentations and slides on Be ambitious</title>
-    <link>/slides/index.xml</link>
+    <link>https://winterwang.github.io/slides/index.xml</link>
     <description>Recent content in My Presentations and slides on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

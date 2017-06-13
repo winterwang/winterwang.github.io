@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on Be ambitious</title>
-    <link>/tags/test/index.xml</link>
+    <link>https://winterwang.github.io/tags/test/index.xml</link>
     <description>Recent content in Test on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Hello World</title>
-      <link>/post/2016-05-27-hello-world/</link>
+      <link>https://winterwang.github.io/post/2016-05-27-hello-world/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-05-27-hello-world/</guid>
+      <guid>https://winterwang.github.io/post/2016-05-27-hello-world/</guid>
       <description>&lt;!-- BLOGDOWN-HEAD --&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
