@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2017-02-13/">
+
+  
+
+  <title>「統計解析のための線形代数」復習筆記5 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記5</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-02-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Tue, Feb 14, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/learning-notes">learning notes</a
+    >, 
+    
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2017-02-13%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%985&amp;url=%2fpost%2f2017-02-13%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2017-02-13%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%985"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2017-02-13%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%985"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%985&amp;body=%2fpost%2f2017-02-13%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<ul>
+<li>2017-02-15 <strong>updated.</strong></li>
+</ul>
+<div class="section level2">
+<h2>數據的種類和尺度</h2>
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><td colspan='14' style='text-align: left;'>
+表1. 20歳の若者9名のデータ</td></tr>
+<tr>
+<th colspan='1' style='font-weight: 900; border-top: 2px solid grey; text-align: center;'></th><th style='border-top: 2px solid grey;; border-bottom: hidden;'>&nbsp;</th>
+<th colspan='2' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>性別</th><th style='border-top: 2px solid grey;; border-bottom: hidden;'>&nbsp;</th>
+<th colspan='5' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>健康状態</th><th style='border-top: 2px solid grey;; border-bottom: hidden;'>&nbsp;</th>
+<th colspan='1' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>体温</th><th style='border-top: 2px solid grey;; border-bottom: hidden;'>&nbsp;</th>
+<th colspan='1' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>身長</th>
+</tr>
+<tr>
+<th style='border-bottom: 1px solid grey; text-align: center;'></th>
+<th style='border-bottom: 1px solid grey;' colspan='1'>&nbsp;</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>男</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>女</th>
+<th style='border-bottom: 1px solid grey;' colspan='1'>&nbsp;</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>極良</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>良好</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>普通</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>不良</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>極悪</th>
+<th style='border-bottom: 1px solid grey;' colspan='1'>&nbsp;</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>°C</th>
+<th style='border-bottom: 1px solid grey;' colspan='1'>&nbsp;</th>
+<th style='border-bottom: 1px solid grey; text-align: center;'>cm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>36.9</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>155</td>
+</tr>
+<tr>
+<td style='text-align: center;'>2</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>36.5</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>190</td>
+</tr>
+<tr>
+<td style='text-align: center;'>3</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>36.7</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>165</td>
+</tr>
+<tr>
+<td style='text-align: center;'>4</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>39</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>155</td>
+</tr>
+<tr>
+<td style='text-align: center;'>5</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>38.1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>167</td>
+</tr>
+<tr>
+<td style='text-align: center;'>6</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>36.2</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>180</td>
+</tr>
+<tr>
+<td style='text-align: center;'>7</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>36.6</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>178</td>
+</tr>
+<tr>
+<td style='text-align: center;'>8</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0</td>
+<td style='text-align: center;'>0</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>36.7</td>
+<td style='' colspan='1'>&nbsp;</td>
+<td style='text-align: center;'>170</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: center;'>9</td>
+<td style='border-bottom: 2px solid grey;' colspan='1'>&nbsp;</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>1</td>
+<td style='border-bottom: 2px solid grey;' colspan='1'>&nbsp;</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>1</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+<td style='border-bottom: 2px solid grey;' colspan='1'>&nbsp;</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>36.5</td>
+<td style='border-bottom: 2px solid grey;' colspan='1'>&nbsp;</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>166</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>數據按照尺度類型分4種：
+<ul>
+<li>定性數據：(qualitative data/categorical data)
+<ul>
+<li>名義尺度 (nominal scale): <br>如番號，性別等，僅用於識別或者區分對象。</li>
+<li>順序尺度 (ordinal scale): <br>如表1中的健康狀態，既具有名義尺度的性質，也具有順序(順位，前後，程度等)意義。</li>
+</ul></li>
+<li>定量數據：(quantitative data)
+<ul>
+<li>間隔尺度 (interval scale): <br>又稱區間尺度，距離尺度。如體溫等數值之間的差具有意義，可以設定原點（零）的尺度。</li>
+<li>比例尺度 (ratio scale) <br>如身高(身長)，不同人的身高差有意義，同時原點（零）又無意義。（身高爲零的人是不存在的）</li>
+</ul></li>
+</ul></li>
+<li>樣本與總體(標本/サンプルと母集団)：
+<ul>
+<li>表格1 中， <br>(1) 全國20歲的年輕人全體的性別，健康狀態，體溫，身高的數據 <br>(2) 任意抽選數名(此處爲9名)年輕人的性別，健康狀態，體溫，身高的數據。 <br>(1) 稱爲<strong>總體(population)</strong>, (2) 稱爲<strong>樣本(sample)</strong></li>
+<li>一般的，我們稱問卷調查的對象個人爲<strong>個體(subject, individual)</strong>，人數爲<strong>樣本量(size)</strong>，我們也常常假設總體有無窮大。在多元變量分析中，如果我們稱<strong>數據</strong>，通常只能是指<strong>樣本數據</strong>。我們在統計分析中，一般是通過樣本去推測總體的狀況或者利用一些樣本的<strong>參數(parameter)</strong>來描述總體，去進行檢驗等。</li>
+</ul></li>
+<li>變量(variable)：
+<ul>
+<li>表1 中變量有“性別”，“健康狀態”，“體溫”，“身長”四個。</li>
+<li>進一步的，性別又細分了“男”，“女”，健康狀態又分爲“極好”，“良好”，“普通”，“不良”，“極差”五個小項目，這些小項目整個可以視爲一個變量，也可以視爲單獨的變量，如果視爲單獨變量，表1 中就共有9個變量。</li>
+<li>性別，健康狀態的各個變量中，我們看到表1 中的數據只有1或者0，這樣的變量稱爲<strong>啞變量(dummy variable，ダミー変量)</strong>。</li>
+<li>特別地，我們可以稱性別和健康狀態的變量爲<strong>項目(item)</strong>，稱底下的小項目爲<strong>分類(category)</strong>。我們又稱以這樣有項目，下面有分類的變量爲<strong>項目分類型數據(item-categorical data)</strong>。</li>
+<li>多元變量分析，顧名思義，指的是對一個具有一個以上變量的數據進行統計學分析的過程。</li>
+</ul></li>
+<li>單變量數據
+<ul>
+<li>將數據進行總結，分析提取特徵的過程，稱爲<strong>概括統計(summary statistics)</strong>。</li>
+</ul></li>
+</ol>
+<div id="-n-" class="section level4">
+<h4>下表中爲樣本量 <span class="math inline">\(n\)</span> 的單變量數據，我們看看該數據可以有哪些概括統計</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="center">個体の番号</th>
+<th align="center">変量 <span class="math inline">\(s\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(x_1\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(2\)</span></td>
+<td align="center"><span class="math inline">\(x_2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(i\)</span></td>
+<td align="center"><span class="math inline">\(i\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(n\)</span></td>
+<td align="center"><span class="math inline">\(n\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>樣本<strong>平均值(mean)</strong>： <span class="math inline">\(\bar{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum\limits_{i=1}^nx_i\)</span></li>
+<li>樣本<strong>範圍(range)</strong>： <span class="math inline">\(R=\max(x_i) - \min(x_i)\)</span></li>
+<li><p>樣本<strong>平方和(偏差平方和，Sum of Squares)</strong>:<br> <span class="math inline">\(SS=(x_1-\bar{x})^2+(x_2-\bar{x})^2+\cdots+(x_n-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^{n}(x_i-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2\bar{x}x_i+\bar{x}^2)\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+\sum\limits_{i=1}^{n}\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\cdot\frac{\sum\limits_{i=1}^nx_i}{n}\cdot\sum\limits_{i=1}^nx_i+n\cdot(\frac{\sum\limits_{i=1}^nx_i}{n})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\frac{1}{n}(\sum\limits_{i=1}^nx_i)^2\)</span></p></li>
+<li>樣本<strong>方差(variance, 分散)</strong>：<span class="math inline">\(s^2=\frac{SS}{n}\)</span></li>
+<li>樣本<strong>標準差(standard deviation, S.D., 標準偏差)</strong>： <span class="math inline">\(s=\sqrt{s^2}\)</span></li>
+<li><strong>無偏樣本方差(unbiased sample variance, 不偏標本分散)</strong>：<span class="math inline">\(u^2=\frac{SS}{n-1}\)</span></li>
+<li><strong>無偏樣本標準差平方根(不偏標本分散平方根)</strong>： <span class="math inline">\(u=\sqrt{u^2}\)</span></li>
+<li><p>通在多元變量分析中，常常利用的思想是將<strong>變動(variability)</strong>或者是<strong>波動(dispersion)</strong>最大化，最小化。此處說的變動和波動是指上面提到的無偏樣本方差。</p></li>
+</ul>
+</div>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2017-02-12-t/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記4</a></li>
+    
+
+    
+    <li class="next"><a href="/post/2017-02-15/">「統計解析のための線形代数」復習筆記6 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

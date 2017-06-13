@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2017-03-13/">
+
+  
+
+  <title>「統計解析のための線形代数」復習筆記17 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記17</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Mon, Mar 13, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/learning-notes">learning notes</a
+    >, 
+    
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2017-03-13%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9817&amp;url=%2fpost%2f2017-03-13%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2017-03-13%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9817"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2017-03-13%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9817"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9817&amp;body=%2fpost%2f2017-03-13%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<div id="-" class="section level2">
+<h2>正定，半正定 (正值，半正值)</h2>
+<p>對於任意的非零向量 <span class="math inline">\(\underline{x}(\neq\underline{0})\)</span> ，如果2次型 <span class="math inline">\(\underline{x}^tA\underline{x}\)</span> 始終滿足 <span class="math inline">\(\underline{x}^tA\underline{x} &gt; 0\)</span> <strong>注意此處無等號</strong>。我們稱這個2次型爲<strong>正定(positive definite)</strong>，<span class="math inline">\(A\)</span>爲<strong>正定矩陣(positive definite matrix)</strong>。另外，如果任意非零向量 <span class="math inline">\(\underline{x}(\neq\underline{0})\)</span> 始終滿足2次型 <span class="math inline">\(\underline{x}^tA\underline{x} \geqslant 0\)</span>， 這個2次型被叫做<strong>半正定(positive semi-definite)</strong>，<span class="math inline">\(A\)</span>爲<strong>半正定矩陣(positive semi-definite matrix)</strong>。</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp; 2 &amp; 4\\ 2 &amp; 2 &amp; 3\\ 4 &amp; 3 &amp; 25 \end{array} \right)\)</span>，2次型 <span class="math inline">\(\underline{x}^tA\underline{x}\)</span> 是正定。因爲：<br> <span class="math inline">\(\underline{x}^tA\underline{x}=5x_1^2+2x_2^2+25x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+4x_1x_2+8x_1x_3+6x_2x_3\\\;\;\;\;\;\;\;\;\;\:=(2x_1+x_2)^2+(x_2+3x_3)^2+(x_1+4x_3)^2\\ \because \underline{x}\neq\underline{0}=\left( \begin{array}{} 0\\ 0\\ 0 \end{array} \right)\\ \therefore \underline{x}^tA\underline{x}&gt;0\)</span></p></li>
+<li><p><span class="math inline">\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp; -6 &amp; 3\\ -6 &amp; 25 &amp; 32\\ 3 &amp; 32 &amp; 73 \end{array} \right)\)</span>，2次型 <span class="math inline">\(\underline{x}^tA\underline{x}\)</span> 是半正定。因爲：<br> <span class="math inline">\(\underline{x}^tA\underline{x}=5x_1^2+25x_2^2+73x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-12x_1x_2+6x_2x_3+64x_1x_3\\ \;\;\;\;\;\;\;\;\;\:=(2x_1-3x_3)^2+(x_1+3x_3)^2+(4x_2+8x_3)^2\\\)</span><br> <span class="math inline">\(\because \underline{x}=\left( \begin{array}{c} 3\\ 2\\ -1 \end{array} \right)\)</span> 時 <span class="math inline">\(\underline{x}^tA\underline{x}=0\)</span><br> <span class="math inline">\(\therefore \underline{x}^tA\underline{x} \geqslant0\)</span></p></li>
+<li><p><span class="math inline">\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)(\neq\underline{0})\)</span> 與單位矩陣 <span class="math inline">\(E_n\)</span> 構成的2次型 <span class="math inline">\(\underline{x}^tE_n\underline{x}=\underline{x}^t\underline{x}=\sum\limits_{i=1}^nx_i^2&gt;0\)</span> 是爲正定。</p></li>
+<li><p><span class="math inline">\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right), \underline{\frac{1}{n}}=\left( \begin{array}{c} \frac{1}{n}\\ \frac{1}{n}\\ \vdots \\ \frac{1}{n} \end{array} \right)\)</span> 已知，<span class="math inline">\(\underline{x}\underline{1/n}=\sum\limits_{i=1}^nx_i\cdot \frac{1}{n}=\bar{x}\)</span> (<span class="math inline">\(\underline{x}\)</span> 的平均值)，包含了 <span class="math inline">\(n\)</span> 個 <span class="math inline">\(\bar{x}\)</span> 的橫向量： <span class="math inline">\((\bar{x}，\bar{x},\cdots,\bar{x})\)</span> 展開以後成爲：<br> <span class="math inline">\((\bar{x}，\bar{x},\cdots,\bar{x})\\ \;\;\;\;\;\;\;\;\;\:=(x_1, x_2, \cdots, x_n)\left( \begin{array}{c} \frac{1}{n} &amp; \frac{1}{n} &amp; \cdots &amp; \frac{1}{n}\\ \frac{1}{n} &amp; \frac{1}{n} &amp; \cdots &amp; \frac{1}{n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \frac{1}{n} &amp; \frac{1}{n} &amp; \cdots &amp; \frac{1}{n} \end{array} \right)\\ \;\;\;\;\;\;\;\;\;\:=\underline{x}U\)</span><br> 令 <span class="math inline">\(U\)</span> 代表上面第二個等式中有半部分的矩陣。那麼將之從右往左乘以 <span class="math inline">\(\underline{x}\)</span> 我們可以得到：<br> <span class="math inline">\(\underline{x}^tU\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)\\ =\sum\limits_{i=1}^n\bar{x}x_i=\bar{x}\sum\limits_{i=1}^nx_i=n\bar{x}^2\)</span><br> 利用上面的式子，我們可以得到，<strong>偏差平方和(sum of squared deviation, SS)</strong>：<span class="math inline">\(E_n\)</span> 爲 <span class="math inline">\(n\)</span> 次單位矩陣。<br> <span class="math inline">\(SS=\sum\limits_{i=1}^n(x_i-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2x_i\bar{x}+\bar{x}^2)\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2n\bar{x}^2+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^tE_n\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t(E_n-U)\underline{x}\\ \because when \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)=\left( \begin{array}{c} \bar{x}\\ \bar{x}\\ \vdots\\ \bar{x} \end{array} \right), \&amp; (\bar{x}\neq0), SS=0\\ \therefore \underline{x}^t(E_n-U)\underline{x}\;是半正定2次型。\)</span></p></li>
+</ol>
+</div>
+<div class="section level2">
+<h2>雙一次型</h2>
+<p>對於 <span class="math inline">\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_m \end{array} \right), A=\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\)</span> 來說，<span class="math inline">\(\underline{x}^tA\underline{y}=\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{ij}x_iy_j\)</span> 既是 <span class="math inline">\(\underline{x}\)</span> 的1次型，也是 <span class="math inline">\(\underline{y}\)</span> 的1次型，所以又叫做 <span class="math inline">\(\underline{x}\underline{y}\)</span> 的<strong>雙1次型(bilinear form)</strong>。雙1次型是一個標量(scalar)。</p>
+<ol style="list-style-type: decimal">
+<li><p>對於 <span class="math inline">\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right), B=(b_{ij})=\left( \begin{array}{c} 1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 1\\ 1 &amp; 0 &amp; 1 \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\)</span><br> <span class="math inline">\(\underline{x}^tB\underline{y}=\sum\limits_{i=1}^3\sum\limits_{j=1}^3b_{ij}x_iy_j=(x_1+x_3, x_2, x_2+x_3)\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\\ \;\;\;\;\:=x_1y_1+x_2y_2+x_2y_3+x_3y_1+x_3y_3\\ \;\;\;\;\:=x_1y_1+x_2(y_2+y_3)+x_3(y_1+y_3) \; \bf (\underline{x} 的1次型)\)</span> <br> <span class="math inline">\(\;\;\;\;\;\:=y_1(x_1+x_3)+x_2y_2+(x_2+x_3)y_3 \;\bf (\underline{y} 的1次型)\)</span></p></li>
+<li><p>對於 <span class="math inline">\(\underline{l}=\left( \begin{array}{c} l_1\\ l_2\\ \end{array} \right), T=\left( \begin{array}{c} t_{11} &amp; t_{12} &amp; t_{13}\\ t_{21} &amp; t_{22} &amp; t_{23}\\ \end{array} \right), \underline{m}=\left( \begin{array}{c} m_1\\ m_2\\ m_3 \end{array} \right)\)</span> <br> <span class="math inline">\(\underline{l}^tT\underline{m}=\sum\limits_{i=1}^2\sum\limits_{j=1}^3t_{ij}l_im_j\\ \;\;\;\;\;\;\;\;\;\;=l_1t_{11}m_1+l_1t_{12}m_2+l_1t_{13}m_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2t_{21}m_1+l_2t_{22}m_2+l_3t_{23}m_3\\ \;\;\;\;\;\;\;\;\;\;=l_1(t_{11}m_1+t_{12}m_2+t_{13}m_3)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2(t_{21}m_1+t_{22}m_2+t_{23}m_3) \;\;(\underline{l} \textbf{的1次型})\\ \;\;\;\;\;\;\;\;\;\;=(t_{11}l_1+t_{21}l_2)m_1+(t_{12}l_1+t_{22}l_2)m_2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(t_{13}l_1+t_{23}l_2)m_3\;\;(\underline{m} \textbf{的1次型})\)</span></p></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2017-03-11/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記16</a></li>
+    
+
+    
+    <li class="next"><a href="/post/dictation2017-03-13/">绝知此事要躬行 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

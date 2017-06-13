@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2017-02-08/">
+
+  
+
+  <title>「統計解析のための線形代数」復習筆記2 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記2</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-02-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Wed, Feb 8, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/learning-notes">learning notes</a
+    >, 
+    
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2017-02-08%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%982&amp;url=%2fpost%2f2017-02-08%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2017-02-08%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%982"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2017-02-08%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%982"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%982&amp;body=%2fpost%2f2017-02-08%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<div class="section level2">
+<h2>偏微分</h2>
+<div class="section level3">
+<h3>1個變量的函數的微分</h3>
+<div class="section level4">
+<h4>公式：</h4>
+<ol style="list-style-type: decimal">
+<li>函數 <span class="math inline">\(f(a)\)</span> 關於變量 <span class="math inline">\(a\)</span> 的微分，被定義爲： <span class="math inline">\(\lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}\)</span> , 寫作 <span class="math inline">\(\frac{df}{da}\)</span>, 具有下列性質：
+<ul>
+<li><span class="math inline">\(f(a) = a^n\)</span> 時， <span class="math inline">\(\frac{df}{da} = na^{n-1}\)</span> <strong>重要</strong></li>
+<li><span class="math inline">\(\frac{d}{da}\left\{kf(a)+lg(a)\right\}=k\frac{df}{da}+l\frac{dg}{da}\)</span> <strong>(<span class="math inline">\(k,l\)</span> 是常數)</strong></li>
+<li><span class="math inline">\(\frac{d}{da}\left\{f(a) \cdot g(a)\right\}=\frac{df}{da}g(a)+f{a}\frac{dg}{da}\)</span></li>
+<li><span class="math inline">\(\frac{d}{da}\left\{\frac{f(a)}{g(a)}\right\}=\frac{\frac{df}{da}g(a)-f(a)\frac{dg}{da}}{\left\{g(a)\right\}^2}\)</span>, 特別的有，<span class="math inline">\(\frac{d}{da}\left\{\frac{1}{g(a)}\right\}=-\frac{\frac{dg}{da}}{\left\{g(a)\right\}^2}\)</span></li>
+<li><span class="math inline">\(y=f(b), b=g(a)\)</span> 時， <span class="math inline">\(\frac{dy}{da}=\frac{dy}{db}\frac{db}{da}\)</span></li>
+</ul></li>
+<li><p>2次（2階）微分 【二階導數】:</p>
+<p><span class="math inline">\(f(a)\)</span> 關於常數 <span class="math inline">\(a\)</span> 的微分 <span class="math inline">\(\frac{df}{da}\)</span> 的二次微分表示爲： <span class="math inline">\(\frac{d^2f}{da^2}\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section level3">
+<h3>多個變量的函數的微分</h3>
+<div id="-1" class="section level4">
+<h4>偏微分</h4>
+<p>包含了 <span class="math inline">\(n\)</span> 個獨立變量 <span class="math inline">\(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n\)</span>的函數，即多變量函數 <span class="math inline">\(F(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n)\)</span> 關於 <span class="math inline">\(a_i (i=1,2,\cdots,n)\)</span> 的偏微分 <em>(partial differentiation)</em> 的定義是，把 <span class="math inline">\(a_i\)</span> 以外的獨立變量當做常數（定数），將函數 <span class="math inline">\(F\)</span> 對變量 <span class="math inline">\(a_i\)</span> 求微分，寫作： <span class="math inline">\(\frac{\partial F}{\partial a_i}\)</span>。</p>
+<p>以下爲了便於說明，以三個變量爲例。</p>
+<ol style="list-style-type: decimal">
+<li><p>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1+a_2+a_3=\sum\limits_{i=1}^3a_i\)</span> 對於三個獨立變量分別求偏微分： <span class="math display">\[\frac{\partial F}{\partial a_1}=1，\frac{\partial F}{\partial a_2}=1， \frac{\partial F}{\partial a_3}=1\]</span></p></li>
+<li><p>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1b_1+a_2b_2+a_3b_3=\sum\limits_{i=1}^3a_ib_i\)</span> 對於三個獨立變量分別求偏微分： <span class="math display">\[\frac{\partial F}{\partial a_1}=b_1，\frac{\partial F}{\partial a_2}=b_2， \frac{\partial F}{\partial a_3}=b_3\]</span></p></li>
+<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1^2+a_2^2+a_3^2=a_1\cdot a_1+a_2\cdot a_2+a_3\cdot a_3\\=\sum\limits_{i=1}^3a_i^2=\sum\limits_{i=1}^3a_i\cdot a_i \;對三個變量分別求偏微分：\)</span>　 <span class="math display">\[\frac{\partial F}{\partial a_1}=2a_1，\frac{\partial F}{\partial a_2}=2a_2， \frac{\partial F}{\partial a_3}=2a_3\]</span></li>
+<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=\lambda_1a_1^2+\lambda_2a_2^2+\lambda_3a_3^2=a_1\cdot\lambda_1\cdot a_1+a_2\cdot\lambda_2\cdot a_2+a_3\cdot\lambda_3\cdot a_3\\=\sum\limits_{i=1}^3\lambda_ia_i^2=\sum\limits_{i=1}^3a_i\cdot\lambda_i\cdot a_i \; 對三個變量分別求偏微分：\)</span> <span class="math display">\[\frac{\partial F}{\partial a_1}=2\lambda_1a_1，\frac{\partial F}{\partial a_2}=2\lambda_2a_2， \frac{\partial F}{\partial a_3}=2\lambda_3a_3\]</span></li>
+<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=(b_1-\lambda a_1)^2+(b_2-\lambda a_2)^2+(b_3-\lambda a_3)^2\\=\sum\limits_{i=1}^3(b_i-\lambda a_i)^2=\sum\limits_{i=1}^3(b_i-\lambda a_i)(b_i-\lambda a_i)\;對三個變量求偏微分：\)</span> <span class="math display">\[\frac{\partial F}{\partial a_1}=-2\lambda(b_1-\lambda a_1)，\frac{\partial F}{\partial a_2}=-2\lambda(b_2-\lambda a_2)， \frac{\partial F}{\partial a_3}=-2\lambda(b_3-\lambda a_3)\]</span></li>
+<li>函數 <span class="math inline">\(F = a_{11}x_1y_1 + a_{12}x_1y_2 + a_{13}x_1y_3 \\ \;\;\;\;\;\;+a_{21}x_2y_1+a_{22}x_2y_2+a_{23}x_2y_3\\ \;\;\;\;\;\;+a_{31}x_3y_1+a_{32}x_3y_2+a_{33}x_3y_3\\ \;\;\;=\sum\limits_{i=1}^3\sum\limits_{i=1}^3a_{ij}x_iy_j\;對三個變量求偏微分：\)</span>
+<ul>
+<li><span class="math inline">\(F(x_1,x_2,x_3)\)</span>, 即視爲 <span class="math inline">\(x_1,x_2,x_3\)</span> 的函數的時候：</li>
+</ul>
+<p><span class="math display">\[
+\frac{\partial F}{\partial x_1}=a_{11}y_1+a_{12}y_2+a_{13}y_3=\sum_{j=1}^3a_{1j}y_j \\
+\frac{\partial F}{\partial x_2}=a_{21}y_1+a_{22}y_2+a_{23}y_3=\sum_{j=1}^3a_{2j}y_j \\
+\frac{\partial F}{\partial x_3}=a_{31}y_1+a_{32}y_2+a_{33}y_3=\sum_{j=1}^3a_{3j}y_j \\
+將上面三個式子總結一下就是: \\
+\frac{\partial F}{\partial x_i}=\sum_{j=1}^3a_{ij}y_j (i=1,2,3)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(F(y_1,y_2,y_3)\)</span>, 即視爲 <span class="math inline">\(y_1,y_2,y_3\)</span> 的函數的時候：</li>
+</ul>
+<p><span class="math display">\[
+\frac{\partial F}{\partial y_1}=a_{11}x_1+a_{21}x_2+a_{31}x_3=\sum_{i=1}^3a_{i1}x_i \\
+\frac{\partial F}{\partial y_2}=a_{12}x_1+a_{22}x_2+a_{32}x_3=\sum_{i=1}^3a_{i2}x_i \\
+\frac{\partial F}{\partial y_3}=a_{13}x_1+a_{32}x_2+a_{33}x_3=\sum_{i=1}^3a_{i3}x_i \\
+將上面三個式子總結一下就是: \\
+\frac{\partial F}{\partial x_i}=\sum_{i=1}^3a_{ij}x_i (j=1,2,3)
+\]</span></p></li>
+<li><p>函數 <span class="math inline">\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;=a_{11}x_1^2+2a_{12}x_1x_2+2a_{13}x_1x_3+a_{22}x_2^2+2a_{23}x_2x_3+a_{33}x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^3a_{ii}x_i^2+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&lt;j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\;\;\;\;==\sum\limits_{i=1}^3x_ia_{ii}x_i+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&lt;j}x_ia_{ij}x_j\;對三個變量求偏微分：\)</span> <span class="math display">\[\frac{\partial F}{\partial x_1}=2(a_{11}x_1+a_{12}x_2+a_{13}x_3)\\
+\frac{\partial F}{\partial x_2}=2(a_{12}x_1+a_{22}x_2+a_{23}x_3)\\
+\frac{\partial F}{\partial x_3}=2(a_{13}x_1+a_{23}x_2+a_{33}x_3)\]</span></p></li>
+<li><p>函數 <span class="math inline">\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ G(x_1,x_2,x_3)=b_{11}x_1x_1+b_{12}x_1x_2+b_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{12}x_2x_1+b_{12}x_2x_2+b_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{13}x_3x_1+b_{23}x_3x_2+b_{33}x_3x_3\\\;對三個變量求偏微分：\)</span></p></li>
+</ol>
+<p><span class="math display">\[
+\frac{\partial}{\partial x_1}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_1}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_1}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{11}x_1+a_{12}x_2+a_{13}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{11}x_1+b_{12}x_2+b_{13}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\\
+\frac{\partial}{\partial x_2}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_2}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_2}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{12}x_1+a_{22}x_2+a_{23}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{12}x_1+b_{22}x_2+b_{23}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\frac{\partial}{\partial x_3}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_3}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_3}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{13}x_1+a_{23}x_2+a_{33}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{13}x_1+b_{23}x_2+b_{33}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\]</span></p>
+</div>
+<div id="2-" class="section level4">
+<h4>2次（2階）偏微分 【二階導數】:</h4>
+<p>函數 <span class="math inline">\(F(a_1,a_2,\cdots,a_n)\)</span> 對 <span class="math inline">\(a_i\)</span> 取偏微分 <span class="math inline">\(\frac{\partial F}{\partial a_i}\)</span> 時，記作 <span class="math inline">\(\frac{\partial^2 F}{\partial a_i^2}\)</span> ; 取變量 <span class="math inline">\(a_j\)</span> 的偏微分時記作 <span class="math inline">\(\frac{\partial^2 F}{\partial a_i\partial a_j}\)</span> 或者 <span class="math inline">\(\frac{\partial^2 F}{\partial a_j\partial a_i}\)</span>。 這些都被稱爲是函數 <span class="math inline">\(F\)</span> 的2次（2階）偏微分。</p>
+</div>
+</div>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2017-02-06/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記1</a></li>
+    
+
+    
+    <li class="next"><a href="/post/2017-02-10/">「統計解析のための線形代数」復習筆記3 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

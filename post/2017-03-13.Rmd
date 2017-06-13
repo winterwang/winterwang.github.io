@@ -1,0 +1,217 @@
+---
+title: 「統計解析のための線形代数」復習筆記17
+author: Chaochen Wang
+date: '2017-03-13'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第4章　矩陣 matrix P70-72"
+---
+
+## 正定，半正定 (正值，半正值)
+
+對於任意的非零向量 $\underline{x}(\neq\underline{0})$ ，如果2次型 $\underline{x}^tA\underline{x}$ 始終滿足 $\underline{x}^tA\underline{x} > 0$ **注意此處無等號**。我們稱這個2次型爲**正定(positive definite)**，$A$爲**正定矩陣(positive definite matrix)**。另外，如果任意非零向量 $\underline{x}(\neq\underline{0})$ 始終滿足2次型 $\underline{x}^tA\underline{x} \geqslant 0$， 這個2次型被叫做**半正定(positive semi-definite)**，$A$爲**半正定矩陣(positive semi-definite matrix)**。
+
+1. $x=\left(
+\begin{array}{}
+x_1\\
+x_2\\
+x_3
+\end{array}
+\right), \ A=\left(
+\begin{array}{}
+5 & 2 & 4\\
+2 & 2 & 3\\
+4 & 3 & 25
+\end{array}
+\right)$，2次型 $\underline{x}^tA\underline{x}$ 是正定。因爲：<br>
+$\underline{x}^tA\underline{x}=5x_1^2+2x_2^2+25x_3^2\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+4x_1x_2+8x_1x_3+6x_2x_3\\\;\;\;\;\;\;\;\;\;\:=(2x_1+x_2)^2+(x_2+3x_3)^2+(x_1+4x_3)^2\\
+\because \underline{x}\neq\underline{0}=\left(
+\begin{array}{}
+0\\
+0\\
+0
+\end{array}
+\right)\\
+\therefore \underline{x}^tA\underline{x}>0$
+
+2. $x=\left(
+\begin{array}{}
+x_1\\
+x_2\\
+x_3
+\end{array}
+\right), \ A=\left(
+\begin{array}{}
+5 & -6 & 3\\
+-6 & 25 & 32\\
+3 & 32 & 73
+\end{array}
+\right)$，2次型 $\underline{x}^tA\underline{x}$ 是半正定。因爲：<br>
+$\underline{x}^tA\underline{x}=5x_1^2+25x_2^2+73x_3^2\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-12x_1x_2+6x_2x_3+64x_1x_3\\
+\;\;\;\;\;\;\;\;\;\:=(2x_1-3x_3)^2+(x_1+3x_3)^2+(4x_2+8x_3)^2\\$<br>
+$\because \underline{x}=\left(
+\begin{array}{c}
+3\\
+2\\
+-1
+\end{array}
+\right)$ 時 $\underline{x}^tA\underline{x}=0$<br>
+$\therefore \underline{x}^tA\underline{x} \geqslant0$
+
+
+3. $\underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{array}
+\right)(\neq\underline{0})$ 與單位矩陣 $E_n$ 構成的2次型 $\underline{x}^tE_n\underline{x}=\underline{x}^t\underline{x}=\sum\limits_{i=1}^nx_i^2>0$ 是爲正定。
+
+4. $\underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{array}
+\right), \underline{\frac{1}{n}}=\left(
+\begin{array}{c}
+\frac{1}{n}\\
+\frac{1}{n}\\
+\vdots     \\
+\frac{1}{n}
+\end{array}
+\right)$ 已知，$\underline{x}\underline{1/n}=\sum\limits_{i=1}^nx_i\cdot \frac{1}{n}=\bar{x}$ ($\underline{x}$ 的平均值)，包含了 $n$ 個 $\bar{x}$ 的橫向量： $(\bar{x}，\bar{x},\cdots,\bar{x})$ 展開以後成爲：<br>
+$(\bar{x}，\bar{x},\cdots,\bar{x})\\
+\;\;\;\;\;\;\;\;\;\:=(x_1, x_2, \cdots, x_n)\left(
+\begin{array}{c}
+\frac{1}{n} & \frac{1}{n} & \cdots & \frac{1}{n}\\
+\frac{1}{n} & \frac{1}{n} & \cdots & \frac{1}{n}\\
+\vdots      & \vdots      & \ddots & \vdots     \\
+\frac{1}{n} & \frac{1}{n} & \cdots & \frac{1}{n}
+\end{array}
+\right)\\
+\;\;\;\;\;\;\;\;\;\:=\underline{x}U$<br>
+令 $U$ 代表上面第二個等式中有半部分的矩陣。那麼將之從右往左乘以 $\underline{x}$ 我們可以得到：<br>
+$\underline{x}^tU\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{array}
+\right)\\
+=\sum\limits_{i=1}^n\bar{x}x_i=\bar{x}\sum\limits_{i=1}^nx_i=n\bar{x}^2$<br>
+利用上面的式子，我們可以得到，**偏差平方和(sum of squared deviation, SS)**：$E_n$ 爲 $n$ 次單位矩陣。<br>
+$SS=\sum\limits_{i=1}^n(x_i-\bar{x})^2\\
+\;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2x_i\bar{x}+\bar{x}^2)\\
+\;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+n\bar{x}^2\\
+\;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2n\bar{x}^2+n\bar{x}^2\\
+\;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-n\bar{x}^2\\
+\;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\underline{x}^tU\underline{x}\\
+\;\;\;\;\:=\underline{x}^t\underline{x}-\underline{x}^tU\underline{x}\\
+\;\;\;\;\:=\underline{x}^tE_n\underline{x}-\underline{x}^tU\underline{x}\\
+\;\;\;\;\:=\underline{x}^t(E_n-U)\underline{x}\\
+\because when \underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{array}
+\right)=\left(
+\begin{array}{c}
+\bar{x}\\
+\bar{x}\\
+\vdots\\
+\bar{x}
+\end{array}
+\right), \& (\bar{x}\neq0), SS=0\\
+\therefore \underline{x}^t(E_n-U)\underline{x}\;是半正定2次型。$
+
+
+## 雙一次型
+
+對於 $\underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_m
+\end{array}
+\right), A=\left(
+\begin{array}{c}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array}
+\right), \underline{y}=\left(
+\begin{array}{c}
+y_1\\
+y_2\\
+\vdots\\
+y_n
+\end{array}
+\right)$ 來說，$\underline{x}^tA\underline{y}=\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{ij}x_iy_j$ 既是 $\underline{x}$ 的1次型，也是 $\underline{y}$ 的1次型，所以又叫做 $\underline{x}\underline{y}$ 的**雙1次型(bilinear form)**。雙1次型是一個標量(scalar)。
+
+1. 對於 $\underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+x_3
+\end{array}
+\right), B=(b_{ij})=\left(
+\begin{array}{c}
+1 & 0 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1
+\end{array}
+\right), \underline{y}=\left(
+\begin{array}{c}
+y_1\\
+y_2\\
+y_3
+\end{array}
+\right)$<br>
+$\underline{x}^tB\underline{y}=\sum\limits_{i=1}^3\sum\limits_{j=1}^3b_{ij}x_iy_j=(x_1+x_3, x_2, x_2+x_3)\left(
+\begin{array}{c}
+y_1\\
+y_2\\
+y_3
+\end{array}
+\right)\\
+\;\;\;\;\:=x_1y_1+x_2y_2+x_2y_3+x_3y_1+x_3y_3\\
+\;\;\;\;\:=x_1y_1+x_2(y_2+y_3)+x_3(y_1+y_3) \; \bf (\underline{x} 的1次型)$ <br>
+$\;\;\;\;\;\:=y_1(x_1+x_3)+x_2y_2+(x_2+x_3)y_3 \;\bf (\underline{y} 的1次型)$
+
+2. 對於 $\underline{l}=\left(
+\begin{array}{c}
+l_1\\
+l_2\\
+\end{array}
+\right), T=\left(
+\begin{array}{c}
+t_{11} & t_{12} & t_{13}\\
+t_{21} & t_{22} & t_{23}\\
+\end{array}
+\right), \underline{m}=\left(
+\begin{array}{c}
+m_1\\
+m_2\\
+m_3
+\end{array}
+\right)$ <br>
+$\underline{l}^tT\underline{m}=\sum\limits_{i=1}^2\sum\limits_{j=1}^3t_{ij}l_im_j\\
+\;\;\;\;\;\;\;\;\;\;=l_1t_{11}m_1+l_1t_{12}m_2+l_1t_{13}m_3\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2t_{21}m_1+l_2t_{22}m_2+l_3t_{23}m_3\\
+\;\;\;\;\;\;\;\;\;\;=l_1(t_{11}m_1+t_{12}m_2+t_{13}m_3)\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2(t_{21}m_1+t_{22}m_2+t_{23}m_3) \;\;(\underline{l} \textbf{的1次型})\\
+\;\;\;\;\;\;\;\;\;\;=(t_{11}l_1+t_{21}l_2)m_1+(t_{12}l_1+t_{22}l_2)m_2\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(t_{13}l_1+t_{23}l_2)m_3\;\;(\underline{m} \textbf{的1次型})$

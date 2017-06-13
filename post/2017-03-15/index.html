@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2017-03-15/">
+
+  
+
+  <title>「統計解析のための線形代数」復習筆記18 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記18</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Wed, Mar 15, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/learning-notes">learning notes</a
+    >, 
+    
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2017-03-15%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9818&amp;url=%2fpost%2f2017-03-15%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2017-03-15%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9818"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2017-03-15%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9818"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9818&amp;body=%2fpost%2f2017-03-15%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<div class="section level2">
+<h2>行列式的定義與計算</h2>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-1" class="theorem"><strong>Theorem 1  (determinant) </strong></span><span class="math inline">\(n\)</span> 次正方形矩陣 <span class="math inline">\(A= (a_{ij})=\left( \begin{array}{c} a_{11}&amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21}&amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots&amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1}&amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{array} \right)\)</span> 的<strong>行列式(determinant)</strong>被定義爲是，<span class="math inline">\(A\)</span> 的全部成分 <span class="math inline">\(a_{11},a_{12},\cdots,a_{nn}\)</span> 的函數，這個函數是一個<strong>標量(scalar)</strong>。
+</div>
+<p></p>
+<p><span class="math inline">\(n\)</span>次正方形矩陣 <span class="math inline">\(A\)</span> 的行列式(<span class="math inline">\(n\)</span>次行列式)，被記作：<br> <span class="math inline">\(|A|, |a_{ij}|, \det(A), \det(a_{ij})， \begin{vmatrix} a_{11}&amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21}&amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots&amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1}&amp; a_{n2} &amp; \cdots &amp; a_{nn} \notag \end{vmatrix}\)</span></p>
+<ol style="list-style-type: decimal">
+<li>1次行列式：
+<span class="math display" id="eq:determinant1">\[\begin{equation}
+A=(a_{11}), |A|=a_{11}
+\tag{1}
+\end{equation}\]</span></li>
+<li>2次行列式：
+<span class="math display" id="eq:determinant2">\[\begin{equation}
+A=\left(
+\begin{array}{}
+a_{11} &amp; a_{12}\\
+a_{21} &amp; a_{22}\\
+\end{array}
+\right), |A|=a_{11}a_{12}-a_{12}a_{21}
+\tag{2}
+\end{equation}\]</span>
+<p><br></p></li>
+<li><span class="math inline">\(n-1\)</span> 次行列式
+<span class="math display" id="eq:determinant3">\[\begin{equation}
+A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
+\tag{3}
+\end{equation}\]</span></li>
+<li><p><span class="math inline">\(n\)</span> 次行列式<br> 假如<a href="#eq:determinant3">(3)</a>成立：<br> 對於：<span class="math inline">\(A_{n\times n}=\left( \begin{array}{c} a_{11}&amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21}&amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots&amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1}&amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{array} \right)\\ |A|=\begin{vmatrix} a_{11}&amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21}&amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots&amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1}&amp; a_{n2} &amp; \cdots &amp; a_{nn} \notag \end{vmatrix}\\ \left\{ \begin{array}{} (4)\;=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{ij}A_{ij}+\cdots+a_{in}A_{in}\\ (5)\;=a_{1j}A_{i1}+a_{2j}A_{2j}+\cdots+a_{ij}A_{ij}+\cdots+a_{nj}A_{nj}\\  \end{array} \right.\)</span><br> 式子 <span class="math inline">\((4)\)</span> 被稱爲行列式 <span class="math inline">\(|A|\)</span> 的第 <span class="math inline">\(i\)</span> 行<strong>展開式(expansion of <span class="math inline">\(|A|\)</span> according to elements of row <span class="math inline">\(i\)</span>)</strong>。同樣的，式子 <span class="math inline">\((5)\)</span> 被稱爲行列式 <span class="math inline">\(|A|\)</span> 的第 <span class="math inline">\(j\)</span> 列展開式。<span class="math inline">\(|A_{ij}|(i=1,2,\cdots,n;j=1,2,\cdots,n)\)</span> 被稱爲 成分 <span class="math inline">\(a_{ij}\)</span> 的<strong>餘因子(cofactor)</strong>，定義如下：<br> <span class="math inline">\(A_{ij}=(-1)^{i+j}D_{ij}\\ \;\;\;\;=(-1)^{i+j}\begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1,j-1} &amp; a_{1,j+1} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2,j-1} &amp; a_{2,j+1} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\ a_{i-1,1} &amp; a_{i-1,2} &amp; \cdots &amp; a_{i-1,j-1} &amp; a_{i-1,j+1} &amp; \cdots &amp; a_{i-1,n}\\ a_{i+1,1} &amp; a_{i+1,2} &amp; \cdots &amp; a_{i+1,j-1} &amp; a_{i+1,,j+1} &amp; \cdots &amp; a_{i+1,n}\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\ a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1,j-1} &amp; a_{1,j+1} &amp; \cdots &amp; a_{1n}\\ \end{vmatrix}\)</span><br> <span class="math inline">\(D_{ij}\)</span> 正如上面等式最右端所寫，其實是行列式 <span class="math inline">\(A_{n\times n}\)</span> 剔除了第 <span class="math inline">\(i\)</span> 行和第 <span class="math inline">\(j\)</span> 列的 <span class="math inline">\((n-1)\)</span> 次行列式，又被叫做行列式 <span class="math inline">\(A_{n\times n}\)</span> 的<strong>小行列式(minor)</strong>。</p></li>
+</ol>
+</div>
+<div class="section level2">
+<h2>餘因子矩陣</h2>
+<p>以 <span class="math inline">\(A_{n\times n}\)</span> 的成分 <span class="math inline">\(a_{ij}\)</span> 的餘因子 <span class="math inline">\(A_{ij}\)</span> 作成分<strong>的矩陣</strong><span class="diff_alert">的轉置矩陣</span>作被稱爲 <span class="math inline">\(A_{n\times n}\)</span> 的<strong>餘因子矩陣(adjoint matrix, adjugate matrix)</strong>。標記爲 <span class="math inline">\(adj(A)\)</span>。也就是說：<br> <span class="math inline">\(adj(A)=\left( \begin{array}{c} A_{11}&amp; A_{12} &amp; \cdots &amp; A_{1n}\\ A_{21}&amp; A_{22} &amp; \cdots &amp; A_{2n}\\ \vdots&amp; \vdots &amp; \ddots &amp; \vdots\\ A_{n1}&amp; A_{n2} &amp; \cdots &amp; A_{nn} \end{array} \right)^t=\left( \begin{array}{c} A_{11}&amp; A_{21} &amp; \cdots &amp; A_{n1}\\ A_{12}&amp; A_{22} &amp; \cdots &amp; A_{n2}\\ \vdots&amp; \vdots &amp; \ddots &amp; \vdots\\ A_{1n}&amp; A_{2n} &amp; \cdots &amp; A_{nn} \end{array} \right)\)</span></p>
+<p>我們來試着計算行列式：<br> 1. <span class="math inline">\(2\)</span> 次行列式<br> 以方程<a href="#eq:determinant2">(2)</a>的定義計算：<br> <span class="math inline">\(\begin{vmatrix}  a_{11} &amp; a_{12}\\  a_{21} &amp; a_{22}\\  \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)</span><br> 此公式可以用下列 <strong>示意圖(薩呂法則, Sarrus’ rule)</strong> 來記憶: 　<img src="/img/sarrus.png" /><br> 也就是，沿着右下方向將所有成分相乘以後用加號 <span class="math inline">\(+\)</span> 號連接起來，沿着左下的方向的所有成分則相乘以後用減號 <span class="math inline">\(-\)</span> 號連接起來。最後將這兩者相加獲得行列式的值。</p>
+<hr />
+<p>練習： 求 <span class="math inline">\(A=\left( \begin{array}{} 4 &amp; 2\\ 1 &amp; 3\\ \end{array} \right)\)</span> 的行列式和餘因子矩陣。</p>
+<p>解： <span class="math inline">\(|A|=\begin{vmatrix} 4 &amp; 2\\ 1 &amp; 3\\ \end{vmatrix}=4\times3-2\times1=10\)</span> <br> <span class="math inline">\(adj(A)=\left( \begin{array}{} A_{11} &amp; A_{21}\\ A_{12} &amp; A_{22}\\ \end{array} \right)\)</span> <br> <span class="math inline">\(\because A_{11}=(-1)^{(1+1)}\times3\\ A_{21}=(-1)^{(2+1)}\times2\\ A_{12}=(-1)^{(1+2)}\times1\\ A_{22}=(-1)^{2+2}\times4\\ \therefore adj(A)=\left( \begin{array}{r} 3 &amp; -2\\ -1 &amp; 4\\ \end{array} \right)\)</span><br> <span class="diff_alert"> 注意：餘因子<strong>矩陣</strong>，終究是一個矩陣而非行列式。</span></p>
+<hr />
+<ol start="2" style="list-style-type: decimal">
+<li>三次矩陣<br> <span class="math inline">\(A=\left(  \begin{array}{c}  a_{11} &amp; a_{12} &amp; a_{13}\\  a_{21} &amp; a_{22} &amp; a_{23}\\  a_{31} &amp; a_{32} &amp; a_{33}\\  \end{array}  \right)\)</span> 的行列式 <span class="math inline">\(|A|\)</span> 要如何用 <span class="math inline">\(A\)</span> 的成分來表示呢？ <br> 我們發現，代入上面第 <span class="math inline">\((4)\)</span> 個式子 <span class="math inline">\(n=3\)</span> 的情況來計算。<br> 在這裏，我們就按照 <span class="math inline">\(i=1\)</span> 的情況來展開。<span class="diff_alert"> (注意：<span class="math inline">\(i=2, i=3\)</span> 的情況展開，結果也是一樣的。)</span><br>
+<span class="math display">\[\begin{align}
+|A| &amp;= a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}\\
+    &amp;= a_{11}(-1)^{1+1}D_{11}+a_{12}(-1)^{1+2}D_{12}\\
+    &amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}(-1)^{1+3}D_{13}\\
+    &amp;= a_{11}\begin{vmatrix}a_{22} &amp; a_{23}\\ a_{32} &amp; a_{33}\\\end{vmatrix}-a_{12}\begin{vmatrix}a_{21} &amp; a_{23}\\ a_{31} &amp; a_{33}\\\end{vmatrix}\\
+    &amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}\begin{vmatrix}a_{21} &amp; a_{22}\\ a_{31} &amp; a_{32}\\\end{vmatrix}\\
+    &amp;= a_{11}(a_{22}a_{23}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{31}a_{23})\\
+    &amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}(a_{21}a_{32}-a_{22}a_{31})\\
+    &amp;=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}\\
+    &amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
+   \end{align}\]</span>
+<br> 我們也可以利用薩呂法則（下圖）來記住計算過程：<br> <img src="/img/sarrus33.png" /><br> 另外，可以得到如下的餘因子：<br> <span class="math inline">\(A_{11}=\begin{vmatrix}a_{22} &amp; a_{23}\\ a_{32} &amp; a_{33}\\\end{vmatrix}, A_{12}=-\begin{vmatrix}a_{21} &amp; a_{23}\\ a_{31} &amp; a_{33}\\\end{vmatrix},  A_{13}=\begin{vmatrix}a_{21} &amp; a_{22}\\ a_{31} &amp; a_{32}\\\end{vmatrix}\\  A_{21}=-\begin{vmatrix}a_{12} &amp; a_{13}\\ a_{32} &amp; a_{33}\\\end{vmatrix},  A_{22}=\begin{vmatrix}a_{11} &amp; a_{13}\\ a_{31} &amp; a_{33}\\\end{vmatrix},  A_{23}=-\begin{vmatrix}a_{11} &amp; a_{12}\\ a_{31} &amp; a_{32}\\\end{vmatrix}\\  A_{31}=\begin{vmatrix}a_{12} &amp; a_{13}\\ a_{22} &amp; a_{23}\\\end{vmatrix},  A_{32}=-\begin{vmatrix}a_{11} &amp; a_{13}\\ a_{21} &amp; a_{23}\\\end{vmatrix},  A_{33}=\begin{vmatrix}a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22}\\\end{vmatrix}\)</span><br> 因此餘因子矩陣爲：<br> <span class="math inline">\(adj(A)=\left(  \begin{array}{c}  A_{11} &amp; A_{12} &amp; A_{13}\\  A_{21} &amp; A_{22} &amp; A_{23}\\  A_{31} &amp; A_{32} &amp; A_{33}\\  \end{array}  \right)^t=\left(  \begin{array}{c}  A_{11} &amp; A_{21} &amp; A_{23}\\  A_{12} &amp; A_{22} &amp; A_{32}\\  A_{13} &amp; A_{23} &amp; A_{33}\\  \end{array}  \right)\)</span></li>
+</ol>
+<table style="width:6%;">
+<colgroup>
+<col width="5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>練習：試求矩陣 <span class="math inline">\(A=\left( \begin{array}{r} 6 &amp; 1 &amp; -3\\ 3 &amp; 5 &amp; 7\\ 2 &amp; -1 &amp; 3\\ \end{array} \right)\)</span> 的行列式和餘因子矩陣</td>
+</tr>
+<tr class="even">
+<td>解： <span class="math inline">\(|A|= \begin{vmatrix} 6 &amp; 1 &amp; -3\\ 3 &amp; 5 &amp; 7\\ 2 &amp; -1 &amp; 3\\ \end{vmatrix}\\ \;\;\;\;\:=6\times5\times3+1\times7\times2+(-3)\times3\times(-1)\\ \;\;\;\;\;\:\;\;\;\;\:-\{6\times7\times(-1)+1\times3\times3+(-3)\times5\times2\}\\ \;\;\;\;\:=113-(-63)=176\\ \\ A_{11}=\begin{vmatrix}5 &amp; 7\\ -1 &amp; 3\\\end{vmatrix}=15-(-7)=22\\ A_{12}=\begin{vmatrix}3 &amp; 7\\ 2&amp; 3\\\end{vmatrix}=9-14=-5\\ A_{13}=\begin{vmatrix}3 &amp; 5\\ 2 &amp; -1\\\end{vmatrix}=-3-10=-13\\ A_{21}=\begin{vmatrix}1 &amp; -3\\ -1 &amp; 3\\\end{vmatrix}=3-3=0\\ A_{22}=\begin{vmatrix}6 &amp; -3\\ 2 &amp; 3\\\end{vmatrix}=18-(-6)=24\\ A_{23}=\begin{vmatrix}6 &amp; 1\\ 2 &amp; -1\\\end{vmatrix}=-6-2=-8\\ A_{31}=\begin{vmatrix}1 &amp; -3\\5 &amp; 7\\\end{vmatrix}=7-(-15)=22\\ A_{32}=\begin{vmatrix}6 &amp; -3\\3 &amp; 7\\\end{vmatrix}=42-(-9)=51\\ A_{33}=\begin{vmatrix}6 &amp; 1\\ 3 &amp; 5\\\end{vmatrix}=30-3=27\\ \Longrightarrow adj(A)=\left( \begin{array}{r} 22 &amp; 5 &amp; -13 \\ 0 &amp; 24&amp; -8 \\ 22 &amp; 51&amp; 27 \\ \end{array} \right)^t=\left( \begin{array}{r} 22 &amp; 0 &amp; 22\\ 5 &amp; 24 &amp; 51\\ -13 &amp; -8 &amp; 27\\ \end{array} \right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<table style="width:6%;">
+<colgroup>
+<col width="5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>練習： 求3次矩陣的固有值時(將來敘述)需要的行列式<br> <span class="math inline">\(\begin{vmatrix} a-\lambda &amp; b &amp; c\\ d &amp; e-\lambda &amp; f\\ g &amp; h &amp; i-\lambda \end{vmatrix}\)</span><br> 展開以後，整理爲關於 <span class="math inline">\(\lambda\)</span> 的式子：<br></td>
+</tr>
+<tr class="even">
+<td>解： <span class="math inline">\(\begin{vmatrix} a-\lambda &amp; b &amp; c\\ d &amp; e-\lambda &amp; f\\ g &amp; h &amp; i-\lambda \end{vmatrix}\\ =(a-\lambda)(e-\lambda)(i-\lambda)+bfg+dhc\\ \;\;\;\;\;-\{g(e-\lambda)c+bd(i-\lambda)+(a-\lambda)fh\}\\ =-\lambda^3+(a+e+i)\lambda^2+(bd+cg+fh-ae-ei-ai)\lambda\\ \;\;\;\;\;+(aei+bfg+cdh-afh-bdi-ecg)\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>4次行列式：<br> 試求<span class="math inline">\(A=\left(  \begin{array}{} a_{11}&amp; a_{12}&amp; a_{13}&amp; a_{14}\\ a_{21}&amp; a_{22}&amp; a_{23}&amp; a_{24}\\ a_{31}&amp; a_{32}&amp; a_{33}&amp; a_{34}\\ a_{41}&amp; a_{42}&amp; a_{43}&amp; a_{44}  \end{array}  \right)\\  \;\;=\left(  \begin{array}{r} -2 &amp; 3 &amp;4 &amp; 1\\ 4 &amp; 2&amp; 0&amp; 5\\ 2 &amp;-3&amp; -4&amp; 2\\ 2 &amp; 1&amp; 2&amp; -3  \end{array}  \right)\)</span> <br>的行列式 <span class="math inline">\(|A|\)</span>：<br> 由於第2行有成分 <span class="math inline">\(a_{23}=0\)</span> 我們以第二行展開行列式，因爲 <span class="math inline">\(a_{23}=0\)</span>，所以 <span class="math inline">\(a_{23}A_{23}=0\)</span> 可以省略：<br> <span class="math inline">\(|A|=a_{21}A_{21}+a_{22}A_{22}+a_{24}A_{24}\\  \;\;\;\;\:=a_{21}(-1)^{2+1}D_{21}+a_{22}(-1)^{2+2}D_{22}+a_{24}(-1)^{2+4}D_{24}\)</span><br> <span class="math inline">\(\because A_{21}=(-1)^{2+1}\begin{vmatrix}  a_{12} &amp; a_{13} &amp; a_{14}\\  a_{32} &amp; a_{33} &amp; a_{34}\\  a_{42} &amp; a_{43} &amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  3 &amp; 4 &amp; 1\\  -3 &amp; -4 &amp; 2\\  1 &amp; 2&amp; -3\\  \end{vmatrix}=6\\  A_{22}=(-1)^{2+2}\begin{vmatrix}  a_{11} &amp; a_{13} &amp; a_{14}\\  a_{31} &amp; a_{33} &amp; a_{34}\\  a_{41} &amp; a_{43} &amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=\begin{vmatrix}  -2 &amp; 4 &amp;1\\  2 &amp; -4 &amp;2\\  2 &amp; 2 &amp;-3\\  \end{vmatrix}=36\\  A_{24}=(-1)^{2+4}\begin{vmatrix}  a_{11} &amp; a_{12} &amp; a_{13}\\  a_{31} &amp; a_{32} &amp; a_{33}\\  a_{41} &amp; a_{42} &amp; a_{43}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  -2 &amp; 3 &amp;4\\  2 &amp; -3 &amp;-4\\  2 &amp; 1 &amp;2\\  \end{vmatrix}=0\\  \therefore |A|=4\times6+2\times36+5\times0=96\)</span><br> <span class="diff_alert">然而，<strong>4次以上的矩陣的行列式計算，沒有類似薩呂法則的計算方法。</strong></span></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/dictation2017-03-13/"><span
+      aria-hidden="true">&larr;</span> 绝知此事要躬行</a></li>
+    
+
+    
+    <li class="next"><a href="/post/2017-03-16/">留學筆記 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

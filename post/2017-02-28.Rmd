@@ -1,0 +1,194 @@
+---
+title: 「統計解析のための線形代数」復習筆記13
+author: Chaochen Wang
+date: '2017-02-28'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第4章　矩陣 matrix P57-59"
+---
+
+## 連立一次方程式與矩陣向量的積
+
+連立一次方程式可以改寫爲**矩陣與向量的積形成的向量**的形式。特別的，以連立方程式的系數作成分的矩陣被叫做**系數矩陣(coefficient matrix)**。當我們看到連立方程式，應該能立刻條件反射地聯想到其對應的**矩陣和向量的積**。
+
+1. $\begin{align}
+\left\{
+\begin{array}{rr}
+ a_1+2a_2+3a_3 = 3\\
+2a_1+4a_2+5a_3 = 5\\
+3a_1+5a_2+6a_3 = 7
+\end{array}
+\right.
+\end{align}$ 可以改寫成 $\left(
+\begin{array}{c}
+1 & 2 & 3 \\
+2 & 4 & 5 \\
+3 & 5 & 6
+\end{array}
+\right)\left(
+\begin{array}{c}
+a_1\\
+a_2\\
+a_3
+\end{array}
+\right)=\left(
+\begin{array}{c}
+3\\
+5\\
+7
+\end{array}
+\right)$ 的形式。<br>
+如果把等號右邊的列向量寫到**系數矩陣**的右側，形成的矩陣被叫做**擴大系數矩陣(augmented coefficient)**：<br>
+$\left(
+\begin{array}{c}
+1 & 2 & 3 & 3 \\
+2 & 4 & 5 & 5 \\
+3 & 5 & 6 & 7
+\end{array}
+\right)$
+
+2. $\begin{align}
+\left\{
+\begin{array}{rr}
+a_{11}x_1+a_{12}x_2+a_{13}x_3=0\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3=0\\
+\end{array}
+\right.
+\end{align}$ 可以改寫成 $\left(
+\begin{array}{c}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+x_3
+\end{array}
+\right)=\left(
+\begin{array}{c}
+0\\
+0\\
+\end{array}
+\right)$
+
+3. $\begin{align}
+\left\{
+\begin{array}{rr}
+(5-\lambda)x_1+           x_2+           x_3 = 0\\
+           x_1+(3-\lambda)x_2+           x_3 = 0\\
+           x_1+           x_2+(3-\lambda)x_3 = 0
+\end{array}
+\right.
+\end{align}$ 可以改寫爲 $\left(
+\begin{array}{c}
+5-\lambda & 1         & 1 \\
+1         & 3-\lambda & 1 \\
+1         & 1         & 3-\lambda
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+x_3
+\end{array}
+\right)=\left(
+\begin{array}{c}
+0\\
+0\\
+0
+\end{array}
+\right)$
+
+
+## 矩形矩陣
+列數行數不相等的矩陣，被稱爲**矩形矩陣(rectangular matrix)**。特別的行數 $>$ 列數的矩陣被叫做**垂直型矩形矩陣**。行數 $<$ 列數的矩陣被叫做**水平型矩形矩陣**。多元變量分析時，數據常常被加工稱爲垂直型矩形矩陣的形式。
+
+---
+
+|   個体   | 体重 $(kg)$ | 身長 $(cm)$ |
+|:--------:|:-----------:|:-----------:|
+| 安倍さん |    $53$     |    $157$    |
+| 伊藤さん |    $67$     |    $172$    |
+| 植村さん |    $49$     |    $163$    |
+| 江川さん |    $80$     |    $178$    |
+| 小野さん |    $74$     |    $181$    |
+
+---
+
+* 5人的體重和身高數據被表示爲上面的表格： <br>
+   如果只提取出表格中的數字寫成垂直型矩形矩陣： $\left(
+   \begin{array}{c}
+  53 & 157 \\
+  67 & 172 \\
+  49 & 163 \\
+  80 & 178 \\
+  74 & 181 \\
+   \end{array}
+   \right)$
+
+
+##  正方形矩陣
+
+行數和列數相等的矩陣被稱爲**正方形矩陣(sqare matrix)**。一個正方形的矩陣如果類型爲 $(n,n)$，又被叫做是 $n$ 次正方矩陣或者 $n$ 次矩陣。
+
+$$A_{n\times n}= \left(
+\begin{array}{c}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}
+\right)$$
+
+從左上角往右下角方向劃一條對角線，這條對角線的名稱爲**主對角線(main diagonal)**。主對角線上有的成分 $a_{11},a_{22},\cdots, a_{nn}$，被叫做**對角成分(diagonal element)**。其餘的成分被叫做**非對角成分(off-diagonal element)**。對角成分的和被叫做是該矩陣的跡(trace/spur)，寫作 $tr(A)=\sum\limits_{i=1}^na_{ii}$
+。
+$A=\left(
+\begin{array}{c}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{array}
+\right)$ 是 $3$ 次正方形矩陣， $tr(A)=1+5+9=15$
+
+
+## 矩陣轉置
+
+$(m,n)$ 型矩陣 $A_{m\times n}=(a_{ij})$ 的行與列互相對調，被叫做**轉置(transpose)**，形成的新 $(n,m)$ 型矩陣，被叫做 $A$ 的**轉置矩陣 (transposed matrix)** ： $(a_{ji})$ 有多種標記方式：$A^t, A^\prime, A^T, ^TA$ 等，我們今後統一使用 $A^t$。轉置矩陣具有如下的性質：
+
+1. $(A^t)^t=A$
+2. $(AB)^t=B^tA^t$ <span class="diff_alert">注意： 不是$A^tB^t$</span>
+3. $(A+B)^t=A^t+B^t$
+4. $(kA)^t=kA^t$ ($k$爲標量 scalar)
+
+#### 練習
+1. $A=\left(
+\begin{array}{c}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{array}
+\right)$ 的轉置矩陣爲：$A^t=\left(
+\begin{array}{c}
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+3 & 6 & 9
+\end{array}
+\right)$
+
+2. $B=\left(
+\begin{array}{c}
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8\\
+\end{array}
+\right)$ 的轉置矩陣爲：$B^t=\left(
+\begin{array}{c}
+1 & 5  \\
+2 & 6  \\
+3 & 7  \\
+4 & 8
+\end{array}
+\right)$

@@ -1,0 +1,342 @@
+---
+title: 「統計解析のための線形代数」復習筆記12
+author: Chaochen Wang
+date: '2017-02-22'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第4章　矩陣 matrix P53-56"
+---
+
+## 矩陣乘法運算
+
+#### 矩陣乘法定義
+```{theorem, name="matrix multiplication"}
+兩個矩陣 $A, B$ ，只有 $A$ 的列數和 $B$ 的行數相等(這種特徵又被稱爲：矩陣 $A,B$ **可整合的**，conformable)時，才有定義：$AB$。$AB$ 則爲新的矩陣，類型爲 $A$ 的行數， $B$的列數。即：$A_{k\times l}, \; B_{m\times n}$ 且 $l=m$ 時才能計算乘積: $AB_{k\times n}$。
+```
+
+1. $A_{2\times3}=\left(
+\begin{array}{c}
+4 & 6 &  8\\
+2 & 1 &  3\\
+\end{array}
+\right),\; B_{3\times2}=\left(
+\begin{array}{c}
+0 &  8\\
+2 &  -1\\
+9 & 4 \\
+\end{array}
+\right)$ 時，<br>
+"$A$的列數" $=$ "$B$ 的行數" $= 3$，因此積 $AB$ 被定義，類型是 $(2,2)$ <br>
+"$B$的列數" $=$ "$A$ 的行數" $= 2$，因此積 $BA$ 被定義，類型是 $(3,3)$
+
+2.  $C_{3\times2}=\left(
+\begin{array}{c}
+4 & 2 \\
+5 & 6 \\
+7 & 3
+\end{array}
+\right),\; D_{2\times4}=\left(
+\begin{array}{c}
+2 & 0 &  9 & -1 \\
+4 & 7 &  6 &  5 \\
+\end{array}
+\right)$ 時， <br>
+"$C$的列數" $=$ "$D$ 的行數" $= 2$，因此積 $CD$ 被定義，類型是 $(3,4)$ <br>
+"$D$的列數"$= 4$，"$C$ 的行數" $= 3$，因此積 $DC$ 不被定義，$DC$ 不可整合。
+
+#### 矩陣的積的向量表達形式
+
+矩陣也可以被看做是一個個相同類型（大小，方向）的向量組成。那麼當，下面$A, B$兩個矩陣滿足：$A$ 的行向量的維度，和$B$的列向量的維度相等時，$AB$被定義。
+
+$A=\left(
+\begin{array}{c}
+\underline{a}_1^t\\
+\underline{a}_2^t\\
+\vdots\\
+\underline{a}_k^t
+\end{array}
+\right), \;
+B=(\underline{b}_1,\underline{b}_2,\cdots,\underline{b}_n)$
+
+$AB=A(\underline{b}_1,\underline{b}_2,\cdots,\underline{b}_n)=(A\underline{b}_1,A\underline{b}_2,\cdots,A\underline{b}_n)$
+
+或者：
+
+$AB=\left(
+\begin{array}{c}
+\underline{a}_1^t\\
+\underline{a}_2^t\\
+\vdots\\
+\underline{a}_k^t
+\end{array}
+\right)B=\left(
+\begin{array}{c}
+\underline{a}_1^tB\\
+\underline{a}_2^tB\\
+\vdots\\
+\underline{a}_k^tB
+\end{array}
+\right)$
+
+特殊情況當$A$僅有一個行向量 $\underline{a}^t$ 時，<br>
+$AB=\underline{a}^tB=\underline{a}^t(\underline{b}_1,\underline{b}_2,\cdots,\underline{b}_n)=(\underline{a}^t\underline{b}_1,\underline{a}^t\underline{b}_2,\cdots,\underline{a}^t\underline{b}_n)$
+
+
+#### 矩陣的積的成分
+```{theorem, name="matrix multiplication component"}
+兩個矩陣 $A_{k\times l}, \; B_{m\times n}$ 的積有被定義時，矩陣 $AB_{k\times n}$ 的任意成分$(i,j)$，被定義爲：**“$A$ 的第 $i$ 行向量與 $B$的第 $j$ 列向量的內積”**。
+```
+
+故：<br>
+$AB$ 的 $(1,1)$ 成分是，“$A$ 的第 $1$ 行向量與 $B$的第 $1$ 列向量的內積”<br>
+$AB$ 的 $(1,2)$ 成分是，“$A$ 的第 $1$ 行向量與 $B$的第 $2$ 列向量的內積”<br>
+$\vdots$ <br>
+$AB$ 的 $(k,n)$ 成分是，“$A$ 的第 $k$ 行向量與 $B$的第 $ns$ 列向量的內積”<br>
+
+
+#### 練習
+1. $A=\left(
+\begin{array}{c}
+1 & 2 \\
+3 & 4 \\
+\end{array}
+\right), B=\left(
+\begin{array}{c}
+4 & 1 \\
+5 & 2 \\
+\end{array}
+\right)$<br>
+$AB=\left(
+\begin{array}{c}
+1\times4+2\times5 & 1\times1+2\times2 \\
+3\times4+4\times5 & 3\times1+4\times2 \\
+\end{array}
+\right)\\
+\;\;\;\;\;=\left(
+\begin{array}{c}
+14 & 5 \\
+32 & 11 \\
+\end{array}
+\right)$ <br>
+$BA=\left(
+\begin{array}{c}
+4\times1+1\times3 & 4\times2+1\times4 \\
+5\times1+2\times3 & 5\times2+2\times4 \\
+\end{array}
+\right)\\
+\;\;\;\;\;=\left(
+\begin{array}{c}
+7 & 12 \\
+11 & 18 \\
+\end{array}
+\right)$<br>
+<span class="diff_alert">注意： $AB\neq BA$</span>
+<br>
+另外：$AA=\left(
+\begin{array}{c}
+1\times1+2\times3 & 1\times2+2\times4 \\
+3\times1+4\times3 & 3\times2+4\times4 \\
+\end{array}
+\right)\\
+\;\;\;\;=\left(
+\begin{array}{c}
+7 & 10 \\
+15 & 22 \\
+\end{array}
+\right)=AA^2$
+
+2. $A=\left(
+\begin{array}{c}
+1 & 2 \\
+-2 & -4 \\
+\end{array}
+\right), B=\left(
+\begin{array}{c}
+6 & -2 \\
+-3 & 1 \\
+\end{array}
+\right)$ <br>
+$AB=\left(
+\begin{array}{c}
+1\times6+2\times(-3) & 1\times(-2)+2\times1 \\
+(-2)\times6+(-4)\times(-3) & (-2)\times(-2)+(-4)\times1 \\
+\end{array}
+\right)\\
+\;\;\;\;=\left(
+\begin{array}{c}
+0 & 0 \\
+0 & 0 \\
+\end{array}
+\right)=\Large 0$<br>
+<span class="diff_alert">這裏出現了非零矩陣相乘爲**零矩陣 $\large 0$**的例子。</span>
+
+3. $A_{2\times3}=\left(
+\begin{array}{c}
+a_{11} & a_{12} &  a_{13}\\
+a_{21} & a_{22} &  a_{23}\\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+\underline{a}_1^t\\
+\underline{a}_2^t\\
+\end{array}
+\right)=(\underline{c}_1,\underline{c}_2,\underline{c}_3); \\
+B_{3\times2}=\left(
+\begin{array}{c}
+b_{11} & b_{12}\\
+b_{21} & b_{22}\\
+b_{31} & b_{32}\\
+\end{array}
+\right)=(\underline{b}_1,\underline{b}_2)=\left(
+\begin{array}{c}
+\underline{d}^t_1\\
+\underline{d}^t_2\\
+\underline{d}^t_3\\
+\end{array}
+\right)$ <br>
+<span class="diff_alert">$AB_{2\times2}$</span>$=\left(
+\begin{array}{c}
+\sum\limits_{k=1}^3a_{1k}b_{k1} &\sum\limits_{k=1}^3a_{1k}b_{k2}  \\
+\sum\limits_{k=1}^3a_{2k}b_{k1} &\sum\limits_{k=1}^3a_{2k}b_{k2}  \\
+\end{array}
+\right)\\=\left(
+\begin{array}{c}
+\underline{a}^t_1\underline{b}_1 & \underline{a}^t_1\underline{b}_2 \\
+\underline{a}^t_2\underline{b}_1 & \underline{a}^t_2\underline{b}_2 \\
+\end{array}
+\right)$ <br>
+<span class="diff_alert">$BA_{3\times3}$</span>$=\left(
+\begin{array}{c}
+\sum\limits_{k=1}^2b_{1k}a_{k1} & \sum\limits_{k=1}^2b_{1k}a_{k2} & \sum\limits_{k=1}^2b_{1k}a_{k3} \\
+\sum\limits_{k=1}^2b_{2k}a_{k1} & \sum\limits_{k=1}^2b_{2k}a_{k2} & \sum\limits_{k=1}^2b_{2k}a_{k3} \\
+\sum\limits_{k=1}^2b_{3k}a_{k1} & \sum\limits_{k=1}^2b_{3k}a_{k2} & \sum\limits_{k=1}^2b_{3k}a_{k3}
+\end{array}
+\right)\\
+=\left(
+\begin{array}{c}
+\underline{d}^t_1\underline{c}_1 & \underline{d}^t_1\underline{c}_2 & \underline{d}^t_1\underline{c}_3 \\
+\underline{d}^t_2\underline{c}_1 & \underline{d}^t_2\underline{c}_2 & \underline{d}^t_2\underline{c}_3 \\
+\underline{d}^t_3\underline{c}_1 & \underline{d}^t_3\underline{c}_2 & \underline{d}^t_3\underline{c}_3 \\
+\end{array}
+\right)$
+
+4. $\underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n\\
+\end{array}
+\right)$ 時， <br>
+$\underline{x}\underline{x}^t=\left(
+\begin{array}{c}
+x_1^2  & x_1x_2 & \cdots & x_1x_n \\
+x_2x_1 & x_2^2  & \cdots & x_2x_n \\
+\vdots & \vdots & \ddots & \vdots \\
+x_nx_1 & x_nx_2 & \cdots & x_n^2 \\
+\end{array}
+\right)$，<br>
+$\underline{x}^t\underline{x}=\sum\limits_{i=1}^nx_i^2$
+
+5. $\underline{a}=\left(
+\begin{array}{c}
+a_1\\
+a_2\\
+a_3\\
+\end{array}
+\right), \underline{b}=\left(
+\begin{array}{c}
+b_1\\
+b_2\\
+b_3\\
+\end{array}
+\right), \underline{c}=\left(
+\begin{array}{c}
+c_1\\
+c_2\\
+c_3\\
+\end{array}
+\right)\\
+A=\left(
+\begin{array}{c}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+\end{array}
+\right)$ <br>
+$\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t\\
+\;\;=\left(
+\begin{array}{c}
+a_1^2  & a_1a_2 & a_1a_3 \\
+a_2a_1 & a_2^2  & a_2a_3 \\
+a_3a_1 & a_3a_2 & a_3^2 \\
+\end{array}
+\right)\\
+\;\;\;\;\;\;+\left(
+\begin{array}{c}
+b_1^2  & b_1b_2 & b_1b_3 \\
+b_2b_1 & b_2^2  & b_2b_3 \\
+b_3b_1 & b_3b_2 & b_3^2 \\
+\end{array}
+\right)\\
+\;\;\;\;\;\;+\left(
+\begin{array}{c}
+c_1^2  & c_1c_2 & c_1c_3 \\
+c_2c_1 & c_2^2  & c_2c_3 \\
+c_3c_1 & c_3c_2 & c_3^2 \\
+\end{array}
+\right)\\
+=\left(
+\begin{array}{c}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+\end{array}
+\right)\left(
+\begin{array}{c}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3 \\
+\end{array}
+\right)=AA^t$
+
+6. $\underline{x}=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n\\
+\end{array}
+\right), \; \underline{\frac{1}{n}}=\left(
+\begin{array}{c}
+\frac{1}{n}\\
+\frac{1}{n}\\
+\cdots\\
+\frac{1}{n}\\
+\end{array}
+\right)$ 時， $\underline{x}^t\underline{\frac{1}{n}}=\sum\limits_{i=1}^nx_i\cdot\frac{1}{n}=\bar{x}$ <span class="diff_alert">($\underline{x}$ 的**平均值**)</span>
+<br>
+將這樣的 $\bar{x}$ 寫成 $n$ 個的橫向量：$(\bar{x},\bar{x},\cdots,\bar{x})$ <br>
+這個向量如果寫成展開的形式就是：<br>
+$(\bar{x},\bar{x},\cdots,\bar{x})=(\underline{x}^t\underline{\frac{1}{n}}, \underline{x}^t\underline{\frac{1}{n}},  \cdots,\underline{x}^t\underline{\frac{1}{n}})\\
+\;\;\;\;\;\;=\underline{x}^t(\underline{\frac{1}{n}},\underline{\frac{1}{n}},\cdots,\underline{\frac{1}{n}})\\
+\;\;\;\;\;\;=(x_1,x_2,\cdots,x_n)\left(
+\begin{array}{c}
+\frac{1}{n} & \frac{1}{n} & \cdots & \frac{1}{n} \\
+\frac{1}{n} & \frac{1}{n} & \cdots & \frac{1}{n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{1}{n} & \frac{1}{n} & \cdots & \frac{1}{n} \\
+\end{array}
+\right)$
+
+#### 矩陣積的性質
+
+* 矩陣 $AB$ 有定義時， $BA$ 並不一定就有定義。無法整合時就沒有定義。
+* $AB=BA$ 時，$A, B$ 被稱爲**可交換 commutative**，**交換可能矩陣**。
+* 當 $AB, BA$ 都有定義時，也不一定就滿足 $AB=BA$。也就是說，多數情況下， $AB\neq BA$。爲了區分二者，$AB$ 被稱爲 $A$ 從右往左乘 $B$ **(postmultiplication of $A$ by $B$)**，$BA$ 被稱爲 $A$ 從左往右乘 $B$ **(postmultiplication of $B$ by $A$)**。
+* 相似的， $AC=BC$ 時，應該理解爲： 等式$A=B$兩邊同時從右往左乘 $C$ <br>
+  $CA=CB$ 就是：等式$A=B$兩邊同時從左往右乘$C$。
+* 即使 $A\neq\Large 0$ 且 $B\neq\Large 0$，$AB$ 也有可能等於 $\Large 0$ (零矩陣)，此時我們說， $A, B$ 是**零因子 (zero divisor)**。

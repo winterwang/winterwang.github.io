@@ -1,0 +1,101 @@
+---
+title: 「統計解析のための線形代数」復習筆記2
+author: Chaochen Wang
+date: '2017-02-08'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第1章　数学の基礎 P6-10"
+---
+
+## 偏微分
+
+### 1個變量的函數的微分
+#### 公式：
+
+1. 函數 $f(a)$ 關於變量 $a$ 的微分，被定義爲： $\lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}$ , 寫作 $\frac{df}{da}$, 具有下列性質：
+    + $f(a) = a^n$ 時， $\frac{df}{da} = na^{n-1}$ **重要**
+    + $\frac{d}{da}\left\{kf(a)+lg(a)\right\}=k\frac{df}{da}+l\frac{dg}{da}$ **($k,l$ 是常數)**
+    + $\frac{d}{da}\left\{f(a) \cdot g(a)\right\}=\frac{df}{da}g(a)+f{a}\frac{dg}{da}$
+    + $\frac{d}{da}\left\{\frac{f(a)}{g(a)}\right\}=\frac{\frac{df}{da}g(a)-f(a)\frac{dg}{da}}{\left\{g(a)\right\}^2}$, 特別的有，$\frac{d}{da}\left\{\frac{1}{g(a)}\right\}=-\frac{\frac{dg}{da}}{\left\{g(a)\right\}^2}$
+    + $y=f(b), b=g(a)$ 時， $\frac{dy}{da}=\frac{dy}{db}\frac{db}{da}$
+
+2. 2次（2階）微分 【二階導數】:
+
+     $f(a)$ 關於常數 $a$ 的微分 $\frac{df}{da}$ 的二次微分表示爲： $\frac{d^2f}{da^2}$
+
+### 多個變量的函數的微分
+#### 偏微分
+包含了 $n$ 個獨立變量 $a_1, a_2,a_3,\cdots,a_i,\cdots,a_n$的函數，即多變量函數 $F(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n)$ 關於 $a_i (i=1,2,\cdots,n)$ 的偏微分 _(partial differentiation)_ 的定義是，把 $a_i$ 以外的獨立變量當做常數（定数），將函數 $F$ 對變量 $a_i$ 求微分，寫作： $\frac{\partial F}{\partial a_i}$。
+
+以下爲了便於說明，以三個變量爲例。
+
+1. 函數 $F(a_1,a_2,a_3)=a_1+a_2+a_3=\sum\limits_{i=1}^3a_i$ 對於三個獨立變量分別求偏微分：
+$$\frac{\partial F}{\partial a_1}=1，\frac{\partial F}{\partial a_2}=1， \frac{\partial F}{\partial a_3}=1$$
+
+2. 函數 $F(a_1,a_2,a_3)=a_1b_1+a_2b_2+a_3b_3=\sum\limits_{i=1}^3a_ib_i$ 對於三個獨立變量分別求偏微分：
+$$\frac{\partial F}{\partial a_1}=b_1，\frac{\partial F}{\partial a_2}=b_2， \frac{\partial F}{\partial a_3}=b_3$$
+
+3. 函數 $F(a_1,a_2,a_3)=a_1^2+a_2^2+a_3^2=a_1\cdot a_1+a_2\cdot a_2+a_3\cdot a_3\\=\sum\limits_{i=1}^3a_i^2=\sum\limits_{i=1}^3a_i\cdot a_i \;對三個變量分別求偏微分：$　
+$$\frac{\partial F}{\partial a_1}=2a_1，\frac{\partial F}{\partial a_2}=2a_2， \frac{\partial F}{\partial a_3}=2a_3$$
+4. 函數 $F(a_1,a_2,a_3)=\lambda_1a_1^2+\lambda_2a_2^2+\lambda_3a_3^2=a_1\cdot\lambda_1\cdot a_1+a_2\cdot\lambda_2\cdot a_2+a_3\cdot\lambda_3\cdot a_3\\=\sum\limits_{i=1}^3\lambda_ia_i^2=\sum\limits_{i=1}^3a_i\cdot\lambda_i\cdot a_i \; 對三個變量分別求偏微分：$
+$$\frac{\partial F}{\partial a_1}=2\lambda_1a_1，\frac{\partial F}{\partial a_2}=2\lambda_2a_2， \frac{\partial F}{\partial a_3}=2\lambda_3a_3$$
+5. 函數 $F(a_1,a_2,a_3)=(b_1-\lambda a_1)^2+(b_2-\lambda a_2)^2+(b_3-\lambda a_3)^2\\=\sum\limits_{i=1}^3(b_i-\lambda a_i)^2=\sum\limits_{i=1}^3(b_i-\lambda a_i)(b_i-\lambda a_i)\;對三個變量求偏微分：$
+$$\frac{\partial F}{\partial a_1}=-2\lambda(b_1-\lambda a_1)，\frac{\partial F}{\partial a_2}=-2\lambda(b_2-\lambda a_2)， \frac{\partial F}{\partial a_3}=-2\lambda(b_3-\lambda a_3)$$
+6. 函數 $F = a_{11}x_1y_1 + a_{12}x_1y_2 + a_{13}x_1y_3 \\
+\;\;\;\;\;\;+a_{21}x_2y_1+a_{22}x_2y_2+a_{23}x_2y_3\\
+\;\;\;\;\;\;+a_{31}x_3y_1+a_{32}x_3y_2+a_{33}x_3y_3\\
+\;\;\;=\sum\limits_{i=1}^3\sum\limits_{i=1}^3a_{ij}x_iy_j\;對三個變量求偏微分：$
+    + $F(x_1,x_2,x_3)$, 即視爲 $x_1,x_2,x_3$ 的函數的時候：
+
+    $$
+    \frac{\partial F}{\partial x_1}=a_{11}y_1+a_{12}y_2+a_{13}y_3=\sum_{j=1}^3a_{1j}y_j \\
+    \frac{\partial F}{\partial x_2}=a_{21}y_1+a_{22}y_2+a_{23}y_3=\sum_{j=1}^3a_{2j}y_j \\
+    \frac{\partial F}{\partial x_3}=a_{31}y_1+a_{32}y_2+a_{33}y_3=\sum_{j=1}^3a_{3j}y_j \\
+    將上面三個式子總結一下就是: \\
+    \frac{\partial F}{\partial x_i}=\sum_{j=1}^3a_{ij}y_j (i=1,2,3)
+    $$
+
+    + $F(y_1,y_2,y_3)$, 即視爲 $y_1,y_2,y_3$ 的函數的時候：
+
+    $$
+    \frac{\partial F}{\partial y_1}=a_{11}x_1+a_{21}x_2+a_{31}x_3=\sum_{i=1}^3a_{i1}x_i \\
+    \frac{\partial F}{\partial y_2}=a_{12}x_1+a_{22}x_2+a_{32}x_3=\sum_{i=1}^3a_{i2}x_i \\
+    \frac{\partial F}{\partial y_3}=a_{13}x_1+a_{32}x_2+a_{33}x_3=\sum_{i=1}^3a_{i3}x_i \\
+    將上面三個式子總結一下就是: \\
+    \frac{\partial F}{\partial x_i}=\sum_{i=1}^3a_{ij}x_i (j=1,2,3)
+    $$
+
+7. 函數 $F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\
+\;\;\;\;\;\;\;\;\;\;\;\;=a_{11}x_1^2+2a_{12}x_1x_2+2a_{13}x_1x_3+a_{22}x_2^2+2a_{23}x_2x_3+a_{33}x_3^2\\
+\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^3a_{ii}x_i^2+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i<j}a_{ij}x_ix_j\\
+\;\;\;\;\;\;\;\;\;\;\;\;==\sum\limits_{i=1}^3x_ia_{ii}x_i+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i<j}x_ia_{ij}x_j\;對三個變量求偏微分：$
+$$\frac{\partial F}{\partial x_1}=2(a_{11}x_1+a_{12}x_2+a_{13}x_3)\\
+\frac{\partial F}{\partial x_2}=2(a_{12}x_1+a_{22}x_2+a_{23}x_3)\\
+\frac{\partial F}{\partial x_3}=2(a_{13}x_1+a_{23}x_2+a_{33}x_3)$$
+
+8. 函數 $F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\
+G(x_1,x_2,x_3)=b_{11}x_1x_1+b_{12}x_1x_2+b_{13}x_1x_3 \\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{12}x_2x_1+b_{12}x_2x_2+b_{23}x_2x_3\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{13}x_3x_1+b_{23}x_3x_2+b_{33}x_3x_3\\\;對三個變量求偏微分：$
+
+$$
+\frac{\partial}{\partial x_1}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_1}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_1}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{11}x_1+a_{12}x_2+a_{13}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{11}x_1+b_{12}x_2+b_{13}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\\
+\frac{\partial}{\partial x_2}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_2}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_2}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{12}x_1+a_{22}x_2+a_{23}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{12}x_1+b_{22}x_2+b_{23}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\frac{\partial}{\partial x_3}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_3}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_3}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{13}x_1+a_{23}x_2+a_{33}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{13}x_1+b_{23}x_2+b_{33}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+$$
+
+
+#### 2次（2階）偏微分 【二階導數】:
+
+   函數 $F(a_1,a_2,\cdots,a_n)$ 對 $a_i$ 取偏微分 $\frac{\partial F}{\partial a_i}$ 時，記作 $\frac{\partial^2 F}{\partial a_i^2}$ ; 取變量 $a_j$ 的偏微分時記作 $\frac{\partial^2 F}{\partial a_i\partial a_j}$ 或者 $\frac{\partial^2 F}{\partial a_j\partial a_i}$。 這些都被稱爲是函數 $F$ 的2次（2階）偏微分。

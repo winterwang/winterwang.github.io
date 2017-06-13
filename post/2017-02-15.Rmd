@@ -1,0 +1,134 @@
+---
+title: 「統計解析のための線形代数」復習筆記6
+author: Chaochen Wang
+date: '2017-02-15'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第2章　統計の基礎 P22-25"
+---
+
+## 數據的變換
+
+1. 平均值附近的偏差:
+    * 各個數值 $x_i$ 與樣本平均值 $\bar{x}$ 的差 $$x_i^\prime=x_i-\bar{x} (i = 1,2,\cdots,n)$$ <br>
+    稱爲數據 $x_i$ 在它的平均值 $\bar{x}$ 附近的**偏差(deviation)**。通常我們說**求偏差**，指的是，對數據 $x_i$ 進行**偏差轉換**。這個過程又被稱作是**中心變換(centering)**
+    * 關於偏差，我們列舉如下兩個有特徵的的**概括統計**：
+        + 樣本平均值：
+         \begin{equation}
+         \bar{x}^\prime=\frac{1}{n}\sum_{i=1}^nx_i^\prime=0
+         (\#eq:samplemean)
+         \end{equation}
+        + 樣本偏差平方和：
+        \begin{equation}
+        SS^\prime=\sum_{i=1}^n(x^\prime)^2=SS
+        (\#eq:SSprime)
+        \end{equation}
+
+#### 練習：證明\@ref(eq:samplemean)
+#### 解：
+**證明\@ref(eq:samplemean)**:
+$$\bar{x}^\prime=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})}{n}\\
+\;\;\;=\frac{\sum\limits_{i=1}^nx_i-n\bar{x}}{n}\\
+\;\;\;=\frac{\sum\limits_{i=1}^nx_i}{n}-\bar{x}\\
+\;\;\;=\bar{x}-\bar{x}=0$$
+
+
+2. 數據的標準化：
+    * 將數據 $x_i$ 的平均值 $\bar{x}$ 附近的偏差除以樣本標準偏差 $s$ 從而獲得下面式子所表示的數據 $z_i$ 的過程，被叫做**數據的標準化 (standardization)**：
+    \begin{equation}
+    z_i=\frac{x_i-\bar{x}}{s}
+    (\#eq:standardization)
+    \end{equation}
+    * 標準化後的數據 $z_i$ 的**概括統計**有下列特徵：
+        + 樣本平均值：
+        \begin{equation}
+        \bar{z}=\frac{1}{n}\sum_{i=1}^nz_i=0
+        (\#eq:samplemeans)
+        \end{equation}
+        + 樣本方差:
+        \begin{equation}
+        s_{z}^2=\frac{1}{n}\sum_{i=1}^nz_i^2=1
+        (\#eq:Ssquare)
+        \end{equation}
+    * 由於標準化數據具有上述兩個非常顯著的特徵，均值爲 $0$，方差爲 $1$，因此我們實際分析數據過程中常常對數據進行標準化。標準化以後的數據，單位消失，變成了一組**無名數**
+    * $\divideontimes$ 數據的標準化，有時你會看到被定義爲:
+    \begin{equation}
+    z_i=\frac{x_i-\bar{x}}{u}
+    (\#eq:newstandardization)
+    \end{equation} <br>
+    此時的不偏樣本方差爲：
+    \begin{equation}
+    u_z^2=\frac{1}{n-1}\sum_{i=1}{n}z_i^2=1
+    (\#eq:unbsamplevar)
+    \end{equation}
+
+## 2變量數據的概括統計：
+
+##### 樣本量同爲 $n$ 的 $2$ 變量 $x_1,x_2$ 的數據，表示爲如下表格：
+
+| 個体の番号   | 変量 $x_1$  |  変量 $x_2$  |
+|:----------:|:-----------:|:-----------:|
+|    $1$     |  $x_{11}$   |  $x_{12}$   |
+|    $2$     |  $x_{21}$   | $x_{22}$    |
+|  $\vdots$  | $\vdots$    | $\vdots$    |
+|    $i$     |   $x_{i1}$  |   $x_{i2}$  |
+|  $\vdots$  | $\vdots$    | $\vdots$    |
+|    $n$     |   $x_{n1}$  |   $x_{n2}$  |
+
+##### 按照變量 $x_1,x_2$ 各自的定義：
+
+* 樣本**平均值**：$\bar{x_1}=\frac{1}{n}\sum\limits_{i=1}^nx_{i1}, \; \bar{x_2}=\frac{1}{n}\sum\limits_{i=1}^nx_{i2}$
+* 樣本**偏差平方和**: $SS_1=\sum\limits_{i=1}^n(x_{i1}-\bar{x_1})^2, \; SS_2=\sum\limits_{i=1}^n(x_{i2}-\bar{x_2})^2$
+* 樣本**方差**： $s_1^2=\frac{SS_1}{n}, \; s_2^2=\frac{SS_2}{n}$
+* 樣本**標準偏差**： $s_1=\sqrt{s_1^2}, \; s_2=\sqrt{s_2^2}$
+* **不偏樣本方差**： $u_1^2=\frac{SS}{n-1}, \; u_2^2=\frac{SS_2}{n-1}$
+* **不偏樣本方差平方根**: $u_1=\sqrt{u_1^2}, \; u_2=\sqrt{u_2^2}$
+
+##### 對於這樣一對變量 $x_1,x_2$ 來說，我們又可以追加如下的概括統計：
+
+* 樣本**總體平均值**： $\bar{x}=\frac{1}{n+n}(\sum\limits_{i-1}^nx_{i1}+\sum\limits_{i-1}^nx_{i2})$
+* 樣本**方差積和(cross-product)**：
+\begin{equation}
+\begin{split}
+S_{12} & = \sum_{i=1}^n(x_{i1}-\bar{x_1})\cdot(x_{i2}-\bar{x_2})\\
+& = \sum_{i=1}^n(x_{i1}x_{i2}-\bar{x_1}x_{i2}-x_{i1}\bar{x_2}+\bar{x_1}\bar{x_2})\\
+& = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\sum_{i=1}^nx_{i2}-{\sum_{i=1}^nx_{i1}}\bar{x_2}+n\bar{x_1}\bar{x_2}\\
+& = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\cdot n\bar{x_2}-n\bar{x_1}\cdot\bar{x_2}+n\bar{x_1}\bar{x_2}\\
+& = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\bar{x_1}\cdot\bar{x_2}\\
+& = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\frac{\sum\limits_{i=1}^nx_{i1}}{n}\cdot\frac{\sum\limits_{i=1}^nx_{i2}}{n}\\
+& = \sum_{i=1}^nx_{i1}x_{i2}-\frac{1}{n}(\sum_{i=1}^nx_{i1})(\sum_{i=1}^nx_{i2}) = S_{21}
+\end{split}
+(\#eq:crossproduct)
+\end{equation}
+
+* 樣本**協方差(covariance，共分散)**：$s_{12}=\frac{S_{12}}{n}=\frac{S_{21}}{n}=s_{21}$
+
+* 樣本**相關系數 (correlation coefficient)**： $r_{11}=r_{22}=1$
+\begin{equation}
+\begin{split}
+r_{12} & = \frac{S_{12}}{\sqrt{SS_1\cdot SS_2}}\\
+& = \frac{\frac{S_{12}}{n}}{\sqrt{\frac{SS_1}{n}}\cdot\sqrt{\frac{SS_2}{n}}}\\
+& = \frac{s_{12}}{s_1s_2}=r_{21}\\
+\end{split}
+(\#eq:correlation)
+\end{equation}
+
+
+##### 此處我們再來證明一下，標準化以後的數據的樣本協方差(covariance)，和標準化以前原來的數據的樣本相關系數(correlation coefficient)是相等的：
+
+假設，$x_{i1}$ 標準化以後爲 $z_{i1}=\frac{x_{i1}-\bar{x_1}}{s_1}$； <br>
+$x_{i2}$ 標準化以後爲 $z_{i2}=\frac{x_{i2}-\bar{x_2}}{s_1}$。 <br>
+此時，$z_{i1}, z_{i2}$ 的樣本協方差可以計算如下:
+\begin{equation}
+\begin{split}
+s_{z_{12}} & = \frac{S_{z_{12}}}{n} \\
+& = \frac{1}{n}\cdot\sum_{i=1}^n(z_{i1}-\bar{z_1})(z_{i2}-\bar{z_2})\\
+& = \frac{1}{n}\sum_{i=1}^nz_{i1}z_{i2}\\
+& = \frac{1}{n}\sum_{i=1}^n(\frac{x_{i1}-\bar{x_1}}{s_1})(\frac{x_{i2}-\bar{x_2}}{s_2})\\
+& = \frac{S_{12}}{n}\cdot\frac{1}{s_1s_2} = \frac{s_{12}}{s_1s_2}=r_{12}
+\end{split}
+(\#eq:stcorrelation)
+\end{equation}

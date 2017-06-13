@@ -1,0 +1,116 @@
+---
+title: 「統計解析のための線形代数」復習筆記19
+author: Chaochen Wang
+date: '2017-04-02'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第5章　行列式 determinant P80"
+---
+
+## 行列式的性質
+具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。
+
+1. 轉置矩陣的行列式，與轉置前的行列式一致。即：$|A^t|=|A|$。 <br>
+   $|A|=\begin{vmatrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+   \end{vmatrix}$
+2. 任意一列（或者任意一行）若乘以 $\lambda$ 倍，那麼這個矩陣的行列式結果也將是乘以 $\lambda$ 倍。<br>
+$|A|=\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+\lambda a_{21} &\lambda  a_{22} & \lambda a_{23}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}\\
+\;\;\;\;=|A|=\lambda \begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}$<br>
+$|A|=\begin{vmatrix}
+a_{11} & a_{12} & \lambda a_{13}\\
+a_{21} & a_{22} & \lambda a_{23}\\
+a_{31} & a_{32} & \lambda a_{33}\\
+\end{vmatrix}\\
+\;\;\;\;=|A|=\lambda \begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}$
+3. 任意一列（或者任意一行）的各成分乘以 $\lambda$ 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。<br>
+$\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21}\pm \lambda a_{11} & a_{22}\pm \lambda a_{12} & a_{23}\pm \lambda a_{13}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}，\\ \begin{vmatrix}
+a_{11} & a_{12}\pm \lambda a_{11} & a_{13}\\
+a_{21} & a_{22}\pm \lambda a_{21} & a_{23}\\
+a_{31} & a_{32}\pm \lambda a_{31} & a_{33}\\
+\end{vmatrix},$ <br>
+$\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} \pm \frac{a_{11}}{\lambda} & a_{22}\pm \frac{a_{12}}{\lambda} & a_{23}\pm \frac{a_{13}}{\lambda}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}, \\
+\begin{vmatrix}
+a_{11} & a_{12}\pm \frac{a_{11}}{\lambda}  & a_{13}\\
+a_{21} & a_{22}\pm \frac{a_{21}}{\lambda}  & a_{23}\\
+a_{31} & a_{32}\pm \frac{a_{31}}{\lambda}  & a_{33}\\
+\end{vmatrix}$<br>
+上述行列式與行列式 $\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}$ 結果相同。
+
+4. 符合下列條件時，行列式的值爲 $0$
+    * 任意一行（或者列）的全部成分均爲 $0$ 時。
+    * 矩陣中若有兩行（或者兩列）的對應成分全部相同時。
+    * 矩陣中若有兩行（或者兩列）的對應成分均成一定比例時。<br>
+   $\begin{vmatrix}
+   a_{11} & a_{12} & a_{13}\\
+   a_{21} & a_{22} & a_{23}\\
+   0 & 0 & 0\\
+   \end{vmatrix}=0\\
+   \begin{vmatrix}
+   a & b & c\\
+   a & b & c\\
+   d & e & f\\
+   \end{vmatrix}=0\\
+   \begin{vmatrix}
+   a & b & c\\
+   ka & kb & kc\\
+   d & e & f\\
+   \end{vmatrix}=0$<br>
+   由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 $0$。此性質與多重線性迴歸的多重共線性有直接關係。
+
+5. 一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）<br>
+$\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}=-\begin{vmatrix}
+a_{21} & a_{22} & a_{23}\\
+a_{11} & a_{12} & a_{13}\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}$ （第一行和第二行對調成分）
+6. 對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積<br>
+$\begin{vmatrix}
+a_{11} & 0 & 0\\
+0 & a_{22} & 0\\
+0 & 0 & a_{33}\\
+\end{vmatrix}=a_{11}a_{22}a_{33},\\
+\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+0 & a_{22} & a_{23}\\
+0 & 0 & a_{33}\\
+\end{vmatrix}=a_{11}a_{22}a_{33},\\
+\begin{vmatrix}
+a_{11} & 0 & 0\\
+a_{21} & a_{22} & 0\\
+a_{31} & a_{32} & a_{33}\\
+\end{vmatrix}=a_{11}a_{22}a_{33}$
+7.

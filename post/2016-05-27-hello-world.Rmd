@@ -1,0 +1,23 @@
+---
+title: Hello World
+author: Chaochen Wang
+date: '2016-05-27'
+categories: [test]
+tags: [test, mathjax]
+summary: "test page"
+---
+
+
+
+# Dairy Consumption and Risk of Stroke
+
+## Dairy Consumption and Risk of Stroke
+
+### Dairy Consumption and Risk of Stroke
+
+#### Dairy Consumption and ~~Risk~~ of Stroke
+
+##### Dairy Consumption and Risk of Stroke
+
+* list 1$^2$
+* list 2

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Be ambitious</title>
+    <link>/project/index.xml</link>
+    <description>Recent content in Projects on Be ambitious</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
+    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Aichi Workers&#39; Cohort Study | 愛知職域コホート研究</title>
+      <link>/project/Aichi/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/Aichi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genome Cohort on Psychosocial traits (GCOP) Study</title>
+      <link>/project/GCOP/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/GCOP/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Japan Multi-Institutional Collaborative Cohort (J-MICC) Study</title>
+      <link>/project/JMICC/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/JMICC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>the Japan Collaborative Cohort (JACC) Study | 大規模コホート研究</title>
+      <link>/project/JACC/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/JACC/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

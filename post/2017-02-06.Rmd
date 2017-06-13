@@ -1,0 +1,101 @@
+---
+title: 「統計解析のための線形代数」復習筆記1
+author: Chaochen Wang
+date: '2017-02-06'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第1章　数学の基礎 P1-5"
+---
+
+## 和記號$\sum$
+  * $\sum$ 的性質 (1)
+      **下標(添字)** $x_1 + x_2 + x_3 + \dots + x_n$ 記作如下:$$\sum_{i=1}^{n}x_i$$
+      + $\sum_{i=1}^{n}x_i$ 中的$i$ 稱爲`dummy index`
+      + 可以簡略寫爲：$\sum x$ 或者 $\sum_1 x_i$, $\sum x_i$
+  * $\sum$ 的性質 (2)
+      + \begin{equation}
+        \sum_{i=1}^{n}(ax_i + by_i)= a\sum_{i=1}^{n}x_i + b\sum_{i=1}^{n}y_i (\#eq:1)
+        \end{equation}
+      + $\sum_{i=1}^{n}ax_i = a\sum_{i=1}^{n}x_i$ `常數(定数)可以提前`
+      + $\sum_{i=1}^{n}a = na$
+      + $\sum_{i=1}^{n}1 = n$
+      + $\sum_{i=1}^{n}(ax_i+b) = a\sum_{i=1}^{n}x_i + nb$
+      + 公式\@ref(eq:1)的應用:
+          $$
+          \begin{aligned}
+          \sum_{i=1}^{n}(ax_i -by_i)^2 &= \sum_{i=1}^{n}(a^2x_i^2 - 2abx_iy_i + b^2y_i^2) \\
+           &= \sum_{i=1}^{n}a^2x_i^2 -\sum_{i=1}^{n}2abx_iy_i + \sum_{i=1}^{n}b^2y_i^2 \\
+           &= a^2\sum_{i=1}^{n}x_i^2 - 2ab\sum_{i=1}^{n}x_iy_i + b^2\sum_{i=1}^{n}y_i^2
+          \end{aligned}
+          $$
+      + 但是，乘法或平方有如下性質，計算方差(分散)或者相關系數時需要注意：$$\sum_{i=1}^{n}x_i^2 \neq (\sum_{i=1}^{n}x_i)^2$$ 以及 $$\sum_{i=1}^{n}x_iy_i \neq (\sum_{i=1}^{n}x_i)(\sum_{i=1}^{n}y_i)$$
+      + 自然數的冪運算之和(冪[べき]乗の和)的公式:
+          $$
+          \begin{aligned}
+          1+2+3+\dots+n &= \sum_{t=1}^{n}t = \frac{n(n+1)}{2}\\
+          1^2+2^2+3^2+\dots+n^2 &= \sum_{t=1}^{n}t^2 = \frac{n(n+1)(2n+1)}{6} \\
+          1^3+2^3+3^3+\dots+n^3 &= \sum_{t=1}^{n}t^3 = {\frac{n(n+1)}{2}}^2 \\
+          1^4+2^4+3^4+\dots+n^4 &= \sum_{t=1}^{n}t^4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}
+          \end{aligned}
+          $$
+          {{% alert note %}}
+          上面的公式將會應用在時間序列分析，斯皮尔曼等级相关系数(スピアマンの順位相関係数)的定義公式的推導。
+          {{% /alert %}}
+
+
+## $\sum$式子變形成普通計算式：
+  1. $$\sum_{i=1}^{n}f_{ij} = f_{i1} + f_{i2} + f_{i3} + \dots + f_{in}$$ 此式子也常寫作$f_{i+}$, 或者$f_{i\cdot}$
+  2. $$\sum_{i=1}^{m}f_{ij} = f_{1i} + f_{2i} + f_{3i} + \dots + f_{mj}$$ 此式子也常寫作$f_{+j}$, 或者$f_{\cdot j}$
+  3. $$\sum_{i=1}^{2}\sum_{j=1}^{3}x_{ij} = \sum_{i=1}^{2}(\sum_{i=j}^{3}x_{ij}) = \sum_{i=1}^{2}(x_{i1} + x_{i2} + x_{i3}) = (x_{11} + x_{12} + x_{13}) + (x_{21} + x_{22} + x_{23})$$ 此式子也可以寫作$x_{++}$, 或者$x_{\cdot\cdot}$。另外，中間的式子如果是$\sum_{j=1}^{3}(\sum_{i=1}^{2}x_{ij})$也可以成立，過程如下：$$\sum_{j=1}^{3}(\sum_{i=1}^{2}x_{ij})=\sum_{j=1}^{3}(x_{1j} + x_{2j}) = (x_{11} + x_{21}) + (x_{12} + x_{22}) + (x_{13} + x_{23})$$
+
+---
+
+  4. $$
+  \begin{aligned}
+  \sum_{i=1}^2\sum_{j=1}^2a_{ij}x_ix_j &= \sum_{i=1}^2(\sum_{j=1}^2a_{ij}x_ix_j) \\
+  &= \sum_{i=1}^2({\sum_{j=1}^2a_{ij}x_j)x_i} \\
+  &= \sum_{i=1}^2(a_{i1}x_1 + a_{i2}x_2)x_i \\
+  &= (a_{11}x_1 + a_{12}x_2)x_1 + (a_{21}x_1 + a_{22}x_2)x_2 \\
+  &= a_{11}x_1^2 + (a_{12} + a_{21})x_1x_2 + a_{22}x_2^2
+  \end{aligned}
+  $$
+
+---
+
+  5. $$
+  \begin{aligned}
+  \sum_{k=1}^3\left\{(\sum_{i=1}^2b_ix_{ik})(\sum_{j=1}^2b_jx_{jk})\right\} &= \sum_{k=1}^3\left\{(b_1x_{1k} + b_2x_{2k})(b_1x_{1k} + b_2x_{2k})\right\} \\
+  &= \sum_{k=1}^3(b_1x_{1k} + b_2x_{2k})^2 \\
+  &= (b_1x_{11} + b_2x_{21})^2 + (b_1x_{12} + b_2x_{22})^2 + (b_1x_{13} + b_2x_{23})^2
+  \end{aligned}
+  $$
+
+---
+
+  6. $\mathop{\sum\limits^3\sum\limits^3}\limits_{i<j}e_{ij}$ 會變成怎樣的式子呢？ 滿足 $i<j (i = 1,2,3; j = 1,2,3)$ 條件的 $i,j$, 有且僅有 $(1,2),(1,3),(2,3)$,故 $\mathop{\sum\limits^3\sum\limits^3}\limits_{i<j}e_{ij} = e_{12} + e_{13} + e_{23}$
+
+---
+
+  7. 那麼$\mathop{\sum\limits^3\sum\limits^3}\limits_{i\neq j}e_{ij}$又會變成怎樣的式子呢？ 滿足 $i\neq j (i = 1,2,3; j = 1,2,3)$ 的 $(i,j)$ 有6種組合:$(1,2),(2,1),(1,3),(3,1),(2,3),(3,2)$, 故$\mathop{\sum\limits^3\sum\limits^3}\limits_{i\neq j}e_{ij} = e_{12} + e_{21} + e_{13} + e_{31} + e_{23} + e_{32}$
+
+## 加法算式變形爲$\sum$
+在多元變量分析(多変量解析)中，與前項相比，加法算式變形成爲$\sum$式子更加重要。也就是說，以前項計算爲例的話，作爲答案的計算式如果放在題幹，反向求解$\sum$式的過程更加常用。簡單練習一下吧：
+
+1. 將計算式$a_1x_1^2 + a_2x_2^2 + a_3x_3^2 + a_4x_4^2 + a_5x_5^2$改寫成$\sum$式：
+    + 先寫下：$\sum$
+    + 再寫各個單元的共通部分$(a,x^2)$： $\sum ax^2$
+    + 各單元不同的僅爲下標： $\sum a_ix_i^2$
+    + 注意到下標的變化規律爲$1$到$5$之間的整數，故在$\sum$符號的上部寫上$5$，下部寫上$i=1$: $\sum\limits_{i=1}^5a_ix_i^2$ (答)
+2. 將計算式$f_2(x_2 - \bar{x})^2 + f_3(x_3 - \bar{x})^2 + f_4(x_4 - \bar{x})^2 + f_5(x_5 - \bar{x})^2$改寫成$\sum$式：
+    + $\sum$
+    + $\sum f(x-\bar{x})^2$
+    + $\sum f_i(x_i - \bar{x})^2$
+    + $\sum\limits_{i=2}^5f_i(x_i - \bar{x})^2$ (答)
+
+## 提問：
+### 我們現在了解了可以使用簡單的$\sum$符號來表達復雜有規律的加法算式。請問有沒有相應的記號來代表乘法？
+### 當然有。用希臘字母$\pi$的大寫$\Pi$來表示。例如： $$x_1x_2x_3x_4x_5 = \prod_{i=1}^5x_i$$ $$x_1x_2x_3\dots x_n = \prod_{i=1}^nx_i$$
+### 乘法記號可以證明下面的等式成立： $$\prod_{i=1}^nx_i^2 = (\prod_{i=1}^nx_i)^2$$ $$\log(\prod_{i=1}^nx_i) = \prod_{i=1}^n\log x_i$$

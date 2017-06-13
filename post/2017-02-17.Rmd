@@ -1,0 +1,127 @@
+---
+title: 「統計解析のための線形代数」復習筆記8
+author: Chaochen Wang
+date: '2017-02-17'
+categories: [statistics]
+tags:
+  - learning notes
+  - basic mathematics
+  - linear algebra
+summary: "第3章　向量 vector P31-34"
+---
+
+## 向量 vector
+### 列向量 column vector
+
+在等號的右側，將數字寫成一列，左右用圓括號或者方括號包含在內的形式，被叫做列向量(column vector)：
+
+$\underline{a}=\left(
+\begin{array}{c}
+a_1\\
+a_2\\
+\vdots\\
+a_i\\
+\vdots\\
+a_n
+\end{array}
+\right), \;\;
+\textbf{a}=\left[
+\begin{array}{c}
+a_1\\
+a_2\\
+\vdots\\
+a_i\\
+\vdots\\
+a_n
+\end{array}
+\right]$<br>
+
+* 我們接下來將會繼續定義，向量的加減法，標量乘法(scalar multiplication)。把上述的向量用一個文字表示的時候，通常會記爲下劃線 $\underline{a}$，或者是加粗的小寫字母： $\bf{a}$。
+
+* 構成向量的各個數字，被命名爲**成分(component, element, entry)**，從上往下第 $i$ 個成分稱爲第 $i$ 成分。
+
+* 成分的個數爲 $n$，就被稱爲這個向量具有 $n$ 個**維度(次元，dimension)**，或者說這個向量的維度爲 $n$。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的**型(size, order)**,或者 **類型(type)** 一致。
+
+* 成分只有一個的向量，被特別稱爲**標量(scalar)**，原則上不加括號。
+
+* 將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲**成分表示**。在多元變量分析中，我們說到向量，多默認指的就是列向量。
+
+1. $\underline{b}=\left(
+\begin{array}{c}
+16\\
+59\\
+80\\
+\end{array}
+\right)=\left[
+\begin{array}{c}
+16\\
+59\\
+80\\
+\end{array}
+\right]=\textbf{b}$<br>今後我們都用字母帶下劃線，圓括號包含數字的方式表示向量。
+
+2. $\underline{c}=\left(
+\begin{array}{c}
+\sin t+\cos t\\
+\cos t+\tan t-2\\
+\tan t + \sin t\\
+\end{array}
+\right)$
+
+3. 當 $F$ 爲 $a_1,a_2,a_3$ 的函數時，寫作 $F(a_1,a_2,a_3)$。 以**三個未知數的偏微分**爲成分的向量(梯度向量，gradient vector)，寫成下面等式左邊的形式。可以簡略寫作: $\underline{a}=\left(
+\begin{array}{c}
+a_1\\
+a_2\\
+a_3\\
+\end{array}
+\right)$。$\nabla$讀作`nabla`。<br>
+$\left(
+\begin{array}{c}
+\frac{\partial F}{\partial a_1}\\
+\frac{\partial F}{\partial a_2}\\
+\frac{\partial F}{\partial a_3}\\
+\end{array}
+\right)=\frac{\partial F}{\partial \underline{a}}=\nabla_{\underline{a}}F$
+
+
+## 橫向量(行向量) row vector
+在等號的右側，將數字寫成一行，左右用圓括號或者方括號包含在內的形式，被叫做橫向量(row vector):
+
+$\underline{a}=(a_1,a_2,\cdots,a_j,\cdots,a_n), \; \textbf{a}=[a_1,a_2,\cdots,a_j,\cdots,a_n]$
+
+成分，維度，類型等的定義與列向量相同。另外注意，維度相同，但是一個是橫向量，一個是列向量的話，這兩個向量是不同類型的。
+
+1. $\underline{x}=(x_1,x_2,x_3)$<br>
+    有時也可以不用逗號分隔成分。 寫作 $(x_1 \; x_2 \;x_3)$。下同。
+2. $(\frac{\partial F}{\partial x_1},\frac{\partial F}{\partial x_2},\frac{\partial F}{\partial x_3})=\frac{\partial F}{\partial \underline{x}}=\nabla_{\underline{x}F}$
+3. $\underline{u}=(\sin\theta\cos\phi, \sin\theta\cos\theta, \cos\theta)$
+
+
+## 向量的轉置 (vector transpose)
+
+將列向量的每個成分，按照從上到下的順序，一字橫着排開寫成橫向量。這個向量稱爲原來列向量的轉置向量(transposed vector)。反之亦然。
+
+向量 $\underline{a}$ 的轉置向量，可以標記爲 $\underline{a}^t,\;\underline{a}^\prime,\;^t\underline{a},\;\underline{a}^T, \;^T\underline{a}$ 各種形式。今後統一用 $\underline{a}^t$。
+
+1. $\underline{a}=\left(
+\begin{array}{c}
+a_1\\
+a_2\\
+a_3\\
+\end{array}
+\right)$ 的轉置向量我們會記爲：<br>
+$\underline{a}^t=\left(
+\begin{array}{c}
+a_1\\
+a_2\\
+a_3\\
+\end{array}
+\right)^t=(a_1,a_2,a_3)$
+2. $\underline{x}=(x_1.x_2,x_3)$ 的轉置向量我們會記爲：<br>
+$\underline{x}^t=(x_1.x_2,x_3)^t=\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+x_3\\
+\end{array}
+\right)$

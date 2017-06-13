@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/2017-02-17/">
+
+  
+
+  <title>「統計解析のための線形代数」復習筆記8 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記8</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-02-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Fri, Feb 17, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/learning-notes">learning notes</a
+    >, 
+    
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2017-02-17%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%988&amp;url=%2fpost%2f2017-02-17%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2017-02-17%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%988"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2017-02-17%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%988"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%988&amp;body=%2fpost%2f2017-02-17%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
+
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<div id="-vector" class="section level2">
+<h2>向量 vector</h2>
+<div id="-column-vector" class="section level3">
+<h3>列向量 column vector</h3>
+<p>在等號的右側，將數字寫成一列，左右用圓括號或者方括號包含在內的形式，被叫做列向量(column vector)：</p>
+<p><span class="math inline">\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right), \;\; \textbf{a}=\left[ \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right]\)</span><br></p>
+<ul>
+<li><p>我們接下來將會繼續定義，向量的加減法，標量乘法(scalar multiplication)。把上述的向量用一個文字表示的時候，通常會記爲下劃線 <span class="math inline">\(\underline{a}\)</span>，或者是加粗的小寫字母： <span class="math inline">\(\bf{a}\)</span>。</p></li>
+<li><p>構成向量的各個數字，被命名爲<strong>成分(component, element, entry)</strong>，從上往下第 <span class="math inline">\(i\)</span> 個成分稱爲第 <span class="math inline">\(i\)</span> 成分。</p></li>
+<li><p>成分的個數爲 <span class="math inline">\(n\)</span>，就被稱爲這個向量具有 <span class="math inline">\(n\)</span> 個<strong>維度(次元，dimension)</strong>，或者說這個向量的維度爲 <span class="math inline">\(n\)</span>。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的<strong>型(size, order)</strong>,或者 <strong>類型(type)</strong> 一致。</p></li>
+<li><p>成分只有一個的向量，被特別稱爲<strong>標量(scalar)</strong>，原則上不加括號。</p></li>
+<li><p>將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲<strong>成分表示</strong>。在多元變量分析中，我們說到向量，多默認指的就是列向量。</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)</span><br>今後我們都用字母帶下劃線，圓括號包含數字的方式表示向量。</p></li>
+<li><p><span class="math inline">\(\underline{c}=\left( \begin{array}{c} \sin t+\cos t\\ \cos t+\tan t-2\\ \tan t + \sin t\\ \end{array} \right)\)</span></p></li>
+<li><p>當 <span class="math inline">\(F\)</span> 爲 <span class="math inline">\(a_1,a_2,a_3\)</span> 的函數時，寫作 <span class="math inline">\(F(a_1,a_2,a_3)\)</span>。 以<strong>三個未知數的偏微分</strong>爲成分的向量(梯度向量，gradient vector)，寫成下面等式左邊的形式。可以簡略寫作: <span class="math inline">\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)</span>。<span class="math inline">\(\nabla\)</span>讀作<code>nabla</code>。<br> <span class="math inline">\(\left( \begin{array}{c} \frac{\partial F}{\partial a_1}\\ \frac{\partial F}{\partial a_2}\\ \frac{\partial F}{\partial a_3}\\ \end{array} \right)=\frac{\partial F}{\partial \underline{a}}=\nabla_{\underline{a}}F\)</span></p></li>
+</ol>
+</div>
+</div>
+<div id="-row-vector" class="section level2">
+<h2>橫向量(行向量) row vector</h2>
+<p>在等號的右側，將數字寫成一行，左右用圓括號或者方括號包含在內的形式，被叫做橫向量(row vector):</p>
+<p><span class="math inline">\(\underline{a}=(a_1,a_2,\cdots,a_j,\cdots,a_n), \; \textbf{a}=[a_1,a_2,\cdots,a_j,\cdots,a_n]\)</span></p>
+<p>成分，維度，類型等的定義與列向量相同。另外注意，維度相同，但是一個是橫向量，一個是列向量的話，這兩個向量是不同類型的。</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\underline{x}=(x_1,x_2,x_3)\)</span><br> 有時也可以不用逗號分隔成分。 寫作 <span class="math inline">\((x_1 \; x_2 \;x_3)\)</span>。下同。</li>
+<li><span class="math inline">\((\frac{\partial F}{\partial x_1},\frac{\partial F}{\partial x_2},\frac{\partial F}{\partial x_3})=\frac{\partial F}{\partial \underline{x}}=\nabla_{\underline{x}F}\)</span></li>
+<li><span class="math inline">\(\underline{u}=(\sin\theta\cos\phi, \sin\theta\cos\theta, \cos\theta)\)</span></li>
+</ol>
+</div>
+<div id="-vector-transpose" class="section level2">
+<h2>向量的轉置 (vector transpose)</h2>
+<p>將列向量的每個成分，按照從上到下的順序，一字橫着排開寫成橫向量。這個向量稱爲原來列向量的轉置向量(transposed vector)。反之亦然。</p>
+<p>向量 <span class="math inline">\(\underline{a}\)</span> 的轉置向量，可以標記爲 <span class="math inline">\(\underline{a}^t,\;\underline{a}^\prime,\;^t\underline{a},\;\underline{a}^T, \;^T\underline{a}\)</span> 各種形式。今後統一用 <span class="math inline">\(\underline{a}^t\)</span>。</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)</span> 的轉置向量我們會記爲：<br> <span class="math inline">\(\underline{a}^t=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)^t=(a_1,a_2,a_3)\)</span></li>
+<li><span class="math inline">\(\underline{x}=(x_1.x_2,x_3)\)</span> 的轉置向量我們會記爲：<br> <span class="math inline">\(\underline{x}^t=(x_1.x_2,x_3)^t=\left( \begin{array}{c} x_1\\ x_2\\ x_3\\ \end{array} \right)\)</span></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2017-02-16/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記7</a></li>
+    
+
+    
+    <li class="next"><a href="/post/2017-02-18/">「統計解析のための線形代数」復習筆記9 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+
