@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Be ambitious</title>
-    <link>https://winterwang.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,55 +11,55 @@
     
     <item>
       <title>Diary</title>
-      <link>https://winterwang.github.io/categories/diary/</link>
+      <link>/categories/diary/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/diary/</guid>
+      <guid>/categories/diary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dictation</title>
-      <link>https://winterwang.github.io/categories/dictation/</link>
+      <link>/categories/dictation/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/dictation/</guid>
+      <guid>/categories/dictation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Techniques</title>
-      <link>https://winterwang.github.io/categories/r-techniques/</link>
+      <link>/categories/r-techniques/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/r-techniques/</guid>
+      <guid>/categories/r-techniques/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>https://winterwang.github.io/categories/statistics/</link>
+      <link>/categories/statistics/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/statistics/</guid>
+      <guid>/categories/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Study Abroad</title>
-      <link>https://winterwang.github.io/categories/study-abroad/</link>
+      <link>/categories/study-abroad/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/study-abroad/</guid>
+      <guid>/categories/study-abroad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>https://winterwang.github.io/categories/test/</link>
+      <link>/categories/test/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/test/</guid>
+      <guid>/categories/test/</guid>
       <description></description>
     </item>
     

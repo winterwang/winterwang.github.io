@@ -2,19 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>London on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/london/index.xml</link>
+    <link>/tags/london/</link>
     <description>Recent content in London on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <atom:link href="/tags/london/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/london/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>留學筆記</title>
-      <link>https://winterwang.github.io/post/2017-03-16/</link>
+      <link>/post/2017-03-16/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-16/</guid>
+      <guid>/post/2017-03-16/</guid>
       <description>
 
 &lt;h2 id=&#34;尋找並確定合適自己的大學-合適的課程&#34;&gt;尋找並確定合適自己的大學，合適的課程&lt;/h2&gt;
@@ -115,10 +116,10 @@
 &lt;p&gt;我以前考過兩次託福。都是裸考。一次是大學期間跟風考的，大夥兒都忙忙碌碌，準備考研啦，準備託福GRE出國拉，所以我也想說考一個，看看這些英語考試都考什麼內容。如果您來我這裏想瞭解託福雅思考試的祕籍，抱歉出門左轉去&lt;a href=&#34;https://www.hujiang.com/&#34; target=&#34;_blank&#34;&gt;滬江外語&lt;/a&gt;吧。我每日也都是用的他家的APP和資源（主要是聽寫BBC新聞）。另外推薦一個背單詞的軟件：&lt;a href=&#34;https://www.baicizhan.com/&#34; target=&#34;_blank&#34;&gt;百詞斬&lt;/a&gt;。&lt;a href=&#34;https://www.shanbay.com/&#34; target=&#34;_blank&#34;&gt;扇貝單詞&lt;/a&gt;也不錯。不過個人還是對百詞斬比較偏愛。也許是先入爲主吧。第一次打開時，設置自己的背誦單詞表（雅思詞彙）然後設定好時間，和背詞計劃。我是設定了每日100個單詞。每天堅持一百個，直到考試前一天。百詞斬的app會再每天第一次打開app的時候提醒，並且複習昨天或者最近背誦過的生詞。感覺他們應該是用了一些算法的，大約是根據個人背誦單詞的記錄（傳說中的記憶曲線？），以及錯誤次數來選出每天複習的詞彙的，這一點百詞斬很厲害。&lt;/p&gt;
 
 &lt;p&gt;除了背單詞，就是尋找合適的老師練習寫作和口語了。在此我就不去給某寶作廣告了。我找了兩個雅思作文老師練習，每天都有寫作的作業，一天 task 1 第二天 task 2 這樣。有的老師只提供作文修改和點評，有的還會給你上課，當然費用就比前一種稍微貴一些。能提供授課服務的老師基本上就是具有新東方，環球雅思等授課經驗的作文老師。作文老師推薦的教材可以在此介紹一下:
-&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/ieltswriting.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/ieltswriting.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;至於口語，某寶上的口語外教中介等類似商品就更多了。基本上應該都是菲律賓的口語老師。一開始我也抱着忐忑的心情預約試聽了以下，擔心菲律賓的口語老師可能會有類似印度人的難懂口音。後來的事實證明自己完全是多慮了。至少在我聽課的那幾位菲律賓的外教的口音都較爲純正。況且每個人的口音（應該）都是天生的/後天跟父母學的，不必擔心自己上了幾天口語可就變成怪怪的阿三口音。另外記得以前看過文章說英語母語者能辨別很多不同的口音，所以關鍵不是口音影響一個人的表達，而是你到底真的會不會表達。而且如果你的有點異國口音的英語常常還會被認爲很有趣，很性感，或者很有特點。個人認爲典型的中國人的口音其實多數情況下不太性感，但是你也可以變得像下面這個人一樣風趣幽默（點擊圖片可以看到他講的中式腔調的英語笑話，老外一樣被逗得一樂一樂的）:
-&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/joewong.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/joewong.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
 於是我的口語課就固定爲每天早晨9點鐘開始一個小時，和老師練習過去口語考過的題目。各種常見/不常見話題的切磋和準備。許多話題是根本想不到的。比如，“請描述一次你參加過的婚禮”，或者“請用英語講一個中國歷史上的有趣的故事”這樣的題目，讓我用中文來講述我還要愣上個1分鐘，更不要說在分秒必爭的口語考試中被問道這樣的題目，基本就等於告訴你回去準備再交錢考試了。&lt;/p&gt;
 
 &lt;p&gt;備考雅思是一段辛苦的過程。堅持每日練習才能保持良好的考試/競技狀態，口語和作文是中國人的短板。聽力和寫作常常有不少人（包括我）可以拿到接近滿分。我一開始備考時也是覺得要把過去劍橋雅思的4-11套&lt;a href=&#34;https://book.douban.com/subject/1479127/&#34; target=&#34;_blank&#34;&gt;全真練習題&lt;/a&gt;全部過一邊，題海戰術嘛。後來被寫作的老師敲了警鐘。他說：「聽力和閱讀如果每天都花過多的時間去做的話，對於你來說提高很有限，因爲你都只有錯很少的題目，只是自己刷高分滿足自己的虛榮心而已。到頭來短板的作文和口語都沒有時間練習的話，總分還是上不去。」於是我聽從了寫作老師的話，改爲三四天做一套聽力和閱讀。當然每次都是用考試時的標準來。&lt;/p&gt;
