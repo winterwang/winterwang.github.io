@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Be ambitious</title>
-    <link>https://winterwang.github.io/talk/</link>
+    <link>https://winterwang.github.io/talk/index.xml</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Prevalence of H.pylori infection in Japan by birth cohort, from 1908 to 2003 -- a systematic review and meta-regression analysis</title>
