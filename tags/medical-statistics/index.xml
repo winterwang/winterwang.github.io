@@ -2,12 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Medical Statistics on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/medical-statistics/index.xml</link>
+    <link>https://winterwang.github.io/tags/medical-statistics/</link>
     <description>Recent content in Medical Statistics on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <atom:link href="/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/medical-statistics/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>留學筆記</title>
