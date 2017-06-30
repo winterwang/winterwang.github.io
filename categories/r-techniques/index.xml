@@ -2,20 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Techniques on Be ambitious</title>
-    <link>/categories/r-techniques/</link>
+    <link>https://winterwang.github.io/categories/r-techniques/index.xml</link>
     <description>Recent content in R Techniques on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 31 May 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/r-techniques/" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/r-techniques/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>rMaps: 超級酷的地圖</title>
-      <link>/post/2016-05-31-rmaps/</link>
+      <link>https://winterwang.github.io/post/2016-05-31-rmaps/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-05-31-rmaps/</guid>
+      <guid>https://winterwang.github.io/post/2016-05-31-rmaps/</guid>
       <description>
 
 &lt;p&gt;今日仰視&lt;a href=&#34;https://github.com/ramnathv/slidify&#34; target=&#34;_blank&#34;&gt;slidify&lt;/a&gt;作者&lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt;的github頁面發現超酷的&lt;a href=&#34;https://github.com/ramnathv/rMaps&#34; target=&#34;_blank&#34;&gt;rMaps&lt;/a&gt;包，抄過來在自己電腦上實驗一下。&lt;/p&gt;
@@ -29,7 +28,7 @@
 
 &lt;h4 id=&#34;繪制美國2010年的各州的犯罪率-crime-rates-per-100-000-by-state-at-2010&#34;&gt;繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010&lt;/h4&gt;
 
-&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/mymap.html&#34;&gt;&lt;/iframe&gt;
+&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;https://winterwang.github.io/fig/mymap.html&#34;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;利用以下的R編碼在Rstudio裏實現上圖效果&lt;/p&gt;
 
@@ -59,7 +58,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;效果:(你可以拖動左上角的滑動條顯示每年的各州犯罪率，&lt;strong&gt;越來越高，今年老川上臺估計全線飄高。。。&lt;/strong&gt;)
-&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/map_bar.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;https://winterwang.github.io/fig/map_bar.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;上圖的自動播放版-animated-choropleth-注意左上角出現播放按鈕&#34;&gt;上圖的自動播放版/Animated Choropleth(注意左上角出現播放按鈕)&lt;/h4&gt;
 
@@ -70,7 +69,7 @@
 
 &lt;p&gt;效果:&lt;/p&gt;
 
-&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps&#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/map_play.html&#34;&gt;&lt;/iframe&gt;
+&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps&#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;https://winterwang.github.io/fig/map_play.html&#34;&gt;&lt;/iframe&gt;
 
 &lt;h5 id=&#34;以下为2016年6月2日更新&#34;&gt;以下为2016年6月2日更新&lt;/h5&gt;
 
@@ -104,9 +103,9 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;黑白色圖:
-&lt;iframe chart_1=&#34;&#34; height=&#34;410&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/stamenLondon.html&#34;&gt;&lt;/iframe&gt;
+&lt;iframe chart_1=&#34;&#34; height=&#34;410&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;https://winterwang.github.io/fig/stamenLondon.html&#34;&gt;&lt;/iframe&gt;
 一般色彩圖:
-&lt;iframe chart_1=&#34;&#34; height=&#34;410&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/normalLondon.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;iframe chart_1=&#34;&#34; height=&#34;410&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;https://winterwang.github.io/fig/normalLondon.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;以下爲自娛自樂&#34;&gt;以下爲自娛自樂&lt;/h4&gt;
 
