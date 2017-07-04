@@ -227,7 +227,7 @@ $\begin{vmatrix}
   2 &-3& -4& 2\\
   2 & 1& 2& -3
 \end{vmatrix}$<br>
-<span class="diff_alert">利用性質3
+<span class="diff_alert">利用性質3<br>
 1. 第1行 $+$ 第3行，作新的第一行；
 2. 第2行 $-$ 第3行 $\times$ 2，作新的第2行；
 3. 第4行 $-$ 第3行 作新的第4行</span><br>
