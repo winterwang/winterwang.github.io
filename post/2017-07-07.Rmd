@@ -145,4 +145,5 @@ $$X^{-1}=\left(\begin{array}{c}
 ### Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？
 
 ### A: 有。把行的基本變形中的定義 (\@ref(thm:line)) 的行改成列，既是列的基本變形的定義。
+
 ----

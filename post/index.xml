@@ -133,9 +133,10 @@
 &lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
 &lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;### A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
