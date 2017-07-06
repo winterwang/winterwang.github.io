@@ -152,7 +152,7 @@
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
 -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
--1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
 \end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;

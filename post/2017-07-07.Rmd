@@ -7,7 +7,7 @@ tags:
   - learning notes
   - basic mathematics
   - linear algebra
-summary: "第5章　行列式 determinant P85- 行的基本變形"
+summary: "第5章　行列式 determinant P85-87 行的基本變形"
 ---
 
 ## 行的基本變形
@@ -136,7 +136,7 @@ $$\left(\begin{array}{c}
 $$X^{-1}=\left(\begin{array}{c}
 -1/4 & 3/4 & -1/4\\
 3/4 & -1/4 & -1/4\\
--1/4 & -1/4 & -3/4\\
+-1/4 & -1/4 & 3/4\\
 \end{array}\right)$$
 
 
