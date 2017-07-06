@@ -11,6 +11,50 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記20</title>
+      <link>https://winterwang.github.io/post/2017-07-06/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;逆矩陣&lt;/h2&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣定義&lt;/h3&gt;
+
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1 &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣的性質&lt;/h3&gt;
+&lt;p&gt;對於正則矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 有以下性質：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A，B\)&lt;/span&gt; 的順序對調了。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{-1})^{-1}=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{t})^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\)&lt;/span&gt; 的逆矩陣寫作： &lt;span class=&#34;math inline&#34;&gt;\(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)&lt;/span&gt;；&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處的條件爲所有對角成分均非零: &lt;span class=&#34;math inline&#34;&gt;\(a_{11}a_{22}\dotsm a_{nn}\neq 0\)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)(AB)^{-1}=E\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^{-1}A)B(AB)^{-1}=A^{-1}E\\ B(AB)^{-1}=A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(B^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((B^{-1}B)(AB)^{-1}=B^{-1}A^{-1}\\ E(AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;根據單位矩陣的性質：&lt;/a&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore (AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^{-1}=(A^{-1}A)^{-1}=A^{-1}(A^{-1})^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AE=AA^{-1}(A^{-1})^{-1}\\ \therefore A=(A^{-1})^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>溫度，污染，和電費</title>
       <link>https://winterwang.github.io/post/2017-06-12/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
@@ -1068,74 +1112,6 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
 &lt;li&gt;&lt;p&gt;對 &lt;span class=&#34;math inline&#34;&gt;\(B=\left( \begin{array}{c} 1 &amp;amp; -2 &amp;amp; 3\\ -4 &amp;amp; 5 &amp;amp; -6\\ \end{array} \right)\)&lt;/span&gt;，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(7B=\left( \begin{array}{c} 7\times1 &amp;amp; 7\times(-2) &amp;amp; 7\times3\\ 7\times(-4) &amp;amp; 7\times5 &amp;amp; 7\times(-6)\\ \end{array} \right)\\ \;\;\;\;=\left( \begin{array}{c} 7 &amp;amp; -14 &amp;amp; 21\\ -28 &amp;amp; 35 &amp;amp; -42\\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(-B=\left( \begin{array}{c} -1 &amp;amp; 2 &amp;amp; -3\\ 4 &amp;amp; -5 &amp;amp; 6\\ \end{array} \right)\)&lt;/span&gt;；&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(0B=\left( \begin{array}{c} 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right)=\mathop{\large 0}_{2\times3}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記10</title>
-      <link>https://winterwang.github.io/post/2017-02-19/</link>
-      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-19/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-inner-product&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量的內積 (inner product)&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (vectors inner product)  &lt;/strong&gt;&lt;/span&gt;向量的&lt;strong&gt;內積&lt;/strong&gt;運算，僅限定於維度相同的兩個向量之間。一個向量爲橫向量寫在左側，一個向量爲列向量寫在右側，兩個向量的相對應成分一一相乘，然後將各成分乘積相加的過程，我們稱之爲內積(inner product, scalar product)運算。內積運算結果通常不會是向量，而是標量(scalar)，或正或負，或爲零。向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 與向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{b}\)&lt;/span&gt; 的內積寫作：&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t\underline{b}, \underline{b}^t\underline{a}\)&lt;/span&gt; 或者寫作： &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\cdot\underline{b}, (\underline{a},\underline{b}), &amp;lt;\underline{a},\underline{b}&amp;gt;\)&lt;/span&gt;。內積爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的向量我們稱他們爲正交向量(orthogonal)，寫作：&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\perp\underline{b}\)&lt;/span&gt;。 內積，與和記號: &lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt; 有緊密聯系。我們常常會把 &lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt; 式子/量寫成向量的內積形式。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;練習&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;列向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\)&lt;/span&gt; 的內積：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t\underline{b}=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}^t\underline{a}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;橫向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=(a_1,a_2,a_3), \underline{b}=(b_1,b_2,b_3)\)&lt;/span&gt; 的內積：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\underline{b}^t=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}\underline{a}^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;完全相同的兩個列向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right),\;\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right)\)&lt;/span&gt; 的內積：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^t\underline{x}=(x_1,x_2,x_3)\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right)\\=x_1^2+x_2^2+x_3^2=\sum\limits_{i=1}^3x_i\cdot x_i=\sum\limits_{i=1}^3x_i^2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;完全相同的兩個橫向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}=(y_1,y_2,y_3), \underline{y}=(y_1,y_2,y_3)\)&lt;/span&gt; 的內積：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\underline{y}^t=(y_1,y_2,y_3)\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\\=y_1^2+y_2^2+y_3^2=\sum\limits_{i=1}^3y_i\cdot y_i=\sum\limits_{i=1}^3y_i^2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=(2,0,-1), \underline{b}=(4,-2,8)\)&lt;/span&gt; 的內積：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\underline{b}^t=(2,0,-1)\left( \begin{array}{c} 4\\ -2\\ 8 \end{array} \right)=2\times4+0\times(-2)+(-1)\times8=0\)&lt;/span&gt; &lt;br&gt; 因此我們稱這兩個向量正交。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{1}=\left( \begin{array}{c} 1\\ 1\\ 1 \end{array} \right), \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right)\)&lt;/span&gt; 時：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{1}^t\underline{x}=1\cdot x_1+1\cdot x_2+1\cdot x_3 =\sum\limits_{i=1}^3x_i=\underline{x}^t\underline{1}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{1}^t\underline{1}=\sum\limits_{i=1}^31\cdot 1=3\)&lt;/span&gt; &lt;br&gt; 前者的內積與後者內積的商： &lt;span class=&#34;math inline&#34;&gt;\(\frac{\underline{1}^t\underline{x}}{\underline{1}^t\underline{1}}=\frac{x_1+x_2+x_3}{3}\)&lt;/span&gt; 我們在統計學中用 &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; (平均值) 來標記。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;--underlinea-underlineb---outer-product&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;問題： 如果，向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}, \underline{b}\)&lt;/span&gt; 有內積， 請問有沒有所謂的外積 (outer product) ？&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-3&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;回答： 有。不過，僅限於3維度的向量：&lt;/h5&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\)&lt;/span&gt; 的外積，我們用 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 來表示，寫作： &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\times\underline{b}\)&lt;/span&gt;。 其運算被定義爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\times\underline{b}=\left( \begin{array}{c} a_2b_3-a_3b_2\\ a_3b_1-a_1b_3\\ a_1b_2-a_2b_1 \end{array}\right)\)&lt;/span&gt;。與內積不同的是，外積運算的結果仍然是&lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt;維度的向量。外積有如下的性質：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\times\underline{b}=-\underline{b}\times\underline{a}\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-length&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量的長度 (length)&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;p&gt;&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 2  (vector length)  &lt;/strong&gt;&lt;/span&gt;向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 的內積 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t\underline{a}\)&lt;/span&gt; 的平方根中，非負的量，我們稱之爲向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 的&lt;strong&gt;長度&lt;/strong&gt;或者&lt;strong&gt;大小&lt;/strong&gt;。也就是：&lt;span class=&#34;math inline&#34;&gt;\(\sqrt{\underline{a}^t\underline{a}}\)&lt;/span&gt;。記作：&lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a} \|\)&lt;/span&gt;。&lt;/p&gt;
-兩個向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}, \underline{b}\)&lt;/span&gt; 類型(type：大小，維度)相同時，他們的差 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}-\underline{b}\)&lt;/span&gt; 依然是向量，這個新向量的長度爲：&lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a}-\underline{b} \| = \sqrt{(\underline{a}-\underline{b})^t(\underline{a}-\underline{b})}\)&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right)\)&lt;/span&gt; 的長度爲： &lt;span class=&#34;math inline&#34;&gt;\(\| \underline{x} \| =\sqrt{\underline{x}^t\underline{x}}=\sqrt{x_1^2+x_2^2+x_3^2}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=(a_1,a_2,a_3)\)&lt;/span&gt; 的長度爲： &lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a} \| =\sqrt{\underline{a}\underline{a}^t}=\sqrt{a_1^2+a_2^2+a_3^2}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;兩個向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}, \underline{b}\)&lt;/span&gt; 的長度和內積有這樣的關系：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(-\| \underline{a} \|\| \underline{b} \|\leqslant \underline{a}^t\underline{b}\leqslant\| \underline{a} \|\| \underline{b} \|\)&lt;/span&gt;&lt;br&gt; &lt;strong&gt;證明&lt;/strong&gt;: 以維度爲 &lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt; 的向量爲例進行證明，其他維度的向量，證明思路類似：&lt;br&gt; 令 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\)&lt;/span&gt;， &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 爲任意實數。平方和：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^3(a_it+b_i)^2 =(a_1t+b_1)^2+(a_2t+b_2)^2+(a_3t+b_3)^2\\ \;\;\;\;\;\;\;=(a_1^2+a_2^2+a_3^2)t^2+2(a_1b_1+a_2b_2+a_3b_3)t\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;+(b_1^2+b_2^2+b_3^2)\\ \;\;\;\;\;\;\;=\| \underline{a} \|^2t^2+2\underline{a}^t\underline{b}t+\| \underline{b} \|^2\geqslant0\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore \| \underline{a} \|^2(t+\frac{\| \underline{b} \|^2}{2\| \underline{a} \|^2})^2+\| \underline{b} \|^2-\frac{(2\underline{a}^t\underline{b})^2}{4\| \underline{a} \|^2}\geqslant0\)&lt;/span&gt;&lt;br&gt; 可見這是一個&lt;strong&gt;關於 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 的絕對不等式&lt;/strong&gt;。因此，&lt;strong&gt;判別式&lt;/strong&gt;：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((2\underline{a}^t\underline{b})^2-4\times\| \underline{a} \|^2\| \underline{b} \|^2\leqslant0\\ \therefore (\underline{a}^t\underline{b})^2\leqslant\| \underline{a} \|^2\| \underline{b} \|^2\\ \therefore -\| \underline{a} \|\| \underline{b} \|\leqslant \underline{a}^t\underline{b}\leqslant \| \underline{a} \|\| \underline{b} \|\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\divideontimes\)&lt;/span&gt; 兩向量內積，除以兩向量各自的長度(正)，在統計學中被成爲是&lt;strong&gt;相關系數&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(r=\frac{\underline{a}^t\underline{b}}{\| \underline{a} \|\| \underline{b} \|}\)&lt;/span&gt;，我們從上面的不等式也可以得出， &lt;span class=&#34;math inline&#34;&gt;\(-1 \leqslant r \leqslant 1\)&lt;/span&gt; 另外，兩個向量又可以表示爲兩條射線，這兩條射線構成的角度如果爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(\cos\theta=r =\frac{\underline{a}^t\underline{b}}{\| \underline{a} \|\| \underline{b} \|}\)&lt;/span&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;兩個向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}, \underline{b}\)&lt;/span&gt; 的和 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}+\underline{b}\)&lt;/span&gt; 也是一個新的向量。這三個向量之間有：&lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a}+\underline{b} \|\leqslant\| \underline{a} \|+\| \underline{b} \|\)&lt;/span&gt;。這個關系被稱爲&lt;strong&gt;三角不等式&lt;/strong&gt;，或者&lt;strong&gt;三角關系&lt;/strong&gt;(triangular inequality)。&lt;br&gt; &lt;strong&gt;證明&lt;/strong&gt;：此處亦爲了簡便起見使用維度爲 &lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt; 的向量，即，前述3.的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}, \underline{b}\)&lt;/span&gt;：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a}+\underline{b}\|^2=(a_1+b_1)^2+(a_2+b_2)^2+(a_3+b_3)^2\\ \;\;\;\;\;\;\;=(a_1^2+a_2^2+a_3^3)+2(a_1b_1+a_2b_2+a_3b_3)+(b_1^2+b_2^2+b_3^2)\\ \;\;\;\;\;\;\;=\| \underline{a} \|^2+2\underline{a}^t\underline{b}+\| \underline{b} \|^2\)&lt;/span&gt;&lt;br&gt; 如果我們把前面問題3.中的不等式代入：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a} \|^2+2\underline{a}^t\underline{b}+\| \underline{b} \|^2\leqslant \| \underline{a} \|^2+2\| \underline{a} \|\| \underline{b} \|+\| \underline{b} \|^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;=(\| \underline{a} \|+\| \underline{b} \|)^2\\ \therefore \| \underline{a}+\underline{b}\|^2 \leqslant (\| \underline{a} \|+\| \underline{b} \|)^2\\ \therefore \| \underline{a}+\underline{b}\|\leqslant\| \underline{a} \|+\| \underline{b} \|\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-normalize&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量正規化 normalize&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;p&gt;&lt;span id=&#34;thm:unnamed-chunk-3&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 3  (normalize)  &lt;/strong&gt;&lt;/span&gt;長度不爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的任意向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}(\neq\underline{0})\)&lt;/span&gt;，如果將它轉變成長度爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 的向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_{\underline{a}}\)&lt;/span&gt;。這個過程被叫做向量的正規化(normalize)。通常只要將向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 除以他的長度 &lt;span class=&#34;math inline&#34;&gt;\(\| \underline{a} \|\)&lt;/span&gt; 即可。&lt;/p&gt;
-&lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_{\underline{a}}=\frac{\underline{a}}{\| \underline{a} \|}=\frac{1}{\| \underline{a} \|}\underline{a}\)&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt; 例如：&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)\)&lt;/span&gt;， 則有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_{\underline{a}}=\frac{1}{\sqrt{a_1^2+a_2^2+a_3^2}}\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{b}=\left( \begin{array}{c} -2\\ 1\\ 2 \end{array} \right)\)&lt;/span&gt;，則有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_{\underline{a}}=\frac{1}{\sqrt{(-2)^2+1^2+2^2}}\left( \begin{array}{c} -2\\ 1\\ 2 \end{array} \right)=\left( \begin{array}{c} -\frac{2}{3}\\ \frac{1}{3}\\ \frac{2}{3} \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

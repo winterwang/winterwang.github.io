@@ -10,6 +10,50 @@
     <atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記20</title>
+      <link>https://winterwang.github.io/post/2017-07-06/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;逆矩陣&lt;/h2&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣定義&lt;/h3&gt;
+
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1 &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣的性質&lt;/h3&gt;
+&lt;p&gt;對於正則矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 有以下性質：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A，B\)&lt;/span&gt; 的順序對調了。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{-1})^{-1}=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{t})^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\)&lt;/span&gt; 的逆矩陣寫作： &lt;span class=&#34;math inline&#34;&gt;\(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)&lt;/span&gt;；&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處的條件爲所有對角成分均非零: &lt;span class=&#34;math inline&#34;&gt;\(a_{11}a_{22}\dotsm a_{nn}\neq 0\)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)(AB)^{-1}=E\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^{-1}A)B(AB)^{-1}=A^{-1}E\\ B(AB)^{-1}=A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(B^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((B^{-1}B)(AB)^{-1}=B^{-1}A^{-1}\\ E(AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;根據單位矩陣的性質：&lt;/a&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore (AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^{-1}=(A^{-1}A)^{-1}=A^{-1}(A^{-1})^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AE=AA^{-1}(A^{-1})^{-1}\\ \therefore A=(A^{-1})^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記19</title>
       <link>https://winterwang.github.io/post/2017-04-02/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
@@ -1308,280 +1352,6 @@ s_{z_{12}} &amp;amp; = \frac{S_{z_{12}}}{n} \\
 \end{split}
 \tag{10}
 \end{equation}\]&lt;/span&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記5</title>
-      <link>https://winterwang.github.io/post/2017-02-13/</link>
-      <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-13/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;ul&gt;
-&lt;li&gt;2017-02-15 &lt;strong&gt;updated.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;數據的種類和尺度&lt;/h2&gt;
-&lt;table class=&#39;gmisc_table&#39; style=&#39;border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;&#39; &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;td colspan=&#39;14&#39; style=&#39;text-align: left;&#39;&gt;
-表1. 20歳の若者9名のデータ&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th colspan=&#39;1&#39; style=&#39;font-weight: 900; border-top: 2px solid grey; text-align: center;&#39;&gt;&lt;/th&gt;&lt;th style=&#39;border-top: 2px solid grey;; border-bottom: hidden;&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th colspan=&#39;2&#39; style=&#39;font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;性別&lt;/th&gt;&lt;th style=&#39;border-top: 2px solid grey;; border-bottom: hidden;&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th colspan=&#39;5&#39; style=&#39;font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;健康状態&lt;/th&gt;&lt;th style=&#39;border-top: 2px solid grey;; border-bottom: hidden;&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th colspan=&#39;1&#39; style=&#39;font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;体温&lt;/th&gt;&lt;th style=&#39;border-top: 2px solid grey;; border-bottom: hidden;&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th colspan=&#39;1&#39; style=&#39;font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;&#39;&gt;身長&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;男&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;女&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;極良&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;良好&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;普通&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;不良&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;極悪&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;°C&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/th&gt;
-&lt;th style=&#39;border-bottom: 1px solid grey; text-align: center;&#39;&gt;cm&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;36.9&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;155&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;2&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;36.5&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;190&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;3&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;36.7&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;165&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;4&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;39&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;155&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;5&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;38.1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;167&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;6&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;36.2&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;180&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;7&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;36.6&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;178&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;8&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;36.7&lt;/td&gt;
-&lt;td style=&#39;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;text-align: center;&#39;&gt;170&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;9&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;1&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;0&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;36.5&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey;&#39; colspan=&#39;1&#39;&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style=&#39;border-bottom: 2px solid grey; text-align: center;&#39;&gt;166&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;數據按照尺度類型分4種：
-&lt;ul&gt;
-&lt;li&gt;定性數據：(qualitative data/categorical data)
-&lt;ul&gt;
-&lt;li&gt;名義尺度 (nominal scale): &lt;br&gt;如番號，性別等，僅用於識別或者區分對象。&lt;/li&gt;
-&lt;li&gt;順序尺度 (ordinal scale): &lt;br&gt;如表1中的健康狀態，既具有名義尺度的性質，也具有順序(順位，前後，程度等)意義。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;定量數據：(quantitative data)
-&lt;ul&gt;
-&lt;li&gt;間隔尺度 (interval scale): &lt;br&gt;又稱區間尺度，距離尺度。如體溫等數值之間的差具有意義，可以設定原點（零）的尺度。&lt;/li&gt;
-&lt;li&gt;比例尺度 (ratio scale) &lt;br&gt;如身高(身長)，不同人的身高差有意義，同時原點（零）又無意義。（身高爲零的人是不存在的）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;樣本與總體(標本/サンプルと母集団)：
-&lt;ul&gt;
-&lt;li&gt;表格1 中， &lt;br&gt;(1) 全國20歲的年輕人全體的性別，健康狀態，體溫，身高的數據 &lt;br&gt;(2) 任意抽選數名(此處爲9名)年輕人的性別，健康狀態，體溫，身高的數據。 &lt;br&gt;(1) 稱爲&lt;strong&gt;總體(population)&lt;/strong&gt;, (2) 稱爲&lt;strong&gt;樣本(sample)&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;一般的，我們稱問卷調查的對象個人爲&lt;strong&gt;個體(subject, individual)&lt;/strong&gt;，人數爲&lt;strong&gt;樣本量(size)&lt;/strong&gt;，我們也常常假設總體有無窮大。在多元變量分析中，如果我們稱&lt;strong&gt;數據&lt;/strong&gt;，通常只能是指&lt;strong&gt;樣本數據&lt;/strong&gt;。我們在統計分析中，一般是通過樣本去推測總體的狀況或者利用一些樣本的&lt;strong&gt;參數(parameter)&lt;/strong&gt;來描述總體，去進行檢驗等。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;變量(variable)：
-&lt;ul&gt;
-&lt;li&gt;表1 中變量有“性別”，“健康狀態”，“體溫”，“身長”四個。&lt;/li&gt;
-&lt;li&gt;進一步的，性別又細分了“男”，“女”，健康狀態又分爲“極好”，“良好”，“普通”，“不良”，“極差”五個小項目，這些小項目整個可以視爲一個變量，也可以視爲單獨的變量，如果視爲單獨變量，表1 中就共有9個變量。&lt;/li&gt;
-&lt;li&gt;性別，健康狀態的各個變量中，我們看到表1 中的數據只有1或者0，這樣的變量稱爲&lt;strong&gt;啞變量(dummy variable，ダミー変量)&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;特別地，我們可以稱性別和健康狀態的變量爲&lt;strong&gt;項目(item)&lt;/strong&gt;，稱底下的小項目爲&lt;strong&gt;分類(category)&lt;/strong&gt;。我們又稱以這樣有項目，下面有分類的變量爲&lt;strong&gt;項目分類型數據(item-categorical data)&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;多元變量分析，顧名思義，指的是對一個具有一個以上變量的數據進行統計學分析的過程。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;單變量數據
-&lt;ul&gt;
-&lt;li&gt;將數據進行總結，分析提取特徵的過程，稱爲&lt;strong&gt;概括統計(summary statistics)&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;-n-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;下表中爲樣本量 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的單變量數據，我們看看該數據可以有哪些概括統計&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;個体の番号&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(x_1\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(x_2\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;樣本&lt;strong&gt;平均值(mean)&lt;/strong&gt;： &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum\limits_{i=1}^nx_i\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;樣本&lt;strong&gt;範圍(range)&lt;/strong&gt;： &lt;span class=&#34;math inline&#34;&gt;\(R=\max(x_i) - \min(x_i)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;樣本&lt;strong&gt;平方和(偏差平方和，Sum of Squares)&lt;/strong&gt;:&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(SS=(x_1-\bar{x})^2+(x_2-\bar{x})^2+\cdots+(x_n-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^{n}(x_i-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2\bar{x}x_i+\bar{x}^2)\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+\sum\limits_{i=1}^{n}\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\cdot\frac{\sum\limits_{i=1}^nx_i}{n}\cdot\sum\limits_{i=1}^nx_i+n\cdot(\frac{\sum\limits_{i=1}^nx_i}{n})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\frac{1}{n}(\sum\limits_{i=1}^nx_i)^2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;樣本&lt;strong&gt;方差(variance, 分散)&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(s^2=\frac{SS}{n}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;樣本&lt;strong&gt;標準差(standard deviation, S.D., 標準偏差)&lt;/strong&gt;： &lt;span class=&#34;math inline&#34;&gt;\(s=\sqrt{s^2}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;無偏樣本方差(unbiased sample variance, 不偏標本分散)&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(u^2=\frac{SS}{n-1}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;無偏樣本標準差平方根(不偏標本分散平方根)&lt;/strong&gt;： &lt;span class=&#34;math inline&#34;&gt;\(u=\sqrt{u^2}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;通在多元變量分析中，常常利用的思想是將&lt;strong&gt;變動(variability)&lt;/strong&gt;或者是&lt;strong&gt;波動(dispersion)&lt;/strong&gt;最大化，最小化。此處說的變動和波動是指上面提到的無偏樣本方差。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

@@ -37,6 +37,50 @@
     </item>
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記20</title>
+      <link>https://winterwang.github.io/post/2017-07-06/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;逆矩陣&lt;/h2&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣定義&lt;/h3&gt;
+
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1 &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣的性質&lt;/h3&gt;
+&lt;p&gt;對於正則矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 有以下性質：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A，B\)&lt;/span&gt; 的順序對調了。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{-1})^{-1}=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{t})^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\)&lt;/span&gt; 的逆矩陣寫作： &lt;span class=&#34;math inline&#34;&gt;\(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)&lt;/span&gt;；&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處的條件爲所有對角成分均非零: &lt;span class=&#34;math inline&#34;&gt;\(a_{11}a_{22}\dotsm a_{nn}\neq 0\)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)(AB)^{-1}=E\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^{-1}A)B(AB)^{-1}=A^{-1}E\\ B(AB)^{-1}=A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(B^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((B^{-1}B)(AB)^{-1}=B^{-1}A^{-1}\\ E(AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;根據單位矩陣的性質：&lt;/a&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore (AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^{-1}=(A^{-1}A)^{-1}=A^{-1}(A^{-1})^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AE=AA^{-1}(A^{-1})^{-1}\\ \therefore A=(A^{-1})^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>溫度，污染，和電費</title>
       <link>https://winterwang.github.io/post/2017-06-12/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
@@ -203,22 +247,6 @@ Your browser does not support the audio element.
 
 &lt;p&gt;The rapid urine-HpAb test had excellent specificity but relatively low sensitivity.
 This article is protected by copyright. All rights reserved.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://winterwang.github.io/publication/Palau/</link>
-      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/Palau/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-
-&lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

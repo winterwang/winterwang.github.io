@@ -7,7 +7,7 @@ tags:
   - learning notes
   - basic mathematics
   - linear algebra
-summary: "第5章　行列式 determinant P80"
+summary: "第5章　行列式 determinant P80-83"
 ---
 
 ## 行列式的性質
