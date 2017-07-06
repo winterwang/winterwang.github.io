@@ -120,7 +120,7 @@ Next:
 $$\left(\begin{array}{c}
 1& 0& 0 & \vdots & -1/4 & 3/4 & -1/4\\
 0& 1& 0 & \vdots & 3/4 & -1/4 & -1/4\\
-0& 0& 1 & \vdots & -1/4 & -1/4 & -3/4\\
+0& 0& 1 & \vdots & -1/4 & -1/4 & 3/4\\
 \end{array}\right) \begin{align}
 \left\{
 \begin{array}{l}

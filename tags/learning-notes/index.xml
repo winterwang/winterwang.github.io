@@ -111,7 +111,7 @@
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
 1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
 0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
-0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
 \end{array}\right) \begin{align}
 \left\{
 \begin{array}{l}
