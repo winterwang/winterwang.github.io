@@ -7,7 +7,7 @@ tags:
   - learning notes
   - basic mathematics
   - linear algebra
-summary: "第5章　行列式 determinant P84-85"
+summary: "第5章　行列式 determinant P84-85 逆矩陣"
 ---
 
 ## 逆矩陣

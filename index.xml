@@ -37,6 +37,136 @@
     </item>
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記21</title>
+      <link>https://winterwang.github.io/post/2017-07-07/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;行的基本變形&lt;/h2&gt;
+
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;p&gt;&lt;span id=&#34;thm:line&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (行的基本變形)  &lt;/strong&gt;&lt;/span&gt;對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;給任意一行乘以/除以一個非零的數。&lt;/li&gt;
+&lt;li&gt;給任意一行加上/減去另外任意行的倍數。&lt;/li&gt;
+&lt;li&gt;將任意兩行的對應元素互換。
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;練習基本變形：&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;用行的基本變形求矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\)&lt;/span&gt; 的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt; &lt;br&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;首先，將矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和同次單位矩陣 &lt;span class=&#34;math inline&#34;&gt;\(E_3\)&lt;/span&gt; 的元素寫成如下的左右並列的形式（用點隔開）&lt;span class=&#34;math inline&#34;&gt;\((X, E)\)&lt;/span&gt;。數字 (1) (2) (3) 表示行數：&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\
+2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 1 &amp;amp; 0\\
+1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{rr}
+(1)\\
+(2)\\
+(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可以變形成爲下面的形式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\
+0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -2 &amp;amp; 1 &amp;amp; 0\\
+0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)\\
+(2)=(2)-2\times(1)\\
+(3)=(3)-(1)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;繼續變形成如下的形式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
+0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; -3 &amp;amp; 1 &amp;amp; 1\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; -1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)+2\times(3)\\
+(2)=(2)+(3)\\
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; -1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)\\
+(2)=(2)\div(-4)\\
+(3)=(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1/4 &amp;amp; 1/4 &amp;amp; -3/4\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)\\
+(2)=(2)\\
+(3)=(3)-(2)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)+3\times(3)\\
+(2)=(2)\\
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;點 “&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;” 的左側變形成爲單位矩陣時，行變形結束。右側便是所求的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
+-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;### A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h2&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記20</title>
       <link>https://winterwang.github.io/post/2017-07-06/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
@@ -222,31 +352,6 @@ Your browser does not support the audio element.
 &lt;p&gt;&lt;strong&gt;总数上，是之前发现的在全部动物、植物和真菌之间出现的水平ＤＮＡ转移现象数目的四倍。&lt;/strong&gt;该研究已发表在《国家科学研究进展》杂志上。&lt;/p&gt;
 
 &lt;p&gt;这些遗传物质的转移是如何发现的至今人类还不十分清楚。或许是靠病毒或寄生物，进行的ＤＮＡ传递。但是，无论是什么原因，这件事提示我们，昆虫的进化，至少在分子水平上，或许不只是已知公认的进化历史那么简单。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
-      <link>https://winterwang.github.io/publication/Okuda/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/Okuda/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Helicobacter pylori infection is associated with gastric cancer; thus, early diagnosis and treatment are crucial. Since &lt;em&gt;H. pylori&lt;/em&gt; infection in adolescents or young adults shows few symptoms, screening tests are necessary for this population. In this study, the accuracy of the rapid urine-&lt;em&gt;H. pylori&lt;/em&gt; antibody (u-HpAb) test was evaluated and compared to that of urine and serum &lt;em&gt;H. pylori&lt;/em&gt; enzyme-linked immunosorbent assays (u-HpELISA and s-HpELISA, respectively) in junior high school students.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;All 1,225 students attending the junior high schools in Sasayama city were invited to participate in this study. Urine and blood samples were assayed for anti-&lt;em&gt;H. pylori&lt;/em&gt; immunoglobulin G antibodies, and rapid u-HpAb was performed by three investigators independently. When the judgment of all investigators was in accordance, a âpositiveâ or ânegativeâ result was defined. Discrepant judgment was defined as an âundeterminedâ result.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In total, 187 students participated in this study and provided both urine and blood samples. Three students showed undetermined results with rapid u-HpAb. Excluding these results, the positivity rate of rapid u-HpAb was 3.3 % (&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;184&lt;/sub&gt;), whereas that for u-HpELISA and s-HpELISA was 4.8 % (&lt;sup&gt;10&lt;/sup&gt;&amp;frasl;&lt;sub&gt;187&lt;/sub&gt;) and 5.9 % (&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;187&lt;/sub&gt;), respectively. Using s-HpELISA and u-HpELISA as the standards, the sensitivity, specificity, positive predictive value, and negative predictive value of rapid u-HpAb were 85.7%, 100 %, 100 %, and 99.4 %, respectively when excluding the undetermined results of rapid u-HpAb.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Conclusions&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The rapid urine-HpAb test had excellent specificity but relatively low sensitivity.
-This article is protected by copyright. All rights reserved.&lt;/p&gt;
 </description>
     </item>
     
