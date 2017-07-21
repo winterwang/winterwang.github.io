@@ -2,13 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Be ambitious</title>
-    <link>https://winterwang.github.io/post/index.xml</link>
+    <link>https://winterwang.github.io/post/</link>
     <description>Recent content in Posts on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Fri, 03 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test</title>
+      <link>https://winterwang.github.io/post/test/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/test/</guid>
+      <description>&lt;p&gt;What do you Like to see ?&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
@@ -16,12 +26,7 @@
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-07-07/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行的基本變形&lt;/h2&gt;
 
 &lt;div class=&#34;theorem&#34;&gt;
@@ -112,7 +117,7 @@
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
 1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
 0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
-0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
+0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
 \end{array}\right) \begin{align}
 \left\{
 \begin{array}{l}
@@ -126,17 +131,16 @@
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
 -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
--1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
 \end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
 &lt;/div&gt;
-&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
-&lt;hr /&gt;
 &lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;### A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -147,12 +151,7 @@
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-07-06/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;逆矩陣&lt;/h2&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣定義&lt;/h3&gt;
@@ -336,12 +335,7 @@ Your browser does not support the audio element.
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行列式的性質&lt;/h2&gt;
 &lt;p&gt;具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -563,12 +557,7 @@ Your browser does not support the audio element.
       <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-15/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行列式的定義與計算&lt;/h2&gt;
 
 &lt;div class=&#34;theorem&#34;&gt;
@@ -708,12 +697,7 @@ Your browser does not support the audio element.
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-13/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
+      <description>&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;正定，半正定 (正值，半正值)&lt;/h2&gt;
 &lt;p&gt;對於任意的非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; ，如果2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 始終滿足 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} &amp;gt; 0\)&lt;/span&gt; &lt;strong&gt;注意此處無等號&lt;/strong&gt;。我們稱這個2次型爲&lt;strong&gt;正定(positive definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;正定矩陣(positive definite matrix)&lt;/strong&gt;。另外，如果任意非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; 始終滿足2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} \geqslant 0\)&lt;/span&gt;， 這個2次型被叫做&lt;strong&gt;半正定(positive semi-definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;半正定矩陣(positive semi-definite matrix)&lt;/strong&gt;。&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -740,12 +724,7 @@ Your browser does not support the audio element.
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-11/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;二次型(形式)&lt;/h2&gt;
 &lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_{1}\\ x_{2}\\ \vdots\\ x_{n} \end{array} \right), A=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\)&lt;/span&gt; 那麼：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^n\sum\limits_{j=1}^na_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i \neq j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}(a_{ij}+a_{ji})x_ix_j\)&lt;/span&gt;&lt;br&gt; 被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的同次2次式。又被叫做關於 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_n\)&lt;/span&gt; 的&lt;strong&gt;2次型(quadratic form)&lt;/strong&gt;。特別的，當 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲對稱矩陣時的2次型：&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^na_{ii}x_i^2+2\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}a_{ij}x_ix_j\)&lt;/span&gt; 在多元變量分析中十分重要。&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -764,12 +743,7 @@ Your browser does not support the audio element.
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-08/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;單位矩陣&lt;/h2&gt;
 &lt;p&gt;對角成分全部都是 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; (此時我們假定有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個)，的對角矩陣被叫做&lt;strong&gt;單位矩陣(identity matrix, unit matrix)&lt;/strong&gt;。寫作： &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\)&lt;/span&gt; 下標 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 常被省略。一般的，將 &lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，的結果和從右往左相乘的結果是相等的： &lt;span class=&#34;math inline&#34;&gt;\(E_nA=AE_n=A\)&lt;/span&gt;。&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -869,12 +843,7 @@ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-01/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;ul&gt;
+      <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;updated: 2017-03-07&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;section level2&#34;&gt;
@@ -1013,12 +982,7 @@ a_{11} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
       <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-28/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;連立一次方程式與矩陣向量的積&lt;/h2&gt;
 &lt;p&gt;連立一次方程式可以改寫爲&lt;strong&gt;矩陣與向量的積形成的向量&lt;/strong&gt;的形式。特別的，以連立方程式的系數作成分的矩陣被叫做&lt;strong&gt;系數矩陣(coefficient matrix)&lt;/strong&gt;。當我們看到連立方程式，應該能立刻條件反射地聯想到其對應的&lt;strong&gt;矩陣和向量的積&lt;/strong&gt;。&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -1100,74 +1064,6 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 3 \\ 4 &amp;amp; 5 &amp;amp; 6 \\ 7 &amp;amp; 8 &amp;amp; 9 \end{array} \right)\)&lt;/span&gt; 的轉置矩陣爲：&lt;span class=&#34;math inline&#34;&gt;\(A^t=\left( \begin{array}{c} 1 &amp;amp; 4 &amp;amp; 7 \\ 2 &amp;amp; 5 &amp;amp; 8 \\ 3 &amp;amp; 6 &amp;amp; 9 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(B=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4\\ 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8\\ \end{array} \right)\)&lt;/span&gt; 的轉置矩陣爲：&lt;span class=&#34;math inline&#34;&gt;\(B^t=\left( \begin{array}{c} 1 &amp;amp; 5 \\ 2 &amp;amp; 6 \\ 3 &amp;amp; 7 \\ 4 &amp;amp; 8 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記12</title>
-      <link>https://winterwang.github.io/post/2017-02-22/</link>
-      <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-22/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;矩陣乘法運算&lt;/h2&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;矩陣乘法定義&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (matrix multiplication)  &lt;/strong&gt;&lt;/span&gt;兩個矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; ，只有 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的列數和 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; 的行數相等(這種特徵又被稱爲：矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A,B\)&lt;/span&gt; &lt;strong&gt;可整合的&lt;/strong&gt;，conformable)時，才有定義：&lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt;。&lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 則爲新的矩陣，類型爲 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的行數， &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的列數。即：&lt;span class=&#34;math inline&#34;&gt;\(A_{k\times l}, \; B_{m\times n}\)&lt;/span&gt; 且 &lt;span class=&#34;math inline&#34;&gt;\(l=m\)&lt;/span&gt; 時才能計算乘積: &lt;span class=&#34;math inline&#34;&gt;\(AB_{k\times n}\)&lt;/span&gt;。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_{2\times3}=\left( \begin{array}{c} 4 &amp;amp; 6 &amp;amp; 8\\ 2 &amp;amp; 1 &amp;amp; 3\\ \end{array} \right),\; B_{3\times2}=\left( \begin{array}{c} 0 &amp;amp; 8\\ 2 &amp;amp; -1\\ 9 &amp;amp; 4 \\ \end{array} \right)\)&lt;/span&gt; 時，&lt;br&gt; “&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;的列數” &lt;span class=&#34;math inline&#34;&gt;\(=\)&lt;/span&gt; “&lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; 的行數” &lt;span class=&#34;math inline&#34;&gt;\(= 3\)&lt;/span&gt;，因此積 &lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 被定義，類型是 &lt;span class=&#34;math inline&#34;&gt;\((2,2)\)&lt;/span&gt; &lt;br&gt; “&lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的列數” &lt;span class=&#34;math inline&#34;&gt;\(=\)&lt;/span&gt; “&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的行數” &lt;span class=&#34;math inline&#34;&gt;\(= 2\)&lt;/span&gt;，因此積 &lt;span class=&#34;math inline&#34;&gt;\(BA\)&lt;/span&gt; 被定義，類型是 &lt;span class=&#34;math inline&#34;&gt;\((3,3)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(C_{3\times2}=\left( \begin{array}{c} 4 &amp;amp; 2 \\ 5 &amp;amp; 6 \\ 7 &amp;amp; 3 \end{array} \right),\; D_{2\times4}=\left( \begin{array}{c} 2 &amp;amp; 0 &amp;amp; 9 &amp;amp; -1 \\ 4 &amp;amp; 7 &amp;amp; 6 &amp;amp; 5 \\ \end{array} \right)\)&lt;/span&gt; 時， &lt;br&gt; “&lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;的列數” &lt;span class=&#34;math inline&#34;&gt;\(=\)&lt;/span&gt; “&lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt; 的行數” &lt;span class=&#34;math inline&#34;&gt;\(= 2\)&lt;/span&gt;，因此積 &lt;span class=&#34;math inline&#34;&gt;\(CD\)&lt;/span&gt; 被定義，類型是 &lt;span class=&#34;math inline&#34;&gt;\((3,4)\)&lt;/span&gt; &lt;br&gt; “&lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt;的列數”&lt;span class=&#34;math inline&#34;&gt;\(= 4\)&lt;/span&gt;，“&lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; 的行數” &lt;span class=&#34;math inline&#34;&gt;\(= 3\)&lt;/span&gt;，因此積 &lt;span class=&#34;math inline&#34;&gt;\(DC\)&lt;/span&gt; 不被定義，&lt;span class=&#34;math inline&#34;&gt;\(DC\)&lt;/span&gt; 不可整合。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;矩陣的積的向量表達形式&lt;/h4&gt;
-&lt;p&gt;矩陣也可以被看做是一個個相同類型（大小，方向）的向量組成。那麼當，下面&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt;兩個矩陣滿足：&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的行向量的維度，和&lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的列向量的維度相等時，&lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt;被定義。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} \underline{a}_1^t\\ \underline{a}_2^t\\ \vdots\\ \underline{a}_k^t \end{array} \right), \; B=(\underline{b}_1,\underline{b}_2,\cdots,\underline{b}_n)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(AB=A(\underline{b}_1,\underline{b}_2,\cdots,\underline{b}_n)=(A\underline{b}_1,A\underline{b}_2,\cdots,A\underline{b}_n)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;或者：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(AB=\left( \begin{array}{c} \underline{a}_1^t\\ \underline{a}_2^t\\ \vdots\\ \underline{a}_k^t \end{array} \right)B=\left( \begin{array}{c} \underline{a}_1^tB\\ \underline{a}_2^tB\\ \vdots\\ \underline{a}_k^tB \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;特殊情況當&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;僅有一個行向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t\)&lt;/span&gt; 時，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AB=\underline{a}^tB=\underline{a}^t(\underline{b}_1,\underline{b}_2,\cdots,\underline{b}_n)=(\underline{a}^t\underline{b}_1,\underline{a}^t\underline{b}_2,\cdots,\underline{a}^t\underline{b}_n)\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;矩陣的積的成分&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 2  (matrix multiplication component)  &lt;/strong&gt;&lt;/span&gt;兩個矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A_{k\times l}, \; B_{m\times n}\)&lt;/span&gt; 的積有被定義時，矩陣 &lt;span class=&#34;math inline&#34;&gt;\(AB_{k\times n}\)&lt;/span&gt; 的任意成分&lt;span class=&#34;math inline&#34;&gt;\((i,j)\)&lt;/span&gt;，被定義爲：&lt;strong&gt;“&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行向量與 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列向量的內積”&lt;/strong&gt;。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;故：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\((1,1)\)&lt;/span&gt; 成分是，“&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 行向量與 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的第 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 列向量的內積”&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\((1,2)\)&lt;/span&gt; 成分是，“&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 行向量與 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的第 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 列向量的內積”&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\((k,n)\)&lt;/span&gt; 成分是，“&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; 行向量與 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;的第 &lt;span class=&#34;math inline&#34;&gt;\(ns\)&lt;/span&gt; 列向量的內積”&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;練習&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 1 &amp;amp; 2 \\ 3 &amp;amp; 4 \\ \end{array} \right), B=\left( \begin{array}{c} 4 &amp;amp; 1 \\ 5 &amp;amp; 2 \\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AB=\left( \begin{array}{c} 1\times4+2\times5 &amp;amp; 1\times1+2\times2 \\ 3\times4+4\times5 &amp;amp; 3\times1+4\times2 \\ \end{array} \right)\\ \;\;\;\;\;=\left( \begin{array}{c} 14 &amp;amp; 5 \\ 32 &amp;amp; 11 \\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(BA=\left( \begin{array}{c} 4\times1+1\times3 &amp;amp; 4\times2+1\times4 \\ 5\times1+2\times3 &amp;amp; 5\times2+2\times4 \\ \end{array} \right)\\ \;\;\;\;\;=\left( \begin{array}{c} 7 &amp;amp; 12 \\ 11 &amp;amp; 18 \\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意： &lt;span class=&#34;math inline&#34;&gt;\(AB\neq BA\)&lt;/span&gt;&lt;/span&gt; &lt;br&gt; 另外：&lt;span class=&#34;math inline&#34;&gt;\(AA=\left( \begin{array}{c} 1\times1+2\times3 &amp;amp; 1\times2+2\times4 \\ 3\times1+4\times3 &amp;amp; 3\times2+4\times4 \\ \end{array} \right)\\ \;\;\;\;=\left( \begin{array}{c} 7 &amp;amp; 10 \\ 15 &amp;amp; 22 \\ \end{array} \right)=AA^2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 1 &amp;amp; 2 \\ -2 &amp;amp; -4 \\ \end{array} \right), B=\left( \begin{array}{c} 6 &amp;amp; -2 \\ -3 &amp;amp; 1 \\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AB=\left( \begin{array}{c} 1\times6+2\times(-3) &amp;amp; 1\times(-2)+2\times1 \\ (-2)\times6+(-4)\times(-3) &amp;amp; (-2)\times(-2)+(-4)\times1 \\ \end{array} \right)\\ \;\;\;\;=\left( \begin{array}{c} 0 &amp;amp; 0 \\ 0 &amp;amp; 0 \\ \end{array} \right)=\Large 0\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;這裏出現了非零矩陣相乘爲&lt;strong&gt;零矩陣 &lt;span class=&#34;math inline&#34;&gt;\(\large 0\)&lt;/span&gt;&lt;/strong&gt;的例子。&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_{2\times3}=\left( \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ \end{array} \right)=\left( \begin{array}{c} \underline{a}_1^t\\ \underline{a}_2^t\\ \end{array} \right)=(\underline{c}_1,\underline{c}_2,\underline{c}_3); \\ B_{3\times2}=\left( \begin{array}{c} b_{11} &amp;amp; b_{12}\\ b_{21} &amp;amp; b_{22}\\ b_{31} &amp;amp; b_{32}\\ \end{array} \right)=(\underline{b}_1,\underline{b}_2)=\left( \begin{array}{c} \underline{d}^t_1\\ \underline{d}^t_2\\ \underline{d}^t_3\\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(AB_{2\times2}\)&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\left( \begin{array}{c} \sum\limits_{k=1}^3a_{1k}b_{k1} &amp;amp;\sum\limits_{k=1}^3a_{1k}b_{k2} \\ \sum\limits_{k=1}^3a_{2k}b_{k1} &amp;amp;\sum\limits_{k=1}^3a_{2k}b_{k2} \\ \end{array} \right)\\=\left( \begin{array}{c} \underline{a}^t_1\underline{b}_1 &amp;amp; \underline{a}^t_1\underline{b}_2 \\ \underline{a}^t_2\underline{b}_1 &amp;amp; \underline{a}^t_2\underline{b}_2 \\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(BA_{3\times3}\)&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\left( \begin{array}{c} \sum\limits_{k=1}^2b_{1k}a_{k1} &amp;amp; \sum\limits_{k=1}^2b_{1k}a_{k2} &amp;amp; \sum\limits_{k=1}^2b_{1k}a_{k3} \\ \sum\limits_{k=1}^2b_{2k}a_{k1} &amp;amp; \sum\limits_{k=1}^2b_{2k}a_{k2} &amp;amp; \sum\limits_{k=1}^2b_{2k}a_{k3} \\ \sum\limits_{k=1}^2b_{3k}a_{k1} &amp;amp; \sum\limits_{k=1}^2b_{3k}a_{k2} &amp;amp; \sum\limits_{k=1}^2b_{3k}a_{k3} \end{array} \right)\\ =\left( \begin{array}{c} \underline{d}^t_1\underline{c}_1 &amp;amp; \underline{d}^t_1\underline{c}_2 &amp;amp; \underline{d}^t_1\underline{c}_3 \\ \underline{d}^t_2\underline{c}_1 &amp;amp; \underline{d}^t_2\underline{c}_2 &amp;amp; \underline{d}^t_2\underline{c}_3 \\ \underline{d}^t_3\underline{c}_1 &amp;amp; \underline{d}^t_3\underline{c}_2 &amp;amp; \underline{d}^t_3\underline{c}_3 \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n\\ \end{array} \right)\)&lt;/span&gt; 時， &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\underline{x}^t=\left( \begin{array}{c} x_1^2 &amp;amp; x_1x_2 &amp;amp; \cdots &amp;amp; x_1x_n \\ x_2x_1 &amp;amp; x_2^2 &amp;amp; \cdots &amp;amp; x_2x_n \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ x_nx_1 &amp;amp; x_nx_2 &amp;amp; \cdots &amp;amp; x_n^2 \\ \end{array} \right)\)&lt;/span&gt;，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^t\underline{x}=\sum\limits_{i=1}^nx_i^2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3\\ \end{array} \right), \underline{c}=\left( \begin{array}{c} c_1\\ c_2\\ c_3\\ \end{array} \right)\\ A=\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t\\ \;\;=\left( \begin{array}{c} a_1^2 &amp;amp; a_1a_2 &amp;amp; a_1a_3 \\ a_2a_1 &amp;amp; a_2^2 &amp;amp; a_2a_3 \\ a_3a_1 &amp;amp; a_3a_2 &amp;amp; a_3^2 \\ \end{array} \right)\\ \;\;\;\;\;\;+\left( \begin{array}{c} b_1^2 &amp;amp; b_1b_2 &amp;amp; b_1b_3 \\ b_2b_1 &amp;amp; b_2^2 &amp;amp; b_2b_3 \\ b_3b_1 &amp;amp; b_3b_2 &amp;amp; b_3^2 \\ \end{array} \right)\\ \;\;\;\;\;\;+\left( \begin{array}{c} c_1^2 &amp;amp; c_1c_2 &amp;amp; c_1c_3 \\ c_2c_1 &amp;amp; c_2^2 &amp;amp; c_2c_3 \\ c_3c_1 &amp;amp; c_3c_2 &amp;amp; c_3^2 \\ \end{array} \right)\\ =\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \\ \end{array} \right)\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ b_1 &amp;amp; b_2 &amp;amp; b_3 \\ c_1 &amp;amp; c_2 &amp;amp; c_3 \\ \end{array} \right)=AA^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n\\ \end{array} \right), \; \underline{\frac{1}{n}}=\left( \begin{array}{c} \frac{1}{n}\\ \frac{1}{n}\\ \cdots\\ \frac{1}{n}\\ \end{array} \right)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^t\underline{\frac{1}{n}}=\sum\limits_{i=1}^nx_i\cdot\frac{1}{n}=\bar{x}\)&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;(&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的&lt;strong&gt;平均值&lt;/strong&gt;)&lt;/span&gt; &lt;br&gt; 將這樣的 &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 寫成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個的橫向量：&lt;span class=&#34;math inline&#34;&gt;\((\bar{x},\bar{x},\cdots,\bar{x})\)&lt;/span&gt; &lt;br&gt; 這個向量如果寫成展開的形式就是：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((\bar{x},\bar{x},\cdots,\bar{x})=(\underline{x}^t\underline{\frac{1}{n}}, \underline{x}^t\underline{\frac{1}{n}}, \cdots,\underline{x}^t\underline{\frac{1}{n}})\\ \;\;\;\;\;\;=\underline{x}^t(\underline{\frac{1}{n}},\underline{\frac{1}{n}},\cdots,\underline{\frac{1}{n}})\\ \;\;\;\;\;\;=(x_1,x_2,\cdots,x_n)\left( \begin{array}{c} \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n} \\ \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n} \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n} \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;矩陣積的性質&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 有定義時， &lt;span class=&#34;math inline&#34;&gt;\(BA\)&lt;/span&gt; 並不一定就有定義。無法整合時就沒有定義。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(AB=BA\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 被稱爲&lt;strong&gt;可交換 commutative&lt;/strong&gt;，&lt;strong&gt;交換可能矩陣&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(AB, BA\)&lt;/span&gt; 都有定義時，也不一定就滿足 &lt;span class=&#34;math inline&#34;&gt;\(AB=BA\)&lt;/span&gt;。也就是說，多數情況下， &lt;span class=&#34;math inline&#34;&gt;\(AB\neq BA\)&lt;/span&gt;。爲了區分二者，&lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 從右往左乘 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; &lt;strong&gt;(postmultiplication of &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; by &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(BA\)&lt;/span&gt; 被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 從左往右乘 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; &lt;strong&gt;(postmultiplication of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; by &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;)&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;相似的， &lt;span class=&#34;math inline&#34;&gt;\(AC=BC\)&lt;/span&gt; 時，應該理解爲： 等式&lt;span class=&#34;math inline&#34;&gt;\(A=B\)&lt;/span&gt;兩邊同時從右往左乘 &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(CA=CB\)&lt;/span&gt; 就是：等式&lt;span class=&#34;math inline&#34;&gt;\(A=B\)&lt;/span&gt;兩邊同時從左往右乘&lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;即使 &lt;span class=&#34;math inline&#34;&gt;\(A\neq\Large 0\)&lt;/span&gt; 且 &lt;span class=&#34;math inline&#34;&gt;\(B\neq\Large 0\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(AB\)&lt;/span&gt; 也有可能等於 &lt;span class=&#34;math inline&#34;&gt;\(\Large 0\)&lt;/span&gt; (零矩陣)，此時我們說， &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 是&lt;strong&gt;零因子 (zero divisor)&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

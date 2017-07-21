@@ -7,7 +7,7 @@ tags:
   - learning notes
   - basic mathematics
   - linear algebra
-summary: "第5章　行列式 determinant P85-87 行的基本變形"
+summary: "第5章　行列式 determinant P85- 行的基本變形"
 ---
 
 ## 行的基本變形
@@ -120,7 +120,7 @@ Next:
 $$\left(\begin{array}{c}
 1& 0& 0 & \vdots & -1/4 & 3/4 & -1/4\\
 0& 1& 0 & \vdots & 3/4 & -1/4 & -1/4\\
-0& 0& 1 & \vdots & -1/4 & -1/4 & 3/4\\
+0& 0& 1 & \vdots & -1/4 & -1/4 & -3/4\\
 \end{array}\right) \begin{align}
 \left\{
 \begin{array}{l}
@@ -136,7 +136,7 @@ $$\left(\begin{array}{c}
 $$X^{-1}=\left(\begin{array}{c}
 -1/4 & 3/4 & -1/4\\
 3/4 & -1/4 & -1/4\\
--1/4 & -1/4 & 3/4\\
+-1/4 & -1/4 & -3/4\\
 \end{array}\right)$$
 
 
@@ -145,5 +145,4 @@ $$X^{-1}=\left(\begin{array}{c}
 ### Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？
 
 ### A: 有。把行的基本變形中的定義 (\@ref(thm:line)) 的行改成列，既是列的基本變形的定義。
-
 ----
