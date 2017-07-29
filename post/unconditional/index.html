@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/2017-07-07/">
+  <link rel="canonical" href="https://winterwang.github.io/post/unconditional/">
 
   
 
-  <title>「統計解析のための線形代数」復習筆記21 | Be ambitious</title>
+  <title>無條件 offer, CAS, 和宿舍抽籤結果 | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,14 +160,14 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">「統計解析のための線形代数」復習筆記21</h1>
+    <h1 itemprop="name">無條件 offer, CAS, 和宿舍抽籤結果</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-07-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Fri, Jul 7, 2017
+    <time datetime="2017-07-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sat, Jul 29, 2017
     </time>
   </span>
 
@@ -177,7 +177,7 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/statistics">statistics</a
+    <a href="/categories/study-abroad">study abroad</a
     >
     
   </span>
@@ -190,13 +190,13 @@
   <span class="article-tags">
     <i class="fa fa-tags"></i>
     
-    <a href="/tags/learning-notes">learning notes</a
+    <a href="/tags/lshtm">LSHTM</a
     >, 
     
-    <a href="/tags/basic-mathematics">basic mathematics</a
+    <a href="/tags/london">London</a
     >, 
     
-    <a href="/tags/linear-algebra">linear algebra</a
+    <a href="/tags/medical-statistics">Medical Statistics</a
     >
     
   </span>
@@ -209,35 +209,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2f2017-07-07%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2funconditional%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9821&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2017-07-07%2f"
+         href="https://twitter.com/intent/tweet?text=%e7%84%a1%e6%a2%9d%e4%bb%b6%20offer%2c%20CAS%2c%20%e5%92%8c%e5%ae%bf%e8%88%8d%e6%8a%bd%e7%b1%a4%e7%b5%90%e6%9e%9c&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2funconditional%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2017-07-07%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9821"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2funconditional%2f&amp;title=%e7%84%a1%e6%a2%9d%e4%bb%b6%20offer%2c%20CAS%2c%20%e5%92%8c%e5%ae%bf%e8%88%8d%e6%8a%bd%e7%b1%a4%e7%b5%90%e6%9e%9c"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2017-07-07%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9821"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2funconditional%2f&amp;title=%e7%84%a1%e6%a2%9d%e4%bb%b6%20offer%2c%20CAS%2c%20%e5%92%8c%e5%ae%bf%e8%88%8d%e6%8a%bd%e7%b1%a4%e7%b5%90%e6%9e%9c"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9821&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2f2017-07-07%2f">
+         href="mailto:?subject=%e7%84%a1%e6%a2%9d%e4%bb%b6%20offer%2c%20CAS%2c%20%e5%92%8c%e5%ae%bf%e8%88%8d%e6%8a%bd%e7%b1%a4%e7%b5%90%e6%9e%9c&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2funconditional%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -250,122 +250,44 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <div class="section level2">
-<h2>行的基本變形</h2>
+      <p>言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。</p>
 
-<div class="theorem">
-<p><span id="thm:line" class="theorem"><strong>Theorem 1  (行的基本變形)  </strong></span>對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。</p>
-<ol style="list-style-type: decimal">
-<li>給任意一行乘以/除以一個非零的數。</li>
-<li>給任意一行加上/減去另外任意行的倍數。</li>
-<li>將任意兩行的對應元素互換。
-</div>
-</li>
-</ol>
-<div class="section level3">
-<h3>練習基本變形：</h3>
-<hr />
-<p>用行的基本變形求矩陣 <span class="math inline">\(X=\left(\begin{array}{c} 1&amp; 2&amp; 1\\ 2&amp; 1&amp; 1\\ 1&amp; 1&amp; 2\\ \end{array}\right)\)</span> 的逆矩陣 <span class="math inline">\(X^{-1}\)</span> <br></p>
-<hr />
-<p>首先，將矩陣 <span class="math inline">\(X\)</span> 和同次單位矩陣 <span class="math inline">\(E_3\)</span> 的元素寫成如下的左右並列的形式（用點隔開）<span class="math inline">\((X, E)\)</span>。數字 (1) (2) (3) 表示行數：<br></p>
-<p><span class="math display">\[\left(\begin{array}{c}
-1&amp; 2&amp; 1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0\\
-2&amp; 1&amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 0\\
-1&amp; 1&amp; 2 &amp; \vdots &amp; 0 &amp; 0 &amp; 1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{rr}
-(1)\\
-(2)\\
-(3)
-\end{array}
-\right.
-\end{align}\]</span></p>
-<p>可以變形成爲下面的形式：</p>
-<p><span class="math display">\[\left(\begin{array}{c}
-1&amp; 2&amp; 1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0\\
-0&amp; -3&amp; -1 &amp; \vdots &amp; -2 &amp; 1 &amp; 0\\
-0&amp; -1&amp; 1 &amp; \vdots &amp; -1 &amp; 0 &amp; 1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)\\
-(2)=(2)-2\times(1)\\
-(3)=(3)-(1)
-\end{array}
-\right.
-\end{align}\]</span></p>
-<p>繼續變形成如下的形式：</p>
-<p><span class="math display">\[\left(\begin{array}{c}
-1&amp; 0&amp; 3 &amp; \vdots &amp; -1 &amp; 0 &amp; 2\\
-0&amp; -4&amp; 0 &amp; \vdots &amp; -3 &amp; 1 &amp; 1\\
-0&amp; 1&amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)+2\times(3)\\
-(2)=(2)+(3)\\
-(3)=-1\times(3)
-\end{array}
-\right.
-\end{align}\]</span></p>
-<p>Next:</p>
-<p><span class="math display">\[\left(\begin{array}{c}
-1&amp; 0&amp; 3 &amp; \vdots &amp; -1 &amp; 0 &amp; 2\\
-0&amp; 1&amp; 0 &amp; \vdots &amp; 3/4 &amp; -1/4 &amp; -1/4\\
-0&amp; 1&amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)\\
-(2)=(2)\div(-4)\\
-(3)=(3)
-\end{array}
-\right.
-\end{align}\]</span></p>
-<p>Next:</p>
-<p><span class="math display">\[\left(\begin{array}{c}
-1&amp; 0&amp; 3 &amp; \vdots &amp; -1 &amp; 0 &amp; 2\\
-0&amp; 1&amp; 0 &amp; \vdots &amp; 3/4 &amp; -1/4 &amp; -1/4\\
-0&amp; 0&amp; -1 &amp; \vdots &amp; 1/4 &amp; 1/4 &amp; -3/4\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)\\
-(2)=(2)\\
-(3)=(3)-(2)
-\end{array}
-\right.
-\end{align}\]</span></p>
-<p>Next:</p>
-<p><span class="math display">\[\left(\begin{array}{c}
-1&amp; 0&amp; 0 &amp; \vdots &amp; -1/4 &amp; 3/4 &amp; -1/4\\
-0&amp; 1&amp; 0 &amp; \vdots &amp; 3/4 &amp; -1/4 &amp; -1/4\\
-0&amp; 0&amp; 1 &amp; \vdots &amp; -1/4 &amp; -1/4 &amp; -3/4\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)+3\times(3)\\
-(2)=(2)\\
-(3)=-1\times(3)
-\end{array}
-\right.
-\end{align}\]</span></p>
-<p>點 “<span class="math inline">\(\vdots\)</span>” 的左側變形成爲單位矩陣時，行變形結束。右側便是所求的逆矩陣 <span class="math inline">\(X^{-1}\)</span>。</p>
-<p><span class="math display">\[X^{-1}=\left(\begin{array}{c}
--1/4 &amp; 3/4 &amp; -1/4\\
-3/4 &amp; -1/4 &amp; -1/4\\
--1/4 &amp; -1/4 &amp; -3/4\\
-\end{array}\right)\]</span></p>
-<hr />
-</div>
-<div id="q--elementary-column-operations" class="section level3">
-<h3>Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？</h3>
-</div>
-</div>
-<div id="a--refthmline-" class="section level2">
-<h2>### A: 有。把行的基本變形中的定義 (<a href="#thm:line">1</a>) 的行改成列，既是列的基本變形的定義。</h2>
-</div>
+<p>本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。</p>
+
+<p>結果6月8日那天收到郵件催促我快點滿足 offer 條件：</p>
+
+<p><img src="/fig/meetingcondition.png" alt="" /></p>
+
+<p>可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。</p>
+
+<p>因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：</p>
+
+<blockquote>
+<p>For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School</p>
+</blockquote>
+
+<p>我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：</p>
+
+<blockquote>
+<p>Your documents didn’t meet the requirements because: <br>
+ 1.  The salary expectancy is not admissible <br>
+ 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. <br>
+ 3.  The bank statements did not include the bank name and logo.</p>
+</blockquote>
+
+<p>不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!</p>
+
+<p>這些都好說。可是日本的銀行，<strong>沒有</strong>這種類型的證明書（我也是第一次知道日本銀行不給開這樣子的證明）。所以許多人的解決辦法是讓銀行開一個月的流水賬單，要命的是這個證明不能開英文的，然後再去找翻譯公司翻譯流水。當然我也可以這麽辦。衹是，當我知道我的三個證明書都不能作爲有效的資金證明的時候，我離7月31日祗剩下不到2周時間了。在此奉勸后來者，一定要先準備好自己的資金證明書。最好能按照下面的樣本，讓銀行開具類似的證明書：</p>
+
+<p><img src="/fig/bankstatement.png" alt="" /></p>
+
+<p>我在接到證明書不滿足條件的郵件的第二天，立刻去了銀行，接待我的銀行經理先是打報告給總部請示。毫無意外被擋回來。說如果是客人自己要求的樣式的證明書，無法給加銀行logo，也不能蓋章，衹能簽字。在我一個多小時的軟磨硬泡以後，經理鬆動了。竟然主動想辦法，她提議說，可以辦理bank statement，不過我看了他們給的bank statement樣本也是一個時間點的賬戶存款而已，無法滿足28天的資金維持證明。看我面有難色，日本人經理還是挺善解人意的，說，我可以把日期改成，從xx月xx日-xx月xx日（28天）的最低資金證明。這樣就能解決問題了。而且bank statement本身自帶銀行logo。謝天謝地，一項死板不能變通的日本人讓我從此刮目相看。解決了我的燃眉之急。也不必再去找翻譯公司翻譯賬戶流水了。有驚無險。第二天我拿到開好的證明，立刻掃描PDF郵件發給LSHTM，期待他們能馬上給開來 CAS (Confirmation of Acceptance of Studies)。等了一周，還是左等不來右等不來，距離7月31日還剩下不到10天了。終於無法忍耐等待的我，打電話去倫敦詢問我的情況。對方接電話的是個年輕女聲，優雅的倫敦音告訴我，不要着急，先無視學校的提醒滿足條件的郵件吧。我們會儘快看你的檔案。無奈我衹好作罷，挂了電話繼續等待。</p>
+
+<p>結果第二天晚上就收到了確認函，說你的CAS很快就能發給你了。oh yeah！半夜裏我就收到了發來的新鮮剛出爐的CAS號碼以及新的無條件錄取證明：</p>
+
+<p><img src="/fig/InkedCAS_LI.jpg" alt="" /></p>
+
+<p><img src="/fig/uncon.png" alt="" /></p>
 
     </div>
   </div>
@@ -376,13 +298,10 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/2017-07-06/"><span
-      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記20</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/2017-07-07/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記21</a></li>
     
 
-    
-    <li class="next"><a href="https://winterwang.github.io/post/unconditional/">無條件 offer, CAS, 和宿舍抽籤結果 <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
