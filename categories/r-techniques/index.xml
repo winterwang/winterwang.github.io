@@ -2,13 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Techniques on Be ambitious</title>
-    <link>https://winterwang.github.io/categories/r-techniques/</link>
+    <link>https://winterwang.github.io/categories/r-techniques/index.xml</link>
     <description>Recent content in R Techniques on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 31 May 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/r-techniques/" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/r-techniques/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>rMaps: 超級酷的地圖</title>

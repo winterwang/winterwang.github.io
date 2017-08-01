@@ -2,13 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>London on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/london/</link>
+    <link>https://winterwang.github.io/tags/london/index.xml</link>
     <description>Recent content in London on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/london/" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/london/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
@@ -54,6 +53,8 @@
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/uncon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我很早以前就在&lt;a href=&#34;https://www.visa4uk.fco.gov.uk/home/welcome&#34; target=&#34;_blank&#34;&gt;visa4uk&lt;/a&gt;上註冊好了全部的信息，就等着學校發來 CAS 的文件了。於是我再花了半個小時把 CAS 上的內容填寫到簽證申請的網站上去。在申請的網站上，會中途跳出來讓你支付一年醫療保險的頁面（£150），付完保險費以後會收到自己的保險號碼。估計以後在英國如果需要看病的話報自己的保險號碼就OK了。&lt;/p&gt;
 </description>
     </item>
     
