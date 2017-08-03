@@ -16,8 +16,33 @@
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
-      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲：
-$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t\ =\frac{1}{|A|}$$&lt;/p&gt;
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
+
+&lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
+
+&lt;p&gt;其中:&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$adj(A)$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子矩陣&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$A_{ij}$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$D_{ij}$ &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;爲小行列式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(1) 之前舉過的例子再拿來試試看：
+$$X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right)=\left(\begin{array}{c}
+x_{11} &amp;amp; x &amp;amp; x \newline
+x_2 &amp;amp; x &amp;amp; x \newline
+x &amp;amp; x &amp;amp; x
+\end{array}\right)$$&lt;/p&gt;
+
+&lt;p&gt;$x_{ij}$&lt;/p&gt;
 </description>
     </item>
     

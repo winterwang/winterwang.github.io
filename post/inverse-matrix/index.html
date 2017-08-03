@@ -250,8 +250,33 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲：
-$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t\ =\frac{1}{|A|}$$</p>
+      <p>正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$</p>
+
+<p>$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$</p>
+
+<p>其中:<br></p>
+
+<ul>
+<li>$adj(A)$ 爲<a href="https://winterwang.github.io/post/2017-03-15/" target="_blank">餘因子矩陣</a></li>
+<li>$A_{ij}$ 爲<a href="https://winterwang.github.io/post/2017-03-15/" target="_blank">餘因子</a></li>
+<li>$D_{ij}$ <a href="https://winterwang.github.io/post/2017-03-15/" target="_blank">爲小行列式</a></li>
+</ul>
+
+<p>(1) 之前舉過的例子再拿來試試看：
+$$X=\left(
+\begin{array}{c}
+1 &amp; 2 &amp; 1 \newline
+2 &amp; 1 &amp; 1 \newline
+1 &amp; 1 &amp; 2
+\end{array}
+\right)=\left(\begin{array}{c}
+x_{11} &amp; x &amp; x \newline
+x_2 &amp; x &amp; x \newline
+x &amp; x &amp; x
+\end{array}\right)$$</p>
+
+<p>$x_{ij}$</p>
 
     </div>
   </div>
