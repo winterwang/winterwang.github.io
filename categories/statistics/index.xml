@@ -10,6 +10,17 @@
     <atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記22</title>
+      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t\ =\frac{1}{|A|}$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
       <link>https://winterwang.github.io/post/2017-07-07/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
@@ -132,9 +143,10 @@
 &lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
 &lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;### A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1129,179 +1141,6 @@ ka_n
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt; 的轉置向量我們會記爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)^t=(a_1,a_2,a_3)\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=(x_1.x_2,x_3)\)&lt;/span&gt; 的轉置向量我們會記爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^t=(x_1.x_2,x_3)^t=\left( \begin{array}{c} x_1\\ x_2\\ x_3\\ \end{array} \right)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記7</title>
-      <link>https://winterwang.github.io/post/2017-02-16/</link>
-      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-16/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;分解平方和 1&lt;/h2&gt;
-&lt;p&gt;樣本量均爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的兩變量 &lt;span class=&#34;math inline&#34;&gt;\(z, \hat{z}\)&lt;/span&gt; 如下表，已知這兩個變量滿足條件：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\bar{z}=\frac{1}{n}\sum\limits_{i=1}^nz_i=\frac{1}{n}\sum\limits_{i=1}^n\hat{z}_i=\bar{\hat{z}},\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)&lt;/span&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;個体の番号&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(\hat{z}\)&lt;/span&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_1\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_2\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_2\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_i\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_i\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_n\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_n\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;此時我們有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;全平方和&lt;/strong&gt;(全変動，總平方和，總變動， &lt;strong&gt;Total sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_T=(z_i-\bar{z})^2+(z_2-\bar{z})^2+\cdots+(z_n-\bar{z})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;回歸平方和&lt;/strong&gt;(回歸變動，&lt;strong&gt;Regression sum of Squares&lt;/strong&gt;)&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_R=(\hat{z_1}-\bar{\hat{z}})^2+(\hat{z_2}-\bar{\hat{z}})^2+\cdots+(\hat{z_n}-\bar{\hat{z}})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(\hat{z_i}-\bar{\hat{z}})^2=\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;殘差平方和&lt;/strong&gt;(誤差平方和，殘差變動，誤差變動，&lt;strong&gt;residual sum of Squares&lt;/strong&gt;)&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;上面三個平方和之間，有如下的關系：
-&lt;span class=&#34;math display&#34; id=&#34;eq:Sumofsquares&#34;&gt;\[\begin{equation}
-  S_T=S_R+S_e
-  \tag{1}
-  \end{equation}\]&lt;/span&gt;
-&lt;br&gt; 既：全平方和等於殘差平方和與回歸平方和之和。&lt;a href=&#34;#eq:Sumofsquares&#34;&gt;(1)&lt;/a&gt;式被稱爲&lt;strong&gt;平方和的分解(decomposition of sum of squares)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;refeqsumofsquares&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;證明&lt;a href=&#34;#eq:Sumofsquares&#34;&gt;(1)&lt;/a&gt;式&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level5&#34;&gt;
-&lt;h5&gt;解：&lt;/h5&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{equation}
-\begin{split}
-S_T &amp;amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\
-&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})+(\hat{z_i}-\bar{z})\right\}^2\\
-&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})^2+(\hat{z_i}-\bar{z})^2+2(z_i-\hat{z_i})(\hat{z_i}-\bar{z})\right\}\\
-&amp;amp; = \sum\limits_{i=1}^n(z_i-\hat{z_i})^2+\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2 + 0\\
-&amp;amp; = S_e + S_R
-\end{split}
-\end{equation}
-\]&lt;/span&gt; 最後一步等式，利用了一開始給出的條件 &lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)&lt;/span&gt;&lt;br&gt; 這裏的平方和分解與&lt;strong&gt;回歸分析&lt;/strong&gt;有着緊密的聯系。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;分解平方和 2&lt;/h2&gt;
-&lt;p&gt;有樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的變量 &lt;span class=&#34;math inline&#34;&gt;\(z_1\)&lt;/span&gt; 與樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的變量 &lt;span class=&#34;math inline&#34;&gt;\(z_2\)&lt;/span&gt; 的數據如下表：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(z_1\)&lt;/span&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(z_2\)&lt;/span&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{11}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{12}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{21}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{22}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{i1}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{i2}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{n1}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{m2}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;此時我們有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;樣本&lt;strong&gt;平均值&lt;/strong&gt;： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\bar{z_1}=\frac{1}{n}\sum\limits_{i=1}^nz_{i1}, \;\bar{z_2}=\frac{1}{m}\sum\limits_{i=1}^mz_{i2}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;樣本&lt;strong&gt;總平均值&lt;/strong&gt;： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\bar{z}=\frac{1}{n+m}(\sum\limits_{i=1}^nz_{i1}+\sum\limits_{i=1}^mz_{i2})\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;全&lt;strong&gt;平方和&lt;/strong&gt; (全変動，總平方和，總變動, &lt;strong&gt;Total sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_T=\left\{(z_{11}-\bar{z})^2+(z_{21}-\bar{z})^2+\cdots+(z_{n1}-\bar{z})^2\right\}\\  \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z})^2+(z_{22}-\bar{z})^2+\cdots+(z_{m2}-\bar{z})^2\right\}\\  \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;羣內平方和&lt;/strong&gt;(組內平方和，級內平方和，羣內變動，級內變動，變量內平方和，變量內變動，&lt;strong&gt;Within-groups sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_W=\left\{(z_{11}-\bar{z_1})^2+(z_{21}-\bar{z_1})^2+\cdots+(z_{n1}-\bar{z_1})^2\right\}\\  \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z_2})^2+(z_{22}-\bar{z_2})^2+\cdots+(z_{m2}-\bar{z_2})^2\right\}\\  \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z_2})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;羣間平方和&lt;/strong&gt;(組間平方和，級間平方和，羣間變動，級間變動，變量間平方和，變量間變動，&lt;strong&gt;Between-groups sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_B=\left\{(\bar{z_1}-\bar{z})^2+(\bar{z_1}-\bar{z})^2+\cdots+(\bar{z_1}-\bar{z})^2\right\}\\ \;\;\;\;\;\;\;\;+\left\{(\bar{z_2}-\bar{z})^2+(\bar{z_2}-\bar{z})^2+\cdots+(\bar{z_2}-\bar{z})^2\right\}\\ \;\;\;\;=\sum\limits_{i=1}^n(\bar{z_1}-\bar{z})^2+\sum\limits_{i=1}^m(\bar{z_2}-\bar{z})^2\\ \;\;\;\;=n(\bar{z_1}-\bar{z})^2+m(\bar{z_2}-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;上面三個平方和之間有如下的關系：
-&lt;span class=&#34;math display&#34; id=&#34;eq:Sumofsqua&#34;&gt;\[\begin{equation}
-S_T=S_W+S_B
-\tag{2}
-\end{equation}\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;refeqsumofsqua&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;證明&lt;a href=&#34;#eq:Sumofsqua&#34;&gt;(2)&lt;/a&gt;式&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;解：&lt;/h5&gt;
-&lt;p&gt;注意利用：&lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})(\bar{z_1}-\bar{z})=(\bar{z_1}-\bar{z})\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\:=(\bar{z_1}-\bar{z})(\sum\limits_{i=1}^nz_{i1}-n\bar{z_1})\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\:=(\bar{z_1}-\bar{z})(n\bar{z_1}-n\bar{z_1})=0\)&lt;/span&gt;&lt;br&gt;因此&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{equation}
-\begin{split}
-S_T &amp;amp; = \sum_{i=1}^n(z_{i1}-\bar{z})^2+\sum_{i=1}^m(z_{i2}-\bar{z})^2\\
-&amp;amp; = \sum_{i=1}^n\left\{(z_{i1}-\bar{z_1})+(\bar{z_1}-\bar{z})\right\}^2\\
-&amp;amp;\;\;\;\;\; + \sum_{i=1}^m\left\{(z_{i2}-\bar{z_2})+(\bar{z_2}-\bar{z})\right\}^2\\
-&amp;amp; = \sum_{i=1}^n\left\{(z_{i1}-\bar{z_1})^2+2(z_{i1}-\bar{z_1})(\bar{z_1}-\bar{z})+(\bar{z_1}-\bar{z})^2\right\}\\
-&amp;amp;\;\;\;\;\; +\sum_{i=1}^m\left\{(z_{i2}-\bar{z_2})^2+2(z_{i2}-\bar{z_2})(\bar{z_2}-\bar{z})+(\bar{z_2}-\bar{z})^2\right\}\\
-&amp;amp; = \sum_{i=1}^n(z_{i1}-\bar{z_1})^2 + n(\bar{z_1}-\bar{z})^2\\
-&amp;amp;\;\;\;\;\; + \sum_{i=1}^m(z_{i2}-\bar{z_2})^2 + m(\bar{z_2}-\bar{z})^2\\
-&amp;amp; = S_W+S_B
-\end{split}
-\end{equation}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;變量的合成與加權&lt;/h2&gt;
-&lt;p&gt;我們說，將 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個變量 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_p\)&lt;/span&gt; 轉變成一次式：&lt;span class=&#34;math inline&#34;&gt;\(w_1x_1+w_2x_2+\cdots+w_px_p (=\hat{y})\)&lt;/span&gt; 的過程稱爲變量的合成 &lt;strong&gt;(linear combination of variables)&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; 被叫做&lt;strong&gt;合成變量&lt;/strong&gt;。系數 &lt;span class=&#34;math inline&#34;&gt;\(w_1,w_2,\cdots,w_p\)&lt;/span&gt; 被叫做&lt;strong&gt;權重 (weight)&lt;/strong&gt;。假如 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_p\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個科目的考試得分，那麼:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(w_1=w_2=\cdots=w_p=1\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; 意思就是 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個科目的總分&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(w_1=w_2=\cdots=w_p=\frac{1}{p}\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; 意思就是 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個科目的平均分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;多元變量分析中，我們實質上做的許多事就是思考如何合理的決定這個&lt;strong&gt;權重&lt;/strong&gt;。&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

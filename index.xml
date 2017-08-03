@@ -37,6 +37,17 @@
     </item>
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記22</title>
+      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t\ =\frac{1}{|A|}$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>大英帝國簽證申請</title>
       <link>https://winterwang.github.io/post/visa-application/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
@@ -267,9 +278,10 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
 &lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;### A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -315,43 +327,6 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>溫度，污染，和電費</title>
-      <link>https://winterwang.github.io/post/2017-06-12/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-06-12/</guid>
-      <description>
-
-&lt;p&gt;&lt;audio src=&#34;https://winterwang.github.io/mp3/170503ACPollution.mp3&#34; controls=&#34;controls&#34;&gt;
-Your browser does not support the audio element.
-你的瀏覽器不支持音頻播放。請使用chrome科學上網。
-&lt;/audio&gt;&lt;/p&gt;
-
-&lt;p&gt;听写于：2017-6-12 16:6  用时：23:04
-正确率：93% 错词：19个
-提示：&lt;span class=&#34;diff_off&#34;&gt;红色&lt;/span&gt;：错误单词，&lt;span class=&#34;diff_add&#34;&gt;绿色&lt;/span&gt;：补上正确单词，&lt;span class=&#34;diff_alert&#34;&gt;黄色&lt;/span&gt;：纠正大小写与标点&lt;/div&gt;
-&lt;p class=&#34;linetext&#34;&gt;You may have noticed your summertime electricity bills&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; when &lt;span class=&#34;diff_off&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;are&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;you&amp;rsquo;re&lt;/span&gt; cranking the &lt;span class=&#34;diff_off&#34;&gt;A-C&lt;/span&gt;&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;A–C&lt;/span&gt;&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;They &#34;&gt;they &lt;/span&gt;are more pricey than your wintertime payments. That&amp;rsquo;s because &lt;span class=&#34;diff_alert&#34; title=&#34;air conditioning&#34; &gt;air-conditioning&lt;/span&gt;  is an electricity hog. And when a whole city or &lt;span class=&#34;diff_off&#34;&gt;your&lt;/span&gt; region turns down the thermostat, utilities have to meet that increased demand somehow. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;This is often when we turn on the oldest power plants or the dirtier power plants. Tracey Holloway, an &lt;span class=&#34;diff_off&#34;&gt;atmosphere&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;atmospheric&lt;/span&gt; scientist at the University of Wisconsin in Madison. Some of these &lt;span class=&#34;diff_off&#34;&gt;old&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;older&lt;/span&gt; power plants that &lt;span class=&#34;diff_off&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;only&lt;/span&gt; run on fuel oil or &lt;span class=&#34;diff_off&#34;&gt;may&lt;/span&gt; run on coal &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; only come &lt;span class=&#34;diff_add&#34;&gt;on&lt;/span&gt; on the hottest days. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Using data from the EPA, Holloway and her team studied how air pollutants respond when the temperature goes up. They found that across the eastern U. S. , for every degree &lt;span class=&#34;diff_off&#34;&gt;of&lt;/span&gt; Celsius temperature rise&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; power plants &lt;span class=&#34;diff_off&#34;&gt;spell&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;belched&lt;/span&gt; out &lt;span class=&#34;diff_off&#34;&gt;13000&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;140,000&lt;/span&gt; metric tons of additional carbon dioxide&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;and &#34;&gt;And &lt;/span&gt;&lt;span class=&#34;diff_off&#34;&gt;admissions&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;emissions&lt;/span&gt; of the &lt;span class=&#34;diff_off&#34;&gt;pollutant&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;pollutants&lt;/span&gt; sulfur &lt;span class=&#34;diff_off&#34;&gt;dioxides&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;dioxide&lt;/span&gt; and nitrogen oxides rose &lt;span class=&#34;diff_off&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;three&lt;/span&gt; and a half percent per extra degree of heat&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; averaged across the region. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;That&amp;rsquo;s especially bad&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; because hot summer days are the &lt;span class=&#34;diff_off&#34;&gt;worse&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;worst&lt;/span&gt; days to pump out more pollution. &lt;span class=&#34;diff_off&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;These&lt;/span&gt; hot days&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; when we turn on &lt;span class=&#34;diff_add&#34;&gt;the&lt;/span&gt; air conditioning across the U. S. or &lt;span class=&#34;diff_off&#34;&gt;across&lt;/span&gt; the &lt;span class=&#34;diff_off&#34;&gt;states&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;state&lt;/span&gt; also happen to be the most chemically reactive days. So every unit of air pollution &lt;span class=&#34;diff_off&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;that&amp;rsquo;s&lt;/span&gt; going into the air is &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; you know &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; that much more likely to form ozone. &lt;span class=&#34;diff_off&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;And&lt;/span&gt; ozone itself is a potent air pollutant. The study is in the journal Environmental Science and Technology. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Holloway says the answer to &lt;span class=&#34;diff_off&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;this&lt;/span&gt; summertime pollution peak &lt;span class=&#34;diff_off&#34;&gt;maybe&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;be&lt;/span&gt; an energy source that thrives on hot&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; sunny days. If we could be getting solar electricity during this peak time &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; it may &lt;span class=&#34;diff_off&#34;&gt;all&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;offset&lt;/span&gt; this hot weather midday peak and be a great solution for avoiding having to turn on those peaking power plants. In other words: why not use the sun&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; to keep cool&lt;span class=&#34;diff_alert&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Words&lt;/em&gt; worth to be remembered:
-
-&lt;ul&gt;
-&lt;li&gt;cranking: 摇动, 起动, 开动&lt;/li&gt;
-&lt;li&gt;atmospheric: adj. 大气的，大气层的；有情调的，有魅力的&lt;/li&gt;
-&lt;li&gt;thermostat: n. 恒温（调节）器&lt;/li&gt;
-&lt;li&gt;hog: n. 猪；贪婪者，象猪般的人 v. （使）拱起&lt;/li&gt;
-&lt;li&gt;belch: n. 打嗝；喷吐；喷出物 v. 打嗝；喷出&lt;/li&gt;
-&lt;li&gt;offset: n. 抵销，支派，旁支，平版印刷 v. 弥补，抵销&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;譯文&#34;&gt;譯文&lt;/h2&gt;
-
-&lt;p&gt;或许你已经注意到夏季家里的电费情况，当你开启空调后，电费要比冬季更多些了。这是因为，空调属于耗电大户。而当一整座城市或者地区都调低恒温器的时候，功耗就不得不超过了需求。 这常见于当我们打开最古老的设备或者已经比较脏的发电设备时。这是Tracey Holloway，麦迪逊市Wisconsin 大学的一位研究大气的科学家。 这些古老的发电装备中有些只能依靠燃烧燃油或者煤炭，只在最热的日子里才会开启它们。 利用EPA 的数据， Holloway和她的研究团队对当温度升高时，空气污染物如何反应的问题进行了研究。 他们发现，贯穿美国东部， 温度每升高1摄氏度，发电厂可喷射出140，000吨额外的二氧化碳。而且，整个地区平均，热量每增加一度，污染物硫氧化物和氮氧化物的排放量就上升3.5 了个百分点。 这特别糟糕，因为炎热的夏季是泵出更多污染的最差的日子。 这些炎热的日子， 当美国人开启空调，或者一个州的居民开启空调， 这些日子也是化学反应最激烈的日子 。 每单位空气污染物进入空气很有可能就形成了臭氧。而臭氧本身是一种潜在的空气污染物。该研究已发表在《环境科学与技术》杂志上了。 Holloway说，应对夏季污染高峰的对策或许可以采用一种在炎热的阳光充足的日子里也很充足的能源。 如果我们可以在高峰时间得到 太阳能发电，这或许能抵消炎热的天气中午高峰时段的污染物排放，并且这还是一种避免不得不开启那些用电高峰时候才需要开启的发电厂的好办法。换句话说：为什么不用太阳提供的能量，保持凉爽呢。&lt;/p&gt;
 </description>
     </item>
     

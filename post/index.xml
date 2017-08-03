@@ -11,6 +11,17 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記22</title>
+      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t\ =\frac{1}{|A|}$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>大英帝國簽證申請</title>
       <link>https://winterwang.github.io/post/visa-application/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
@@ -241,9 +252,10 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
 &lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;### A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -623,7 +635,7 @@ Your browser does not support the audio element.
 &lt;li&gt;另外，爲了以防萬一，我又拜託之前本科階段上海交大的指導老師幫忙開具了本科階段的學位證書，畢業證書的英文版，以及當年的成績單。（看了當時的成績單，不禁回想當年在上海求學的日子。曾經有段時間，在中國訪問facebook是不需要任何技巧的。那個時候，我們還有google reader，還有google.cn。。。）&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;files/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;查找了許多模板，后来选择了(&lt;a href=&#34;http://svmiller.com/blog/2016/03/svm-r-markdown-cv/&#34; target=&#34;_blank&#34;&gt;这一款&lt;/a&gt;)。&lt;code&gt;Fork&lt;/code&gt;过来以后打开&lt;code&gt;Rmd&lt;/code&gt;文件，写上自己的内容，&lt;code&gt;knit&lt;/code&gt;，pdf就生成了。生活从未如此简单与快乐。告别Micro$oft，你会更轻松。&lt;/li&gt;
@@ -966,150 +978,6 @@ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(F=\left( \begin{array}{c} 0 &amp;amp; 2 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(F)=1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O=\left( \begin{array}{c} 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(O)=0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>https://winterwang.github.io/post/2017-03-01/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-01/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;updated: 2017-03-07&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;對稱矩陣&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (symmetric matrix)  &lt;/strong&gt;&lt;/span&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 如果完全和它的轉置矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A^t\)&lt;/span&gt; 相同，即：&lt;span class=&#34;math inline&#34;&gt;\(A=A^t\)&lt;/span&gt; 成立時，這樣的正方形矩陣被稱爲&lt;strong&gt;對稱矩陣(symmetric matrix)&lt;/strong&gt;。對稱矩陣的成分是以主對角線(main diagonal)對稱的。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 4 &amp;amp; 3 &amp;amp; 2 &amp;amp; 1 \\ 3 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 \\ 2 &amp;amp; 6 &amp;amp; 8 &amp;amp; 9 \\ 1 &amp;amp; 7 &amp;amp; 9 &amp;amp; 0 \end{array} \right)\)&lt;/span&gt; 是典型的4次對稱矩陣。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;數學&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;物理&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;化學&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;數學&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.72\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.62\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;物理&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.72\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(-0.55\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;化學&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.62\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(-0.55\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr /&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;上表是幾名學生的數學，物理，化學成績得分的相關系數。&lt;br&gt; 如果提取出數字的部分，左右用圓括號括起來，會得到這樣一個矩陣：&lt;span class=&#34;math inline&#34;&gt;\(R=\left(  \begin{array}{c}  1 &amp;amp; 0.72 &amp;amp; 0.62 \\  0.72 &amp;amp; 1 &amp;amp; -0.55 \\  0.62 &amp;amp; -0.55 &amp;amp; 1 \\  \end{array}  \right)\)&lt;/span&gt; 這樣類型的矩陣被特別的稱爲&lt;strong&gt;相關矩陣(correlation matrix)&lt;/strong&gt;。類似相關矩陣這樣的明確爲對稱矩陣的情況下，常常像下面這樣簡略的記左下或者右上部分： &lt;span class=&#34;math display&#34;&gt;\[\left(
-   \begin{array}{c}
-   1 &amp;amp;  &amp;amp;  \\
-   0.72 &amp;amp; 1 &amp;amp;  \\
-   0.62 &amp;amp; -0.55 &amp;amp; 1 \\
-   \end{array}
-   \right)， \left(
-   \begin{array}{c}
-   1 &amp;amp; 0.72 &amp;amp; 0.62 \\
-&amp;amp; 1 &amp;amp; -0.55 \\
-&amp;amp;  &amp;amp; 1 \\
-   \end{array}
-   \right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;下面的對稱矩陣，對角成分是&lt;strong&gt;方差(variance, 分散)&lt;/strong&gt;，非對角成分是&lt;strong&gt;協方差(covariance, 共分散)&lt;/strong&gt;，被稱爲&lt;strong&gt;方差協方差矩陣(variance-covariance matrix, 分散共分散行列)&lt;/strong&gt;。&lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[\sum=\left(
-\begin{array}{c}
-\sigma_{1}^2 &amp;amp; \sigma_{2}   &amp;amp; \cdots &amp;amp; \sigma_{1n} \\
-\sigma_{12}  &amp;amp; \sigma_{2}^2 &amp;amp; \cdots &amp;amp; \sigma_{2n} \\
-\vdots       &amp;amp; \vdots       &amp;amp; \ddots &amp;amp; \vdots      \\
-\sigma_{1n}  &amp;amp; \sigma_{2}   &amp;amp; \cdots &amp;amp; \sigma_{n}^2
-\end{array}
-\right), S=\left(
-\begin{array}{c}
-s_{1}^2 &amp;amp; s_{2}   &amp;amp; \cdots &amp;amp; s_{1n} \\
-s_{12}  &amp;amp; s_{2}^2 &amp;amp; \cdots &amp;amp; s_{2n} \\
-\vdots  &amp;amp; \vdots  &amp;amp; \ddots &amp;amp; \vdots  \\
-s_{1n}  &amp;amp; s_{2}   &amp;amp; \cdots &amp;amp; s_{n}^2
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \\ x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \\ \end{array} \right)\)&lt;/span&gt; ，那麼，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(XX^t=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \\ x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \\ \end{array} \right)\left( \begin{array}{c} x_{11} &amp;amp; x_{12} \\ x_{12} &amp;amp; x_{22} \\ x_{13} &amp;amp; x_{13} \end{array} \right)\\ \;\;\;\;\;\;\;=\left( \begin{array}{c} x_{11}^2+x_{12}^2+x_{13}^2 &amp;amp; x_{11}x_{21}+x_{12}x_{22}+x_{13}x_{23} \\ x_{21}x_{11}+x_{22}x_{12}+x_{23}x_{13} &amp;amp; x_{21}^2+x_{22}^2+x_{23}^2 \\ \end{array} \right)\)&lt;/span&gt; 是一個對稱矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(X^tX=\left( \begin{array}{c} x_{11}^2+x_{21}^2 &amp;amp; x_{11}x_{12}+x_{21}x_{22} &amp;amp; x_{11}x_{13}+x_{21}x_{23} \\ x_{12}x_{11}+x_{22}x_{21} &amp;amp; x_{12}^2+x_{22}^2 &amp;amp; x_{12}x_{13}+x_{22}x_{23} \\ x_{13}x_{11}+x_{23}x_{21} &amp;amp; x_{13}x_{12}+x_{23}x_{22} &amp;amp; x_{13}^2+x_{23}^2 \end{array} \right)\)&lt;/span&gt; 也是一個對稱矩陣。 &lt;br&gt; 且，他們的&lt;strong&gt;跡(trace)&lt;/strong&gt;也是一樣的，均爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 各個成分的平方和： &lt;span class=&#34;math display&#34;&gt;\[tr(XX^t)=tr(X^tX)=x_{11}^2+x_{12}^2+x_{13}^2+x_{21}^2+x_{22}^2+x_{23}^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;對角矩陣&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;非對角成分(off-diagonal element)&lt;/strong&gt;均爲零 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的正方形矩陣被稱爲&lt;strong&gt;對角矩陣(diagonal matrix)&lt;/strong&gt;。寫成如下形式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-a_{11} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; a_{22}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; a_{33} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  a_{nn}
-\end{array}
-\right)=D_n=\Delta_n\\=diag(a_{11},a_{22},a_{33},\cdots,a_{nn})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;這樣的矩陣也常把左下部分右上部分的非對角成分用一個大的 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 來表示： &lt;span class=&#34;math display&#34;&gt;\[
-\left(
-    \begin{array}{ccccc}
-    a_{11}                         \\
-      &amp;amp; a_{22}            &amp;amp;   &amp;amp; \Huge0 \\
-      &amp;amp;               &amp;amp; a_{33}          \\
-      &amp;amp; \Huge 0       &amp;amp;   &amp;amp; \ddots           \\
-      &amp;amp;               &amp;amp;   &amp;amp;      &amp;amp; a_{nn}
-    \end{array}
-    \right)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;下面也是一個對角矩陣的例子： &lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-\sqrt{a_{11}} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \sqrt{a_{22}}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \sqrt{a_{33}} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  \sqrt{a_{nn}}
-\end{array}
-\right)=D_n^{\frac{1}{2}}=\Delta_n^{\frac{1}{2}}\\=diag(\sqrt{a_{11}},\sqrt{a_{22}},\sqrt{a_{33}},\cdots,\sqrt{a_{nn}})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;對角成分也可以是分母非零的分數： &lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-1/a_{11} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 1/a_{22}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; 1/a_{33} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  1/a_{nn}
-\end{array}
-\right)=D_n^{-1}=\Delta_n^{-1}\\=diag(a_{11}^{-1},a_{22}^{-1},a_{33}^{-1},\cdots,a_{nn}^{-1})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;當然如下的例子也是對角矩陣，默認根號內爲正： &lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-\frac{1}{\sqrt{a_{11}}} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \frac{1}{\sqrt{a_{22}}}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \frac{1}{\sqrt{a_{33}}} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  \frac{1}{\sqrt{a_{nn}}}
-\end{array}
-\right)=D_n^{-\frac{1}{2}}=\Delta_n^{-\frac{1}{2}}\\=diag(\frac{1}{\sqrt{a_{11}}},\frac{1}{\sqrt{a_{22}}},\frac{1}{\sqrt{a_{33}}},\cdots,\frac{1}{\sqrt{a_{nn}}})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;當然，上述對角矩陣之間具有這樣的關系：&lt;span class=&#34;math inline&#34;&gt;\(D_n^{\frac{1}{2}}D_n^{\frac{1}{2}}=D_n\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(D_n^{-\frac{1}{2}}D_n^{-\frac{1}{2}}=D_n^{-1}\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 或者向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 與對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt; 從左向右乘時，&lt;span class=&#34;math inline&#34;&gt;\(DA, D\underline{x}\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行成分是：&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 或 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行乘以 &lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\((i,i)\)&lt;/span&gt; 成分。例如： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(D=\left( \begin{array}{c} \lambda_1 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; \lambda_2 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; \lambda_3\\ \end{array} \right), A=\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ b_1 &amp;amp; b_2 &amp;amp; b_3 \\ c_1 &amp;amp; c_2 &amp;amp; c_3 \\ \end{array} \right),\\ \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3\\ \end{array} \right)\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(DA=\left( \begin{array}{c} \lambda_1a_1 &amp;amp; \lambda_1a_2 &amp;amp; \lambda_1a_3 \\ \lambda_2b_1 &amp;amp; \lambda_2b_2 &amp;amp; \lambda_2b_3 \\ \lambda_3c_1 &amp;amp; \lambda_3c_2 &amp;amp; \lambda_3c_3 \\ \end{array} \right) \\ D\underline{x}=\left( \begin{array}{c} \lambda_1x_1\\ \lambda_2x_2\\ \lambda_3x_3\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

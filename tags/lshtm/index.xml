@@ -245,7 +245,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;li&gt;另外，爲了以防萬一，我又拜託之前本科階段上海交大的指導老師幫忙開具了本科階段的學位證書，畢業證書的英文版，以及當年的成績單。（看了當時的成績單，不禁回想當年在上海求學的日子。曾經有段時間，在中國訪問facebook是不需要任何技巧的。那個時候，我們還有google reader，還有google.cn。。。）&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;files/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;查找了許多模板，后来选择了(&lt;a href=&#34;http://svmiller.com/blog/2016/03/svm-r-markdown-cv/&#34; target=&#34;_blank&#34;&gt;这一款&lt;/a&gt;)。&lt;code&gt;Fork&lt;/code&gt;过来以后打开&lt;code&gt;Rmd&lt;/code&gt;文件，写上自己的内容，&lt;code&gt;knit&lt;/code&gt;，pdf就生成了。生活从未如此简单与快乐。告别Micro$oft，你会更轻松。&lt;/li&gt;
