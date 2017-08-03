@@ -55,17 +55,18 @@ $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
 &lt;li&gt;$D_{ij}$ &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;爲小行列式&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;(1) 之前舉過的例子再拿來試試看：
-$$X=\left(
+&lt;p&gt;(1) 之前舉過的例子再拿來試試看：&lt;/p&gt;
+
+&lt;p&gt;$$X=\left(
 \begin{array}{c}
 1 &amp;amp; 2 &amp;amp; 1 \newline
 2 &amp;amp; 1 &amp;amp; 1 \newline
 1 &amp;amp; 1 &amp;amp; 2
 \end{array}
 \right)=\left(\begin{array}{c}
-x_{11} &amp;amp; x &amp;amp; x \newline
-x_2 &amp;amp; x &amp;amp; x \newline
-x &amp;amp; x &amp;amp; x
+x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline
+x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline
+x_{31} &amp;amp; x_{32} &amp;amp; x_{33}
 \end{array}\right)$$&lt;/p&gt;
 
 &lt;p&gt;$x_{ij}$&lt;/p&gt;
