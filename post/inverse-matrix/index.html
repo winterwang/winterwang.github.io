@@ -298,6 +298,138 @@ x_{31} &amp; x_{32} &amp; x_{33}
 1 &amp; 1
 \end{array}\right|=1$$</p>
 
+<p>$$X_{21}=(-1)^{2+1}\left|
+\begin{array}{c}
+2 &amp; 1 \newline
+1 &amp; 2
+\end{array}\right|=-3$$</p>
+
+<p>$$X_{22}=(-1)^{2+2}\left|
+\begin{array}{c}
+1 &amp; 1 \newline
+1 &amp; 2
+\end{array}\right|=1$$</p>
+
+<p>$$X_{23}=(-1)^{2+3}\left|
+\begin{array}{c}
+1 &amp; 2 \newline
+1 &amp; 1
+\end{array}\right|=1$$</p>
+
+<p>$$X_{31}=(-1)^{3+1}\left|
+\begin{array}{c}
+2 &amp; 1 \newline
+1 &amp; 1
+\end{array}\right|=1$$</p>
+
+<p>$$X_{32}=(-1)^{3+2}\left|
+\begin{array}{c}
+1 &amp; 1 \newline
+2 &amp; 1
+\end{array}\right|=1$$</p>
+
+<p>$$X_{33}=(-1)^{3+3}\left|
+\begin{array}{c}
+1 &amp; 2 \newline
+2 &amp; 1
+\end{array}\right|=-3$$</p>
+
+<p>因此餘因子矩陣爲：$adj(X)=\left(
+\begin{array}{c}
+1 &amp; -3 &amp; 1 \newline
+-3 &amp; 1 &amp; 1 \newline
+1 &amp; 1 &amp; -3
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+1 &amp; -3 &amp; 1 \newline
+-3 &amp; 1 &amp; 1 \newline
+1 &amp; 1 &amp; -3
+\end{array}
+\right)$</p>
+
+<p>我們看見這個餘因子矩陣是一個對稱矩陣，這是由於原矩陣 $X$ 本身就是一個對稱矩陣。另外，行列式爲：</p>
+
+<p>$$\begin{align}|X|&amp;=1\times X_{11}+2\times X_{12}+1\times X_{13}\newline&amp;=1\times1+2\times(-3)+1\times1\newline&amp;=-4\end{align}$$</p>
+
+<p>因此所求的逆矩陣爲：</p>
+
+<p>$$\begin{align}X^{-1}&amp;=\frac{1}{|X|}adj(X)\newline
+&amp;=\frac{1}{-4}\left(
+\begin{array}{c}
+1 &amp; -3 &amp; 1 \newline
+-3 &amp; 1 &amp; 1 \newline
+1 &amp; 1 &amp; -3
+\end{array}
+\right)\newline
+&amp;=\left(
+\begin{array}{c}
+-\frac{1}{4} &amp; \frac{3}{4} &amp; -\frac{1}{4} \newline
+\frac{3}{4} &amp; -\frac{1}{4} &amp; -\frac{1}{4} \newline
+-\frac{1}{4} &amp; -\frac{1}{4} &amp; \frac{3}{4}
+\end{array}
+\right)\end{align}$$</p>
+
+<p>(2) 試求矩陣 $A=\left(
+\begin{array}{c}
+1 &amp; 2 &amp; 1 \newline
+2 &amp; 3 &amp; 1 \newline
+1 &amp; 2 &amp; 2
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11} &amp; a_{12}  &amp; a_{13} \newline
+a_{21} &amp; a_{22}  &amp; a_{23} \newline
+a_{31} &amp; a_{32}  &amp; a_{33}
+\end{array}
+\right)$ 的逆矩陣 $A^{-1}$:</p>
+
+<p>$$\begin{array}
+=A_{11}=6-2=4, &amp; A_{12}=-(4-1)=-3, &amp; A_{13}=4-3=1 \newline
+A_{21}=-(4-2)=-2, &amp; A_{22}=2-1=1, &amp; A_{23}=-(2-2)=0 \newline
+A_{31}=2-3=-1, &amp; A_{32}=-(1-2)=1, &amp; A_{33}=3-4=-1
+\end{array}$$</p>
+
+<p>$$adj(A)=\left(
+\begin{array}{c}
+4 &amp; -3 &amp; 1 \newline
+-2 &amp; 1 &amp; 0 \newline
+-1 &amp; 1 &amp; -1
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+4 &amp; -2 &amp; -1 \newline
+-3 &amp; 1 &amp; 1 \newline
+1 &amp; 0 &amp; -1
+\end{array}
+\right)$$</p>
+
+<p>$$\begin{align}
+|A| &amp;=1\times A_{11}+2\times A_{12}+1\times A_{13} \newline
+    &amp;=1\times4+2\times(-3)+1\times1 \newline
+    &amp;=4-6+1 \newline
+    &amp;=-1
+\end{align}$$</p>
+
+<p>$$
+\therefore
+\begin{align}
+A^{-1} &amp;= \frac{1}{(-1)}\left(
+\begin{array}{c}
+4 &amp; -2 &amp; -1 \newline
+-3 &amp; 1 &amp; 1 \newline
+1 &amp; 0 &amp; -1
+\end{array}
+\right) \newline
+&amp;=\left(
+\begin{array}{c}
+-4 &amp; 2 &amp; 1 \newline
+3 &amp; -1 &amp; -1 \newline
+-1 &amp; 0 &amp; 1
+\end{array}
+\right)
+\end{align}$$</p>
+
     </div>
   </div>
 
