@@ -10,6 +10,199 @@
     <atom:link href="/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記 25</title>
+      <link>https://winterwang.github.io/post/cramers-formula/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中： &lt;span class=&#34;math inline&#34;&gt;\(|X_j|\)&lt;/span&gt; 爲矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列替換爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 以後的矩陣的行列式。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
+\begin{array}{ll}
+a_1+2a_2+a_3  = 2\\
+2a_1+a_2+a_3  = 3\\
+a_1+a_2+2a_3  = 3
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \\
+2 &amp;amp; 1 &amp;amp; 1 \\
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3 \\
+\end{array}
+\right), \underline{y}=\left(
+\begin{array}{c}
+2 \\
+3 \\
+3 \\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(|X|=-4\)&lt;/span&gt; &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;(三次行列式的計算)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第一列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則: &lt;span class=&#34;math display&#34;&gt;\[|X_1|=\begin{vmatrix}
+2 &amp;amp; 2 &amp;amp;  1\\
+3 &amp;amp; 1 &amp;amp;  1\\
+3 &amp;amp; 1 &amp;amp;  2\\
+\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第二列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_2|=\begin{vmatrix}
+1 &amp;amp; 2 &amp;amp;  1\\
+2 &amp;amp; 3 &amp;amp;  1\\
+1 &amp;amp; 3 &amp;amp;  2\\
+\end{vmatrix}=0\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第三列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_3|=\begin{vmatrix}
+1 &amp;amp; 2 &amp;amp;  2\\
+2 &amp;amp; 1 &amp;amp;  3\\
+1 &amp;amp; 1 &amp;amp;  3\\
+\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore a_1=\frac{|X_1|}{|X|}=1, \\
+a_2=\frac{|X_2|}{|X|}=0, \\
+a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 24</title>
+      <link>https://winterwang.github.io/post/inverse-matrix-method/</link>
+      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣法解連立一次方程式&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;時(&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;)，給 &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 等式兩邊同時乘以 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;，可以得到 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。由此方法可以得到 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
+\begin{array}{ll}
+a_1+2a_2+a_3  = 2\\
+2a_1+a_2+a_3  = 3\\
+a_1+a_2+2a_3  = 3
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;元連立方程式可以寫作&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;，其中 &lt;span class=&#34;math display&#34;&gt;\[X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \\
+2 &amp;amp; 1 &amp;amp; 1 \\
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3 \\
+\end{array}
+\right), \underline{y}=\left(
+\begin{array}{c}
+2 \\
+3 \\
+3 \\
+\end{array}
+\right)\]&lt;/span&gt; 之前我們已經用&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行的基本變形法&lt;/a&gt;和&lt;a href=&#34;https://winterwang.github.io/post/inverse-matrix/&#34;&gt;逆矩陣法&lt;/a&gt;分別計算過了 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt; ： &lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
+-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\underline{a} &amp;amp; =X^{-1}\underline{y} \\
+&amp;amp; =\left(\begin{array}{c}
+-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
+\end{array}\right)\left(
+\begin{array}{c}
+2 \\
+3 \\
+3 \\
+\end{array}
+\right)\\
+&amp;amp;=\left(
+\begin{array}{c}
+-1/4\times2+3/4\times3-1/4\times3 \\
+3/4\times1+(-1/4)\times3-1/4\times3 \\
+-1/4\times2-1/4\times3+3/4\times3 \\
+\end{array}
+\right) \\
+&amp;amp; = \left(
+\begin{array}{c}
+1 \\
+0 \\
+1 \\
+\end{array}
+\right)
+\end{align} \]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 23</title>
+      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可以看成是利用：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;表達為： &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (coefficient matrix)&lt;/a&gt;。如果將 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 加入 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的最後一列，寫成下面的形式: &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
+\begin{array}{c}
+x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}  &amp;amp; y_1\\
+x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}  &amp;amp; y_2\\
+\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots  &amp;amp; \vdots\\
+x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麽這樣的矩陣 &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 被稱作是擴大&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (augmented coefficient matrix)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在多元變量分析時，通常出現的情況是， &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 為已知 (觀測收集得來的數據)，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 為未知。&lt;/p&gt;
+&lt;p&gt;一般情況下， &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解答方法就是(1)&lt;a href=&#34;https://winterwang.github.io/post/inverse-matrix/&#34;&gt;使用逆矩陣&lt;/a&gt;，(2)克萊姆法則法，(3)&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行的基本變形法&lt;/a&gt; 三種手法。但是，前兩種手法只適用於 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是正方形矩陣且同時是&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;。另外， &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 中間加上逗號的寫法 &lt;span class=&#34;math inline&#34;&gt;\((X,\underline{y})\)&lt;/span&gt; 也表達相同含義。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
       <link>https://winterwang.github.io/post/2017-07-07/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
@@ -125,7 +318,7 @@
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
 -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
--1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
 \end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -951,358 +1144,6 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)\)&lt;/span&gt;， 則有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_{\underline{a}}=\frac{1}{\sqrt{a_1^2+a_2^2+a_3^2}}\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{b}=\left( \begin{array}{c} -2\\ 1\\ 2 \end{array} \right)\)&lt;/span&gt;，則有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_{\underline{a}}=\frac{1}{\sqrt{(-2)^2+1^2+2^2}}\left( \begin{array}{c} -2\\ 1\\ 2 \end{array} \right)=\left( \begin{array}{c} -\frac{2}{3}\\ \frac{1}{3}\\ \frac{2}{3} \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記9</title>
-      <link>https://winterwang.github.io/post/2017-02-18/</link>
-      <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-18/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;特殊向量&lt;/h2&gt;
-&lt;div id=&#34;-zero-vector-null-vector&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;零向量 (zero vector, null vector)&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;全部的成分均爲&lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;的向量，我們稱之爲&lt;strong&gt;零向量(zero vector, null vector)&lt;/strong&gt;, 寫作： &lt;span class=&#34;math inline&#34;&gt;\(\underline{0}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;注意與&lt;strong&gt;標量(scalar)&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 相區分。&lt;/li&gt;
-&lt;li&gt;如果想要加注零向量的維度，我們可以在右下角加上 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;：&lt;span class=&#34;math inline&#34;&gt;\(\underline{0}_n\)&lt;/span&gt; ，意爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 維度的零向量。&lt;/li&gt;
-&lt;li&gt;不是零向量的向量又被叫做，&lt;strong&gt;非零向量(non-zero vector, non-null vector)&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;例如： 列向量：&lt;span class=&#34;math inline&#34;&gt;\(\underline{0}_3=\left( \begin{array}{c} 0\\ 0\\ 0\\ \end{array} \right)\)&lt;/span&gt;， 行向量：&lt;span class=&#34;math inline&#34;&gt;\(\underline{0}_3^t=(0,0,0)\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-vector-with-all-elements-1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 向量 (vector with all elements 1)&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;當一個向量的全部成分都是數字 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;，我們稱這個向量爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 向量。 &lt;span class=&#34;math inline&#34;&gt;\(\underline{1}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;這裏也需要注意與&lt;strong&gt;標量&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 相區分。&lt;/li&gt;
-&lt;li&gt;如果想要加注&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;向量的維度，我們可以在右下角加上 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;：&lt;span class=&#34;math inline&#34;&gt;\(\underline{1}_n\)&lt;/span&gt; ，意爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 維度的&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;向量。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;例如：列向量：&lt;span class=&#34;math inline&#34;&gt;\(\underline{1}_4=\left( \begin{array}{c} 1\\ 1\\ 1\\ 1 \end{array} \right)\)&lt;/span&gt;， 行向量：&lt;span class=&#34;math inline&#34;&gt;\(\underline{1}_4^t=(1,1,1,1)\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-i-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 基本向量&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (fundamental vector)  &lt;/strong&gt;&lt;/span&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 維度的向量，假如它的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 個成分是自然數 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;，其他的成分全部都是 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;， 我們稱這樣的向量爲&lt;strong&gt;第&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(\textbf{i}\)&lt;/span&gt; &lt;strong&gt;基本向量 (fundamental vector)&lt;/strong&gt;。寫作 &lt;span class=&#34;math inline&#34;&gt;\(\underline{\smash{e}}_i\)&lt;/span&gt;。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;平時我們較少用到一個單獨的基本向量。大多情況下我們用的是由 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個單獨向量組成的一組向量。這個類型的向量與坐標軸的關系緊密。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如：維度爲4的第 &lt;span class=&#34;math inline&#34;&gt;\(1\sim4\)&lt;/span&gt; 基本向量：&lt;span class=&#34;math inline&#34;&gt;\(\underline{e}_1=\left( \begin{array}{c} 1\\ 0\\ 0\\ 0 \end{array} \right), \; \underline{e}_2=\left( \begin{array}{c} 0\\ 1\\ 0\\ 0 \end{array} \right), \; \underline{e}_3=\left( \begin{array}{c} 0\\ 0\\ 1\\ 0 \end{array} \right), \; \underline{e}_4=\left( \begin{array}{c} 0\\ 0\\ 0\\ 1 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-unit-vector&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;單位向量 (unit vector)&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 2  (unit vector)  &lt;/strong&gt;&lt;/span&gt;求向量的各個成分平方和的正平方根，當結果爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 時，這個向量被稱作&lt;strong&gt;單位向量(unit vector)&lt;/strong&gt;。寫作： &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}\)&lt;/span&gt;。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;例如： 因爲 &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{(\frac{2}{3})^2+(-\frac{1}{3})^2+(\frac{2}{3})^2}=1\)&lt;/span&gt;，所以我們稱向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{e}=\left( \begin{array}{c} \frac{2}{3}\\ -\frac{1}{3}\\ \frac{2}{3}\\ \end{array} \right)\)&lt;/span&gt; 爲&lt;strong&gt;單位向量&lt;/strong&gt;。另外，&lt;span class=&#34;math inline&#34;&gt;\((\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}},0)^t, \; (\frac{2}{\sqrt{6}},\frac{1}{\sqrt{6}},-\frac{1}{\sqrt{6}})^t\)&lt;/span&gt;，以及前一項的&lt;strong&gt;第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 基本向量&lt;/strong&gt;，都是單位向量。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量的計算，與相等&lt;/h2&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;向量的和與差&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-3&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 3  (vectorplus)  &lt;/strong&gt;&lt;/span&gt;類型(type)/成分，維度相同的向量之間的加減運算定義爲：相對應的成分之間的和或差。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_n \end{array} \right), \; \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ \vdots\\ b_n \end{array} \right)\)&lt;/span&gt;，則有： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\pm\underline{b}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_n \end{array} \right)\pm\left( \begin{array}{c} b_1\\ b_2\\ \vdots\\ b_n \end{array} \right)=\left( \begin{array}{c} a_1 \pm b_1\\ a_2 \pm b_2\\ \vdots\\ a_n \pm b_n \end{array} \right)\)&lt;/span&gt; &lt;strong&gt;複号同順&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}= (a_1,a_2,\cdots,a_n), \; \underline{b} = (b_1,b_2,\cdots,b_n)\)&lt;/span&gt;，則有： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\pm\underline{b}=(a_1,a_2,\cdots,a_n)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(b_1,b_2,\cdots,b_n)\\ \;\;\;\;\;\;\;\;\;\;=(a_1 \pm b_1, a_2 \pm b_2, \cdots, a_n \pm b_n)\)&lt;/span&gt; &lt;br&gt;&lt;strong&gt;複号同順&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;練習&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} 6\\ 7\\ 8\\ \end{array} \right),\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{b}=\left( \begin{array}{c} 1\\ 3\\ 5\\ \end{array} \right)\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}+\underline{b} =\left( \begin{array}{c} 6+1\\ 7+3\\ 8+5\\ \end{array} \right)=\left( \begin{array}{c} 7\\ 10\\ 13\\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}-\underline{b}=\left( \begin{array}{c} 6-1\\ 7-3\\ 8-5\\ \end{array} \right)=\left( \begin{array}{c} 5\\ 4\\ 3\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{c}=(6,0,9), \underline{d}=(7,-3,2)\)&lt;/span&gt; 時，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{c}+\underline{d}=(6+7,0-3,9+2)=(13,-3,11)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{c}-\underline{d}=(6-7,0-(-3),9-2)=(-1,3,7)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;scalar-multiplication&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;向量的標量乘法(scalar multiplication)&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-4&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 4  (scalar multiplication)  &lt;/strong&gt;&lt;/span&gt;向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 的所有成分同時乘以標量 &lt;span class=&#34;math inline&#34;&gt;\((k)\)&lt;/span&gt; 以後的向量，我們稱爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 的標量 &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; 倍。寫作： &lt;span class=&#34;math inline&#34;&gt;\(k\underline{a}\)&lt;/span&gt;。特別地，當 &lt;span class=&#34;math inline&#34;&gt;\(k=1\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(1\underline{a}=\underline{a}\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(k=-1\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\((-1)\underline{a}=-\underline{a}\)&lt;/span&gt;。另外 &lt;span class=&#34;math inline&#34;&gt;\(k=0\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(0\underline{a}=\underline{0}\)&lt;/span&gt;。注意此時&lt;span class=&#34;math inline&#34;&gt;\(\underline{0}\)&lt;/span&gt;是與&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;同維度的零向量。不可寫作標量的 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。 &lt;span class=&#34;math display&#34;&gt;\[k\underline{a}=k\left(
-\begin{array}{c}
-a_1\\
-a_2\\
-\vdots\\
-a_n
-\end{array}
-\right)=\left(
-\begin{array}{c}
-ka_1\\
-ka_2\\
-\vdots\\
-ka_n
-\end{array}
-\right), \\k\underline{a}=k(a_1,a_2,\cdots,a_n)=(ka_1,ka_2,\cdots,ka_n)\]&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;練習&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(k=5, l=\frac{1}{9}, \underline{a}=\left( \begin{array}{c} 3\\ 2\\ -7\\ \end{array} \right)\)&lt;/span&gt; 時，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(k\underline{a}=5\left( \begin{array}{c} 3\\ 2\\ -7\\ \end{array} \right)=\left( \begin{array}{c} 5\times3\\ 5\times2\\ 5\times(-7)\\ \end{array} \right)=\left( \begin{array}{c} 15\\ 10\\ -35\\ \end{array} \right)\)&lt;/span&gt;, &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(l\underline{a}=\frac{1}{9}\left( \begin{array}{c} 3\\ 2\\ -7\\ \end{array} \right)=\left( \begin{array}{c} \frac{1}{9}\times3\\ \frac{1}{9}\times2\\ \frac{1}{9}\times(-7)\\ \end{array} \right)=\left( \begin{array}{c} \frac{1}{3}\\ \frac{2}{9}\\ -\frac{7}{9}\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} 3\\ -2\\ 4\\ \end{array} \right), \underline{b}=\left( \begin{array}{c} 1\\ 1\\ -3\\ \end{array} \right), \underline{c}=\left( \begin{array}{c} 0\\ 5\\ 2\\ \end{array} \right)\)&lt;/span&gt; 時，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(2\underline{a}-\underline{b}+3\underline{c}=\left( \begin{array}{c} 2\times3\\ 2\times(-2)\\ 2\times4\\ \end{array} \right)-\left( \begin{array}{c} 1\\ 1\\ -3\\ \end{array} \right)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+\left( \begin{array}{c} 3\times0\\ 3\times5\\ 3\times2\\ \end{array} \right)=\left( \begin{array}{c} 6-1+0\\ -4-1+15\\ 8-(-3)+6\\ \end{array} \right)=\left( \begin{array}{c} 5\\ 10\\ 17\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;-equal&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;向量相等 equal&lt;/h4&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-5&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 5  (vectors equal)  &lt;/strong&gt;&lt;/span&gt;類型(type)/成分，維度相同的向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}, \underline{b}\)&lt;/span&gt;，其對應成分完全一致，我們就稱 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\underline{b}\)&lt;/span&gt;，此時有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}-\underline{b}=\underline{0}\)&lt;/span&gt; &lt;strong&gt;零向量&lt;/strong&gt;。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;練習：&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3\\ \end{array} \right)\)&lt;/span&gt; 如果相等，那麼 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\underline{b}\)&lt;/span&gt;，&lt;br&gt;即：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} a_1 = b_1 \\ a_2 = b_2 \\ a_3 = b_3 \end{array} \right. \end{align}\)&lt;/span&gt; 等價於：&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}-\underline{b}=0\)&lt;/span&gt;，或者&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} a_1 - b_1 =0\\ a_2 - b_2 =0\\ a_3 - b_3 =0 \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;向量等式：&lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} a_{11}x_1+a_{12}x_2+a_{13}x_3\\ a_{21}x_1+a_{22}x_2+a_{23}x_3\\ a_{31}x_1+a_{32}x_2+a_{33}x_3\\ \end{array} \right)=\left( \begin{array}{c} b_1\\ b_2\\ b_3\\ \end{array} \right)\)&lt;/span&gt; 等價於三個等式的連立方程：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} a_{11}x_1+a_{12}x_2+a_{13}x_3= b_1\\ a_{21}x_1+a_{22}x_2+a_{23}x_3= b_2\\ a_{31}x_1+a_{32}x_2+a_{33}x_3= b_3 \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;求滿足 &lt;span class=&#34;math inline&#34;&gt;\(5\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)+\left( \begin{array}{c} 2\\ 5\\ -1\\ \end{array} \right)=\left( \begin{array}{c} 12\\ 25\\ 29\\ \end{array} \right)\)&lt;/span&gt; 的向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt;。&lt;br&gt; 解：&lt;span class=&#34;math inline&#34;&gt;\(5\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)=\left( \begin{array}{c} 12\\ 25\\ 29\\ \end{array} \right)-\left( \begin{array}{c} 2\\ 5\\ -1\\ \end{array} \right)=\left( \begin{array}{c} 10\\ 20\\ 30\\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; 因此，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)=\left( \begin{array}{c} 2\\ 4\\ 6\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記8</title>
-      <link>https://winterwang.github.io/post/2017-02-17/</link>
-      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-17/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-vector&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量 vector&lt;/h2&gt;
-&lt;div id=&#34;-column-vector&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;列向量 column vector&lt;/h3&gt;
-&lt;p&gt;在等號的右側，將數字寫成一列，左右用圓括號或者方括號包含在內的形式，被叫做列向量(column vector)：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right), \;\; \textbf{a}=\left[ \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right]\)&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;我們接下來將會繼續定義，向量的加減法，標量乘法(scalar multiplication)。把上述的向量用一個文字表示的時候，通常會記爲下劃線 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;，或者是加粗的小寫字母： &lt;span class=&#34;math inline&#34;&gt;\(\bf{a}\)&lt;/span&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;構成向量的各個數字，被命名爲&lt;strong&gt;成分(component, element, entry)&lt;/strong&gt;，從上往下第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 個成分稱爲第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 成分。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;成分的個數爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;，就被稱爲這個向量具有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個&lt;strong&gt;維度(次元，dimension)&lt;/strong&gt;，或者說這個向量的維度爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的&lt;strong&gt;型(size, order)&lt;/strong&gt;,或者 &lt;strong&gt;類型(type)&lt;/strong&gt; 一致。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;成分只有一個的向量，被特別稱爲&lt;strong&gt;標量(scalar)&lt;/strong&gt;，原則上不加括號。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲&lt;strong&gt;成分表示&lt;/strong&gt;。在多元變量分析中，我們說到向量，多默認指的就是列向量。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)&lt;/span&gt;&lt;br&gt;今後我們都用字母帶下劃線，圓括號包含數字的方式表示向量。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{c}=\left( \begin{array}{c} \sin t+\cos t\\ \cos t+\tan t-2\\ \tan t + \sin t\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; 爲 &lt;span class=&#34;math inline&#34;&gt;\(a_1,a_2,a_3\)&lt;/span&gt; 的函數時，寫作 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)\)&lt;/span&gt;。 以&lt;strong&gt;三個未知數的偏微分&lt;/strong&gt;爲成分的向量(梯度向量，gradient vector)，寫成下面等式左邊的形式。可以簡略寫作: &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt;。&lt;span class=&#34;math inline&#34;&gt;\(\nabla\)&lt;/span&gt;讀作&lt;code&gt;nabla&lt;/code&gt;。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} \frac{\partial F}{\partial a_1}\\ \frac{\partial F}{\partial a_2}\\ \frac{\partial F}{\partial a_3}\\ \end{array} \right)=\frac{\partial F}{\partial \underline{a}}=\nabla_{\underline{a}}F\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-row-vector&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;橫向量(行向量) row vector&lt;/h2&gt;
-&lt;p&gt;在等號的右側，將數字寫成一行，左右用圓括號或者方括號包含在內的形式，被叫做橫向量(row vector):&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=(a_1,a_2,\cdots,a_j,\cdots,a_n), \; \textbf{a}=[a_1,a_2,\cdots,a_j,\cdots,a_n]\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;成分，維度，類型等的定義與列向量相同。另外注意，維度相同，但是一個是橫向量，一個是列向量的話，這兩個向量是不同類型的。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=(x_1,x_2,x_3)\)&lt;/span&gt;&lt;br&gt; 有時也可以不用逗號分隔成分。 寫作 &lt;span class=&#34;math inline&#34;&gt;\((x_1 \; x_2 \;x_3)\)&lt;/span&gt;。下同。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\frac{\partial F}{\partial x_1},\frac{\partial F}{\partial x_2},\frac{\partial F}{\partial x_3})=\frac{\partial F}{\partial \underline{x}}=\nabla_{\underline{x}F}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{u}=(\sin\theta\cos\phi, \sin\theta\cos\theta, \cos\theta)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-vector-transpose&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量的轉置 (vector transpose)&lt;/h2&gt;
-&lt;p&gt;將列向量的每個成分，按照從上到下的順序，一字橫着排開寫成橫向量。這個向量稱爲原來列向量的轉置向量(transposed vector)。反之亦然。&lt;/p&gt;
-&lt;p&gt;向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 的轉置向量，可以標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t,\;\underline{a}^\prime,\;^t\underline{a},\;\underline{a}^T, \;^T\underline{a}\)&lt;/span&gt; 各種形式。今後統一用 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t\)&lt;/span&gt;。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt; 的轉置向量我們會記爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)^t=(a_1,a_2,a_3)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=(x_1.x_2,x_3)\)&lt;/span&gt; 的轉置向量我們會記爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^t=(x_1.x_2,x_3)^t=\left( \begin{array}{c} x_1\\ x_2\\ x_3\\ \end{array} \right)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記7</title>
-      <link>https://winterwang.github.io/post/2017-02-16/</link>
-      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-16/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;分解平方和 1&lt;/h2&gt;
-&lt;p&gt;樣本量均爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的兩變量 &lt;span class=&#34;math inline&#34;&gt;\(z, \hat{z}\)&lt;/span&gt; 如下表，已知這兩個變量滿足條件：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\bar{z}=\frac{1}{n}\sum\limits_{i=1}^nz_i=\frac{1}{n}\sum\limits_{i=1}^n\hat{z}_i=\bar{\hat{z}},\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)&lt;/span&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;個体の番号&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(\hat{z}\)&lt;/span&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_1\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_2\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_2\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_i\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_i\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_n\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat{z}_n\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;此時我們有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;全平方和&lt;/strong&gt;(全変動，總平方和，總變動， &lt;strong&gt;Total sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_T=(z_i-\bar{z})^2+(z_2-\bar{z})^2+\cdots+(z_n-\bar{z})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;回歸平方和&lt;/strong&gt;(回歸變動，&lt;strong&gt;Regression sum of Squares&lt;/strong&gt;)&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_R=(\hat{z_1}-\bar{\hat{z}})^2+(\hat{z_2}-\bar{\hat{z}})^2+\cdots+(\hat{z_n}-\bar{\hat{z}})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(\hat{z_i}-\bar{\hat{z}})^2=\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;殘差平方和&lt;/strong&gt;(誤差平方和，殘差變動，誤差變動，&lt;strong&gt;residual sum of Squares&lt;/strong&gt;)&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;上面三個平方和之間，有如下的關系：
-&lt;span class=&#34;math display&#34; id=&#34;eq:Sumofsquares&#34;&gt;\[\begin{equation}
-  S_T=S_R+S_e
-  \tag{1}
-  \end{equation}\]&lt;/span&gt;
-&lt;br&gt; 既：全平方和等於殘差平方和與回歸平方和之和。&lt;a href=&#34;#eq:Sumofsquares&#34;&gt;(1)&lt;/a&gt;式被稱爲&lt;strong&gt;平方和的分解(decomposition of sum of squares)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;refeqsumofsquares&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;證明&lt;a href=&#34;#eq:Sumofsquares&#34;&gt;(1)&lt;/a&gt;式&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level5&#34;&gt;
-&lt;h5&gt;解：&lt;/h5&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{equation}
-\begin{split}
-S_T &amp;amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\
-&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})+(\hat{z_i}-\bar{z})\right\}^2\\
-&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})^2+(\hat{z_i}-\bar{z})^2+2(z_i-\hat{z_i})(\hat{z_i}-\bar{z})\right\}\\
-&amp;amp; = \sum\limits_{i=1}^n(z_i-\hat{z_i})^2+\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2 + 0\\
-&amp;amp; = S_e + S_R
-\end{split}
-\end{equation}
-\]&lt;/span&gt; 最後一步等式，利用了一開始給出的條件 &lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)&lt;/span&gt;&lt;br&gt; 這裏的平方和分解與&lt;strong&gt;回歸分析&lt;/strong&gt;有着緊密的聯系。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;分解平方和 2&lt;/h2&gt;
-&lt;p&gt;有樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的變量 &lt;span class=&#34;math inline&#34;&gt;\(z_1\)&lt;/span&gt; 與樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的變量 &lt;span class=&#34;math inline&#34;&gt;\(z_2\)&lt;/span&gt; 的數據如下表：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(z_1\)&lt;/span&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;変量 &lt;span class=&#34;math inline&#34;&gt;\(z_2\)&lt;/span&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{11}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{12}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{21}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{22}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{i1}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{i2}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{n1}\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{m2}\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;此時我們有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;樣本&lt;strong&gt;平均值&lt;/strong&gt;： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\bar{z_1}=\frac{1}{n}\sum\limits_{i=1}^nz_{i1}, \;\bar{z_2}=\frac{1}{m}\sum\limits_{i=1}^mz_{i2}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;樣本&lt;strong&gt;總平均值&lt;/strong&gt;： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\bar{z}=\frac{1}{n+m}(\sum\limits_{i=1}^nz_{i1}+\sum\limits_{i=1}^mz_{i2})\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;全&lt;strong&gt;平方和&lt;/strong&gt; (全変動，總平方和，總變動, &lt;strong&gt;Total sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_T=\left\{(z_{11}-\bar{z})^2+(z_{21}-\bar{z})^2+\cdots+(z_{n1}-\bar{z})^2\right\}\\  \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z})^2+(z_{22}-\bar{z})^2+\cdots+(z_{m2}-\bar{z})^2\right\}\\  \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;羣內平方和&lt;/strong&gt;(組內平方和，級內平方和，羣內變動，級內變動，變量內平方和，變量內變動，&lt;strong&gt;Within-groups sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_W=\left\{(z_{11}-\bar{z_1})^2+(z_{21}-\bar{z_1})^2+\cdots+(z_{n1}-\bar{z_1})^2\right\}\\  \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z_2})^2+(z_{22}-\bar{z_2})^2+\cdots+(z_{m2}-\bar{z_2})^2\right\}\\  \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z_2})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;羣間平方和&lt;/strong&gt;(組間平方和，級間平方和，羣間變動，級間變動，變量間平方和，變量間變動，&lt;strong&gt;Between-groups sum of Squares&lt;/strong&gt;)：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(S_B=\left\{(\bar{z_1}-\bar{z})^2+(\bar{z_1}-\bar{z})^2+\cdots+(\bar{z_1}-\bar{z})^2\right\}\\ \;\;\;\;\;\;\;\;+\left\{(\bar{z_2}-\bar{z})^2+(\bar{z_2}-\bar{z})^2+\cdots+(\bar{z_2}-\bar{z})^2\right\}\\ \;\;\;\;=\sum\limits_{i=1}^n(\bar{z_1}-\bar{z})^2+\sum\limits_{i=1}^m(\bar{z_2}-\bar{z})^2\\ \;\;\;\;=n(\bar{z_1}-\bar{z})^2+m(\bar{z_2}-\bar{z})^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;上面三個平方和之間有如下的關系：
-&lt;span class=&#34;math display&#34; id=&#34;eq:Sumofsqua&#34;&gt;\[\begin{equation}
-S_T=S_W+S_B
-\tag{2}
-\end{equation}\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;refeqsumofsqua&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;證明&lt;a href=&#34;#eq:Sumofsqua&#34;&gt;(2)&lt;/a&gt;式&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;解：&lt;/h5&gt;
-&lt;p&gt;注意利用：&lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})(\bar{z_1}-\bar{z})=(\bar{z_1}-\bar{z})\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\:=(\bar{z_1}-\bar{z})(\sum\limits_{i=1}^nz_{i1}-n\bar{z_1})\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\:=(\bar{z_1}-\bar{z})(n\bar{z_1}-n\bar{z_1})=0\)&lt;/span&gt;&lt;br&gt;因此&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{equation}
-\begin{split}
-S_T &amp;amp; = \sum_{i=1}^n(z_{i1}-\bar{z})^2+\sum_{i=1}^m(z_{i2}-\bar{z})^2\\
-&amp;amp; = \sum_{i=1}^n\left\{(z_{i1}-\bar{z_1})+(\bar{z_1}-\bar{z})\right\}^2\\
-&amp;amp;\;\;\;\;\; + \sum_{i=1}^m\left\{(z_{i2}-\bar{z_2})+(\bar{z_2}-\bar{z})\right\}^2\\
-&amp;amp; = \sum_{i=1}^n\left\{(z_{i1}-\bar{z_1})^2+2(z_{i1}-\bar{z_1})(\bar{z_1}-\bar{z})+(\bar{z_1}-\bar{z})^2\right\}\\
-&amp;amp;\;\;\;\;\; +\sum_{i=1}^m\left\{(z_{i2}-\bar{z_2})^2+2(z_{i2}-\bar{z_2})(\bar{z_2}-\bar{z})+(\bar{z_2}-\bar{z})^2\right\}\\
-&amp;amp; = \sum_{i=1}^n(z_{i1}-\bar{z_1})^2 + n(\bar{z_1}-\bar{z})^2\\
-&amp;amp;\;\;\;\;\; + \sum_{i=1}^m(z_{i2}-\bar{z_2})^2 + m(\bar{z_2}-\bar{z})^2\\
-&amp;amp; = S_W+S_B
-\end{split}
-\end{equation}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;變量的合成與加權&lt;/h2&gt;
-&lt;p&gt;我們說，將 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個變量 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_p\)&lt;/span&gt; 轉變成一次式：&lt;span class=&#34;math inline&#34;&gt;\(w_1x_1+w_2x_2+\cdots+w_px_p (=\hat{y})\)&lt;/span&gt; 的過程稱爲變量的合成 &lt;strong&gt;(linear combination of variables)&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; 被叫做&lt;strong&gt;合成變量&lt;/strong&gt;。系數 &lt;span class=&#34;math inline&#34;&gt;\(w_1,w_2,\cdots,w_p\)&lt;/span&gt; 被叫做&lt;strong&gt;權重 (weight)&lt;/strong&gt;。假如 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_p\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個科目的考試得分，那麼:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(w_1=w_2=\cdots=w_p=1\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; 意思就是 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個科目的總分&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(w_1=w_2=\cdots=w_p=\frac{1}{p}\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\hat{y}\)&lt;/span&gt; 意思就是 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 個科目的平均分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;多元變量分析中，我們實質上做的許多事就是思考如何合理的決定這個&lt;strong&gt;權重&lt;/strong&gt;。&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

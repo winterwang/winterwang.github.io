@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/inverse-matrix/">
+  <link rel="canonical" href="https://winterwang.github.io/post/linear-simultaneous-equation/">
 
   
 
-  <title>「統計解析のための線形代数」復習筆記22 | Be ambitious</title>
+  <title>「統計解析のための線形代数」復習筆記 23 | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,14 +160,14 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">「統計解析のための線形代数」復習筆記22</h1>
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記 23</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-08-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Thu, Aug 3, 2017
+    <time datetime="2017-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sat, Aug 5, 2017
     </time>
   </span>
 
@@ -193,7 +193,7 @@
     <a href="/tags/basic-mathematics">basic mathematics</a
     >, 
     
-    <a href="/tags/learning-notes">learning notes</a
+    <a href="/tags/linear-algebra">linear algebra</a
     >, 
     
     <a href="/tags/medical-statistics">Medical Statistics</a
@@ -209,35 +209,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2finverse-matrix%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2flinear-simultaneous-equation%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9822&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2finverse-matrix%2f"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2023&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flinear-simultaneous-equation%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2finverse-matrix%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9822"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flinear-simultaneous-equation%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2023"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2finverse-matrix%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9822"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2flinear-simultaneous-equation%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2023"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%9822&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2finverse-matrix%2f">
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2023&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2flinear-simultaneous-equation%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -250,185 +250,26 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
-$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$</p>
+      <!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
 
-<p>$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$</p>
-
-<p>其中:<br></p>
-
-<ul>
-<li>$adj(A)$ 爲<a href="https://winterwang.github.io/post/2017-03-15/" target="_blank">餘因子矩陣</a></li>
-<li>$A_{ij}$ 爲<a href="https://winterwang.github.io/post/2017-03-15/" target="_blank">餘因子</a></li>
-<li>$D_{ij}$ <a href="https://winterwang.github.io/post/2017-03-15/" target="_blank">爲小行列式</a></li>
-</ul>
-
-<p>(1) 之前舉過的例子再拿來試試看：</p>
-
-<p>$$X=\left(
+<!-- BLOGDOWN-BODY-BEFORE -->
+<!-- /BLOGDOWN-BODY-BEFORE -->
+<p>連立一次方程式： <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)</span></p>
+<p>可以看成是利用：</p>
+<p><span class="math inline">\(X=\left( \begin{array}{c} x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1n} \\ x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n} \\ \vdots &amp; \vdots &amp; \cdots &amp; \vdots \\ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)</span></p>
+<p>表達為： <span class="math inline">\(X\underline{a}=\underline{y}\)</span></p>
+<p>其中 <span class="math inline">\(X\)</span> 為<a href="https://winterwang.github.io/post/2017-02-28/">係數矩陣 (coefficient matrix)</a>。如果將 <span class="math inline">\(\underline{y}\)</span> 加入 <span class="math inline">\(X\)</span> 的最後一列，寫成下面的形式: <span class="math display">\[(X \underline{y})=\left(
 \begin{array}{c}
-1 &amp; 2 &amp; 1 \newline
-2 &amp; 1 &amp; 1 \newline
-1 &amp; 1 &amp; 2
+x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1n}  &amp; y_1\\
+x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n}  &amp; y_2\\
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots  &amp; \vdots\\
+x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{nn} &amp; y_n
 \end{array}
-\right)=\left(\begin{array}{c}
-x_{11} &amp; x_{12} &amp; x_{13} \newline
-x_{21} &amp; x_{22} &amp; x_{23} \newline
-x_{31} &amp; x_{32} &amp; x_{33}
-\end{array}\right)$$
-<br></p>
-
-<p>元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：</p>
-
-<p>$$X_{11}=(-1)^{1+1}\left|
-\begin{array}{c}
-1 &amp; 1 \newline
-1 &amp; 2
-\end{array}\right|=1$$</p>
-
-<p>$$X_{12}=(-1)^{1+2}\left|
-\begin{array}{c}
-2 &amp; 1 \newline
-1 &amp; 2
-\end{array}\right|=-3$$</p>
-
-<p>$$X_{13}=(-1)^{1+3}\left|
-\begin{array}{c}
-2 &amp; 1 \newline
-1 &amp; 1
-\end{array}\right|=1$$</p>
-
-<p>$$X_{21}=(-1)^{2+1}\left|
-\begin{array}{c}
-2 &amp; 1 \newline
-1 &amp; 2
-\end{array}\right|=-3$$</p>
-
-<p>$$X_{22}=(-1)^{2+2}\left|
-\begin{array}{c}
-1 &amp; 1 \newline
-1 &amp; 2
-\end{array}\right|=1$$</p>
-
-<p>$$X_{23}=(-1)^{2+3}\left|
-\begin{array}{c}
-1 &amp; 2 \newline
-1 &amp; 1
-\end{array}\right|=1$$</p>
-
-<p>$$X_{31}=(-1)^{3+1}\left|
-\begin{array}{c}
-2 &amp; 1 \newline
-1 &amp; 1
-\end{array}\right|=1$$</p>
-
-<p>$$X_{32}=(-1)^{3+2}\left|
-\begin{array}{c}
-1 &amp; 1 \newline
-2 &amp; 1
-\end{array}\right|=1$$</p>
-
-<p>$$X_{33}=(-1)^{3+3}\left|
-\begin{array}{c}
-1 &amp; 2 \newline
-2 &amp; 1
-\end{array}\right|=-3$$</p>
-
-<p>因此餘因子矩陣爲：$adj(X)=\left(
-\begin{array}{c}
-1 &amp; -3 &amp; 1 \newline
--3 &amp; 1 &amp; 1 \newline
-1 &amp; 1 &amp; -3
-\end{array}
-\right)^t=\left(
-\begin{array}{c}
-1 &amp; -3 &amp; 1 \newline
--3 &amp; 1 &amp; 1 \newline
-1 &amp; 1 &amp; -3
-\end{array}
-\right)$</p>
-
-<p>我們看見這個餘因子矩陣是一個對稱矩陣，這是由於原矩陣 $X$ 本身就是一個對稱矩陣。另外，行列式爲：</p>
-
-<p>$$\begin{align}|X|&amp;=1\times X_{11}+2\times X_{12}+1\times X_{13}\newline&amp;=1\times1+2\times(-3)+1\times1\newline&amp;=-4\end{align}$$</p>
-
-<p>因此所求的逆矩陣爲：</p>
-
-<p>$$\begin{align}X^{-1}&amp;=\frac{1}{|X|}adj(X)\newline
-&amp;=\frac{1}{-4}\left(
-\begin{array}{c}
-1 &amp; -3 &amp; 1 \newline
--3 &amp; 1 &amp; 1 \newline
-1 &amp; 1 &amp; -3
-\end{array}
-\right)\newline
-&amp;=\left(
-\begin{array}{c}
--\frac{1}{4} &amp; \frac{3}{4} &amp; -\frac{1}{4} \newline
-\frac{3}{4} &amp; -\frac{1}{4} &amp; -\frac{1}{4} \newline
--\frac{1}{4} &amp; -\frac{1}{4} &amp; \frac{3}{4}
-\end{array}
-\right)\end{align}$$</p>
-
-<p>(2) 試求矩陣 $A=\left(
-\begin{array}{c}
-1 &amp; 2 &amp; 1 \newline
-2 &amp; 3 &amp; 1 \newline
-1 &amp; 2 &amp; 2
-\end{array}
-\right)=\left(
-\begin{array}{c}
-a_{11} &amp; a_{12}  &amp; a_{13} \newline
-a_{21} &amp; a_{22}  &amp; a_{23} \newline
-a_{31} &amp; a_{32}  &amp; a_{33}
-\end{array}
-\right)$ 的逆矩陣 $A^{-1}$:</p>
-
-<p>$$\begin{array}
-=A_{11}=6-2=4, &amp; A_{12}=-(4-1)=-3, &amp; A_{13}=4-3=1 \newline
-A_{21}=-(4-2)=-2, &amp; A_{22}=2-1=1, &amp; A_{23}=-(2-2)=0 \newline
-A_{31}=2-3=-1, &amp; A_{32}=-(1-2)=1, &amp; A_{33}=3-4=-1
-\end{array}$$</p>
-
-<p>$$adj(A)=\left(
-\begin{array}{c}
-4 &amp; -3 &amp; 1 \newline
--2 &amp; 1 &amp; 0 \newline
--1 &amp; 1 &amp; -1
-\end{array}
-\right)^t=\left(
-\begin{array}{c}
-4 &amp; -2 &amp; -1 \newline
--3 &amp; 1 &amp; 1 \newline
-1 &amp; 0 &amp; -1
-\end{array}
-\right)$$</p>
-
-<p>$$\begin{align}
-|A| &amp;=1\times A_{11}+2\times A_{12}+1\times A_{13} \newline
-    &amp;=1\times4+2\times(-3)+1\times1 \newline
-    &amp;=4-6+1 \newline
-    &amp;=-1
-\end{align}$$</p>
-
-<p>$$
-\therefore
-\begin{align}
-A^{-1} &amp;= \frac{1}{(-1)}\left(
-\begin{array}{c}
-4 &amp; -2 &amp; -1 \newline
--3 &amp; 1 &amp; 1 \newline
-1 &amp; 0 &amp; -1
-\end{array}
-\right) \newline
-&amp;=\left(
-\begin{array}{c}
--4 &amp; 2 &amp; 1 \newline
-3 &amp; -1 &amp; -1 \newline
--1 &amp; 0 &amp; 1
-\end{array}
-\right)
-\end{align}$$</p>
+\right)\]</span></p>
+<p>那麽這樣的矩陣 <span class="math inline">\((X \underline{y})\)</span> 被稱作是擴大<a href="https://winterwang.github.io/post/2017-02-28/">係數矩陣 (augmented coefficient matrix)</a></p>
+<p>在多元變量分析時，通常出現的情況是， <span class="math inline">\(X\)</span> 和 <span class="math inline">\(\underline{y}\)</span> 為已知 (觀測收集得來的數據)，<span class="math inline">\(\underline{a}\)</span> 為未知。</p>
+<p>一般情況下， <span class="math inline">\(X\underline{a}=\underline{y}\)</span> 的解答方法就是(1)<a href="https://winterwang.github.io/post/inverse-matrix/">使用逆矩陣</a>，(2)克萊姆法則法，(3)<a href="https://winterwang.github.io/post/2017-07-07/">行的基本變形法</a> 三種手法。但是，前兩種手法只適用於 <span class="math inline">\(X\)</span> 是正方形矩陣且同時是<a href="https://winterwang.github.io/post/2017-07-06/">正則矩陣</a>。另外， <span class="math inline">\((X \underline{y})\)</span> 中間加上逗號的寫法 <span class="math inline">\((X,\underline{y})\)</span> 也表達相同含義。</p>
 
     </div>
   </div>
@@ -439,12 +280,12 @@ A^{-1} &amp;= \frac{1}{(-1)}\left(
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/visa-application/"><span
-      aria-hidden="true">&larr;</span> 大英帝國簽證申請</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/inverse-matrix/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記22</a></li>
     
 
     
-    <li class="next"><a href="https://winterwang.github.io/post/linear-simultaneous-equation/">「統計解析のための線形代数」復習筆記 23 <span
+    <li class="next"><a href="https://winterwang.github.io/post/inverse-matrix-method/">「統計解析のための線形代数」復習筆記 24 <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
