@@ -10,6 +10,146 @@
     <atom:link href="/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記 26</title>
+      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34; target=&#34;_blank&#34;&gt;擴大係數矩陣&lt;/a&gt; $(X \underline{y})$ 通過行的基本變形，轉化成爲 $(E \underline{y}^&lt;em&gt;)$ 的時候，寫在右側的 $\underline{y}^&lt;/em&gt;$ 就是所求的 $\underline{a}$。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;練習-解下列連立一次方程式&#34;&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+
+&lt;p&gt;$$\begin{align}
+\left{
+\begin{array}{ll}
+a_1+2a_2+a_3  = 2&lt;br /&gt;
+2a_1+a_2+a_3  = 3&lt;br /&gt;
+a_1+a_2+2a_3  = 3
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;解&#34;&gt;解&lt;/h4&gt;
+
+&lt;p&gt;此連立方程組的擴大係數矩陣爲：
+$$(X \underline{y})=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2&lt;br /&gt;
+2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3&lt;br /&gt;
+1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3
+\end{array}
+\right)$$
+下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34; target=&#34;_blank&#34;&gt;行變形&lt;/a&gt;：
+$$\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
+2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
+1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{rr}
+(1)&lt;br /&gt;
+(2)&lt;br /&gt;
+(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\left(\begin{array}{r}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
+0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)&lt;br /&gt;
+(2)=(2)-2\times(1)&lt;br /&gt;
+(3)=(3)-(1)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
+0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)=(1)+2\times(3)&lt;br /&gt;
+(2)=(2)+(3)&lt;br /&gt;
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)&lt;br /&gt;
+(2)=(2)\div(-4)&lt;br /&gt;
+(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)&lt;br /&gt;
+(2)&lt;br /&gt;
+(3)=(3)-(2)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1&lt;br /&gt;
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)=(1)+3\times(3)&lt;br /&gt;
+(2)&lt;br /&gt;
+(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 $\underline{a}$ 便是點線右側的向量。&lt;/p&gt;
+
+&lt;p&gt;$$\therefore \underline{a}=\left(
+\begin{array}{c}
+a_1 &lt;br /&gt;
+a_2 &lt;br /&gt;
+a_3 &lt;br /&gt;
+\end{array}
+\right)=\left(
+\begin{array}{c}
+1 &lt;br /&gt;
+0 &lt;br /&gt;
+1 &lt;br /&gt;
+\end{array}
+\right)$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記 25</title>
       <link>https://winterwang.github.io/post/cramers-formula/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>

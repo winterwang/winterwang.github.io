@@ -11,6 +11,146 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記 26</title>
+      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34; target=&#34;_blank&#34;&gt;擴大係數矩陣&lt;/a&gt; $(X \underline{y})$ 通過行的基本變形，轉化成爲 $(E \underline{y}^&lt;em&gt;)$ 的時候，寫在右側的 $\underline{y}^&lt;/em&gt;$ 就是所求的 $\underline{a}$。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;練習-解下列連立一次方程式&#34;&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+
+&lt;p&gt;$$\begin{align}
+\left{
+\begin{array}{ll}
+a_1+2a_2+a_3  = 2&lt;br /&gt;
+2a_1+a_2+a_3  = 3&lt;br /&gt;
+a_1+a_2+2a_3  = 3
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;解&#34;&gt;解&lt;/h4&gt;
+
+&lt;p&gt;此連立方程組的擴大係數矩陣爲：
+$$(X \underline{y})=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2&lt;br /&gt;
+2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3&lt;br /&gt;
+1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3
+\end{array}
+\right)$$
+下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34; target=&#34;_blank&#34;&gt;行變形&lt;/a&gt;：
+$$\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
+2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
+1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{rr}
+(1)&lt;br /&gt;
+(2)&lt;br /&gt;
+(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\left(\begin{array}{r}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
+0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)&lt;br /&gt;
+(2)=(2)-2\times(1)&lt;br /&gt;
+(3)=(3)-(1)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
+0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)=(1)+2\times(3)&lt;br /&gt;
+(2)=(2)+(3)&lt;br /&gt;
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)&lt;br /&gt;
+(2)=(2)\div(-4)&lt;br /&gt;
+(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)&lt;br /&gt;
+(2)&lt;br /&gt;
+(3)=(3)-(2)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1&lt;br /&gt;
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)=(1)+3\times(3)&lt;br /&gt;
+(2)&lt;br /&gt;
+(3)
+\end{array}
+\right.
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 $\underline{a}$ 便是點線右側的向量。&lt;/p&gt;
+
+&lt;p&gt;$$\therefore \underline{a}=\left(
+\begin{array}{c}
+a_1 &lt;br /&gt;
+a_2 &lt;br /&gt;
+a_3 &lt;br /&gt;
+\end{array}
+\right)=\left(
+\begin{array}{c}
+1 &lt;br /&gt;
+0 &lt;br /&gt;
+1 &lt;br /&gt;
+\end{array}
+\right)$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記 25</title>
       <link>https://winterwang.github.io/post/cramers-formula/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
@@ -1146,51 +1286,6 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
 &lt;li&gt;4次行列式：&lt;br&gt; 試求&lt;span class=&#34;math inline&#34;&gt;\(A=\left(  \begin{array}{} a_{11}&amp;amp; a_{12}&amp;amp; a_{13}&amp;amp; a_{14}\\ a_{21}&amp;amp; a_{22}&amp;amp; a_{23}&amp;amp; a_{24}\\ a_{31}&amp;amp; a_{32}&amp;amp; a_{33}&amp;amp; a_{34}\\ a_{41}&amp;amp; a_{42}&amp;amp; a_{43}&amp;amp; a_{44}  \end{array}  \right)\\  \;\;=\left(  \begin{array}{r} -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\ 4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\ 2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\ 2 &amp;amp; 1&amp;amp; 2&amp;amp; -3  \end{array}  \right)\)&lt;/span&gt; &lt;br&gt;的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt;：&lt;br&gt; 由於第2行有成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt; 我們以第二行展開行列式，因爲 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt;，所以 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}A_{23}=0\)&lt;/span&gt; 可以省略：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=a_{21}A_{21}+a_{22}A_{22}+a_{24}A_{24}\\  \;\;\;\;\:=a_{21}(-1)^{2+1}D_{21}+a_{22}(-1)^{2+2}D_{22}+a_{24}(-1)^{2+4}D_{24}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{21}=(-1)^{2+1}\begin{vmatrix}  a_{12} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{32} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{42} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  3 &amp;amp; 4 &amp;amp; 1\\  -3 &amp;amp; -4 &amp;amp; 2\\  1 &amp;amp; 2&amp;amp; -3\\  \end{vmatrix}=6\\  A_{22}=(-1)^{2+2}\begin{vmatrix}  a_{11} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{31} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{41} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=\begin{vmatrix}  -2 &amp;amp; 4 &amp;amp;1\\  2 &amp;amp; -4 &amp;amp;2\\  2 &amp;amp; 2 &amp;amp;-3\\  \end{vmatrix}=36\\  A_{24}=(-1)^{2+4}\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\  a_{41} &amp;amp; a_{42} &amp;amp; a_{43}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4\\  2 &amp;amp; -3 &amp;amp;-4\\  2 &amp;amp; 1 &amp;amp;2\\  \end{vmatrix}=0\\  \therefore |A|=4\times6+2\times36+5\times0=96\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;然而，&lt;strong&gt;4次以上的矩陣的行列式計算，沒有類似薩呂法則的計算方法。&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>绝知此事要躬行</title>
-      <link>https://winterwang.github.io/post/dictation2017-03-13/</link>
-      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/dictation2017-03-13/</guid>
-      <description>
-
-&lt;p&gt;&lt;audio src=&#34;https://winterwang.github.io/mp3/lifeonmars.mp3&#34; controls=&#34;controls&#34;&gt;
-Your browser does not support the audio element.
-你的瀏覽器不支持音頻播放。請使用chrome科學上網。
-&lt;/audio&gt;&lt;/p&gt;
-
-&lt;p&gt;听写于：2017-3-13 18:20 用时：24:46
-正确率：94% 错词：14个&lt;/p&gt;
-
-&lt;!--我的听写开始--&gt;
-
-&lt;p&gt;&lt;div id=&#34;my&#34; class=&#34;article_content&#34; &gt;&lt;div class=&#34;corner5&#34; style=&#34;margin-bottom: 20px;&#34;&gt;提示：&lt;span class=&#34;diff_off&#34;&gt;红色&lt;/span&gt;：错误单词，&lt;span class=&#34;diff_add&#34;&gt;绿色&lt;/span&gt;：补上正确单词，&lt;span class=&#34;diff_alert&#34;&gt;黄色&lt;/span&gt;：纠正大小写与标点&lt;/div&gt;
-&lt;p class=&#34;linetext&#34;&gt;In the early part of the last century, speculation about &lt;span class=&#34;diff_off&#34;&gt;ilfe&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;life&lt;/span&gt; on Mars was more florid, particularly by the American &lt;span class=&#34;diff_off&#34;&gt;astronaut&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;astronomer&lt;/span&gt; Percival Lowell. Through his telescope in Arizona, Lowell convinced himself he saw &lt;span class=&#34;diff_off&#34;&gt;swaths&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;sways&lt;/span&gt; of vegetation come and go with the seasons. Of course, he didn&amp;rsquo;t&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;what &#34;&gt;What &lt;/span&gt;he really saw &lt;span class=&#34;diff_off&#34;&gt;was&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;shifted&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;were&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;shifting&lt;/span&gt; areas of sand dunes. But he also believed he&amp;rsquo;d found evidence of &lt;span class=&#34;diff_add&#34;&gt;an&lt;/span&gt; advanced &lt;span class=&#34;diff_off&#34;&gt;civilization&lt;/span&gt;&lt;span class=&#34;diff_add&#34;&gt;civilisation&lt;/span&gt;. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;&lt;span class=&#34;diff_alert&#34;&gt;&amp;ldquo;&lt;/span&gt; The canals are of various &lt;span class=&#34;diff_off&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;diff_add&#34;&gt;lengths&lt;/span&gt;. Some stretch &lt;span class=&#34;diff_alert&#34; title=&#34;2500 &#34;&gt;2,500 &lt;/span&gt;miles from end to end. We are looking upon the &lt;span class=&#34;diff_off&#34;&gt;results&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;result&lt;/span&gt; of &lt;span class=&#34;diff_add&#34;&gt;the&lt;/span&gt; world of some sort of intelligent beings. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;&lt;span class=&#34;diff_alert&#34;&gt;&amp;ldquo;&lt;/span&gt; &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Lowell&amp;rsquo;s canals were just an optical illusion&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;The &#34;&gt;the &lt;/span&gt;&lt;span class=&#34;diff_off&#34;&gt;results&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;result&lt;/span&gt; of the imperfect image in his telescope and his &lt;span class=&#34;diff_alert&#34; title=&#34;overexcited&#34; &gt;over-excited&lt;/span&gt;  imagination. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;We got a better feeling for Mars as a life-friendly or unfriendly world&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;When &#34;&gt;when &lt;/span&gt;the first space probes visited in the 1960s and 70s&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;it &#34;&gt;It &lt;/span&gt;had a really thin atmosphere&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; and therefore hardly any shielding against radiation coming from space. It was a desert world with no liquid water on the surface&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; let alone canals. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;But there was evidence that water had in the distant past, float in great volumes&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; and &lt;span class=&#34;diff_add&#34;&gt;that&lt;/span&gt; it might still be there as ice &lt;span class=&#34;diff_off&#34;&gt;underground&lt;/span&gt;&lt;span class=&#34;diff_add&#34;&gt;under&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;ground&lt;/span&gt;. So even in 1972, scientists like NASA&amp;rsquo;s Gerald Soffen entertained the possibility of quite fancy organisms alive on the surface today.&lt;/p&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Words&lt;/em&gt; worth to be remembered:
-
-&lt;ul&gt;
-&lt;li&gt;speculation &lt;code&gt;[,spekjʊ&#39;leɪʃn]: n. 推测；eg:Every induction is a speculation. 所有归纳推理都是一种猜测。&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;florid &lt;code&gt;[&#39;flɒrɪd] adj. 绚丽的 eg: The senator gave a florid speech.议员作了一番词藻华美的演说。&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;dune &lt;code&gt;[djuːn] n. （由风吹积而成的）沙丘 eg: Large dunes make access to the beach difficult in places. 在有些地方大沙丘使得靠近海滩很难。&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;譯文&#34;&gt;譯文&lt;/h2&gt;
-
-&lt;p&gt;上个世纪初期，对于火星上存在生命这样的猜测有点言过其词，尤其是美国天文学家帕西瓦尔·罗威尔的猜测。通过他在亚利桑那州的望远镜，他确信自己看到了植物随着季节的变化而变化。显然，他并没有看到什么植物。他真正看到的其实是随风移动的沙丘。但是他相信自己找到了火星上存在先进文明的证据。&lt;/p&gt;
-
-&lt;p&gt;“火星上有不同长度的运河。有些绵延2500英里。我们把这看作是火星世界里存在某种智慧生命才有的结果。”&lt;/p&gt;
-
-&lt;p&gt;罗威尔所说的运河只不过是视觉幻影，因为望远镜里的影像并不完整，还有他的过度兴奋导致了空想。&lt;/p&gt;
-
-&lt;p&gt;在20世纪60年代到70年代，当第一批太空探测器着陆火星，对于火星能否适合生存我们有了更好的了解。它的大气层很薄，因此几乎不能屏蔽来自太空的辐射。它的地表没有水，是一片荒漠，更不要说有运河了。&lt;/p&gt;
-
-&lt;p&gt;但是有证据显示在遥远的过去，火星上有过水的存在，有过大量水的流动，也许这些水还以冰的形式存在地下。所以甚至在1972年，像NASA的杰拉德索芬这样的科学家们都认为如今在火星表面还有相当奇特的生命体存在的可能。&lt;/p&gt;
 </description>
     </item>
     

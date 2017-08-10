@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/cramers-formula/">
+  <link rel="canonical" href="https://winterwang.github.io/post/elementary-row-operations/">
 
   
 
-  <title>「統計解析のための線形代数」復習筆記 25 | Be ambitious</title>
+  <title>「統計解析のための線形代数」復習筆記 26 | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,14 +160,14 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">「統計解析のための線形代数」復習筆記 25</h1>
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記 26</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-08-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Wed, Aug 9, 2017
+    <time datetime="2017-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Aug 10, 2017
     </time>
   </span>
 
@@ -209,35 +209,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fcramers-formula%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2felementary-row-operations%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2025&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fcramers-formula%2f"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2026&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2felementary-row-operations%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fcramers-formula%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2025"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2felementary-row-operations%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2026"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fcramers-formula%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2025"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2felementary-row-operations%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2026"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2025&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fcramers-formula%2f">
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2026&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2felementary-row-operations%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -250,74 +250,137 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <!-- BLOGDOWN-HEAD -->
-<!-- /BLOGDOWN-HEAD -->
+      
 
-<!-- BLOGDOWN-BODY-BEFORE -->
-<!-- /BLOGDOWN-BODY-BEFORE -->
-<div id="-cramers-formula" class="section level3">
-<h3>克萊姆法則 Cramer’s Formula</h3>
-<p>當 <span class="math inline">\(X\)</span> 爲<a href="https://winterwang.github.io/post/2017-07-06/">正則矩陣</a>（<span class="math inline">\(|X|\neq0\)</span>）時 連立一次方程式：<span class="math inline">\(X\underline{a}=\underline{y}\)</span> 的解可以寫作：</p>
-<p><span class="math display">\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]</span></p>
-<p>其中： <span class="math inline">\(|X_j|\)</span> 爲矩陣 <span class="math inline">\(X\)</span> 的第 <span class="math inline">\(j\)</span> 列替換爲 <span class="math inline">\(\underline{y}\)</span> 以後的矩陣的行列式。</p>
+<p><a href="https://winterwang.github.io/post/linear-simultaneous-equation/" target="_blank">擴大係數矩陣</a> $(X \underline{y})$ 通過行的基本變形，轉化成爲 $(E \underline{y}^<em>)$ 的時候，寫在右側的 $\underline{y}^</em>$ 就是所求的 $\underline{a}$。</p>
+
 <hr />
-<div id="-" class="section level4">
-<h4>練習 解下列連立一次方程式</h4>
-<p><span class="math display">\[\begin{align}
-\left\{
+
+<h4 id="練習-解下列連立一次方程式">練習 解下列連立一次方程式</h4>
+
+<p>$$\begin{align}
+\left{
 \begin{array}{ll}
-a_1+2a_2+a_3  = 2\\
-2a_1+a_2+a_3  = 3\\
+a_1+2a_2+a_3  = 2<br />
+2a_1+a_2+a_3  = 3<br />
 a_1+a_2+2a_3  = 3
 \end{array}
 \right.
-\end{align}\]</span></p>
+\end{align}$$</p>
+
 <hr />
-</div>
-<div class="section level4">
-<h4>解</h4>
-<p><span class="math display">\[X=\left(
+
+<h4 id="解">解</h4>
+
+<p>此連立方程組的擴大係數矩陣爲：
+$$(X \underline{y})=\left(
 \begin{array}{c}
-1 &amp; 2 &amp; 1 \\
-2 &amp; 1 &amp; 1 \\
-1 &amp; 1 &amp; 2
+1 &amp; 2 &amp; 1 &amp; 2<br />
+2 &amp; 1 &amp; 1 &amp; 3<br />
+1 &amp; 1 &amp; 2 &amp; 3
 \end{array}
-\right), \underline{a}=\left(
+\right)$$
+下面開始<a href="https://winterwang.github.io/post/2017-07-07/" target="_blank">行變形</a>：
+$$\left(\begin{array}{c}
+1&amp; 2&amp; 1 &amp; \vdots &amp; 2<br />
+2&amp; 1&amp; 1 &amp; \vdots &amp; 3<br />
+1&amp; 1&amp; 2 &amp; \vdots &amp; 3<br />
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{rr}
+(1)<br />
+(2)<br />
+(3)
+\end{array}
+\right.
+\end{align}$$</p>
+
+<p>$$
+\left(\begin{array}{r}
+1&amp; 2&amp; 1 &amp; \vdots &amp; 2<br />
+0&amp; -3&amp; -1 &amp; \vdots &amp; -1<br />
+0&amp; -1&amp; 1 &amp; \vdots &amp; -1<br />
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)<br />
+(2)=(2)-2\times(1)<br />
+(3)=(3)-(1)
+\end{array}
+\right.
+\end{align}$$</p>
+
+<p>$$\left(\begin{array}{r}
+1&amp; 0&amp; 3 &amp; \vdots &amp; 4<br />
+0&amp; -4&amp; 0 &amp; \vdots &amp; 0<br />
+0&amp; 1&amp; -1 &amp; \vdots &amp; -1<br />
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)=(1)+2\times(3)<br />
+(2)=(2)+(3)<br />
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}$$</p>
+
+<p>$$\left(\begin{array}{r}
+1&amp; 0&amp; 3 &amp; \vdots &amp; 4<br />
+0&amp; 1&amp; 0 &amp; \vdots &amp; 0<br />
+0&amp; 1&amp; -1 &amp; \vdots &amp; -1<br />
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)<br />
+(2)=(2)\div(-4)<br />
+(3)
+\end{array}
+\right.
+\end{align}$$</p>
+
+<p>$$\left(\begin{array}{r}
+1&amp; 0&amp; 3 &amp; \vdots &amp; 4<br />
+0&amp; 1&amp; 0 &amp; \vdots &amp; 0<br />
+0&amp; 0&amp; -1 &amp; \vdots &amp; -1
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)<br />
+(2)<br />
+(3)=(3)-(2)
+\end{array}
+\right.
+\end{align}$$</p>
+
+<p>$$\left(\begin{array}{r}
+1&amp; 0&amp; 0 &amp; \vdots &amp; 1<br />
+0&amp; 1&amp; 0 &amp; \vdots &amp; 0<br />
+0&amp; 0&amp; 1 &amp; \vdots &amp; 1
+\end{array}\right) \begin{align}
+\left{
+\begin{array}{l}
+(1)=(1)+3\times(3)<br />
+(2)<br />
+(3)
+\end{array}
+\right.
+\end{align}$$</p>
+
+<p>至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 $\underline{a}$ 便是點線右側的向量。</p>
+
+<p>$$\therefore \underline{a}=\left(
 \begin{array}{c}
-a_1 \\
-a_2 \\
-a_3 \\
+a_1 <br />
+a_2 <br />
+a_3 <br />
 \end{array}
-\right), \underline{y}=\left(
+\right)=\left(
 \begin{array}{c}
-2 \\
-3 \\
-3 \\
+1 <br />
+0 <br />
+1 <br />
 \end{array}
-\right)\]</span></p>
-<p>其中 <span class="math inline">\(|X|=-4\)</span> <a href="https://winterwang.github.io/post/2017-03-15/">(三次行列式的計算)</a></p>
-<p><span class="math inline">\(X\)</span> 的第一列置換成 <span class="math inline">\(\underline{y}\)</span> 則: <span class="math display">\[|X_1|=\begin{vmatrix}
-2 &amp; 2 &amp;  1\\
-3 &amp; 1 &amp;  1\\
-3 &amp; 1 &amp;  2\\
-\end{vmatrix}=-4\]</span></p>
-<p><span class="math inline">\(X\)</span> 的第二列置換成 <span class="math inline">\(\underline{y}\)</span> 則:</p>
-<p><span class="math display">\[|X_2|=\begin{vmatrix}
-1 &amp; 2 &amp;  1\\
-2 &amp; 3 &amp;  1\\
-1 &amp; 3 &amp;  2\\
-\end{vmatrix}=0\]</span></p>
-<p><span class="math inline">\(X\)</span> 的第三列置換成 <span class="math inline">\(\underline{y}\)</span> 則:</p>
-<p><span class="math display">\[|X_3|=\begin{vmatrix}
-1 &amp; 2 &amp;  2\\
-2 &amp; 1 &amp;  3\\
-1 &amp; 1 &amp;  3\\
-\end{vmatrix}=-4\]</span></p>
-<p><span class="math display">\[\therefore a_1=\frac{|X_1|}{|X|}=1, \\
-a_2=\frac{|X_2|}{|X|}=0, \\
-a_3=\frac{|X_3|}{|X|}=1\]</span></p>
-</div>
-</div>
+\right)$$</p>
 
     </div>
   </div>
@@ -328,13 +391,10 @@ a_3=\frac{|X_3|}{|X|}=1\]</span></p>
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/inverse-matrix-method/"><span
-      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記 24</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/cramers-formula/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記 25</a></li>
     
 
-    
-    <li class="next"><a href="https://winterwang.github.io/post/elementary-row-operations/">「統計解析のための線形代数」復習筆記 26 <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
