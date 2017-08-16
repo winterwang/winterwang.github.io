@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="https://winterwang.github.io/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="https://winterwang.github.io/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://winterwang.github.io/post/homogeneouse-linear-equations/">
+
+  
+
+  <title>「統計解析のための線形代数」復習筆記 27 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">「統計解析のための線形代数」復習筆記 27</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-08-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Fri, Aug 11, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >, 
+    
+    <a href="/tags/medical-statistics">Medical Statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fhomogeneouse-linear-equations%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2027&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fhomogeneouse-linear-equations%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fhomogeneouse-linear-equations%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2027"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fhomogeneouse-linear-equations%2f&amp;title=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2027"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e3%80%8c%e7%b5%b1%e8%a8%88%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e7%b7%9a%e5%bd%a2%e4%bb%a3%e6%95%b0%e3%80%8d%e5%be%a9%e7%bf%92%e7%ad%86%e8%a8%98%2027&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fhomogeneouse-linear-equations%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p><span class="math display">\[X=\left(
+\begin{array}{c}
+x_{1} &amp; x_{12} &amp; \cdots &amp; x_{1n}\\
+x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n}\\
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots \\
+x_{n1}  &amp; x_{n2} &amp; \cdots &amp; x_{nn}
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{array}
+\right), \underline{0}=\left(
+\begin{array}{c}
+\underline{0}\\
+\underline{0}\\
+\vdots\\
+\underline{0}\\
+\end{array}
+\right)\]</span></p>
+<p>用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：</p>
+<p><span class="math display">\[X\underline{a}=\underline{0}\]</span></p>
+<p>即： <span class="math display">\[\begin{align}
+\left\{
+\begin{array}{ll}
+x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n  = 0\\
+x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n  = 0\\
+\cdots\\
+x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n  = 0\\
+\end{array}
+\right.
+\end{align}\]</span></p>
+<p>這樣的方程式與之前的不同，等號右邊全部都是 <span class="math inline">\(0\)</span>. 如果係數矩陣的行列式 <span class="math inline">\(|X|\)</span></p>
+<p><span class="math display">\[|X|=\begin{vmatrix}
+x_{1} &amp; x_{12} &amp; \cdots &amp; x_{1n}\\
+x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n}\\
+\vdots &amp; \vdots &amp; \cdots &amp; \vdots \\
+x_{n1}  &amp; x_{n2} &amp; \cdots &amp; x_{nn}
+\end{vmatrix}\neq0\]</span></p>
+<p>那麽這個連立方程式的解，我們通過<a href="https://winterwang.github.io/post/cramers-formula/">克萊姆法則</a>公式知道有且僅有 <span class="math inline">\(\underline{a}=\underline{0}\)</span>， 即 <span class="math inline">\(a_1=a_2=\cdots=a_n=0\)</span> (自明解, trivial solution)</p>
+<p>此外，如果此連立方程組有非自明解 (<span class="math inline">\(\underline{a}\neq0\)</span>) 那麽相應的， <span class="math inline">\(|X|=0\)</span>。多元變量分析時我們多關心的是非自明解。</p>
+<p><span class="diff_alert">重點記住：<br><span class="math inline">\(\underline{a}\neq0\)</span> 時， <span class="math inline">\(|X|=0\)</span>； <br><span class="math inline">\(\underline{a}=0\)</span> 時, <span class="math inline">\(|X|\neq0\)</span></span></p>
+<ol style="list-style-type: decimal">
+<li><p>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} a_1+2a_2 = 0\\ 2a_1+a_2 = 0\\ \end{array} \right. \end{align}\)</span> 的係數矩陣 <span class="math inline">\(\left( \begin{array}{c} 1 &amp; 2 \\ 2 &amp; 1 \\ \end{array} \right)\)</span> 的行列式 <span class="math inline">\(\begin{vmatrix} 1 &amp; 2\\ 2 &amp; 1\\ \end{vmatrix}=-3\neq0\)</span> 所以此同次連立一次方程組的解有且僅有 <span class="math inline">\(a_1=a_2=0\)</span> (自明解)。</p></li>
+<li><p>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} -a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 2a_1-4a_2 = 0 \;\;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)</span> <br>的係數行列式 <span class="math inline">\(\begin{vmatrix} -1 &amp; 2\\ 2 &amp; -4\\ \end{vmatrix}=0\)</span>，因此除了自明解 <span class="math inline">\(a_1=a_2=0\)</span> 之外，還有非自明解。由於 <span class="math inline">\((2)=-2\times(1)\)</span>，<span class="math inline">\((1),(2)\)</span> 實質上是一個相同的方程式。 按照<a href="https://winterwang.github.io/post/2017-02-12-t/">前述方法</a>，我們設定 <span class="math inline">\(a_2=s\)</span> (<span class="math inline">\(s\)</span> 為非零任意實數)，則 <span class="math inline">\(a_1=2s\)</span>。所以可以將這個方程組的非自明解寫作： <span class="math display">\[\underline{a}=s\left(
+\begin{array}{c}
+2\\
+1
+\end{array}
+\right), s 為非零任意實數。\]</span></p></li>
+</ol>
+<p><span class="math inline">\(\star 自明解和非自明解同時表述時可以寫作: \underline{a}=s\left( \begin{array}{c} 2\\ 1 \end{array} \right),\\ s 為任意實數。\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} (1-\lambda)a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 4a_1+(3-\lambda)a_2 = 0 \;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)</span> 有非自明解的條件為： <span class="math display">\[\begin{align}
+\begin{vmatrix}
+1-\lambda &amp; 2\\
+4 &amp; 3-\lambda
+\end{vmatrix} &amp; = (1-\lambda)(3-\lambda)-4\times2 \\
+&amp; = 3-4\lambda+\lambda^2-8 \\
+&amp; = \lambda^2-4\lambda-5 \\
+&amp; = (\lambda+1)(\lambda-5) \\
+&amp; = 0
+\end{align}\\
+\therefore \lambda=-1, 5\]</span> <br></li>
+</ol>
+<ul>
+<li><span class="math inline">\(\lambda=-1\)</span> 時，代入 <span class="math inline">\((1),(2)\)</span> 得<br> <span class="math inline">\(\begin{align}  \left\{  \begin{array}{ll}  2a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\  4a_1+4a_2 = 0 \;\;\;\;\;\;\;(2)\\  \end{array}  \right.  \end{align}\)</span> 為實質上只有一個方程 <span class="math inline">\(a_1+a_2=0\)</span> 的方程組。令 <span class="math inline">\(a_2=s\)</span>， 則 <span class="math inline">\(a_1=-s\)</span>。因此此時方程組的非自明解為 <span class="math inline">\(\underline{a}=s\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)</span> (<span class="math inline">\(s\)</span> 為 <span class="math inline">\(0\)</span> 意外的任意實數)。</li>
+<li><span class="math inline">\(\lambda=5\)</span> 時，同理可得， <span class="math inline">\(\underline{a}=t\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)</span> (<span class="math inline">\(t\)</span> 為 <span class="math inline">\(0\)</span> 意外的任意實數)。</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>方程組 <span class="math inline">\((\zeta)\begin{align} \left\{ \begin{array}{r} (5-\lambda)a_1+2a_2-4a_3 = 0\\ -3a_1-\lambda a_2+4a_3 = 0\\ 6a_1+6a_2-(1+\lambda)a_3 = 0\\ \end{array} \right. \end{align}\)</span> 擁有非自明解的條件為： <span class="math display">\[\begin{vmatrix}
+5-\lambda &amp; 2        &amp; -4 \\
+-3        &amp; -\lambda &amp; 4  \\
+6         &amp; 6        &amp; -(1+\lambda)
+\end{vmatrix}=0\]</span></li>
+</ol>
+<p>按照以前我們做過的<a href="https://winterwang.github.io/post/2017-03-15/">練習</a>將行列式按照 <span class="math inline">\(\lambda\)</span> 展開： <span class="math display">\[-\lambda^3+4\lambda^2-\lambda-6=\\
+-(\lambda+1)(\lambda-2)(\lambda-3)=0\\
+\therefore \lambda=-1,2,3\]</span></p>
+<ul>
+<li><span class="math inline">\(\lambda = -1\)</span> 時， <span class="math inline">\((\zeta)\)</span> 變為：<span class="math inline">\(\begin{align}  \left\{  \begin{array}{r}  6a_1+2a_2-4a_3 = 0\\  -3a_1+ a_2+4a_3 = 0\\  6a_1+6a_2 = 0\\  \end{array}  \right.  \end{align}\)</span>，此時的非自明解為 <span class="math inline">\(\underline{a}=s\left(  \begin{array}{c}  1\\  -1\\  1  \end{array}  \right)\)</span> (<span class="math inline">\(s\)</span> 為 <span class="math inline">\(0\)</span> 以外的任意實數)</li>
+<li><span class="math inline">\(\lambda = 2\)</span> 時， <span class="math inline">\((\zeta)\)</span> 變為：<span class="math inline">\(\begin{align}  \left\{  \begin{array}{r}  3a_1+2a_2-4a_3 = 0\\  -3a_1-2a_2+4a_3 = 0\\  6a_1+6a_2-3a_3 = 0\\  \end{array}  \right.  \end{align}\)</span>，此時的非自明解為 <span class="math inline">\(\underline{a}=t\left(  \begin{array}{c}  6\\  -5\\  2  \end{array}  \right)\)</span> (<span class="math inline">\(t\)</span> 為 <span class="math inline">\(0\)</span> 以外的任意實數)</li>
+<li><span class="math inline">\(\lambda = 3\)</span> 時， <span class="math inline">\((\zeta)\)</span> 變為：<span class="math inline">\(\begin{align}  \left\{  \begin{array}{r}  2a_1+2a_2-4a_3 = 0\\  -3a_1-3a_2+4a_3 = 0\\  6a_1+6a_2-4a_3 = 0\\  \end{array}  \right.  \end{align}\)</span>，此時的非自明解為 <span class="math inline">\(\underline{a}=u\left(  \begin{array}{c}  1\\  -1\\  0  \end{array}  \right)\)</span> (<span class="math inline">\(u\)</span> 為 <span class="math inline">\(0\)</span> 以外的任意實數)</li>
+</ul>
+<p><span class="math inline">\(3, 4\)</span> 與後面的固有值問題關係深刻。</p>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://winterwang.github.io/post/elementary-row-operations/"><span
+      aria-hidden="true">&larr;</span> 「統計解析のための線形代数」復習筆記 26</a></li>
+    
+
+    
+    <li class="next"><a href="https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/">「統計解析のための線形代数」復習筆記 28 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

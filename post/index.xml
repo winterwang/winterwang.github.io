@@ -11,142 +11,234 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記 28</title>
+      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
+      <description>&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt; 的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 27</title>
+      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
+      <description>&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
+\begin{array}{c}
+x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
+x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\
+\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\
+x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{array}
+\right), \underline{0}=\left(
+\begin{array}{c}
+\underline{0}\\
+\underline{0}\\
+\vdots\\
+\underline{0}\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X\underline{a}=\underline{0}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;即： &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
+\begin{array}{ll}
+x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n  = 0\\
+x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n  = 0\\
+\cdots\\
+x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n  = 0\\
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;這樣的方程式與之前的不同，等號右邊全部都是 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;. 如果係數矩陣的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|X|\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X|=\begin{vmatrix}
+x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
+x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\
+\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\
+x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
+\end{vmatrix}\neq0\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麽這個連立方程式的解，我們通過&lt;a href=&#34;https://winterwang.github.io/post/cramers-formula/&#34;&gt;克萊姆法則&lt;/a&gt;公式知道有且僅有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\underline{0}\)&lt;/span&gt;， 即 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=\cdots=a_n=0\)&lt;/span&gt; (自明解, trivial solution)&lt;/p&gt;
+&lt;p&gt;此外，如果此連立方程組有非自明解 (&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\neq0\)&lt;/span&gt;) 那麽相應的， &lt;span class=&#34;math inline&#34;&gt;\(|X|=0\)&lt;/span&gt;。多元變量分析時我們多關心的是非自明解。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;重點記住：&lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\neq0\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(|X|=0\)&lt;/span&gt;； &lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=0\)&lt;/span&gt; 時, &lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} a_1+2a_2 = 0\\ 2a_1+a_2 = 0\\ \end{array} \right. \end{align}\)&lt;/span&gt; 的係數矩陣 &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 1 &amp;amp; 2 \\ 2 &amp;amp; 1 \\ \end{array} \right)\)&lt;/span&gt; 的行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} 1 &amp;amp; 2\\ 2 &amp;amp; 1\\ \end{vmatrix}=-3\neq0\)&lt;/span&gt; 所以此同次連立一次方程組的解有且僅有 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=0\)&lt;/span&gt; (自明解)。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} -a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 2a_1-4a_2 = 0 \;\;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)&lt;/span&gt; &lt;br&gt;的係數行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} -1 &amp;amp; 2\\ 2 &amp;amp; -4\\ \end{vmatrix}=0\)&lt;/span&gt;，因此除了自明解 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=0\)&lt;/span&gt; 之外，還有非自明解。由於 &lt;span class=&#34;math inline&#34;&gt;\((2)=-2\times(1)\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\((1),(2)\)&lt;/span&gt; 實質上是一個相同的方程式。 按照&lt;a href=&#34;https://winterwang.github.io/post/2017-02-12-t/&#34;&gt;前述方法&lt;/a&gt;，我們設定 &lt;span class=&#34;math inline&#34;&gt;\(a_2=s\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為非零任意實數)，則 &lt;span class=&#34;math inline&#34;&gt;\(a_1=2s\)&lt;/span&gt;。所以可以將這個方程組的非自明解寫作： &lt;span class=&#34;math display&#34;&gt;\[\underline{a}=s\left(
+\begin{array}{c}
+2\\
+1
+\end{array}
+\right), s 為非零任意實數。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\star 自明解和非自明解同時表述時可以寫作: \underline{a}=s\left( \begin{array}{c} 2\\ 1 \end{array} \right),\\ s 為任意實數。\)&lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} (1-\lambda)a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 4a_1+(3-\lambda)a_2 = 0 \;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)&lt;/span&gt; 有非自明解的條件為： &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\begin{vmatrix}
+1-\lambda &amp;amp; 2\\
+4 &amp;amp; 3-\lambda
+\end{vmatrix} &amp;amp; = (1-\lambda)(3-\lambda)-4\times2 \\
+&amp;amp; = 3-4\lambda+\lambda^2-8 \\
+&amp;amp; = \lambda^2-4\lambda-5 \\
+&amp;amp; = (\lambda+1)(\lambda-5) \\
+&amp;amp; = 0
+\end{align}\\
+\therefore \lambda=-1, 5\]&lt;/span&gt; &lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda=-1\)&lt;/span&gt; 時，代入 &lt;span class=&#34;math inline&#34;&gt;\((1),(2)\)&lt;/span&gt; 得&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{ll}  2a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\  4a_1+4a_2 = 0 \;\;\;\;\;\;\;(2)\\  \end{array}  \right.  \end{align}\)&lt;/span&gt; 為實質上只有一個方程 &lt;span class=&#34;math inline&#34;&gt;\(a_1+a_2=0\)&lt;/span&gt; 的方程組。令 &lt;span class=&#34;math inline&#34;&gt;\(a_2=s\)&lt;/span&gt;， 則 &lt;span class=&#34;math inline&#34;&gt;\(a_1=-s\)&lt;/span&gt;。因此此時方程組的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=s\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 意外的任意實數)。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda=5\)&lt;/span&gt; 時，同理可得， &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=t\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 意外的任意實數)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\begin{align} \left\{ \begin{array}{r} (5-\lambda)a_1+2a_2-4a_3 = 0\\ -3a_1-\lambda a_2+4a_3 = 0\\ 6a_1+6a_2-(1+\lambda)a_3 = 0\\ \end{array} \right. \end{align}\)&lt;/span&gt; 擁有非自明解的條件為： &lt;span class=&#34;math display&#34;&gt;\[\begin{vmatrix}
+5-\lambda &amp;amp; 2        &amp;amp; -4 \\
+-3        &amp;amp; -\lambda &amp;amp; 4  \\
+6         &amp;amp; 6        &amp;amp; -(1+\lambda)
+\end{vmatrix}=0\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;按照以前我們做過的&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;練習&lt;/a&gt;將行列式按照 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 展開： &lt;span class=&#34;math display&#34;&gt;\[-\lambda^3+4\lambda^2-\lambda-6=\\
+-(\lambda+1)(\lambda-2)(\lambda-3)=0\\
+\therefore \lambda=-1,2,3\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = -1\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  6a_1+2a_2-4a_3 = 0\\  -3a_1+ a_2+4a_3 = 0\\  6a_1+6a_2 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=s\left(  \begin{array}{c}  1\\  -1\\  1  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 2\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  3a_1+2a_2-4a_3 = 0\\  -3a_1-2a_2+4a_3 = 0\\  6a_1+6a_2-3a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=t\left(  \begin{array}{c}  6\\  -5\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 3\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  2a_1+2a_2-4a_3 = 0\\  -3a_1-3a_2+4a_3 = 0\\  6a_1+6a_2-4a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=u\left(  \begin{array}{c}  1\\  -1\\  0  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(3, 4\)&lt;/span&gt; 與後面的固有值問題關係深刻。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記 26</title>
       <link>https://winterwang.github.io/post/elementary-row-operations/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34; target=&#34;_blank&#34;&gt;擴大係數矩陣&lt;/a&gt; $(X \underline{y})$ 通過行的基本變形，轉化成爲 $(E \underline{y}^&lt;em&gt;)$ 的時候，寫在右側的 $\underline{y}^&lt;/em&gt;$ 就是所求的 $\underline{a}$。&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34;&gt;擴大係數矩陣&lt;/a&gt; &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 通過行的基本變形，轉化成爲 &lt;span class=&#34;math inline&#34;&gt;\((E \underline{y}^*)\)&lt;/span&gt; 的時候，寫在右側的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}^*\)&lt;/span&gt; 就是所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;hr /&gt;
-
-&lt;h4 id=&#34;練習-解下列連立一次方程式&#34;&gt;練習 解下列連立一次方程式&lt;/h4&gt;
-
-&lt;p&gt;$$\begin{align}
-\left{
+&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
 \begin{array}{ll}
-a_1+2a_2+a_3  = 2&lt;br /&gt;
-2a_1+a_2+a_3  = 3&lt;br /&gt;
+a_1+2a_2+a_3  = 2\\
+2a_1+a_2+a_3  = 3\\
 a_1+a_2+2a_3  = 3
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
-
-&lt;h4 id=&#34;解&#34;&gt;解&lt;/h4&gt;
-
-&lt;p&gt;此連立方程組的擴大係數矩陣爲：
-$$(X \underline{y})=\left(
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;此連立方程組的擴大係數矩陣爲： &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
 \begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2&lt;br /&gt;
-2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3&lt;br /&gt;
+1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\
+2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\
 1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3
 \end{array}
-\right)$$
-下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34; target=&#34;_blank&#34;&gt;行變形&lt;/a&gt;：
-$$\left(\begin{array}{c}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
-2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
-1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
+\right)\]&lt;/span&gt; 下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行變形&lt;/a&gt;： &lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\
+2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\
+1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{rr}
-(1)&lt;br /&gt;
-(2)&lt;br /&gt;
+(1)\\
+(2)\\
 (3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \left(\begin{array}{r}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
-0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
-0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\
+0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
+0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)&lt;br /&gt;
-(2)=(2)-2\times(1)&lt;br /&gt;
+(1)\\
+(2)=(2)-2\times(1)\\
 (3)=(3)-(1)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
-0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
+0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)=(1)+2\times(3)&lt;br /&gt;
-(2)=(2)+(3)&lt;br /&gt;
+(1)=(1)+2\times(3)\\
+(2)=(2)+(3)\\
 (3)=-1\times(3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)&lt;br /&gt;
-(2)=(2)\div(-4)&lt;br /&gt;
+(1)\\
+(2)=(2)\div(-4)\\
 (3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
 0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)&lt;br /&gt;
-(2)&lt;br /&gt;
+(1)\\
+(2)\\
 (3)=(3)-(2)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1&lt;br /&gt;
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
 0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)=(1)+3\times(3)&lt;br /&gt;
-(2)&lt;br /&gt;
+(1)=(1)+3\times(3)\\
+(2)\\
 (3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 $\underline{a}$ 便是點線右側的向量。&lt;/p&gt;
-
-&lt;p&gt;$$\therefore \underline{a}=\left(
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 便是點線右側的向量。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore \underline{a}=\left(
 \begin{array}{c}
-a_1 &lt;br /&gt;
-a_2 &lt;br /&gt;
-a_3 &lt;br /&gt;
+a_1 \\
+a_2 \\
+a_3 \\
 \end{array}
 \right)=\left(
 \begin{array}{c}
-1 &lt;br /&gt;
-0 &lt;br /&gt;
-1 &lt;br /&gt;
+1 \\
+0 \\
+1 \\
 \end{array}
-\right)$$&lt;/p&gt;
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -156,12 +248,7 @@ a_3 &lt;br /&gt;
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
+      <description>&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
 &lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]&lt;/span&gt;&lt;/p&gt;
@@ -233,12 +320,7 @@ a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level3&#34;&gt;
+      <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣法解連立一次方程式&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;時(&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;)，給 &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 等式兩邊同時乘以 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;，可以得到 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。由此方法可以得到 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;hr /&gt;
@@ -320,12 +402,7 @@ a_3 \\
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
+      <description>&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;可以看成是利用：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;表達為： &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;&lt;/p&gt;
@@ -648,12 +725,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-07-07/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行的基本變形&lt;/h2&gt;
 
 &lt;div class=&#34;theorem&#34;&gt;
@@ -779,12 +851,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-07-06/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;逆矩陣&lt;/h2&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣定義&lt;/h3&gt;
@@ -792,7 +859,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;div class=&#34;theorem&#34;&gt;
 &lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1 &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣的性質&lt;/h3&gt;
@@ -968,12 +1035,7 @@ Your browser does not support the audio element.
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+      <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行列式的性質&lt;/h2&gt;
 &lt;p&gt;具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -1016,275 +1078,6 @@ Your browser does not support the audio element.
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\  4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\  2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\  2 &amp;amp; 1&amp;amp; 2&amp;amp; -3 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3&lt;br&gt; 1. 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第3行，作新的第一行； 2. 第2行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2，作新的第2行； 3. 第4行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 作新的第4行&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix}  0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 3\\  0 &amp;amp; 8 &amp;amp; 8 &amp;amp; 1\\  2 &amp;amp; -3 &amp;amp; -4 &amp;amp; 2\\  0 &amp;amp; 4 &amp;amp; 6 &amp;amp; -5 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1行衹有第4個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp;amp; 8 &amp;amp; 8 \\ 2 &amp;amp; -3 &amp;amp; -4 \\ 0 &amp;amp; 4 &amp;amp; 6 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1列衹有第2個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp;amp; 8 \\ 4 &amp;amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>留學筆記</title>
-      <link>https://winterwang.github.io/post/2017-03-16/</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-16/</guid>
-      <description>
-
-&lt;h2 id=&#34;尋找並確定合適自己的大學-合適的課程&#34;&gt;尋找並確定合適自己的大學，合適的課程&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;英國，還是美國？ 這是一個問題
-
-&lt;ul&gt;
-&lt;li&gt;我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。&lt;/li&gt;
-&lt;li&gt;上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。&lt;/li&gt;
-&lt;li&gt;加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。&lt;/li&gt;
-&lt;li&gt;另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/7754267&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:Pocock-S-J-Life&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:Pocock-S-J-Life&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：&lt;br&gt;我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Theory&lt;br&gt; (偏重理論)&lt;/td&gt;
-&lt;td&gt;Cambridge&lt;/td&gt;
-&lt;td&gt;Mathematical Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Sheffield&lt;/td&gt;
-&lt;td&gt;Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;University College London&lt;/td&gt;
-&lt;td&gt;Applied Stochastic Systems&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Oxford&lt;/td&gt;
-&lt;td&gt;Applied Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Kent&lt;/td&gt;
-&lt;td&gt;Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Reading&lt;/td&gt;
-&lt;td&gt;Biometry&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Southampton&lt;/td&gt;
-&lt;td&gt;Statistics with Application in Medicine&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Leicester&lt;/td&gt;
-&lt;td&gt;Medical Statistics &amp;amp; Information Technology&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Applications (偏重實踐)&lt;/td&gt;
-&lt;td&gt;London School of Hygiene &amp;amp; Tropical Medicine&lt;/td&gt;
-&lt;td&gt;Medical Statitics&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;確認申請時間-申請要點-雅思成績要求-是否有面試-推薦信&#34;&gt;確認申請時間，申請要點（雅思成績要求，是否有面試，推薦信）&lt;/h2&gt;
-
-&lt;p&gt;決定了申請 LSHTM 以後，便要開始準備材料，確定截止時間，以及雅思成績的要求等。&lt;/p&gt;
-
-&lt;p&gt;我之前並無申請歐美大學的經驗，許多都是這次申請過程中自己摸索的。總結一下就是，留學申請這種事，自己來就可以搞定了。經過仔細鑽研LSHTM的醫學統計碩士課程&lt;a href=&#34;http://www.lshtm.ac.uk/study/masters/msms.html&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;，確認雅思成績要求總分不低於7，聽說讀單項最低不低於5.5，寫作不低於6.5以後，便着手開始集中複習英語的計劃。&lt;/p&gt;
-
-&lt;p&gt;至於申請截止時間，&lt;a href=&#34;http://www.lshtm.ac.uk/study/applications/index.html&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;說的8月1日，沃天。。。9月底開學8月還能申請。不過，6月1日以後的申請要交£100的過遲申請費用。不管怎麼說，越早越好。我是2016年10月開始計劃申請的，那時候自己給自己定下目標，1月7日雅思成績如果達標，1月份之內就完成所有申請步驟。&lt;/p&gt;
-
-&lt;p&gt;面試的情況後面會再多說一些，其他課程不太瞭解，醫學統計學的碩士課程是對有可能成爲學生的人進行面試的 (potential students will be invited to join an interview)。所以估計材料交了以後很久都沒有面試的通知的話，那就可以安心在家當作自己沒有申請過，該幹嘛幹嘛了。儘量保持低調嘛。我還跟他們負責招生的人發郵件確認了，材料遞交6周左右會給面試通知。估計不錄取也是在這個時間點給通知的。&lt;/p&gt;
-
-&lt;p&gt;最後一個就是最重要的推薦人的選擇了。我邀請之前博士階段的導師，以及現在的同事。聽說美國大學要三個推薦人。英國是只要兩人的。關於如何選擇推薦人，LSHTM的網站上說的是，如果申請人正在就學，那就需要兩個都是對你的學業/學術十分瞭解的人。如果申請人已經就業，那就填最高學歷時期的導師一名，及現在的同事一名或者老闆/上司。當然，在把自己要寫的推薦人姓名信息等填入申請表格之前，要跟他們打個招呼才是。&lt;/p&gt;
-
-&lt;p&gt;至於推薦信的內容。我的博士導師收到我的邀請郵件以後欣然同意，然而那之後我並沒有收到他給我的個人評價或者推薦信內容/稿件。我想，大概(有些)認真的日本人認爲這個推薦信對申請人本人來說也應該保密的。不過我對我的導師有充分的信任，不至於在推薦信裏寫我不愛讀書行爲不端之類害我的話。他一直都是實事求是認真做事的人。另外一封推薦信來自我的同事，他對自己英文不太有自信，而且他每天就坐在我隔壁，寫了稿子就讓我看，我又請native speaker幫忙校對了以後提交的。所以我對這個第二封推薦信的內容是掌握的。&lt;/p&gt;
-
-&lt;h2 id=&#34;3個月突擊-雅思8分&#34;&gt;3個月突擊，雅思8分&lt;/h2&gt;
-
-&lt;p&gt;我以前考過兩次託福。都是裸考。一次是大學期間跟風考的，大夥兒都忙忙碌碌，準備考研啦，準備託福GRE出國拉，所以我也想說考一個，看看這些英語考試都考什麼內容。如果您來我這裏想瞭解託福雅思考試的祕籍，抱歉出門左轉去&lt;a href=&#34;https://www.hujiang.com/&#34; target=&#34;_blank&#34;&gt;滬江外語&lt;/a&gt;吧。我每日也都是用的他家的APP和資源（主要是聽寫BBC新聞）。另外推薦一個背單詞的軟件：&lt;a href=&#34;https://www.baicizhan.com/&#34; target=&#34;_blank&#34;&gt;百詞斬&lt;/a&gt;。&lt;a href=&#34;https://www.shanbay.com/&#34; target=&#34;_blank&#34;&gt;扇貝單詞&lt;/a&gt;也不錯。不過個人還是對百詞斬比較偏愛。也許是先入爲主吧。第一次打開時，設置自己的背誦單詞表（雅思詞彙）然後設定好時間，和背詞計劃。我是設定了每日100個單詞。每天堅持一百個，直到考試前一天。百詞斬的app會再每天第一次打開app的時候提醒，並且複習昨天或者最近背誦過的生詞。感覺他們應該是用了一些算法的，大約是根據個人背誦單詞的記錄（傳說中的記憶曲線？），以及錯誤次數來選出每天複習的詞彙的，這一點百詞斬很厲害。&lt;/p&gt;
-
-&lt;p&gt;除了背單詞，就是尋找合適的老師練習寫作和口語了。在此我就不去給某寶作廣告了。我找了兩個雅思作文老師練習，每天都有寫作的作業，一天 task 1 第二天 task 2 這樣。有的老師只提供作文修改和點評，有的還會給你上課，當然費用就比前一種稍微貴一些。能提供授課服務的老師基本上就是具有新東方，環球雅思等授課經驗的作文老師。作文老師推薦的教材可以在此介紹一下:
-&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/ieltswriting.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;至於口語，某寶上的口語外教中介等類似商品就更多了。基本上應該都是菲律賓的口語老師。一開始我也抱着忐忑的心情預約試聽了以下，擔心菲律賓的口語老師可能會有類似印度人的難懂口音。後來的事實證明自己完全是多慮了。至少在我聽課的那幾位菲律賓的外教的口音都較爲純正。況且每個人的口音（應該）都是天生的/後天跟父母學的，不必擔心自己上了幾天口語可就變成怪怪的阿三口音。另外記得以前看過文章說英語母語者能辨別很多不同的口音，所以關鍵不是口音影響一個人的表達，而是你到底真的會不會表達。而且如果你的有點異國口音的英語常常還會被認爲很有趣，很性感，或者很有特點。個人認爲典型的中國人的口音其實多數情況下不太性感，但是你也可以變得像下面這個人一樣風趣幽默（點擊圖片可以看到他講的中式腔調的英語笑話，老外一樣被逗得一樂一樂的）:
-&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/joewong.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-於是我的口語課就固定爲每天早晨9點鐘開始一個小時，和老師練習過去口語考過的題目。各種常見/不常見話題的切磋和準備。許多話題是根本想不到的。比如，“請描述一次你參加過的婚禮”，或者“請用英語講一個中國歷史上的有趣的故事”這樣的題目，讓我用中文來講述我還要愣上個1分鐘，更不要說在分秒必爭的口語考試中被問道這樣的題目，基本就等於告訴你回去準備再交錢考試了。&lt;/p&gt;
-
-&lt;p&gt;備考雅思是一段辛苦的過程。堅持每日練習才能保持良好的考試/競技狀態，口語和作文是中國人的短板。聽力和寫作常常有不少人（包括我）可以拿到接近滿分。我一開始備考時也是覺得要把過去劍橋雅思的4-11套&lt;a href=&#34;https://book.douban.com/subject/1479127/&#34; target=&#34;_blank&#34;&gt;全真練習題&lt;/a&gt;全部過一邊，題海戰術嘛。後來被寫作的老師敲了警鐘。他說：「聽力和閱讀如果每天都花過多的時間去做的話，對於你來說提高很有限，因爲你都只有錯很少的題目，只是自己刷高分滿足自己的虛榮心而已。到頭來短板的作文和口語都沒有時間練習的話，總分還是上不去。」於是我聽從了寫作老師的話，改爲三四天做一套聽力和閱讀。當然每次都是用考試時的標準來。所以其實一直到了考前，我也沒有把4-11的所有過去試題都練習完。只是挑着做了一些。關於考場的真實感受和我的考分。可以看我之前的&lt;a href=&#34;https://winterwang.github.io/post/2017-01-07-ielts-test/&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&#34;1個月集中-文件準備&#34;&gt;1個月集中，文件準備&lt;/h2&gt;
-
-&lt;p&gt;考完雅思考試以後等待考試成績公佈的這段時間，我便開始着手準備申請所需要的各種文件。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;最近的大學院（就是我的博士課程）成績單，英文版。&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;博士學位證書，和名古屋大學的畢業證書的英文版。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1和2由於是要開英文版的，聯繫名古屋大學的留學生辦公室，申請郵寄辦理（無手續費），然後附上回信的信封和郵票就可以了。&lt;/li&gt;
-&lt;li&gt;另外，爲了以防萬一，我又拜託之前本科階段上海交大的指導老師幫忙開具了本科階段的學位證書，畢業證書的英文版，以及當年的成績單。（看了當時的成績單，不禁回想當年在上海求學的日子。曾經有段時間，在中國訪問facebook是不需要任何技巧的。那個時候，我們還有google reader，還有google.cn。。。）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;查找了許多模板，后来选择了(&lt;a href=&#34;http://svmiller.com/blog/2016/03/svm-r-markdown-cv/&#34; target=&#34;_blank&#34;&gt;这一款&lt;/a&gt;)。&lt;code&gt;Fork&lt;/code&gt;过来以后打开&lt;code&gt;Rmd&lt;/code&gt;文件，写上自己的内容，&lt;code&gt;knit&lt;/code&gt;，pdf就生成了。生活从未如此简单与快乐。告别Micro$oft，你会更轻松。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;個人陳述(Personal Statement)寫作，修改，寫作，修改。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;格式依然是用&lt;a href=&#34;https://github.com/rohanarora/SoP&#34; target=&#34;_blank&#34;&gt;模板&lt;/a&gt;，然后内容的写作和修改，确实费了一番脑筋和功夫。先是寫了初稿，然後給了曾經上过LSHTM醫學統計課程的日本人前輩看，然後修改，又給寫推薦信的兩位導師看，然後再修改，之後再給曾經在UCL留學的高中同學，以及他認識的 native speaker 看，之後再修改。此後又给目前在UCL任教的曾經的高中同學看。最后又花錢送去潤色和校對一遍，才決定最後作爲申請文書遞交給LSHTM。六個不同的人給的意見自然會有不同，最終還是要自己作決斷和取捨的。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;跟以前的導師，現在的上司請求推薦信&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;上面提到個人陳述的時候也說到把稿子給了兩位寫推薦信的導師看。我覺得這一點十分重要。畢竟寫推薦信的導師，他要知道你自己在個人陳述中自我推薦了什麼，才能再在推薦信裏加以強調。深以爲然。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;備齊材料-終於可以申請了&#34;&gt;備齊材料，終於可以申請了！&lt;/h2&gt;
-
-&lt;p&gt;上面的各種文件備齊了以後，就是直接在線填寫申請表格了。表格中仍有部分內容需要自己填寫的。在此不再贅述。 按下申請按鈕之後，LSHTM發來確認信。估計是系統自動發送的。之後便是等待兩位推薦人在線遞交推薦信了。兩位推薦人交齊了推薦信，已經是我申請提交之後一個月左右的事了。之後該是進入和文書審查階段。&lt;/p&gt;
-
-&lt;h2 id=&#34;面試來了-面試真的來了&#34;&gt;面試來了！面試真的來了！&lt;/h2&gt;
-
-&lt;p&gt;過了兩到三週。課程的聯絡人(Admissions Administrator)發來郵件說安排一下Skype面試的時間。&lt;/p&gt;
-
-&lt;h2 id=&#34;我被錄取了&#34;&gt;我被錄取了！&lt;/h2&gt;
-
-&lt;h2 id=&#34;補交畢業證書的原件&#34;&gt;補交畢業證書的原件&lt;/h2&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:Pocock-S-J-Life&#34;&gt;Pocock, S. J. Life as an academic medical statistician and how to survive it. Statist. Med. 14, 209–222 (1995). &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:Pocock-S-J-Life&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>https://winterwang.github.io/post/2017-03-15/</link>
-      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-15/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;行列式的定義與計算&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (determinant)  &lt;/strong&gt;&lt;/span&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A= (a_{ij})=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\)&lt;/span&gt; 的&lt;strong&gt;行列式(determinant)&lt;/strong&gt;被定義爲是，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的全部成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{11},a_{12},\cdots,a_{nn}\)&lt;/span&gt; 的函數，這個函數是一個&lt;strong&gt;標量(scalar)&lt;/strong&gt;。
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的行列式(&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;次行列式)，被記作：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|, |a_{ij}|, \det(A), \det(a_{ij})， \begin{vmatrix} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \notag \end{vmatrix}\)&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;1次行列式：
-&lt;span class=&#34;math display&#34; id=&#34;eq:determinant1&#34;&gt;\[\begin{equation}
-A=(a_{11}), |A|=a_{11}
-\tag{1}
-\end{equation}\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;2次行列式：
-&lt;span class=&#34;math display&#34; id=&#34;eq:determinant2&#34;&gt;\[\begin{equation}
-A=\left(
-\begin{array}{}
-a_{11} &amp;amp; a_{12}\\
-a_{21} &amp;amp; a_{22}\\
-\end{array}
-\right), |A|=a_{11}a_{12}-a_{12}a_{21}
-\tag{2}
-\end{equation}\]&lt;/span&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt; 次行列式
-&lt;span class=&#34;math display&#34; id=&#34;eq:determinant3&#34;&gt;\[\begin{equation}
-A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
-\tag{3}
-\end{equation}\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次行列式&lt;br&gt; 假如&lt;a href=&#34;#eq:determinant3&#34;&gt;(3)&lt;/a&gt;成立：&lt;br&gt; 對於：&lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\\ |A|=\begin{vmatrix} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \notag \end{vmatrix}\\ \left\{ \begin{array}{} (4)\;=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{ij}A_{ij}+\cdots+a_{in}A_{in}\\ (5)\;=a_{1j}A_{i1}+a_{2j}A_{2j}+\cdots+a_{ij}A_{ij}+\cdots+a_{nj}A_{nj}\\  \end{array} \right.\)&lt;/span&gt;&lt;br&gt; 式子 &lt;span class=&#34;math inline&#34;&gt;\((4)\)&lt;/span&gt; 被稱爲行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行&lt;strong&gt;展開式(expansion of &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; according to elements of row &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;)&lt;/strong&gt;。同樣的，式子 &lt;span class=&#34;math inline&#34;&gt;\((5)\)&lt;/span&gt; 被稱爲行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列展開式。&lt;span class=&#34;math inline&#34;&gt;\(|A_{ij}|(i=1,2,\cdots,n;j=1,2,\cdots,n)\)&lt;/span&gt; 被稱爲 成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}\)&lt;/span&gt; 的&lt;strong&gt;餘因子(cofactor)&lt;/strong&gt;，定義如下：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A_{ij}=(-1)^{i+j}D_{ij}\\ \;\;\;\;=(-1)^{i+j}\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1,j-1} &amp;amp; a_{1,j+1} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2,j-1} &amp;amp; a_{2,j+1} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{i-1,1} &amp;amp; a_{i-1,2} &amp;amp; \cdots &amp;amp; a_{i-1,j-1} &amp;amp; a_{i-1,j+1} &amp;amp; \cdots &amp;amp; a_{i-1,n}\\ a_{i+1,1} &amp;amp; a_{i+1,2} &amp;amp; \cdots &amp;amp; a_{i+1,j-1} &amp;amp; a_{i+1,,j+1} &amp;amp; \cdots &amp;amp; a_{i+1,n}\\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1,j-1} &amp;amp; a_{1,j+1} &amp;amp; \cdots &amp;amp; a_{1n}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(D_{ij}\)&lt;/span&gt; 正如上面等式最右端所寫，其實是行列式 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 剔除了第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行和第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列的 &lt;span class=&#34;math inline&#34;&gt;\((n-1)\)&lt;/span&gt; 次行列式，又被叫做行列式 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的&lt;strong&gt;小行列式(minor)&lt;/strong&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;餘因子矩陣&lt;/h2&gt;
-&lt;p&gt;以 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}\)&lt;/span&gt; 的餘因子 &lt;span class=&#34;math inline&#34;&gt;\(A_{ij}\)&lt;/span&gt; 作成分&lt;strong&gt;的矩陣&lt;/strong&gt;&lt;span class=&#34;diff_alert&#34;&gt;的轉置矩陣&lt;/span&gt;作被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的&lt;strong&gt;餘因子矩陣(adjoint matrix, adjugate matrix)&lt;/strong&gt;。標記爲 &lt;span class=&#34;math inline&#34;&gt;\(adj(A)\)&lt;/span&gt;。也就是說：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left( \begin{array}{c} A_{11}&amp;amp; A_{12} &amp;amp; \cdots &amp;amp; A_{1n}\\ A_{21}&amp;amp; A_{22} &amp;amp; \cdots &amp;amp; A_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ A_{n1}&amp;amp; A_{n2} &amp;amp; \cdots &amp;amp; A_{nn} \end{array} \right)^t=\left( \begin{array}{c} A_{11}&amp;amp; A_{21} &amp;amp; \cdots &amp;amp; A_{n1}\\ A_{12}&amp;amp; A_{22} &amp;amp; \cdots &amp;amp; A_{n2}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ A_{1n}&amp;amp; A_{2n} &amp;amp; \cdots &amp;amp; A_{nn} \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;我們來試着計算行列式：&lt;br&gt; 1. &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 次行列式&lt;br&gt; 以方程&lt;a href=&#34;#eq:determinant2&#34;&gt;(2)&lt;/a&gt;的定義計算：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12}\\  a_{21} &amp;amp; a_{22}\\  \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;br&gt; 此公式可以用下列 &lt;strong&gt;示意圖(薩呂法則, Sarrus’ rule)&lt;/strong&gt; 來記憶: 　&lt;img src=&#34;https://winterwang.github.io/img/sarrus.png&#34; /&gt;&lt;br&gt; 也就是，沿着右下方向將所有成分相乘以後用加號 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 號連接起來，沿着左下的方向的所有成分則相乘以後用減號 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 號連接起來。最後將這兩者相加獲得行列式的值。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;練習： 求 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{array} \right)\)&lt;/span&gt; 的行列式和餘因子矩陣。&lt;/p&gt;
-&lt;p&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{vmatrix}=4\times3-2\times1=10\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left( \begin{array}{} A_{11} &amp;amp; A_{21}\\ A_{12} &amp;amp; A_{22}\\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{11}=(-1)^{(1+1)}\times3\\ A_{21}=(-1)^{(2+1)}\times2\\ A_{12}=(-1)^{(1+2)}\times1\\ A_{22}=(-1)^{2+2}\times4\\ \therefore adj(A)=\left( \begin{array}{r} 3 &amp;amp; -2\\ -1 &amp;amp; 4\\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt; 注意：餘因子&lt;strong&gt;矩陣&lt;/strong&gt;，終究是一個矩陣而非行列式。&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;三次矩陣&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A=\left(  \begin{array}{c}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\  a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\  \end{array}  \right)\)&lt;/span&gt; 的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; 要如何用 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的成分來表示呢？ &lt;br&gt; 我們發現，代入上面第 &lt;span class=&#34;math inline&#34;&gt;\((4)\)&lt;/span&gt; 個式子 &lt;span class=&#34;math inline&#34;&gt;\(n=3\)&lt;/span&gt; 的情況來計算。&lt;br&gt; 在這裏，我們就按照 &lt;span class=&#34;math inline&#34;&gt;\(i=1\)&lt;/span&gt; 的情況來展開。&lt;span class=&#34;diff_alert&#34;&gt; (注意：&lt;span class=&#34;math inline&#34;&gt;\(i=2, i=3\)&lt;/span&gt; 的情況展開，結果也是一樣的。)&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-|A| &amp;amp;= a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}\\
-    &amp;amp;= a_{11}(-1)^{1+1}D_{11}+a_{12}(-1)^{1+2}D_{12}\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}(-1)^{1+3}D_{13}\\
-    &amp;amp;= a_{11}\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}-a_{12}\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix}\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\
-    &amp;amp;= a_{11}(a_{22}a_{23}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{31}a_{23})\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}(a_{21}a_{32}-a_{22}a_{31})\\
-    &amp;amp;=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
-   \end{align}\]&lt;/span&gt;
-&lt;br&gt; 我們也可以利用薩呂法則（下圖）來記住計算過程：&lt;br&gt; &lt;img src=&#34;https://winterwang.github.io/img/sarrus33.png&#34; /&gt;&lt;br&gt; 另外，可以得到如下的餘因子：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A_{11}=\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}, A_{12}=-\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{13}=\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{21}=-\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix},  A_{22}=\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{23}=-\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{31}=\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23}\\\end{vmatrix},  A_{32}=-\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23}\\\end{vmatrix},  A_{33}=\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22}\\\end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 因此餘因子矩陣爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{12} &amp;amp; A_{13}\\  A_{21} &amp;amp; A_{22} &amp;amp; A_{23}\\  A_{31} &amp;amp; A_{32} &amp;amp; A_{33}\\  \end{array}  \right)^t=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{21} &amp;amp; A_{23}\\  A_{12} &amp;amp; A_{22} &amp;amp; A_{32}\\  A_{13} &amp;amp; A_{23} &amp;amp; A_{33}\\  \end{array}  \right)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;table style=&#34;width:6%;&#34;&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;5%&#34; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;練習：試求矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{r} 6 &amp;amp; 1 &amp;amp; -3\\ 3 &amp;amp; 5 &amp;amp; 7\\ 2 &amp;amp; -1 &amp;amp; 3\\ \end{array} \right)\)&lt;/span&gt; 的行列式和餘因子矩陣&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(|A|= \begin{vmatrix} 6 &amp;amp; 1 &amp;amp; -3\\ 3 &amp;amp; 5 &amp;amp; 7\\ 2 &amp;amp; -1 &amp;amp; 3\\ \end{vmatrix}\\ \;\;\;\;\:=6\times5\times3+1\times7\times2+(-3)\times3\times(-1)\\ \;\;\;\;\;\:\;\;\;\;\:-\{6\times7\times(-1)+1\times3\times3+(-3)\times5\times2\}\\ \;\;\;\;\:=113-(-63)=176\\ \\ A_{11}=\begin{vmatrix}5 &amp;amp; 7\\ -1 &amp;amp; 3\\\end{vmatrix}=15-(-7)=22\\ A_{12}=\begin{vmatrix}3 &amp;amp; 7\\ 2&amp;amp; 3\\\end{vmatrix}=9-14=-5\\ A_{13}=\begin{vmatrix}3 &amp;amp; 5\\ 2 &amp;amp; -1\\\end{vmatrix}=-3-10=-13\\ A_{21}=\begin{vmatrix}1 &amp;amp; -3\\ -1 &amp;amp; 3\\\end{vmatrix}=3-3=0\\ A_{22}=\begin{vmatrix}6 &amp;amp; -3\\ 2 &amp;amp; 3\\\end{vmatrix}=18-(-6)=24\\ A_{23}=\begin{vmatrix}6 &amp;amp; 1\\ 2 &amp;amp; -1\\\end{vmatrix}=-6-2=-8\\ A_{31}=\begin{vmatrix}1 &amp;amp; -3\\5 &amp;amp; 7\\\end{vmatrix}=7-(-15)=22\\ A_{32}=\begin{vmatrix}6 &amp;amp; -3\\3 &amp;amp; 7\\\end{vmatrix}=42-(-9)=51\\ A_{33}=\begin{vmatrix}6 &amp;amp; 1\\ 3 &amp;amp; 5\\\end{vmatrix}=30-3=27\\ \Longrightarrow adj(A)=\left( \begin{array}{r} 22 &amp;amp; 5 &amp;amp; -13 \\ 0 &amp;amp; 24&amp;amp; -8 \\ 22 &amp;amp; 51&amp;amp; 27 \\ \end{array} \right)^t=\left( \begin{array}{r} 22 &amp;amp; 0 &amp;amp; 22\\ 5 &amp;amp; 24 &amp;amp; 51\\ -13 &amp;amp; -8 &amp;amp; 27\\ \end{array} \right)\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table style=&#34;width:6%;&#34;&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;5%&#34; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;練習： 求3次矩陣的固有值時(將來敘述)需要的行列式&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a-\lambda &amp;amp; b &amp;amp; c\\ d &amp;amp; e-\lambda &amp;amp; f\\ g &amp;amp; h &amp;amp; i-\lambda \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 展開以後，整理爲關於 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的式子：&lt;br&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a-\lambda &amp;amp; b &amp;amp; c\\ d &amp;amp; e-\lambda &amp;amp; f\\ g &amp;amp; h &amp;amp; i-\lambda \end{vmatrix}\\ =(a-\lambda)(e-\lambda)(i-\lambda)+bfg+dhc\\ \;\;\;\;\;-\{g(e-\lambda)c+bd(i-\lambda)+(a-\lambda)fh\}\\ =-\lambda^3+(a+e+i)\lambda^2+(bd+cg+fh-ae-ei-ai)\lambda\\ \;\;\;\;\;+(aei+bfg+cdh-afh-bdi-ecg)\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;4次行列式：&lt;br&gt; 試求&lt;span class=&#34;math inline&#34;&gt;\(A=\left(  \begin{array}{} a_{11}&amp;amp; a_{12}&amp;amp; a_{13}&amp;amp; a_{14}\\ a_{21}&amp;amp; a_{22}&amp;amp; a_{23}&amp;amp; a_{24}\\ a_{31}&amp;amp; a_{32}&amp;amp; a_{33}&amp;amp; a_{34}\\ a_{41}&amp;amp; a_{42}&amp;amp; a_{43}&amp;amp; a_{44}  \end{array}  \right)\\  \;\;=\left(  \begin{array}{r} -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\ 4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\ 2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\ 2 &amp;amp; 1&amp;amp; 2&amp;amp; -3  \end{array}  \right)\)&lt;/span&gt; &lt;br&gt;的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt;：&lt;br&gt; 由於第2行有成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt; 我們以第二行展開行列式，因爲 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt;，所以 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}A_{23}=0\)&lt;/span&gt; 可以省略：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=a_{21}A_{21}+a_{22}A_{22}+a_{24}A_{24}\\  \;\;\;\;\:=a_{21}(-1)^{2+1}D_{21}+a_{22}(-1)^{2+2}D_{22}+a_{24}(-1)^{2+4}D_{24}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{21}=(-1)^{2+1}\begin{vmatrix}  a_{12} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{32} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{42} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  3 &amp;amp; 4 &amp;amp; 1\\  -3 &amp;amp; -4 &amp;amp; 2\\  1 &amp;amp; 2&amp;amp; -3\\  \end{vmatrix}=6\\  A_{22}=(-1)^{2+2}\begin{vmatrix}  a_{11} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{31} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{41} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=\begin{vmatrix}  -2 &amp;amp; 4 &amp;amp;1\\  2 &amp;amp; -4 &amp;amp;2\\  2 &amp;amp; 2 &amp;amp;-3\\  \end{vmatrix}=36\\  A_{24}=(-1)^{2+4}\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\  a_{41} &amp;amp; a_{42} &amp;amp; a_{43}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4\\  2 &amp;amp; -3 &amp;amp;-4\\  2 &amp;amp; 1 &amp;amp;2\\  \end{vmatrix}=0\\  \therefore |A|=4\times6+2\times36+5\times0=96\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;然而，&lt;strong&gt;4次以上的矩陣的行列式計算，沒有類似薩呂法則的計算方法。&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

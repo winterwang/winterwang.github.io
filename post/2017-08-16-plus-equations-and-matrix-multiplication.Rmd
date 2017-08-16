@@ -1,0 +1,15 @@
+---
+title: 「統計解析のための線形代数」復習筆記 28
+author: ''
+date: '2017-08-16'
+slug: plus-equations-and-matrix-multiplication
+categories:
+  - statistics
+tags:
+  - basic mathematics
+  - Medical Statistics
+  - linear algebra
+summary: "第5章　行列式 determinant P97-99 加法算式與矩陣的積"
+---
+
+$\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}$  或者 $\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}$ 的形式其實質上均爲 $1\times1$ 的標量，即最早我們接觸到的[加法算式](https://winterwang.github.io/post/2017-02-06/)。

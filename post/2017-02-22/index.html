@@ -250,12 +250,7 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <!-- BLOGDOWN-HEAD -->
-<!-- /BLOGDOWN-HEAD -->
-
-<!-- BLOGDOWN-BODY-BEFORE -->
-<!-- /BLOGDOWN-BODY-BEFORE -->
-<div class="section level2">
+      <div class="section level2">
 <h2>矩陣乘法運算</h2>
 <div class="section level4">
 <h4>矩陣乘法定義</h4>
@@ -263,7 +258,7 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-1" class="theorem"><strong>Theorem 1  (matrix multiplication)  </strong></span>兩個矩陣 <span class="math inline">\(A, B\)</span> ，只有 <span class="math inline">\(A\)</span> 的列數和 <span class="math inline">\(B\)</span> 的行數相等(這種特徵又被稱爲：矩陣 <span class="math inline">\(A,B\)</span> <strong>可整合的</strong>，conformable)時，才有定義：<span class="math inline">\(AB\)</span>。<span class="math inline">\(AB\)</span> 則爲新的矩陣，類型爲 <span class="math inline">\(A\)</span> 的行數， <span class="math inline">\(B\)</span>的列數。即：<span class="math inline">\(A_{k\times l}, \; B_{m\times n}\)</span> 且 <span class="math inline">\(l=m\)</span> 時才能計算乘積: <span class="math inline">\(AB_{k\times n}\)</span>。
 </div>
-<p></p>
+
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(A_{2\times3}=\left( \begin{array}{c} 4 &amp; 6 &amp; 8\\ 2 &amp; 1 &amp; 3\\ \end{array} \right),\; B_{3\times2}=\left( \begin{array}{c} 0 &amp; 8\\ 2 &amp; -1\\ 9 &amp; 4 \\ \end{array} \right)\)</span> 時，<br> “<span class="math inline">\(A\)</span>的列數” <span class="math inline">\(=\)</span> “<span class="math inline">\(B\)</span> 的行數” <span class="math inline">\(= 3\)</span>，因此積 <span class="math inline">\(AB\)</span> 被定義，類型是 <span class="math inline">\((2,2)\)</span> <br> “<span class="math inline">\(B\)</span>的列數” <span class="math inline">\(=\)</span> “<span class="math inline">\(A\)</span> 的行數” <span class="math inline">\(= 2\)</span>，因此積 <span class="math inline">\(BA\)</span> 被定義，類型是 <span class="math inline">\((3,3)\)</span></p></li>
 <li><p><span class="math inline">\(C_{3\times2}=\left( \begin{array}{c} 4 &amp; 2 \\ 5 &amp; 6 \\ 7 &amp; 3 \end{array} \right),\; D_{2\times4}=\left( \begin{array}{c} 2 &amp; 0 &amp; 9 &amp; -1 \\ 4 &amp; 7 &amp; 6 &amp; 5 \\ \end{array} \right)\)</span> 時， <br> “<span class="math inline">\(C\)</span>的列數” <span class="math inline">\(=\)</span> “<span class="math inline">\(D\)</span> 的行數” <span class="math inline">\(= 2\)</span>，因此積 <span class="math inline">\(CD\)</span> 被定義，類型是 <span class="math inline">\((3,4)\)</span> <br> “<span class="math inline">\(D\)</span>的列數”<span class="math inline">\(= 4\)</span>，“<span class="math inline">\(C\)</span> 的行數” <span class="math inline">\(= 3\)</span>，因此積 <span class="math inline">\(DC\)</span> 不被定義，<span class="math inline">\(DC\)</span> 不可整合。</p></li>
@@ -284,7 +279,7 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 2  (matrix multiplication component)  </strong></span>兩個矩陣 <span class="math inline">\(A_{k\times l}, \; B_{m\times n}\)</span> 的積有被定義時，矩陣 <span class="math inline">\(AB_{k\times n}\)</span> 的任意成分<span class="math inline">\((i,j)\)</span>，被定義爲：<strong>“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(i\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(j\)</span> 列向量的內積”</strong>。
 </div>
-<p></p>
+
 <p>故：<br> <span class="math inline">\(AB\)</span> 的 <span class="math inline">\((1,1)\)</span> 成分是，“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(1\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(1\)</span> 列向量的內積”<br> <span class="math inline">\(AB\)</span> 的 <span class="math inline">\((1,2)\)</span> 成分是，“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(1\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(2\)</span> 列向量的內積”<br> <span class="math inline">\(\vdots\)</span> <br> <span class="math inline">\(AB\)</span> 的 <span class="math inline">\((k,n)\)</span> 成分是，“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(k\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(ns\)</span> 列向量的內積”<br></p>
 </div>
 <div class="section level4">

@@ -37,142 +37,234 @@
     </item>
     
     <item>
+      <title>「統計解析のための線形代数」復習筆記 28</title>
+      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
+      <description>&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt; 的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 27</title>
+      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
+      <description>&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
+\begin{array}{c}
+x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
+x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\
+\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\
+x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{array}
+\right), \underline{0}=\left(
+\begin{array}{c}
+\underline{0}\\
+\underline{0}\\
+\vdots\\
+\underline{0}\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X\underline{a}=\underline{0}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;即： &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
+\begin{array}{ll}
+x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n  = 0\\
+x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n  = 0\\
+\cdots\\
+x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n  = 0\\
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;這樣的方程式與之前的不同，等號右邊全部都是 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;. 如果係數矩陣的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|X|\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X|=\begin{vmatrix}
+x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
+x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\
+\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\
+x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
+\end{vmatrix}\neq0\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麽這個連立方程式的解，我們通過&lt;a href=&#34;https://winterwang.github.io/post/cramers-formula/&#34;&gt;克萊姆法則&lt;/a&gt;公式知道有且僅有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\underline{0}\)&lt;/span&gt;， 即 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=\cdots=a_n=0\)&lt;/span&gt; (自明解, trivial solution)&lt;/p&gt;
+&lt;p&gt;此外，如果此連立方程組有非自明解 (&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\neq0\)&lt;/span&gt;) 那麽相應的， &lt;span class=&#34;math inline&#34;&gt;\(|X|=0\)&lt;/span&gt;。多元變量分析時我們多關心的是非自明解。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;重點記住：&lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\neq0\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(|X|=0\)&lt;/span&gt;； &lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=0\)&lt;/span&gt; 時, &lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} a_1+2a_2 = 0\\ 2a_1+a_2 = 0\\ \end{array} \right. \end{align}\)&lt;/span&gt; 的係數矩陣 &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 1 &amp;amp; 2 \\ 2 &amp;amp; 1 \\ \end{array} \right)\)&lt;/span&gt; 的行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} 1 &amp;amp; 2\\ 2 &amp;amp; 1\\ \end{vmatrix}=-3\neq0\)&lt;/span&gt; 所以此同次連立一次方程組的解有且僅有 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=0\)&lt;/span&gt; (自明解)。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} -a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 2a_1-4a_2 = 0 \;\;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)&lt;/span&gt; &lt;br&gt;的係數行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} -1 &amp;amp; 2\\ 2 &amp;amp; -4\\ \end{vmatrix}=0\)&lt;/span&gt;，因此除了自明解 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=0\)&lt;/span&gt; 之外，還有非自明解。由於 &lt;span class=&#34;math inline&#34;&gt;\((2)=-2\times(1)\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\((1),(2)\)&lt;/span&gt; 實質上是一個相同的方程式。 按照&lt;a href=&#34;https://winterwang.github.io/post/2017-02-12-t/&#34;&gt;前述方法&lt;/a&gt;，我們設定 &lt;span class=&#34;math inline&#34;&gt;\(a_2=s\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為非零任意實數)，則 &lt;span class=&#34;math inline&#34;&gt;\(a_1=2s\)&lt;/span&gt;。所以可以將這個方程組的非自明解寫作： &lt;span class=&#34;math display&#34;&gt;\[\underline{a}=s\left(
+\begin{array}{c}
+2\\
+1
+\end{array}
+\right), s 為非零任意實數。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\star 自明解和非自明解同時表述時可以寫作: \underline{a}=s\left( \begin{array}{c} 2\\ 1 \end{array} \right),\\ s 為任意實數。\)&lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} (1-\lambda)a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 4a_1+(3-\lambda)a_2 = 0 \;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)&lt;/span&gt; 有非自明解的條件為： &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\begin{vmatrix}
+1-\lambda &amp;amp; 2\\
+4 &amp;amp; 3-\lambda
+\end{vmatrix} &amp;amp; = (1-\lambda)(3-\lambda)-4\times2 \\
+&amp;amp; = 3-4\lambda+\lambda^2-8 \\
+&amp;amp; = \lambda^2-4\lambda-5 \\
+&amp;amp; = (\lambda+1)(\lambda-5) \\
+&amp;amp; = 0
+\end{align}\\
+\therefore \lambda=-1, 5\]&lt;/span&gt; &lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda=-1\)&lt;/span&gt; 時，代入 &lt;span class=&#34;math inline&#34;&gt;\((1),(2)\)&lt;/span&gt; 得&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{ll}  2a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\  4a_1+4a_2 = 0 \;\;\;\;\;\;\;(2)\\  \end{array}  \right.  \end{align}\)&lt;/span&gt; 為實質上只有一個方程 &lt;span class=&#34;math inline&#34;&gt;\(a_1+a_2=0\)&lt;/span&gt; 的方程組。令 &lt;span class=&#34;math inline&#34;&gt;\(a_2=s\)&lt;/span&gt;， 則 &lt;span class=&#34;math inline&#34;&gt;\(a_1=-s\)&lt;/span&gt;。因此此時方程組的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=s\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 意外的任意實數)。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda=5\)&lt;/span&gt; 時，同理可得， &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=t\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 意外的任意實數)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\begin{align} \left\{ \begin{array}{r} (5-\lambda)a_1+2a_2-4a_3 = 0\\ -3a_1-\lambda a_2+4a_3 = 0\\ 6a_1+6a_2-(1+\lambda)a_3 = 0\\ \end{array} \right. \end{align}\)&lt;/span&gt; 擁有非自明解的條件為： &lt;span class=&#34;math display&#34;&gt;\[\begin{vmatrix}
+5-\lambda &amp;amp; 2        &amp;amp; -4 \\
+-3        &amp;amp; -\lambda &amp;amp; 4  \\
+6         &amp;amp; 6        &amp;amp; -(1+\lambda)
+\end{vmatrix}=0\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;按照以前我們做過的&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;練習&lt;/a&gt;將行列式按照 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 展開： &lt;span class=&#34;math display&#34;&gt;\[-\lambda^3+4\lambda^2-\lambda-6=\\
+-(\lambda+1)(\lambda-2)(\lambda-3)=0\\
+\therefore \lambda=-1,2,3\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = -1\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  6a_1+2a_2-4a_3 = 0\\  -3a_1+ a_2+4a_3 = 0\\  6a_1+6a_2 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=s\left(  \begin{array}{c}  1\\  -1\\  1  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 2\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  3a_1+2a_2-4a_3 = 0\\  -3a_1-2a_2+4a_3 = 0\\  6a_1+6a_2-3a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=t\left(  \begin{array}{c}  6\\  -5\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 3\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  2a_1+2a_2-4a_3 = 0\\  -3a_1-3a_2+4a_3 = 0\\  6a_1+6a_2-4a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=u\left(  \begin{array}{c}  1\\  -1\\  0  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(3, 4\)&lt;/span&gt; 與後面的固有值問題關係深刻。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記 26</title>
       <link>https://winterwang.github.io/post/elementary-row-operations/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34; target=&#34;_blank&#34;&gt;擴大係數矩陣&lt;/a&gt; $(X \underline{y})$ 通過行的基本變形，轉化成爲 $(E \underline{y}^&lt;em&gt;)$ 的時候，寫在右側的 $\underline{y}^&lt;/em&gt;$ 就是所求的 $\underline{a}$。&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34;&gt;擴大係數矩陣&lt;/a&gt; &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 通過行的基本變形，轉化成爲 &lt;span class=&#34;math inline&#34;&gt;\((E \underline{y}^*)\)&lt;/span&gt; 的時候，寫在右側的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}^*\)&lt;/span&gt; 就是所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;hr /&gt;
-
-&lt;h4 id=&#34;練習-解下列連立一次方程式&#34;&gt;練習 解下列連立一次方程式&lt;/h4&gt;
-
-&lt;p&gt;$$\begin{align}
-\left{
+&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
 \begin{array}{ll}
-a_1+2a_2+a_3  = 2&lt;br /&gt;
-2a_1+a_2+a_3  = 3&lt;br /&gt;
+a_1+2a_2+a_3  = 2\\
+2a_1+a_2+a_3  = 3\\
 a_1+a_2+2a_3  = 3
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
-
-&lt;h4 id=&#34;解&#34;&gt;解&lt;/h4&gt;
-
-&lt;p&gt;此連立方程組的擴大係數矩陣爲：
-$$(X \underline{y})=\left(
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;此連立方程組的擴大係數矩陣爲： &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
 \begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2&lt;br /&gt;
-2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3&lt;br /&gt;
+1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\
+2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\
 1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3
 \end{array}
-\right)$$
-下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34; target=&#34;_blank&#34;&gt;行變形&lt;/a&gt;：
-$$\left(\begin{array}{c}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
-2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
-1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3&lt;br /&gt;
+\right)\]&lt;/span&gt; 下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行變形&lt;/a&gt;： &lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\
+2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\
+1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{rr}
-(1)&lt;br /&gt;
-(2)&lt;br /&gt;
+(1)\\
+(2)\\
 (3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \left(\begin{array}{r}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2&lt;br /&gt;
-0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
-0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\
+0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
+0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)&lt;br /&gt;
-(2)=(2)-2\times(1)&lt;br /&gt;
+(1)\\
+(2)=(2)-2\times(1)\\
 (3)=(3)-(1)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
-0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
+0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)=(1)+2\times(3)&lt;br /&gt;
-(2)=(2)+(3)&lt;br /&gt;
+(1)=(1)+2\times(3)\\
+(2)=(2)+(3)\\
 (3)=-1\times(3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)&lt;br /&gt;
-(2)=(2)\div(-4)&lt;br /&gt;
+(1)\\
+(2)=(2)\div(-4)\\
 (3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4&lt;br /&gt;
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
 0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)&lt;br /&gt;
-(2)&lt;br /&gt;
+(1)\\
+(2)\\
 (3)=(3)-(2)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1&lt;br /&gt;
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0&lt;br /&gt;
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
+1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
 0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1
 \end{array}\right) \begin{align}
-\left{
+\left\{
 \begin{array}{l}
-(1)=(1)+3\times(3)&lt;br /&gt;
-(2)&lt;br /&gt;
+(1)=(1)+3\times(3)\\
+(2)\\
 (3)
 \end{array}
 \right.
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 $\underline{a}$ 便是點線右側的向量。&lt;/p&gt;
-
-&lt;p&gt;$$\therefore \underline{a}=\left(
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 便是點線右側的向量。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore \underline{a}=\left(
 \begin{array}{c}
-a_1 &lt;br /&gt;
-a_2 &lt;br /&gt;
-a_3 &lt;br /&gt;
+a_1 \\
+a_2 \\
+a_3 \\
 \end{array}
 \right)=\left(
 \begin{array}{c}
-1 &lt;br /&gt;
-0 &lt;br /&gt;
-1 &lt;br /&gt;
+1 \\
+0 \\
+1 \\
 \end{array}
-\right)$$&lt;/p&gt;
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -182,12 +274,7 @@ a_3 &lt;br /&gt;
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
+      <description>&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
 &lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]&lt;/span&gt;&lt;/p&gt;
@@ -259,12 +346,7 @@ a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div class=&#34;section level3&#34;&gt;
+      <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣法解連立一次方程式&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;時(&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;)，給 &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 等式兩邊同時乘以 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;，可以得到 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。由此方法可以得到 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;hr /&gt;
@@ -337,223 +419,6 @@ a_3 \\
 \end{align} \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;可以看成是利用：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;表達為： &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (coefficient matrix)&lt;/a&gt;。如果將 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 加入 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的最後一列，寫成下面的形式: &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
-\begin{array}{c}
-x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}  &amp;amp; y_1\\
-x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}  &amp;amp; y_2\\
-\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots  &amp;amp; \vdots\\
-x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;那麽這樣的矩陣 &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 被稱作是擴大&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (augmented coefficient matrix)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在多元變量分析時，通常出現的情況是， &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 為已知 (觀測收集得來的數據)，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 為未知。&lt;/p&gt;
-&lt;p&gt;一般情況下， &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解答方法就是(1)&lt;a href=&#34;https://winterwang.github.io/post/inverse-matrix/&#34;&gt;使用逆矩陣&lt;/a&gt;，(2)克萊姆法則法，(3)&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行的基本變形法&lt;/a&gt; 三種手法。但是，前兩種手法只適用於 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是正方形矩陣且同時是&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;。另外， &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 中間加上逗號的寫法 &lt;span class=&#34;math inline&#34;&gt;\((X,\underline{y})\)&lt;/span&gt; 也表達相同含義。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://winterwang.github.io/post/inverse-matrix/</link>
-      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
-      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
-$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
-
-&lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
-
-&lt;p&gt;其中:&lt;br&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;$adj(A)$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子矩陣&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;$A_{ij}$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;$D_{ij}$ &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;爲小行列式&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(1) 之前舉過的例子再拿來試試看：&lt;/p&gt;
-
-&lt;p&gt;$$X=\left(
-\begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 \newline
-2 &amp;amp; 1 &amp;amp; 1 \newline
-1 &amp;amp; 1 &amp;amp; 2
-\end{array}
-\right)=\left(\begin{array}{c}
-x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline
-x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline
-x_{31} &amp;amp; x_{32} &amp;amp; x_{33}
-\end{array}\right)$$
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：&lt;/p&gt;
-
-&lt;p&gt;$$X_{11}=(-1)^{1+1}\left|
-\begin{array}{c}
-1 &amp;amp; 1 \newline
-1 &amp;amp; 2
-\end{array}\right|=1$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{12}=(-1)^{1+2}\left|
-\begin{array}{c}
-2 &amp;amp; 1 \newline
-1 &amp;amp; 2
-\end{array}\right|=-3$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{13}=(-1)^{1+3}\left|
-\begin{array}{c}
-2 &amp;amp; 1 \newline
-1 &amp;amp; 1
-\end{array}\right|=1$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{21}=(-1)^{2+1}\left|
-\begin{array}{c}
-2 &amp;amp; 1 \newline
-1 &amp;amp; 2
-\end{array}\right|=-3$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{22}=(-1)^{2+2}\left|
-\begin{array}{c}
-1 &amp;amp; 1 \newline
-1 &amp;amp; 2
-\end{array}\right|=1$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{23}=(-1)^{2+3}\left|
-\begin{array}{c}
-1 &amp;amp; 2 \newline
-1 &amp;amp; 1
-\end{array}\right|=1$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{31}=(-1)^{3+1}\left|
-\begin{array}{c}
-2 &amp;amp; 1 \newline
-1 &amp;amp; 1
-\end{array}\right|=1$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{32}=(-1)^{3+2}\left|
-\begin{array}{c}
-1 &amp;amp; 1 \newline
-2 &amp;amp; 1
-\end{array}\right|=1$$&lt;/p&gt;
-
-&lt;p&gt;$$X_{33}=(-1)^{3+3}\left|
-\begin{array}{c}
-1 &amp;amp; 2 \newline
-2 &amp;amp; 1
-\end{array}\right|=-3$$&lt;/p&gt;
-
-&lt;p&gt;因此餘因子矩陣爲：$adj(X)=\left(
-\begin{array}{c}
-1 &amp;amp; -3 &amp;amp; 1 \newline
--3 &amp;amp; 1 &amp;amp; 1 \newline
-1 &amp;amp; 1 &amp;amp; -3
-\end{array}
-\right)^t=\left(
-\begin{array}{c}
-1 &amp;amp; -3 &amp;amp; 1 \newline
--3 &amp;amp; 1 &amp;amp; 1 \newline
-1 &amp;amp; 1 &amp;amp; -3
-\end{array}
-\right)$&lt;/p&gt;
-
-&lt;p&gt;我們看見這個餘因子矩陣是一個對稱矩陣，這是由於原矩陣 $X$ 本身就是一個對稱矩陣。另外，行列式爲：&lt;/p&gt;
-
-&lt;p&gt;$$\begin{align}|X|&amp;amp;=1\times X_{11}+2\times X_{12}+1\times X_{13}\newline&amp;amp;=1\times1+2\times(-3)+1\times1\newline&amp;amp;=-4\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;因此所求的逆矩陣爲：&lt;/p&gt;
-
-&lt;p&gt;$$\begin{align}X^{-1}&amp;amp;=\frac{1}{|X|}adj(X)\newline
-&amp;amp;=\frac{1}{-4}\left(
-\begin{array}{c}
-1 &amp;amp; -3 &amp;amp; 1 \newline
--3 &amp;amp; 1 &amp;amp; 1 \newline
-1 &amp;amp; 1 &amp;amp; -3
-\end{array}
-\right)\newline
-&amp;amp;=\left(
-\begin{array}{c}
--\frac{1}{4} &amp;amp; \frac{3}{4} &amp;amp; -\frac{1}{4} \newline
-\frac{3}{4} &amp;amp; -\frac{1}{4} &amp;amp; -\frac{1}{4} \newline
--\frac{1}{4} &amp;amp; -\frac{1}{4} &amp;amp; \frac{3}{4}
-\end{array}
-\right)\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;(2) 試求矩陣 $A=\left(
-\begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 \newline
-2 &amp;amp; 3 &amp;amp; 1 \newline
-1 &amp;amp; 2 &amp;amp; 2
-\end{array}
-\right)=\left(
-\begin{array}{c}
-a_{11} &amp;amp; a_{12}  &amp;amp; a_{13} \newline
-a_{21} &amp;amp; a_{22}  &amp;amp; a_{23} \newline
-a_{31} &amp;amp; a_{32}  &amp;amp; a_{33}
-\end{array}
-\right)$ 的逆矩陣 $A^{-1}$:&lt;/p&gt;
-
-&lt;p&gt;$$\begin{array}
-=A_{11}=6-2=4, &amp;amp; A_{12}=-(4-1)=-3, &amp;amp; A_{13}=4-3=1 \newline
-A_{21}=-(4-2)=-2, &amp;amp; A_{22}=2-1=1, &amp;amp; A_{23}=-(2-2)=0 \newline
-A_{31}=2-3=-1, &amp;amp; A_{32}=-(1-2)=1, &amp;amp; A_{33}=3-4=-1
-\end{array}$$&lt;/p&gt;
-
-&lt;p&gt;$$adj(A)=\left(
-\begin{array}{c}
-4 &amp;amp; -3 &amp;amp; 1 \newline
--2 &amp;amp; 1 &amp;amp; 0 \newline
--1 &amp;amp; 1 &amp;amp; -1
-\end{array}
-\right)^t=\left(
-\begin{array}{c}
-4 &amp;amp; -2 &amp;amp; -1 \newline
--3 &amp;amp; 1 &amp;amp; 1 \newline
-1 &amp;amp; 0 &amp;amp; -1
-\end{array}
-\right)$$&lt;/p&gt;
-
-&lt;p&gt;$$\begin{align}
-|A| &amp;amp;=1\times A_{11}+2\times A_{12}+1\times A_{13} \newline
-    &amp;amp;=1\times4+2\times(-3)+1\times1 \newline
-    &amp;amp;=4-6+1 \newline
-    &amp;amp;=-1
-\end{align}$$&lt;/p&gt;
-
-&lt;p&gt;$$
-\therefore
-\begin{align}
-A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
-\begin{array}{c}
-4 &amp;amp; -2 &amp;amp; -1 \newline
--3 &amp;amp; 1 &amp;amp; 1 \newline
-1 &amp;amp; 0 &amp;amp; -1
-\end{array}
-\right) \newline
-&amp;amp;=\left(
-\begin{array}{c}
--4 &amp;amp; 2 &amp;amp; 1 \newline
-3 &amp;amp; -1 &amp;amp; -1 \newline
--1 &amp;amp; 0 &amp;amp; 1
-\end{array}
-\right)
-\end{align}$$&lt;/p&gt;
 </description>
     </item>
     
