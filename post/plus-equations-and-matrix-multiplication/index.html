@@ -254,7 +254,7 @@
 <h4>行向量乘以矩陣，乘以列向量可得標量</h4>
 <p><span class="math inline">\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)</span> 或者 <span class="math inline">\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)</span> 的形式其實質上均爲 <span class="math inline">\(1\times1\)</span>的標量，即最早我們接觸到的<a href="https://winterwang.github.io/post/2017-02-06/">加法算式</a>。</p>
 <p>這樣的乘法計算通過<a href="https://winterwang.github.io/post/2017-02-22/">矩陣</a>（包括<a href="https://winterwang.github.io/post/2017-02-19/">向量</a>）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。</p>
-<p>在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個變量來練習： <span class="math display">\[\underline{x}=\left(
+<p>在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： <span class="math display">\[\underline{x}=\left(
 \begin{array}{c}
 x_1 \\
 x_2 \\
@@ -272,7 +272,29 @@ a_1 &amp; 0 &amp; 0 \\
 0 &amp; a_2 &amp; 0 \\
 0 &amp; 0 &amp; a_3
 \end{array}\right)\]</span></p></li>
-<li><p><span class="math inline">\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\)</span></p></li>
+<li><p><span class="math inline">\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\\=\left\{(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\right\}^t(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =(\underline{a}^t\underline{x})^t\underline{a}^t\underline{x}\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}\\ \Rightarrow\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp; 0 &amp; 0 \\ a_2 &amp; 0 &amp; 0 \\ a_3 &amp; 0 &amp; 0 \end{array}\right)\left( \begin{array}{c} a_1 &amp; a_2 &amp; a_3 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\underline{x}\\ =\underline{x}^tAA^t\underline{x}\\ =\underline{x}A_0\underline{x}\)</span> <br> 其中 <span class="math display">\[A=\left(
+\begin{array}{c}
+a_1 &amp; 0 &amp; 0 \\
+a_2 &amp; 0 &amp; 0 \\
+a_3 &amp; 0 &amp; 0
+\end{array}\right), A_0=\left(
+\begin{array}{c}
+a_1^2 &amp; a_1a_2 &amp; a_1a_3 \\
+a_2a_1 &amp; a_2^2 &amp; a_2a_3 \\
+a_3a_1 &amp; a_3a_2 &amp; a_3^2
+\end{array}\right)\]</span></p></li>
+<li><p><span class="math inline">\((a_1x_1+a_2x_2+a_3x_3)^2+(b_1x_1+b_2x_2+b_3x_3)^2\\+(c_1x_1+c_2x_2+c_3x_3)^2\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}+\underline{x}^t\underline{b}\underline{b}^t\underline{x}+\underline{x}^t\underline{c}\underline{c}^t\underline{x}\\ =\underline{x}^t(\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t)\underline{x}\\ =\underline{x}^t(\underline{a} \underline{b} \underline{c})\left( \begin{array}{c} \underline{a}^t \\ \underline{b}^t \\ \underline{c}^t \end{array}\right)\underline{x}\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp; b_1 &amp; c_1 \\ a_2 &amp; b_2 &amp; c_2 \\ a_3 &amp; b_3 &amp; c_3 \end{array}\right)\left( \begin{array}{c} a_1 &amp; a_1 &amp; a_1 \\ b_2 &amp; b_2 &amp; b_2 \\ c_3 &amp; c_3 &amp; c_3 \end{array}\right)\underline{x}\\ =\underline{x}^tBB^t\underline{x}\)</span> <br> 其中 <span class="math display">\[B=\left(
+\begin{array}{c}
+a_1 &amp; b_1 &amp; c_1 \\
+a_2 &amp; b_2 &amp; c_2 \\
+a_3 &amp; b_3 &amp; c_3
+\end{array}\right)\]</span></p></li>
+<li><p><span class="math inline">\(\frac{(a_1x_1+a_2x_2+a_3x_3)^2}{d_1}+ \frac{(b_1x_1+b_2x_2+b_3x_3)^2}{d_2}\\ +\frac{(c_1x_1+c_2x_2+c_3x_3)^2}{d_3}\)</span><br> 根據上面第1個練習 <span class="math inline">\(=(a_1x_1+a_2x_2+a_3x_3, b_1x_1+b_2x_2+b_3x_3, c_1x_1+c_2x_2+c_3x_3)\\ \left( \begin{array}{c} 1/d_1 &amp; 0 &amp; 0 \\ 0 &amp; 1/d_2 &amp; 0 \\ 0 &amp; 0 &amp; 1/d_3 \end{array}\right)\left( \begin{array}{c} a_1x_1+a_2x_2+a_3x_3 \\ b_1x_1+b_2x_2+b_3x_3 \\ c_1x_1+c_2x_2+c_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp; b_1 &amp; c_1 \\ a_2 &amp; b_2 &amp; c_2 \\ a_3 &amp; b_3 &amp; c_3 \end{array}\right)\left( \begin{array}{c} 1/d_1 &amp; 0 &amp; 0 \\ 0 &amp; 1/d_2 &amp; 0 \\ 0 &amp; 0 &amp; 1/d_3 \end{array}\right)\\ \left( \begin{array}{c} a_1 &amp; a_1 &amp; a_1 \\ b_2 &amp; b_2 &amp; b_2 \\ c_3 &amp; c_3 &amp; c_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tBD^{-1}B^t\underline{x}\)</span> <br> 其中 <span class="math display">\[D^{-1}=\left(
+\begin{array}{c}
+1/d_1 &amp; 0 &amp; 0 \\
+0 &amp; 1/d_2 &amp; 0 \\
+0 &amp; 0 &amp; 1/d_3
+\end{array}\right) \;(d_1d_2d_3\neq0), B 與上面2. 相同。\]</span></p></li>
 </ol>
 </div>
 

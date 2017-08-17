@@ -46,7 +46,7 @@
 &lt;h4&gt;行向量乘以矩陣，乘以列向量可得標量&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt;的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;這樣的乘法計算通過&lt;a href=&#34;https://winterwang.github.io/post/2017-02-22/&#34;&gt;矩陣&lt;/a&gt;（包括&lt;a href=&#34;https://winterwang.github.io/post/2017-02-19/&#34;&gt;向量&lt;/a&gt;）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。&lt;/p&gt;
-&lt;p&gt;在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個變量來練習： &lt;span class=&#34;math display&#34;&gt;\[\underline{x}=\left(
+&lt;p&gt;在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： &lt;span class=&#34;math display&#34;&gt;\[\underline{x}=\left(
 \begin{array}{c}
 x_1 \\
 x_2 \\
@@ -64,7 +64,29 @@ a_1 &amp;amp; 0 &amp;amp; 0 \\
 0 &amp;amp; a_2 &amp;amp; 0 \\
 0 &amp;amp; 0 &amp;amp; a_3
 \end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\\=\left\{(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\right\}^t(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =(\underline{a}^t\underline{x})^t\underline{a}^t\underline{x}\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}\\ \Rightarrow\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ a_2 &amp;amp; 0 &amp;amp; 0 \\ a_3 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\underline{x}\\ =\underline{x}^tAA^t\underline{x}\\ =\underline{x}A_0\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[A=\left(
+\begin{array}{c}
+a_1 &amp;amp; 0 &amp;amp; 0 \\
+a_2 &amp;amp; 0 &amp;amp; 0 \\
+a_3 &amp;amp; 0 &amp;amp; 0
+\end{array}\right), A_0=\left(
+\begin{array}{c}
+a_1^2 &amp;amp; a_1a_2 &amp;amp; a_1a_3 \\
+a_2a_1 &amp;amp; a_2^2 &amp;amp; a_2a_3 \\
+a_3a_1 &amp;amp; a_3a_2 &amp;amp; a_3^2
+\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2+(b_1x_1+b_2x_2+b_3x_3)^2\\+(c_1x_1+c_2x_2+c_3x_3)^2\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}+\underline{x}^t\underline{b}\underline{b}^t\underline{x}+\underline{x}^t\underline{c}\underline{c}^t\underline{x}\\ =\underline{x}^t(\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t)\underline{x}\\ =\underline{x}^t(\underline{a} \underline{b} \underline{c})\left( \begin{array}{c} \underline{a}^t \\ \underline{b}^t \\ \underline{c}^t \end{array}\right)\underline{x}\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\underline{x}\\ =\underline{x}^tBB^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[B=\left(
+\begin{array}{c}
+a_1 &amp;amp; b_1 &amp;amp; c_1 \\
+a_2 &amp;amp; b_2 &amp;amp; c_2 \\
+a_3 &amp;amp; b_3 &amp;amp; c_3
+\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{(a_1x_1+a_2x_2+a_3x_3)^2}{d_1}+ \frac{(b_1x_1+b_2x_2+b_3x_3)^2}{d_2}\\ +\frac{(c_1x_1+c_2x_2+c_3x_3)^2}{d_3}\)&lt;/span&gt;&lt;br&gt; 根據上面第1個練習 &lt;span class=&#34;math inline&#34;&gt;\(=(a_1x_1+a_2x_2+a_3x_3, b_1x_1+b_2x_2+b_3x_3, c_1x_1+c_2x_2+c_3x_3)\\ \left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\left( \begin{array}{c} a_1x_1+a_2x_2+a_3x_3 \\ b_1x_1+b_2x_2+b_3x_3 \\ c_1x_1+c_2x_2+c_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\\ \left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tBD^{-1}B^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[D^{-1}=\left(
+\begin{array}{c}
+1/d_1 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; 1/d_2 &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 1/d_3
+\end{array}\right) \;(d_1d_2d_3\neq0), B 與上面2. 相同。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
