@@ -2,13 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Be ambitious</title>
-    <link>https://winterwang.github.io/post/index.xml</link>
+    <link>https://winterwang.github.io/post/</link>
     <description>Recent content in Posts on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Fri, 03 Feb 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IEA in Saitama</title>
+      <link>https://winterwang.github.io/post/iea-in-saitama/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/iea-in-saitama/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 28</title>
@@ -903,7 +912,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;h3&gt;逆矩陣定義&lt;/h3&gt;
 
 &lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1 &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
+&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -1072,59 +1081,6 @@ Your browser does not support the audio element.
 &lt;p&gt;&lt;strong&gt;总数上，是之前发现的在全部动物、植物和真菌之间出现的水平ＤＮＡ转移现象数目的四倍。&lt;/strong&gt;该研究已发表在《国家科学研究进展》杂志上。&lt;/p&gt;
 
 &lt;p&gt;这些遗传物质的转移是如何发现的至今人类还不十分清楚。或许是靠病毒或寄生物，进行的ＤＮＡ传递。但是，无论是什么原因，这件事提示我们，昆虫的进化，至少在分子水平上，或许不只是已知公认的进化历史那么简单。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://winterwang.github.io/post/2017-04-02/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;行列式的性質&lt;/h2&gt;
-&lt;p&gt;具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;轉置矩陣的行列式，與轉置前的行列式一致。即：&lt;span class=&#34;math inline&#34;&gt;\(|A^t|=|A|\)&lt;/span&gt;。 &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix}  1 &amp;amp; 2 &amp;amp; 3 \\  4 &amp;amp; 5 &amp;amp; 6 \\  7 &amp;amp; 8 &amp;amp; 9 \\  \end{vmatrix}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;任意一列（或者任意一行）若乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍，那麼這個矩陣的行列式結果也將是乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ \lambda a_{21} &amp;amp;\lambda a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \lambda a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;任意一列（或者任意一行）的各成分乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21}\pm \lambda a_{11} &amp;amp; a_{22}\pm \lambda a_{12} &amp;amp; a_{23}\pm \lambda a_{13}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}，\\ \begin{vmatrix} a_{11} &amp;amp; a_{12}\pm \lambda a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22}\pm \lambda a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32}\pm \lambda a_{31} &amp;amp; a_{33}\\ \end{vmatrix},\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} \pm \frac{a_{11}}{\lambda} &amp;amp; a_{22}\pm \frac{a_{12}}{\lambda} &amp;amp; a_{23}\pm \frac{a_{13}}{\lambda}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}, \\ \begin{vmatrix} a_{11} &amp;amp; a_{12}\pm \frac{a_{11}}{\lambda} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22}\pm \frac{a_{21}}{\lambda} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32}\pm \frac{a_{31}}{\lambda} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 上述行列式與行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt; 結果相同。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;符合下列條件時，行列式的值爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;任意一行（或者列）的全部成分均爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 時。&lt;/li&gt;
-&lt;li&gt;矩陣中若有兩行（或者兩列）的對應成分全部相同時。&lt;/li&gt;
-&lt;li&gt;矩陣中若有兩行（或者兩列）的對應成分均成一定比例時。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\  0 &amp;amp; 0 &amp;amp; 0\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp;amp; b &amp;amp; c\\  a &amp;amp; b &amp;amp; c\\  d &amp;amp; e &amp;amp; f\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp;amp; b &amp;amp; c\\  ka &amp;amp; kb &amp;amp; kc\\  d &amp;amp; e &amp;amp; f\\  \end{vmatrix}=0\)&lt;/span&gt;&lt;br&gt; 由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。此性質與多重線性迴歸的多重共線性有直接關係。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt; （第一行和第二行對調成分）&lt;/li&gt;
-&lt;li&gt;對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; a_{22} &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ 0 &amp;amp; a_{22} &amp;amp; a_{23}\\ 0 &amp;amp; 0 &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; 0\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣中如果有任意一行（或列），衹有一個成分為非零成分，可以將該矩陣的行列式降次：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}(-1)^{1+1}\begin{vmatrix} a_{22} &amp;amp; a_{23} \\ a_{32} &amp;amp; a_{33} \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; 0\\ \end{vmatrix}=a_{23}(-1)^{1+1}\begin{vmatrix} a_{11} &amp;amp; a_{12} \\ a_{31} &amp;amp; a_{32} \end{vmatrix}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 同時都是正方形矩陣時，&lt;span class=&#34;math inline&#34;&gt;\(|AB|=|A|·|B|\)&lt;/span&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;strong&gt;證明&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left(\begin{array}{c} 0 &amp;amp; 4 &amp;amp; 2\\ -1 &amp;amp; 3 &amp;amp; 7\\ 6 &amp;amp; 5 &amp;amp; 9\\  \end{array}\right)\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(B=\left(\begin{array}{c} 2 &amp;amp; 3 &amp;amp; 4\\ -2 &amp;amp; 7 &amp;amp; 1\\ 4 &amp;amp; 6 &amp;amp; 0\\  \end{array}\right)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(|AB|=|A|·|B|\)&lt;/span&gt; 成立&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;解&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\because AB=\left(\begin{array}{c}  0 &amp;amp; 40 &amp;amp; 4\\  20 &amp;amp; 60 &amp;amp; -1\\  38 &amp;amp; 107 &amp;amp; 29\\  \end{array}\right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore |AB|=\begin{vmatrix}  0 &amp;amp; 40 &amp;amp; 4\\  20 &amp;amp; 60 &amp;amp; -1\\  38 &amp;amp; 107 &amp;amp; 29\\  \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3： 第2列 - 第3列 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 10 作新的第2列&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 0 &amp;amp; 4\\ 20 &amp;amp; 70 &amp;amp; -1\\ 38 &amp;amp; -183 &amp;amp; 29\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7： 第一行衹有第三個元素非零，可以降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=4(-1)^{1+3}\begin{vmatrix}  20 &amp;amp; 70 \\  38 &amp;amp; -183\end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質2: 第一行所有元素除以10, 將 10 提前。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=4\times10\begin{vmatrix}  2 &amp;amp; 7 \\  38 &amp;amp; -183\end{vmatrix}\\  =40(-366-266)\\=-25280\)&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix}  0 &amp;amp; 4 &amp;amp; 2\\  -1 &amp;amp; 3 &amp;amp; 7\\  6 &amp;amp; 5 &amp;amp; 9\\  \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3: 第2列 - 第3列 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2 作爲新的第二列元素&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 0 &amp;amp; 2\\ -1 &amp;amp; -11 &amp;amp; 7\\ 6 &amp;amp; -13 &amp;amp; 9\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第一行衹有第三個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=2(-1)^{1+3}\begin{vmatrix} -1 &amp;amp; -11 \\ 6 &amp;amp; -13\end{vmatrix}\\=2(13+66)=158\)&lt;/span&gt; &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(|B|=\begin{vmatrix} 2 &amp;amp; 3 &amp;amp; 4\\ -2 &amp;amp; 7 &amp;amp; 1\\ 4 &amp;amp; 6 &amp;amp; 0\\ \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3: 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第2行作新的第1行； 第3行 - 第1行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2 作新的第三行&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 10 &amp;amp; 5\\ -2 &amp;amp; 7 &amp;amp; 1\\ 0 &amp;amp; 0 &amp;amp; -8\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第三行衹有第三個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-8(-1)^{3+3}\begin{vmatrix} 0 &amp;amp; 10 \\ -2 &amp;amp; 7\end{vmatrix}\\=-8\times20=-160\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;綜上可得&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(|A|·|B|=158\times(-160)=-25280=|AB|\)&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;3&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;試用這一節介紹的行列式性質，求解前一節&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;例(3)&lt;/a&gt;的行列式值。&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;解&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\  4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\  2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\  2 &amp;amp; 1&amp;amp; 2&amp;amp; -3 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3&lt;br&gt; 1. 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第3行，作新的第一行； 2. 第2行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2，作新的第2行； 3. 第4行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 作新的第4行&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix}  0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 3\\  0 &amp;amp; 8 &amp;amp; 8 &amp;amp; 1\\  2 &amp;amp; -3 &amp;amp; -4 &amp;amp; 2\\  0 &amp;amp; 4 &amp;amp; 6 &amp;amp; -5 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1行衹有第4個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp;amp; 8 &amp;amp; 8 \\ 2 &amp;amp; -3 &amp;amp; -4 \\ 0 &amp;amp; 4 &amp;amp; 6 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1列衹有第2個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp;amp; 8 \\ 4 &amp;amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     

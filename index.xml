@@ -2,13 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Be ambitious on Be ambitious</title>
-    <link>https://winterwang.github.io/index.xml</link>
+    <link>https://winterwang.github.io/</link>
     <description>Recent content in Be ambitious on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IEA in Saitama</title>
+      <link>https://winterwang.github.io/post/iea-in-saitama/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/iea-in-saitama/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Prevalence of H.pylori infection in Japan by birth cohort, from 1908 to 2003 -- a systematic review and meta-regression analysis</title>
@@ -465,6 +474,585 @@ a_3 \\
 \end{align} \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 23</title>
+      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
+      <description>&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可以看成是利用：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;表達為： &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (coefficient matrix)&lt;/a&gt;。如果將 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 加入 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的最後一列，寫成下面的形式: &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
+\begin{array}{c}
+x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}  &amp;amp; y_1\\
+x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}  &amp;amp; y_2\\
+\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots  &amp;amp; \vdots\\
+x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麽這樣的矩陣 &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 被稱作是擴大&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (augmented coefficient matrix)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在多元變量分析時，通常出現的情況是， &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 為已知 (觀測收集得來的數據)，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 為未知。&lt;/p&gt;
+&lt;p&gt;一般情況下， &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解答方法就是(1)&lt;a href=&#34;https://winterwang.github.io/post/inverse-matrix/&#34;&gt;使用逆矩陣&lt;/a&gt;，(2)克萊姆法則法，(3)&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行的基本變形法&lt;/a&gt; 三種手法。但是，前兩種手法只適用於 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是正方形矩陣且同時是&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;。另外， &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 中間加上逗號的寫法 &lt;span class=&#34;math inline&#34;&gt;\((X,\underline{y})\)&lt;/span&gt; 也表達相同含義。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記22</title>
+      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
+
+&lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
+
+&lt;p&gt;其中:&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$adj(A)$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子矩陣&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$A_{ij}$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$D_{ij}$ &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;爲小行列式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(1) 之前舉過的例子再拿來試試看：&lt;/p&gt;
+
+&lt;p&gt;$$X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right)=\left(\begin{array}{c}
+x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline
+x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline
+x_{31} &amp;amp; x_{32} &amp;amp; x_{33}
+\end{array}\right)$$
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：&lt;/p&gt;
+
+&lt;p&gt;$$X_{11}=(-1)^{1+1}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{12}=(-1)^{1+2}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{13}=(-1)^{1+3}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{21}=(-1)^{2+1}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{22}=(-1)^{2+2}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{23}=(-1)^{2+3}\left|
+\begin{array}{c}
+1 &amp;amp; 2 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{31}=(-1)^{3+1}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{32}=(-1)^{3+2}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+2 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{33}=(-1)^{3+3}\left|
+\begin{array}{c}
+1 &amp;amp; 2 \newline
+2 &amp;amp; 1
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;因此餘因子矩陣爲：$adj(X)=\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)$&lt;/p&gt;
+
+&lt;p&gt;我們看見這個餘因子矩陣是一個對稱矩陣，這是由於原矩陣 $X$ 本身就是一個對稱矩陣。另外，行列式爲：&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}|X|&amp;amp;=1\times X_{11}+2\times X_{12}+1\times X_{13}\newline&amp;amp;=1\times1+2\times(-3)+1\times1\newline&amp;amp;=-4\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;因此所求的逆矩陣爲：&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}X^{-1}&amp;amp;=\frac{1}{|X|}adj(X)\newline
+&amp;amp;=\frac{1}{-4}\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)\newline
+&amp;amp;=\left(
+\begin{array}{c}
+-\frac{1}{4} &amp;amp; \frac{3}{4} &amp;amp; -\frac{1}{4} \newline
+\frac{3}{4} &amp;amp; -\frac{1}{4} &amp;amp; -\frac{1}{4} \newline
+-\frac{1}{4} &amp;amp; -\frac{1}{4} &amp;amp; \frac{3}{4}
+\end{array}
+\right)\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;(2) 試求矩陣 $A=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 3 &amp;amp; 1 \newline
+1 &amp;amp; 2 &amp;amp; 2
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11} &amp;amp; a_{12}  &amp;amp; a_{13} \newline
+a_{21} &amp;amp; a_{22}  &amp;amp; a_{23} \newline
+a_{31} &amp;amp; a_{32}  &amp;amp; a_{33}
+\end{array}
+\right)$ 的逆矩陣 $A^{-1}$:&lt;/p&gt;
+
+&lt;p&gt;$$\begin{array}
+=A_{11}=6-2=4, &amp;amp; A_{12}=-(4-1)=-3, &amp;amp; A_{13}=4-3=1 \newline
+A_{21}=-(4-2)=-2, &amp;amp; A_{22}=2-1=1, &amp;amp; A_{23}=-(2-2)=0 \newline
+A_{31}=2-3=-1, &amp;amp; A_{32}=-(1-2)=1, &amp;amp; A_{33}=3-4=-1
+\end{array}$$&lt;/p&gt;
+
+&lt;p&gt;$$adj(A)=\left(
+\begin{array}{c}
+4 &amp;amp; -3 &amp;amp; 1 \newline
+-2 &amp;amp; 1 &amp;amp; 0 \newline
+-1 &amp;amp; 1 &amp;amp; -1
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+4 &amp;amp; -2 &amp;amp; -1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; -1
+\end{array}
+\right)$$&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}
+|A| &amp;amp;=1\times A_{11}+2\times A_{12}+1\times A_{13} \newline
+    &amp;amp;=1\times4+2\times(-3)+1\times1 \newline
+    &amp;amp;=4-6+1 \newline
+    &amp;amp;=-1
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\therefore
+\begin{align}
+A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
+\begin{array}{c}
+4 &amp;amp; -2 &amp;amp; -1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; -1
+\end{array}
+\right) \newline
+&amp;amp;=\left(
+\begin{array}{c}
+-4 &amp;amp; 2 &amp;amp; 1 \newline
+3 &amp;amp; -1 &amp;amp; -1 \newline
+-1 &amp;amp; 0 &amp;amp; 1
+\end{array}
+\right)
+\end{align}$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>大英帝國簽證申請</title>
+      <link>https://winterwang.github.io/post/visa-application/</link>
+      <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/visa-application/</guid>
+      <description>&lt;p&gt;來說說7月31日去大阪交簽證材料的事情。&lt;/p&gt;
+
+&lt;p&gt;那叫一個鬱悶。
+總之，我在日本還是第一次遇見如此糟糕的接待。另外，大阪的簽證辦理中心，非常不好找，建議第一次去的人挑一個不那麼熱的日子去。這樣也不會像我一樣在馬路上被曬成狗。&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;div class=&#34;google-maps&#34;&gt;
+&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6562.23754229744!2d135.49993028993563!3d34.67695175141651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x58d2656af250486b!2zVkZTIEdMT0JBTCDjg5PjgrbnlLPoq4vjgrvjg7Pjgr_jg7w!5e0!3m2!1sen!2sjp!4v1501653424481&#34; width=&#34;350&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;當然我才不會告訴你我早上起晚了差點趕不上我訂的火車票（9：00）。而且近鐵列車的城市快線 &lt;a href=&#34;http://www.kintetsu.co.jp/gyoumu/meihan/culture/timetable/timetable_weekday.html&#34; target=&#34;_blank&#34;&gt;(urban liner)&lt;/a&gt; 開得不是很平穩，我半路感覺暈車不適還跑去洗手間把早飯吐了以後才能舒服一點得繼續坐到大阪難波車站。從難波車站再換乘御堂筋線到心斎橋，之後就出車站步行差不多10個被暴曬的街區到VFS簽證代理處。不過並非領事館或者大使館，所以我想應該不會像美國領事館那樣戒備森嚴。結果上到10樓VFS辦公室的地方，有提示語告訴我先按門鈴讓保安檢查攜帶行李。按了門鈴，出來一個身材矮小的保安問我預約的時間和簽證申請種類。我把我的預約郵件在手機上打開給他看確認以後才肯帶我進門。&lt;/p&gt;
+
+&lt;p&gt;進去之後就能看到一個還沒有我辦公室大的房間被隔板隔開成幾個部分。保安同學說不能用手機拍照，攜帶的筆記本拿出來給他確認關機。然後材料拿出來先交給保安。他又煞有介事地讓我把揹包每一層都打開給他看確認我沒帶炸彈。這些都搞定了以後又像機場安檢一樣全身掃描一遍確認我身上沒有綁着炸彈。。。&lt;/p&gt;
+
+&lt;p&gt;此時已經比我預約的時間晚了10分鐘。當然我不怪他。他只是認真完成任務。之後讓我在等待區域等待。不久之後來了一個接待員用機器人一樣的語調和口吻告訴我說：“把所有的材料按照不同類別分好類，一定要使用牆壁上掛着的那些分類用的不同顏色的紙張。” 我擡頭一看牆壁上掛着的文件架子上有紅色藍色黃色等不同顏色的A4紙。她又接着機械地說：“如果你發現自己不知道怎麼歸類整理這些文檔的話，我也可以幫你，但是要收取1920日元的服務費。” 我艹，連看文件整理都要收費，我心想。接待員小姐估計聽見我的心裏話了，漫不經心地又說，“你當然可以自己整理，不過責任自負喲。”&lt;/p&gt;
+
+&lt;p&gt;你這是在威脅我嗎？我心裏又想。後來才在他們的&lt;a href=&#34;http://www.vfsglobal.co.uk/japan/user_pay_services.html#15&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;上看到這樣的收費提示：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Application and Document Checks&lt;br&gt;
+The Application and Document Checks service is for applicants who have already applied and have printed out their application form to check that an application is complete before sending it to the UK Visas and Immigration in Manila.&lt;br&gt;
+The service will be charged an additional fee of JPY 1,920 per applicant. The fee can only be paid at Visa Application Centre in person by cash.&lt;br&gt;
+VFS staff will check mandatory required documents have been submitted, but not the actual content of the documents.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我想省這點錢來着，看着他們的分類文件，毫無提示，簡直就像在嘲諷我“你真的是個PhD嗎？”。隨便分類了以後我想就試試看算了去交材料時，她才說，你這個沒有清單表格不行，你這裏有一張是絕對不能使用的。我心裏十萬頭草泥馬奔騰而過，這些事你們爲啥不能寫在通知預約的郵件裏面呢？爲啥不能算在網上交的簽證費用裏面呢？&lt;/p&gt;
+
+&lt;p&gt;然後那小妞又告訴我說，“反正你要用郵寄服務收護照的話，你可以付錢我幫你整理阿，這兩個服務可以合算起來給你打九折！”。她是不是還期待我感激一下有折扣這件事呢？ “W！T！F！”三個字明確的寫在我的臉上，我想在日本這麼多年了，我TM還是第一次感覺回到了中國大陸。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/gif/wtf.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;強忍不爽的我無奈極了，說，那好吧你幫我整理材料吧。&lt;/p&gt;
+
+&lt;p&gt;總之，什麼都是我自己負責，什麼都要從我身上掏錢，出錯了什麼都該自認倒楣的這種噁心頭頂的感覺從一開始進門一直到錄完指紋，拍好照片準備要離開的時刻。下午1點多，十幾張材料才遞交完。&lt;/p&gt;
+
+&lt;p&gt;不知道是不是因爲接觸太多日本的無微不至的服務突然覺得有心理落差。但願以後去了英國不是這樣的服務。&lt;/p&gt;
+
+&lt;p&gt;兩週以後能否安全收到簽證呢？ 拭目以待。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
+      <link>https://winterwang.github.io/post/unconditional/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/unconditional/</guid>
+      <description>&lt;p&gt;言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。&lt;/p&gt;
+
+&lt;p&gt;本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。&lt;/p&gt;
+
+&lt;p&gt;結果6月8日那天收到郵件催促我快點滿足 offer 條件：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/meetingcondition.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。&lt;/p&gt;
+
+&lt;p&gt;因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Your documents didn’t meet the requirements because: &lt;br&gt;
+ 1.  The salary expectancy is not admissible &lt;br&gt;
+ 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. &lt;br&gt;
+ 3.  The bank statements did not include the bank name and logo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!&lt;/p&gt;
+
+&lt;p&gt;這些都好說。可是日本的銀行，&lt;strong&gt;沒有&lt;/strong&gt;這種類型的證明書（我也是第一次知道日本銀行不給開這樣子的證明）。所以許多人的解決辦法是讓銀行開一個月的流水賬單，要命的是這個證明不能開英文的，然後再去找翻譯公司翻譯流水。當然我也可以這麽辦。衹是，當我知道我的三個證明書都不能作爲有效的資金證明的時候，我離7月31日祗剩下不到2周時間了。在此奉勸后來者，一定要先準備好自己的資金證明書。最好能按照下面的樣本，讓銀行開具類似的證明書：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/bankstatement.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我在接到證明書不滿足條件的郵件的第二天，立刻去了銀行，接待我的銀行經理先是打報告給總部請示。毫無意外被擋回來。說如果是客人自己要求的樣式的證明書，無法給加銀行logo，也不能蓋章，衹能簽字。在我一個多小時的軟磨硬泡以後，經理鬆動了。竟然主動想辦法，她提議說，可以辦理bank statement，不過我看了他們給的bank statement樣本也是一個時間點的賬戶存款而已，無法滿足28天的資金維持證明。看我面有難色，日本人經理還是挺善解人意的，說，我可以把日期改成，從xx月xx日-xx月xx日（28天）的最低資金證明。這樣就能解決問題了。而且bank statement本身自帶銀行logo。謝天謝地，一項死板不能變通的日本人讓我從此刮目相看。解決了我的燃眉之急。也不必再去找翻譯公司翻譯賬戶流水了。有驚無險。第二天我拿到開好的證明，立刻掃描PDF郵件發給LSHTM，期待他們能馬上給開來 CAS (Confirmation of Acceptance of Studies)。等了一周，還是左等不來右等不來，距離7月31日還剩下不到10天了。終於無法忍耐等待的我，打電話去倫敦詢問我的情況。對方接電話的是個年輕女聲，優雅的倫敦音告訴我，不要着急，先無視學校的提醒滿足條件的郵件吧。我們會儘快看你的檔案。無奈我衹好作罷，挂了電話繼續等待。&lt;/p&gt;
+
+&lt;p&gt;結果第二天晚上就收到了確認函，說你的CAS很快就能發給你了。oh yeah！半夜裏我就收到了發來的新鮮剛出爐的CAS號碼以及新的無條件錄取證明：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/uncon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我很早以前就在&lt;a href=&#34;https://www.visa4uk.fco.gov.uk/home/welcome&#34; target=&#34;_blank&#34;&gt;visa4uk&lt;/a&gt;上註冊好了全部的信息，就等着學校發來 CAS 的文件了。於是我再花了半個小時把 CAS 上的內容填寫到簽證申請的網站上去。在申請的網站上，會中途跳出來讓你支付一年醫療保險的頁面（£150），付完保險費以後會收到自己的保險號碼。估計以後在英國如果需要看病的話報自己的保險號碼就OK了。於是乎我以迅雷不及掩耳之勢立刻預約了7月31日去大阪的簽證申請中心遞交簽證材料。&lt;/p&gt;
+
+&lt;p&gt;等待去辦簽證的過程中，又收到好消息，宿舍抽籤中了。於是我就成了倫敦準市民之一拉。哈哈哈哈。今兒真高興阿，今兒真高興。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/gif/shuang.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我抽中的是&lt;a href=&#34;http://halls.london.ac.uk/international-hall&#34; target=&#34;_blank&#34;&gt;International Hall&lt;/a&gt;的單人間。仔細閱讀了條款後發現，每週2百鎊的房租確實有點小貴，但是呢，確是包了早餐晚餐和週末的四餐的。我想這將會大大減輕時間和金錢的成本。畢竟只有一年的留學時間。將就將就吧，每天都是炸魚和薯條估計吃一週就會讓人瘋了誒。。。先做好心理準備。對伙食不應有太高期待。&lt;/p&gt;
+
+&lt;p&gt;萬事具備，&lt;del&gt;只差簽證了。&lt;/del&gt; 於是就到了預約機票的時候，查了半天各種中介的網站，結果都是什麼中轉三四次的，要不就是繞地球一大圈的，才能有價格比較便宜的。索性打電話去日本航空詢問有沒有給留學生準備的往返一年，時間靈活的機票。果然不問不知道，一問嚇一跳阿，電話接線員小哥樂呵呵:-)說，哎呀你這電話打的太是時候了，我們日本航空正好最近上線了歐洲航線的特價機票，而且專門針對你這樣要待三個月以上的客戶。一問價格，我的媽呀，出發行程已定，歸程未定的叫做半靈活機票 (semi-flexi)，日本航空的這個折扣價爲12萬日元。比全日空便宜了一半，比其他的可疑航空減少了飛行時間，還有什麼好說的，果斷就訂了。結果呢，準備付錢了小哥告訴我說，您現在先別付定金，我這裏已經幫你把機票預留好了，您等8月1日以後再上網站上打開訂單支付，因爲8月1日後的燃油稅機場時用費等雜費由於匯率等變化會再便宜一萬日元左右。&lt;strong&gt;W!T!F!&lt;/strong&gt; 感動得熱淚盈眶有沒有，簡直就想穿過電話線去擁抱這位小哥了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/jal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記21</title>
+      <link>https://winterwang.github.io/post/2017-07-07/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
+      <description>&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;行的基本變形&lt;/h2&gt;
+
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;p&gt;&lt;span id=&#34;thm:line&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (行的基本變形)  &lt;/strong&gt;&lt;/span&gt;對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;給任意一行乘以/除以一個非零的數。&lt;/li&gt;
+&lt;li&gt;給任意一行加上/減去另外任意行的倍數。&lt;/li&gt;
+&lt;li&gt;將任意兩行的對應元素互換。
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;練習基本變形：&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;用行的基本變形求矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\)&lt;/span&gt; 的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt; &lt;br&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;首先，將矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和同次單位矩陣 &lt;span class=&#34;math inline&#34;&gt;\(E_3\)&lt;/span&gt; 的元素寫成如下的左右並列的形式（用點隔開）&lt;span class=&#34;math inline&#34;&gt;\((X, E)\)&lt;/span&gt;。數字 (1) (2) (3) 表示行數：&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\
+2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 1 &amp;amp; 0\\
+1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{rr}
+(1)\\
+(2)\\
+(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可以變形成爲下面的形式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\
+0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -2 &amp;amp; 1 &amp;amp; 0\\
+0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)\\
+(2)=(2)-2\times(1)\\
+(3)=(3)-(1)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;繼續變形成如下的形式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
+0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; -3 &amp;amp; 1 &amp;amp; 1\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; -1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)+2\times(3)\\
+(2)=(2)+(3)\\
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; -1\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)\\
+(2)=(2)\div(-4)\\
+(3)=(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1/4 &amp;amp; 1/4 &amp;amp; -3/4\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)\\
+(2)=(2)\\
+(3)=(3)-(2)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
+1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+\end{array}\right) \begin{align}
+\left\{
+\begin{array}{l}
+(1)=(1)+3\times(3)\\
+(2)=(2)\\
+(3)=-1\times(3)
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;點 “&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;” 的左側變形成爲單位矩陣時，行變形結束。右側便是所求的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
+-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
+\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記20</title>
+      <link>https://winterwang.github.io/post/2017-07-06/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
+      <description>&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;逆矩陣&lt;/h2&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣定義&lt;/h3&gt;
+
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣的性質&lt;/h3&gt;
+&lt;p&gt;對於正則矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 有以下性質：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A，B\)&lt;/span&gt; 的順序對調了。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{-1})^{-1}=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{t})^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\)&lt;/span&gt; 的逆矩陣寫作： &lt;span class=&#34;math inline&#34;&gt;\(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)&lt;/span&gt;；&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處的條件爲所有對角成分均非零: &lt;span class=&#34;math inline&#34;&gt;\(a_{11}a_{22}\dotsm a_{nn}\neq 0\)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)(AB)^{-1}=E\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^{-1}A)B(AB)^{-1}=A^{-1}E\\ B(AB)^{-1}=A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(B^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((B^{-1}B)(AB)^{-1}=B^{-1}A^{-1}\\ E(AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;根據單位矩陣的性質：&lt;/a&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore (AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^{-1}=(A^{-1}A)^{-1}=A^{-1}(A^{-1})^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AE=AA^{-1}(A^{-1})^{-1}\\ \therefore A=(A^{-1})^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>溫度，污染，和電費</title>
+      <link>https://winterwang.github.io/post/2017-06-12/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-06-12/</guid>
+      <description>
+
+&lt;p&gt;&lt;audio src=&#34;https://winterwang.github.io/mp3/170503ACPollution.mp3&#34; controls=&#34;controls&#34;&gt;
+Your browser does not support the audio element.
+你的瀏覽器不支持音頻播放。請使用chrome科學上網。
+&lt;/audio&gt;&lt;/p&gt;
+
+&lt;p&gt;听写于：2017-6-12 16:6  用时：23:04
+正确率：93% 错词：19个
+提示：&lt;span class=&#34;diff_off&#34;&gt;红色&lt;/span&gt;：错误单词，&lt;span class=&#34;diff_add&#34;&gt;绿色&lt;/span&gt;：补上正确单词，&lt;span class=&#34;diff_alert&#34;&gt;黄色&lt;/span&gt;：纠正大小写与标点&lt;/div&gt;
+&lt;p class=&#34;linetext&#34;&gt;You may have noticed your summertime electricity bills&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; when &lt;span class=&#34;diff_off&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;are&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;you&amp;rsquo;re&lt;/span&gt; cranking the &lt;span class=&#34;diff_off&#34;&gt;A-C&lt;/span&gt;&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;A–C&lt;/span&gt;&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;They &#34;&gt;they &lt;/span&gt;are more pricey than your wintertime payments. That&amp;rsquo;s because &lt;span class=&#34;diff_alert&#34; title=&#34;air conditioning&#34; &gt;air-conditioning&lt;/span&gt;  is an electricity hog. And when a whole city or &lt;span class=&#34;diff_off&#34;&gt;your&lt;/span&gt; region turns down the thermostat, utilities have to meet that increased demand somehow. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;This is often when we turn on the oldest power plants or the dirtier power plants. Tracey Holloway, an &lt;span class=&#34;diff_off&#34;&gt;atmosphere&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;atmospheric&lt;/span&gt; scientist at the University of Wisconsin in Madison. Some of these &lt;span class=&#34;diff_off&#34;&gt;old&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;older&lt;/span&gt; power plants that &lt;span class=&#34;diff_off&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;only&lt;/span&gt; run on fuel oil or &lt;span class=&#34;diff_off&#34;&gt;may&lt;/span&gt; run on coal &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; only come &lt;span class=&#34;diff_add&#34;&gt;on&lt;/span&gt; on the hottest days. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Using data from the EPA, Holloway and her team studied how air pollutants respond when the temperature goes up. They found that across the eastern U. S. , for every degree &lt;span class=&#34;diff_off&#34;&gt;of&lt;/span&gt; Celsius temperature rise&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; power plants &lt;span class=&#34;diff_off&#34;&gt;spell&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;belched&lt;/span&gt; out &lt;span class=&#34;diff_off&#34;&gt;13000&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;140,000&lt;/span&gt; metric tons of additional carbon dioxide&lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;and &#34;&gt;And &lt;/span&gt;&lt;span class=&#34;diff_off&#34;&gt;admissions&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;emissions&lt;/span&gt; of the &lt;span class=&#34;diff_off&#34;&gt;pollutant&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;pollutants&lt;/span&gt; sulfur &lt;span class=&#34;diff_off&#34;&gt;dioxides&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;dioxide&lt;/span&gt; and nitrogen oxides rose &lt;span class=&#34;diff_off&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;three&lt;/span&gt; and a half percent per extra degree of heat&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; averaged across the region. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;That&amp;rsquo;s especially bad&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; because hot summer days are the &lt;span class=&#34;diff_off&#34;&gt;worse&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;worst&lt;/span&gt; days to pump out more pollution. &lt;span class=&#34;diff_off&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;These&lt;/span&gt; hot days&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; when we turn on &lt;span class=&#34;diff_add&#34;&gt;the&lt;/span&gt; air conditioning across the U. S. or &lt;span class=&#34;diff_off&#34;&gt;across&lt;/span&gt; the &lt;span class=&#34;diff_off&#34;&gt;states&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;state&lt;/span&gt; also happen to be the most chemically reactive days. So every unit of air pollution &lt;span class=&#34;diff_off&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;that&amp;rsquo;s&lt;/span&gt; going into the air is &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; you know &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; that much more likely to form ozone. &lt;span class=&#34;diff_off&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;And&lt;/span&gt; ozone itself is a potent air pollutant. The study is in the journal Environmental Science and Technology. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Holloway says the answer to &lt;span class=&#34;diff_off&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;this&lt;/span&gt; summertime pollution peak &lt;span class=&#34;diff_off&#34;&gt;maybe&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;be&lt;/span&gt; an energy source that thrives on hot&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; sunny days. If we could be getting solar electricity during this peak time &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; it may &lt;span class=&#34;diff_off&#34;&gt;all&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;offset&lt;/span&gt; this hot weather midday peak and be a great solution for avoiding having to turn on those peaking power plants. In other words: why not use the sun&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; to keep cool&lt;span class=&#34;diff_alert&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Words&lt;/em&gt; worth to be remembered:
+
+&lt;ul&gt;
+&lt;li&gt;cranking: 摇动, 起动, 开动&lt;/li&gt;
+&lt;li&gt;atmospheric: adj. 大气的，大气层的；有情调的，有魅力的&lt;/li&gt;
+&lt;li&gt;thermostat: n. 恒温（调节）器&lt;/li&gt;
+&lt;li&gt;hog: n. 猪；贪婪者，象猪般的人 v. （使）拱起&lt;/li&gt;
+&lt;li&gt;belch: n. 打嗝；喷吐；喷出物 v. 打嗝；喷出&lt;/li&gt;
+&lt;li&gt;offset: n. 抵销，支派，旁支，平版印刷 v. 弥补，抵销&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;譯文&#34;&gt;譯文&lt;/h2&gt;
+
+&lt;p&gt;或许你已经注意到夏季家里的电费情况，当你开启空调后，电费要比冬季更多些了。这是因为，空调属于耗电大户。而当一整座城市或者地区都调低恒温器的时候，功耗就不得不超过了需求。 这常见于当我们打开最古老的设备或者已经比较脏的发电设备时。这是Tracey Holloway，麦迪逊市Wisconsin 大学的一位研究大气的科学家。 这些古老的发电装备中有些只能依靠燃烧燃油或者煤炭，只在最热的日子里才会开启它们。 利用EPA 的数据， Holloway和她的研究团队对当温度升高时，空气污染物如何反应的问题进行了研究。 他们发现，贯穿美国东部， 温度每升高1摄氏度，发电厂可喷射出140，000吨额外的二氧化碳。而且，整个地区平均，热量每增加一度，污染物硫氧化物和氮氧化物的排放量就上升3.5 了个百分点。 这特别糟糕，因为炎热的夏季是泵出更多污染的最差的日子。 这些炎热的日子， 当美国人开启空调，或者一个州的居民开启空调， 这些日子也是化学反应最激烈的日子 。 每单位空气污染物进入空气很有可能就形成了臭氧。而臭氧本身是一种潜在的空气污染物。该研究已发表在《环境科学与技术》杂志上了。 Holloway说，应对夏季污染高峰的对策或许可以采用一种在炎热的阳光充足的日子里也很充足的能源。 如果我们可以在高峰时间得到 太阳能发电，这或许能抵消炎热的天气中午高峰时段的污染物排放，并且这还是一种避免不得不开启那些用电高峰时候才需要开启的发电厂的好办法。换句话说：为什么不用太阳提供的能量，保持凉爽呢。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>男人的魅力來自女人</title>
+      <link>https://winterwang.github.io/post/2017-05-31/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2017-05-31/</guid>
+      <description>
+
+&lt;p&gt;昨日說到&lt;a href=&#34;https://winterwang.github.io/post/2017-05-30/&#34; target=&#34;_blank&#34;&gt;BBC新聞聽寫在滬江外語學習之死&lt;/a&gt;。於是去跟他們客服詢問了一下。得到如下答覆：
+&lt;img src=&#34;https://winterwang.github.io/img/bbcdownagain.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;好吧，內容優化，就是潔淨咱們的大天朝局域網唄，正準備學習外語的小朋友們怎麼能看到BBC，VOA上面對偉大祖國的描述嘛。曾經一直認爲，學習外語是爲了增進與他國的交流，互通有無，如今卻深刻體會到學習外語的真實作用是瞭解真實的中國，瞭解那個我來自的地方。&lt;/p&gt;
+
+&lt;p&gt;最近&lt;a href=&#34;http://wasai.org/&#34; target=&#34;_blank&#34;&gt;新聞酸菜館&lt;/a&gt;也變成了只賣酸菜的館，内容優化那叫一個好！&lt;/p&gt;
+
+&lt;p&gt;今天的聽寫講的是刊登在進化心理學雜誌上的一篇&lt;a href=&#34;https://winterwang.github.io/files/menwomen.pdf&#34;&gt;論文&lt;/a&gt;。說有伴的男人更受歡迎。科學家認爲女生更青睞有伴的男人，特別是伴侶如果美豔如花魅力四射，即使他們本身長相一般。也許是因爲這些男人如果不能用外表吸引人，那一定是富有內涵，或者是富可敵國的。總之一句話，男人被另一個女人證明了自己的價值，那女性便可省去自己去試錯的時間和精力成本。&lt;/p&gt;
+
+&lt;p&gt;听写于：2017-5-31 11:24 用时：19:27
+正确率：93% 错词：14个&lt;/p&gt;
+
+&lt;p&gt;&lt;audio src=&#34;https://winterwang.github.io/mp3/menwomen.mp3&#34; controls=&#34;controls&#34;&gt;
+Your browser does not support the audio element.
+你的瀏覽器不支持音頻播放。請使用chrome科學上網。
+&lt;/audio&gt;&lt;/p&gt;
+
+&lt;p&gt;提示：&lt;span class=&#34;diff_off&#34;&gt;红色&lt;/span&gt;：错误单词，&lt;span class=&#34;diff_add&#34;&gt;绿色&lt;/span&gt;：补上正确单词，&lt;span class=&#34;diff_alert&#34;&gt;黄色&lt;/span&gt;：纠正大小写与标点&lt;/p&gt;
+
+&lt;p class=&#34;linetext&#34;&gt;It turns out the  &lt;span class=&#34;diff_alert&#34; title=&#34;best looking&#34;&gt;best-looking&lt;/span&gt; thing on a man &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;maybe&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;be&lt;/span&gt; a &lt;span class=&#34;diff_alert&#34; title=&#34;good looking&#34; &gt;good-looking&lt;/span&gt;  woman. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Researchers report that women find a man they see with an attractive woman more desirable than unattached men. That&#39;s according to a study in the journal Evolutionary Psychology. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Researchers had two groups of female college students rate photos of men &lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;All &#34;&gt;all &lt;/span&gt;of whom had first been rated as being of average attractiveness. The first group of 148 women &lt;span class=&#34;diff_off&#34;&gt;were&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;was&lt;/span&gt; shown pictures of those men with an attractive female. The subjects were told &lt;span class=&#34;diff_add&#34;&gt;that&lt;/span&gt; the women in the photos were either a girlfriend, ex-girlfriend, cousin &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; or adopted sister. And the subjects rated the men with &lt;span class=&#34;diff_add&#34;&gt;the&lt;/span&gt; girlfriends as more desirable than the men shown with partners described as being exes or relatives. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;The second study group of &lt;span class=&#34;diff_off&#34;&gt;79&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;97&lt;/span&gt; students were shown  &lt;span class=&#34;diff_alert&#34; title=&#34;average looking&#34;&gt;average-looking&lt;/span&gt; men with an attractive woman who was described as definitely a girlfriend. And again &lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; the women rated the men with the good-looking &lt;span class=&#34;diff_off&#34;&gt;girls&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;gals&lt;/span&gt; as more desirable than the single guys. Plus, the attached men were thought more likely to be more intelligent, trustworthy, humorous, &lt;span class=&#34;diff_off&#34;&gt;lovely&lt;/span&gt;&lt;span class=&#34;diff_alert&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;wealthy&lt;/span&gt; and attentive. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;Researchers &lt;span class=&#34;diff_off&#34;&gt;deduce&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;deduced&lt;/span&gt; that &lt;span class=&#34;diff_add&#34;&gt;the&lt;/span&gt; women probably assume &lt;span class=&#34;diff_off&#34;&gt;partners&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;that&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;partnered-up&lt;/span&gt; men must have those qualities of smarts and personality to be an appropriate match for a good-looking mate. &lt;/p&gt;&lt;p class=&#34;linetext&#34;&gt;So, turns out what many of us &lt;span class=&#34;diff_off&#34;&gt;so&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;expected&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;always&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;suspected&lt;/span&gt; may be true &lt;span class=&#34;diff_alert&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;diff_alert&#34; title=&#34;Men &#34;&gt;men &lt;/span&gt;look better when &lt;span class=&#34;diff_off&#34;&gt;they&lt;/span&gt; &lt;span class=&#34;diff_off&#34;&gt;are&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;they&#39;re&lt;/span&gt; &lt;span class=&#34;diff_add&#34;&gt;a&lt;/span&gt; proven commodity.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Words&lt;/em&gt; worth to be remembered:
+
+&lt;ul&gt;
+&lt;li&gt;partnered-up: 结为舞伴，有伴的。&lt;/li&gt;
+&lt;li&gt;gals: n. 女孩儿们（gal的复数，等于girls）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;譯文&#34;&gt;譯文&lt;/h2&gt;
+
+&lt;p&gt;据说能否成为有吸引力的男人取决另外一个有吸引力的女人。&lt;/p&gt;
+
+&lt;p&gt;据研究报道，女性看到一个身旁有另外一个具有吸引力的女人的男人时会觉得这个男人更具有吸引力。这是跟据发表在进化心理学杂志上的一个研究得出的结论。&lt;/p&gt;
+
+&lt;p&gt;研究人员招募了两组女性大学生对一些男性的照片进行评分——所有那些单身照开始都被评价为具有一般水平的吸引力。第一组有148名女士，给她们出示的照片里的那些男士们身旁都有一位有吸引力的女士陪伴。 这些大学生们被告知，照片中的那些女人可能是照片中男士的女朋友，前女友，堂/表兄妹或者养女。而这些女大学生们对这些有女朋友陪伴的男士的评价是比那些被告知说他们身旁是前任或者亲属的男士更令人满意。&lt;/p&gt;
+
+&lt;p&gt;第二项研究招募的是97名学生，他们被出示的照片中的男性外貌一般，但身旁都有一位十分有吸引力的被告知是女朋友的女伴。结果这些女学生再次对有女朋友陪伴的男士的评价高于对单身男士的评价。而且，附加描述是这些男士被认为很有可能更聪明，可靠，幽默，富有以及细心。&lt;/p&gt;
+
+&lt;p&gt;研究人员的推论是，女性或许对有同伴的男性的评价都是认为他们具有聪明的特质以及适合匹配高颜值伴侣的品格。&lt;/p&gt;
+
+&lt;p&gt;所以，貌似我们中很多人总是怀疑的事也许还真不假——被验证过的男人最有吸引力。&lt;/p&gt;
 </description>
     </item>
     
