@@ -1092,6 +1092,15 @@
     
     
     <url>
+      <loc>https://winterwang.github.io/tags/</loc>
+      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://winterwang.github.io/publication_types/1/</loc>
       <lastmod>2011-05-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -1181,8 +1190,17 @@
     
     
     <url>
+      <loc>https://winterwang.github.io/categories/conference/</loc>
+      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://winterwang.github.io/categories/diary/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1433,7 +1451,7 @@
     
     <url>
       <loc>https://winterwang.github.io/tags/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
