@@ -7,7 +7,7 @@ categories: []
 tags:
   - basic mathematics
   - Medical Statistics
-summary: "統計學中常用的簡單數學規則"
+summary: "統計學中常用的簡單數學規則 (1)"
 ---
 
 
@@ -60,7 +60,7 @@ $$\int a dx=ax ;\;\;\;\;\;\; \int af(x)dx = a \int f(x)dx \\
 **Intergrating by parts**: $\int_a^b u\frac{dv}{dx}dx = [uv]_a^b - \int_a^bv\frac{du}{dx}dx$
 </span>
 
-## RULE: L. I. A. T. E.
+## RULE: L. I. A. T. E. (分步積分法應用時定義 u 的優先順序)
 - L: logarithm
 - I: Inverse trigonometric (反三角函數)
 - A: Algebra

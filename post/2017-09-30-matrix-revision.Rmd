@@ -1,0 +1,95 @@
+---
+title: Matrix Revision
+author: ''
+date: '2017-09-30'
+slug: matrix-revision
+categories:
+  - statistics
+tags:
+  - basic mathematics
+  - linear algebra
+  - Medical Statistics
+  - LSHTM
+  - London
+summary: "統計學中常用的簡單數學規則 (2)"
+---
+
+## Basic Definition and notations:
+
+1. An $m\times n$ **matrix $A$** is a rectangular array of numbers with $m$ rows and $n$ columns.
+2. The **elements** of a matrix $A_{m\times n}$ are $a_{ij}$
+3. The **order** of a matrix is the number of rows by the number of columns, i.e. $m\times n$
+4. A **column vector** with $m$ elements, $y = \left(
+\begin{array}{c}
+y_1\\
+y_2\\
+\vdots\\
+y_n
+\end{array}
+\right)$, is a matrix with only one column i.e. an $m\times 1$ matrix.
+5. A **row vector** with $n$ elements, $x=(x_1,x_2,x_3, \cdots, x_n)$, is a matrix with only one row, i.e. an $1\times n$ matrix.
+6. **Transposed matrix** $A^T$ (or $A'$) arises from the matrix $A$ by interchanging the column vectors and the row vectors i.e. $a_{ij}^T = a_{ji}$ (so a column vector is converted into a row vector and vise versa)
+7. **A partitioned matrix** is a matrix written in terms of sub-matrices. $A=\left(
+\begin{array}{c}
+A_{11} & A_{12}\\
+A_{21} & A_{22}\\
+\end{array}
+\right)$, where $A_{11},A_{12},A_{21},A_{22}$ are sub-matrices
+
+    1. $A_{11}, A_{21}$ have the same number of columns, so do $A_{12}, A_{22}$
+    2. $A_{11}, A_{12}$ have the same number of rows, so do $A_{21}, A_{22}$
+    3. partitioning is not restricted to dividing a matrix into just four sub-matrices
+
+
+8. **A square matrix** has exactly as many rows as it has columns i.e. the order of the matrix is $n\times n$
+9. **The main diagonal** (or leading diagnonal) of a square matrix $A (n\times n)$ are the elements lying on the diagnoal **from top left to bottom right.** $a_{11},a_{22},a_{33},\cdots,a_{nn}$ i.e. all $a_{ii}, i= 1,\cdots, n$
+10. **The trace ** of a square matrix is the sum of the diagonal elements $tr(A)=a_{11}+a_{22}+\cdots+a_{nn}=\sum_{i=1}^na_{ii}$
+
+
+## Special matrices
+
+1. **A symmetric matrix** is a square matrix for which the following is true for all the off diagonal elements. $a_{ij}=a_{ji}$ i.e. $A^T=A$
+2. **Diagonal matrix** is a square matrix having zero for all the non-diagonal elements i.e. $A=\left(
+\begin{array}{c}
+a_{11} & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0      & \cdots & a_{nn}
+\end{array}
+\right)$
+3. **Zero matrix** (null matrix) is a matrix whose all elements are zero
+4. **Identity matrix** (or unit matrix) is a diagonal matrix having all diagonal elements equal to 1 and off diagonal elements equal to zero. i.e. $I=\left(
+\begin{array}{c}
+1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0      & \cdots & 1
+\end{array}
+\right)$
+5. **"Summing vector"** is a vector whose every element is 1 i.e. $1_{n}=(1\cdots1)$
+6. **"J matrix"** is a matrix (not necessarily square) whose every element is 1 i.e. $J_{m\times n}=\left(
+\begin{array}{c}
+1 & 1 & \cdots & 1\\
+1 & 1 & \cdots & 1 \\
+\vdots & \vdots & \ddots & \vdots\\
+1 & 1 & \cdots & 1
+\end{array}
+\right)$
+
+## Basic Operations
+
+
+ {{% alert note %}}
+**Addition (Substraction)** can take place only when the matrices involved are of the same order. i.e.
+Two matrices can be added (subtracted) only if they have the same numbers of rows and the same numbers of columns.
+ {{% /alert %}}
+
+- $A+B=B+A$
+- $(A+B)+C=A+(B+C)$
+- $A+0=0+A=A$
+- $A+(-A)=0$
+- $(A+B)^T=A^T+B^T$
+
+**Multiplication by scalar:**
+- $cA=Ac$
+- $c(dA)=(cd)A$
+- $(c\pm d)A=cA\pm dA$
+- $c(A\pm B)=cA \pm  cB$

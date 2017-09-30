@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/first-impression-of-london2/">
+  <link rel="canonical" href="https://winterwang.github.io/post/matrix-revision/">
 
   
 
-  <title>倫敦城漫步 (2) | Be ambitious</title>
+  <title>Matrix Revision | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,14 +160,14 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">倫敦城漫步 (2)</h1>
+    <h1 itemprop="name">Matrix Revision</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Wed, Sep 27, 2017
+    <time datetime="2017-09-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sat, Sep 30, 2017
     </time>
   </span>
 
@@ -177,10 +177,7 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/diary">diary</a
-    >, 
-    
-    <a href="/categories/study-abroad">study abroad</a
+    <a href="/categories/statistics">statistics</a
     >
     
   </span>
@@ -193,7 +190,16 @@
   <span class="article-tags">
     <i class="fa fa-tags"></i>
     
-    <a href="/tags/experience">experience</a
+    <a href="/tags/basic-mathematics">basic mathematics</a
+    >, 
+    
+    <a href="/tags/linear-algebra">linear algebra</a
+    >, 
+    
+    <a href="/tags/medical-statistics">Medical Statistics</a
+    >, 
+    
+    <a href="/tags/lshtm">LSHTM</a
     >, 
     
     <a href="/tags/london">London</a
@@ -209,35 +215,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2ffirst-impression-of-london2%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e5%80%ab%e6%95%a6%e5%9f%8e%e6%bc%ab%e6%ad%a5%20%282%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffirst-impression-of-london2%2f"
+         href="https://twitter.com/intent/tweet?text=Matrix%20Revision&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffirst-impression-of-london2%2f&amp;title=%e5%80%ab%e6%95%a6%e5%9f%8e%e6%bc%ab%e6%ad%a5%20%282%29"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f&amp;title=Matrix%20Revision"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffirst-impression-of-london2%2f&amp;title=%e5%80%ab%e6%95%a6%e5%9f%8e%e6%bc%ab%e6%ad%a5%20%282%29"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f&amp;title=Matrix%20Revision"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e5%80%ab%e6%95%a6%e5%9f%8e%e6%bc%ab%e6%ad%a5%20%282%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2ffirst-impression-of-london2%2f">
+         href="mailto:?subject=Matrix%20Revision&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -250,80 +256,53 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      
+      <div id="basic-definition-and-notations" class="section level2">
+<h2>Basic Definition and notations:</h2>
+<ol style="list-style-type: decimal">
+<li>An <span class="math inline">\(m\times n\)</span> <strong>matrix <span class="math inline">\(A\)</span></strong> is a rectangular array of numbers with <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns.</li>
+<li>The <strong>elements</strong> of a matrix <span class="math inline">\(A_{m\times n}\)</span> are <span class="math inline">\(a_{ij}\)</span></li>
+<li>The <strong>order</strong> of a matrix is the number of rows by the number of columns, i.e. <span class="math inline">\(m\times n\)</span></li>
+<li>A <strong>column vector</strong> with <span class="math inline">\(m\)</span> elements, <span class="math inline">\(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\)</span>, is a matrix with only one column i.e. an <span class="math inline">\(m\times 1\)</span> matrix.</li>
+<li>A <strong>row vector</strong> with <span class="math inline">\(n\)</span> elements, <span class="math inline">\(x=(x_1,x_2,x_3, \cdots, x_n)\)</span>, is a matrix with only one row, i.e. an <span class="math inline">\(1\times n\)</span> matrix.</li>
+<li><strong>Transposed matrix</strong> <span class="math inline">\(A^T\)</span> (or <span class="math inline">\(A&#39;\)</span>) arises from the matrix <span class="math inline">\(A\)</span> by interchanging the column vectors and the row vectors i.e. <span class="math inline">\(a_{ij}^T = a_{ji}\)</span> (so a column vector is converted into a row vector and vise versa)</li>
+<li><p><strong>A partitioned matrix</strong> is a matrix written in terms of sub-matrices. <span class="math inline">\(A=\left( \begin{array}{c} A_{11} &amp; A_{12}\\ A_{21} &amp; A_{22}\\ \end{array} \right)\)</span>, where <span class="math inline">\(A_{11},A_{12},A_{21},A_{22}\)</span> are sub-matrices</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(A_{11}, A_{21}\)</span> have the same number of columns, so do <span class="math inline">\(A_{12}, A_{22}\)</span></li>
+<li><span class="math inline">\(A_{11}, A_{12}\)</span> have the same number of rows, so do <span class="math inline">\(A_{21}, A_{22}\)</span></li>
+<li>partitioning is not restricted to dividing a matrix into just four sub-matrices</li>
+</ol></li>
+<li><strong>A square matrix</strong> has exactly as many rows as it has columns i.e. the order of the matrix is <span class="math inline">\(n\times n\)</span></li>
+<li><strong>The main diagonal</strong> (or leading diagnonal) of a square matrix <span class="math inline">\(A (n\times n)\)</span> are the elements lying on the diagnoal <strong>from top left to bottom right.</strong> <span class="math inline">\(a_{11},a_{22},a_{33},\cdots,a_{nn}\)</span> i.e. all <span class="math inline">\(a_{ii}, i= 1,\cdots, n\)</span></li>
+<li><p><strong>The trace </strong> of a square matrix is the sum of the diagonal elements <span class="math inline">\(tr(A)=a_{11}+a_{22}+\cdots+a_{nn}=\sum_{i=1}^na_{ii}\)</span></p></li>
+</ol>
+</div>
+<div id="special-matrices" class="section level2">
+<h2>Special matrices</h2>
+<ol style="list-style-type: decimal">
+<li><strong>A symmetric matrix</strong> is a square matrix for which the following is true for all the off diagonal elements. <span class="math inline">\(a_{ij}=a_{ji}\)</span> i.e. <span class="math inline">\(A^T=A\)</span></li>
+<li><strong>Diagonal matrix</strong> is a square matrix having zero for all the non-diagonal elements i.e. <span class="math inline">\(A=\left( \begin{array}{c} a_{11} &amp; \cdots &amp; 0\\ \vdots &amp; \ddots &amp; \vdots\\ 0 &amp; \cdots &amp; a_{nn} \end{array} \right)\)</span></li>
+<li><strong>Zero matrix</strong> (null matrix) is a matrix whose all elements are zero</li>
+<li><strong>Identity matrix</strong> (or unit matrix) is a diagonal matrix having all diagonal elements equal to 1 and off diagonal elements equal to zero. i.e. <span class="math inline">\(I=\left( \begin{array}{c} 1 &amp; \cdots &amp; 0\\ \vdots &amp; \ddots &amp; \vdots\\ 0 &amp; \cdots &amp; 1 \end{array} \right)\)</span></li>
+<li><strong>“Summing vector”</strong> is a vector whose every element is 1 i.e. <span class="math inline">\(1_{n}=(1\cdots1)\)</span></li>
+<li><strong>“J matrix”</strong> is a matrix (not necessarily square) whose every element is 1 i.e. <span class="math inline">\(J_{m\times n}=\left( \begin{array}{c} 1 &amp; 1 &amp; \cdots &amp; 1\\ 1 &amp; 1 &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ 1 &amp; 1 &amp; \cdots &amp; 1 \end{array} \right)\)</span></li>
+</ol>
+</div>
+<div id="basic-operations" class="section level2">
+<h2>Basic Operations</h2>
+<div class="alert alert-note">
+  <p><strong>Addition (Substraction)</strong> can take place only when the matrices involved are of the same order. i.e. Two matrices can be added (subtracted) only if they have the same numbers of rows and the same numbers of columns.</p>
 
-<p>我們學科 (Medical Statistics) 是爲數不多的在 Orientation 周就有一半以上的時間在上課的學科。別的學科像 Epidemiology 這周還集體去劍橋大學見學啥的。幾乎都是第二周，也就是10月2日週一開始的時候才有大量的必修和選修課。所以不見得再有太多時間寫見聞和體驗。（也沒有時間出去玩了&hellip;..）不過學習的內容還是會來更新一下，給各位有個印象，也讓大家都來判斷以下，這裏的碩士課程的內容和質量到底如何。</p>
+</div>
 
-<h4 id="9月22日-isw-ucl-福爾摩斯博物館-的紀念品商店">9月22日 ISW &amp; UCL &amp; 福爾摩斯博物館（的紀念品商店）</h4>
-
-<p>忘了交代，9月21日和22日都是 Internatioanal Student Welcome (留學生歡迎會, ISW) 的日子。充滿對這一年的期待，和但是是否自己能最終倖存下來的不安，坐在這樣壓力巨大的梯形教室裏，我和這麼多來自世界各地的年輕人成爲了同學：
-<img src="/img/1015171443.jpg" alt="" /></p>
-
-<p>這個教室就是大名鼎鼎的 <a href="http://johnsnowbicentenary.lshtm.ac.uk/about-john-snow/" target="_blank">John Snow</a> Lecture Theatre。我就知道你以爲是這個人：
-<img src="/img/Jonsnow.jpg" alt="" /></p>
-
-<p>其實歷史上的 Snow 同學可是奠定了近代流行病學基礎的巨人。比這個 bastard 強$^{9999999}$ 多了好麼，快去維基百科自學去。</p>
-
-<p>這個大名鼎鼎的水泵就是他拆的！
-<img src="/img/1759791785.jpg" alt="" /></p>
-
-<p>閒話少敘，註冊參加時，排隊的樣子：
-<img src="/img/1738788923.jpg" alt="" /></p>
-
-<p>領到自己的卡，寫上自己的名，和課程名稱 (原諒我的粗鄙的筆跡)：
-<img src="/img/39418260.jpg" alt="" /></p>
-
-<p>看這梯形教室有多陡峭：（據說梯形教室陡峭的程度和學習壓力成正比）</p>
-
-<p><img src="/img/876198141.jpg" alt="" /></p>
-
-<p>學校還請來了倫敦警察（可愛壞）薯熟來跟大家講我以前感覺只有在中國才會有的防盜防火防學長的故事：</p>
-
-<p><img src="/img/697554235.jpg" alt="" /></p>
-
-<p>22日中午結束以後我就步行在大學附近閒逛，UCL就在我們大學 Keppel Street 往北一點點。連3分鐘都不到。看這<strong>大學</strong>，真有<strong>大學</strong>的感覺：</p>
-
-<p><img src="/img/761318563.jpg" alt="" /></p>
-
-<p>爲數不多的晴天在這一週已經碰到兩天了。是不是應該買張彩票試試看？（笑）
-UCL是以前高中同班同學待過（一個已經回廈門），和正在待的地方（一個正在博士後/Research Assistant?）。</p>
-
-<p><img src="/img/16618557.jpg" alt="" /></p>
-
-<p>大學對面是UCL的醫學院：</p>
-
-<p><img src="/img/979802270.jpg" alt="" /></p>
-
-<p>有那麼一點點霍格沃茨的感覺。我在校內略逛了以下，起身前去貝克街。如果你聽說過貝克街，那你一定聽說過221號B。因爲這是小說裏福爾摩斯和華生的住址。來之前我就查過了，距離倫敦大學步行半個小時左右，中途還會經過杜莎夫人蠟像館（聽起來就令人覺得索然無味的地方）。</p>
-
-<p>當我來到貝克街的時候，路邊有個福爾摩斯的雕像，許多人駐足和心目中世界上最聰明的男人合影留念：</p>
-
-<p><img src="/img/801300689.jpg" alt="" /></p>
-
-<p>旁邊還有一個貝克街的公共汽車站證明了這可是真實存在的地址哦：</p>
-
-<p><img src="/img/1411584999.jpg" alt="" /></p>
-
-<p>但是其實這裏只是貝克街的起點。走到 Baker Street 221 B 之後我被門口排的長隊驚呆了：</p>
-
-<p><img src="/img/1790216276.jpg" alt="" /></p>
-
-<p>於是我趕緊跟在隊的最後面排隊，大概五分鐘過後有個老頭過來問說，你買了門票了嗎？ 我說我還以爲這裏就是排隊買門票呢。他說這些人都是排隊進福爾摩斯紀念館的。旁邊的小房間現在是紀念品商店，可以在那裏買到門票。所以我就轉身進入了紀念品商店。</p>
-
-<p><img src="/img/1556464625.jpg" alt="" /></p>
-
-<p>商店裏還真是應有盡有。你能想到的關於福爾摩斯的任何東西。而且大多數價格都不便宜：</p>
-
-<p><img src="/img/2032661472.jpg" alt="" />
-這個杯子賣八鎊，低下寫着英國製造。</p>
-
-<p>這頂帽子，全羊毛手工製作，也寫着英國製造，49鎊一頂：</p>
-
-<p><img src="/img/IMG_20170922_165434.jpg" alt="" /></p>
-
-<p>這兩個東西正好也是我現在需要的。所以我就買了下來。但是進入紀念館的門票竟然要16英鎊。我想還是等我有學生優惠了以後再來問問看吧。說不定可以便宜一些。打道回府的路上又經過UCL，在這棟標誌性的建築物門口的長椅上坐了許久，休息，沉思。側面的角度還是很有感覺的呢。</p>
-
-<p><img src="/img/1277846351.jpg" alt="" /></p>
+<ul>
+<li><span class="math inline">\(A+B=B+A\)</span></li>
+<li><span class="math inline">\((A+B)+C=A+(B+C)\)</span></li>
+<li><span class="math inline">\(A+0=0+A=A\)</span></li>
+<li><span class="math inline">\(A+(-A)=0\)</span></li>
+<li><span class="math inline">\((A+B)^T=A^T+B^T\)</span></li>
+</ul>
+<p><strong>Multiplication by scalar:</strong> - <span class="math inline">\(cA=Ac\)</span> - <span class="math inline">\(c(dA)=(cd)A\)</span> - <span class="math inline">\((c\pm d)A=cA\pm dA\)</span> - <span class="math inline">\(c(A\pm B)=cA \pm cB\)</span></p>
+</div>
 
     </div>
   </div>
@@ -334,12 +313,12 @@ UCL是以前高中同班同學待過（一個已經回廈門），和正在待�
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/first-impression-of-london/"><span
-      aria-hidden="true">&larr;</span> 漫步倫敦城 (1)</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/first-impression-of-london2/"><span
+      aria-hidden="true">&larr;</span> 倫敦城漫步 (2)</a></li>
     
 
     
-    <li class="next"><a href="https://winterwang.github.io/post/matrix-revision/">Matrix Revision <span
+    <li class="next"><a href="https://winterwang.github.io/post/notes-of-basic-rules-in-maths/">Maths Revisions <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
