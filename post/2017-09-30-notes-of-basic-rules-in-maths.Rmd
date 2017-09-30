@@ -1,0 +1,68 @@
+---
+title: Maths Revisions
+author: ''
+date: '2017-09-30'
+slug: notes-of-basic-rules-in-maths
+categories: []
+tags:
+  - basic mathematics
+  - Medical Statistics
+summary: "統計學中常用的簡單數學規則"
+---
+
+
+## Function, Calculus
+
+### Exponential Rules
+
+$$a^m \times a^n = a^{m+n} ;\;\;\;\;\;\;  a^{-m} = \frac{1}{a^m}\\
+  \frac{a^m}{a^n} = a^{m-n} ;\;\;\;\;\;\; (a^m)^n = a^{mn} \\
+  (ab)^m=a^mb^m ;\;\;\;\;\;\; a^0=1$$
+
+### Rules for Logarithms
+
+$$ log(ab)=log(a)+log(b) ;\;\;\;\;\;\; log(\frac{a}{b})= log(a)-log(b) \\
+log(a^n)=n\times log(a) ;\;\;\;\;\;\; log_aa=1 \\
+log_a1=0
+$$
+
+### Rules for the summation and product fuctions
+
+$$\prod_{i=1}^n x_i=(x_1\cdot x_2\cdot x_3 \dots x_n) \\
+\prod_{i=1}^nax_i = a^n\prod_{i=1}^nx_i \\
+\sum_{i=1}^nx_i=(x_1+x_2+x_3+\dots+x_n) \\
+\sum_{i=1}^nax_i=a\sum_{i=1}^nx_i \\
+\sum_{i=1}^na=na
+$$
+
+### Some Rules for Defferentiation
+
+$$\frac{d}{dx}a=0 ;\;\;\;\;\;\; \frac{d}{dx}ax=a \\
+\frac{d}{dx}x^n=nx^{n-1} ;\;\;\;\;\;\; \frac{d}{dx}log_e(x)=\frac{1}{x}\\
+\frac{d}{dx}e^x=e^x ;\;\;\;\;\;\; \frac{d}{dx}e^{F(x)}=\frac{dF(x)}{dx}e^{F(x)}=F^\prime(x)e^{F(x)}\\\frac{d}{dx}(F(x)+L(x))=F'(x)+L'(x)\\
+\frac{d}{dx}(F(x)\cdot L(x))=L(x)F'(x)+F(x)L'(x)\\
+\frac{d}{dx}(\frac{F(x)}{L(x)})=\frac{F'(x)}{L(x)}-\frac{F(x)\cdot L'(x)}{[L(x)]^2}=\frac{F'(x)L(x)-L'(x)F(x)}{[L(x)]^2}$$
+
+<span class="diff_alert">
+**Chain Rule**:
+$\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}$
+</span>
+
+### Some Rules for Integrals
+
+$$\int a dx=ax ;\;\;\;\;\;\; \int af(x)dx = a \int f(x)dx \\
+\int x^ndx = \frac{x^{n+1}}{n+1}  ;\;\;\;\;\;\; \int F'(x)[F(x)]^n dx = \frac{[F(x)]^{n+1}}{n+1} \\
+\int e^xdx = e^x  ;\;\;\;\;\;\; \int F'(x)e^{F(x)}dx = e^{F(x)} \\
+\int \frac{1}{x}dx = log_e(x)  ;\;\;\;\;\;\; \int \frac{F'(x)}{F(x)}dx=log_e(F(x))\\
+\int (F(x)+L(x))dx = \int F(x)dx + \int L(x)dx$$
+
+<span class="diff_alert">
+**Intergrating by parts**: $\int_a^b u\frac{dv}{dx}dx = [uv]_a^b - \int_a^bv\frac{du}{dx}dx$
+</span>
+
+## RULE: L. I. A. T. E.
+- L: logarithm
+- I: Inverse trigonometric (反三角函數)
+- A: Algebra
+- T: Trigonometric
+- E: Exponential

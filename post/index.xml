@@ -11,6 +11,68 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Maths Revisions</title>
+      <link>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</link>
+      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</guid>
+      <description>&lt;div id=&#34;function-calculus&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Function, Calculus&lt;/h2&gt;
+&lt;div id=&#34;exponential-rules&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exponential Rules&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a^m \times a^n = a^{m+n} ;\;\;\;\;\;\;  a^{-m} = \frac{1}{a^m}\\
+  \frac{a^m}{a^n} = a^{m-n} ;\;\;\;\;\;\; (a^m)^n = a^{mn} \\
+  (ab)^m=a^mb^m ;\;\;\;\;\;\; a^0=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rules-for-logarithms&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rules for Logarithms&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ log(ab)=log(a)+log(b) ;\;\;\;\;\;\; log(\frac{a}{b})= log(a)-log(b) \\
+log(a^n)=n\times log(a) ;\;\;\;\;\;\; log_aa=1 \\
+log_a1=0
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rules-for-the-summation-and-product-fuctions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rules for the summation and product fuctions&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\prod_{i=1}^n x_i=(x_1\cdot x_2\cdot x_3 \dots x_n) \\
+\prod_{i=1}^nax_i = a^n\prod_{i=1}^nx_i \\
+\sum_{i=1}^nx_i=(x_1+x_2+x_3+\dots+x_n) \\
+\sum_{i=1}^nax_i=a\sum_{i=1}^nx_i \\
+\sum_{i=1}^na=na
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-rules-for-defferentiation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Some Rules for Defferentiation&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d}{dx}a=0 ;\;\;\;\;\;\; \frac{d}{dx}ax=a \\
+\frac{d}{dx}x^n=nx^{n-1} ;\;\;\;\;\;\; \frac{d}{dx}log_e(x)=\frac{1}{x}\\
+\frac{d}{dx}e^x=e^x ;\;\;\;\;\;\; \frac{d}{dx}e^{F(x)}=\frac{dF(x)}{dx}e^{F(x)}=F^\prime(x)e^{F(x)}\\\frac{d}{dx}(F(x)+L(x))=F&amp;#39;(x)+L&amp;#39;(x)\\
+\frac{d}{dx}(F(x)\cdot L(x))=L(x)F&amp;#39;(x)+F(x)L&amp;#39;(x)\\
+\frac{d}{dx}(\frac{F(x)}{L(x)})=\frac{F&amp;#39;(x)}{L(x)}-\frac{F(x)\cdot L&amp;#39;(x)}{[L(x)]^2}=\frac{F&amp;#39;(x)L(x)-L&amp;#39;(x)F(x)}{[L(x)]^2}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt; &lt;strong&gt;Chain Rule&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}\)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-rules-for-integrals&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Some Rules for Integrals&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\int a dx=ax ;\;\;\;\;\;\; \int af(x)dx = a \int f(x)dx \\
+\int x^ndx = \frac{x^{n+1}}{n+1}  ;\;\;\;\;\;\; \int F&amp;#39;(x)[F(x)]^n dx = \frac{[F(x)]^{n+1}}{n+1} \\
+\int e^xdx = e^x  ;\;\;\;\;\;\; \int F&amp;#39;(x)e^{F(x)}dx = e^{F(x)} \\
+\int \frac{1}{x}dx = log_e(x)  ;\;\;\;\;\;\; \int \frac{F&amp;#39;(x)}{F(x)}dx=log_e(F(x))\\
+\int (F(x)+L(x))dx = \int F(x)dx + \int L(x)dx\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt; &lt;strong&gt;Intergrating by parts&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\int_a^b u\frac{dv}{dx}dx = [uv]_a^b - \int_a^bv\frac{du}{dx}dx\)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rule-l.-i.-a.-t.-e.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;RULE: L. I. A. T. E.&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;L: logarithm&lt;/li&gt;
+&lt;li&gt;I: Inverse trigonometric (反三角函數)&lt;/li&gt;
+&lt;li&gt;A: Algebra&lt;/li&gt;
+&lt;li&gt;T: Trigonometric&lt;/li&gt;
+&lt;li&gt;E: Exponential&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>倫敦城漫步 (2)</title>
       <link>https://winterwang.github.io/post/first-impression-of-london2/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
@@ -1127,132 +1189,6 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/jal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>https://winterwang.github.io/post/2017-07-07/</link>
-      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;行的基本變形&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;p&gt;&lt;span id=&#34;thm:line&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (行的基本變形)  &lt;/strong&gt;&lt;/span&gt;對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;給任意一行乘以/除以一個非零的數。&lt;/li&gt;
-&lt;li&gt;給任意一行加上/減去另外任意行的倍數。&lt;/li&gt;
-&lt;li&gt;將任意兩行的對應元素互換。
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;練習基本變形：&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;用行的基本變形求矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\)&lt;/span&gt; 的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt; &lt;br&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;首先，將矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和同次單位矩陣 &lt;span class=&#34;math inline&#34;&gt;\(E_3\)&lt;/span&gt; 的元素寫成如下的左右並列的形式（用點隔開）&lt;span class=&#34;math inline&#34;&gt;\((X, E)\)&lt;/span&gt;。數字 (1) (2) (3) 表示行數：&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\
-2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 1 &amp;amp; 0\\
-1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{rr}
-(1)\\
-(2)\\
-(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;可以變形成爲下面的形式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\
-0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -2 &amp;amp; 1 &amp;amp; 0\\
-0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)\\
-(2)=(2)-2\times(1)\\
-(3)=(3)-(1)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;繼續變形成如下的形式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
-0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; -3 &amp;amp; 1 &amp;amp; 1\\
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)+2\times(3)\\
-(2)=(2)+(3)\\
-(3)=-1\times(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Next:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)\\
-(2)=(2)\div(-4)\\
-(3)=(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Next:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; -1 &amp;amp; 0 &amp;amp; 2\\
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
-0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; 1/4 &amp;amp; 1/4 &amp;amp; -3/4\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)\\
-(2)=(2)\\
-(3)=(3)-(2)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Next:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
-0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)+3\times(3)\\
-(2)=(2)\\
-(3)=-1\times(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;點 “&lt;span class=&#34;math inline&#34;&gt;\(\vdots\)&lt;/span&gt;” 的左側變形成爲單位矩陣時，行變形結束。右側便是所求的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
--1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
-3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
--1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;q--elementary-column-operations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Q: 如果有行的基本變形，請問有沒有列的基本變形 (elementary column operations)？&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     

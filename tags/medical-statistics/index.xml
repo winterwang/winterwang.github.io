@@ -7,8 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 16 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/medical-statistics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Maths Revisions</title>
+      <link>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</link>
+      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</guid>
+      <description>&lt;div id=&#34;function-calculus&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Function, Calculus&lt;/h2&gt;
+&lt;div id=&#34;exponential-rules&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exponential Rules&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a^m \times a^n = a^{m+n} ;\;\;\;\;\;\;  a^{-m} = \frac{1}{a^m}\\
+  \frac{a^m}{a^n} = a^{m-n} ;\;\;\;\;\;\; (a^m)^n = a^{mn} \\
+  (ab)^m=a^mb^m ;\;\;\;\;\;\; a^0=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rules-for-logarithms&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rules for Logarithms&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ log(ab)=log(a)+log(b) ;\;\;\;\;\;\; log(\frac{a}{b})= log(a)-log(b) \\
+log(a^n)=n\times log(a) ;\;\;\;\;\;\; log_aa=1 \\
+log_a1=0
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rules-for-the-summation-and-product-fuctions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rules for the summation and product fuctions&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\prod_{i=1}^n x_i=(x_1\cdot x_2\cdot x_3 \dots x_n) \\
+\prod_{i=1}^nax_i = a^n\prod_{i=1}^nx_i \\
+\sum_{i=1}^nx_i=(x_1+x_2+x_3+\dots+x_n) \\
+\sum_{i=1}^nax_i=a\sum_{i=1}^nx_i \\
+\sum_{i=1}^na=na
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-rules-for-defferentiation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Some Rules for Defferentiation&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d}{dx}a=0 ;\;\;\;\;\;\; \frac{d}{dx}ax=a \\
+\frac{d}{dx}x^n=nx^{n-1} ;\;\;\;\;\;\; \frac{d}{dx}log_e(x)=\frac{1}{x}\\
+\frac{d}{dx}e^x=e^x ;\;\;\;\;\;\; \frac{d}{dx}e^{F(x)}=\frac{dF(x)}{dx}e^{F(x)}=F^\prime(x)e^{F(x)}\\\frac{d}{dx}(F(x)+L(x))=F&amp;#39;(x)+L&amp;#39;(x)\\
+\frac{d}{dx}(F(x)\cdot L(x))=L(x)F&amp;#39;(x)+F(x)L&amp;#39;(x)\\
+\frac{d}{dx}(\frac{F(x)}{L(x)})=\frac{F&amp;#39;(x)}{L(x)}-\frac{F(x)\cdot L&amp;#39;(x)}{[L(x)]^2}=\frac{F&amp;#39;(x)L(x)-L&amp;#39;(x)F(x)}{[L(x)]^2}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt; &lt;strong&gt;Chain Rule&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}\)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-rules-for-integrals&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Some Rules for Integrals&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\int a dx=ax ;\;\;\;\;\;\; \int af(x)dx = a \int f(x)dx \\
+\int x^ndx = \frac{x^{n+1}}{n+1}  ;\;\;\;\;\;\; \int F&amp;#39;(x)[F(x)]^n dx = \frac{[F(x)]^{n+1}}{n+1} \\
+\int e^xdx = e^x  ;\;\;\;\;\;\; \int F&amp;#39;(x)e^{F(x)}dx = e^{F(x)} \\
+\int \frac{1}{x}dx = log_e(x)  ;\;\;\;\;\;\; \int \frac{F&amp;#39;(x)}{F(x)}dx=log_e(F(x))\\
+\int (F(x)+L(x))dx = \int F(x)dx + \int L(x)dx\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt; &lt;strong&gt;Intergrating by parts&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\int_a^b u\frac{dv}{dx}dx = [uv]_a^b - \int_a^bv\frac{du}{dx}dx\)&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rule-l.-i.-a.-t.-e.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;RULE: L. I. A. T. E.&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;L: logarithm&lt;/li&gt;
+&lt;li&gt;I: Inverse trigonometric (反三角函數)&lt;/li&gt;
+&lt;li&gt;A: Algebra&lt;/li&gt;
+&lt;li&gt;T: Trigonometric&lt;/li&gt;
+&lt;li&gt;E: Exponential&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 28</title>
