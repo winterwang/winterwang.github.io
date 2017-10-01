@@ -11,7 +11,7 @@
     <atom:link href="/tags/london/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Matrix Revision</title>
+      <title>Matrix Revisions</title>
       <link>https://winterwang.github.io/post/matrix-revision/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -62,6 +62,64 @@
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A+B)^T=A^T+B^T\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Multiplication by scalar:&lt;/strong&gt; - &lt;span class=&#34;math inline&#34;&gt;\(cA=Ac\)&lt;/span&gt; - &lt;span class=&#34;math inline&#34;&gt;\(c(dA)=(cd)A\)&lt;/span&gt; - &lt;span class=&#34;math inline&#34;&gt;\((c\pm d)A=cA\pm dA\)&lt;/span&gt; - &lt;span class=&#34;math inline&#34;&gt;\(c(A\pm B)=cA \pm cB\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multiplication of an &lt;span class=&#34;math inline&#34;&gt;\(2\times2\)&lt;/span&gt; matrix by a column vector which has 2 rows yields a column vector with &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; rows.&lt;/strong&gt; &lt;span class=&#34;math display&#34;&gt;\[Ax=\left(
+\begin{array}{c}
+a_{11} &amp;amp; a_{12}\\
+a_{21} &amp;amp; a_{22}\\
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11}x_1+a_{12}x_2\\
+a_{21}x_1+a_{22}x_2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;generally&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Generally:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Multiplication of an &lt;span class=&#34;math inline&#34;&gt;\(m\times n\)&lt;/span&gt; matrix&lt;/strong&gt; by a &lt;strong&gt;column vector&lt;/strong&gt; which has &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; rows &lt;strong&gt;yields a column vector&lt;/strong&gt; with &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; rows. &lt;span class=&#34;math display&#34;&gt;\[Ax=\left(
+\begin{array}{c}
+a_{11} &amp;amp; \cdots &amp;amp; a_{1n} \\
+\vdots &amp;amp; \ddots &amp;amp; \vdots \\
+a_{m1} &amp;amp; \cdots &amp;amp; a_{mn}
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots \\
+x_{n}
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n\\
+\vdots \\
+a_{m1}x_{1}+a_{m2}x_2+\cdots+a_{mn}x_n
+\end{array}
+\right)=y \\
+i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-02-22/&#34;&gt;Multiplication of matrices&lt;/a&gt;:&lt;/strong&gt; The product &lt;span class=&#34;math inline&#34;&gt;\(AB=C\)&lt;/span&gt; is &lt;strong&gt;defined only when &lt;span class=&#34;math inline&#34;&gt;\(A_{m\times r}\)&lt;/span&gt; has exactly as many columns as &lt;span class=&#34;math inline&#34;&gt;\(B_{r\times n}\)&lt;/span&gt; has rows&lt;/strong&gt;. And the elements of &lt;span class=&#34;math inline&#34;&gt;\(C_{m\times n}\)&lt;/span&gt; are given as &lt;span class=&#34;math display&#34;&gt;\[c_{ij}=\sum_{l=1}^na_{il}b_{lj}, \;\; i=1,\cdots,m \; and \; j=1,\cdots, n\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(AB \neq BA\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)C=A(BC)=ABC\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A(B+C)=AB+AC\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((B+C)A=BA+CA\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(IA=AI=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;further-definitions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Further definitions&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;&lt;strong&gt;The determinant&lt;/strong&gt;&lt;/a&gt; of a second order square matrix is &lt;span class=&#34;math inline&#34;&gt;\(det(A)=|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} \\ a_{21} &amp;amp; a_{22} \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;The inverse of a matrix&lt;/a&gt;&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt; if it exists, is a matrix whose product with &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is the identity matrix i.e. &lt;span class=&#34;math inline&#34;&gt;\(AA^{-1}=A^{-1}A=I\)&lt;/span&gt;. (&lt;strong&gt;Note: both &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt; have to be square&lt;/strong&gt;) For second order matrices:&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}=\frac{1}{det(A)}\left( \begin{array}{c} a_{22} &amp;amp; -a_{12}\\ -a_{21} &amp;amp; a_{11}\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;Singular or non-invertible matrix&lt;/a&gt;&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(det(A)=0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Idempotent matrices(冪等矩陣)&lt;/strong&gt; are square and the following is true: &lt;span class=&#34;math inline&#34;&gt;\(AA=A^2=A\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;Orthogonal matrices&lt;/a&gt;&lt;/strong&gt; have the following property: &lt;span class=&#34;math inline&#34;&gt;\(AA^T=A^TA=I\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

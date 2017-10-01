@@ -38,7 +38,7 @@
 
   
 
-  <title>Matrix Revision | Be ambitious</title>
+  <title>Matrix Revisions | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,7 +160,7 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">Matrix Revision</h1>
+    <h1 itemprop="name">Matrix Revisions</h1>
     
 
 <div class="article-metadata">
@@ -222,28 +222,28 @@
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Matrix%20Revision&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f"
+         href="https://twitter.com/intent/tweet?text=Matrix%20Revisions&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f&amp;title=Matrix%20Revision"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f&amp;title=Matrix%20Revisions"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f&amp;title=Matrix%20Revision"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f&amp;title=Matrix%20Revisions"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Matrix%20Revision&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f">
+         href="mailto:?subject=Matrix%20Revisions&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fmatrix-revision%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -302,6 +302,64 @@
 <li><span class="math inline">\((A+B)^T=A^T+B^T\)</span></li>
 </ul>
 <p><strong>Multiplication by scalar:</strong> - <span class="math inline">\(cA=Ac\)</span> - <span class="math inline">\(c(dA)=(cd)A\)</span> - <span class="math inline">\((c\pm d)A=cA\pm dA\)</span> - <span class="math inline">\(c(A\pm B)=cA \pm cB\)</span></p>
+<p><strong>Multiplication of an <span class="math inline">\(2\times2\)</span> matrix by a column vector which has 2 rows yields a column vector with <span class="math inline">\(2\)</span> rows.</strong> <span class="math display">\[Ax=\left(
+\begin{array}{c}
+a_{11} &amp; a_{12}\\
+a_{21} &amp; a_{22}\\
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11}x_1+a_{12}x_2\\
+a_{21}x_1+a_{22}x_2\\
+\end{array}
+\right)\]</span></p>
+<div id="generally" class="section level3">
+<h3>Generally:</h3>
+<p><strong>Multiplication of an <span class="math inline">\(m\times n\)</span> matrix</strong> by a <strong>column vector</strong> which has <span class="math inline">\(n\)</span> rows <strong>yields a column vector</strong> with <span class="math inline">\(m\)</span> rows. <span class="math display">\[Ax=\left(
+\begin{array}{c}
+a_{11} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; \cdots &amp; a_{mn}
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots \\
+x_{n}
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n\\
+\vdots \\
+a_{m1}x_{1}+a_{m2}x_2+\cdots+a_{mn}x_n
+\end{array}
+\right)=y \\
+i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]</span></p>
+<p><strong><a href="https://winterwang.github.io/post/2017-02-22/">Multiplication of matrices</a>:</strong> The product <span class="math inline">\(AB=C\)</span> is <strong>defined only when <span class="math inline">\(A_{m\times r}\)</span> has exactly as many columns as <span class="math inline">\(B_{r\times n}\)</span> has rows</strong>. And the elements of <span class="math inline">\(C_{m\times n}\)</span> are given as <span class="math display">\[c_{ij}=\sum_{l=1}^na_{il}b_{lj}, \;\; i=1,\cdots,m \; and \; j=1,\cdots, n\]</span></p>
+<ul>
+<li><span class="math inline">\(AB \neq BA\)</span></li>
+<li><span class="math inline">\((AB)C=A(BC)=ABC\)</span></li>
+<li><span class="math inline">\(A(B+C)=AB+AC\)</span></li>
+<li><span class="math inline">\((B+C)A=BA+CA\)</span></li>
+<li><span class="math inline">\(IA=AI=A\)</span></li>
+</ul>
+</div>
+</div>
+<div id="further-definitions" class="section level2">
+<h2>Further definitions</h2>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://winterwang.github.io/post/2017-03-15/"><strong>The determinant</strong></a> of a second order square matrix is <span class="math inline">\(det(A)=|A|=\begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)</span></p></li>
+<li><p><strong><a href="https://winterwang.github.io/post/2017-07-06/">The inverse of a matrix</a></strong> <span class="math inline">\(A\)</span>, <span class="math inline">\(A^{-1}\)</span> if it exists, is a matrix whose product with <span class="math inline">\(A\)</span> is the identity matrix i.e. <span class="math inline">\(AA^{-1}=A^{-1}A=I\)</span>. (<strong>Note: both <span class="math inline">\(A\)</span> and <span class="math inline">\(A^{-1}\)</span> have to be square</strong>) For second order matrices:<span class="math inline">\(A^{-1}=\frac{1}{det(A)}\left( \begin{array}{c} a_{22} &amp; -a_{12}\\ -a_{21} &amp; a_{11}\\ \end{array} \right)\)</span></p></li>
+<li><p><strong><a href="https://winterwang.github.io/post/2017-07-06/">Singular or non-invertible matrix</a></strong>: <span class="math inline">\(det(A)=0\)</span></p></li>
+<li><p><strong>Idempotent matrices(冪等矩陣)</strong> are square and the following is true: <span class="math inline">\(AA=A^2=A\)</span></p></li>
+<li><p><strong><a href="https://winterwang.github.io/post/2017-03-08/">Orthogonal matrices</a></strong> have the following property: <span class="math inline">\(AA^T=A^TA=I\)</span></p></li>
+</ol>
 </div>
 
     </div>
