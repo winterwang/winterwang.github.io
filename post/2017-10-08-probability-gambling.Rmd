@@ -26,10 +26,10 @@ summary: "回顧一下最近學習的情況"
 
 下面想介紹一下上週學習的概率的基礎問題。
 
-首先是最基礎的**三個概率的定理**：
+### 首先是最基礎的**三個概率的定理**：
 
 1. 對於任意事件 $A$，它發生的概率 $P(A)$ 滿足這樣的不等式： $0 \leqslant P(A) \leqslant 1$
-2. $P(\Omega)=1$ , $\Omega$ 是全樣本量 (total sample size)
+2. $P(\Omega)=1$ , $\Omega$ 是全樣本空間 (total sample space)
 2. 對於互斥（相互獨立）的事件 $A_1, A_2, \dots, A_n$ 有如下的等式關係： $P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)$
 
 
@@ -75,3 +75,15 @@ $P(A_1 \cup A_2) =P(A_1)-P(A_1\cap A_2)\\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1)-P(A_1\cap A_2)\\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1\cap A_2)\\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;=P(A_1) + P(A_2) - P(A_1 \cap A_2)$
+
+
+### 條件概率 Conditional probability
+
+- $P(A|S)=\frac{P(A\cap S)}{P(S)}$
+- $P(A\cap S) = P(A|S)P(S)$
+
+### 獨立 (independence) 的定義
+
+- 兩個事件定義爲互爲獨立時 ($A$ and $B$ are said to be independent **if and only if**)
+$$P(A\cap B)=P(A)P(B)$$
+- 因爲從條件概率的概念我們已知<br> $P(A\cap B) = P(A|B)P(B)$ <br>所以$P(A|B)=P(A)$ 即：事件 $B$ 無法提供事件 $A$ 的任何有效訊息 (**$A, B$ 互相獨立**)
