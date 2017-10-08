@@ -11,6 +11,50 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>你會用概率論來賭博嗎？</title>
+      <link>https://winterwang.github.io/post/probability-gambling/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
+      <description>&lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/product/0471827223/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&#34;&gt;Quick Calculus: Short Manual of Self-instruction&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_070.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。&lt;/p&gt;
+&lt;p&gt;下面想介紹一下上週學習的概率的基礎問題。&lt;/p&gt;
+&lt;p&gt;首先是最基礎的&lt;strong&gt;三個概率的定理&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;對於任意事件 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，它發生的概率 &lt;span class=&#34;math inline&#34;&gt;\(P(A)\)&lt;/span&gt; 滿足這樣的不等式： &lt;span class=&#34;math inline&#34;&gt;\(0 \leqslant P(A) \leqslant 1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\Omega)=1\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; 是全樣本量 (total sample size)&lt;/li&gt;
+&lt;li&gt;對於互斥（相互獨立）的事件 &lt;span class=&#34;math inline&#34;&gt;\(A_1, A_2, \dots, A_n\)&lt;/span&gt; 有如下的等式關係： &lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;你是不是覺得上面三條定理都是&lt;strong&gt;廢話&lt;/strong&gt;。 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲定理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。&lt;code&gt;(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲定理的公式，你能證明嗎：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/venngram.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明：&lt;/h4&gt;
+&lt;p&gt;先考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2\)&lt;/span&gt; 是什麼（拆分成三個互斥事件）&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2 = (A_1\cap \bar{A_2})\cup(\bar{A_1}\cap A_2)\cup(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;運用上面的定理&lt;del&gt;2&lt;/del&gt; 3&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore P(A_1 \cup A_2) = P(A_1\cap \bar{A_2}) + P(\bar{A_1}\cap A_2) + P(A_1\cap A_2) \;\;\;\;\;\;(1)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;再考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1=(A_1\cap A_2)\cup(A_1\cap\bar{A_2})\)&lt;/span&gt; 繼續拆分成兩個互斥事件&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore P(A_1)=P(A_1\cap A_2)+P(A_1\cap\bar{A_2})\)&lt;/span&gt; 整理一下：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cap\bar{A_2})=P(A_1)-P(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;同理可得: &lt;span class=&#34;math inline&#34;&gt;\(P(\bar{A_1}\cap A_2)=P(A_2)-P(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;代入上面第(1)式可得：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1 \cup A_2) =P(A_1)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;=P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>萬衆期待，英國黑暗料理</title>
       <link>https://winterwang.github.io/post/black-meal/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
@@ -49,7 +93,7 @@ Hot spiced beef, pepperoni, mozzarella, tomato, green pepper, red onion and Taba
 
 &lt;h3 id=&#34;羊肉味的奶油夾心三明治-2017-09-24-store-street-espresso-http-www-storestespresso-co-uk&#34;&gt;羊肉味的奶油夾心三明治 (2017-09-24 @&lt;a href=&#34;http://www.storestespresso.co.uk/&#34; target=&#34;_blank&#34;&gt;Store Street Espresso&lt;/a&gt;)&lt;/h3&gt;
 
-&lt;p&gt;我點菜之前還故意跟收銀員小妹搭訕，讓她推薦以下今天的特色三明治。
+&lt;p&gt;我點菜之前還故意跟收銀員小妹搭訕，讓她推薦一下今天的特色三明治。
 她推薦的這個 Goat Cheese Sandwich。 當然我一開始聽到這名字的時候就有點猶豫。但是想說既然是推薦的應該至少不會有什麼怪味道。結果事實證明了，我的想法是多麼的幼稚。&lt;/p&gt;
 
 &lt;p&gt;看這剛出爐的香噴噴的三明治，我咬下第一口就差點吐了。羊羶味在我喉嚨和鼻腔中打轉。後悔也來不及了。另外我同同時還點了 Espresso。就是特濃咖啡。口味超重！不能喝濃咖啡的一定要慎點！！！！&lt;/p&gt;
@@ -58,7 +102,7 @@ Hot spiced beef, pepperoni, mozzarella, tomato, green pepper, red onion and Taba
 
 &lt;h3 id=&#34;酸酸的不知道怎麼形容的麵包-日期忘了-估計是剛到的第二個早晨的早餐-ihdining-room&#34;&gt;酸酸的不知道怎麼形容的麵包 (日期忘了，估計是剛到的第二個早晨的早餐@IHdining room)&lt;/h3&gt;
 
-&lt;p&gt;這麵包吃起來鬆鬆的，然額，麵的味道有些酸，又不像是過期視頻，而像是本來就應該是這樣的味道的酸麵包。讓人不想再嘗試第二次。。&lt;/p&gt;
+&lt;p&gt;這麵包吃起來鬆鬆的，然額，麵的味道有些酸，又不像是過期食品，而像是本來就應該是這樣的味道的酸麵包。讓人不想再嘗試第二次。。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/890249589.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -1078,30 +1122,6 @@ a_3 \\
 \end{align} \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;可以看成是利用：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;表達為： &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (coefficient matrix)&lt;/a&gt;。如果將 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 加入 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的最後一列，寫成下面的形式: &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
-\begin{array}{c}
-x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}  &amp;amp; y_1\\
-x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}  &amp;amp; y_2\\
-\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots  &amp;amp; \vdots\\
-x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;那麽這樣的矩陣 &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 被稱作是擴大&lt;a href=&#34;https://winterwang.github.io/post/2017-02-28/&#34;&gt;係數矩陣 (augmented coefficient matrix)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在多元變量分析時，通常出現的情況是， &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 為已知 (觀測收集得來的數據)，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 為未知。&lt;/p&gt;
-&lt;p&gt;一般情況下， &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解答方法就是(1)&lt;a href=&#34;https://winterwang.github.io/post/inverse-matrix/&#34;&gt;使用逆矩陣&lt;/a&gt;，(2)克萊姆法則法，(3)&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行的基本變形法&lt;/a&gt; 三種手法。但是，前兩種手法只適用於 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是正方形矩陣且同時是&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;。另外， &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 中間加上逗號的寫法 &lt;span class=&#34;math inline&#34;&gt;\((X,\underline{y})\)&lt;/span&gt; 也表達相同含義。&lt;/p&gt;
 </description>
     </item>
     
