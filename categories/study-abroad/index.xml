@@ -35,8 +35,8 @@
 &lt;li&gt;假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;所以按照圖中給出的計算概率樹的過程可以得到:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P[改變主意以後贏得保時捷的概率]=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\
-P[不改主意，贏得保時捷的概率]=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\
+P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;你是否選擇了改變主意了呢？&lt;/p&gt;
 </description>
     </item>
