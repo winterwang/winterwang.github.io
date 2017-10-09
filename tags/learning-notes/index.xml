@@ -7,8 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 03 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/learning-notes/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>“你會用概率論來賭博嗎？”之解答</title>
+      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
+      <description>&lt;p&gt;前情提要：&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_071.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;答案是：必須改變主意才能提高中獎概率。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_072.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;解說一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。&lt;/li&gt;
+&lt;li&gt;假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
+&lt;li&gt;假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以按照圖中給出的計算概率樹的過程可以得到:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P[改變主意以後贏得保時捷的概率]=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\
+P[不改主意，贏得保時捷的概率]=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;你是否選擇了改變主意了呢？&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
@@ -1200,55 +1231,6 @@ ka_n
 &lt;li&gt;&lt;p&gt;求滿足 &lt;span class=&#34;math inline&#34;&gt;\(5\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)+\left( \begin{array}{c} 2\\ 5\\ -1\\ \end{array} \right)=\left( \begin{array}{c} 12\\ 25\\ 29\\ \end{array} \right)\)&lt;/span&gt; 的向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt;。&lt;br&gt; 解：&lt;span class=&#34;math inline&#34;&gt;\(5\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)=\left( \begin{array}{c} 12\\ 25\\ 29\\ \end{array} \right)-\left( \begin{array}{c} 2\\ 5\\ -1\\ \end{array} \right)=\left( \begin{array}{c} 10\\ 20\\ 30\\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; 因此，&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)=\left( \begin{array}{c} 2\\ 4\\ 6\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記8</title>
-      <link>https://winterwang.github.io/post/2017-02-17/</link>
-      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-17/</guid>
-      <description>&lt;div id=&#34;-vector&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量 vector&lt;/h2&gt;
-&lt;div id=&#34;-column-vector&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;列向量 column vector&lt;/h3&gt;
-&lt;p&gt;在等號的右側，將數字寫成一列，左右用圓括號或者方括號包含在內的形式，被叫做列向量(column vector)：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right), \;\; \textbf{a}=\left[ \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right]\)&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;我們接下來將會繼續定義，向量的加減法，標量乘法(scalar multiplication)。把上述的向量用一個文字表示的時候，通常會記爲下劃線 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;，或者是加粗的小寫字母： &lt;span class=&#34;math inline&#34;&gt;\(\bf{a}\)&lt;/span&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;構成向量的各個數字，被命名爲&lt;strong&gt;成分(component, element, entry)&lt;/strong&gt;，從上往下第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 個成分稱爲第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 成分。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;成分的個數爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;，就被稱爲這個向量具有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個&lt;strong&gt;維度(次元，dimension)&lt;/strong&gt;，或者說這個向量的維度爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的&lt;strong&gt;型(size, order)&lt;/strong&gt;,或者 &lt;strong&gt;類型(type)&lt;/strong&gt; 一致。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;成分只有一個的向量，被特別稱爲&lt;strong&gt;標量(scalar)&lt;/strong&gt;，原則上不加括號。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲&lt;strong&gt;成分表示&lt;/strong&gt;。在多元變量分析中，我們說到向量，多默認指的就是列向量。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)&lt;/span&gt;&lt;br&gt;今後我們都用字母帶下劃線，圓括號包含數字的方式表示向量。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{c}=\left( \begin{array}{c} \sin t+\cos t\\ \cos t+\tan t-2\\ \tan t + \sin t\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; 爲 &lt;span class=&#34;math inline&#34;&gt;\(a_1,a_2,a_3\)&lt;/span&gt; 的函數時，寫作 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)\)&lt;/span&gt;。 以&lt;strong&gt;三個未知數的偏微分&lt;/strong&gt;爲成分的向量(梯度向量，gradient vector)，寫成下面等式左邊的形式。可以簡略寫作: &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt;。&lt;span class=&#34;math inline&#34;&gt;\(\nabla\)&lt;/span&gt;讀作&lt;code&gt;nabla&lt;/code&gt;。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} \frac{\partial F}{\partial a_1}\\ \frac{\partial F}{\partial a_2}\\ \frac{\partial F}{\partial a_3}\\ \end{array} \right)=\frac{\partial F}{\partial \underline{a}}=\nabla_{\underline{a}}F\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-row-vector&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;橫向量(行向量) row vector&lt;/h2&gt;
-&lt;p&gt;在等號的右側，將數字寫成一行，左右用圓括號或者方括號包含在內的形式，被叫做橫向量(row vector):&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=(a_1,a_2,\cdots,a_j,\cdots,a_n), \; \textbf{a}=[a_1,a_2,\cdots,a_j,\cdots,a_n]\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;成分，維度，類型等的定義與列向量相同。另外注意，維度相同，但是一個是橫向量，一個是列向量的話，這兩個向量是不同類型的。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=(x_1,x_2,x_3)\)&lt;/span&gt;&lt;br&gt; 有時也可以不用逗號分隔成分。 寫作 &lt;span class=&#34;math inline&#34;&gt;\((x_1 \; x_2 \;x_3)\)&lt;/span&gt;。下同。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\frac{\partial F}{\partial x_1},\frac{\partial F}{\partial x_2},\frac{\partial F}{\partial x_3})=\frac{\partial F}{\partial \underline{x}}=\nabla_{\underline{x}F}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{u}=(\sin\theta\cos\phi, \sin\theta\cos\theta, \cos\theta)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-vector-transpose&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;向量的轉置 (vector transpose)&lt;/h2&gt;
-&lt;p&gt;將列向量的每個成分，按照從上到下的順序，一字橫着排開寫成橫向量。這個向量稱爲原來列向量的轉置向量(transposed vector)。反之亦然。&lt;/p&gt;
-&lt;p&gt;向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 的轉置向量，可以標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t,\;\underline{a}^\prime,\;^t\underline{a},\;\underline{a}^T, \;^T\underline{a}\)&lt;/span&gt; 各種形式。今後統一用 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t\)&lt;/span&gt;。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)\)&lt;/span&gt; 的轉置向量我們會記爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}^t=\left( \begin{array}{c} a_1\\ a_2\\ a_3\\ \end{array} \right)^t=(a_1,a_2,a_3)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=(x_1.x_2,x_3)\)&lt;/span&gt; 的轉置向量我們會記爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^t=(x_1.x_2,x_3)^t=\left( \begin{array}{c} x_1\\ x_2\\ x_3\\ \end{array} \right)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
