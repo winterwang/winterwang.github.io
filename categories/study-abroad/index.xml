@@ -41,6 +41,81 @@ P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
 \end{align}\]&lt;/span&gt;
 &lt;p&gt;所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(&lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;)。&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;-expectation--or-mean---variance&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;期望 Expectation (或均值 or mean) 和 方差 Variance&lt;/h3&gt;
+&lt;p&gt;期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; (discrete random variables)，它的期望被定義爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(X)=\sum_x xP(X=x)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以就是將所有 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 來標記。&lt;/p&gt;
+&lt;p&gt;方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;實際上我們更加常用的是它的另外一個公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X)=E(X^2)-E(X)^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明 上面兩個方差公式相等&lt;/h4&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(x)  &amp;amp;= E((X-\mu)^2) \\
+        &amp;amp;= E(X^2-2X\mu+\mu^2)\\
+        &amp;amp;= E(X^2) - 2\mu E(X) + \mu^2\\
+        &amp;amp;= E(X^2) - 2\mu^2 + \mu^2 \\
+        &amp;amp;= E(X^2) - \mu^2 \\
+        &amp;amp;= E(X^2) - E(X)^2
+\end{align}\]&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;方差的性質：&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(X+b)=Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(aX)=a^2Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(aX+b)=a^2Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-bernoulli-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;伯努利分佈 Bernoulli distribution&lt;/h3&gt;
+&lt;p&gt;伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;。那麼我們可以計算這個分佈的期望值:&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X) &amp;amp;=\sum_x xP(X=x) \\
+     &amp;amp;=1\times\pi + 0\times(1-\pi)\\
+     &amp;amp;=\pi
+\end{align}\]&lt;/span&gt;
+&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(x=x^2\)&lt;/span&gt;，因爲 &lt;span class=&#34;math inline&#34;&gt;\(x=0,1\)&lt;/span&gt;, 所以 &lt;span class=&#34;math inline&#34;&gt;\(E[X^2]=E[X]\)&lt;/span&gt;，那麼方差爲：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X) &amp;amp;=E[X^2]-E[X]^2 \\
+       &amp;amp;=E[X]-E[X]^2 \\
+       &amp;amp;=\pi - \pi^2 \\
+       &amp;amp;=\pi(1-\pi)
+\end{align}\]&lt;/span&gt;
+&lt;/div&gt;
+&lt;div id=&#34;xy--a-exyexey-b-varxyvarxvary&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;證明，&lt;span class=&#34;math inline&#34;&gt;\(X,Y\)&lt;/span&gt; 爲互爲獨立的隨機離散變量時，&lt;br&gt;a) &lt;span class=&#34;math inline&#34;&gt;\(E(XY)=E(X)E(Y)\)&lt;/span&gt; ; &lt;br&gt;b) &lt;span class=&#34;math inline&#34;&gt;\(Var(X+Y)=Var(X)+Var(Y)\)&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;strong&gt;證明&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(XY) &amp;amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
+\because &amp;amp;\; X,Y are\;independent\;to\;each\;other \\
+\therefore &amp;amp;= \sum_x\sum_yP(X=x)P(Y=y)\\
+      &amp;amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
+      &amp;amp;=E(X)E(Y)
+\end{align}\]&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;strong&gt;證明&lt;/strong&gt; 根據方差的定義：
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
+ &amp;amp; \; Expand \\
+ &amp;amp;=E(X^2+2XY+Y^2)-(E(X)+E(Y))^2\\
+ &amp;amp;=E(X^2)+E(Y^2)+2E(XY)\\
+ &amp;amp;\;\;\; - E(X)^2-E(Y)^2-2E(X)E(Y)\\
+ &amp;amp;\; We\;just\;showed\; E(XY)=E(X)E(Y)\\
+ &amp;amp;=E(X^2)-E(X)^2+E(Y^2)-E(Y)^2 \\
+ &amp;amp;=Var(X)+Var(Y)
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     
