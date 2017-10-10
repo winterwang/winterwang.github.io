@@ -7,8 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sat, 30 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/basic-mathematics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>概率論2</title>
+      <link>https://winterwang.github.io/post/probability2-4/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/probability2-4/</guid>
+      <description>&lt;div id=&#34;bayes-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bayes 理論的概念&lt;/h3&gt;
+&lt;p&gt;許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 &lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;這裏先引入貝葉斯的概念：&lt;/p&gt;
+&lt;p&gt;我們可以將 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)\)&lt;/span&gt; 寫成： &lt;span class=&#34;math display&#34;&gt;\[P(A\cap S)=P(A|S)P(S)\\or\\
+P(A\cap S)=P(S|A)P(S)\]&lt;/span&gt; 這兩個等式是完全等價的。我們將他們連起來：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)P(A)=P(A|S)P(S)\\
+\Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;是不是看起來又像是寫了一堆&lt;strong&gt;廢話&lt;/strong&gt;？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。&lt;/p&gt;
+&lt;p&gt;再繼續，我們可以利用另外一個&lt;strong&gt;廢話&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;用上面的公式替換掉 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可以得到&lt;strong&gt;貝葉斯理論公式&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_073.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
+        &amp;amp;= \frac{0.09\times0.2}{0.09\times0.02+0.07\times0.8} \\
+        &amp;amp;= 0.24
+\end{align}\]&lt;/span&gt;
+&lt;p&gt;所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(&lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;)。&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Maths Revisions</title>
@@ -1165,25 +1199,6 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right), B=(b_{ij})=\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 1 &amp;amp; 1\\ 1 &amp;amp; 0 &amp;amp; 1 \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tB\underline{y}=\sum\limits_{i=1}^3\sum\limits_{j=1}^3b_{ij}x_iy_j=(x_1+x_3, x_2, x_2+x_3)\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\\ \;\;\;\;\:=x_1y_1+x_2y_2+x_2y_3+x_3y_1+x_3y_3\\ \;\;\;\;\:=x_1y_1+x_2(y_2+y_3)+x_3(y_1+y_3) \; \bf (\underline{x} 的1次型)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\;\;\;\;\;\:=y_1(x_1+x_3)+x_2y_2+(x_2+x_3)y_3 \;\bf (\underline{y} 的1次型)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{l}=\left( \begin{array}{c} l_1\\ l_2\\ \end{array} \right), T=\left( \begin{array}{c} t_{11} &amp;amp; t_{12} &amp;amp; t_{13}\\ t_{21} &amp;amp; t_{22} &amp;amp; t_{23}\\ \end{array} \right), \underline{m}=\left( \begin{array}{c} m_1\\ m_2\\ m_3 \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{l}^tT\underline{m}=\sum\limits_{i=1}^2\sum\limits_{j=1}^3t_{ij}l_im_j\\ \;\;\;\;\;\;\;\;\;\;=l_1t_{11}m_1+l_1t_{12}m_2+l_1t_{13}m_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2t_{21}m_1+l_2t_{22}m_2+l_3t_{23}m_3\\ \;\;\;\;\;\;\;\;\;\;=l_1(t_{11}m_1+t_{12}m_2+t_{13}m_3)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2(t_{21}m_1+t_{22}m_2+t_{23}m_3) \;\;(\underline{l} \textbf{的1次型})\\ \;\;\;\;\;\;\;\;\;\;=(t_{11}l_1+t_{21}l_2)m_1+(t_{12}l_1+t_{22}l_2)m_2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(t_{13}l_1+t_{23}l_2)m_3\;\;(\underline{m} \textbf{的1次型})\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記16</title>
-      <link>https://winterwang.github.io/post/2017-03-11/</link>
-      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-11/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;二次型(形式)&lt;/h2&gt;
-&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_{1}\\ x_{2}\\ \vdots\\ x_{n} \end{array} \right), A=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\)&lt;/span&gt; 那麼：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^n\sum\limits_{j=1}^na_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i \neq j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}(a_{ij}+a_{ji})x_ix_j\)&lt;/span&gt;&lt;br&gt; 被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的同次2次式。又被叫做關於 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_n\)&lt;/span&gt; 的&lt;strong&gt;2次型(quadratic form)&lt;/strong&gt;。特別的，當 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲對稱矩陣時的2次型：&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^na_{ii}x_i^2+2\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}a_{ij}x_ix_j\)&lt;/span&gt; 在多元變量分析中十分重要。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2 \end{array} \right),\ A=\left( \begin{array}{} a_{11} &amp;amp; a_{12}\\ a_{12} &amp;amp; a_{22} \end{array} \right)\)&lt;/span&gt;, 那麼： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=a_{11}x_1^2+a_{22}x_2^2+2a_{12}x_1x_2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right),\ A=\left( \begin{array}{} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{12} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{13} &amp;amp; a_{23} &amp;amp; a_{33} \end{array} \right)\)&lt;/span&gt;，那麼： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=a_{11}x_1^2+a_{22}x_2^2+a_{33}x_3^2+2a_{12}x_1x_2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+2a_{13}x_1x_3+2a_{23}x_2x_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 3 &amp;amp; 2 &amp;amp; 4\\ 6 &amp;amp; 5 &amp;amp; 1\\ -2 &amp;amp; 5 &amp;amp; 8 \end{array} \right)非對稱矩陣\)&lt;/span&gt;，那麼：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=3x_1^2+5x_2^2+8x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+2x_1x_2+4x_1x_3+6x_2x_1\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+x_2x_3-2x_3x_1+5x_3x_2\\ \;\;\;\;\;\;\;\;\;\:=3x_1^2+5x_2^2+8x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(2+6)x_1x_2+(4-2)x_1x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(5+1)x_2x_3\\ \;\;\;\;\;\;\;\;\;\:=3x_1^2+5x_2^2+8x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+8x_1x_2+2x_1x_3+6z_2x_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;有式子 &lt;span class=&#34;math inline&#34;&gt;\(3x_1^2-5x_2^2+7x_3^2+8x_1x_2+4x_1x_3-12x_2x_3\)&lt;/span&gt; 如果要將它改寫成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;是對稱矩陣) 的話，試求 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{33} &amp;amp; a_{32} &amp;amp; a_{33} \end{array} \right)=\left( \begin{array}{} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{12} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{13} &amp;amp; a_{23} &amp;amp; a_{33} \end{array} \right)\)&lt;/span&gt; 的各個成分。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的對角成分：&lt;span class=&#34;math inline&#34;&gt;\(a_{11},a_{22},a_{33}\)&lt;/span&gt; 分別是 &lt;span class=&#34;math inline&#34;&gt;\(x_1^2,x_2^2,x_3^2\)&lt;/span&gt; 的系數： &lt;span class=&#34;math inline&#34;&gt;\(3,-5,7\)&lt;/span&gt;。非對角成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{12}(=a_{21})\)&lt;/span&gt; 等於 &lt;span class=&#34;math inline&#34;&gt;\(x_1x_2\)&lt;/span&gt; 系數的一半：&lt;span class=&#34;math inline&#34;&gt;\(4\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(a_{13}(=a_{31})\)&lt;/span&gt; 等於 &lt;span class=&#34;math inline&#34;&gt;\(x_1x_3\)&lt;/span&gt; 系數的一半:&lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(a_23(=a_{32})\)&lt;/span&gt; 等於 &lt;span class=&#34;math inline&#34;&gt;\(x_2x_3\)&lt;/span&gt; 系數的一半：&lt;span class=&#34;math inline&#34;&gt;\(-6\)&lt;/span&gt;。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore A=\left( \begin{array}{} 3 &amp;amp; 4 &amp;amp; 2\\ 4 &amp;amp; -5 &amp;amp; -6\\ 2 &amp;amp; -6 &amp;amp; 7 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
