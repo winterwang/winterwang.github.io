@@ -11,6 +11,146 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>你買的彩票中獎概率到底有多少？</title>
+      <link>https://winterwang.github.io/post/probability3/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/probability3/</guid>
+      <description>&lt;div id=&#34;-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;二項分佈的概念 Binomial distribution&lt;/h3&gt;
+&lt;p&gt;二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次相互獨立的&lt;a href=&#34;https://winterwang.github.io/post/probability2-4/&#34;&gt;成功率爲 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的伯努利實驗&lt;/a&gt; (&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; independent Bernoulli trials) 中成功的次數。&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 服從二項分佈，記爲 &lt;span class=&#34;math inline&#34;&gt;\(X \sim binomial(n, \pi)\)&lt;/span&gt; 或&lt;span class=&#34;math inline&#34;&gt;\(X \sim bin(n, \pi)\)&lt;/span&gt;。它的(第 &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; 次實驗的)概率被定義爲：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=x) &amp;amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\
+       &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
+       &amp;amp; for\;\; x = 0,1,2,\dots,n
+\end{align}\]&lt;/span&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;二項分佈的期望和方差&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;若 &lt;span class=&#34;math inline&#34;&gt;\(X \sim bin(n,\pi)\)&lt;/span&gt;，那麼 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 就是這一系列獨立伯努利實驗中成功的次數。&lt;/li&gt;
+&lt;li&gt;用 &lt;span class=&#34;math inline&#34;&gt;\(X_i, i =1,\dots, n\)&lt;/span&gt; 標記每個相互獨立的伯努利實驗。&lt;/li&gt;
+&lt;li&gt;那麼我們可以知道 &lt;span class=&#34;math inline&#34;&gt;\(X=\sum_{i=1}^nX_i\)&lt;/span&gt;。
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\
+                 &amp;amp;= E(X_1+X_2+\cdots+X_n) \\
+                 &amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\
+                 &amp;amp;= \sum_{i=1}^nE(X_i)\\
+                 &amp;amp;= \sum_{i=1}^n\pi \\
+                 &amp;amp;= n\pi
+  \end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\
+    &amp;amp;= Var(X_i+X_2+\cdots+X_n) \\
+    &amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\
+    &amp;amp;= \sum_{i=1}^nVar(X_i) \\
+    &amp;amp;= n\pi(1-\pi) \\
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-hypergeometric-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;超幾何分佈 hypergeometric distribution&lt;/h3&gt;
+&lt;p&gt;假設我們從總人數爲 &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; 的人羣中，採集一個樣本 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;。假如已知在總體人羣中(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 人患有某種疾病。請問採集的樣本 &lt;span class=&#34;math inline&#34;&gt;\(X=n\)&lt;/span&gt; 中患有這種疾病的人，服從怎樣的分佈？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;從人羣(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)中取出樣本(&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;)，有 &lt;span class=&#34;math inline&#34;&gt;\(^NC_n\)&lt;/span&gt; 種方法。&lt;/li&gt;
+&lt;li&gt;從患病人羣(&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;)中取出患有該病的人(&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(^MC_x\)&lt;/span&gt; 種方法。&lt;/li&gt;
+&lt;li&gt;樣本中不還病的人(&lt;span class=&#34;math inline&#34;&gt;\(n-x\)&lt;/span&gt;)被採樣的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{N-M}C_{n-x}\)&lt;/span&gt; 種。&lt;/li&gt;
+&lt;li&gt;採集一次 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本的概率都一樣。因此：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(X=x)=\frac{\binom{M}{x}\binom{N-M}{n-x}}{\binom{N}{n}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;樂透中獎概率問題：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;從數字 &lt;span class=&#34;math inline&#34;&gt;\(1\sim59\)&lt;/span&gt; 中選取 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個任意號碼&lt;/li&gt;
+&lt;li&gt;開獎時從 &lt;span class=&#34;math inline&#34;&gt;\(59\)&lt;/span&gt; 個號碼球中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個&lt;/li&gt;
+&lt;li&gt;如果六個號碼全部猜中(不分順序)，你可以成爲百萬富翁。請問一次猜中全部 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個號碼的概率是多少？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;從 &lt;span class=&#34;math inline&#34;&gt;\(59\)&lt;/span&gt; 個號碼中隨機取出任意 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個號碼的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{59}C_6\)&lt;/span&gt; 種。 &lt;span class=&#34;math display&#34;&gt;\[^{59}C_6=\frac{59!}{6!(59-6)!}=45,057,474\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;每次選取六個號碼做爲一組的可能性相同，所以，你買了一組樂透號碼，能中獎的概率就是 &lt;span class=&#34;math inline&#34;&gt;\(1/45,057,474 = 0.00000002219\)&lt;/span&gt;。你還會再去買彩票麼？&lt;/p&gt;
+&lt;div id=&#34;-3-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;如果我只想中其中的 &lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt; 個號碼，概率有多大？&lt;/h4&gt;
+&lt;p&gt;用超幾何分佈的概率公式：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=3) &amp;amp;= \frac{^6C_3\times ^{53}C_3}{^{59}C_6} \\
+       &amp;amp;= 0.010
+\end{align}\]&lt;/span&gt;
+&lt;p&gt;你有 &lt;span class=&#34;math inline&#34;&gt;\(1\%\)&lt;/span&gt; 的可能中獎。換句話說，如果中三個以上的數字算中獎的話，你買的彩票中獎的概率低於 &lt;span class=&#34;math inline&#34;&gt;\(1\%\)&lt;/span&gt;。是不是覺得下次送錢給博彩公司的時候還不如跟我一起喝一杯咖啡划算？&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-poisson-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;泊松分佈 Poisson Distribution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當一個事件，在一段時間 (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) 中可能發生的次數是 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 。那麼我們可以認爲，經過時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;，該時間發生的期望次數是 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\lambda T\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;利用微分思想，將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段，當 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt; 直到每個微小的時間段內最多發生一次該事件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那麼&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每個微小的時間段，可以視爲是一個伯努利實驗（有事件發生或者沒有）&lt;/li&gt;
+&lt;li&gt;那麼這整段時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 內發生的事件可以視爲是一個二項分佈實驗。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(X=\)&lt;/span&gt; 一次事件發生時所經過的所有時間段。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(X \sim Bin(n, \pi)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 爲時間段。&lt;/li&gt;
+&lt;li&gt;在每個分割好的時間段內，事件發生的概率都是：&lt;span class=&#34;math inline&#34;&gt;\(\pi=\frac{\lambda T}{n}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(\mu=\lambda T \Rightarrow \pi=\mu/n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;所以 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的概率方程就是：
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=x) &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
+   &amp;amp;= \binom{n}{x}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+   &amp;amp;= \frac{n!}{x!(n-x)!}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+   &amp;amp;=\frac{n!}{n^x(n-x)!}\frac{\mu^x}{x!}(1-\frac{\mu}{n})^{n-x}\\
+當 n\rightarrow\infty   &amp;amp;\; x \ll n (x遠小於n) 時\\
+\frac{n!}{n^x(n-x)!} &amp;amp;=\frac{n(n-1)\dots(n-x+1)}{n^x} \rightarrow 1\\
+(1-\frac{\mu}{n})^{n-x} &amp;amp;\approx  (1-\frac{\mu}{n})^n \rightarrow e^{-\mu}\\
+所以 我們可&amp;amp;以得到泊松分佈的概率公式：   \\
+P(X=x) &amp;amp;\rightarrow \frac{\mu^x}{x!}e^{-\mu}
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;當數據服從泊松分佈時，記爲 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Poisson(\mu=\lambda T)\;\; or\;\; X\sim Poi(\mu)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;證明泊松分佈的參數特徵：&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X)  &amp;amp;=  \sum_{x=0}^\infty xP(X=x) \\
+      &amp;amp;=  \sum_{x=0}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
+      &amp;amp;= 0+ \sum_{x=1}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
+      &amp;amp;=  \sum_{x=1}^\infty \frac{\mu^x}{(x-1)!}e^{-\mu} \\
+      &amp;amp;=  \mu\sum_{x=1}^\infty \frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
+這個時候我們用i&amp;amp;=x-1 替換掉所有的 x \\
+      &amp;amp;=  \mu\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu} \\
+注意到右半部分 &amp;amp;\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu}=1 是一個\\泊松分佈的所有&amp;amp;概率和 \\
+      &amp;amp;= \mu
+\end{align}\]&lt;/span&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\mu\)&lt;/span&gt; 爲了找到 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)\)&lt;/span&gt;，我們用公式 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=E(X^2)-E(X)^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我們需要找到 &lt;span class=&#34;math inline&#34;&gt;\(E(X^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X^2) &amp;amp;= \sum_{x=0}^\infty x^2\frac{\mu^x}{x!}e^{-\mu} \\
+       &amp;amp;= \mu \sum_{x=1}^\infty x\frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
+這個時候我們用i&amp;amp;=x-1 替換掉所有的 x \\
+       &amp;amp;= \mu \sum_{i=0}^\infty (i+1)\frac{\mu^{i}}{i!}e^{-\mu} \\
+       &amp;amp;= \mu(\sum_{i=0}^\infty i\frac{\mu^i}{i!}e^{-\mu} + \sum_{i=0}^\infty \frac{\mu^i}{i!}e^{-\mu}) \\
+       &amp;amp;= \mu(E(X)+1) \\
+       &amp;amp;= \mu^2+\mu \\
+因此，代入上面&amp;amp;提到的方差公式： \\
+Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
+       &amp;amp;= \mu^2 + \mu -\mu^2 \\
+       &amp;amp;= \mu
+\end{align}\]&lt;/span&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>概率論2</title>
       <link>https://winterwang.github.io/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
@@ -1107,78 +1247,6 @@ a_3 \\
 1 \\
 \end{array}
 \right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
-      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
-&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中： &lt;span class=&#34;math inline&#34;&gt;\(|X_j|\)&lt;/span&gt; 爲矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列替換爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 以後的矩陣的行列式。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-\left\{
-\begin{array}{ll}
-a_1+2a_2+a_3  = 2\\
-2a_1+a_2+a_3  = 3\\
-a_1+a_2+2a_3  = 3
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
-\begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 \\
-2 &amp;amp; 1 &amp;amp; 1 \\
-1 &amp;amp; 1 &amp;amp; 2
-\end{array}
-\right), \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-a_3 \\
-\end{array}
-\right), \underline{y}=\left(
-\begin{array}{c}
-2 \\
-3 \\
-3 \\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(|X|=-4\)&lt;/span&gt; &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;(三次行列式的計算)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第一列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則: &lt;span class=&#34;math display&#34;&gt;\[|X_1|=\begin{vmatrix}
-2 &amp;amp; 2 &amp;amp;  1\\
-3 &amp;amp; 1 &amp;amp;  1\\
-3 &amp;amp; 1 &amp;amp;  2\\
-\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第二列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_2|=\begin{vmatrix}
-1 &amp;amp; 2 &amp;amp;  1\\
-2 &amp;amp; 3 &amp;amp;  1\\
-1 &amp;amp; 3 &amp;amp;  2\\
-\end{vmatrix}=0\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第三列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_3|=\begin{vmatrix}
-1 &amp;amp; 2 &amp;amp;  2\\
-2 &amp;amp; 1 &amp;amp;  3\\
-1 &amp;amp; 1 &amp;amp;  3\\
-\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore a_1=\frac{|X_1|}{|X|}=1, \\
-a_2=\frac{|X_2|}{|X|}=0, \\
-a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

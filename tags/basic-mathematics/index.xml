@@ -7,8 +7,148 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/basic-mathematics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>你買的彩票中獎概率到底有多少？</title>
+      <link>https://winterwang.github.io/post/probability3/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/probability3/</guid>
+      <description>&lt;div id=&#34;-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;二項分佈的概念 Binomial distribution&lt;/h3&gt;
+&lt;p&gt;二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次相互獨立的&lt;a href=&#34;https://winterwang.github.io/post/probability2-4/&#34;&gt;成功率爲 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的伯努利實驗&lt;/a&gt; (&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; independent Bernoulli trials) 中成功的次數。&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 服從二項分佈，記爲 &lt;span class=&#34;math inline&#34;&gt;\(X \sim binomial(n, \pi)\)&lt;/span&gt; 或&lt;span class=&#34;math inline&#34;&gt;\(X \sim bin(n, \pi)\)&lt;/span&gt;。它的(第 &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; 次實驗的)概率被定義爲：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=x) &amp;amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\
+       &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
+       &amp;amp; for\;\; x = 0,1,2,\dots,n
+\end{align}\]&lt;/span&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;二項分佈的期望和方差&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;若 &lt;span class=&#34;math inline&#34;&gt;\(X \sim bin(n,\pi)\)&lt;/span&gt;，那麼 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 就是這一系列獨立伯努利實驗中成功的次數。&lt;/li&gt;
+&lt;li&gt;用 &lt;span class=&#34;math inline&#34;&gt;\(X_i, i =1,\dots, n\)&lt;/span&gt; 標記每個相互獨立的伯努利實驗。&lt;/li&gt;
+&lt;li&gt;那麼我們可以知道 &lt;span class=&#34;math inline&#34;&gt;\(X=\sum_{i=1}^nX_i\)&lt;/span&gt;。
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\
+                 &amp;amp;= E(X_1+X_2+\cdots+X_n) \\
+                 &amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\
+                 &amp;amp;= \sum_{i=1}^nE(X_i)\\
+                 &amp;amp;= \sum_{i=1}^n\pi \\
+                 &amp;amp;= n\pi
+  \end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\
+    &amp;amp;= Var(X_i+X_2+\cdots+X_n) \\
+    &amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\
+    &amp;amp;= \sum_{i=1}^nVar(X_i) \\
+    &amp;amp;= n\pi(1-\pi) \\
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-hypergeometric-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;超幾何分佈 hypergeometric distribution&lt;/h3&gt;
+&lt;p&gt;假設我們從總人數爲 &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; 的人羣中，採集一個樣本 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;。假如已知在總體人羣中(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 人患有某種疾病。請問採集的樣本 &lt;span class=&#34;math inline&#34;&gt;\(X=n\)&lt;/span&gt; 中患有這種疾病的人，服從怎樣的分佈？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;從人羣(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)中取出樣本(&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;)，有 &lt;span class=&#34;math inline&#34;&gt;\(^NC_n\)&lt;/span&gt; 種方法。&lt;/li&gt;
+&lt;li&gt;從患病人羣(&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;)中取出患有該病的人(&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(^MC_x\)&lt;/span&gt; 種方法。&lt;/li&gt;
+&lt;li&gt;樣本中不還病的人(&lt;span class=&#34;math inline&#34;&gt;\(n-x\)&lt;/span&gt;)被採樣的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{N-M}C_{n-x}\)&lt;/span&gt; 種。&lt;/li&gt;
+&lt;li&gt;採集一次 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本的概率都一樣。因此：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(X=x)=\frac{\binom{M}{x}\binom{N-M}{n-x}}{\binom{N}{n}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;樂透中獎概率問題：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;從數字 &lt;span class=&#34;math inline&#34;&gt;\(1\sim59\)&lt;/span&gt; 中選取 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個任意號碼&lt;/li&gt;
+&lt;li&gt;開獎時從 &lt;span class=&#34;math inline&#34;&gt;\(59\)&lt;/span&gt; 個號碼球中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個&lt;/li&gt;
+&lt;li&gt;如果六個號碼全部猜中(不分順序)，你可以成爲百萬富翁。請問一次猜中全部 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個號碼的概率是多少？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;從 &lt;span class=&#34;math inline&#34;&gt;\(59\)&lt;/span&gt; 個號碼中隨機取出任意 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個號碼的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{59}C_6\)&lt;/span&gt; 種。 &lt;span class=&#34;math display&#34;&gt;\[^{59}C_6=\frac{59!}{6!(59-6)!}=45,057,474\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;每次選取六個號碼做爲一組的可能性相同，所以，你買了一組樂透號碼，能中獎的概率就是 &lt;span class=&#34;math inline&#34;&gt;\(1/45,057,474 = 0.00000002219\)&lt;/span&gt;。你還會再去買彩票麼？&lt;/p&gt;
+&lt;div id=&#34;-3-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;如果我只想中其中的 &lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt; 個號碼，概率有多大？&lt;/h4&gt;
+&lt;p&gt;用超幾何分佈的概率公式：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=3) &amp;amp;= \frac{^6C_3\times ^{53}C_3}{^{59}C_6} \\
+       &amp;amp;= 0.010
+\end{align}\]&lt;/span&gt;
+&lt;p&gt;你有 &lt;span class=&#34;math inline&#34;&gt;\(1\%\)&lt;/span&gt; 的可能中獎。換句話說，如果中三個以上的數字算中獎的話，你買的彩票中獎的概率低於 &lt;span class=&#34;math inline&#34;&gt;\(1\%\)&lt;/span&gt;。是不是覺得下次送錢給博彩公司的時候還不如跟我一起喝一杯咖啡划算？&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-poisson-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;泊松分佈 Poisson Distribution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當一個事件，在一段時間 (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) 中可能發生的次數是 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 。那麼我們可以認爲，經過時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;，該時間發生的期望次數是 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\lambda T\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;利用微分思想，將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段，當 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt; 直到每個微小的時間段內最多發生一次該事件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那麼&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每個微小的時間段，可以視爲是一個伯努利實驗（有事件發生或者沒有）&lt;/li&gt;
+&lt;li&gt;那麼這整段時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 內發生的事件可以視爲是一個二項分佈實驗。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(X=\)&lt;/span&gt; 一次事件發生時所經過的所有時間段。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(X \sim Bin(n, \pi)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 爲時間段。&lt;/li&gt;
+&lt;li&gt;在每個分割好的時間段內，事件發生的概率都是：&lt;span class=&#34;math inline&#34;&gt;\(\pi=\frac{\lambda T}{n}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(\mu=\lambda T \Rightarrow \pi=\mu/n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;所以 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的概率方程就是：
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=x) &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
+   &amp;amp;= \binom{n}{x}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+   &amp;amp;= \frac{n!}{x!(n-x)!}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+   &amp;amp;=\frac{n!}{n^x(n-x)!}\frac{\mu^x}{x!}(1-\frac{\mu}{n})^{n-x}\\
+當 n\rightarrow\infty   &amp;amp;\; x \ll n (x遠小於n) 時\\
+\frac{n!}{n^x(n-x)!} &amp;amp;=\frac{n(n-1)\dots(n-x+1)}{n^x} \rightarrow 1\\
+(1-\frac{\mu}{n})^{n-x} &amp;amp;\approx  (1-\frac{\mu}{n})^n \rightarrow e^{-\mu}\\
+所以 我們可&amp;amp;以得到泊松分佈的概率公式：   \\
+P(X=x) &amp;amp;\rightarrow \frac{\mu^x}{x!}e^{-\mu}
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;當數據服從泊松分佈時，記爲 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Poisson(\mu=\lambda T)\;\; or\;\; X\sim Poi(\mu)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;證明泊松分佈的參數特徵：&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X)  &amp;amp;=  \sum_{x=0}^\infty xP(X=x) \\
+      &amp;amp;=  \sum_{x=0}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
+      &amp;amp;= 0+ \sum_{x=1}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
+      &amp;amp;=  \sum_{x=1}^\infty \frac{\mu^x}{(x-1)!}e^{-\mu} \\
+      &amp;amp;=  \mu\sum_{x=1}^\infty \frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
+這個時候我們用i&amp;amp;=x-1 替換掉所有的 x \\
+      &amp;amp;=  \mu\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu} \\
+注意到右半部分 &amp;amp;\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu}=1 是一個\\泊松分佈的所有&amp;amp;概率和 \\
+      &amp;amp;= \mu
+\end{align}\]&lt;/span&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\mu\)&lt;/span&gt; 爲了找到 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)\)&lt;/span&gt;，我們用公式 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=E(X^2)-E(X)^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我們需要找到 &lt;span class=&#34;math inline&#34;&gt;\(E(X^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X^2) &amp;amp;= \sum_{x=0}^\infty x^2\frac{\mu^x}{x!}e^{-\mu} \\
+       &amp;amp;= \mu \sum_{x=1}^\infty x\frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
+這個時候我們用i&amp;amp;=x-1 替換掉所有的 x \\
+       &amp;amp;= \mu \sum_{i=0}^\infty (i+1)\frac{\mu^{i}}{i!}e^{-\mu} \\
+       &amp;amp;= \mu(\sum_{i=0}^\infty i\frac{\mu^i}{i!}e^{-\mu} + \sum_{i=0}^\infty \frac{\mu^i}{i!}e^{-\mu}) \\
+       &amp;amp;= \mu(E(X)+1) \\
+       &amp;amp;= \mu^2+\mu \\
+因此，代入上面&amp;amp;提到的方差公式： \\
+Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
+       &amp;amp;= \mu^2 + \mu -\mu^2 \\
+       &amp;amp;= \mu
+\end{align}\]&lt;/span&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>概率論2</title>
@@ -1247,33 +1387,6 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
 &lt;/table&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;4次行列式：&lt;br&gt; 試求&lt;span class=&#34;math inline&#34;&gt;\(A=\left(  \begin{array}{} a_{11}&amp;amp; a_{12}&amp;amp; a_{13}&amp;amp; a_{14}\\ a_{21}&amp;amp; a_{22}&amp;amp; a_{23}&amp;amp; a_{24}\\ a_{31}&amp;amp; a_{32}&amp;amp; a_{33}&amp;amp; a_{34}\\ a_{41}&amp;amp; a_{42}&amp;amp; a_{43}&amp;amp; a_{44}  \end{array}  \right)\\  \;\;=\left(  \begin{array}{r} -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\ 4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\ 2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\ 2 &amp;amp; 1&amp;amp; 2&amp;amp; -3  \end{array}  \right)\)&lt;/span&gt; &lt;br&gt;的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt;：&lt;br&gt; 由於第2行有成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt; 我們以第二行展開行列式，因爲 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt;，所以 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}A_{23}=0\)&lt;/span&gt; 可以省略：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=a_{21}A_{21}+a_{22}A_{22}+a_{24}A_{24}\\  \;\;\;\;\:=a_{21}(-1)^{2+1}D_{21}+a_{22}(-1)^{2+2}D_{22}+a_{24}(-1)^{2+4}D_{24}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{21}=(-1)^{2+1}\begin{vmatrix}  a_{12} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{32} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{42} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  3 &amp;amp; 4 &amp;amp; 1\\  -3 &amp;amp; -4 &amp;amp; 2\\  1 &amp;amp; 2&amp;amp; -3\\  \end{vmatrix}=6\\  A_{22}=(-1)^{2+2}\begin{vmatrix}  a_{11} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{31} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{41} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=\begin{vmatrix}  -2 &amp;amp; 4 &amp;amp;1\\  2 &amp;amp; -4 &amp;amp;2\\  2 &amp;amp; 2 &amp;amp;-3\\  \end{vmatrix}=36\\  A_{24}=(-1)^{2+4}\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\  a_{41} &amp;amp; a_{42} &amp;amp; a_{43}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4\\  2 &amp;amp; -3 &amp;amp;-4\\  2 &amp;amp; 1 &amp;amp;2\\  \end{vmatrix}=0\\  \therefore |A|=4\times6+2\times36+5\times0=96\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;然而，&lt;strong&gt;4次以上的矩陣的行列式計算，沒有類似薩呂法則的計算方法。&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>https://winterwang.github.io/post/2017-03-13/</link>
-      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-13/</guid>
-      <description>&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;正定，半正定 (正值，半正值)&lt;/h2&gt;
-&lt;p&gt;對於任意的非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; ，如果2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 始終滿足 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} &amp;gt; 0\)&lt;/span&gt; &lt;strong&gt;注意此處無等號&lt;/strong&gt;。我們稱這個2次型爲&lt;strong&gt;正定(positive definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;正定矩陣(positive definite matrix)&lt;/strong&gt;。另外，如果任意非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; 始終滿足2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} \geqslant 0\)&lt;/span&gt;， 這個2次型被叫做&lt;strong&gt;半正定(positive semi-definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;半正定矩陣(positive semi-definite matrix)&lt;/strong&gt;。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; 2 &amp;amp; 4\\ 2 &amp;amp; 2 &amp;amp; 3\\ 4 &amp;amp; 3 &amp;amp; 25 \end{array} \right)\)&lt;/span&gt;，2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 是正定。因爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=5x_1^2+2x_2^2+25x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+4x_1x_2+8x_1x_3+6x_2x_3\\\;\;\;\;\;\;\;\;\;\:=(2x_1+x_2)^2+(x_2+3x_3)^2+(x_1+4x_3)^2\\ \because \underline{x}\neq\underline{0}=\left( \begin{array}{} 0\\ 0\\ 0 \end{array} \right)\\ \therefore \underline{x}^tA\underline{x}&amp;gt;0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; -6 &amp;amp; 3\\ -6 &amp;amp; 25 &amp;amp; 32\\ 3 &amp;amp; 32 &amp;amp; 73 \end{array} \right)\)&lt;/span&gt;，2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 是半正定。因爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=5x_1^2+25x_2^2+73x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-12x_1x_2+6x_2x_3+64x_1x_3\\ \;\;\;\;\;\;\;\;\;\:=(2x_1-3x_3)^2+(x_1+3x_3)^2+(4x_2+8x_3)^2\\\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because \underline{x}=\left( \begin{array}{c} 3\\ 2\\ -1 \end{array} \right)\)&lt;/span&gt; 時 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=0\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore \underline{x}^tA\underline{x} \geqslant0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)(\neq\underline{0})\)&lt;/span&gt; 與單位矩陣 &lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 構成的2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tE_n\underline{x}=\underline{x}^t\underline{x}=\sum\limits_{i=1}^nx_i^2&amp;gt;0\)&lt;/span&gt; 是爲正定。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right), \underline{\frac{1}{n}}=\left( \begin{array}{c} \frac{1}{n}\\ \frac{1}{n}\\ \vdots \\ \frac{1}{n} \end{array} \right)\)&lt;/span&gt; 已知，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\underline{1/n}=\sum\limits_{i=1}^nx_i\cdot \frac{1}{n}=\bar{x}\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的平均值)，包含了 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個 &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 的橫向量： &lt;span class=&#34;math inline&#34;&gt;\((\bar{x}，\bar{x},\cdots,\bar{x})\)&lt;/span&gt; 展開以後成爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((\bar{x}，\bar{x},\cdots,\bar{x})\\ \;\;\;\;\;\;\;\;\;\:=(x_1, x_2, \cdots, x_n)\left( \begin{array}{c} \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n}\\ \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n} \end{array} \right)\\ \;\;\;\;\;\;\;\;\;\:=\underline{x}U\)&lt;/span&gt;&lt;br&gt; 令 &lt;span class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt; 代表上面第二個等式中有半部分的矩陣。那麼將之從右往左乘以 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 我們可以得到：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tU\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)\\ =\sum\limits_{i=1}^n\bar{x}x_i=\bar{x}\sum\limits_{i=1}^nx_i=n\bar{x}^2\)&lt;/span&gt;&lt;br&gt; 利用上面的式子，我們可以得到，&lt;strong&gt;偏差平方和(sum of squared deviation, SS)&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次單位矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(SS=\sum\limits_{i=1}^n(x_i-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2x_i\bar{x}+\bar{x}^2)\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2n\bar{x}^2+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^tE_n\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t(E_n-U)\underline{x}\\ \because when \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)=\left( \begin{array}{c} \bar{x}\\ \bar{x}\\ \vdots\\ \bar{x} \end{array} \right), \&amp;amp; (\bar{x}\neq0), SS=0\\ \therefore \underline{x}^t(E_n-U)\underline{x}\;是半正定2次型。\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;雙一次型&lt;/h2&gt;
-&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_m \end{array} \right), A=\left( \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mn} \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\)&lt;/span&gt; 來說，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{y}=\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{ij}x_iy_j\)&lt;/span&gt; 既是 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的1次型，也是 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 的1次型，所以又叫做 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\underline{y}\)&lt;/span&gt; 的&lt;strong&gt;雙1次型(bilinear form)&lt;/strong&gt;。雙1次型是一個標量(scalar)。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right), B=(b_{ij})=\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 1 &amp;amp; 1\\ 1 &amp;amp; 0 &amp;amp; 1 \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tB\underline{y}=\sum\limits_{i=1}^3\sum\limits_{j=1}^3b_{ij}x_iy_j=(x_1+x_3, x_2, x_2+x_3)\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\\ \;\;\;\;\:=x_1y_1+x_2y_2+x_2y_3+x_3y_1+x_3y_3\\ \;\;\;\;\:=x_1y_1+x_2(y_2+y_3)+x_3(y_1+y_3) \; \bf (\underline{x} 的1次型)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\;\;\;\;\;\:=y_1(x_1+x_3)+x_2y_2+(x_2+x_3)y_3 \;\bf (\underline{y} 的1次型)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{l}=\left( \begin{array}{c} l_1\\ l_2\\ \end{array} \right), T=\left( \begin{array}{c} t_{11} &amp;amp; t_{12} &amp;amp; t_{13}\\ t_{21} &amp;amp; t_{22} &amp;amp; t_{23}\\ \end{array} \right), \underline{m}=\left( \begin{array}{c} m_1\\ m_2\\ m_3 \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{l}^tT\underline{m}=\sum\limits_{i=1}^2\sum\limits_{j=1}^3t_{ij}l_im_j\\ \;\;\;\;\;\;\;\;\;\;=l_1t_{11}m_1+l_1t_{12}m_2+l_1t_{13}m_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2t_{21}m_1+l_2t_{22}m_2+l_3t_{23}m_3\\ \;\;\;\;\;\;\;\;\;\;=l_1(t_{11}m_1+t_{12}m_2+t_{13}m_3)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2(t_{21}m_1+t_{22}m_2+t_{23}m_3) \;\;(\underline{l} \textbf{的1次型})\\ \;\;\;\;\;\;\;\;\;\;=(t_{11}l_1+t_{21}l_2)m_1+(t_{12}l_1+t_{22}l_2)m_2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(t_{13}l_1+t_{23}l_2)m_3\;\;(\underline{m} \textbf{的1次型})\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

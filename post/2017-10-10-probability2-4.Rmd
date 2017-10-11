@@ -11,7 +11,8 @@ tags:
   - learning notes
   - Medical Statistics
   - LSHTM
-summary: "Bayes 概念; 期望值; 方差"
+summary: "Bayes 概念; 伯努利分佈 Bernoulli distribution
+; 期望值; 方差"
 ---
 
 ### Bayes 理論的概念
