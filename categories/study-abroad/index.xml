@@ -21,7 +21,7 @@
 &lt;p&gt;許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 &lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;這裏先引入貝葉斯的概念：&lt;/p&gt;
 &lt;p&gt;我們可以將 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)\)&lt;/span&gt; 寫成： &lt;span class=&#34;math display&#34;&gt;\[P(A\cap S)=P(A|S)P(S)\\or\\
-P(A\cap S)=P(S|A)P(S)\]&lt;/span&gt; 這兩個等式是完全等價的。我們將他們連起來：&lt;/p&gt;
+P(A\cap S)=P(S|A)P(A)\]&lt;/span&gt; 這兩個等式是完全等價的。我們將他們連起來：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)P(A)=P(A|S)P(S)\\
 \Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;是不是看起來又像是寫了一堆&lt;strong&gt;廢話&lt;/strong&gt;？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。&lt;/p&gt;
@@ -36,7 +36,7 @@ P(A\cap S)=P(S|A)P(S)\]&lt;/span&gt; 這兩個等式是完全等價的。我們�
 &lt;/div&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
-        &amp;amp;= \frac{0.09\times0.2}{0.09\times0.02+0.07\times0.8} \\
+        &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
         &amp;amp;= 0.24
 \end{align}\]&lt;/span&gt;
 &lt;p&gt;所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(&lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;)。&lt;/p&gt;
@@ -96,7 +96,7 @@ Var(X) &amp;amp;=E[X^2]-E[X]^2 \\
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 E(XY) &amp;amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
 \because &amp;amp;\; X,Y are\;independent\;to\;each\;other \\
-\therefore &amp;amp;= \sum_x\sum_yP(X=x)P(Y=y)\\
+\therefore &amp;amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
       &amp;amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
       &amp;amp;=E(X)E(Y)
 \end{align}\]&lt;/span&gt;

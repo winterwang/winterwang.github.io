@@ -24,7 +24,7 @@ summary: "Bayes 概念; 期望值; 方差"
 
 我們可以將 $P(A\cap S)$ 寫成：
 $$P(A\cap S)=P(A|S)P(S)\\or\\
-P(A\cap S)=P(S|A)P(S)$$
+P(A\cap S)=P(S|A)P(A)$$
 這兩個等式是完全等價的。我們將他們連起來：
 
 $$P(S|A)P(A)=P(A|S)P(S)\\
@@ -49,7 +49,7 @@ $$P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}$$
 
 \begin{align}
 P(S|A) &= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
-        &= \frac{0.09\times0.2}{0.09\times0.02+0.07\times0.8} \\
+        &= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
         &= 0.24
 \end{align}
 
@@ -120,7 +120,7 @@ Var(X) &=E[X^2]-E[X]^2 \\
 \begin{align}
 E(XY) &= \sum_x\sum_y xyP(X=x, Y=y) \\
 \because &\; X,Y are\;independent\;to\;each\;other \\
-\therefore &= \sum_x\sum_yP(X=x)P(Y=y)\\
+\therefore &= \sum_x\sum_y xyP(X=x)P(Y=y)\\
       &=\sum_x xP(X=x)\sum_y yP(Y=y)\\
       &=E(X)E(Y)
 \end{align}

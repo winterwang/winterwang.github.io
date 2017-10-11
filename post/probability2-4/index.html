@@ -261,7 +261,7 @@
 <p>許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 <span class="math inline">\(P(S|A)\)</span></p>
 <p>這裏先引入貝葉斯的概念：</p>
 <p>我們可以將 <span class="math inline">\(P(A\cap S)\)</span> 寫成： <span class="math display">\[P(A\cap S)=P(A|S)P(S)\\or\\
-P(A\cap S)=P(S|A)P(S)\]</span> 這兩個等式是完全等價的。我們將他們連起來：</p>
+P(A\cap S)=P(S|A)P(A)\]</span> 這兩個等式是完全等價的。我們將他們連起來：</p>
 <p><span class="math display">\[P(S|A)P(A)=P(A|S)P(S)\\
 \Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]</span></p>
 <p>是不是看起來又像是寫了一堆<strong>廢話</strong>？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。</p>
@@ -276,7 +276,7 @@ P(A\cap S)=P(S|A)P(S)\]</span> 這兩個等式是完全等價的。我們將他�
 </div>
 <span class="math display">\[\begin{align}
 P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
-        &amp;= \frac{0.09\times0.2}{0.09\times0.02+0.07\times0.8} \\
+        &amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
         &amp;= 0.24
 \end{align}\]</span>
 <p>所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(<span class="math inline">\(P(S|A)\)</span>)。</p>
@@ -336,7 +336,7 @@ Var(X) &amp;=E[X^2]-E[X]^2 \\
 <span class="math display">\[\begin{align}
 E(XY) &amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
 \because &amp;\; X,Y are\;independent\;to\;each\;other \\
-\therefore &amp;= \sum_x\sum_yP(X=x)P(Y=y)\\
+\therefore &amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
       &amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
       &amp;=E(X)E(Y)
 \end{align}\]</span>
