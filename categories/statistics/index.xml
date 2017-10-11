@@ -151,6 +151,81 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
     </item>
     
     <item>
+      <title>正態分佈</title>
+      <link>https://winterwang.github.io/post/normal-distribution/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
+      <description>&lt;div id=&#34;-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;概率密度曲線 probability density function， PDF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一個隨機連續型變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 它的性質由一個對應的&lt;strong&gt;概率密度方程 (probability density function, PDF)&lt;/strong&gt; 決定。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在給定的範圍區間內，如 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b, (a &amp;lt; b)\)&lt;/span&gt;，它的概率滿足:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;這個相關的方程，在 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b\)&lt;/span&gt; 區間內的積分，就是這個連續變量在這個區間內取值的概率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# R codes for drawing a standard normal distribution by using ggplot2
+library(ggplot2)
+p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
+  stat_function(fun = dnorm)
+p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) +
+  theme(plot.subtitle = element_text(vjust = 1),
+        plot.caption = element_text(vjust = 1),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        plot.title = element_text(size = 10, face = &amp;quot;bold&amp;quot;, hjust = 0.5),
+        panel.background = element_rect(fill = &amp;quot;ivory&amp;quot;)) +
+  labs(title = &amp;quot;Probability density functions \n for standard normal distribution&amp;quot;,
+       x = NULL, y = NULL) +
+  stat_function(fun = dnorm,
+                xlim = c(-1.3,0.4),
+                geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;： &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\int_{-\infty}^\infty xf(x)dx\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;正態分佈&lt;/h3&gt;
+&lt;p&gt;如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，和它的方差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;，來描述這組數據。記爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim N(\mu, \sigma^2)\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的概率密度方程可以表述爲：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(x) =\mu\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\sigma^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;標準正態分佈&lt;/h3&gt;
+&lt;p&gt;標準正態分佈的期望（或者均值）爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;，方差爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;記爲：&lt;span class=&#34;math inline&#34;&gt;\(Z \sim N(0,1)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;它的概率密度方程表述爲：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{1}{\sqrt{2\pi}}exp(-\frac{z^2}{2})\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
+&lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Z=\frac{X-\mu}{\sigma}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>概率論2</title>
       <link>https://winterwang.github.io/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
@@ -1278,59 +1353,6 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://winterwang.github.io/post/2017-04-02/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;行列式的性質&lt;/h2&gt;
-&lt;p&gt;具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;轉置矩陣的行列式，與轉置前的行列式一致。即：&lt;span class=&#34;math inline&#34;&gt;\(|A^t|=|A|\)&lt;/span&gt;。 &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix}  1 &amp;amp; 2 &amp;amp; 3 \\  4 &amp;amp; 5 &amp;amp; 6 \\  7 &amp;amp; 8 &amp;amp; 9 \\  \end{vmatrix}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;任意一列（或者任意一行）若乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍，那麼這個矩陣的行列式結果也將是乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ \lambda a_{21} &amp;amp;\lambda a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \lambda a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;任意一列（或者任意一行）的各成分乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21}\pm \lambda a_{11} &amp;amp; a_{22}\pm \lambda a_{12} &amp;amp; a_{23}\pm \lambda a_{13}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}，\\ \begin{vmatrix} a_{11} &amp;amp; a_{12}\pm \lambda a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22}\pm \lambda a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32}\pm \lambda a_{31} &amp;amp; a_{33}\\ \end{vmatrix},\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} \pm \frac{a_{11}}{\lambda} &amp;amp; a_{22}\pm \frac{a_{12}}{\lambda} &amp;amp; a_{23}\pm \frac{a_{13}}{\lambda}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}, \\ \begin{vmatrix} a_{11} &amp;amp; a_{12}\pm \frac{a_{11}}{\lambda} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22}\pm \frac{a_{21}}{\lambda} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32}\pm \frac{a_{31}}{\lambda} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 上述行列式與行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt; 結果相同。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;符合下列條件時，行列式的值爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;任意一行（或者列）的全部成分均爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 時。&lt;/li&gt;
-&lt;li&gt;矩陣中若有兩行（或者兩列）的對應成分全部相同時。&lt;/li&gt;
-&lt;li&gt;矩陣中若有兩行（或者兩列）的對應成分均成一定比例時。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\  0 &amp;amp; 0 &amp;amp; 0\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp;amp; b &amp;amp; c\\  a &amp;amp; b &amp;amp; c\\  d &amp;amp; e &amp;amp; f\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp;amp; b &amp;amp; c\\  ka &amp;amp; kb &amp;amp; kc\\  d &amp;amp; e &amp;amp; f\\  \end{vmatrix}=0\)&lt;/span&gt;&lt;br&gt; 由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。此性質與多重線性迴歸的多重共線性有直接關係。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt; （第一行和第二行對調成分）&lt;/li&gt;
-&lt;li&gt;對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; a_{22} &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ 0 &amp;amp; a_{22} &amp;amp; a_{23}\\ 0 &amp;amp; 0 &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; 0\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣中如果有任意一行（或列），衹有一個成分為非零成分，可以將該矩陣的行列式降次：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}(-1)^{1+1}\begin{vmatrix} a_{22} &amp;amp; a_{23} \\ a_{32} &amp;amp; a_{33} \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; 0\\ \end{vmatrix}=a_{23}(-1)^{1+1}\begin{vmatrix} a_{11} &amp;amp; a_{12} \\ a_{31} &amp;amp; a_{32} \end{vmatrix}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 同時都是正方形矩陣時，&lt;span class=&#34;math inline&#34;&gt;\(|AB|=|A|·|B|\)&lt;/span&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;strong&gt;證明&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left(\begin{array}{c} 0 &amp;amp; 4 &amp;amp; 2\\ -1 &amp;amp; 3 &amp;amp; 7\\ 6 &amp;amp; 5 &amp;amp; 9\\  \end{array}\right)\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(B=\left(\begin{array}{c} 2 &amp;amp; 3 &amp;amp; 4\\ -2 &amp;amp; 7 &amp;amp; 1\\ 4 &amp;amp; 6 &amp;amp; 0\\  \end{array}\right)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(|AB|=|A|·|B|\)&lt;/span&gt; 成立&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;解&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\because AB=\left(\begin{array}{c}  0 &amp;amp; 40 &amp;amp; 4\\  20 &amp;amp; 60 &amp;amp; -1\\  38 &amp;amp; 107 &amp;amp; 29\\  \end{array}\right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore |AB|=\begin{vmatrix}  0 &amp;amp; 40 &amp;amp; 4\\  20 &amp;amp; 60 &amp;amp; -1\\  38 &amp;amp; 107 &amp;amp; 29\\  \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3： 第2列 - 第3列 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 10 作新的第2列&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 0 &amp;amp; 4\\ 20 &amp;amp; 70 &amp;amp; -1\\ 38 &amp;amp; -183 &amp;amp; 29\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7： 第一行衹有第三個元素非零，可以降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=4(-1)^{1+3}\begin{vmatrix}  20 &amp;amp; 70 \\  38 &amp;amp; -183\end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質2: 第一行所有元素除以10, 將 10 提前。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=4\times10\begin{vmatrix}  2 &amp;amp; 7 \\  38 &amp;amp; -183\end{vmatrix}\\  =40(-366-266)\\=-25280\)&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix}  0 &amp;amp; 4 &amp;amp; 2\\  -1 &amp;amp; 3 &amp;amp; 7\\  6 &amp;amp; 5 &amp;amp; 9\\  \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3: 第2列 - 第3列 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2 作爲新的第二列元素&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 0 &amp;amp; 2\\ -1 &amp;amp; -11 &amp;amp; 7\\ 6 &amp;amp; -13 &amp;amp; 9\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第一行衹有第三個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=2(-1)^{1+3}\begin{vmatrix} -1 &amp;amp; -11 \\ 6 &amp;amp; -13\end{vmatrix}\\=2(13+66)=158\)&lt;/span&gt; &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(|B|=\begin{vmatrix} 2 &amp;amp; 3 &amp;amp; 4\\ -2 &amp;amp; 7 &amp;amp; 1\\ 4 &amp;amp; 6 &amp;amp; 0\\ \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3: 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第2行作新的第1行； 第3行 - 第1行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2 作新的第三行&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 10 &amp;amp; 5\\ -2 &amp;amp; 7 &amp;amp; 1\\ 0 &amp;amp; 0 &amp;amp; -8\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第三行衹有第三個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-8(-1)^{3+3}\begin{vmatrix} 0 &amp;amp; 10 \\ -2 &amp;amp; 7\end{vmatrix}\\=-8\times20=-160\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;綜上可得&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(|A|·|B|=158\times(-160)=-25280=|AB|\)&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;3&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;試用這一節介紹的行列式性質，求解前一節&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;例(3)&lt;/a&gt;的行列式值。&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;解&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\  4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\  2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\  2 &amp;amp; 1&amp;amp; 2&amp;amp; -3 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3&lt;br&gt; 1. 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第3行，作新的第一行； 2. 第2行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2，作新的第2行； 3. 第4行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 作新的第4行&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix}  0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 3\\  0 &amp;amp; 8 &amp;amp; 8 &amp;amp; 1\\  2 &amp;amp; -3 &amp;amp; -4 &amp;amp; 2\\  0 &amp;amp; 4 &amp;amp; 6 &amp;amp; -5 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1行衹有第4個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp;amp; 8 &amp;amp; 8 \\ 2 &amp;amp; -3 &amp;amp; -4 \\ 0 &amp;amp; 4 &amp;amp; 6 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1列衹有第2個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp;amp; 8 \\ 4 &amp;amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

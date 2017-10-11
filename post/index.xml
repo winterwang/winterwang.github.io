@@ -151,6 +151,81 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
     </item>
     
     <item>
+      <title>正態分佈</title>
+      <link>https://winterwang.github.io/post/normal-distribution/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
+      <description>&lt;div id=&#34;-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;概率密度曲線 probability density function， PDF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一個隨機連續型變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 它的性質由一個對應的&lt;strong&gt;概率密度方程 (probability density function, PDF)&lt;/strong&gt; 決定。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在給定的範圍區間內，如 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b, (a &amp;lt; b)\)&lt;/span&gt;，它的概率滿足:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;這個相關的方程，在 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b\)&lt;/span&gt; 區間內的積分，就是這個連續變量在這個區間內取值的概率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# R codes for drawing a standard normal distribution by using ggplot2
+library(ggplot2)
+p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
+  stat_function(fun = dnorm)
+p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) +
+  theme(plot.subtitle = element_text(vjust = 1),
+        plot.caption = element_text(vjust = 1),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        plot.title = element_text(size = 10, face = &amp;quot;bold&amp;quot;, hjust = 0.5),
+        panel.background = element_rect(fill = &amp;quot;ivory&amp;quot;)) +
+  labs(title = &amp;quot;Probability density functions \n for standard normal distribution&amp;quot;,
+       x = NULL, y = NULL) +
+  stat_function(fun = dnorm,
+                xlim = c(-1.3,0.4),
+                geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;： &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\int_{-\infty}^\infty xf(x)dx\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;正態分佈&lt;/h3&gt;
+&lt;p&gt;如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，和它的方差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;，來描述這組數據。記爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim N(\mu, \sigma^2)\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的概率密度方程可以表述爲：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(x) =\mu\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\sigma^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;標準正態分佈&lt;/h3&gt;
+&lt;p&gt;標準正態分佈的期望（或者均值）爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;，方差爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;記爲：&lt;span class=&#34;math inline&#34;&gt;\(Z \sim N(0,1)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;它的概率密度方程表述爲：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{1}{\sqrt{2\pi}}exp(-\frac{z^2}{2})\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
+&lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Z=\frac{X-\mu}{\sigma}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>概率論2</title>
       <link>https://winterwang.github.io/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
@@ -1122,132 +1197,6 @@ x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 3\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  2a_1+2a_2-4a_3 = 0\\  -3a_1-3a_2+4a_3 = 0\\  6a_1+6a_2-4a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=u\left(  \begin{array}{c}  1\\  -1\\  0  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(3, 4\)&lt;/span&gt; 與後面的固有值問題關係深刻。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 26</title>
-      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
-      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34;&gt;擴大係數矩陣&lt;/a&gt; &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 通過行的基本變形，轉化成爲 &lt;span class=&#34;math inline&#34;&gt;\((E \underline{y}^*)\)&lt;/span&gt; 的時候，寫在右側的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}^*\)&lt;/span&gt; 就是所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-\left\{
-\begin{array}{ll}
-a_1+2a_2+a_3  = 2\\
-2a_1+a_2+a_3  = 3\\
-a_1+a_2+2a_3  = 3
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;此連立方程組的擴大係數矩陣爲： &lt;span class=&#34;math display&#34;&gt;\[(X \underline{y})=\left(
-\begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\
-2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\
-1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3
-\end{array}
-\right)\]&lt;/span&gt; 下面開始&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行變形&lt;/a&gt;： &lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{c}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\
-2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\
-1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{rr}
-(1)\\
-(2)\\
-(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\left(\begin{array}{r}
-1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\
-0&amp;amp; -3&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
-0&amp;amp; -1&amp;amp; 1 &amp;amp; \vdots &amp;amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)\\
-(2)=(2)-2\times(1)\\
-(3)=(3)-(1)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
-0&amp;amp; -4&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)+2\times(3)\\
-(2)=(2)+(3)\\
-(3)=-1\times(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
-0&amp;amp; 1&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1\\
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)\\
-(2)=(2)\div(-4)\\
-(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 3 &amp;amp; \vdots &amp;amp; 4\\
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
-0&amp;amp; 0&amp;amp; -1 &amp;amp; \vdots &amp;amp; -1
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)\\
-(2)\\
-(3)=(3)-(2)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(\begin{array}{r}
-1&amp;amp; 0&amp;amp; 0 &amp;amp; \vdots &amp;amp; 1\\
-0&amp;amp; 1&amp;amp; 0 &amp;amp; \vdots &amp;amp; 0\\
-0&amp;amp; 0&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1
-\end{array}\right) \begin{align}
-\left\{
-\begin{array}{l}
-(1)=(1)+3\times(3)\\
-(2)\\
-(3)
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;至此，點線的左側矩陣變成了單位矩陣以後轉換結束。所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt; 便是點線右側的向量。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-a_3 \\
-\end{array}
-\right)=\left(
-\begin{array}{c}
-1 \\
-0 \\
-1 \\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     

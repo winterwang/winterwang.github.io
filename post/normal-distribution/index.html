@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/probability2-4/">
+  <link rel="canonical" href="https://winterwang.github.io/post/normal-distribution/">
 
   
 
-  <title>概率論2 | Be ambitious</title>
+  <title>正態分佈 | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,14 +160,14 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">概率論2</h1>
+    <h1 itemprop="name">正態分佈</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-10-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Tue, Oct 10, 2017
+    <time datetime="2017-10-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Wed, Oct 11, 2017
     </time>
   </span>
 
@@ -202,7 +202,7 @@
     <a href="/tags/medical-statistics">Medical Statistics</a
     >, 
     
-    <a href="/tags/lshtm">LSHTM</a
+    <a href="/tags/probability">probability</a
     >
     
   </span>
@@ -215,35 +215,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fprobability2-4%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e6%a6%82%e7%8e%87%e8%ab%962&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fprobability2-4%2f"
+         href="https://twitter.com/intent/tweet?text=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fprobability2-4%2f&amp;title=%e6%a6%82%e7%8e%87%e8%ab%962"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f&amp;title=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fprobability2-4%2f&amp;title=%e6%a6%82%e7%8e%87%e8%ab%962"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f&amp;title=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e6%a6%82%e7%8e%87%e8%ab%962&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fprobability2-4%2f">
+         href="mailto:?subject=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -256,105 +256,71 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <div id="bayes-" class="section level3">
-<h3>Bayes 理論的概念</h3>
-<p>許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 <span class="math inline">\(P(S|A)\)</span></p>
-<p>這裏先引入貝葉斯的概念：</p>
-<p>我們可以將 <span class="math inline">\(P(A\cap S)\)</span> 寫成： <span class="math display">\[P(A\cap S)=P(A|S)P(S)\\or\\
-P(A\cap S)=P(S|A)P(A)\]</span> 這兩個等式是完全等價的。我們將他們連起來：</p>
-<p><span class="math display">\[P(S|A)P(A)=P(A|S)P(S)\\
-\Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]</span></p>
-<p>是不是看起來又像是寫了一堆<strong>廢話</strong>？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。</p>
-<p>再繼續，我們可以利用另外一個<strong>廢話</strong>：<span class="math inline">\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)</span></p>
-<p>用上面的公式替換掉 <span class="math inline">\(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)</span></p>
-<p>可以得到<strong>貝葉斯理論公式</strong>：</p>
-<p><span class="math display">\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]</span></p>
-<p>回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：</p>
-<div class="figure">
-<img src="/img/Selection_073.png" />
-
-</div>
-<span class="math display">\[\begin{align}
-P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
-        &amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
-        &amp;= 0.24
-\end{align}\]</span>
-<p>所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(<span class="math inline">\(P(S|A)\)</span>)。</p>
-</div>
-<div id="-expectation--or-mean---variance" class="section level3">
-<h3>期望 Expectation (或均值 or mean) 和 方差 Variance</h3>
-<p>期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 <span class="math inline">\(X\)</span> (discrete random variables)，它的期望被定義爲：</p>
-<p><span class="math display">\[E(X)=\sum_x xP(X=x)\]</span></p>
-<p>所以就是將所有 <span class="math inline">\(X\)</span> 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 <span class="math inline">\(\mu\)</span> 來標記。</p>
-<p>方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：</p>
-<p><span class="math display">\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]</span></p>
-<p>實際上我們更加常用的是它的另外一個公式：</p>
-<p><span class="math display">\[Var(X)=E(X^2)-E(X)^2\]</span></p>
-<div id="-" class="section level4">
-<h4>證明 上面兩個方差公式相等</h4>
-<span class="math display">\[\begin{align}
-Var(x)  &amp;= E((X-\mu)^2) \\
-        &amp;= E(X^2-2X\mu+\mu^2)\\
-        &amp;= E(X^2) - 2\mu E(X) + \mu^2\\
-        &amp;= E(X^2) - 2\mu^2 + \mu^2 \\
-        &amp;= E(X^2) - \mu^2 \\
-        &amp;= E(X^2) - E(X)^2
-\end{align}\]</span>
-</div>
-<div class="section level4">
-<h4>方差的性質：</h4>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(Var(X+b)=Var(X)\)</span></li>
-<li><span class="math inline">\(Var(aX)=a^2Var(X)\)</span></li>
-<li><span class="math inline">\(Var(aX+b)=a^2Var(X)\)</span></li>
-</ol>
-</div>
-</div>
-<div id="-bernoulli-distribution" class="section level3">
-<h3>伯努利分佈 Bernoulli distribution</h3>
-<p>伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 <span class="math inline">\(\pi\)</span>。那麼我們可以計算這個分佈的期望值:</p>
-<span class="math display">\[\begin{align}
-E(X) &amp;=\sum_x xP(X=x) \\
-     &amp;=1\times\pi + 0\times(1-\pi)\\
-     &amp;=\pi
-\end{align}\]</span>
-<p>由於 <span class="math inline">\(x=x^2\)</span>，因爲 <span class="math inline">\(x=0,1\)</span>, 所以 <span class="math inline">\(E[X^2]=E[X]\)</span>，那麼方差爲：</p>
-<span class="math display">\[\begin{align}
-Var(X) &amp;=E[X^2]-E[X]^2 \\
-       &amp;=E[X]-E[X]^2 \\
-       &amp;=\pi - \pi^2 \\
-       &amp;=\pi(1-\pi)
-\end{align}\]</span>
-</div>
-<div id="xy--a-exyexey-b-varxyvarxvary" class="section level3">
-<h3>證明，<span class="math inline">\(X,Y\)</span> 爲互爲獨立的隨機離散變量時，<br>a) <span class="math inline">\(E(XY)=E(X)E(Y)\)</span> ; <br>b) <span class="math inline">\(Var(X+Y)=Var(X)+Var(Y)\)</span></h3>
+      <div id="-probability-density-function-pdf" class="section level3">
+<h3>概率密度曲線 probability density function， PDF</h3>
 <ul>
-<li><ol style="list-style-type: lower-alpha">
-<li><strong>證明</strong></li>
-</ol></li>
+<li><p>一個隨機連續型變量 <span class="math inline">\(X\)</span> 它的性質由一個對應的<strong>概率密度方程 (probability density function, PDF)</strong> 決定。</p></li>
+<li><p>在給定的範圍區間內，如 <span class="math inline">\(a\sim b, (a &lt; b)\)</span>，它的概率滿足:</p></li>
 </ul>
-<span class="math display">\[\begin{align}
-E(XY) &amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
-\because &amp;\; X,Y are\;independent\;to\;each\;other \\
-\therefore &amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
-      &amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
-      &amp;=E(X)E(Y)
-\end{align}\]</span>
+<p><span class="math display">\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]</span></p>
 <ul>
-<li><ol start="2" style="list-style-type: lower-alpha">
-<li><strong>證明</strong> 根據方差的定義：
-<span class="math display">\[\begin{align}
-Var(X+Y) &amp;= E((X+Y)^2)-E(X+Y)^2 \\
- &amp; \; Expand \\
- &amp;=E(X^2+2XY+Y^2)-(E(X)+E(Y))^2\\
- &amp;=E(X^2)+E(Y^2)+2E(XY)\\
- &amp;\;\;\; - E(X)^2-E(Y)^2-2E(X)E(Y)\\
- &amp;\; We\;just\;showed\; E(XY)=E(X)E(Y)\\
- &amp;=E(X^2)-E(X)^2+E(Y^2)-E(Y)^2 \\
- &amp;=Var(X)+Var(Y)
-\end{align}\]</span></li>
-</ol></li>
+<li>這個相關的方程，在 <span class="math inline">\(a\sim b\)</span> 區間內的積分，就是這個連續變量在這個區間內取值的概率。</li>
 </ul>
+<pre class="r"><code># R codes for drawing a standard normal distribution by using ggplot2
+library(ggplot2)
+p &lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
+  stat_function(fun = dnorm)
+p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&quot;) +
+  theme(plot.subtitle = element_text(vjust = 1),
+        plot.caption = element_text(vjust = 1),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        plot.title = element_text(size = 10, face = &quot;bold&quot;, hjust = 0.5),
+        panel.background = element_rect(fill = &quot;ivory&quot;)) +
+  labs(title = &quot;Probability density functions \n for standard normal distribution&quot;,
+       x = NULL, y = NULL) +
+  stat_function(fun = dnorm,
+                xlim = c(-1.3,0.4),
+                geom = &quot;area&quot;,fill=&quot;#00688B&quot;, alpha= 0.2)</code></pre>
+<p><img src="/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png" width="528" /></p>
+<p>注意：整個方程的曲線下面積等於 <span class="math inline">\(1\)</span>： <span class="math display">\[\int_{-\infty}^\infty f(x)dx=1\]</span></p>
+<ul>
+<li>期望 <span class="math inline">\(E(X)=\int_{-\infty}^\infty xf(x)dx\)</span></li>
+<li>方差 <span class="math inline">\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)</span></li>
+</ul>
+</div>
+<div class="section level3">
+<h3>正態分佈</h3>
+<p>如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）<span class="math inline">\(\mu\)</span>，和它的方差 <span class="math inline">\(\sigma^2\)</span>，來描述這組數據。記爲：</p>
+<p><span class="math display">\[X \sim N(\mu, \sigma^2)\]</span></p>
+<ul>
+<li>它的概率密度方程可以表述爲：</li>
+</ul>
+<p><span class="math display">\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></p>
+<ul>
+<li><span class="math inline">\(E(x) =\mu\)</span></li>
+<li><span class="math inline">\(Var(x)=\sigma^2\)</span></li>
+</ul>
+</div>
+<div class="section level3">
+<h3>標準正態分佈</h3>
+<p>標準正態分佈的期望（或者均值）爲 <span class="math inline">\(0\)</span>，方差爲 <span class="math inline">\(1\)</span></p>
+<ul>
+<li>記爲：<span class="math inline">\(Z \sim N(0,1)\)</span></li>
+<li>它的概率密度方程表述爲：</li>
+</ul>
+<p><span class="math display">\[\frac{1}{\sqrt{2\pi}}exp(-\frac{z^2}{2})\]</span></p>
+<ul>
+<li>它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 <span class="math inline">\(\Phi(z)\)</span></li>
+</ul>
+<p>再看一下標準正態分佈的概率密度方程曲線：</p>
+<p><img src="/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png" width="528" /></p>
+<ul>
+<li>95% 的曲線下面積在標準差 standard deviation <span class="math inline">\(-1.96\sim1.96\)</span> 之間的區域。</li>
+<li>而且，<span class="math inline">\(\phi(-x)=1-\phi(x)\)</span></li>
+<li>任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：</li>
+</ul>
+<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span></p>
 </div>
 
     </div>
@@ -366,12 +332,12 @@ Var(X+Y) &amp;= E((X+Y)^2)-E(X+Y)^2 \\
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/probability-gambling-answers/"><span
-      aria-hidden="true">&larr;</span> “你會用概率論來賭博嗎？”之解答</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/probability2-4/"><span
+      aria-hidden="true">&larr;</span> 概率論2</a></li>
     
 
     
-    <li class="next"><a href="https://winterwang.github.io/post/normal-distribution/">正態分佈 <span
+    <li class="next"><a href="https://winterwang.github.io/post/probability3/">你買的彩票中獎概率到底有多少？ <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
