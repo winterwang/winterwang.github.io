@@ -58,7 +58,7 @@ Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\
 &lt;ul&gt;
 &lt;li&gt;從人羣(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)中取出樣本(&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;)，有 &lt;span class=&#34;math inline&#34;&gt;\(^NC_n\)&lt;/span&gt; 種方法。&lt;/li&gt;
 &lt;li&gt;從患病人羣(&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;)中取出患有該病的人(&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(^MC_x\)&lt;/span&gt; 種方法。&lt;/li&gt;
-&lt;li&gt;樣本中不還病的人(&lt;span class=&#34;math inline&#34;&gt;\(n-x\)&lt;/span&gt;)被採樣的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{N-M}C_{n-x}\)&lt;/span&gt; 種。&lt;/li&gt;
+&lt;li&gt;樣本中不患病的人(&lt;span class=&#34;math inline&#34;&gt;\(n-x\)&lt;/span&gt;)被採樣的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{N-M}C_{n-x}\)&lt;/span&gt; 種。&lt;/li&gt;
 &lt;li&gt;採集一次 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本的概率都一樣。因此：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(X=x)=\frac{\binom{M}{x}\binom{N-M}{n-x}}{\binom{N}{n}}\]&lt;/span&gt;&lt;/p&gt;
