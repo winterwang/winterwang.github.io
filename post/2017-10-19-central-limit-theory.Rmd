@@ -1,0 +1,94 @@
+---
+title: 偉大的中心極限定理
+author: ''
+date: '2017-10-19'
+slug: central-limit-theory
+categories:
+  - statistics
+  - study abroad
+tags:
+  - basic mathematics
+  - learning notes
+  - inference
+  - LSHTM
+  - Medical Statistics
+summary: "協方差，相關，和中心極限定理"
+---
+
+最近明顯可以感覺到課程的步驟開始加速。看我的課表：
+
+![](/img/IMG_0522.png)
+
+手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
+
+這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。
+
+今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。
+
+## 協方差 Covariance
+
+[之前我們定義過](https://winterwang.github.io/post/probability2-4/)，兩個獨立連續隨機變量 $X,Y$ 之和的方差 Variance ：
+
+$$Var(X+Y)=Var(X)+Var(Y)$$
+
+然而如果他們並不相互獨立的話：
+
+\begin{aligned}
+Var(X+Y) &= E[((X+Y)-E(X+Y))^2] \\
+         &= E[(X+Y)-(E(X)+E(Y))^2] \\
+         &= E[(X-E(X)) - (Y-E(Y))^2] \\
+         &= E[(X-E(X))^2+(Y-E(Y))^2 \\
+         & \;\;\; +2(X-E(X))(Y-E(Y))] \\
+         &= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]
+\end{aligned}
+
+可以發現在兩者和的方差公式展開之後多了一部分 $E[(X-E(X))(Y-E(Y))]$。 這個多出來的一部分就說明了二者 $(X, Y)$ 之間的關係。它被定義爲協方差 (Covariance):
+$$Cov(X,Y) = E[(X-E(X))(Y-E(Y))]$$
+
+所以：
+
+$$Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$$
+
+{{% alert note %}}
+要記住，協方差只能用於評價$X,Y$之間的線性關係 (Linear Association)。
+{{% /alert %}}
+
+以下是協方差 (Covariance) 的一些特殊性質：
+
+1. $Cov(X,X)=Var(X)$
+2. $Cov(X,Y)=Cov(Y,X)$
+3. $Cov(aX,bY)=ab\:Cov(X,Y)$
+4. $Cov(aR+bS,cX+dY)=ac\:Cov(R,X)+ad\:Cov(R,Y)\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+bc\:Cov(S,X)+bd\:Cov(S,Y)$
+5. $Cov(aX+bY,cX+dY)=ac\:Var(X)+ad\:Var(Y)\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(ad+bc)Cov(X,Y)$
+6. $Cov(X+Y,X-Y)=Var(X)-Var(Y)$
+7. If $X, Y$ are independent. $Cov(X,Y)=0$ <span class="diff_alert">But not vise-versa !</span>
+
+## 相關 Correlation
+
+- 協方差雖然$Cov(X,Y)$ 的大小很大程度上會被他們各自的單位和波動大小左右。
+- 我們將協方差標準化(除以各自的標準差 s.d.) (standardization) 之後，就可以得到相關係數 Corr ($-1\sim1$):
+$$Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$$
+
+## 中心極限定理 the Central Limit Theory
+
+<span class="diff_add">**如果從人羣中多次選出樣本量爲 $n$ 的樣本，並計算樣本均值, $\bar{X}_n$。那麼這個樣本均值 $\bar{X}_n$ 的分佈，會隨着樣本量增加 $n\rightarrow\infty$，而接近正態分佈。**</span>
+
+
+
+偉大的中心極限定理告訴我們：
+
+<span class="diff_alert">**當樣本量足夠大時，樣本均值 $\bar{X}_n$ 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 $X_i$ 無關。**</span>
+
+**再說一遍：**
+
+如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: $E(X)=\mu;\;Var(X)=\sigma^s$。
+根據中心極限定理，可以得到：
+
+- 當樣本量增加，樣本均值的分佈服從正態分佈：
+$$\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})$$
+- 也可以寫作，當樣本量增加：
+$$\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)$$
+- 有了這個定理，我們可以拋開樣本空間($X$)的分佈，也不用假定它服從正態分佈。
+- <span class="diff_alert">但是樣本的均值，卻總是服從正態分佈的。</span>簡直是太完美了！！！！！！

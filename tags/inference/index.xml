@@ -7,8 +7,78 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 08 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/inference/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>偉大的中心極限定理</title>
+      <link>https://winterwang.github.io/post/central-limit-theory/</link>
+      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
+      <description>&lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/IMG_0522.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
+&lt;p&gt;這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。&lt;/p&gt;
+&lt;p&gt;今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。&lt;/p&gt;
+&lt;div id=&#34;-covariance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;協方差 Covariance&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability2-4/&#34;&gt;之前我們定義過&lt;/a&gt;，兩個獨立連續隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X,Y\)&lt;/span&gt; 之和的方差 Variance ：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X+Y)=Var(X)+Var(Y)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然而如果他們並不相互獨立的話：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
+         &amp;amp;= E[(X+Y)-(E(X)+E(Y))^2] \\
+         &amp;amp;= E[(X-E(X)) - (Y-E(Y))^2] \\
+         &amp;amp;= E[(X-E(X))^2+(Y-E(Y))^2 \\
+         &amp;amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\
+         &amp;amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;可以發現在兩者和的方差公式展開之後多了一部分 &lt;span class=&#34;math inline&#34;&gt;\(E[(X-E(X))(Y-E(Y))]\)&lt;/span&gt;。 這個多出來的一部分就說明了二者 &lt;span class=&#34;math inline&#34;&gt;\((X, Y)\)&lt;/span&gt; 之間的關係。它被定義爲協方差 (Covariance): &lt;span class=&#34;math display&#34;&gt;\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;要記住，協方差只能用於評價&lt;span class=&#34;math inline&#34;&gt;(X,Y)&lt;/span&gt;之間的線性關係 (Linear Association)。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;以下是協方差 (Covariance) 的一些特殊性質：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,X)=Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)=Cov(Y,X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(aX,bY)=ab\:Cov(X,Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(aR+bS,cX+dY)=ac\:Cov(R,X)+ad\:Cov(R,Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+bc\:Cov(S,X)+bd\:Cov(S,Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(aX+bY,cX+dY)=ac\:Var(X)+ad\:Var(Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(ad+bc)Cov(X,Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(X+Y,X-Y)=Var(X)-Var(Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;If &lt;span class=&#34;math inline&#34;&gt;\(X, Y\)&lt;/span&gt; are independent. &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)=0\)&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;But not vise-versa !&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-correlation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;相關 Correlation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;協方差雖然&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)\)&lt;/span&gt; 的大小很大程度上會被他們各自的單位和波動大小左右。&lt;/li&gt;
+&lt;li&gt;我們將協方差標準化(除以各自的標準差 s.d.) (standardization) 之後，就可以得到相關係數 Corr (&lt;span class=&#34;math inline&#34;&gt;\(-1\sim1\)&lt;/span&gt;): &lt;span class=&#34;math display&#34;&gt;\[Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-the-central-limit-theory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;中心極限定理 the Central Limit Theory&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;diff_add&#34;&gt;&lt;strong&gt;如果從人羣中多次選出樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的樣本，並計算樣本均值, &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt;。那麼這個樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈，會隨着樣本量增加 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;，而接近正態分佈。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;偉大的中心極限定理告訴我們：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;&lt;strong&gt;當樣本量足夠大時，樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 無關。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;再說一遍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^s\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;當樣本量增加，樣本均值的分佈服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;也可以寫作，當樣本量增加： &lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;有了這個定理，我們可以拋開樣本空間(&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;)的分佈，也不用假定它服從正態分佈。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;diff_alert&#34;&gt;但是樣本的均值，卻總是服從正態分佈的。&lt;/span&gt;簡直是太完美了！！！！！！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>你會用概率論來賭博嗎？</title>

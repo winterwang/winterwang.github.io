@@ -11,6 +11,76 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>偉大的中心極限定理</title>
+      <link>https://winterwang.github.io/post/central-limit-theory/</link>
+      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
+      <description>&lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/IMG_0522.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
+&lt;p&gt;這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。&lt;/p&gt;
+&lt;p&gt;今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。&lt;/p&gt;
+&lt;div id=&#34;-covariance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;協方差 Covariance&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability2-4/&#34;&gt;之前我們定義過&lt;/a&gt;，兩個獨立連續隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X,Y\)&lt;/span&gt; 之和的方差 Variance ：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X+Y)=Var(X)+Var(Y)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然而如果他們並不相互獨立的話：&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
+         &amp;amp;= E[(X+Y)-(E(X)+E(Y))^2] \\
+         &amp;amp;= E[(X-E(X)) - (Y-E(Y))^2] \\
+         &amp;amp;= E[(X-E(X))^2+(Y-E(Y))^2 \\
+         &amp;amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\
+         &amp;amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;可以發現在兩者和的方差公式展開之後多了一部分 &lt;span class=&#34;math inline&#34;&gt;\(E[(X-E(X))(Y-E(Y))]\)&lt;/span&gt;。 這個多出來的一部分就說明了二者 &lt;span class=&#34;math inline&#34;&gt;\((X, Y)\)&lt;/span&gt; 之間的關係。它被定義爲協方差 (Covariance): &lt;span class=&#34;math display&#34;&gt;\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;要記住，協方差只能用於評價&lt;span class=&#34;math inline&#34;&gt;(X,Y)&lt;/span&gt;之間的線性關係 (Linear Association)。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;以下是協方差 (Covariance) 的一些特殊性質：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,X)=Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)=Cov(Y,X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(aX,bY)=ab\:Cov(X,Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(aR+bS,cX+dY)=ac\:Cov(R,X)+ad\:Cov(R,Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+bc\:Cov(S,X)+bd\:Cov(S,Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(aX+bY,cX+dY)=ac\:Var(X)+ad\:Var(Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(ad+bc)Cov(X,Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(X+Y,X-Y)=Var(X)-Var(Y)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;If &lt;span class=&#34;math inline&#34;&gt;\(X, Y\)&lt;/span&gt; are independent. &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)=0\)&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;But not vise-versa !&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-correlation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;相關 Correlation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;協方差雖然&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)\)&lt;/span&gt; 的大小很大程度上會被他們各自的單位和波動大小左右。&lt;/li&gt;
+&lt;li&gt;我們將協方差標準化(除以各自的標準差 s.d.) (standardization) 之後，就可以得到相關係數 Corr (&lt;span class=&#34;math inline&#34;&gt;\(-1\sim1\)&lt;/span&gt;): &lt;span class=&#34;math display&#34;&gt;\[Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-the-central-limit-theory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;中心極限定理 the Central Limit Theory&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;diff_add&#34;&gt;&lt;strong&gt;如果從人羣中多次選出樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的樣本，並計算樣本均值, &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt;。那麼這個樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈，會隨着樣本量增加 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;，而接近正態分佈。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;偉大的中心極限定理告訴我們：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;&lt;strong&gt;當樣本量足夠大時，樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 無關。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;再說一遍：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^s\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;當樣本量增加，樣本均值的分佈服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;也可以寫作，當樣本量增加： &lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;有了這個定理，我們可以拋開樣本空間(&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;)的分佈，也不用假定它服從正態分佈。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;diff_alert&#34;&gt;但是樣本的均值，卻總是服從正態分佈的。&lt;/span&gt;簡直是太完美了！！！！！！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>你買的彩票中獎概率到底有多少？</title>
       <link>https://winterwang.github.io/post/probability3/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
@@ -1071,62 +1141,6 @@ UCL是以前高中同班同學待過（一個已經回廈門），和正在待�
 &lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
 
 &lt;p&gt;The present meta-analysis showed a clear birth cohort pattern of &lt;em&gt;H.pylori&lt;/em&gt; infection in Japan. The decreased prevalence of H.pylori infection in successive generations should be weighed in future gastric cancer control programs.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;行向量乘以矩陣，乘以列向量可得標量&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt;的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;這樣的乘法計算通過&lt;a href=&#34;https://winterwang.github.io/post/2017-02-22/&#34;&gt;矩陣&lt;/a&gt;（包括&lt;a href=&#34;https://winterwang.github.io/post/2017-02-19/&#34;&gt;向量&lt;/a&gt;）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。&lt;/p&gt;
-&lt;p&gt;在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： &lt;span class=&#34;math display&#34;&gt;\[\underline{x}=\left(
-\begin{array}{c}
-x_1 \\
-x_2 \\
-x_3
-\end{array}\right), \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-a_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\)&lt;/span&gt; &lt;br&gt;其中 &lt;span class=&#34;math display&#34;&gt;\[D=\left(
-\begin{array}{c}
-a_1 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; a_2 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; a_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\\=\left\{(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\right\}^t(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =(\underline{a}^t\underline{x})^t\underline{a}^t\underline{x}\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}\\ \Rightarrow\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ a_2 &amp;amp; 0 &amp;amp; 0 \\ a_3 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\underline{x}\\ =\underline{x}^tAA^t\underline{x}\\ =\underline{x}A_0\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[A=\left(
-\begin{array}{c}
-a_1 &amp;amp; 0 &amp;amp; 0 \\
-a_2 &amp;amp; 0 &amp;amp; 0 \\
-a_3 &amp;amp; 0 &amp;amp; 0
-\end{array}\right), A_0=\left(
-\begin{array}{c}
-a_1^2 &amp;amp; a_1a_2 &amp;amp; a_1a_3 \\
-a_2a_1 &amp;amp; a_2^2 &amp;amp; a_2a_3 \\
-a_3a_1 &amp;amp; a_3a_2 &amp;amp; a_3^2
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2+(b_1x_1+b_2x_2+b_3x_3)^2\\+(c_1x_1+c_2x_2+c_3x_3)^2\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}+\underline{x}^t\underline{b}\underline{b}^t\underline{x}+\underline{x}^t\underline{c}\underline{c}^t\underline{x}\\ =\underline{x}^t(\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t)\underline{x}\\ =\underline{x}^t(\underline{a} \underline{b} \underline{c})\left( \begin{array}{c} \underline{a}^t \\ \underline{b}^t \\ \underline{c}^t \end{array}\right)\underline{x}\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\underline{x}\\ =\underline{x}^tBB^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[B=\left(
-\begin{array}{c}
-a_1 &amp;amp; b_1 &amp;amp; c_1 \\
-a_2 &amp;amp; b_2 &amp;amp; c_2 \\
-a_3 &amp;amp; b_3 &amp;amp; c_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{(a_1x_1+a_2x_2+a_3x_3)^2}{d_1}+ \frac{(b_1x_1+b_2x_2+b_3x_3)^2}{d_2}\\ +\frac{(c_1x_1+c_2x_2+c_3x_3)^2}{d_3}\)&lt;/span&gt;&lt;br&gt; 根據上面第1個練習 &lt;span class=&#34;math inline&#34;&gt;\(=(a_1x_1+a_2x_2+a_3x_3, b_1x_1+b_2x_2+b_3x_3, c_1x_1+c_2x_2+c_3x_3)\\ \left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\left( \begin{array}{c} a_1x_1+a_2x_2+a_3x_3 \\ b_1x_1+b_2x_2+b_3x_3 \\ c_1x_1+c_2x_2+c_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\\ \left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tBD^{-1}B^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[D^{-1}=\left(
-\begin{array}{c}
-1/d_1 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; 1/d_2 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; 1/d_3
-\end{array}\right) \;(d_1d_2d_3\neq0), B 與上面3. 相同。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     
