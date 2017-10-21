@@ -11,6 +11,164 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>central limit theorem application</title>
+      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <description>&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;假設我們有大量(&lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;)的二項分佈實驗 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(n, \pi)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;二項分佈的概率公式&lt;/a&gt;，計算將會變得很繁瑣複雜。&lt;/li&gt;
+&lt;li&gt;解決辦法：應用中心極限定理。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;中心極限定理&lt;/a&gt;告訴我們，當樣本量足夠大時: &lt;span class=&#34;math display&#34;&gt;\[X\sim N（n\pi, n\pi(1-\pi))\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;問題在於，多大的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 才能算大樣本呢？
+&lt;ul&gt;
+&lt;li&gt;當且僅當 (on and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;泊松分佈的正態分佈近似&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;假設時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 內某事件的發生次數服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Po(\mu)\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;考慮將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段。那麼第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 時間段內事件發生次數依舊服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\sim Po(\frac{\mu}{n})\)&lt;/span&gt;。且 &lt;span class=&#34;math inline&#34;&gt;\(E(X_i)=\mu/n, Var(X_i)=\mu/n\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;那麼原先的 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可以被視爲是將這無數的小時間段的 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 相加。應用中心極限定理： &lt;span class=&#34;math display&#34;&gt;\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;需要注意的是，這段時間 (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;) 內發生的事件次數 (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) : &lt;span class=&#34;math inline&#34;&gt;\(\lambda t =\mu&amp;gt;10\)&lt;/span&gt; ，這樣的正態分佈模擬才能成立。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;continuity-corrections&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;正態分佈模擬的校正：continuity corrections&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。&lt;/li&gt;
+&lt;li&gt;例如：我們如果用正態分佈模擬來計算 &lt;span class=&#34;math inline&#34;&gt;\(P(X=15)\)&lt;/span&gt;，那麼實際上我們應該計算的是 &lt;span class=&#34;math inline&#34;&gt;\(P(14.5&amp;lt;X&amp;lt;15.5)\)&lt;/span&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;例題&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(100,0.5)\)&lt;/span&gt;，求 &lt;span class=&#34;math inline&#34;&gt;\(P(X&amp;gt;60)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\because X&amp;amp;\sim Bin(100, 0.5) \\ \therefore E(X) &amp;amp;=n\pi=50 \\
+Var(X) &amp;amp;= n\pi(1-\pi) =25=5^2\\
+P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
+         &amp;amp;= 1-P(Z\leqslant\frac{60.5-50}{\sqrt{25}}) \\
+         &amp;amp;= 1-P(Z\leqslant2.1) \\
+         &amp;amp;= 1-\Phi(2.1) \\
+         &amp;amp;= 1-0.982 = 0.018
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
+1-pbinom(60, size=100, prob=0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.0176001&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
+1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\because B &amp;amp;\; \sim Bin(48, 0.75) \\
+\therefore E(X) &amp;amp;\; =n\pi=36 \\
+           Var(X) &amp;amp;\; =n\pi(1-\pi)=9=3^2 \\
+P(30&amp;lt;X&amp;lt;39) &amp;amp;\; = P(31\leqslant X\leqslant 38)\\
+     &amp;amp;\; = P(30.5\leqslant Y \leqslant 38.5) \\
+     Y\;is\;the&amp;amp;\;normal\;approximation \\
+     &amp;amp;\;= P(Y&amp;lt;38.5) - P(Y&amp;lt;30.5) \\
+     &amp;amp;\;= P(Z\leqslant\frac{38.5-36}{3})-
+          P(Z\leqslant\frac{30.5-36}{3}) \\
+     &amp;amp;\;= P(Z\leqslant0.833) - P(Z\leqslant-1.833) \\
+     &amp;amp;\;= \Phi(0.833)-\Phi(-1.833) \\
+     &amp;amp;\;= 0.798-0.033 = 0.764
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
+pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7578159&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;兩個連續隨機變量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;假定 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 是兩個連續隨機變量： &lt;span class=&#34;math display&#34;&gt;\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
+  E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
+  Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;利用矩陣的標記法，可以將 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt;, 即： &lt;span class=&#34;math display&#34;&gt;\[\textbf{X}=\left(
+\begin{array}{c}
+X_1\\
+X_2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;上面的所有內容都可以標記爲： &lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
+\begin{array}{c}
+\mu_1\\
+\mu_2\\
+\end{array}
+\right)\\
+Covariance \;matrix: \\
+Var(\textbf{X})=\mathbf{\Sigma}=\left(
+\begin{array}{c}
+\sigma_1^2 &amp;amp; \sigma_{12}\\
+\sigma_{12} &amp;amp; \sigma_1^2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;兩個連續隨機變量 例子：&lt;/h2&gt;
+&lt;p&gt;假如要看收縮期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt;) 和舒張期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt;) 之間的關係：&lt;/p&gt;
+&lt;p&gt;下列爲已知： - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;那麼， 我們可以把這些信息用下面的方法來標記：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
+\begin{array}{c}
+130\\
+90\\
+\end{array}
+\right)\\
+Var(\textbf{X})=\mathbf{\Sigma}=\left(
+\begin{array}{c}
+225 &amp;amp; 112.5\\
+112.5 &amp;amp; 225\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;條件分佈和邊緣分佈的概念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt; 的兩個變量都服從正態分佈；&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈: &lt;span class=&#34;math display&#34;&gt;\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;同樣的，&lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; 的給出 &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; 的條件分佈 (condition distribution) 也服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
+ Var(X_1|X_2)=\sigma_1^2(1-\rho^2)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反之亦然。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;條件分佈和邊緣分佈的例子&lt;/h2&gt;
+&lt;p&gt;上面的概念過於抽象，用血壓的例子：&lt;/p&gt;
+&lt;p&gt;收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;條件期望: &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：&lt;br&gt; 他的收縮期血壓的期望值就可以用上面的式子計算： &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP=95)=136\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;條件方差爲： &lt;span class=&#34;math display&#34;&gt;\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&amp;lt;15^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(&lt;strong&gt;方差變小&lt;/strong&gt;)了。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>偉大的中心極限定理</title>
       <link>https://winterwang.github.io/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
@@ -69,7 +227,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;p&gt;偉大的中心極限定理告訴我們：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;&lt;strong&gt;當樣本量足夠大時，樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 無關。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;再說一遍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^s\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
+&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^2\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;當樣本量增加，樣本均值的分佈服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;也可以寫作，當樣本量增加： &lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]&lt;/span&gt;&lt;/li&gt;
@@ -1115,62 +1273,6 @@ UCL是以前高中同班同學待過（一個已經回廈門），和正在待�
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/OpeningIEA1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;第一日成功和曾經在倫敦衛校留學的潘師兄見面。遙想三年前在阿拉斯加，真是時光如梭，當時我還不知自己今日會有機會去倫敦留學。如今潘師兄已經是孩子爸了，也如願以償在同濟醫學院做了老師。所以我來之前就決定，一定要抓住這次機會跟潘老師多了解了解在倫敦的生活。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;行向量乘以矩陣，乘以列向量可得標量&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt;的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;這樣的乘法計算通過&lt;a href=&#34;https://winterwang.github.io/post/2017-02-22/&#34;&gt;矩陣&lt;/a&gt;（包括&lt;a href=&#34;https://winterwang.github.io/post/2017-02-19/&#34;&gt;向量&lt;/a&gt;）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。&lt;/p&gt;
-&lt;p&gt;在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： &lt;span class=&#34;math display&#34;&gt;\[\underline{x}=\left(
-\begin{array}{c}
-x_1 \\
-x_2 \\
-x_3
-\end{array}\right), \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-a_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\)&lt;/span&gt; &lt;br&gt;其中 &lt;span class=&#34;math display&#34;&gt;\[D=\left(
-\begin{array}{c}
-a_1 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; a_2 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; a_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\\=\left\{(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\right\}^t(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =(\underline{a}^t\underline{x})^t\underline{a}^t\underline{x}\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}\\ \Rightarrow\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ a_2 &amp;amp; 0 &amp;amp; 0 \\ a_3 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\underline{x}\\ =\underline{x}^tAA^t\underline{x}\\ =\underline{x}A_0\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[A=\left(
-\begin{array}{c}
-a_1 &amp;amp; 0 &amp;amp; 0 \\
-a_2 &amp;amp; 0 &amp;amp; 0 \\
-a_3 &amp;amp; 0 &amp;amp; 0
-\end{array}\right), A_0=\left(
-\begin{array}{c}
-a_1^2 &amp;amp; a_1a_2 &amp;amp; a_1a_3 \\
-a_2a_1 &amp;amp; a_2^2 &amp;amp; a_2a_3 \\
-a_3a_1 &amp;amp; a_3a_2 &amp;amp; a_3^2
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2+(b_1x_1+b_2x_2+b_3x_3)^2\\+(c_1x_1+c_2x_2+c_3x_3)^2\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}+\underline{x}^t\underline{b}\underline{b}^t\underline{x}+\underline{x}^t\underline{c}\underline{c}^t\underline{x}\\ =\underline{x}^t(\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t)\underline{x}\\ =\underline{x}^t(\underline{a} \underline{b} \underline{c})\left( \begin{array}{c} \underline{a}^t \\ \underline{b}^t \\ \underline{c}^t \end{array}\right)\underline{x}\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\underline{x}\\ =\underline{x}^tBB^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[B=\left(
-\begin{array}{c}
-a_1 &amp;amp; b_1 &amp;amp; c_1 \\
-a_2 &amp;amp; b_2 &amp;amp; c_2 \\
-a_3 &amp;amp; b_3 &amp;amp; c_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{(a_1x_1+a_2x_2+a_3x_3)^2}{d_1}+ \frac{(b_1x_1+b_2x_2+b_3x_3)^2}{d_2}\\ +\frac{(c_1x_1+c_2x_2+c_3x_3)^2}{d_3}\)&lt;/span&gt;&lt;br&gt; 根據上面第1個練習 &lt;span class=&#34;math inline&#34;&gt;\(=(a_1x_1+a_2x_2+a_3x_3, b_1x_1+b_2x_2+b_3x_3, c_1x_1+c_2x_2+c_3x_3)\\ \left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\left( \begin{array}{c} a_1x_1+a_2x_2+a_3x_3 \\ b_1x_1+b_2x_2+b_3x_3 \\ c_1x_1+c_2x_2+c_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\\ \left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tBD^{-1}B^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[D^{-1}=\left(
-\begin{array}{c}
-1/d_1 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; 1/d_2 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; 1/d_3
-\end{array}\right) \;(d_1d_2d_3\neq0), B 與上面3. 相同。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     

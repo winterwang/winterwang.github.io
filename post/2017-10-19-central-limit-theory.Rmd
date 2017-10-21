@@ -83,7 +83,7 @@ $$Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$$
 
 **再說一遍：**
 
-如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: $E(X)=\mu;\;Var(X)=\sigma^s$。
+如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: $E(X)=\mu;\;Var(X)=\sigma^2$。
 根據中心極限定理，可以得到：
 
 - 當樣本量增加，樣本均值的分佈服從正態分佈：

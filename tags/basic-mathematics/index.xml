@@ -7,8 +7,166 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 19 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/basic-mathematics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>central limit theorem application</title>
+      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <description>&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;假設我們有大量(&lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;)的二項分佈實驗 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(n, \pi)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;二項分佈的概率公式&lt;/a&gt;，計算將會變得很繁瑣複雜。&lt;/li&gt;
+&lt;li&gt;解決辦法：應用中心極限定理。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;中心極限定理&lt;/a&gt;告訴我們，當樣本量足夠大時: &lt;span class=&#34;math display&#34;&gt;\[X\sim N（n\pi, n\pi(1-\pi))\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;問題在於，多大的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 才能算大樣本呢？
+&lt;ul&gt;
+&lt;li&gt;當且僅當 (on and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;泊松分佈的正態分佈近似&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;假設時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 內某事件的發生次數服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Po(\mu)\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;考慮將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段。那麼第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 時間段內事件發生次數依舊服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\sim Po(\frac{\mu}{n})\)&lt;/span&gt;。且 &lt;span class=&#34;math inline&#34;&gt;\(E(X_i)=\mu/n, Var(X_i)=\mu/n\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;那麼原先的 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可以被視爲是將這無數的小時間段的 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 相加。應用中心極限定理： &lt;span class=&#34;math display&#34;&gt;\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;需要注意的是，這段時間 (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;) 內發生的事件次數 (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) : &lt;span class=&#34;math inline&#34;&gt;\(\lambda t =\mu&amp;gt;10\)&lt;/span&gt; ，這樣的正態分佈模擬才能成立。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;continuity-corrections&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;正態分佈模擬的校正：continuity corrections&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。&lt;/li&gt;
+&lt;li&gt;例如：我們如果用正態分佈模擬來計算 &lt;span class=&#34;math inline&#34;&gt;\(P(X=15)\)&lt;/span&gt;，那麼實際上我們應該計算的是 &lt;span class=&#34;math inline&#34;&gt;\(P(14.5&amp;lt;X&amp;lt;15.5)\)&lt;/span&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;例題&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(100,0.5)\)&lt;/span&gt;，求 &lt;span class=&#34;math inline&#34;&gt;\(P(X&amp;gt;60)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\because X&amp;amp;\sim Bin(100, 0.5) \\ \therefore E(X) &amp;amp;=n\pi=50 \\
+Var(X) &amp;amp;= n\pi(1-\pi) =25=5^2\\
+P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
+         &amp;amp;= 1-P(Z\leqslant\frac{60.5-50}{\sqrt{25}}) \\
+         &amp;amp;= 1-P(Z\leqslant2.1) \\
+         &amp;amp;= 1-\Phi(2.1) \\
+         &amp;amp;= 1-0.982 = 0.018
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
+1-pbinom(60, size=100, prob=0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.0176001&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
+1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\because B &amp;amp;\; \sim Bin(48, 0.75) \\
+\therefore E(X) &amp;amp;\; =n\pi=36 \\
+           Var(X) &amp;amp;\; =n\pi(1-\pi)=9=3^2 \\
+P(30&amp;lt;X&amp;lt;39) &amp;amp;\; = P(31\leqslant X\leqslant 38)\\
+     &amp;amp;\; = P(30.5\leqslant Y \leqslant 38.5) \\
+     Y\;is\;the&amp;amp;\;normal\;approximation \\
+     &amp;amp;\;= P(Y&amp;lt;38.5) - P(Y&amp;lt;30.5) \\
+     &amp;amp;\;= P(Z\leqslant\frac{38.5-36}{3})-
+          P(Z\leqslant\frac{30.5-36}{3}) \\
+     &amp;amp;\;= P(Z\leqslant0.833) - P(Z\leqslant-1.833) \\
+     &amp;amp;\;= \Phi(0.833)-\Phi(-1.833) \\
+     &amp;amp;\;= 0.798-0.033 = 0.764
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
+pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7578159&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;兩個連續隨機變量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;假定 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 是兩個連續隨機變量： &lt;span class=&#34;math display&#34;&gt;\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
+  E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
+  Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;利用矩陣的標記法，可以將 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt;, 即： &lt;span class=&#34;math display&#34;&gt;\[\textbf{X}=\left(
+\begin{array}{c}
+X_1\\
+X_2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;上面的所有內容都可以標記爲： &lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
+\begin{array}{c}
+\mu_1\\
+\mu_2\\
+\end{array}
+\right)\\
+Covariance \;matrix: \\
+Var(\textbf{X})=\mathbf{\Sigma}=\left(
+\begin{array}{c}
+\sigma_1^2 &amp;amp; \sigma_{12}\\
+\sigma_{12} &amp;amp; \sigma_1^2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;兩個連續隨機變量 例子：&lt;/h2&gt;
+&lt;p&gt;假如要看收縮期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt;) 和舒張期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt;) 之間的關係：&lt;/p&gt;
+&lt;p&gt;下列爲已知： - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;那麼， 我們可以把這些信息用下面的方法來標記：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
+\begin{array}{c}
+130\\
+90\\
+\end{array}
+\right)\\
+Var(\textbf{X})=\mathbf{\Sigma}=\left(
+\begin{array}{c}
+225 &amp;amp; 112.5\\
+112.5 &amp;amp; 225\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;條件分佈和邊緣分佈的概念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt; 的兩個變量都服從正態分佈；&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈: &lt;span class=&#34;math display&#34;&gt;\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;同樣的，&lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; 的給出 &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; 的條件分佈 (condition distribution) 也服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
+ Var(X_1|X_2)=\sigma_1^2(1-\rho^2)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反之亦然。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;條件分佈和邊緣分佈的例子&lt;/h2&gt;
+&lt;p&gt;上面的概念過於抽象，用血壓的例子：&lt;/p&gt;
+&lt;p&gt;收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;條件期望: &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：&lt;br&gt; 他的收縮期血壓的期望值就可以用上面的式子計算： &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP=95)=136\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;條件方差爲： &lt;span class=&#34;math display&#34;&gt;\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&amp;lt;15^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(&lt;strong&gt;方差變小&lt;/strong&gt;)了。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>偉大的中心極限定理</title>
@@ -69,7 +227,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;p&gt;偉大的中心極限定理告訴我們：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;&lt;strong&gt;當樣本量足夠大時，樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 無關。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;再說一遍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^s\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
+&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^2\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;當樣本量增加，樣本均值的分佈服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;也可以寫作，當樣本量增加： &lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]&lt;/span&gt;&lt;/li&gt;
@@ -1345,45 +1503,6 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 &lt;div id=&#34;a--refthmline-&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;A: 有。把行的基本變形中的定義 (&lt;a href=&#34;#thm:line&#34;&gt;1&lt;/a&gt;) 的行改成列，既是列的基本變形的定義。&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記20</title>
-      <link>https://winterwang.github.io/post/2017-07-06/</link>
-      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;逆矩陣&lt;/h2&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;逆矩陣定義&lt;/h3&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果對於正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，存在一個&lt;strong&gt;正方形矩陣&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; 爲單位矩陣) 時，這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 被叫做 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣&lt;/strong&gt;，寫作 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。&lt;br&gt; 存在逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\((A^{-1})\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; ，被叫做&lt;strong&gt;正則矩陣&lt;/strong&gt; (regular matrix, nonsingular matrix)。&lt;br&gt; 不存在逆矩陣的 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，被叫做&lt;strong&gt;奇異矩陣&lt;/strong&gt; (singular matrix)。&lt;br&gt; 滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|\neq 0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做正則矩陣。滿足 &lt;span class=&#34;math inline&#34;&gt;\(|A|=0\)&lt;/span&gt; 的矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 被叫做奇異矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲正則矩陣時，滿足：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}A=AA^{-1}=E\)&lt;/span&gt; 。&lt;br&gt; 顯然，單位矩陣的逆矩陣也是一個單位矩陣: &lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[E^{-1}E=EE^{-1}=E, E^{-1}=E\]&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;逆矩陣的性質&lt;/h3&gt;
-&lt;p&gt;對於正則矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 有以下性質：&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A，B\)&lt;/span&gt; 的順序對調了。&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{-1})^{-1}=A\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A^{t})^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\)&lt;/span&gt; 的逆矩陣寫作： &lt;span class=&#34;math inline&#34;&gt;\(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)&lt;/span&gt;；&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處的條件爲所有對角成分均非零: &lt;span class=&#34;math inline&#34;&gt;\(a_{11}a_{22}\dotsm a_{nn}\neq 0\)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)(AB)^{-1}=E\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^{-1}A)B(AB)^{-1}=A^{-1}E\\ B(AB)^{-1}=A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(B^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((B^{-1}B)(AB)^{-1}=B^{-1}A^{-1}\\ E(AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;根據單位矩陣的性質：&lt;/a&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore (AB)^{-1}=B^{-1}A^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^{-1}=(A^{-1}A)^{-1}=A^{-1}(A^{-1})^{-1}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(AE=AA^{-1}(A^{-1})^{-1}\\ \therefore A=(A^{-1})^{-1}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

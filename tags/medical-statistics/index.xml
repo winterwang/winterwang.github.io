@@ -7,8 +7,166 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 19 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/medical-statistics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>central limit theorem application</title>
+      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <description>&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;假設我們有大量(&lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;)的二項分佈實驗 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(n, \pi)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;二項分佈的概率公式&lt;/a&gt;，計算將會變得很繁瑣複雜。&lt;/li&gt;
+&lt;li&gt;解決辦法：應用中心極限定理。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;中心極限定理&lt;/a&gt;告訴我們，當樣本量足夠大時: &lt;span class=&#34;math display&#34;&gt;\[X\sim N（n\pi, n\pi(1-\pi))\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;問題在於，多大的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 才能算大樣本呢？
+&lt;ul&gt;
+&lt;li&gt;當且僅當 (on and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;泊松分佈的正態分佈近似&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;假設時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 內某事件的發生次數服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Po(\mu)\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;考慮將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段。那麼第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 時間段內事件發生次數依舊服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\sim Po(\frac{\mu}{n})\)&lt;/span&gt;。且 &lt;span class=&#34;math inline&#34;&gt;\(E(X_i)=\mu/n, Var(X_i)=\mu/n\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;那麼原先的 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可以被視爲是將這無數的小時間段的 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 相加。應用中心極限定理： &lt;span class=&#34;math display&#34;&gt;\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;需要注意的是，這段時間 (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;) 內發生的事件次數 (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) : &lt;span class=&#34;math inline&#34;&gt;\(\lambda t =\mu&amp;gt;10\)&lt;/span&gt; ，這樣的正態分佈模擬才能成立。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;continuity-corrections&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;正態分佈模擬的校正：continuity corrections&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。&lt;/li&gt;
+&lt;li&gt;例如：我們如果用正態分佈模擬來計算 &lt;span class=&#34;math inline&#34;&gt;\(P(X=15)\)&lt;/span&gt;，那麼實際上我們應該計算的是 &lt;span class=&#34;math inline&#34;&gt;\(P(14.5&amp;lt;X&amp;lt;15.5)\)&lt;/span&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;例題&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(100,0.5)\)&lt;/span&gt;，求 &lt;span class=&#34;math inline&#34;&gt;\(P(X&amp;gt;60)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\because X&amp;amp;\sim Bin(100, 0.5) \\ \therefore E(X) &amp;amp;=n\pi=50 \\
+Var(X) &amp;amp;= n\pi(1-\pi) =25=5^2\\
+P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
+         &amp;amp;= 1-P(Z\leqslant\frac{60.5-50}{\sqrt{25}}) \\
+         &amp;amp;= 1-P(Z\leqslant2.1) \\
+         &amp;amp;= 1-\Phi(2.1) \\
+         &amp;amp;= 1-0.982 = 0.018
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
+1-pbinom(60, size=100, prob=0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.0176001&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
+1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\because B &amp;amp;\; \sim Bin(48, 0.75) \\
+\therefore E(X) &amp;amp;\; =n\pi=36 \\
+           Var(X) &amp;amp;\; =n\pi(1-\pi)=9=3^2 \\
+P(30&amp;lt;X&amp;lt;39) &amp;amp;\; = P(31\leqslant X\leqslant 38)\\
+     &amp;amp;\; = P(30.5\leqslant Y \leqslant 38.5) \\
+     Y\;is\;the&amp;amp;\;normal\;approximation \\
+     &amp;amp;\;= P(Y&amp;lt;38.5) - P(Y&amp;lt;30.5) \\
+     &amp;amp;\;= P(Z\leqslant\frac{38.5-36}{3})-
+          P(Z\leqslant\frac{30.5-36}{3}) \\
+     &amp;amp;\;= P(Z\leqslant0.833) - P(Z\leqslant-1.833) \\
+     &amp;amp;\;= \Phi(0.833)-\Phi(-1.833) \\
+     &amp;amp;\;= 0.798-0.033 = 0.764
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
+pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7578159&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;兩個連續隨機變量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;假定 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 是兩個連續隨機變量： &lt;span class=&#34;math display&#34;&gt;\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
+  E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
+  Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;利用矩陣的標記法，可以將 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt;, 即： &lt;span class=&#34;math display&#34;&gt;\[\textbf{X}=\left(
+\begin{array}{c}
+X_1\\
+X_2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;上面的所有內容都可以標記爲： &lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
+\begin{array}{c}
+\mu_1\\
+\mu_2\\
+\end{array}
+\right)\\
+Covariance \;matrix: \\
+Var(\textbf{X})=\mathbf{\Sigma}=\left(
+\begin{array}{c}
+\sigma_1^2 &amp;amp; \sigma_{12}\\
+\sigma_{12} &amp;amp; \sigma_1^2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;兩個連續隨機變量 例子：&lt;/h2&gt;
+&lt;p&gt;假如要看收縮期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt;) 和舒張期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt;) 之間的關係：&lt;/p&gt;
+&lt;p&gt;下列爲已知： - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;那麼， 我們可以把這些信息用下面的方法來標記：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
+\begin{array}{c}
+130\\
+90\\
+\end{array}
+\right)\\
+Var(\textbf{X})=\mathbf{\Sigma}=\left(
+\begin{array}{c}
+225 &amp;amp; 112.5\\
+112.5 &amp;amp; 225\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;條件分佈和邊緣分佈的概念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt; 的兩個變量都服從正態分佈；&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈: &lt;span class=&#34;math display&#34;&gt;\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;同樣的，&lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; 的給出 &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; 的條件分佈 (condition distribution) 也服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
+ Var(X_1|X_2)=\sigma_1^2(1-\rho^2)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反之亦然。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level2&#34;&gt;
+&lt;h2&gt;條件分佈和邊緣分佈的例子&lt;/h2&gt;
+&lt;p&gt;上面的概念過於抽象，用血壓的例子：&lt;/p&gt;
+&lt;p&gt;收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;條件期望: &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：&lt;br&gt; 他的收縮期血壓的期望值就可以用上面的式子計算： &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP=95)=136\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;條件方差爲： &lt;span class=&#34;math display&#34;&gt;\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&amp;lt;15^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(&lt;strong&gt;方差變小&lt;/strong&gt;)了。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>偉大的中心極限定理</title>
@@ -69,7 +227,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;p&gt;偉大的中心極限定理告訴我們：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;&lt;strong&gt;當樣本量足夠大時，樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}_n\)&lt;/span&gt; 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 無關。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;再說一遍：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^s\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
+&lt;p&gt;如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu;\;Var(X)=\sigma^2\)&lt;/span&gt;。 根據中心極限定理，可以得到：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;當樣本量增加，樣本均值的分佈服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;也可以寫作，當樣本量增加： &lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]&lt;/span&gt;&lt;/li&gt;
@@ -1252,67 +1410,6 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 \end{array}
 \right)
 \end{align}$$&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
-      <link>https://winterwang.github.io/post/unconditional/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/unconditional/</guid>
-      <description>&lt;p&gt;言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。&lt;/p&gt;
-
-&lt;p&gt;本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。&lt;/p&gt;
-
-&lt;p&gt;結果6月8日那天收到郵件催促我快點滿足 offer 條件：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/meetingcondition.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。&lt;/p&gt;
-
-&lt;p&gt;因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Your documents didn’t meet the requirements because: &lt;br&gt;
- 1.  The salary expectancy is not admissible &lt;br&gt;
- 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. &lt;br&gt;
- 3.  The bank statements did not include the bank name and logo.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!&lt;/p&gt;
-
-&lt;p&gt;這些都好說。可是日本的銀行，&lt;strong&gt;沒有&lt;/strong&gt;這種類型的證明書（我也是第一次知道日本銀行不給開這樣子的證明）。所以許多人的解決辦法是讓銀行開一個月的流水賬單，要命的是這個證明不能開英文的，然後再去找翻譯公司翻譯流水。當然我也可以這麽辦。衹是，當我知道我的三個證明書都不能作爲有效的資金證明的時候，我離7月31日祗剩下不到2周時間了。在此奉勸后來者，一定要先準備好自己的資金證明書。最好能按照下面的樣本，讓銀行開具類似的證明書：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/bankstatement.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我在接到證明書不滿足條件的郵件的第二天，立刻去了銀行，接待我的銀行經理先是打報告給總部請示。毫無意外被擋回來。說如果是客人自己要求的樣式的證明書，無法給加銀行logo，也不能蓋章，衹能簽字。在我一個多小時的軟磨硬泡以後，經理鬆動了。竟然主動想辦法，她提議說，可以辦理bank statement，不過我看了他們給的bank statement樣本也是一個時間點的賬戶存款而已，無法滿足28天的資金維持證明。看我面有難色，日本人經理還是挺善解人意的，說，我可以把日期改成，從xx月xx日-xx月xx日（28天）的最低資金證明。這樣就能解決問題了。而且bank statement本身自帶銀行logo。謝天謝地，一項死板不能變通的日本人讓我從此刮目相看。解決了我的燃眉之急。也不必再去找翻譯公司翻譯賬戶流水了。有驚無險。第二天我拿到開好的證明，立刻掃描PDF郵件發給LSHTM，期待他們能馬上給開來 CAS (Confirmation of Acceptance of Studies)。等了一周，還是左等不來右等不來，距離7月31日還剩下不到10天了。終於無法忍耐等待的我，打電話去倫敦詢問我的情況。對方接電話的是個年輕女聲，優雅的倫敦音告訴我，不要着急，先無視學校的提醒滿足條件的郵件吧。我們會儘快看你的檔案。無奈我衹好作罷，挂了電話繼續等待。&lt;/p&gt;
-
-&lt;p&gt;結果第二天晚上就收到了確認函，說你的CAS很快就能發給你了。oh yeah！半夜裏我就收到了發來的新鮮剛出爐的CAS號碼以及新的無條件錄取證明：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/uncon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我很早以前就在&lt;a href=&#34;https://www.visa4uk.fco.gov.uk/home/welcome&#34; target=&#34;_blank&#34;&gt;visa4uk&lt;/a&gt;上註冊好了全部的信息，就等着學校發來 CAS 的文件了。於是我再花了半個小時把 CAS 上的內容填寫到簽證申請的網站上去。在申請的網站上，會中途跳出來讓你支付一年醫療保險的頁面（£150），付完保險費以後會收到自己的保險號碼。估計以後在英國如果需要看病的話報自己的保險號碼就OK了。於是乎我以迅雷不及掩耳之勢立刻預約了7月31日去大阪的簽證申請中心遞交簽證材料。&lt;/p&gt;
-
-&lt;p&gt;等待去辦簽證的過程中，又收到好消息，宿舍抽籤中了。於是我就成了倫敦準市民之一拉。哈哈哈哈。今兒真高興阿，今兒真高興。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/gif/shuang.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我抽中的是&lt;a href=&#34;http://halls.london.ac.uk/international-hall&#34; target=&#34;_blank&#34;&gt;International Hall&lt;/a&gt;的單人間。仔細閱讀了條款後發現，每週2百鎊的房租確實有點小貴，但是呢，確是包了早餐晚餐和週末的四餐的。我想這將會大大減輕時間和金錢的成本。畢竟只有一年的留學時間。將就將就吧，每天都是炸魚和薯條估計吃一週就會讓人瘋了誒。。。先做好心理準備。對伙食不應有太高期待。&lt;/p&gt;
-
-&lt;p&gt;萬事具備，&lt;del&gt;只差簽證了。&lt;/del&gt; 於是就到了預約機票的時候，查了半天各種中介的網站，結果都是什麼中轉三四次的，要不就是繞地球一大圈的，才能有價格比較便宜的。索性打電話去日本航空詢問有沒有給留學生準備的往返一年，時間靈活的機票。果然不問不知道，一問嚇一跳阿，電話接線員小哥樂呵呵:-)說，哎呀你這電話打的太是時候了，我們日本航空正好最近上線了歐洲航線的特價機票，而且專門針對你這樣要待三個月以上的客戶。一問價格，我的媽呀，出發行程已定，歸程未定的叫做半靈活機票 (semi-flexi)，日本航空的這個折扣價爲12萬日元。比全日空便宜了一半，比其他的可疑航空減少了飛行時間，還有什麼好說的，果斷就訂了。結果呢，準備付錢了小哥告訴我說，您現在先別付定金，我這裏已經幫你把機票預留好了，您等8月1日以後再上網站上打開訂單支付，因爲8月1日後的燃油稅機場時用費等雜費由於匯率等變化會再便宜一萬日元左右。&lt;strong&gt;W!T!F!&lt;/strong&gt; 感動得熱淚盈眶有沒有，簡直就想穿過電話線去擁抱這位小哥了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/jal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
 </description>
     </item>
     
