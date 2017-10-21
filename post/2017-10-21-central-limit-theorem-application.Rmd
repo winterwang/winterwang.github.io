@@ -24,7 +24,7 @@ summary: "中心極限定理的廣泛應用"
 $$X\sim N（n\pi, n\pi(1-\pi))$$
 
 - 問題在於，多大的 $n$ 才能算大樣本呢？
-    - 當且僅當 (on and if only) $n>20$ AND $n\pi>5$ AND $n(1-\pi)>5$
+    - 當且僅當 (only and if only) $n>20$ AND $n\pi>5$ AND $n(1-\pi)>5$
 
 ## 泊松分佈的正態分佈近似
 

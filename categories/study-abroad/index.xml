@@ -25,7 +25,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;中心極限定理&lt;/a&gt;告訴我們，當樣本量足夠大時: &lt;span class=&#34;math display&#34;&gt;\[X\sim N（n\pi, n\pi(1-\pi))\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;問題在於，多大的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 才能算大樣本呢？
 &lt;ul&gt;
-&lt;li&gt;當且僅當 (on and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;當且僅當 (only and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
