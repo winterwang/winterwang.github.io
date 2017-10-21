@@ -1,5 +1,5 @@
 ---
-title: central limit theorem application
+title: 中心極限定理的應用
 author: ''
 date: '2017-10-21'
 slug: central-limit-theorem-application
