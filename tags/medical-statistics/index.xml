@@ -176,7 +176,12 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 &lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;兩個連續隨機變量 例子：&lt;/h2&gt;
 &lt;p&gt;假如要看收縮期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt;) 和舒張期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt;) 之間的關係：&lt;/p&gt;
-&lt;p&gt;下列爲已知： - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;; - &lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;下列爲已知條件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;那麼， 我們可以把這些信息用下面的方法來標記：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
 \begin{array}{c}
