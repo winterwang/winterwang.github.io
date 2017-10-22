@@ -339,6 +339,53 @@ pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)</code></pre>
 pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))</code></pre>
 <pre><code>## [1] 0.7642951</code></pre>
 <p><img src="/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>從上面兩個例題也能看出，<span class="math inline">\(n\)</span> 越小，正態分佈模擬的誤差就越大。</p>
+<ol start="3" style="list-style-type: decimal">
+<li>已知 <span class="math inline">\(X \sim Poisson(30)\)</span> 求 <span class="math inline">\(P(X\leqslant20)\)</span>。</li>
+</ol>
+</div>
+<div id="-2" class="section level4">
+<h4>解</h4>
+<p><span class="math display">\[\because E(X)=\mu=30, \;Var(X)=\mu=30=(\sqrt{30})^2 \\
+ \begin{aligned}
+ Pr(X\leqslant20) &amp;= P(Z\leqslant\frac{20.5-30}{\sqrt{30}}) \\
+                  &amp;= P(Z\leqslant-1.734) \\
+                  &amp;= \Phi(-1.734) \\
+                  &amp;= 0.0414
+ \end{aligned}
+ \]</span></p>
+<pre class="r"><code># 快來看實際用傻瓜算法計算獲得的概率：
+ppois(20, lambda=30)</code></pre>
+<pre><code>## [1] 0.03528462</code></pre>
+<pre class="r"><code># 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((20.5-30)/sqrt(30))</code></pre>
+<pre><code>## [1] 0.04141871</code></pre>
+<p>這兩個其實有些小差距。不過看下圖，其模擬還是很到位的。只是正態分佈的面積明顯確實比泊松分佈的小柱子面積要大一些。</p>
+<p><img src="/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>已知 <span class="math inline">\(X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)\)</span> 求 <span class="math inline">\(P(X_1+X_2\leqslant40)\)</span>。</li>
+</ol>
+</div>
+<div id="-3" class="section level4">
+<h4>解</h4>
+<p><span class="math display">\[
+\begin{aligned}
+E(X_1+X_2) &amp;\;= E(X_1)+E(X_2) = 30+30 = 60\\
+Var(X_1+X_2) &amp;\;= Var(X_1)+Var(X_2) = 30+30 \\
+             &amp;\;= (\sqrt{60})^2 \\
+P(X_1+X_2\leqslant 40) &amp;\;= P(Z \leqslant \frac{40.5-60}{\sqrt{60}}) \\
+           &amp;\;= P(Z\leqslant-2.517) \\
+           &amp;\;= \Phi(-2.517) \\
+           &amp;\;= 0.006
+\end{aligned}
+\]</span></p>
+<pre class="r"><code># 快來看實際用傻瓜算法計算獲得的概率：
+ppois(40, lambda=60)</code></pre>
+<pre><code>## [1] 0.00398281</code></pre>
+<pre class="r"><code># 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((40.5-60)/sqrt(60))</code></pre>
+<pre><code>## [1] 0.005910569</code></pre>
+<p><img src="/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png" width="672" /> 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。</p>
 </div>
 </div>
 </div>
@@ -407,6 +454,46 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 <li><p>條件方差爲： <span class="math display">\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&lt;15^2\]</span></p></li>
 <li><p>所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(<strong>方差變小</strong>)了。</p></li>
 </ul>
+<div id="-1" class="section level3">
+<h3>例題</h3>
+<p>有 (閒) 人記錄了 <span class="math inline">\(1494\)</span> 名兒童在 <span class="math inline">\(2, 4, 6\)</span> 歲時的腿長度。已知在記錄的這三個年齡時的平均腿長度分別爲 <span class="math inline">\(85 cm, 103cm, 114cm\)</span>。協方差矩陣如下:</p>
+<p><span class="math display">\[\left(
+\begin{array}{c}
+22.2 &amp; 11.8 &amp; 13.7\\
+11.8 &amp; 26.3 &amp; 21.5\\
+13.7 &amp; 21.5 &amp; 29.0
+\end{array}
+\right)\]</span></p>
+<p>假定，這三個年齡記錄的這些兒童的腿長度數據（聯合分佈, joint distribution）服從三個變量正態分佈。</p>
+<ol style="list-style-type: decimal">
+<li>求 <span class="math inline">\(2\)</span> 歲時這些兒童的腿長度的邊緣分佈 (marginal distribution)</li>
+</ol>
+<div id="-4" class="section level4">
+<h4>解</h4>
+<p><span class="math display">\[X_{age=2} \sim N(85, \sigma_{age=2}^2=22.2)\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>求他們 <span class="math inline">\(6\)</span> 歲時腿長度的 <span class="math inline">\(2\)</span> 歲時的條件分佈。(Find the distribution of leg length age 6 conditional on leg length at age 2.)</li>
+</ol>
+</div>
+<div id="-5" class="section level4">
+<h4>解</h4>
+<p><span class="math inline">\(6\)</span> 歲時和 <span class="math inline">\(2\)</span> 歲時腿長的相關係數 (correlation, <span class="math inline">\(\rho_{6,2}\)</span>) 爲： <span class="math display">\[
+\begin{aligned}
+\rho_{6,2} &amp;= \frac{Cov_{6,2}}{\sqrt{Var(length_6)}\sqrt{Var(length_2)}}\\
+&amp;= \frac{13.7}{\sqrt{22.2}\sqrt{29}}=0.54
+\end{aligned}
+\]</span></p>
+<p>條件分佈套用上面提到的公式：</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(length_6 | length_2) &amp;= \mu_6+\frac{\rho_{6,2}\sigma_6}{\sigma_2}(length_2-\mu_2) \\
+&amp;= 114+\frac{0.54\times\sqrt{29.0}}{\sqrt{22.2}}(length_2-85)\\
+Var(length_6 | length_2) &amp;= \sigma_6^2(1-\rho_{6,2}^2) \\
+                         &amp;= 29.0\times(1-0.54^2) =20.5
+\end{aligned}
+\]</span></p>
+</div>
+</div>
 </div>
 
     </div>

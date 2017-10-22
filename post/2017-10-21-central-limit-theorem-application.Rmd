@@ -144,8 +144,99 @@ plot1 <- ggplot(df, aes(x = x, y = y)) + geom_bar(stat = "identity", fill = "gre
 print(plot1)
 ```
 
+從上面兩個例題也能看出，$n$ 越小，正態分佈模擬的誤差就越大。
 
 
+3. 已知 $X \sim Poisson(30)$ 求 $P(X\leqslant20)$。
+
+#### 解
+ $$\because E(X)=\mu=30, \;Var(X)=\mu=30=(\sqrt{30})^2 \\
+ \begin{aligned}
+ Pr(X\leqslant20) &= P(Z\leqslant\frac{20.5-30}{\sqrt{30}}) \\
+                  &= P(Z\leqslant-1.734) \\
+                  &= \Phi(-1.734) \\
+                  &= 0.0414
+ \end{aligned}
+ $$
+
+
+```{r}
+# 快來看實際用傻瓜算法計算獲得的概率：
+ppois(20, lambda=30)
+```
+```{r}
+# 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((20.5-30)/sqrt(30))
+```
+這兩個其實有些小差距。不過看下圖，其模擬還是很到位的。只是正態分佈的面積明顯確實比泊松分佈的小柱子面積要大一些。
+
+
+
+```{r echo=FALSE, message=FALSE}
+require(ggplot2)
+require(grid)
+#require(ggfortify)
+
+x1  <- 10:55
+df <- data.frame(x = x1, y = dpois(x1, lambda=30))
+
+plot1 <- ggplot(df, aes(x = x, y = y)) + geom_bar(stat = "identity", fill = "grey") +
+  scale_y_continuous(expand = c(0.01, 0)) + xlab("x") + ylab("Density") +
+  labs(title = "dpois(x, lambda=30)") + theme_bw(16, "serif") +
+  theme(plot.title = element_text(size = rel(1.2), vjust = 1.5))+
+  stat_function(fun = dnorm, colour = "red", args = list(mean = 30,sd = sqrt(30)))+
+  stat_function(fun = dnorm,args = list(mean = 30,sd = sqrt(30)),
+                xlim = c(15,20.5),
+                geom = "area",fill="red", alpha= 0.2)
+print(plot1)
+```
+
+4. 已知 $X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)$ 求 $P(X_1+X_2\leqslant40)$。
+
+#### 解
+
+$$
+\begin{aligned}
+E(X_1+X_2) &\;= E(X_1)+E(X_2) = 30+30 = 60\\
+Var(X_1+X_2) &\;= Var(X_1)+Var(X_2) = 30+30 \\
+             &\;= (\sqrt{60})^2 \\
+P(X_1+X_2\leqslant 40) &\;= P(Z \leqslant \frac{40.5-60}{\sqrt{60}}) \\
+           &\;= P(Z\leqslant-2.517) \\
+           &\;= \Phi(-2.517) \\
+           &\;= 0.006
+\end{aligned}
+$$
+
+
+```{r}
+# 快來看實際用傻瓜算法計算獲得的概率：
+ppois(40, lambda=60)
+```
+```{r}
+# 快來看用中心極限定理模擬正態分佈獲得的概率：
+pnorm((40.5-60)/sqrt(60))
+```
+
+
+```{r echo=FALSE, message=FALSE}
+require(ggplot2)
+require(grid)
+#require(ggfortify)
+
+x1  <- 30:90
+df <- data.frame(x = x1, y = dpois(x1, lambda=60))
+
+plot1 <- ggplot(df, aes(x = x, y = y)) + geom_bar(stat = "identity", fill = "grey") +
+  scale_y_continuous(expand = c(0.01, 0)) + xlab("x") + ylab("Density") +
+  labs(title = "dpois(x, lambda=60)") + theme_bw(16, "serif") +
+  theme(plot.title = element_text(size = rel(1.2), vjust = 1.5))+
+  stat_function(fun = dnorm, colour = "red", args = list(mean = 60,sd = sqrt(60)))+
+  stat_function(fun = dnorm,args = list(mean = 60,sd = sqrt(60)),
+                xlim = c(30,40.5),
+                geom = "area",fill="red", alpha= 0.2)
+print(plot1)
+```
+又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。
 
 ## 兩個連續隨機變量
 
@@ -230,3 +321,45 @@ $$E(SBP|DBP=95)=136$$
 $$Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2<15^2$$
 
 - 所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(**方差變小**)了。
+
+### 例題
+
+有 (閒) 人記錄了 $1494$ 名兒童在 $2, 4, 6$ 歲時的腿長度。已知在記錄的這三個年齡時的平均腿長度分別爲 $85 cm, 103cm, 114cm$。協方差矩陣如下:
+
+$$\left(
+\begin{array}{c}
+22.2 & 11.8 & 13.7\\
+11.8 & 26.3 & 21.5\\
+13.7 & 21.5 & 29.0
+\end{array}
+\right)$$
+
+假定，這三個年齡記錄的這些兒童的腿長度數據（聯合分佈, joint distribution）服從三個變量正態分佈。
+
+1. 求 $2$ 歲時這些兒童的腿長度的邊緣分佈 (marginal distribution)
+
+#### 解
+$$X_{age=2} \sim N(85, \sigma_{age=2}^2=22.2)$$
+
+
+2. 求他們 $6$ 歲時腿長度的 $2$ 歲時的條件分佈。(Find the distribution of leg length age 6 conditional on leg length at age 2.)
+
+#### 解
+$6$ 歲時和 $2$ 歲時腿長的相關係數 (correlation, $\rho_{6,2}$) 爲：
+$$
+\begin{aligned}
+\rho_{6,2} &= \frac{Cov_{6,2}}{\sqrt{Var(length_6)}\sqrt{Var(length_2)}}\\
+&= \frac{13.7}{\sqrt{22.2}\sqrt{29}}=0.54
+\end{aligned}
+$$
+
+條件分佈套用上面提到的公式：
+
+$$
+\begin{aligned}
+E(length_6 | length_2) &= \mu_6+\frac{\rho_{6,2}\sigma_6}{\sigma_2}(length_2-\mu_2) \\
+&= 114+\frac{0.54\times\sqrt{29.0}}{\sqrt{22.2}}(length_2-85)\\
+Var(length_6 | length_2) &= \sigma_6^2(1-\rho_{6,2}^2) \\
+                         &= 29.0\times(1-0.54^2) =20.5
+\end{aligned}
+$$
