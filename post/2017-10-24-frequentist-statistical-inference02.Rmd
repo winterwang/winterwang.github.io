@@ -114,5 +114,28 @@ $$bias(T) = E(T)-\theta$$
 
 其實偏倚完全等於零並不是最重要，許多常見的估計量都是有偏倚的。重要的是，這個偏倚會隨着樣本量的增加而逐漸趨近於零。所以我們就可以認爲這樣的估計量是漸進無偏的 (asymptotically unbiased)：
 
-$$T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;E(T)=\theta\\
-T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;lim_{n\rightarrow\infty}E(T)=\theta$$
+$$T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;\\E(T)=\theta\\
+T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{n\rightarrow\infty}E(T)=\theta$$
+
+#### 估計量的效能 Efficiency
+
+通常，我們希望一個估計量 (estimator) 的偏倚要小，同時，它的樣本分佈也希望能儘可能的不要波動太大。換句話說，我們還希望估計量的方差越小越好。
+
+如果說，兩個估計量有相同的偏倚，均可以選擇來推斷總體，我們說，其中樣本分佈的方差小的那個（波動幅度小）的那個估計量是相對更好的。因爲樣本分佈方差越小，說明可以**更加精確的**估計總體參數。這兩個估計量的方差之比：$Var(S)/Var(T)$ 被叫做這兩個估計量的**相對效能 (relative efficiency)**。所以我們用估計量去推斷總體時，需要選用效能最高，精確度最好的估計量 **(the minimum variance unbiased estimator/an efficient estimator)**。
+
+#### 均值和中位數的相對效能
+
+在一個服從 $N(\mu,\sigma^2)$ 正態分佈的數據中，中位數和均值是一樣的，也都同時等於總體均值參數 $\mu$。而且，樣本均數 $\bar{Y}$ 和樣本中位數 $\dot{Y}$ 都是對總體均值的無偏估計量。那麼應該選用中位數還是平均值呢？
+
+之前證明過當 $Y_i \sim N(\mu,\sigma^2)$ 時， $Var(\bar{Y}=\sigma^2/n)$。然而，當 $n$ 較大的時候，可以證明的是：
+
+$$Var(\dot{Y})=\frac{\pi}{2}\frac{\sigma^2}{n}\approx1.571\frac{\sigma^2}{n}$$
+
+因此，這兩個估計量的相對效能就是：
+
+$$\frac{Var(\dot{Y})}{Var(\bar{Y})}\approx1.571$$
+
+所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。
+
+
+### 

@@ -340,9 +340,26 @@ Prob(\bar{Y}&gt;\mu+c)=Prob(\bar{Y}-\mu&gt;c) \;&amp;= 0.025 \\
 <p>如果實現了這個條件，我們說這樣的估計量是無偏的 (<code>unbiased</code>)。然而，天下哪有這等好事，我們叫真實值和估計量之間的差距爲偏倚：</p>
 <p><span class="math display">\[bias(T) = E(T)-\theta\]</span></p>
 <p>其實偏倚完全等於零並不是最重要，許多常見的估計量都是有偏倚的。重要的是，這個偏倚會隨着樣本量的增加而逐漸趨近於零。所以我們就可以認爲這樣的估計量是漸進無偏的 (asymptotically unbiased)：</p>
-<p><span class="math display">\[T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;E(T)=\theta\\
-T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;lim_{n\rightarrow\infty}E(T)=\theta\]</span></p>
+<p><span class="math display">\[T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;\\E(T)=\theta\\
+T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{n\rightarrow\infty}E(T)=\theta\]</span></p>
 </div>
+<div id="-efficiency" class="section level4">
+<h4>估計量的效能 Efficiency</h4>
+<p>通常，我們希望一個估計量 (estimator) 的偏倚要小，同時，它的樣本分佈也希望能儘可能的不要波動太大。換句話說，我們還希望估計量的方差越小越好。</p>
+<p>如果說，兩個估計量有相同的偏倚，均可以選擇來推斷總體，我們說，其中樣本分佈的方差小的那個（波動幅度小）的那個估計量是相對更好的。因爲樣本分佈方差越小，說明可以<strong>更加精確的</strong>估計總體參數。這兩個估計量的方差之比：<span class="math inline">\(Var(S)/Var(T)\)</span> 被叫做這兩個估計量的<strong>相對效能 (relative efficiency)</strong>。所以我們用估計量去推斷總體時，需要選用效能最高，精確度最好的估計量 <strong>(the minimum variance unbiased estimator/an efficient estimator)</strong>。</p>
+</div>
+<div class="section level4">
+<h4>均值和中位數的相對效能</h4>
+<p>在一個服從 <span class="math inline">\(N(\mu,\sigma^2)\)</span> 正態分佈的數據中，中位數和均值是一樣的，也都同時等於總體均值參數 <span class="math inline">\(\mu\)</span>。而且，樣本均數 <span class="math inline">\(\bar{Y}\)</span> 和樣本中位數 <span class="math inline">\(\dot{Y}\)</span> 都是對總體均值的無偏估計量。那麼應該選用中位數還是平均值呢？</p>
+<p>之前證明過當 <span class="math inline">\(Y_i \sim N(\mu,\sigma^2)\)</span> 時， <span class="math inline">\(Var(\bar{Y}=\sigma^2/n)\)</span>。然而，當 <span class="math inline">\(n\)</span> 較大的時候，可以證明的是：</p>
+<p><span class="math display">\[Var(\dot{Y})=\frac{\pi}{2}\frac{\sigma^2}{n}\approx1.571\frac{\sigma^2}{n}\]</span></p>
+<p>因此，這兩個估計量的相對效能就是：</p>
+<p><span class="math display">\[\frac{Var(\dot{Y})}{Var(\bar{Y})}\approx1.571\]</span></p>
+<p>所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。</p>
+</div>
+</div>
+<div id="section" class="section level3">
+<h3></h3>
 </div>
 
     </div>

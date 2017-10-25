@@ -97,9 +97,26 @@ Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
 &lt;p&gt;如果實現了這個條件，我們說這樣的估計量是無偏的 (&lt;code&gt;unbiased&lt;/code&gt;)。然而，天下哪有這等好事，我們叫真實值和估計量之間的差距爲偏倚：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[bias(T) = E(T)-\theta\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;其實偏倚完全等於零並不是最重要，許多常見的估計量都是有偏倚的。重要的是，這個偏倚會隨着樣本量的增加而逐漸趨近於零。所以我們就可以認爲這樣的估計量是漸進無偏的 (asymptotically unbiased)：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;E(T)=\theta\\
-T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;lim_{n\rightarrow\infty}E(T)=\theta\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;\\E(T)=\theta\\
+T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{n\rightarrow\infty}E(T)=\theta\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;-efficiency&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;估計量的效能 Efficiency&lt;/h4&gt;
+&lt;p&gt;通常，我們希望一個估計量 (estimator) 的偏倚要小，同時，它的樣本分佈也希望能儘可能的不要波動太大。換句話說，我們還希望估計量的方差越小越好。&lt;/p&gt;
+&lt;p&gt;如果說，兩個估計量有相同的偏倚，均可以選擇來推斷總體，我們說，其中樣本分佈的方差小的那個（波動幅度小）的那個估計量是相對更好的。因爲樣本分佈方差越小，說明可以&lt;strong&gt;更加精確的&lt;/strong&gt;估計總體參數。這兩個估計量的方差之比：&lt;span class=&#34;math inline&#34;&gt;\(Var(S)/Var(T)\)&lt;/span&gt; 被叫做這兩個估計量的&lt;strong&gt;相對效能 (relative efficiency)&lt;/strong&gt;。所以我們用估計量去推斷總體時，需要選用效能最高，精確度最好的估計量 &lt;strong&gt;(the minimum variance unbiased estimator/an efficient estimator)&lt;/strong&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;均值和中位數的相對效能&lt;/h4&gt;
+&lt;p&gt;在一個服從 &lt;span class=&#34;math inline&#34;&gt;\(N(\mu,\sigma^2)\)&lt;/span&gt; 正態分佈的數據中，中位數和均值是一樣的，也都同時等於總體均值參數 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;。而且，樣本均數 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 和樣本中位數 &lt;span class=&#34;math inline&#34;&gt;\(\dot{Y}\)&lt;/span&gt; 都是對總體均值的無偏估計量。那麼應該選用中位數還是平均值呢？&lt;/p&gt;
+&lt;p&gt;之前證明過當 &lt;span class=&#34;math inline&#34;&gt;\(Y_i \sim N(\mu,\sigma^2)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(Var(\bar{Y}=\sigma^2/n)\)&lt;/span&gt;。然而，當 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 較大的時候，可以證明的是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(\dot{Y})=\frac{\pi}{2}\frac{\sigma^2}{n}\approx1.571\frac{\sigma^2}{n}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因此，這兩個估計量的相對效能就是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{Var(\dot{Y})}{Var(\bar{Y})}\approx1.571\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;/h3&gt;
 &lt;/div&gt;
 </description>
     </item>
