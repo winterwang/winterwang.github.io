@@ -88,7 +88,6 @@ Prob(\bar{Y}>\mu+c)=Prob(\bar{Y}-\mu>c) \;&= 0.025 \\
 \Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
 所以總體均值\mu 的 95\% 信賴區間就是: \\
 \mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm & 1.96\frac{\sigma}{\sqrt{n}}\\
-
 其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &的標準誤。
 \end{aligned}
 $$

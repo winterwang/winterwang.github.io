@@ -65,8 +65,8 @@ Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
 
 &lt;/div&gt;
 &lt;p&gt;接下來就是推倒（故意的）&lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 的過程啦：&lt;/p&gt;
-$$
-&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
 Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
 \Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &amp;gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
 \Rightarrow Prob(Z&amp;gt;\frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
@@ -76,11 +76,11 @@ Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
 \Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
 所以總體均值\mu 的 95\% 信賴區間就是: \\
 \mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm &amp;amp; 1.96\frac{\sigma}{\sqrt{n}}\\
-
 其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &amp;amp;的標準誤。
-\end{aligned}\]&lt;/span&gt;
-&lt;p&gt;$$&lt;/p&gt;
-&lt;p&gt;例子：&lt;/p&gt;
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;例子：在某家醫院裏，一種常見手術用來治療某疾病。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
