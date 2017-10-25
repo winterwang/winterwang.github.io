@@ -115,8 +115,24 @@ T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{
 &lt;p&gt;所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;/h3&gt;
+&lt;div id=&#34;-mean-square-error-mse&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;均方差 mean square error (MSE)&lt;/h3&gt;
+&lt;p&gt;兩個估計量的偏倚不同時，可以比較他們和總體參數之間的差距，這被叫做均方差, Mean Square Error (MSE)。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[MSE(T)=E[(T-\theta)^2]\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;這裏用一個數學技巧，將式子中的估計量和總體參數之間的差，分成兩個部分：一是估計量本身的方差 (&lt;span class=&#34;math inline&#34;&gt;\(T-E(T)\)&lt;/span&gt;)，一是估計量的偏倚 (&lt;span class=&#34;math inline&#34;&gt;\(E(T)-\theta\)&lt;/span&gt;)。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+MSE(T) &amp;amp;= E[(T-\theta)^2] \\
+       &amp;amp;= E\{[T-E(T)+E(T)-\theta]^2\} \\
+       &amp;amp;= E\{[T-E(T)]^2+[E(T)-\theta]^2 \\
+       &amp;amp; \;\;\;\;\; \;\;+2[T-E(T)][E(T)-\theta]\} \\
+       &amp;amp;= E\{[T-E(T)]^2\}+E\{[E(T)-\theta]^2\} + 0\\
+       &amp;amp;= Var(T) + [bias(T)^2]
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;總體方差的估計，自由度&lt;/h3&gt;
 &lt;/div&gt;
 </description>
     </item>

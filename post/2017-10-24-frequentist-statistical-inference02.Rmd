@@ -138,4 +138,23 @@ $$\frac{Var(\dot{Y})}{Var(\bar{Y})}\approx1.571$$
 所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。
 
 
-### 
+### 均方差 mean square error (MSE)
+
+兩個估計量的偏倚不同時，可以比較他們和總體參數之間的差距，這被叫做均方差, Mean Square Error (MSE)。
+
+$$MSE(T)=E[(T-\theta)^2]$$
+
+這裏用一個數學技巧，將式子中的估計量和總體參數之間的差，分成兩個部分：一是估計量本身的方差 ($T-E(T)$)，一是估計量的偏倚 ($E(T)-\theta$)。
+
+$$
+\begin{aligned}
+MSE(T) &= E[(T-\theta)^2] \\
+       &= E\{[T-E(T)+E(T)-\theta]^2\} \\
+       &= E\{[T-E(T)]^2+[E(T)-\theta]^2 \\
+       & \;\;\;\;\; \;\;+2[T-E(T)][E(T)-\theta]\} \\
+       &= E\{[T-E(T)]^2\}+E\{[E(T)-\theta]^2\} + 0\\
+       &= Var(T) + [bias(T)^2]
+\end{aligned}
+$$
+
+### 總體方差的估計，自由度 
