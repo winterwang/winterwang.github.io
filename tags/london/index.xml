@@ -80,7 +80,20 @@ Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;例子：在某家醫院裏，一種常見手術用來治療某疾病。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;估計量的特質&lt;/h3&gt;
+&lt;p&gt;考慮以下的問題：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;什麼因素決定了一個估計量 (estimator) 的好壞，是否實用？&lt;/li&gt;
+&lt;li&gt;如果有其他的可選擇估計量，該如何取捨呢？&lt;/li&gt;
+&lt;li&gt;當情況複雜的時候，我們該如何尋找合適的估計量？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;偏倚&lt;/h4&gt;
+&lt;p&gt;假設 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 是我們估計總體參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的一個估計量。一般來說我們希望估計量的樣本分佈可以在 &lt;code&gt;“正確的位置”&lt;/code&gt; 左右均勻分佈。換句話說我們希望：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(T)=\theta\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
