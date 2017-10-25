@@ -290,10 +290,13 @@ E(Z) &amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
      &amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
 Var(Z) &amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
        &amp;= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
-\therefore Z \;&amp;\sim N(1,0)
+\therefore Z \;&amp;\sim N(0,1)
 \end{aligned}
 \]</span></p>
-<p><strong>均值 <span class="math inline">\(\mu\)</span> 的信賴區間：</strong> 上節說道， &gt; 信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。<strong>每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（<span class="math inline">\(95\%\)</span>）。</strong> 常用的這個概率值就是 <span class="math inline">\(95\%, 90\%, 99\%\)</span>。</p>
+<p><strong>均值 <span class="math inline">\(\mu\)</span> 的信賴區間：</strong> 上節說道，</p>
+<blockquote>
+<p>信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。<strong>每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（<span class="math inline">\(95\%\)</span>）。</strong> 常用的這個概率值就是 <span class="math inline">\(95\%, 90\%, 99\%\)</span>。</p>
+</blockquote>
 <p>假定我們用 <span class="math inline">\(95\%\)</span> 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 <span class="math inline">\(95\%\)</span> 是包含了總體的真實均值（但是確實未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 <span class="math inline">\(c\)</span>：</p>
 <p><span class="math display">\[Prob(\bar{Y} &gt; \mu+c) = 0.025 \\
   Prob(\bar{Y} &lt; \mu-c) = 0.025\]</span></p>
@@ -304,7 +307,8 @@ Var(Z) &amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
 <img src="/img/Selection_082.png" />
 
 </div>
-接下來就是推倒（故意的）<span class="math inline">\(c\)</span> 的過程啦： $$
+<p>接下來就是推倒（故意的）<span class="math inline">\(c\)</span> 的過程啦：</p>
+$$
 <span class="math display">\[\begin{aligned}
 Prob(\bar{Y}&gt;\mu+c)=Prob(\bar{Y}-\mu&gt;c) \;&amp;= 0.025 \\
 \Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;= 0.025 \\
