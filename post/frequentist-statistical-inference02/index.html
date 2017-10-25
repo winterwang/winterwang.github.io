@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/frequentist-statistical-inference01/">
+  <link rel="canonical" href="https://winterwang.github.io/post/frequentist-statistical-inference02/">
 
   
 
-  <title>概率論者統計推斷入門之-被門夾住 | Be ambitious</title>
+  <title>估計和精確度的概念 | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,7 +160,7 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">概率論者統計推斷入門之-被門夾住</h1>
+    <h1 itemprop="name">估計和精確度的概念</h1>
     
 
 <div class="article-metadata">
@@ -218,35 +218,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference01%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e6%a6%82%e7%8e%87%e8%ab%96%e8%80%85%e7%b5%b1%e8%a8%88%e6%8e%a8%e6%96%b7%e5%85%a5%e9%96%80%e4%b9%8b-%e8%a2%ab%e9%96%80%e5%a4%be%e4%bd%8f&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference01%2f"
+         href="https://twitter.com/intent/tweet?text=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference01%2f&amp;title=%e6%a6%82%e7%8e%87%e8%ab%96%e8%80%85%e7%b5%b1%e8%a8%88%e6%8e%a8%e6%96%b7%e5%85%a5%e9%96%80%e4%b9%8b-%e8%a2%ab%e9%96%80%e5%a4%be%e4%bd%8f"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f&amp;title=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference01%2f&amp;title=%e6%a6%82%e7%8e%87%e8%ab%96%e8%80%85%e7%b5%b1%e8%a8%88%e6%8e%a8%e6%96%b7%e5%85%a5%e9%96%80%e4%b9%8b-%e8%a2%ab%e9%96%80%e5%a4%be%e4%bd%8f"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f&amp;title=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e6%a6%82%e7%8e%87%e8%ab%96%e8%80%85%e7%b5%b1%e8%a8%88%e6%8e%a8%e6%96%b7%e5%85%a5%e9%96%80%e4%b9%8b-%e8%a2%ab%e9%96%80%e5%a4%be%e4%bd%8f&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference01%2f">
+         href="mailto:?subject=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -259,43 +259,68 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <div id="-population-and-sample" class="section level3">
-<h3>人羣與樣本 (population and sample)</h3>
-<p>討論樣本時，需考慮下面幾個問題：</p>
-<ol style="list-style-type: decimal">
-<li>樣本是否具有代表性？</li>
-<li>人羣被準確定義了嗎？</li>
-<li>我們感興趣的“人羣”是否可以是無限大（多）的？</li>
-<li>我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？</li>
-<li>我們從所有可能的人羣中抽樣了嗎？</li>
-</ol>
+      <div class="section level3">
+<h3>估計量和他們的樣本分佈</h3>
+<p>例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 <span class="math inline">\(n\)</span> 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。</p>
+<p><strong>模型假設：</strong> 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 <span class="math inline">\(Y_i\)</span> 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 <span class="math inline">\(\mu\)</span>，總體方差爲 <span class="math inline">\(\sigma^2\)</span>。那麼這個模型可以簡單的被寫成：</p>
+<p><span class="math display">\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]</span></p>
+<p><strong>總體均值 <span class="math inline">\(\mu\)</span> 的估計量：</strong> 顯然算術平均值: <span class="math inline">\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)</span> 是我們用於估計總體均值的估計量。</p>
+<p><strong>估計量的樣本分佈：</strong> <span class="math display">\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]</span></p>
+<div class="section level4">
+<h4>證明</h4>
+<p><span class="math display">\[
+\begin{aligned}
+E(\bar{Y}) &amp;= E(\frac{1}{n}\sum Y_i) \\
+           &amp;= \frac{1}{n}E(\sum Y_i) \\
+           &amp;= \frac{1}{n}\sum E(Y_i) \\
+           &amp;= \frac{1}{n}n\mu = \mu \\
+Var(\bar{Y}) &amp;= Var(\frac{1}{n}\sum Y_i) \\
+\because Y_i \;are &amp;\; independent   \\
+            &amp;= \frac{1}{n^2}\sum Var(Y_i) \\
+            &amp;= \frac{1}{n^2} n Var(Y_i) \\
+            &amp;= \frac{\sigma^2}{n}
+\end{aligned}
+\]</span></p>
 </div>
-<div id="-sample-and-statistic" class="section level3">
-<h3>樣本和統計量 (sample and statistic)</h3>
-<p>通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的<strong>統計量 (statistics)</strong>。我們用已知樣本去推斷未知總體的過程就叫做<strong>估計 (estimate)</strong>。這個想要被推斷的總體或人羣的值，被叫做<strong>參數 (parameter)</strong>，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做<strong>估計量 (estimator)</strong>。</p>
-<p>所有的統計量，都有<strong>樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)</strong>。推斷的過程歸納如下：</p>
-<ol style="list-style-type: decimal">
-<li>從總體或人羣中抽樣 (樣本量 <span class="math inline">\(n\)</span>)</li>
-<li>計算這個樣本的合適統計量，從而用於估計它在整體或人羣中的值。</li>
-<li>我們還需要決定計算獲得的統計量的樣本分佈（假定會抽樣無數次）。</li>
-<li>一旦可以精確地確認樣本分佈，我們就可以定量地計算出使用步驟2中獲得的統計量估計總體或人羣的參數時的準確度。</li>
-</ol>
+<div id="-zfracbary-musqrtvarbary--zsim-n01" class="section level4">
+<h4>證明當 <span class="math inline">\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)</span> 時， <span class="math inline">\(Z\sim N(0,1)\)</span>:</h4>
+<p>由式子可知， <span class="math inline">\(Z\)</span> 只是由一組服從正態分佈的數據 <span class="math inline">\(\bar{Y}\)</span> 線性轉換 (linear transformation) 而來，所以 <span class="math inline">\(Z\)</span> 本身也服從正態分佈 <span class="math display">\[
+\begin{aligned}
+E(Z) &amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
+     &amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
+Var(Z) &amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
+       &amp;= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
+\therefore Z \;&amp;\sim N(1,0)
+\end{aligned}
+\]</span></p>
+<p><strong>均值 <span class="math inline">\(\mu\)</span> 的信賴區間：</strong> 上節說道， &gt; 信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。<strong>每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（<span class="math inline">\(95\%\)</span>）。</strong> 常用的這個概率值就是 <span class="math inline">\(95\%, 90\%, 99\%\)</span>。</p>
+<p>假定我們用 <span class="math inline">\(95\%\)</span> 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 <span class="math inline">\(95\%\)</span> 是包含了總體的真實均值（但是確實未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 <span class="math inline">\(c\)</span>：</p>
+<p><span class="math display">\[Prob(\bar{Y} &gt; \mu+c) = 0.025 \\
+  Prob(\bar{Y} &lt; \mu-c) = 0.025\]</span></p>
+<p>因此，我們可以定義 <span class="math inline">\(95\%\)</span> 信賴區間的上限和下限分別是：</p>
+<p><span class="math display">\[L=\bar{Y}-c \Rightarrow Prob(L&gt;\mu)=0.025 \\
+  U=\bar{Y}+c \Rightarrow Prob(L&lt;\mu)=0.025\]</span></p>
+<div class="figure">
+<img src="/img/Selection_082.png" />
+
 </div>
-<div id="-estimation" class="section level3">
-<h3>估計 Estimation</h3>
-<p>從樣本的均值，推斷總體或人羣的均值是一種估計。我們的目的是，從已知樣本中計算一個儘可能接近那個未知的總體或人羣參數的值。一個估計量有兩個與生俱來的性質 (properties)：1) 偏倚 (bias); 2) 精確度 (precision)。這兩個性質都可以從樣本分佈和估計量獲得。</p>
-<ol style="list-style-type: decimal">
-<li><p>偏倚： 偏倚簡單說就是樣本分佈的均值，也就是我們從樣本中計算獲得的估計量，和我們想要拿它來估計的總體或人羣的參數之間的差距。(The bias is the difference between the mean of the sampling distribution – the expected or average value of the estimator – and the population parameter being estimated.) 一個小的偏倚，確保了我們從樣本中計算獲得的估計值（假設我們抽樣無數次，計算無數個樣本估計值）<strong>均勻地</strong>分佈在總體或人羣參數的左右兩邊。偏倚本身並不是太大的問題，但是假如樣本量增加，偏倚依然存在（估計量不一致, inconsistent），那常常意味着是抽樣過程出現了問題。例如：<br>用簡單隨機抽樣法獲得的樣本均值，就是總體或人羣均值的無偏估計 (unbiased estimator)。如果抽樣時由於某些主觀客觀的原因導致較小的樣本很少被抽樣（抽樣過程出了問題，脫離了簡單隨機抽樣原則），那麼此時得到的樣本均值就會是一個過高的估計值 (upward biased estimator)。</p></li>
-<li><p>精確度：估計值的精確度可以通過樣本分佈的方差或標準差來評價（簡單說是樣本分佈的方差越低，波動越小，精確度越高）。樣本分佈的標準差被定義爲估計值的標準誤。假如估計量是樣本均值，那麼樣本分佈的標準差（估計量的標準誤）和樣本數據之間有如下的關係： <span class="math display">\[均值的標準誤 = \frac{樣本數據的標準差}{\sqrt{樣本量大小}}\]</span></p></li>
-</ol>
-<p>在一些簡單的情況下，通常估計值的選用不言自明（例如均值，或者百分比）。但是在複雜的情況下，我們可能可以有多個不同類型的估計量可以選擇，他們也常常各有利弊，需要我們做出取捨。</p>
+接下來就是推倒（故意的）<span class="math inline">\(c\)</span> 的過程啦： $$
+<span class="math display">\[\begin{aligned}
+Prob(\bar{Y}&gt;\mu+c)=Prob(\bar{Y}-\mu&gt;c) \;&amp;= 0.025 \\
+\Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;= 0.025 \\
+\Rightarrow Prob(Z&gt;\frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;= 0.025 \\
+上面已經證明了 Z\sim N(0,1) \\
+而且我們也已知 Prob(Z&gt;1.96) \;&amp;= 0.025 \\
+所以只要令 \frac{c}{\sqrt{Var(\bar{Y})}} =1.96 \\
+\Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
+所以總體均值\mu 的 95\% 信賴區間就是: \\
+\mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm &amp; 1.96\frac{\sigma}{\sqrt{n}}\\
+
+其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &amp;的標準誤。
+\end{aligned}\]</span>
+<p>$$</p>
+<p>例子：</p>
 </div>
-<div id="-confidence-intervals" class="section level3">
-<h3>信賴區間 confidence intervals</h3>
-<p>從樣本中計算估計量獲得的一個估計值，只是一個<strong>點估計 (point estimate)</strong>。對比之下，信賴區間就是一個對這個點估計的精確度的體現。信賴區間越窄，說明我們對於總體或人羣的參數的可能取值的範圍估計越精確。</p>
-<p>信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。<strong>每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（<span class="math inline">\(95\%\)</span>）。</strong> 常用的這個概率值就是 <span class="math inline">\(95\%, 90\%, 99\%\)</span>。</p>
-<p>當從樣本數據計算獲得的估計量的信賴區間很寬，說明了這個收集來的數據提供了很少的參數信息，導致估計變得很不精確。</p>
-<p><em>看到這裏的都是好漢一條啊！ 我不知道你暈了麼有，反正我是已經暈了。。。。</em></p>
 </div>
 
     </div>
@@ -307,13 +332,10 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/central-limit-theorem-application/"><span
-      aria-hidden="true">&larr;</span> 中心極限定理的應用</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/frequentist-statistical-inference01/"><span
+      aria-hidden="true">&larr;</span> 概率論者統計推斷入門之-被門夾住</a></li>
     
 
-    
-    <li class="next"><a href="https://winterwang.github.io/post/frequentist-statistical-inference02/">估計和精確度的概念 <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>

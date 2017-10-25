@@ -11,6 +11,78 @@
     <atom:link href="/tags/inference/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>估計和精確度的概念</title>
+      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
+      <description>&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;估計量和他們的樣本分佈&lt;/h3&gt;
+&lt;p&gt;例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型假設：&lt;/strong&gt; 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 &lt;span class=&#34;math inline&#34;&gt;\(Y_i\)&lt;/span&gt; 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，總體方差爲 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;。那麼這個模型可以簡單的被寫成：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;總體均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的估計量：&lt;/strong&gt; 顯然算術平均值: &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)&lt;/span&gt; 是我們用於估計總體均值的估計量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;估計量的樣本分佈：&lt;/strong&gt; &lt;span class=&#34;math display&#34;&gt;\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\
+           &amp;amp;= \frac{1}{n}E(\sum Y_i) \\
+           &amp;amp;= \frac{1}{n}\sum E(Y_i) \\
+           &amp;amp;= \frac{1}{n}n\mu = \mu \\
+Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\
+\because Y_i \;are &amp;amp;\; independent   \\
+            &amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\
+            &amp;amp;= \frac{1}{n^2} n Var(Y_i) \\
+            &amp;amp;= \frac{\sigma^2}{n}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-zfracbary-musqrtvarbary--zsim-n01&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明當 &lt;span class=&#34;math inline&#34;&gt;\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(Z\sim N(0,1)\)&lt;/span&gt;:&lt;/h4&gt;
+&lt;p&gt;由式子可知， &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 只是由一組服從正態分佈的數據 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 線性轉換 (linear transformation) 而來，所以 &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 本身也服從正態分佈 &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Z) &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
+     &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
+Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
+       &amp;amp;= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
+\therefore Z \;&amp;amp;\sim N(1,0)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的信賴區間：&lt;/strong&gt; 上節說道， &amp;gt; 信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;假定我們用 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 是包含了總體的真實均值（但是確實未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(\bar{Y} &amp;gt; \mu+c) = 0.025 \\
+  Prob(\bar{Y} &amp;lt; \mu-c) = 0.025\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因此，我們可以定義 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間的上限和下限分別是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L=\bar{Y}-c \Rightarrow Prob(L&amp;gt;\mu)=0.025 \\
+  U=\bar{Y}+c \Rightarrow Prob(L&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_082.png&#34; /&gt;
+
+&lt;/div&gt;
+接下來就是推倒（故意的）&lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 的過程啦： $$
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
+\Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &amp;gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
+\Rightarrow Prob(Z&amp;gt;\frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
+上面已經證明了 Z\sim N(0,1) \\
+而且我們也已知 Prob(Z&amp;gt;1.96) \;&amp;amp;= 0.025 \\
+所以只要令 \frac{c}{\sqrt{Var(\bar{Y})}} =1.96 \\
+\Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
+所以總體均值\mu 的 95\% 信賴區間就是: \\
+\mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm &amp;amp; 1.96\frac{\sigma}{\sqrt{n}}\\
+
+其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &amp;amp;的標準誤。
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
       <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
@@ -52,6 +124,7 @@
 &lt;p&gt;從樣本中計算估計量獲得的一個估計值，只是一個&lt;strong&gt;點估計 (point estimate)&lt;/strong&gt;。對比之下，信賴區間就是一個對這個點估計的精確度的體現。信賴區間越窄，說明我們對於總體或人羣的參數的可能取值的範圍估計越精確。&lt;/p&gt;
 &lt;p&gt;信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;當從樣本數據計算獲得的估計量的信賴區間很寬，說明了這個收集來的數據提供了很少的參數信息，導致估計變得很不精確。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;看到這裏的都是好漢一條啊！ 我不知道你暈了麼有，反正我是已經暈了。。。。&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -11,6 +11,78 @@
     <atom:link href="/categories/study-abroad/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>估計和精確度的概念</title>
+      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
+      <description>&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;估計量和他們的樣本分佈&lt;/h3&gt;
+&lt;p&gt;例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型假設：&lt;/strong&gt; 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 &lt;span class=&#34;math inline&#34;&gt;\(Y_i\)&lt;/span&gt; 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，總體方差爲 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;。那麼這個模型可以簡單的被寫成：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;總體均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的估計量：&lt;/strong&gt; 顯然算術平均值: &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)&lt;/span&gt; 是我們用於估計總體均值的估計量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;估計量的樣本分佈：&lt;/strong&gt; &lt;span class=&#34;math display&#34;&gt;\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\
+           &amp;amp;= \frac{1}{n}E(\sum Y_i) \\
+           &amp;amp;= \frac{1}{n}\sum E(Y_i) \\
+           &amp;amp;= \frac{1}{n}n\mu = \mu \\
+Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\
+\because Y_i \;are &amp;amp;\; independent   \\
+            &amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\
+            &amp;amp;= \frac{1}{n^2} n Var(Y_i) \\
+            &amp;amp;= \frac{\sigma^2}{n}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-zfracbary-musqrtvarbary--zsim-n01&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明當 &lt;span class=&#34;math inline&#34;&gt;\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(Z\sim N(0,1)\)&lt;/span&gt;:&lt;/h4&gt;
+&lt;p&gt;由式子可知， &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 只是由一組服從正態分佈的數據 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 線性轉換 (linear transformation) 而來，所以 &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 本身也服從正態分佈 &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Z) &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
+     &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
+Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
+       &amp;amp;= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
+\therefore Z \;&amp;amp;\sim N(1,0)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的信賴區間：&lt;/strong&gt; 上節說道， &amp;gt; 信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;假定我們用 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 是包含了總體的真實均值（但是確實未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(\bar{Y} &amp;gt; \mu+c) = 0.025 \\
+  Prob(\bar{Y} &amp;lt; \mu-c) = 0.025\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因此，我們可以定義 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間的上限和下限分別是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L=\bar{Y}-c \Rightarrow Prob(L&amp;gt;\mu)=0.025 \\
+  U=\bar{Y}+c \Rightarrow Prob(L&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_082.png&#34; /&gt;
+
+&lt;/div&gt;
+接下來就是推倒（故意的）&lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 的過程啦： $$
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
+\Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &amp;gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
+\Rightarrow Prob(Z&amp;gt;\frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
+上面已經證明了 Z\sim N(0,1) \\
+而且我們也已知 Prob(Z&amp;gt;1.96) \;&amp;amp;= 0.025 \\
+所以只要令 \frac{c}{\sqrt{Var(\bar{Y})}} =1.96 \\
+\Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
+所以總體均值\mu 的 95\% 信賴區間就是: \\
+\mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm &amp;amp; 1.96\frac{\sigma}{\sqrt{n}}\\
+
+其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &amp;amp;的標準誤。
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
       <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
@@ -52,6 +124,7 @@
 &lt;p&gt;從樣本中計算估計量獲得的一個估計值，只是一個&lt;strong&gt;點估計 (point estimate)&lt;/strong&gt;。對比之下，信賴區間就是一個對這個點估計的精確度的體現。信賴區間越窄，說明我們對於總體或人羣的參數的可能取值的範圍估計越精確。&lt;/p&gt;
 &lt;p&gt;信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;當從樣本數據計算獲得的估計量的信賴區間很寬，說明了這個收集來的數據提供了很少的參數信息，導致估計變得很不精確。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;看到這裏的都是好漢一條啊！ 我不知道你暈了麼有，反正我是已經暈了。。。。&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1208,67 +1281,6 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;p&gt;不知道是不是因爲接觸太多日本的無微不至的服務突然覺得有心理落差。但願以後去了英國不是這樣的服務。&lt;/p&gt;
 
 &lt;p&gt;兩週以後能否安全收到簽證呢？ 拭目以待。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
-      <link>https://winterwang.github.io/post/unconditional/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/unconditional/</guid>
-      <description>&lt;p&gt;言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。&lt;/p&gt;
-
-&lt;p&gt;本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。&lt;/p&gt;
-
-&lt;p&gt;結果6月8日那天收到郵件催促我快點滿足 offer 條件：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/meetingcondition.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。&lt;/p&gt;
-
-&lt;p&gt;因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Your documents didn’t meet the requirements because: &lt;br&gt;
- 1.  The salary expectancy is not admissible &lt;br&gt;
- 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. &lt;br&gt;
- 3.  The bank statements did not include the bank name and logo.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!&lt;/p&gt;
-
-&lt;p&gt;這些都好說。可是日本的銀行，&lt;strong&gt;沒有&lt;/strong&gt;這種類型的證明書（我也是第一次知道日本銀行不給開這樣子的證明）。所以許多人的解決辦法是讓銀行開一個月的流水賬單，要命的是這個證明不能開英文的，然後再去找翻譯公司翻譯流水。當然我也可以這麽辦。衹是，當我知道我的三個證明書都不能作爲有效的資金證明的時候，我離7月31日祗剩下不到2周時間了。在此奉勸后來者，一定要先準備好自己的資金證明書。最好能按照下面的樣本，讓銀行開具類似的證明書：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/bankstatement.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我在接到證明書不滿足條件的郵件的第二天，立刻去了銀行，接待我的銀行經理先是打報告給總部請示。毫無意外被擋回來。說如果是客人自己要求的樣式的證明書，無法給加銀行logo，也不能蓋章，衹能簽字。在我一個多小時的軟磨硬泡以後，經理鬆動了。竟然主動想辦法，她提議說，可以辦理bank statement，不過我看了他們給的bank statement樣本也是一個時間點的賬戶存款而已，無法滿足28天的資金維持證明。看我面有難色，日本人經理還是挺善解人意的，說，我可以把日期改成，從xx月xx日-xx月xx日（28天）的最低資金證明。這樣就能解決問題了。而且bank statement本身自帶銀行logo。謝天謝地，一項死板不能變通的日本人讓我從此刮目相看。解決了我的燃眉之急。也不必再去找翻譯公司翻譯賬戶流水了。有驚無險。第二天我拿到開好的證明，立刻掃描PDF郵件發給LSHTM，期待他們能馬上給開來 CAS (Confirmation of Acceptance of Studies)。等了一周，還是左等不來右等不來，距離7月31日還剩下不到10天了。終於無法忍耐等待的我，打電話去倫敦詢問我的情況。對方接電話的是個年輕女聲，優雅的倫敦音告訴我，不要着急，先無視學校的提醒滿足條件的郵件吧。我們會儘快看你的檔案。無奈我衹好作罷，挂了電話繼續等待。&lt;/p&gt;
-
-&lt;p&gt;結果第二天晚上就收到了確認函，說你的CAS很快就能發給你了。oh yeah！半夜裏我就收到了發來的新鮮剛出爐的CAS號碼以及新的無條件錄取證明：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/fig/uncon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我很早以前就在&lt;a href=&#34;https://www.visa4uk.fco.gov.uk/home/welcome&#34; target=&#34;_blank&#34;&gt;visa4uk&lt;/a&gt;上註冊好了全部的信息，就等着學校發來 CAS 的文件了。於是我再花了半個小時把 CAS 上的內容填寫到簽證申請的網站上去。在申請的網站上，會中途跳出來讓你支付一年醫療保險的頁面（£150），付完保險費以後會收到自己的保險號碼。估計以後在英國如果需要看病的話報自己的保險號碼就OK了。於是乎我以迅雷不及掩耳之勢立刻預約了7月31日去大阪的簽證申請中心遞交簽證材料。&lt;/p&gt;
-
-&lt;p&gt;等待去辦簽證的過程中，又收到好消息，宿舍抽籤中了。於是我就成了倫敦準市民之一拉。哈哈哈哈。今兒真高興阿，今兒真高興。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/gif/shuang.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我抽中的是&lt;a href=&#34;http://halls.london.ac.uk/international-hall&#34; target=&#34;_blank&#34;&gt;International Hall&lt;/a&gt;的單人間。仔細閱讀了條款後發現，每週2百鎊的房租確實有點小貴，但是呢，確是包了早餐晚餐和週末的四餐的。我想這將會大大減輕時間和金錢的成本。畢竟只有一年的留學時間。將就將就吧，每天都是炸魚和薯條估計吃一週就會讓人瘋了誒。。。先做好心理準備。對伙食不應有太高期待。&lt;/p&gt;
-
-&lt;p&gt;萬事具備，&lt;del&gt;只差簽證了。&lt;/del&gt; 於是就到了預約機票的時候，查了半天各種中介的網站，結果都是什麼中轉三四次的，要不就是繞地球一大圈的，才能有價格比較便宜的。索性打電話去日本航空詢問有沒有給留學生準備的往返一年，時間靈活的機票。果然不問不知道，一問嚇一跳阿，電話接線員小哥樂呵呵:-)說，哎呀你這電話打的太是時候了，我們日本航空正好最近上線了歐洲航線的特價機票，而且專門針對你這樣要待三個月以上的客戶。一問價格，我的媽呀，出發行程已定，歸程未定的叫做半靈活機票 (semi-flexi)，日本航空的這個折扣價爲12萬日元。比全日空便宜了一半，比其他的可疑航空減少了飛行時間，還有什麼好說的，果斷就訂了。結果呢，準備付錢了小哥告訴我說，您現在先別付定金，我這裏已經幫你把機票預留好了，您等8月1日以後再上網站上打開訂單支付，因爲8月1日後的燃油稅機場時用費等雜費由於匯率等變化會再便宜一萬日元左右。&lt;strong&gt;W!T!F!&lt;/strong&gt; 感動得熱淚盈眶有沒有，簡直就想穿過電話線去擁抱這位小哥了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/jal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
 </description>
     </item>
     

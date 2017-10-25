@@ -11,6 +11,78 @@
     <atom:link href="/tags/learning-notes/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>估計和精確度的概念</title>
+      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
+      <description>&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;估計量和他們的樣本分佈&lt;/h3&gt;
+&lt;p&gt;例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型假設：&lt;/strong&gt; 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 &lt;span class=&#34;math inline&#34;&gt;\(Y_i\)&lt;/span&gt; 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，總體方差爲 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;。那麼這個模型可以簡單的被寫成：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;總體均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的估計量：&lt;/strong&gt; 顯然算術平均值: &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)&lt;/span&gt; 是我們用於估計總體均值的估計量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;估計量的樣本分佈：&lt;/strong&gt; &lt;span class=&#34;math display&#34;&gt;\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\
+           &amp;amp;= \frac{1}{n}E(\sum Y_i) \\
+           &amp;amp;= \frac{1}{n}\sum E(Y_i) \\
+           &amp;amp;= \frac{1}{n}n\mu = \mu \\
+Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\
+\because Y_i \;are &amp;amp;\; independent   \\
+            &amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\
+            &amp;amp;= \frac{1}{n^2} n Var(Y_i) \\
+            &amp;amp;= \frac{\sigma^2}{n}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-zfracbary-musqrtvarbary--zsim-n01&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明當 &lt;span class=&#34;math inline&#34;&gt;\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(Z\sim N(0,1)\)&lt;/span&gt;:&lt;/h4&gt;
+&lt;p&gt;由式子可知， &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 只是由一組服從正態分佈的數據 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 線性轉換 (linear transformation) 而來，所以 &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 本身也服從正態分佈 &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Z) &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
+     &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
+Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
+       &amp;amp;= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
+\therefore Z \;&amp;amp;\sim N(1,0)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的信賴區間：&lt;/strong&gt; 上節說道， &amp;gt; 信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;假定我們用 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 是包含了總體的真實均值（但是確實未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(\bar{Y} &amp;gt; \mu+c) = 0.025 \\
+  Prob(\bar{Y} &amp;lt; \mu-c) = 0.025\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因此，我們可以定義 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間的上限和下限分別是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L=\bar{Y}-c \Rightarrow Prob(L&amp;gt;\mu)=0.025 \\
+  U=\bar{Y}+c \Rightarrow Prob(L&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/Selection_082.png&#34; /&gt;
+
+&lt;/div&gt;
+接下來就是推倒（故意的）&lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 的過程啦： $$
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
+\Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &amp;gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
+\Rightarrow Prob(Z&amp;gt;\frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
+上面已經證明了 Z\sim N(0,1) \\
+而且我們也已知 Prob(Z&amp;gt;1.96) \;&amp;amp;= 0.025 \\
+所以只要令 \frac{c}{\sqrt{Var(\bar{Y})}} =1.96 \\
+\Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
+所以總體均值\mu 的 95\% 信賴區間就是: \\
+\mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm &amp;amp; 1.96\frac{\sigma}{\sqrt{n}}\\
+
+其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &amp;amp;的標準誤。
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;$$&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
       <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
@@ -52,6 +124,7 @@
 &lt;p&gt;從樣本中計算估計量獲得的一個估計值，只是一個&lt;strong&gt;點估計 (point estimate)&lt;/strong&gt;。對比之下，信賴區間就是一個對這個點估計的精確度的體現。信賴區間越窄，說明我們對於總體或人羣的參數的可能取值的範圍估計越精確。&lt;/p&gt;
 &lt;p&gt;信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;當從樣本數據計算獲得的估計量的信賴區間很寬，說明了這個收集來的數據提供了很少的參數信息，導致估計變得很不精確。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;看到這裏的都是好漢一條啊！ 我不知道你暈了麼有，反正我是已經暈了。。。。&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1124,145 +1197,6 @@ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(F=\left( \begin{array}{c} 0 &amp;amp; 2 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(F)=1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O=\left( \begin{array}{c} 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(O)=0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>https://winterwang.github.io/post/2017-03-01/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-01/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;updated: 2017-03-07&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;對稱矩陣&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (symmetric matrix)  &lt;/strong&gt;&lt;/span&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 如果完全和它的轉置矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A^t\)&lt;/span&gt; 相同，即：&lt;span class=&#34;math inline&#34;&gt;\(A=A^t\)&lt;/span&gt; 成立時，這樣的正方形矩陣被稱爲&lt;strong&gt;對稱矩陣(symmetric matrix)&lt;/strong&gt;。對稱矩陣的成分是以主對角線(main diagonal)對稱的。
-&lt;/div&gt;
-
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 4 &amp;amp; 3 &amp;amp; 2 &amp;amp; 1 \\ 3 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 \\ 2 &amp;amp; 6 &amp;amp; 8 &amp;amp; 9 \\ 1 &amp;amp; 7 &amp;amp; 9 &amp;amp; 0 \end{array} \right)\)&lt;/span&gt; 是典型的4次對稱矩陣。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;數學&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;物理&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;化學&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;數學&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.72\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.62\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;物理&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.72\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(-0.55\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;center&#34;&gt;化學&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.62\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(-0.55\)&lt;/span&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr /&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;上表是幾名學生的數學，物理，化學成績得分的相關系數。&lt;br&gt; 如果提取出數字的部分，左右用圓括號括起來，會得到這樣一個矩陣：&lt;span class=&#34;math inline&#34;&gt;\(R=\left(  \begin{array}{c}  1 &amp;amp; 0.72 &amp;amp; 0.62 \\  0.72 &amp;amp; 1 &amp;amp; -0.55 \\  0.62 &amp;amp; -0.55 &amp;amp; 1 \\  \end{array}  \right)\)&lt;/span&gt; 這樣類型的矩陣被特別的稱爲&lt;strong&gt;相關矩陣(correlation matrix)&lt;/strong&gt;。類似相關矩陣這樣的明確爲對稱矩陣的情況下，常常像下面這樣簡略的記左下或者右上部分： &lt;span class=&#34;math display&#34;&gt;\[\left(
-   \begin{array}{c}
-   1 &amp;amp;  &amp;amp;  \\
-   0.72 &amp;amp; 1 &amp;amp;  \\
-   0.62 &amp;amp; -0.55 &amp;amp; 1 \\
-   \end{array}
-   \right)， \left(
-   \begin{array}{c}
-   1 &amp;amp; 0.72 &amp;amp; 0.62 \\
-&amp;amp; 1 &amp;amp; -0.55 \\
-&amp;amp;  &amp;amp; 1 \\
-   \end{array}
-   \right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;下面的對稱矩陣，對角成分是&lt;strong&gt;方差(variance, 分散)&lt;/strong&gt;，非對角成分是&lt;strong&gt;協方差(covariance, 共分散)&lt;/strong&gt;，被稱爲&lt;strong&gt;方差協方差矩陣(variance-covariance matrix, 分散共分散行列)&lt;/strong&gt;。&lt;br&gt; &lt;span class=&#34;math display&#34;&gt;\[\sum=\left(
-\begin{array}{c}
-\sigma_{1}^2 &amp;amp; \sigma_{2}   &amp;amp; \cdots &amp;amp; \sigma_{1n} \\
-\sigma_{12}  &amp;amp; \sigma_{2}^2 &amp;amp; \cdots &amp;amp; \sigma_{2n} \\
-\vdots       &amp;amp; \vdots       &amp;amp; \ddots &amp;amp; \vdots      \\
-\sigma_{1n}  &amp;amp; \sigma_{2}   &amp;amp; \cdots &amp;amp; \sigma_{n}^2
-\end{array}
-\right), S=\left(
-\begin{array}{c}
-s_{1}^2 &amp;amp; s_{2}   &amp;amp; \cdots &amp;amp; s_{1n} \\
-s_{12}  &amp;amp; s_{2}^2 &amp;amp; \cdots &amp;amp; s_{2n} \\
-\vdots  &amp;amp; \vdots  &amp;amp; \ddots &amp;amp; \vdots  \\
-s_{1n}  &amp;amp; s_{2}   &amp;amp; \cdots &amp;amp; s_{n}^2
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \\ x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \\ \end{array} \right)\)&lt;/span&gt; ，那麼，&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(XX^t=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \\ x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \\ \end{array} \right)\left( \begin{array}{c} x_{11} &amp;amp; x_{12} \\ x_{12} &amp;amp; x_{22} \\ x_{13} &amp;amp; x_{13} \end{array} \right)\\ \;\;\;\;\;\;\;=\left( \begin{array}{c} x_{11}^2+x_{12}^2+x_{13}^2 &amp;amp; x_{11}x_{21}+x_{12}x_{22}+x_{13}x_{23} \\ x_{21}x_{11}+x_{22}x_{12}+x_{23}x_{13} &amp;amp; x_{21}^2+x_{22}^2+x_{23}^2 \\ \end{array} \right)\)&lt;/span&gt; 是一個對稱矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(X^tX=\left( \begin{array}{c} x_{11}^2+x_{21}^2 &amp;amp; x_{11}x_{12}+x_{21}x_{22} &amp;amp; x_{11}x_{13}+x_{21}x_{23} \\ x_{12}x_{11}+x_{22}x_{21} &amp;amp; x_{12}^2+x_{22}^2 &amp;amp; x_{12}x_{13}+x_{22}x_{23} \\ x_{13}x_{11}+x_{23}x_{21} &amp;amp; x_{13}x_{12}+x_{23}x_{22} &amp;amp; x_{13}^2+x_{23}^2 \end{array} \right)\)&lt;/span&gt; 也是一個對稱矩陣。 &lt;br&gt; 且，他們的&lt;strong&gt;跡(trace)&lt;/strong&gt;也是一樣的，均爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 各個成分的平方和： &lt;span class=&#34;math display&#34;&gt;\[tr(XX^t)=tr(X^tX)=x_{11}^2+x_{12}^2+x_{13}^2+x_{21}^2+x_{22}^2+x_{23}^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;對角矩陣&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;非對角成分(off-diagonal element)&lt;/strong&gt;均爲零 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的正方形矩陣被稱爲&lt;strong&gt;對角矩陣(diagonal matrix)&lt;/strong&gt;。寫成如下形式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-a_{11} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; a_{22}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; a_{33} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  a_{nn}
-\end{array}
-\right)=D_n=\Delta_n\\=diag(a_{11},a_{22},a_{33},\cdots,a_{nn})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;這樣的矩陣也常把左下部分右上部分的非對角成分用一個大的 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 來表示： &lt;span class=&#34;math display&#34;&gt;\[
-\left(
-    \begin{array}{ccccc}
-    a_{11}                         \\
-      &amp;amp; a_{22}            &amp;amp;   &amp;amp; \Huge0 \\
-      &amp;amp;               &amp;amp; a_{33}          \\
-      &amp;amp; \Huge 0       &amp;amp;   &amp;amp; \ddots           \\
-      &amp;amp;               &amp;amp;   &amp;amp;      &amp;amp; a_{nn}
-    \end{array}
-    \right)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;下面也是一個對角矩陣的例子： &lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-\sqrt{a_{11}} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \sqrt{a_{22}}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \sqrt{a_{33}} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  \sqrt{a_{nn}}
-\end{array}
-\right)=D_n^{\frac{1}{2}}=\Delta_n^{\frac{1}{2}}\\=diag(\sqrt{a_{11}},\sqrt{a_{22}},\sqrt{a_{33}},\cdots,\sqrt{a_{nn}})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;對角成分也可以是分母非零的分數： &lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-1/a_{11} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 1/a_{22}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; 1/a_{33} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  1/a_{nn}
-\end{array}
-\right)=D_n^{-1}=\Delta_n^{-1}\\=diag(a_{11}^{-1},a_{22}^{-1},a_{33}^{-1},\cdots,a_{nn}^{-1})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;當然如下的例子也是對角矩陣，默認根號內爲正： &lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-\frac{1}{\sqrt{a_{11}}} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \frac{1}{\sqrt{a_{22}}}  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \frac{1}{\sqrt{a_{33}}} &amp;amp; \cdots  &amp;amp; 0\\
-0 &amp;amp; \cdots  &amp;amp; 0 &amp;amp; \ddots  &amp;amp; 0\\
-0 &amp;amp; 0  &amp;amp; \cdots &amp;amp; 0       &amp;amp;  \frac{1}{\sqrt{a_{nn}}}
-\end{array}
-\right)=D_n^{-\frac{1}{2}}=\Delta_n^{-\frac{1}{2}}\\=diag(\frac{1}{\sqrt{a_{11}}},\frac{1}{\sqrt{a_{22}}},\frac{1}{\sqrt{a_{33}}},\cdots,\frac{1}{\sqrt{a_{nn}}})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;當然，上述對角矩陣之間具有這樣的關系：&lt;span class=&#34;math inline&#34;&gt;\(D_n^{\frac{1}{2}}D_n^{\frac{1}{2}}=D_n\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(D_n^{-\frac{1}{2}}D_n^{-\frac{1}{2}}=D_n^{-1}\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 或者向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 與對角矩陣 &lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt; 從左向右乘時，&lt;span class=&#34;math inline&#34;&gt;\(DA, D\underline{x}\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行成分是：&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 或 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行乘以 &lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\((i,i)\)&lt;/span&gt; 成分。例如： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(D=\left( \begin{array}{c} \lambda_1 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; \lambda_2 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; \lambda_3\\ \end{array} \right), A=\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ b_1 &amp;amp; b_2 &amp;amp; b_3 \\ c_1 &amp;amp; c_2 &amp;amp; c_3 \\ \end{array} \right),\\ \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3\\ \end{array} \right)\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(DA=\left( \begin{array}{c} \lambda_1a_1 &amp;amp; \lambda_1a_2 &amp;amp; \lambda_1a_3 \\ \lambda_2b_1 &amp;amp; \lambda_2b_2 &amp;amp; \lambda_2b_3 \\ \lambda_3c_1 &amp;amp; \lambda_3c_2 &amp;amp; \lambda_3c_3 \\ \end{array} \right) \\ D\underline{x}=\left( \begin{array}{c} \lambda_1x_1\\ \lambda_2x_2\\ \lambda_3x_3\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

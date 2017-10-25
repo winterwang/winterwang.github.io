@@ -1,0 +1,94 @@
+---
+title: 估計和精確度的概念
+author: ''
+date: '2017-10-24'
+slug: frequentist-statistical-inference02
+categories:
+  - statistics
+  - study abroad
+tags:
+  - inference
+  - learning notes
+  - LSHTM
+  - London
+  - Medical Statistics
+summary: "估計和精確度 Estimation and Precision， 自由度 degree of freedom"
+---
+
+### 估計量和他們的樣本分佈
+
+例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 $n$ 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。
+
+**模型假設：** 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 $Y_i$ 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 $\mu$，總體方差爲 $\sigma^2$。那麼這個模型可以簡單的被寫成：
+
+$$Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n$$
+
+**總體均值 $\mu$ 的估計量：** 顯然算術平均值: $\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i$ 是我們用於估計總體均值的估計量。
+
+**估計量的樣本分佈：**
+$$\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})$$
+
+#### 證明
+
+$$
+\begin{aligned}
+E(\bar{Y}) &= E(\frac{1}{n}\sum Y_i) \\
+           &= \frac{1}{n}E(\sum Y_i) \\
+           &= \frac{1}{n}\sum E(Y_i) \\
+           &= \frac{1}{n}n\mu = \mu \\
+Var(\bar{Y}) &= Var(\frac{1}{n}\sum Y_i) \\
+\because Y_i \;are &\; independent   \\
+            &= \frac{1}{n^2}\sum Var(Y_i) \\
+            &= \frac{1}{n^2} n Var(Y_i) \\
+            &= \frac{\sigma^2}{n}
+\end{aligned}
+$$
+
+#### 證明當 $Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}$ 時， $Z\sim N(0,1)$:
+
+由式子可知， $Z$ 只是由一組服從正態分佈的數據 $\bar{Y}$ 線性轉換 (linear transformation) 而來，所以 $Z$ 本身也服從正態分佈
+$$
+\begin{aligned}
+E(Z) &= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
+     &= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
+Var(Z) &= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
+       &= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
+\therefore Z \;&\sim N(1,0)
+\end{aligned}
+$$
+
+**均值 $\mu$ 的信賴區間：** 上節說道，
+> 信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。**每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（$95\%$）。** 常用的這個概率值就是 $95\%, 90\%, 99\%$。
+
+假定我們用 $95\%$ 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 $95\%$ 是包含了總體的真實均值（但是確實未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 $c$：
+
+$$Prob(\bar{Y} > \mu+c) = 0.025 \\
+  Prob(\bar{Y} < \mu-c) = 0.025$$
+
+
+因此，我們可以定義 $95\%$ 信賴區間的上限和下限分別是：
+
+$$L=\bar{Y}-c \Rightarrow Prob(L>\mu)=0.025 \\
+  U=\bar{Y}+c \Rightarrow Prob(L<\mu)=0.025$$
+
+
+![](/img/Selection_082.png)
+
+接下來就是推倒（故意的）$c$ 的過程啦：
+$$
+\begin{aligned}
+Prob(\bar{Y}>\mu+c)=Prob(\bar{Y}-\mu>c) \;&= 0.025 \\
+\Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} > \frac{c}{\sqrt{Var(\bar{Y})}}) \;&= 0.025 \\
+\Rightarrow Prob(Z>\frac{c}{\sqrt{Var(\bar{Y})}}) \;&= 0.025 \\
+上面已經證明了 Z\sim N(0,1) \\
+而且我們也已知 Prob(Z>1.96) \;&= 0.025 \\
+所以只要令 \frac{c}{\sqrt{Var(\bar{Y})}} =1.96 \\
+\Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
+所以總體均值\mu 的 95\% 信賴區間就是: \\
+\mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm & 1.96\frac{\sigma}{\sqrt{n}}\\
+
+其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &的標準誤。
+\end{aligned}
+$$
+
+例子：
