@@ -133,6 +133,77 @@ MSE(T) &amp;amp;= E[(T-\theta)^2] \\
 &lt;/div&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;總體方差的估計，自由度&lt;/h3&gt;
+&lt;p&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(Y_i \sim (\mu, \sigma^2)\)&lt;/span&gt;，並不需要默認或者假定它服從正態分佈或者任何分佈。那麼它的方差我們會用：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\mu)\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;-v_mu--sigma2-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明 &lt;span class=&#34;math inline&#34;&gt;\(V_{\mu}\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 的無偏估計：&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+V_{\mu} &amp;amp;= \frac{1}{n}\sum_{i=1}^n(Y_i-\mu) \\
+需要證明 &amp;amp;E(V_{\mu}) = \sigma^2 \\
+\Rightarrow E(V_{\mu}) &amp;amp;= \frac{1}{n}\sum_{i=1}^nE(Y_i-\mu)^2 \\
+        &amp;amp;= \frac{1}{n}\sum_{i=1}^nVar(Y_i) \\
+        &amp;amp;= \frac{1}{n}\sum_{i=1}^n\sigma^2 \\
+        &amp;amp;= \sigma^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然而通常情況下，我們並不知道總體的均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;。因此，只好用樣本的均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 來估計 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;。所以上面的方程就變成了：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\bar{Y})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;你如果仔細觀察認真思考，就會發現，上面這個式子是&lt;code&gt;有問題的&lt;/code&gt;。這個大問題就在於，&lt;span class=&#34;math inline&#34;&gt;\(Y_i-\bar{Y}\)&lt;/span&gt; 中我們忽略掉了樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 和總體均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 之間的差 (&lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}-\mu\)&lt;/span&gt;)。因此上面的計算式來估計總體方差時，很顯然是會低估平均平方差，從而低估了總體方差。&lt;/p&gt;
+&lt;p&gt;這裏需要引入&lt;strong&gt;自由度 (degree of freedom)&lt;/strong&gt; 在參數估計中的概念。&lt;/p&gt;
+&lt;p&gt;字面上可以理解爲：自由度是估計過程中使用了多少互相獨立的信息。所以在上面第一個公式中：&lt;span class=&#34;math inline&#34;&gt;\(V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\mu)\)&lt;/span&gt;。所有的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個觀察值互相獨立，不僅如此，他們還對總體均值獨立。然而在第二個我們用 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 取代了 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的公式中，樣本均數則與觀察值不互相獨立。因爲&lt;strong&gt;樣本均數必然總是落在觀察值的中間&lt;/strong&gt;。然而總體均數並不一定就會落在觀察值中間。總體均數，和觀察值之間是自由，獨立的。因此，當我們觀察到 &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt; 個觀察值時，剩下的最後一個觀察值，決定了樣本均值的大小。所以說，樣本均值的自由度，是 &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;所以，加入了自由度的討論，我們可以相信，用樣本估計總體的方差時，使用下面的公式將會是總體方差的無偏估計：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[V_{n-1}=\frac{1}{n-1}\sum_{i=1}^n(Y_i-\bar{Y})=\frac{n}{n-1}V_n\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明&lt;/h4&gt;
+&lt;p&gt;利用上面也用到過的證明方法 – 把樣本和總體均值之間的差分成兩部分：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+V_{\mu} &amp;amp;= \frac{1}{n}\sum_{i=1}^n(Y_i-\mu)^2 \\
+        &amp;amp;= \frac{1}{n}\sum_{i=1}^n[(Y_i-\bar{Y})+(\bar{Y}-\mu)]^2 \\
+        &amp;amp;= \frac{1}{n}\sum_{i=1}^n[(Y_i-\bar{Y})^2+(\bar{Y}-\mu)^2\\
+        &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;+2(Y_i-\bar{Y})(\bar{Y}-\mu)]\\
+        &amp;amp;=\frac{1}{n}\sum_{i=1}^n(Y_i-\bar{Y})^2+\frac{1}{n}\sum_{i=1}^n(\bar{Y}-\mu)^2\\
+        &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;+\frac{2}{n}(\bar{Y}-\mu)\sum_{i=1}^n(Y_i-\bar{Y}) \\
+        &amp;amp;= V_n+(\bar{Y}-\mu)^2 \\ &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;(note\;that\;\sum_{i=1}^n(Y_i-\bar{Y})=0) \\
+\Rightarrow  V_n &amp;amp;= V_{\mu}-(\bar{Y}-\mu)^2  \\
+\therefore E(V_n)&amp;amp;= E(V_{\mu}) - E[(\bar{Y}-\mu)^2] \\
+                 &amp;amp;= Var(Y)-Var(\bar{Y}) \\
+                 &amp;amp;= \sigma^2-\frac{\sigma^2}{n} \\
+                 &amp;amp;= \sigma^2(\frac{n-1}{n})
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因此，我們看見 &lt;span class=&#34;math inline&#34;&gt;\(V_n\)&lt;/span&gt; 正如上面討論的那樣，是低估了總體方差的。雖然當 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt; 時無限接近 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 但是依然是低估了的。所以，我們可以對之進行修正：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E[\frac{n}{n-1}V_n]     &amp;amp;= \frac{n}{n-1}E[V_n] =\sigma^2 \\
+\Rightarrow E[V_{n-1}]  &amp;amp;= \sigma^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;樣本方差的樣本分佈&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt; 常用來標記樣本方差，取代上面我們用到的 &lt;span class=&#34;math inline&#34;&gt;\(V_{n-1}\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[S^2=\frac{1}{n-1}\sum_{i=1}^n(Y_i-\bar{Y})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;而且上面也證明了，&lt;span class=&#34;math inline&#34;&gt;\(E(S^2)=\sigma^2\)&lt;/span&gt; 是總體方差的無偏估計。然而，要注意的是，樣本標準差 &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{S^2}\)&lt;/span&gt; 卻不是總體標準差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; 的無偏估計（因爲並不是線性變換，而是開了根號）。&lt;/p&gt;
+&lt;div id=&#34;-s--sigma-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明樣本標準差 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 不是總體標準差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; 的無偏估計&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Var(S)               &amp;amp;=E(S^2)-[E(S)]^2 \\
+\Rightarrow [E(S)]^2 &amp;amp;=E(S^2)-Var(S) \\
+\because E(S^2)      &amp;amp;=\sigma^2 \\
+\therefore   [E(S)]^2 &amp;amp;=\sigma^2-Var(S) \\
+             E(S)     &amp;amp;=\sqrt{\sigma^2-Var(S)} \\
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可見樣本標準差是低估了總體標準差的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;另外可以被證明的是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{n-1}{\sigma^2}S^2\sim \mathcal{X}_{n-1}^2\\
+Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}^2_m\)&lt;/span&gt;： 自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的卡方分佈。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
