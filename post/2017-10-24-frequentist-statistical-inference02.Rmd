@@ -70,7 +70,7 @@ $$Prob(\bar{Y} > \mu+c) = 0.025 \\
 因此，我們可以定義 $95\%$ 信賴區間的上限和下限分別是：
 
 $$L=\bar{Y}-c \Rightarrow Prob(L>\mu)=0.025 \\
-  U=\bar{Y}+c \Rightarrow Prob(L<\mu)=0.025$$
+  U=\bar{Y}+c \Rightarrow Prob(U<\mu)=0.025$$
 
 
 ![](/img/Selection_082.png)

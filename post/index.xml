@@ -59,7 +59,7 @@ Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
   Prob(\bar{Y} &amp;lt; \mu-c) = 0.025\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;因此，我們可以定義 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間的上限和下限分別是：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L=\bar{Y}-c \Rightarrow Prob(L&amp;gt;\mu)=0.025 \\
-  U=\bar{Y}+c \Rightarrow Prob(L&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
+  U=\bar{Y}+c \Rightarrow Prob(U&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://winterwang.github.io/img/Selection_082.png&#34; /&gt;
 
