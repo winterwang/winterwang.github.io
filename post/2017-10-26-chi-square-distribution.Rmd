@@ -1,0 +1,16 @@
+---
+title: chi square distribution
+author: ''
+date: '2017-10-26'
+slug: chi-square-distribution
+categories:
+  - statistics
+  - study abroad
+tags:
+  - inference
+  - LSHTM
+  - London
+  - Medical Statistics
+---
+
+_to be updated_

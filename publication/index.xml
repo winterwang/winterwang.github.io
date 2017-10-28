@@ -11,6 +11,28 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
+      <link>https://winterwang.github.io/publication/hpylorimeta/</link>
+      <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/publication/hpylorimeta/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Changing trends in the prevalence of H. pylori infection in the general population over time are thought to be the main driving force behind the declining gastric cancer mortality in Japan. However, whether the prevalence of H. pylori infection itself shows a birth-cohort pattern needs to be corroborated. We performed a systematic review of studies that reported the prevalence of H. pylori infection among Japanese individuals. Meta-regression was conducted in the framework of a generalized additive mixed model (GAMM) to account for heterogeneity in the prevalence of H. pylori infection as a function of birth year. The prevalence of H. pylori infection confirmed a clear birth cohort pattern: the predicted prevalence (%, 95% CI) was 60.9 (56.3-65.4), 65.9 (63.9-67.9), 67.4 (66.0-68.7), 64.1 (63.1-65.1), 59.1 (58.2-60.0), 49.1 (49.0-49.2), 34.9 (34.0-35.8), 24.6 (23.5-25.8), 15.6 (14.0-17.3), and 6.6 (4.8-8.9) among those who were born in the year 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, and 2000, respectively. The present study demonstrated a clear birth-cohort pattern of H. pylori infection in the Japanese population. The decreased prevalence of H. pylori infection in successive generations should be weighed in future gastric cancer control programs.&lt;/p&gt;
+
+&lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;table-of-risk-of-bias-diagnosis-click-to-see-the-table-http-rpubs-com-winterwang-riskofbias&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/riskofbias&#34; target=&#34;_blank&#34;&gt;Table of risk of bias diagnosis. (click to see the table)&lt;/a&gt;&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
       <link>https://winterwang.github.io/publication/okuda/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
@@ -298,33 +320,6 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 
 &lt;p&gt;Intrahepatic fat was associated with insulin resistance independent of age, sex, and measures of obesity in Japanese adults. Hypertriglyceridemia and liver injury may directly occur subsequent to intrahepatic fat accumulation.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers.</title>
-      <link>https://winterwang.github.io/publication/uemuradietary/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/uemuradietary/</guid>
-      <description>
-
-&lt;h2 id=&#34;要-約&#34;&gt;要 約&lt;/h2&gt;
-
-&lt;h3 id=&#34;目的&#34;&gt;目的:&lt;/h3&gt;
-
-&lt;p&gt;アメリカ心臓協会(AHA)は、心血管疾患による死亡率を 10 年間で 20%減少させることを目標として、心血管健康度(AHA 指標)を 2010 年に定めた。本研究の目的は、日本人の一集団において、AHA 指標の中の食事・栄養素摂取に関する 5 項目と健診成績との関連を調べることである。&lt;/p&gt;
-
-&lt;h3 id=&#34;方法および結果&#34;&gt;方法および結果:&lt;/h3&gt;
-
-&lt;p&gt;2002 年に 35-66 歳の愛知県内自治体職員 3,446 人に、簡易型自記式食事歴法質問票を用いて食事調査を実施した。AHA 指標の中で食事・栄養素摂取に関して定められた野菜・果物、魚介類、食物繊維の豊富な全粒穀物、食塩、清涼飲料水の 5 項目の各摂取量に基づいて対象者を三群に分けた。野菜・果物、魚介類は摂取量の最も多い第 3 三分位、食塩、清涼飲料水は最も少ない第 1 三分位を「良好な摂取状況」とみなした。食物繊維の豊富な全粒穀物は玄米・胚芽米・麦・雑穀を「いつも食べる」を「良好な摂取状況」とみなした。これら 5 項目について「良好な摂取状況」の達成項目数別の人数(割合)は、0 項目が 537 人(15.6%)、1 項目が1,453 人(42.2%)、2 項目が 1,029 人(29.9%)、3 項目が 365 人(10.6%)、4 項目以上が 62 人(1.8%)であった。この 5 項目の三分位による摂取量と健診成績との関連性を、性、年齢、喫煙歴、1 週間の運動日数、肉体労働の有無、アルコール摂取量、食事・栄養素摂取項目を調整して検討した。その結果、野菜・果物摂取量は body mass index(BMI)と負の関連、魚介類摂取量は中性脂肪(TG)と負の関連、HDL コレステロール(HDLC)、血糖(PG)と正の関連、食塩摂取量は TG と有意な正の関連、清涼飲料水摂取量は BMI、拡張期血圧(DBP)、総コレステロール(TC)、LDL コレステロール、TG、PG と有意な正の関連を示した。しかし、BMI を調整すると、魚介類と TG、HDLC、PG 以外の上記関連は統計学的有意性が消失した。食物繊維の豊富な全粒穀物と検査値との間には有意な関連は認められなかった。食事・栄養素摂取に関する指標の達成項目数と検査値との関連については、達成項目数が多い群ほど、BMI、TG が有意に低く、HDLCが有意に高くなる量・反応関係が認められたが、TG や HDLC との関連は BMI で調整すると有意性が消失した。&lt;/p&gt;
-
-&lt;h3 id=&#34;結論&#34;&gt;結論:&lt;/h3&gt;
-
-&lt;p&gt;本研究は一勤労者集団を対象としたものであるが、我が国においても、食事・栄養素摂取に関する AHA
-指標と血圧及び脂質代謝異常との間に有意な関連がみられた。特に魚介類と清涼飲料水の摂取は複数の検査項目の異常と有意な関連を認めたが、そのうち清涼飲料水の摂取との関連は肥満を介することが示唆された。今後、我が国の生活習慣病予防対策を立案する際には、魚介類の摂取不足および清涼飲料水の摂取過多に関連する病態にも着目する必要があると考えられた。&lt;/p&gt;
-
-&lt;h4 id=&#34;キーワード-アメリカ心臓協会-心血管疾患-食事-健診-清涼飲料水-魚介類&#34;&gt;キーワード:アメリカ心臓協会,心血管疾患,食事,健診,清涼飲料水,魚介類&lt;/h4&gt;
 </description>
     </item>
     

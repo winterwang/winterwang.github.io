@@ -7,8 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 24 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/lshtm/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>chi square distribution</title>
+      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
+      <description>&lt;p&gt;&lt;em&gt;to be updated&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>估計和精確度的概念</title>

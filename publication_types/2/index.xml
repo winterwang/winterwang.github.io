@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
+      <link>https://winterwang.github.io/publication/hpylorimeta/</link>
+      <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/publication/hpylorimeta/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Changing trends in the prevalence of H. pylori infection in the general population over time are thought to be the main driving force behind the declining gastric cancer mortality in Japan. However, whether the prevalence of H. pylori infection itself shows a birth-cohort pattern needs to be corroborated. We performed a systematic review of studies that reported the prevalence of H. pylori infection among Japanese individuals. Meta-regression was conducted in the framework of a generalized additive mixed model (GAMM) to account for heterogeneity in the prevalence of H. pylori infection as a function of birth year. The prevalence of H. pylori infection confirmed a clear birth cohort pattern: the predicted prevalence (%, 95% CI) was 60.9 (56.3-65.4), 65.9 (63.9-67.9), 67.4 (66.0-68.7), 64.1 (63.1-65.1), 59.1 (58.2-60.0), 49.1 (49.0-49.2), 34.9 (34.0-35.8), 24.6 (23.5-25.8), 15.6 (14.0-17.3), and 6.6 (4.8-8.9) among those who were born in the year 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, and 2000, respectively. The present study demonstrated a clear birth-cohort pattern of H. pylori infection in the Japanese population. The decreased prevalence of H. pylori infection in successive generations should be weighed in future gastric cancer control programs.&lt;/p&gt;
+
+&lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;table-of-risk-of-bias-diagnosis-click-to-see-the-table-http-rpubs-com-winterwang-riskofbias&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/riskofbias&#34; target=&#34;_blank&#34;&gt;Table of risk of bias diagnosis. (click to see the table)&lt;/a&gt;&lt;/h4&gt;
+</description>
+    </item>
     
     <item>
       <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
