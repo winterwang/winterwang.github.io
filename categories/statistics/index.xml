@@ -7,8 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/statistics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sample Size in Clinical Trial</title>
+      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
+      <description>&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;背景&lt;/h3&gt;
+&lt;p&gt;計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;如何將實驗對象隨機分配 (randomisation)&lt;/li&gt;
+&lt;li&gt;設計對照組 (control group)&lt;/li&gt;
+&lt;li&gt;合適（且必須）的貫徹盲法 (blinding)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;另外一個同樣重要的問題是–&lt;strong&gt;“我到底需要多少樣本?”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;統計學方案。&lt;/strong&gt; &lt;br&gt; 從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。&lt;/li&gt;
+&lt;li&gt;經濟上的因素。 &lt;br&gt; 然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。&lt;/li&gt;
+&lt;li&gt;倫理道德上的因素。 &lt;br&gt; 許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？&lt;/li&gt;
+&lt;li&gt;實驗本身的可信度。 &lt;br&gt; 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這裏我們只考慮沒有其他任何因素的影響下，&lt;strong&gt;1. 統計學方案&lt;/strong&gt;上該如何計算準確的所需樣本量的大小。&lt;/p&gt;
+&lt;p&gt;比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;治療組&lt;/th&gt;
+&lt;th&gt;溶栓酶&lt;/th&gt;
+&lt;th&gt;安慰劑&lt;/th&gt;
+&lt;th&gt;p-value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;1st Australian&lt;/td&gt;
+&lt;td&gt;n=264&lt;/td&gt;
+&lt;td&gt;n=253&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;死亡人數&lt;/td&gt;
+&lt;td&gt;26 (9.8%)&lt;/td&gt;
+&lt;td&gt;32 (12.6%)&lt;/td&gt;
+&lt;td&gt;p = 0.32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;評價&lt;/td&gt;
+&lt;td&gt;Risk ratio&lt;/td&gt;
+&lt;td&gt;0.78 (95% CI: 0.48 to 1.27)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;ISIS-2&lt;/td&gt;
+&lt;td&gt;n=8592&lt;/td&gt;
+&lt;td&gt;n=8595&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;死亡人數&lt;/td&gt;
+&lt;td&gt;791 (9.2%)&lt;/td&gt;
+&lt;td&gt;1029 (12.0%)&lt;/td&gt;
+&lt;td&gt;p &amp;lt; 0.001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;評價&lt;/td&gt;
+&lt;td&gt;Risk ratio&lt;/td&gt;
+&lt;td&gt;0.77 (95% CI: 0.70 to 0.84)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;這兩個臨牀實驗獲得的治療效果 (treatment effect)，在數字的百分比上幾乎十分接近。然而由於樣本兩巨大的差距，可以看到第一個實驗的信賴區間十分的大，使得實驗結果是無意義的。而第二個大樣本的實驗結果就告訴我們，溶栓酶的治療效果是有效降低了心肌梗死患者死亡概率（降低了23%）。第一個實驗收集了近500個病例，卻仍然不能提供確實有效的證據證明溶栓酶的治療效果（提供了強的關聯結果，卻是極弱的證據。strong correlation, but weak evidence) 。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;決定所需樣本量大小的統計學因素&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;實驗主要結果的測量/比較方法是什麼？ What is the principal outcome measure of the trial? &lt;br&gt; 一項臨牀實驗的主要結果，應該是切合該實驗的主要目的的。並且應當能夠客觀評價。(如死亡率的改善，治癒率的提高等等)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;實驗數據準備分析的方案是什麼？ How will the data be analysed to detect a treatment difference? &lt;br&gt; 實驗結果獲得的數據是連續型的 (血壓，血糖值，BMI)？還是分類的離散變量 (死亡的發生與否，疾病的治癒與否)？統計學上認爲的，治療結果提示有意義的差別時的概率。通常定爲 5%。(p &amp;lt; 0.05)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;對照組的試驗期望結果是怎樣的？ What results are expected in the control group? &lt;br&gt; 當然我們不可能事先預知實驗對照組可能出現的結果。此處只討論我們的預期結果。大多數情況下，我們可以從已經進行過的類似臨牀試驗報告中獲得，或者是從非臨牀干預型研究（觀察型研究）報告中獲得對照組的期望結果。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果實驗藥物在治療上確實有差異，當這個差異最小爲多少時希望能從設計的實驗中被檢測到？ How small a treatment difference, if it exists, is important to detect? &lt;br&gt; 這一條恐怕是每個臨牀實驗在設計階段最重要，最敏感也是最難做出決定的。如果我們已知這個藥物療效和對照相比差別很大，那麼樣本量不用很大，就足以提供值得信賴的證據。不過臨牀上常常會認爲療效差距不必&lt;strong&gt;非常的&lt;/strong&gt;顯著，但是在臨牀意義上也是十分重要的。 &lt;br&gt; 常常在這個問題上會引起衆多討論，因爲醫生和患者可能認爲任何一點差異都是有臨牀意義的。但是如果我們想檢測出較小的差距，會需要非常巨大的樣本量，這將會是十分不切合實際的。&lt;strong&gt;What needs to be decided upon is the smallest clinically relevant difference that would be important to detect if it were true.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在上面第 4 條被決定了以後，還要確定的是我們需要多大的把握來相信這個被檢測出來的療效差別？ With what degree of certainty is needed to be able to detect the treatment difference in 4? &lt;br&gt; 在實際臨牀實驗中，結論是從觀察數據中得來的，而不是從我們預想的那個“未知的實驗效果”。觀察獲得的療效差別，可能比預想的大（有效），也很可能比預想的小（無效）。設計較好的臨牀實驗應該有足夠機率觀察到有意義的療效差別，即使觀察得到的結果不如預期的大。當然要增加我們觀察到有意義的療效差別，最簡單的辦法是增加樣本量。這個條件的含義是，當療效真差別真實存在，我們要有足夠大的把握把它通過實驗觀察到。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-type-i-and-type-ii-errors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;第一類和第二類錯誤 Type I and type II errors&lt;/h3&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>卡方分佈 chi square distribution</title>
@@ -1509,78 +1599,6 @@ a_3 \\
 1 \\
 \end{array}
 \right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
-      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
-&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中： &lt;span class=&#34;math inline&#34;&gt;\(|X_j|\)&lt;/span&gt; 爲矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列替換爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 以後的矩陣的行列式。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-\left\{
-\begin{array}{ll}
-a_1+2a_2+a_3  = 2\\
-2a_1+a_2+a_3  = 3\\
-a_1+a_2+2a_3  = 3
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
-\begin{array}{c}
-1 &amp;amp; 2 &amp;amp; 1 \\
-2 &amp;amp; 1 &amp;amp; 1 \\
-1 &amp;amp; 1 &amp;amp; 2
-\end{array}
-\right), \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-a_3 \\
-\end{array}
-\right), \underline{y}=\left(
-\begin{array}{c}
-2 \\
-3 \\
-3 \\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(|X|=-4\)&lt;/span&gt; &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;(三次行列式的計算)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第一列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則: &lt;span class=&#34;math display&#34;&gt;\[|X_1|=\begin{vmatrix}
-2 &amp;amp; 2 &amp;amp;  1\\
-3 &amp;amp; 1 &amp;amp;  1\\
-3 &amp;amp; 1 &amp;amp;  2\\
-\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第二列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_2|=\begin{vmatrix}
-1 &amp;amp; 2 &amp;amp;  1\\
-2 &amp;amp; 3 &amp;amp;  1\\
-1 &amp;amp; 3 &amp;amp;  2\\
-\end{vmatrix}=0\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第三列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_3|=\begin{vmatrix}
-1 &amp;amp; 2 &amp;amp;  2\\
-2 &amp;amp; 1 &amp;amp;  3\\
-1 &amp;amp; 1 &amp;amp;  3\\
-\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore a_1=\frac{|X_1|}{|X|}=1, \\
-a_2=\frac{|X_2|}{|X|}=0, \\
-a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.26" />
+  <meta name="author" content="王　超辰 (Chaochen Wang)">
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="https://winterwang.github.io/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="https://winterwang.github.io/index.xml" type="application/rss+xml" title="Be ambitious">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://winterwang.github.io/post/sample-size-in-clinical-trial/">
+
+  
+
+  <title>Sample Size in Clinical Trial | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">Sample Size in Clinical Trial</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-10-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sun, Oct 29, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/study-abroad">study abroad</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/learning-notes">learning notes</a
+    >, 
+    
+    <a href="/tags/medical-statistics">Medical Statistics</a
+    >, 
+    
+    <a href="/tags/lshtm">LSHTM</a
+    >, 
+    
+    <a href="/tags/london">London</a
+    >, 
+    
+    <a href="/tags/clinical-trial">Clinical Trial</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Sample%20Size%20in%20Clinical%20Trial&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f&amp;title=Sample%20Size%20in%20Clinical%20Trial"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f&amp;title=Sample%20Size%20in%20Clinical%20Trial"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Sample%20Size%20in%20Clinical%20Trial&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <div class="section level3">
+<h3>背景</h3>
+<p>計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在</p>
+<ol style="list-style-type: decimal">
+<li>如何將實驗對象隨機分配 (randomisation)</li>
+<li>設計對照組 (control group)</li>
+<li>合適（且必須）的貫徹盲法 (blinding)</li>
+</ol>
+<p>另外一個同樣重要的問題是–<strong>“我到底需要多少樣本?”</strong></p>
+<p>一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：</p>
+<ol style="list-style-type: decimal">
+<li><strong>統計學方案。</strong> <br> 從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。</li>
+<li>經濟上的因素。 <br> 然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。</li>
+<li>倫理道德上的因素。 <br> 許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？</li>
+<li>實驗本身的可信度。 <br> 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。</li>
+</ol>
+<p>這裏我們只考慮沒有其他任何因素的影響下，<strong>1. 統計學方案</strong>上該如何計算準確的所需樣本量的大小。</p>
+<p>比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：</p>
+<table>
+<thead>
+<tr class="header">
+<th>治療組</th>
+<th>溶栓酶</th>
+<th>安慰劑</th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1st Australian</td>
+<td>n=264</td>
+<td>n=253</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>死亡人數</td>
+<td>26 (9.8%)</td>
+<td>32 (12.6%)</td>
+<td>p = 0.32</td>
+</tr>
+<tr class="odd">
+<td>評價</td>
+<td>Risk ratio</td>
+<td>0.78 (95% CI: 0.48 to 1.27)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ISIS-2</td>
+<td>n=8592</td>
+<td>n=8595</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>死亡人數</td>
+<td>791 (9.2%)</td>
+<td>1029 (12.0%)</td>
+<td>p &lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>評價</td>
+<td>Risk ratio</td>
+<td>0.77 (95% CI: 0.70 to 0.84)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>這兩個臨牀實驗獲得的治療效果 (treatment effect)，在數字的百分比上幾乎十分接近。然而由於樣本兩巨大的差距，可以看到第一個實驗的信賴區間十分的大，使得實驗結果是無意義的。而第二個大樣本的實驗結果就告訴我們，溶栓酶的治療效果是有效降低了心肌梗死患者死亡概率（降低了23%）。第一個實驗收集了近500個病例，卻仍然不能提供確實有效的證據證明溶栓酶的治療效果（提供了強的關聯結果，卻是極弱的證據。strong correlation, but weak evidence) 。</p>
+</div>
+<div class="section level3">
+<h3>決定所需樣本量大小的統計學因素</h3>
+<ol style="list-style-type: decimal">
+<li><p>實驗主要結果的測量/比較方法是什麼？ What is the principal outcome measure of the trial? <br> 一項臨牀實驗的主要結果，應該是切合該實驗的主要目的的。並且應當能夠客觀評價。(如死亡率的改善，治癒率的提高等等)</p></li>
+<li><p>實驗數據準備分析的方案是什麼？ How will the data be analysed to detect a treatment difference? <br> 實驗結果獲得的數據是連續型的 (血壓，血糖值，BMI)？還是分類的離散變量 (死亡的發生與否，疾病的治癒與否)？統計學上認爲的，治療結果提示有意義的差別時的概率。通常定爲 5%。(p &lt; 0.05)</p></li>
+<li><p>對照組的試驗期望結果是怎樣的？ What results are expected in the control group? <br> 當然我們不可能事先預知實驗對照組可能出現的結果。此處只討論我們的預期結果。大多數情況下，我們可以從已經進行過的類似臨牀試驗報告中獲得，或者是從非臨牀干預型研究（觀察型研究）報告中獲得對照組的期望結果。</p></li>
+<li><p>如果實驗藥物在治療上確實有差異，當這個差異最小爲多少時希望能從設計的實驗中被檢測到？ How small a treatment difference, if it exists, is important to detect? <br> 這一條恐怕是每個臨牀實驗在設計階段最重要，最敏感也是最難做出決定的。如果我們已知這個藥物療效和對照相比差別很大，那麼樣本量不用很大，就足以提供值得信賴的證據。不過臨牀上常常會認爲療效差距不必<strong>非常的</strong>顯著，但是在臨牀意義上也是十分重要的。 <br> 常常在這個問題上會引起衆多討論，因爲醫生和患者可能認爲任何一點差異都是有臨牀意義的。但是如果我們想檢測出較小的差距，會需要非常巨大的樣本量，這將會是十分不切合實際的。<strong>What needs to be decided upon is the smallest clinically relevant difference that would be important to detect if it were true.</strong></p></li>
+<li><p>在上面第 4 條被決定了以後，還要確定的是我們需要多大的把握來相信這個被檢測出來的療效差別？ With what degree of certainty is needed to be able to detect the treatment difference in 4? <br> 在實際臨牀實驗中，結論是從觀察數據中得來的，而不是從我們預想的那個“未知的實驗效果”。觀察獲得的療效差別，可能比預想的大（有效），也很可能比預想的小（無效）。設計較好的臨牀實驗應該有足夠機率觀察到有意義的療效差別，即使觀察得到的結果不如預期的大。當然要增加我們觀察到有意義的療效差別，最簡單的辦法是增加樣本量。這個條件的含義是，當療效真差別真實存在，我們要有足夠大的把握把它通過實驗觀察到。</p></li>
+</ol>
+</div>
+<div id="-type-i-and-type-ii-errors" class="section level3">
+<h3>第一類和第二類錯誤 Type I and type II errors</h3>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://winterwang.github.io/post/chi-square-distribution/"><span
+      aria-hidden="true">&larr;</span> 卡方分佈 chi square distribution</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() {  
+        var d = document, s = d.createElement('script');
+
+        s.src = '//ccwang.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-21867861-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+
