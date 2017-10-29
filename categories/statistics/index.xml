@@ -11,12 +11,123 @@
     <atom:link href="/categories/statistics/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>chi square distribution</title>
+      <title>卡方分佈 chi square distribution</title>
       <link>https://winterwang.github.io/post/chi-square-distribution/</link>
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
-      <description>&lt;p&gt;&lt;em&gt;to be updated&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;卡方分佈的期望和方差的證明：&lt;/h3&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\sim N(0,1)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(X^2\sim \mathcal{X}_1^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)&lt;/span&gt;， 那麼 &lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中： &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}_n^2\)&lt;/span&gt; 表示自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的卡方分佈。&lt;/p&gt;
+&lt;p&gt;且 &lt;span class=&#34;math inline&#34;&gt;\(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;卡方分佈的期望：&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(X_1^2)=Var(X)+[E(X)]^2=1+0=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Rightarrow E(X_n^2)=n\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;卡方分佈的方差：&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Var(X_1^2) &amp;amp;= E(X_1^{2^2}) - E(X_1^2)^2 \\
+           &amp;amp;= E(X_1^4)-1
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;-ex_14&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;下面來求 &lt;span class=&#34;math inline&#34;&gt;\(E(X_1^4)\)&lt;/span&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\because E(X_1) &amp;amp;= \int_{-\infty}^{+\infty} xf(x)dx \\
+\therefore E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;已知： &lt;span class=&#34;math inline&#34;&gt;\(f(x)=\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}\)&lt;/span&gt; 代入上式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx \\
+         &amp;amp;= \int_{-\infty}^{+\infty} x^4\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}dx\\
+         &amp;amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^4e^{(-\frac{x^2}{2})}dx\\
+         &amp;amp;=\frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^3(-x)e^{(-\frac{x^2}{2})}dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(u=x^3, v=e^{(-\frac{x^2}{2})},t=-\frac{x^2}{2}\)&lt;/span&gt; 可以推導：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\frac{dv}{dx} &amp;amp;= \frac{dv}{dt}\frac{dt}{dx} \\
+              &amp;amp;= e^t(-\frac{1}{2}\times2x) \\
+              &amp;amp;= (-x)e^{(-\frac{x^2}{2})} \\
+\Rightarrow dv &amp;amp;= (-x)e^{(-\frac{x^2}{2})}dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;再代入上面的式子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}u\:dv \\
+integrate\; &amp;amp;by\; parts:\\
+E(X_1^4) &amp;amp;= \frac{-1}{\sqrt{2\pi}}\{[u\:v] \rvert_{-\infty}^{+\infty}-\int_{-\infty}^{+\infty}v\:du\} \\
+&amp;amp;= \frac{-1}{\sqrt{2\pi}}\{[x^3e^{(-\frac{x^2}{2})}]\rvert_{-\infty}^{+\infty} -\int_{-\infty}^{+\infty}v\:du\} \\
+&amp;amp;=\frac{-1}{\sqrt{2\pi}}\{0-0-\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx^3\} \\
+&amp;amp;=\frac{-1}{\sqrt{2\pi}}[-3\int_{-\infty}^{+\infty}x^2e^{(-\frac{x^2}{2})}dx] \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}[\int_{-\infty}^{+\infty}x(-x)e^{(-\frac{x^2}{2})}dx] \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;再來一次分部積分：&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(a=x,b=e^{(-\frac{x^2}{2})},d\:b = (-x)e^{(-\frac{x^2}{2})}dx\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \frac{-3}{\sqrt{2\pi}}\{[a\:b] \rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty}b\:da\} \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}\{[xe^{(-\frac{x^2}{2})}]\rvert_{-\infty}^{+\infty} -\int_{-\infty}^{+\infty}b\:da\} \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}\{0-0-\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx\} \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}[-\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx] \\
+&amp;amp;=\frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;下面令 &lt;span class=&#34;math inline&#34;&gt;\(I=\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx\\ \Rightarrow I^2=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{(-\frac{x^2+y^2}{2})}dxdy\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;接下來需要用到 &lt;a href=&#34;https://www.youtube.com/watch?v=r0fv9V9GHdo&#34;&gt;座標轉換&lt;/a&gt;的知識，將 &lt;span class=&#34;math inline&#34;&gt;\(x,y\)&lt;/span&gt; 表示的笛卡爾座標，轉換爲用角度 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 和半徑 &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; 表示的形式。之後的證明可以在&lt;a href=&#34;https://www.youtube.com/watch?v=fWOGfzC3IeY&#34;&gt;油管&lt;/a&gt;上看到，但是我還是繼續證明下去。&lt;/p&gt;
+&lt;p&gt;直角座標系 (cartesian coordinators) 和 極座標系 (polar coordinators) 之間轉換的關係如下：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+x&amp;amp;=r\:cos\theta\\
+y&amp;amp;=r\:sin\theta\\
+r^2&amp;amp;=x^2+y^2\\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;座標轉換以後可以繼續求 &lt;span class=&#34;math inline&#34;&gt;\(E(X_1^4)\)&lt;/span&gt;。 在那之前我們先求 &lt;span class=&#34;math inline&#34;&gt;\(I^2\)&lt;/span&gt;。 注意轉換座標系統以後，&lt;span class=&#34;math inline&#34;&gt;\(\theta\in[0,2\pi], r\in[0,+\infty]\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+I^2 &amp;amp;= \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{(-\frac{x^2+y^2}{2})}dxdy \\
+&amp;amp;= \int_{0}^{+\infty}\int_{0}^{2\pi}e^{(-\frac{r^2}{2})}rd\theta dr \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於先從中間的 &lt;span class=&#34;math inline&#34;&gt;\(\int_{0}^{2\pi}e^{(-\frac{r^2}{2})}rd\theta\)&lt;/span&gt; 開始積分，&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 以外都可以視爲常數，那麼這個 &lt;span class=&#34;math inline&#34;&gt;\([0,2\pi]\)&lt;/span&gt; 上的積分就的等於 &lt;span class=&#34;math inline&#34;&gt;\(2\pi e^{(-\frac{r^2}{2})}r\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;因此上面的式子又變爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+I^2 &amp;amp;=  2\pi\int_{0}^{+\infty}e^{(-\frac{r^2}{2})}r\:dr \\
+\because \frac{d(e^{\frac{-r^2}{2}})}{dr} &amp;amp;= -e^{(-\frac{r^2}{2})}r \\
+\therefore I^2 &amp;amp;= 2\pi(-e^{\frac{-r^2}{2}})\rvert_0^{+\infty} \\
+               &amp;amp;= 0-(2\pi\times(-1)) \\
+               &amp;amp;= 2\pi\\
+\Rightarrow I  &amp;amp;= \sqrt{2\pi}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx \\
+&amp;amp;= \frac{3}{\sqrt{2\pi}}\times I \\
+&amp;amp;= 3 \\
+\Rightarrow Var(X_1^2) &amp;amp;= E(X_1^4) - 1 \\
+                       &amp;amp;= 3-1 -2 \\
+\Rightarrow Var(X_n^2) &amp;amp;= 2n
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;結論：&lt;span class=&#34;math inline&#34;&gt;\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)&lt;/span&gt; 服從卡方分佈，其期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X_n^2)=n\)&lt;/span&gt;，方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X_n^2)=2n\)&lt;/span&gt;。 根據&lt;a href=&#34;https://winterwang.github.io/post/central-limit-theory/&#34;&gt;中心極限定理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[n\rightarrow \infty, X_n^2\sim N(n, 2n)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -212,7 +323,7 @@ Var(S)               &amp;amp;=E(S^2)-[E(S)]^2 \\
 &lt;p&gt;另外可以被證明的是：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{n-1}{\sigma^2}S^2\sim \mathcal{X}_{n-1}^2\\
 Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}^2_m\)&lt;/span&gt;： 自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的卡方分佈。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}^2_m\)&lt;/span&gt;： 自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

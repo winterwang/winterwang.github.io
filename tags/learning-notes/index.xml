@@ -7,8 +7,129 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 24 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/learning-notes/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>卡方分佈 chi square distribution</title>
+      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
+      <description>&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;卡方分佈的期望和方差的證明：&lt;/h3&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\sim N(0,1)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(X^2\sim \mathcal{X}_1^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)&lt;/span&gt;， 那麼 &lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中： &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}_n^2\)&lt;/span&gt; 表示自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 的卡方分佈。&lt;/p&gt;
+&lt;p&gt;且 &lt;span class=&#34;math inline&#34;&gt;\(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;卡方分佈的期望：&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(X_1^2)=Var(X)+[E(X)]^2=1+0=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Rightarrow E(X_n^2)=n\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;卡方分佈的方差：&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Var(X_1^2) &amp;amp;= E(X_1^{2^2}) - E(X_1^2)^2 \\
+           &amp;amp;= E(X_1^4)-1
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;-ex_14&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;下面來求 &lt;span class=&#34;math inline&#34;&gt;\(E(X_1^4)\)&lt;/span&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\because E(X_1) &amp;amp;= \int_{-\infty}^{+\infty} xf(x)dx \\
+\therefore E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;已知： &lt;span class=&#34;math inline&#34;&gt;\(f(x)=\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}\)&lt;/span&gt; 代入上式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx \\
+         &amp;amp;= \int_{-\infty}^{+\infty} x^4\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}dx\\
+         &amp;amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^4e^{(-\frac{x^2}{2})}dx\\
+         &amp;amp;=\frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^3(-x)e^{(-\frac{x^2}{2})}dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(u=x^3, v=e^{(-\frac{x^2}{2})},t=-\frac{x^2}{2}\)&lt;/span&gt; 可以推導：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\frac{dv}{dx} &amp;amp;= \frac{dv}{dt}\frac{dt}{dx} \\
+              &amp;amp;= e^t(-\frac{1}{2}\times2x) \\
+              &amp;amp;= (-x)e^{(-\frac{x^2}{2})} \\
+\Rightarrow dv &amp;amp;= (-x)e^{(-\frac{x^2}{2})}dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;再代入上面的式子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}u\:dv \\
+integrate\; &amp;amp;by\; parts:\\
+E(X_1^4) &amp;amp;= \frac{-1}{\sqrt{2\pi}}\{[u\:v] \rvert_{-\infty}^{+\infty}-\int_{-\infty}^{+\infty}v\:du\} \\
+&amp;amp;= \frac{-1}{\sqrt{2\pi}}\{[x^3e^{(-\frac{x^2}{2})}]\rvert_{-\infty}^{+\infty} -\int_{-\infty}^{+\infty}v\:du\} \\
+&amp;amp;=\frac{-1}{\sqrt{2\pi}}\{0-0-\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx^3\} \\
+&amp;amp;=\frac{-1}{\sqrt{2\pi}}[-3\int_{-\infty}^{+\infty}x^2e^{(-\frac{x^2}{2})}dx] \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}[\int_{-\infty}^{+\infty}x(-x)e^{(-\frac{x^2}{2})}dx] \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;再來一次分部積分：&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(a=x,b=e^{(-\frac{x^2}{2})},d\:b = (-x)e^{(-\frac{x^2}{2})}dx\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \frac{-3}{\sqrt{2\pi}}\{[a\:b] \rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty}b\:da\} \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}\{[xe^{(-\frac{x^2}{2})}]\rvert_{-\infty}^{+\infty} -\int_{-\infty}^{+\infty}b\:da\} \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}\{0-0-\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx\} \\
+&amp;amp;=\frac{-3}{\sqrt{2\pi}}[-\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx] \\
+&amp;amp;=\frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;下面令 &lt;span class=&#34;math inline&#34;&gt;\(I=\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx\\ \Rightarrow I^2=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{(-\frac{x^2+y^2}{2})}dxdy\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;接下來需要用到 &lt;a href=&#34;https://www.youtube.com/watch?v=r0fv9V9GHdo&#34;&gt;座標轉換&lt;/a&gt;的知識，將 &lt;span class=&#34;math inline&#34;&gt;\(x,y\)&lt;/span&gt; 表示的笛卡爾座標，轉換爲用角度 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 和半徑 &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; 表示的形式。之後的證明可以在&lt;a href=&#34;https://www.youtube.com/watch?v=fWOGfzC3IeY&#34;&gt;油管&lt;/a&gt;上看到，但是我還是繼續證明下去。&lt;/p&gt;
+&lt;p&gt;直角座標系 (cartesian coordinators) 和 極座標系 (polar coordinators) 之間轉換的關係如下：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+x&amp;amp;=r\:cos\theta\\
+y&amp;amp;=r\:sin\theta\\
+r^2&amp;amp;=x^2+y^2\\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;座標轉換以後可以繼續求 &lt;span class=&#34;math inline&#34;&gt;\(E(X_1^4)\)&lt;/span&gt;。 在那之前我們先求 &lt;span class=&#34;math inline&#34;&gt;\(I^2\)&lt;/span&gt;。 注意轉換座標系統以後，&lt;span class=&#34;math inline&#34;&gt;\(\theta\in[0,2\pi], r\in[0,+\infty]\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+I^2 &amp;amp;= \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{(-\frac{x^2+y^2}{2})}dxdy \\
+&amp;amp;= \int_{0}^{+\infty}\int_{0}^{2\pi}e^{(-\frac{r^2}{2})}rd\theta dr \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於先從中間的 &lt;span class=&#34;math inline&#34;&gt;\(\int_{0}^{2\pi}e^{(-\frac{r^2}{2})}rd\theta\)&lt;/span&gt; 開始積分，&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 以外都可以視爲常數，那麼這個 &lt;span class=&#34;math inline&#34;&gt;\([0,2\pi]\)&lt;/span&gt; 上的積分就的等於 &lt;span class=&#34;math inline&#34;&gt;\(2\pi e^{(-\frac{r^2}{2})}r\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;因此上面的式子又變爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+I^2 &amp;amp;=  2\pi\int_{0}^{+\infty}e^{(-\frac{r^2}{2})}r\:dr \\
+\because \frac{d(e^{\frac{-r^2}{2}})}{dr} &amp;amp;= -e^{(-\frac{r^2}{2})}r \\
+\therefore I^2 &amp;amp;= 2\pi(-e^{\frac{-r^2}{2}})\rvert_0^{+\infty} \\
+               &amp;amp;= 0-(2\pi\times(-1)) \\
+               &amp;amp;= 2\pi\\
+\Rightarrow I  &amp;amp;= \sqrt{2\pi}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(X_1^4) &amp;amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx \\
+&amp;amp;= \frac{3}{\sqrt{2\pi}}\times I \\
+&amp;amp;= 3 \\
+\Rightarrow Var(X_1^2) &amp;amp;= E(X_1^4) - 1 \\
+                       &amp;amp;= 3-1 -2 \\
+\Rightarrow Var(X_n^2) &amp;amp;= 2n
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;結論：&lt;span class=&#34;math inline&#34;&gt;\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)&lt;/span&gt; 服從卡方分佈，其期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X_n^2)=n\)&lt;/span&gt;，方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X_n^2)=2n\)&lt;/span&gt;。 根據&lt;a href=&#34;https://winterwang.github.io/post/central-limit-theory/&#34;&gt;中心極限定理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[n\rightarrow \infty, X_n^2\sim N(n, 2n)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>估計和精確度的概念</title>
@@ -202,7 +323,7 @@ Var(S)               &amp;amp;=E(S^2)-[E(S)]^2 \\
 &lt;p&gt;另外可以被證明的是：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{n-1}{\sigma^2}S^2\sim \mathcal{X}_{n-1}^2\\
 Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}^2_m\)&lt;/span&gt;： 自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的卡方分佈。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}^2_m\)&lt;/span&gt;： 自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -1222,106 +1343,6 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right),\ A=\left( \begin{array}{} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{12} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{13} &amp;amp; a_{23} &amp;amp; a_{33} \end{array} \right)\)&lt;/span&gt;，那麼： &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=a_{11}x_1^2+a_{22}x_2^2+a_{33}x_3^2+2a_{12}x_1x_2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+2a_{13}x_1x_3+2a_{23}x_2x_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 3 &amp;amp; 2 &amp;amp; 4\\ 6 &amp;amp; 5 &amp;amp; 1\\ -2 &amp;amp; 5 &amp;amp; 8 \end{array} \right)非對稱矩陣\)&lt;/span&gt;，那麼：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=3x_1^2+5x_2^2+8x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+2x_1x_2+4x_1x_3+6x_2x_1\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+x_2x_3-2x_3x_1+5x_3x_2\\ \;\;\;\;\;\;\;\;\;\:=3x_1^2+5x_2^2+8x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(2+6)x_1x_2+(4-2)x_1x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(5+1)x_2x_3\\ \;\;\;\;\;\;\;\;\;\:=3x_1^2+5x_2^2+8x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+8x_1x_2+2x_1x_3+6z_2x_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;有式子 &lt;span class=&#34;math inline&#34;&gt;\(3x_1^2-5x_2^2+7x_3^2+8x_1x_2+4x_1x_3-12x_2x_3\)&lt;/span&gt; 如果要將它改寫成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;是對稱矩陣) 的話，試求 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{33} &amp;amp; a_{32} &amp;amp; a_{33} \end{array} \right)=\left( \begin{array}{} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{12} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{13} &amp;amp; a_{23} &amp;amp; a_{33} \end{array} \right)\)&lt;/span&gt; 的各個成分。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的對角成分：&lt;span class=&#34;math inline&#34;&gt;\(a_{11},a_{22},a_{33}\)&lt;/span&gt; 分別是 &lt;span class=&#34;math inline&#34;&gt;\(x_1^2,x_2^2,x_3^2\)&lt;/span&gt; 的系數： &lt;span class=&#34;math inline&#34;&gt;\(3,-5,7\)&lt;/span&gt;。非對角成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{12}(=a_{21})\)&lt;/span&gt; 等於 &lt;span class=&#34;math inline&#34;&gt;\(x_1x_2\)&lt;/span&gt; 系數的一半：&lt;span class=&#34;math inline&#34;&gt;\(4\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(a_{13}(=a_{31})\)&lt;/span&gt; 等於 &lt;span class=&#34;math inline&#34;&gt;\(x_1x_3\)&lt;/span&gt; 系數的一半:&lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(a_23(=a_{32})\)&lt;/span&gt; 等於 &lt;span class=&#34;math inline&#34;&gt;\(x_2x_3\)&lt;/span&gt; 系數的一半：&lt;span class=&#34;math inline&#34;&gt;\(-6\)&lt;/span&gt;。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore A=\left( \begin{array}{} 3 &amp;amp; 4 &amp;amp; 2\\ 4 &amp;amp; -5 &amp;amp; -6\\ 2 &amp;amp; -6 &amp;amp; 7 \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記15</title>
-      <link>https://winterwang.github.io/post/2017-03-08/</link>
-      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-08/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;單位矩陣&lt;/h2&gt;
-&lt;p&gt;對角成分全部都是 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; (此時我們假定有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個)，的對角矩陣被叫做&lt;strong&gt;單位矩陣(identity matrix, unit matrix)&lt;/strong&gt;。寫作： &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\)&lt;/span&gt; 下標 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 常被省略。一般的，將 &lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，的結果和從右往左相乘的結果是相等的： &lt;span class=&#34;math inline&#34;&gt;\(E_nA=AE_n=A\)&lt;/span&gt;。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;單位矩陣 &lt;span class=&#34;math inline&#34;&gt;\(E=\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \\ \end{array} \right)\)&lt;/span&gt; 和矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ b_1 &amp;amp; b_2 &amp;amp; b_3 \\ c_1 &amp;amp; c_2 &amp;amp; c_3 \\ \end{array} \right)\)&lt;/span&gt; 的積爲：&lt;span class=&#34;math inline&#34;&gt;\(EA=\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ b_1 &amp;amp; b_2 &amp;amp; b_3 \\ c_1 &amp;amp; c_2 &amp;amp; c_3 \\ \end{array} \right)=AE=A\)&lt;/span&gt;，矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;所有成分均不變。&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E_nE_n=E_n\)&lt;/span&gt;。像這樣，自己與自己相乘，結果等於自己的矩陣，被叫做&lt;strong&gt;冪等矩陣(idempotent matrix, 冪等行列「べきとうぎょうれつ」)&lt;/strong&gt;。即，&lt;span class=&#34;math inline&#34;&gt;\(HH(=H^2)=H\)&lt;/span&gt; 成立時，&lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; 是冪等矩陣。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=E\underline{x}, \lambda\underline{x}=\lambda E\underline{x}\)&lt;/span&gt; 此等式會在後面&lt;strong&gt;特徵值(eigenvalue, 固有値問題)&lt;/strong&gt;時使用。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-01/&#34;&gt;前一個小節&lt;/a&gt;中的對角矩陣(diagonal matrix) &lt;span class=&#34;math inline&#34;&gt;\(D^{\frac{1}{2}}\)&lt;/span&gt; 則具有這樣的性質： &lt;span class=&#34;math inline&#34;&gt;\(D^{\frac{1}{2}}D^{-\frac{1}{2}}=D^{-\frac{1}{2}}D^{\frac{1}{2}}=E_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-inverse-matrix&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;逆矩陣 inverse matrix&lt;/h2&gt;
-&lt;p&gt;如果正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 存在另一個正放心矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 使得他們滿足 &lt;span class=&#34;math inline&#34;&gt;\(AX=XA=E\)&lt;/span&gt;，即乘積爲一個單位矩陣，那麼我們說 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的&lt;strong&gt;逆矩陣(inverse matrix)&lt;/strong&gt;，寫作：&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt;。可以將上面的連等式改成：&lt;span class=&#34;math inline&#34;&gt;\(AA^{-1}=A^{-1}A=E\)&lt;/span&gt;。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;如果矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} a &amp;amp; b \\ c &amp;amp; d \\ \end{array} \right)\)&lt;/span&gt; 的成分滿足： &lt;span class=&#34;math inline&#34;&gt;\(ad -bc \neq 0\)&lt;/span&gt;，那麼有 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}=\frac{1}{ad-bc}\left( \begin{array}{c} d &amp;amp; -b \\ -c &amp;amp; a \\ \end{array} \right)\)&lt;/span&gt;。&lt;strong&gt;如果， &lt;span class=&#34;math inline&#34;&gt;\(ad-bc=0\)&lt;/span&gt; 那麼我們認爲 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的逆矩陣不存在。&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P=\left( \begin{array}{c} \cos \theta &amp;amp; -\sin \theta \\ \sin \theta &amp;amp; \cos \theta \\ \end{array} \right)\)&lt;/span&gt; 的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P^{-1}=\left( \begin{array}{c} \cos \theta &amp;amp; \sin \theta \\ -\sin \theta &amp;amp; \cos \theta \\ \end{array} \right)\)&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處出現了逆矩陣的逆矩陣爲元矩陣的例子。&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;對稱矩陣(symmetric matrix)&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 3 \\ 2 &amp;amp; 4 &amp;amp; 5 \\ 3 &amp;amp; 5 &amp;amp; 6 \\ \end{array} \right)\)&lt;/span&gt; 的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}=\left( \begin{array}{c} 1 &amp;amp; -3 &amp;amp; 2 \\ -3 &amp;amp; 3 &amp;amp; -1 \\ 2 &amp;amp; -1 &amp;amp; 0 \\ \end{array} \right)\)&lt;/span&gt; &lt;span class=&#34;diff_alert&#34;&gt;注意此處出現了對稱矩陣的逆矩陣還是對稱矩陣的例子。&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} -11 &amp;amp; 2 &amp;amp; 2 \\ -4 &amp;amp; 0 &amp;amp; 1 \\ 6 &amp;amp; -1 &amp;amp; -1 \\ \end{array} \right)\)&lt;/span&gt; 的逆矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}=\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 2 \\ 2 &amp;amp; -1 &amp;amp; 3 \\ 4 &amp;amp; 1 &amp;amp; 8 \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-orthogonal-matrix&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;正交矩陣 orthogonal matrix&lt;/h2&gt;
-&lt;p&gt;如果正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; 滿足： &lt;span class=&#34;math inline&#34;&gt;\(PP^t=P^tP=E\)&lt;/span&gt; (單位矩陣)；或者滿足 &lt;span class=&#34;math inline&#34;&gt;\(P^t=P^{-1}\)&lt;/span&gt; 時，我們說這個正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; 爲&lt;strong&gt;正交矩陣(orthogonal matrix，直交行列「ちょっこうぎょうれつ」)&lt;/strong&gt;。正交矩陣如果用列向量來表示，那麼這些組成正交矩陣的列向量被稱爲&lt;strong&gt;規範正交系(orthonomal system，正規直交系)&lt;/strong&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P=\left( \begin{array}{c} \cos \theta &amp;amp; -\sin \theta \\ \sin \theta &amp;amp; \cos \theta \\ \end{array} \right)\)&lt;/span&gt; 是2次的正交矩陣。如果 &lt;span class=&#34;math inline&#34;&gt;\(\underline{p}_1=\left( \begin{array}{c} \cos \theta \\ \sin \theta \\ \end{array} \right), \; \underline{p}_2=\left( \begin{array}{c} -\sin \theta \\ \cos \theta \\ \end{array} \right)\)&lt;/span&gt;，那麼列向量的長度有：&lt;span class=&#34;math inline&#34;&gt;\(\| \underline{p}_1 \|=\| \underline{p}_2 \|=1\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(\underline{p}_1\cdot\underline{p}_2=0\)&lt;/span&gt;。因此組成矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; 的兩個列向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{p}_1,\underline{p}_2\)&lt;/span&gt; 構成了一個規範正交系。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣 &lt;span class=&#34;math inline&#34;&gt;\(P=\left( \begin{array}{c} \frac{1}{\sqrt{3}} &amp;amp; \frac{1}{\sqrt{2}} &amp;amp; \frac{1}{\sqrt{6}} \\ \frac{1}{\sqrt{3}} &amp;amp; -\frac{1}{\sqrt{2}} &amp;amp; \frac{1}{\sqrt{6}} \\ \frac{1}{\sqrt{3}} &amp;amp; 0 &amp;amp; -\frac{2}{\sqrt{6}} \\ \end{array} \right)\)&lt;/span&gt; 是個3次正交矩陣。如果 &lt;span class=&#34;math inline&#34;&gt;\(\underline{p}_1=\left( \begin{array}{c} \frac{1}{\sqrt{3}}\\ \frac{1}{\sqrt{3}}\\ \frac{1}{\sqrt{3}}\\ \end{array} \right), \underline{p}_2=\left( \begin{array}{c} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \\ 0 \\ \end{array} \right), \underline{p}_3=\left( \begin{array}{c} \frac{1}{\sqrt{6}}\\ \frac{1}{\sqrt{6}}\\ -\frac{2}{\sqrt{6}}\\ \end{array} \right)\)&lt;/span&gt; 這三個列向量構成了一個規範正交系。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-triangular-matrix&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;三角矩陣 triangular matrix&lt;/h2&gt;
-&lt;p&gt;主對角線的左下部分全部爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的正方形矩陣被叫做：&lt;strong&gt;上三角矩陣(upper triangular matrix)&lt;/strong&gt;，右上部分的成分全部爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的正方形矩陣被叫做： &lt;strong&gt;下三角矩陣(lower triangular matrix)&lt;/strong&gt;。上三角矩陣，下三角矩陣，統稱爲&lt;strong&gt;三角矩陣&lt;/strong&gt;。有時候左下部分或者右上部分就簡略的只寫一個大的 &lt;span class=&#34;math inline&#34;&gt;\(O\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;類型相同的兩個上三角矩陣的積依然是一個上三角矩陣。兩個類型相同的下三角矩陣的積也依然是一個下三角矩陣。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-上三角矩陣： \left(
-\begin{array}{c}
-a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\
-0     &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\
-\vdots&amp;amp; \ddots &amp;amp; \ddots &amp;amp; \vdots\\
-0     &amp;amp; \cdots &amp;amp; 0      &amp;amp; a_{nn}
-\end{array}
-\right)
-=\left(
-\begin{array}{c}
-a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\
-      &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\
-      &amp;amp;        &amp;amp; \ddots &amp;amp; \vdots\\
-\Huge{0}  &amp;amp;        &amp;amp;        &amp;amp; a_{nn}
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-下三角矩陣：\left(
-\begin{array}{c}
-a_{11}&amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\
-a_{21}&amp;amp; a_{22} &amp;amp; \ddots &amp;amp; \vdots \\
-\vdots&amp;amp; \cdots &amp;amp; \ddots &amp;amp; 0\\
-a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
-\end{array}
-\right)=\left(
-\begin{array}{c}
-a_{11}&amp;amp; &amp;amp;&amp;amp;\Huge{0}  \\
-a_{21}&amp;amp; a_{22} &amp;amp;  \\
-\vdots&amp;amp; \cdots &amp;amp; \ddots &amp;amp;\\
-a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 2 &amp;amp; 1 \\ 0 &amp;amp; 8 \\ \end{array} \right), \left( \begin{array}{c} -3 &amp;amp; 0 &amp;amp; 6 \\ 0 &amp;amp; 5 &amp;amp; 2 \\ 0 &amp;amp; 0 &amp;amp; 4 \\ \end{array} \right), \left( \begin{array}{c} 5 &amp;amp; -6 &amp;amp; 3 &amp;amp; 2 \\ 0 &amp;amp; 9 &amp;amp;-2 &amp;amp; 4 \\ 0 &amp;amp; 0 &amp;amp; 3 &amp;amp; 7 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{array} \right)\)&lt;/span&gt; 這些都是上三角矩陣。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 2 &amp;amp; 0 \\ 5 &amp;amp; 8 \\ \end{array} \right), \left( \begin{array}{c} -3 &amp;amp; 0 &amp;amp; 0 \\ 8 &amp;amp; 5 &amp;amp; 0 \\ 7 &amp;amp; 2 &amp;amp; 4 \\ \end{array} \right), \left( \begin{array}{c} 5 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 2 &amp;amp; 9 &amp;amp; 0 &amp;amp; 0 \\ 3 &amp;amp; 10 &amp;amp; 3 &amp;amp; 0 \\ 5 &amp;amp; 1 &amp;amp; 34 &amp;amp; 0 \end{array} \right)\)&lt;/span&gt; 這些都是下三角矩陣。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-echelon-matrix&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;階梯形矩陣 echelon matrix&lt;/h2&gt;
-&lt;p&gt;如下所示，第1行，第2行，第3行，行數增加的同時，左側的成分中 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的個數跟着增加的矩陣被叫做&lt;strong&gt;階梯形矩陣(echelon matrix)&lt;/strong&gt;。 &lt;span class=&#34;math inline&#34;&gt;\(\#\)&lt;/span&gt; 表示非 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 的數， &lt;span class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt; 表示任意數。&lt;span class=&#34;math inline&#34;&gt;\(\#\)&lt;/span&gt; 的個數，或者說此矩陣的非零向量的個數被定義爲這個矩陣的&lt;strong&gt;階數 (rank)&lt;/strong&gt;。階梯形矩陣的階數記爲： &lt;span class=&#34;math inline&#34;&gt;\(rank(A)\)&lt;/span&gt;。零矩陣 &lt;span class=&#34;math inline&#34;&gt;\(O\)&lt;/span&gt; 的階數： &lt;span class=&#34;math inline&#34;&gt;\(rank(O)=0\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-\# &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; *  &amp;amp; *\\
-0 &amp;amp; \# &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; *  &amp;amp; * \\
-0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \# &amp;amp; * &amp;amp; * &amp;amp; * &amp;amp; *  &amp;amp; * \\
-0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0  &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \# &amp;amp; *  \\
-0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0  &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0  &amp;amp; 0
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} 2 &amp;amp; 5 &amp;amp; 6 &amp;amp; 9\\ 0 &amp;amp; 5 &amp;amp; -1 &amp;amp; 4\\ 0 &amp;amp; 0 &amp;amp; 5 &amp;amp; 0\\ \end{array} \right)， rank(A)=3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(B=\left( \begin{array}{c} 4 &amp;amp; 0 &amp;amp; 6 &amp;amp; 0\\ 0 &amp;amp; 5 &amp;amp; 0 &amp;amp; 4\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 5\\ \end{array} \right)， rank(B)=3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(C=\left( \begin{array}{c} 2 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; -7 &amp;amp; 4\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; -1\\ \end{array} \right)， rank(C)=3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(D=\left( \begin{array}{c} 4 &amp;amp; 0 &amp;amp; 6 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 4\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(D)=2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(F=\left( \begin{array}{c} 0 &amp;amp; 2 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(F)=1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O=\left( \begin{array}{c} 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ \end{array} \right), rank(O)=0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

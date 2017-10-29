@@ -247,4 +247,4 @@ Var(S)               &=E(S^2)-[E(S)]^2 \\
 $$\frac{n-1}{\sigma^2}S^2\sim \mathcal{X}_{n-1}^2\\
 Var(S^2)=\frac{2\sigma^4}{n-1}$$
 
-$\mathcal{X}^2_m$： 自由度爲 $m$ 的卡方分佈。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。
+$\mathcal{X}^2_m$： 自由度爲 $m$ 的[卡方分佈](https://winterwang.github.io/post/chi-square-distribution/)。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。
