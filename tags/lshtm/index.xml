@@ -11,7 +11,7 @@
     <atom:link href="/tags/lshtm/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Sample Size in Clinical Trial</title>
+      <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
       <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
@@ -96,6 +96,48 @@
 &lt;/div&gt;
 &lt;div id=&#34;-type-i-and-type-ii-errors&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;第一類和第二類錯誤 Type I and type II errors&lt;/h3&gt;
+&lt;p&gt;下面羅列一下我們在進行實驗設計時要用到的概念和相應的標記，注意雖然我們無法知道真正的人羣裏真實參數 (parameter) 的大小，但是我們需要用一些估計 (estimator) 來代替：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(p_1=\)&lt;/span&gt; the &lt;strong&gt;observed percentage&lt;/strong&gt; in those on standard treatment &lt;br&gt; 意爲施行標準治療法時觀察到的（治癒/有效）百分比&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(p_2=\)&lt;/span&gt; the &lt;strong&gt;observed percentage&lt;/strong&gt; in those on “new” treatment &lt;br&gt; 意爲施行“新療法”時觀察到的（治癒/有效）的百分比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow p_1-p_2=\)&lt;/span&gt; &lt;strong&gt;observed treatment effect&lt;/strong&gt; &lt;br&gt; 意爲可以觀察到的治療效果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi_1=\)&lt;/span&gt; the &lt;strong&gt;anticipated percentage&lt;/strong&gt; in those on standard treatment &lt;br&gt; 意爲施行標準治療法時，我們預期的（治癒/有效）百分比&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi_2=\)&lt;/span&gt; the &lt;strong&gt;anticipated percentage&lt;/strong&gt; in those on “new” treatment &lt;br&gt; 意爲施行“新療法”時，我們預期的（治療/有效）百分比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow \pi_1-\pi_2=\)&lt;/span&gt; is the true difference which has been decided it is important to detect &lt;br&gt; 意爲上面第 4 條中我們設定好的希望通過實驗證實的真實的療效差別。&lt;/p&gt;
+&lt;p&gt;其餘的數學標記包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\alpha=\)&lt;/span&gt; 有意義的療效差異，在統計學上的水平 (概率水平，通常設定爲 0.05 or 5%)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(1-\beta=\)&lt;/span&gt; Degree of certainty that a true difference of &lt;span class=&#34;math inline&#34;&gt;\(\pi_1 - \pi_2\)&lt;/span&gt; would be detected. &lt;br&gt; 效能, power。意爲有多大的把握能通過實驗檢測出療效差別。（通常將目標值設定爲 &lt;span class=&#34;math inline&#34;&gt;\(1-\beta=90\%\)&lt;/span&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;無&lt;strong&gt;真實差別&lt;/strong&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi_1-\pi\)&lt;/span&gt; &lt;strong&gt;真實差別&lt;/strong&gt;存在&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;strong&gt;觀察到&lt;/strong&gt;不存在有意義差別&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1-\alpha\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; &lt;br&gt; Type II error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;strong&gt;觀察到&lt;/strong&gt;存在有意義差別&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; &lt;br&gt; Type I error&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; &lt;br&gt; Power&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type I error:&lt;/strong&gt; A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Type II error:&lt;/strong&gt; A type II error is when in truth there exists a difference of &lt;span class=&#34;math inline&#34;&gt;\(\pi_1-\pi_2\)&lt;/span&gt; but the observed results fail to reach statistical significance, i.e. a false negative result.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Alternative ways of describing &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are as follows: - &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is the risk of a type I error; - &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is the risk of a type II error. &lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; is termed statistical power.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

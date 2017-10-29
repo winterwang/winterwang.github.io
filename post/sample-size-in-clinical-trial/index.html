@@ -38,7 +38,7 @@
 
   
 
-  <title>Sample Size in Clinical Trial | Be ambitious</title>
+  <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -160,7 +160,7 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">Sample Size in Clinical Trial</h1>
+    <h1 itemprop="name">臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</h1>
     
 
 <div class="article-metadata">
@@ -225,28 +225,28 @@
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Sample%20Size%20in%20Clinical%20Trial&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f"
+         href="https://twitter.com/intent/tweet?text=%e8%87%a8%e7%89%80%e5%af%a6%e9%a9%97%e7%9a%84%e6%a8%a3%e6%9c%ac%e9%87%8f%e8%a8%88%e7%ae%97%e5%95%8f%e9%a1%8c%20Sample%20Size%20in%20Clinical%20Trial&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f&amp;title=Sample%20Size%20in%20Clinical%20Trial"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f&amp;title=%e8%87%a8%e7%89%80%e5%af%a6%e9%a9%97%e7%9a%84%e6%a8%a3%e6%9c%ac%e9%87%8f%e8%a8%88%e7%ae%97%e5%95%8f%e9%a1%8c%20Sample%20Size%20in%20Clinical%20Trial"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f&amp;title=Sample%20Size%20in%20Clinical%20Trial"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f&amp;title=%e8%87%a8%e7%89%80%e5%af%a6%e9%a9%97%e7%9a%84%e6%a8%a3%e6%9c%ac%e9%87%8f%e8%a8%88%e7%ae%97%e5%95%8f%e9%a1%8c%20Sample%20Size%20in%20Clinical%20Trial"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Sample%20Size%20in%20Clinical%20Trial&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f">
+         href="mailto:?subject=%e8%87%a8%e7%89%80%e5%af%a6%e9%a9%97%e7%9a%84%e6%a8%a3%e6%9c%ac%e9%87%8f%e8%a8%88%e7%ae%97%e5%95%8f%e9%a1%8c%20Sample%20Size%20in%20Clinical%20Trial&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fsample-size-in-clinical-trial%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -339,6 +339,48 @@
 </div>
 <div id="-type-i-and-type-ii-errors" class="section level3">
 <h3>第一類和第二類錯誤 Type I and type II errors</h3>
+<p>下面羅列一下我們在進行實驗設計時要用到的概念和相應的標記，注意雖然我們無法知道真正的人羣裏真實參數 (parameter) 的大小，但是我們需要用一些估計 (estimator) 來代替：</p>
+<ul>
+<li><span class="math inline">\(p_1=\)</span> the <strong>observed percentage</strong> in those on standard treatment <br> 意爲施行標準治療法時觀察到的（治癒/有效）百分比</li>
+<li><span class="math inline">\(p_2=\)</span> the <strong>observed percentage</strong> in those on “new” treatment <br> 意爲施行“新療法”時觀察到的（治癒/有效）的百分比</li>
+</ul>
+<p><span class="math inline">\(\Rightarrow p_1-p_2=\)</span> <strong>observed treatment effect</strong> <br> 意爲可以觀察到的治療效果。</p>
+<ul>
+<li><span class="math inline">\(\pi_1=\)</span> the <strong>anticipated percentage</strong> in those on standard treatment <br> 意爲施行標準治療法時，我們預期的（治癒/有效）百分比</li>
+<li><span class="math inline">\(\pi_2=\)</span> the <strong>anticipated percentage</strong> in those on “new” treatment <br> 意爲施行“新療法”時，我們預期的（治療/有效）百分比</li>
+</ul>
+<p><span class="math inline">\(\Rightarrow \pi_1-\pi_2=\)</span> is the true difference which has been decided it is important to detect <br> 意爲上面第 4 條中我們設定好的希望通過實驗證實的真實的療效差別。</p>
+<p>其餘的數學標記包括：</p>
+<ul>
+<li><span class="math inline">\(\alpha=\)</span> 有意義的療效差異，在統計學上的水平 (概率水平，通常設定爲 0.05 or 5%)</li>
+<li><span class="math inline">\(1-\beta=\)</span> Degree of certainty that a true difference of <span class="math inline">\(\pi_1 - \pi_2\)</span> would be detected. <br> 效能, power。意爲有多大的把握能通過實驗檢測出療效差別。（通常將目標值設定爲 <span class="math inline">\(1-\beta=90\%\)</span>）</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">無<strong>真實差別</strong></th>
+<th align="center"><span class="math inline">\(\pi_1-\pi\)</span> <strong>真實差別</strong>存在</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>觀察到</strong>不存在有意義差別</td>
+<td align="center"><span class="math inline">\(1-\alpha\)</span></td>
+<td align="center"><span class="math inline">\(\beta\)</span> <br> Type II error</td>
+</tr>
+<tr class="even">
+<td><strong>觀察到</strong>存在有意義差別</td>
+<td align="center"><span class="math inline">\(\alpha\)</span> <br> Type I error</td>
+<td align="center"><span class="math inline">\(1-\beta\)</span> <br> Power</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Type I error:</strong> A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result.</li>
+<li><strong>Type II error:</strong> A type II error is when in truth there exists a difference of <span class="math inline">\(\pi_1-\pi_2\)</span> but the observed results fail to reach statistical significance, i.e. a false negative result.</li>
+</ul>
+<p>Alternative ways of describing <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are as follows: - <span class="math inline">\(\alpha\)</span> is the risk of a type I error; - <span class="math inline">\(\beta\)</span> is the risk of a type II error. <span class="math inline">\(1-\beta\)</span> is termed statistical power.</p>
 </div>
 
     </div>

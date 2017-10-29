@@ -1,5 +1,5 @@
 ---
-title: Sample Size in Clinical Trial
+title: 臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial
 author: ''
 date: '2017-10-29'
 slug: sample-size-in-clinical-trial
@@ -73,3 +73,33 @@ ISIS-2         | n=8592     | n=8595                      |
 <br> 在實際臨牀實驗中，結論是從觀察數據中得來的，而不是從我們預想的那個“未知的實驗效果”。觀察獲得的療效差別，可能比預想的大（有效），也很可能比預想的小（無效）。設計較好的臨牀實驗應該有足夠機率觀察到有意義的療效差別，即使觀察得到的結果不如預期的大。當然要增加我們觀察到有意義的療效差別，最簡單的辦法是增加樣本量。這個條件的含義是，當療效真差別真實存在，我們要有足夠大的把握把它通過實驗觀察到。
 
 ### 第一類和第二類錯誤 Type I and type II errors
+
+下面羅列一下我們在進行實驗設計時要用到的概念和相應的標記，注意雖然我們無法知道真正的人羣裏真實參數 (parameter) 的大小，但是我們需要用一些估計 (estimator) 來代替：
+
+- $p_1=$ the **observed percentage** in those on standard treatment <br> 意爲施行標準治療法時觀察到的（治癒/有效）百分比
+- $p_2=$ the **observed percentage** in those on "new" treatment <br> 意爲施行“新療法”時觀察到的（治癒/有效）的百分比
+
+$\Rightarrow p_1-p_2=$ **observed treatment effect** <br> 意爲可以觀察到的治療效果。
+
+- $\pi_1=$ the **anticipated percentage** in those on standard treatment <br> 意爲施行標準治療法時，我們預期的（治癒/有效）百分比
+- $\pi_2=$ the **anticipated percentage** in those on "new" treatment <br> 意爲施行“新療法”時，我們預期的（治療/有效）百分比
+
+$\Rightarrow \pi_1-\pi_2=$ is the true difference which has been decided it is important to detect <br> 意爲上面第 4 條中我們設定好的希望通過實驗證實的真實的療效差別。
+
+其餘的數學標記包括：
+
+- $\alpha=$ 有意義的療效差異，在統計學上的水平 (概率水平，通常設定爲 0.05 or 5%)
+- $1-\beta=$ Degree of certainty that a true difference of $\pi_1 - \pi_2$ would be detected. <br> 效能, power。意爲有多大的把握能通過實驗檢測出療效差別。（通常將目標值設定爲 $1-\beta=90\%$）
+
+
+|                          |       無**真實差別**       | $\pi_1-\pi$ **真實差別**存在 |
+|--------------------------|:--------------------------:|:----------------------------:|
+| **觀察到**不存在有意義差別 |         $1-\alpha$         |  $\beta$ <br> Type II error  |
+| **觀察到**存在有意義差別   | $\alpha$ <br> Type I error |       $1-\beta$ <br> Power        |
+
+- **Type I error:** A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result.
+- **Type II error:** A type II error is when in truth there exists a difference of $\pi_1-\pi_2$ but the observed results fail to reach statistical significance, i.e. a false negative result.
+
+Alternative ways of describing $\alpha$ and $\beta$ are as follows:
+- $\alpha$ is the risk of a type I error;
+- $\beta$ is the risk of a type II error. $1-\beta$ is termed statistical power.
