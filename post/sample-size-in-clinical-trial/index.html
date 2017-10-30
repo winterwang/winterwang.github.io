@@ -358,19 +358,19 @@
 <table>
 <thead>
 <tr class="header">
-<th></th>
+<th align="center"></th>
 <th align="center">無<strong>真實差別</strong></th>
-<th align="center"><span class="math inline">\(\pi_1-\pi\)</span> <strong>真實差別</strong>存在</th>
+<th align="center"><span class="math inline">\(\pi_1-\pi\)</span> <br> <strong>真實差別</strong>存在</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>觀察到</strong>不存在有意義差別</td>
+<td align="center"><strong>觀察到</strong>不存在有意義差別</td>
 <td align="center"><span class="math inline">\(1-\alpha\)</span></td>
 <td align="center"><span class="math inline">\(\beta\)</span> <br> Type II error</td>
 </tr>
 <tr class="even">
-<td><strong>觀察到</strong>存在有意義差別</td>
+<td align="center"><strong>觀察到</strong>存在有意義差別</td>
 <td align="center"><span class="math inline">\(\alpha\)</span> <br> Type I error</td>
 <td align="center"><span class="math inline">\(1-\beta\)</span> <br> Power</td>
 </tr>
@@ -380,7 +380,98 @@
 <li><strong>Type I error:</strong> A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result.</li>
 <li><strong>Type II error:</strong> A type II error is when in truth there exists a difference of <span class="math inline">\(\pi_1-\pi_2\)</span> but the observed results fail to reach statistical significance, i.e. a false negative result.</li>
 </ul>
-<p>Alternative ways of describing <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are as follows: - <span class="math inline">\(\alpha\)</span> is the risk of a type I error; - <span class="math inline">\(\beta\)</span> is the risk of a type II error. <span class="math inline">\(1-\beta\)</span> is termed statistical power.</p>
+<p>Alternative ways of describing <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are as follows:</p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is the risk of a Type I error;</li>
+<li><span class="math inline">\(\beta\)</span> is the risk of a Type II error. <span class="math inline">\(1-\beta\)</span> is termed statistical power.</li>
+</ul>
+<table class="table table-striped table-bordered" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-1">Table 1: </span>Values of f(α, β) for different levels of α and β
+</caption>
+<thead>
+<tr>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+α
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+β
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+0.05
+</th>
+<th style="text-align:center;">
+0.1
+</th>
+<th style="text-align:center;">
+0.2
+</th>
+<th style="text-align:center;">
+0.5
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+(95% power)
+</td>
+<td style="text-align:center;">
+(90% power)
+</td>
+<td style="text-align:center;">
+(80% power)
+</td>
+<td style="text-align:center;">
+(50% power)
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+13.0
+</td>
+<td style="text-align:center;">
+10.5
+</td>
+<td style="text-align:center;">
+7.85
+</td>
+<td style="text-align:center;">
+3.84
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+17.8
+</td>
+<td style="text-align:center;">
+14.9
+</td>
+<td style="text-align:center;">
+11.7
+</td>
+<td style="text-align:center;">
+6.63
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 
     </div>

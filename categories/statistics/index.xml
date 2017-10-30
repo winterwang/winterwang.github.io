@@ -115,19 +115,19 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
-&lt;th&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;無&lt;strong&gt;真實差別&lt;/strong&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi_1-\pi\)&lt;/span&gt; &lt;strong&gt;真實差別&lt;/strong&gt;存在&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi_1-\pi\)&lt;/span&gt; &lt;br&gt; &lt;strong&gt;真實差別&lt;/strong&gt;存在&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;&lt;strong&gt;觀察到&lt;/strong&gt;不存在有意義差別&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;觀察到&lt;/strong&gt;不存在有意義差別&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1-\alpha\)&lt;/span&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; &lt;br&gt; Type II error&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;&lt;strong&gt;觀察到&lt;/strong&gt;存在有意義差別&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;觀察到&lt;/strong&gt;存在有意義差別&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; &lt;br&gt; Type I error&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; &lt;br&gt; Power&lt;/td&gt;
 &lt;/tr&gt;
@@ -137,7 +137,98 @@
 &lt;li&gt;&lt;strong&gt;Type I error:&lt;/strong&gt; A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Type II error:&lt;/strong&gt; A type II error is when in truth there exists a difference of &lt;span class=&#34;math inline&#34;&gt;\(\pi_1-\pi_2\)&lt;/span&gt; but the observed results fail to reach statistical significance, i.e. a false negative result.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Alternative ways of describing &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are as follows: - &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is the risk of a type I error; - &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is the risk of a type II error. &lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; is termed statistical power.&lt;/p&gt;
+&lt;p&gt;Alternative ways of describing &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is the risk of a Type I error;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is the risk of a Type II error. &lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; is termed statistical power.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-1&#34;&gt;Table 1: &lt;/span&gt;Values of f(α, β) for different levels of α and β
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;&#34; colspan=&#34;1&#34;&gt;
+&lt;div style=&#34;border-bottom: 1px solid #ddd; padding-bottom: 5px;&#34;&gt;
+α
+&lt;/div&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;&#34; colspan=&#34;4&#34;&gt;
+&lt;div style=&#34;border-bottom: 1px solid #ddd; padding-bottom: 5px;&#34;&gt;
+β
+&lt;/div&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+0.05
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+0.1
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+0.2
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+0.5
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+(95% power)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+(90% power)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+(80% power)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+(50% power)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.05
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+13.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+10.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+7.85
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3.84
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.01
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+17.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+14.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+11.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+6.63
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 </description>
     </item>

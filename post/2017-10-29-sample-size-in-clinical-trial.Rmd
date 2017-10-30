@@ -12,8 +12,9 @@ tags:
   - LSHTM
   - London
   - Clinical Trial
-summary: "臨牀實驗的樣本量計算問題"
+summary: "臨牀實驗的樣本量計算問題 to be updated"
 ---
+
 
 
 ### 背景
@@ -92,8 +93,8 @@ $\Rightarrow \pi_1-\pi_2=$ is the true difference which has been decided it is i
 - $1-\beta=$ Degree of certainty that a true difference of $\pi_1 - \pi_2$ would be detected. <br> 效能, power。意爲有多大的把握能通過實驗檢測出療效差別。（通常將目標值設定爲 $1-\beta=90\%$）
 
 
-|                          |       無**真實差別**       | $\pi_1-\pi$ **真實差別**存在 |
-|--------------------------|:--------------------------:|:----------------------------:|
+|                          |       無**真實差別**       | $\pi_1-\pi$ <br> **真實差別**存在 |
+|:------------------------:|:--------------------------:|:----------------------------:|
 | **觀察到**不存在有意義差別 |         $1-\alpha$         |  $\beta$ <br> Type II error  |
 | **觀察到**存在有意義差別   | $\alpha$ <br> Type I error |       $1-\beta$ <br> Power        |
 
@@ -101,5 +102,19 @@ $\Rightarrow \pi_1-\pi_2=$ is the true difference which has been decided it is i
 - **Type II error:** A type II error is when in truth there exists a difference of $\pi_1-\pi_2$ but the observed results fail to reach statistical significance, i.e. a false negative result.
 
 Alternative ways of describing $\alpha$ and $\beta$ are as follows:
-- $\alpha$ is the risk of a type I error;
-- $\beta$ is the risk of a type II error. $1-\beta$ is termed statistical power.
+
+- $\alpha$ is the risk of a Type I error;
+- $\beta$ is the risk of a Type II error. $1-\beta$ is termed statistical power.
+
+
+```{r echo=FALSE}
+library(knitr)
+library(kableExtra)
+dt <- read.csv("/home/ccwang/Documents/full-website-content/static/files/falphabeta.csv", header = T)
+names(dt) <- c(" ", "0.05", "0.1", "0.2", "0.5")
+dt[,1] <- c(" ", 0.05, 0.01)
+kable(dt, "html",align = "c",caption = "Values of f(\u03b1, \u03b2) for different levels of \u03b1 and \u03b2") %>%
+#   column_spec(1:5, bold = T, border_right = T)  %>%
+  kable_styling(bootstrap_options = c("striped", "bordered")) %>%
+  add_header_above(c("\u03b1" = 1, "\u03b2" = 4))
+```
