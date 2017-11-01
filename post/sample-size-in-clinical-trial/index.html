@@ -276,52 +276,107 @@
 <li>實驗本身的可信度。 <br> 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。</li>
 </ol>
 <p>這裏我們只考慮沒有其他任何因素的影響下，<strong>1. 統計學方案</strong>上該如何計算準確的所需樣本量的大小。</p>
-<p>比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：</p>
-<table>
+比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：
+<table class="table table-striped table-bordered" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-1">Table 1: </span>Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI
+</caption>
 <thead>
-<tr class="header">
-<th>治療組</th>
-<th>溶栓酶</th>
-<th>安慰劑</th>
-<th>p-value</th>
+<tr>
+<th style="text-align:left;">
+治療組
+</th>
+<th style="text-align:left;">
+溶栓酶
+</th>
+<th style="text-align:left;">
+安慰劑
+</th>
+<th style="text-align:left;">
+p.value
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>1st Australian</td>
-<td>n=264</td>
-<td>n=253</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+1st Australian
+</td>
+<td style="text-align:left;">
+n=264
+</td>
+<td style="text-align:left;">
+n=253
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td>死亡人數</td>
-<td>26 (9.8%)</td>
-<td>32 (12.6%)</td>
-<td>p = 0.32</td>
+<tr>
+<td style="text-align:left;">
+死亡人數
+</td>
+<td style="text-align:left;">
+26 (9.8%)
+</td>
+<td style="text-align:left;">
+32 (12.6%)
+</td>
+<td style="text-align:left;">
+p = 0.32
+</td>
 </tr>
-<tr class="odd">
-<td>評價</td>
-<td>Risk ratio</td>
-<td>0.78 (95% CI: 0.48 to 1.27)</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+評價
+</td>
+<td style="text-align:left;">
+Risk ratio
+</td>
+<td style="text-align:left;">
+0.78 (95% CI: 0.48 to 1.27)
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td>ISIS-2</td>
-<td>n=8592</td>
-<td>n=8595</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+ISIS-2
+</td>
+<td style="text-align:left;">
+n=8592
+</td>
+<td style="text-align:left;">
+n=8595
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="odd">
-<td>死亡人數</td>
-<td>791 (9.2%)</td>
-<td>1029 (12.0%)</td>
-<td>p &lt; 0.001</td>
+<tr>
+<td style="text-align:left;">
+死亡人數
+</td>
+<td style="text-align:left;">
+791 (9.2%)
+</td>
+<td style="text-align:left;">
+1029 (12.0%)
+</td>
+<td style="text-align:left;">
+p &lt; 0.001
+</td>
 </tr>
-<tr class="even">
-<td>評價</td>
-<td>Risk ratio</td>
-<td>0.77 (95% CI: 0.70 to 0.84)</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+評價
+</td>
+<td style="text-align:left;">
+Risk ratio
+</td>
+<td style="text-align:left;">
+0.77 (95% CI: 0.70 to 0.84)
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
 </tbody>
 </table>
@@ -355,50 +410,98 @@
 <li><span class="math inline">\(\alpha=\)</span> 有意義的療效差異，在統計學上的水平 (概率水平，通常設定爲 0.05 or 5%)</li>
 <li><span class="math inline">\(1-\beta=\)</span> Degree of certainty that a true difference of <span class="math inline">\(\pi_1 - \pi_2\)</span> would be detected. <br> 效能, power。意爲有多大的把握能通過實驗檢測出療效差別。（通常將目標值設定爲 <span class="math inline">\(1-\beta=90\%\)</span>）</li>
 </ul>
-<table>
+<table class="table table-striped table-bordered" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 2: Observed trial results compared to the <code>truth</code> of 1) no difference; 2) a true <span class="math inline">\(\pi_1-\pi_2\)</span> diffrence
+</caption>
 <thead>
-<tr class="header">
-<th align="center"></th>
-<th align="center">無<strong>真實差別</strong></th>
-<th align="center"><span class="math inline">\(\pi_1-\pi\)</span> <br> <strong>真實差別</strong>存在</th>
+<tr>
+<th style="border-bottom:hidden">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+真實情況 <br> Truth
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+無差別
+</th>
+<th style="text-align:center;">
+真實差別存在 <span class="math inline">\(\pi_1-\pi_2\)</span>
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center"><strong>觀察到</strong>不存在有意義差別</td>
-<td align="center"><span class="math inline">\(1-\alpha\)</span></td>
-<td align="center"><span class="math inline">\(\beta\)</span> <br> Type II error</td>
+<tr>
+<td style="text-align:center;">
+觀察到不存在有意義差別
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(1−\alpha\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\beta\)</span> <br> Type II error
+</td>
 </tr>
-<tr class="even">
-<td align="center"><strong>觀察到</strong>存在有意義差別</td>
-<td align="center"><span class="math inline">\(\alpha\)</span> <br> Type I error</td>
-<td align="center"><span class="math inline">\(1-\beta\)</span> <br> Power</td>
+<tr>
+<td style="text-align:center;">
+觀察到存在有意義差別
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\alpha\)</span> <br> Type I error
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(1-\beta\)</span> <br> Power
+</td>
 </tr>
 </tbody>
 </table>
+<p>考慮上面這個表格，可以很容易想到，一個理想的實驗設計，我們希望這個臨牀實驗獲得的結果儘可能地落在上表中的</p>
+<ol style="list-style-type: decimal">
+<li>左上角：即如果真實情況是無差別的，實驗結果也應該觀察到不存在有意義的差別。</li>
+<li>右下角：即如果真實情況是是存在真實差別 <span class="math inline">\(\pi_1-\pi_2\)</span> 的，試驗結果也應該觀察到有意義的差別。</li>
+</ol>
+<p>然而，我們在獲得臨牀實驗結果之後常常犯的兩類錯誤，同樣在上面的表格中顯示：</p>
 <ul>
-<li><strong>Type I error:</strong> A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result.</li>
-<li><strong>Type II error:</strong> A type II error is when in truth there exists a difference of <span class="math inline">\(\pi_1-\pi_2\)</span> but the observed results fail to reach statistical significance, i.e. a false negative result.</li>
+<li><strong>Type I error:</strong> A type I error is when a treatment difference is claimed based on a statistically significant observed result when in truth no such difference exists, i.e. a false positive result. <br> 左下角爲<strong>一類錯誤</strong>，即實驗結果觀察到有顯著的療效差異，然而，真實情況是並沒有差異的話，被認爲是假陽性判斷。<span class="math inline">\(\alpha\)</span> 表示一類錯誤發生的概率。</li>
+<li><strong>Type II error:</strong> A type II error is when in truth there exists a difference of <span class="math inline">\(\pi_1-\pi_2\)</span> but the observed results fail to reach statistical significance, i.e. a false negative result. <br> 右上角爲<strong>二類錯誤</strong>，即實驗結果觀察到沒有顯著的療效差異，然而，真實情況是有差異的話，被認爲是假陰性判斷。<span class="math inline">\(\beta\)</span> 表示二類錯誤發生的概率。</li>
 </ul>
 <p>Alternative ways of describing <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are as follows:</p>
 <ul>
-<li><span class="math inline">\(\alpha\)</span> is the risk of a Type I error;</li>
-<li><span class="math inline">\(\beta\)</span> is the risk of a Type II error. <span class="math inline">\(1-\beta\)</span> is termed statistical power.</li>
+<li><span class="math inline">\(\alpha\)</span> is the risk of a Type I error; <span class="math inline">\(\alpha\)</span> 也被叫做檢驗的顯著水平, significant level。</li>
+<li><span class="math inline">\(\beta\)</span> is the risk of a Type II error. <span class="math inline">\(1-\beta\)</span> is termed statistical power. 其中 <span class="math inline">\(1-\beta\)</span> 被叫做檢驗效能。</li>
 </ul>
+<p><span class="math inline">\(\alpha, 1-\beta\)</span> 的水平需要事先被確定，否則無法進行進一步的樣本量的計算。</p>
+</div>
+<div id="-percentages-or-proportions" class="section level3">
+<h3>比較兩組之間的百分比 (percentages or proportions)</h3>
+<div id="--5--90" class="section level4">
+<h4>樣本量計算公式 (使用顯著水平 5%, 和檢驗效能 90%)</h4>
+<p><span class="math display">\[n=10.5\times\frac{[\pi_1\times(100-\pi_1)+\pi_2\times(100-\pi_2)]}{(\pi_1-\pi_2)^2}\times2\]</span></p>
+<p>注意： - 上面的公式後面有 <span class="math inline">\(\times2\)</span> 是因爲前一半公式計算的只是一組（治療或對照組）所需的樣本量。 - 這裏使用的是百分比。所以當使用比例的時候，要把 <span class="math inline">\(100\)</span> 改成 <span class="math inline">\(1\)</span>。 - 使用公式計算的所需樣本量，並不是說我們需要的病例數就是計算出來的結果。上面的公式獲得的結果只是對所需樣本量的估算。</p>
+</div>
+<div id="-" class="section level4">
+<h4>樣本量計算公式的一般化 (不同的顯著水平和檢驗效能條件下)</h4>
+<p><span class="math display">\[n=f(\alpha, \beta)\times\frac{[\pi_1\times(100-\pi_1)+\pi_2\times(100-\pi_2)]}{(\pi_1-\pi_2)^2}\times2\]</span></p>
+<p>其中， <span class="math inline">\(f(\alpha, \beta)\)</span> 指的是關於檢驗顯著水平 <span class="math inline">\(\alpha\)</span> 和檢驗效能 <span class="math inline">\(\beta\)</span> 的函數。 可以參考下面的表格：</p>
 <table class="table table-striped table-bordered" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-1">Table 1: </span>Values of f(α, β) for different levels of α and β
+Table 3: Values of <span class="math inline">\(f(\alpha, \beta)\)</span> for different levels of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>
 </caption>
 <thead>
 <tr>
 <th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
-α
+<span class="math inline">\(\alpha\)</span>
 </div>
 </th>
 <th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
-β
+<span class="math inline">\(\beta\)</span>
 </div>
 </th>
 </tr>
@@ -424,16 +527,16 @@
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-(95% power)
+(<span class="math inline">\(95\%\)</span> power)
 </td>
 <td style="text-align:center;">
-(90% power)
+(<span class="math inline">\(90\%\)</span> power)
 </td>
 <td style="text-align:center;">
-(80% power)
+(<span class="math inline">\(80\%\)</span> power)
 </td>
 <td style="text-align:center;">
-(50% power)
+(<span class="math inline">\(50\%\)</span> power)
 </td>
 </tr>
 <tr>
@@ -472,6 +575,46 @@
 </tr>
 </tbody>
 </table>
+<p>要注意的是，除了上面表格中提供的 <span class="math inline">\(f(\alpha, \beta)\)</span> 數值，可以通過以下公式計算得出：</p>
+<p><span class="math display">\[f(\alpha, \beta)=(Z_{1-\frac{\alpha}{2}}+Z_{1-\beta})^2\]</span></p>
+<p>例如：</p>
+<ul>
+<li><span class="math inline">\(\alpha=0.05, \beta=0.1\)</span> 時：<span class="math inline">\(f(\alpha, \beta)=(1.96+1.282)^2=10.5\)</span>;</li>
+<li><span class="math inline">\(\alpha=0.05, \beta=0.2\)</span> 時：<span class="math inline">\(f(\alpha, \beta)=(1.96+0.84)^2=7.85\)</span>。</li>
+</ul>
+</div>
+</div>
+<div class="section level3">
+<h3>比較兩組之間的均值</h3>
+<p>許多臨牀實驗不光關心患者是否被治癒或者死亡，另外還有許多實驗的主要結果是連續變量：例如，腎功能（腎小球濾過率），或收縮期血壓。然而背後的原理其實還是一樣的。</p>
+<div class="section level4">
+<h4>樣本兩計算公式</h4>
+<p>然而，另外一個必須考慮的因素：治療組對照組測量結果的標準差 (standard deviation, <span class="math inline">\(sd, \sigma\)</span>)。這裏先考慮兩者標準差相同的情況。標準差的數據通常來自與先行研究的科學文獻，有些（土豪）實驗會先進行預實驗獲得想要的實驗數據–標準差。通常，建議像比較百分比那樣，調整改變一下不同的檢驗顯著水品和檢驗效能，計算多個所需樣本量來互相比較參考。</p>
+<p>比較兩組均值時需要用到的數學標記：</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mu_1=\)</span> 標準治療法（對照組）的期待平均值；</li>
+<li><span class="math inline">\(\mu_2=\)</span> 新治療法（治療組）的期待平均值；</li>
+<li><span class="math inline">\(\sigma=\)</span> 兩組的標準差（假設兩組標準差相同）；</li>
+<li><span class="math inline">\(\alpha=\)</span> 一類錯誤發生的概率，檢驗顯著水平；</li>
+<li><span class="math inline">\(\beta=\)</span> 二類錯誤發生的概率，<span class="math inline">\(1-\beta\)</span> 是檢驗效能。</li>
+</ol>
+<p>用上面標記表示的公式如下：</p>
+<p><span class="math display">\[n=f(\alpha, \beta)\times\frac{2\sigma^2}{(\mu_1-\mu_2)^2}\times2\]</span></p>
+<p>可以認爲，上面的公式中 <span class="math inline">\(\mu_1-\mu_2\)</span> ，各組的平均值本身並不重要，兩組之間均值的差是我們關心的。如果用 <span class="math inline">\(\delta\)</span> 表示兩組之間均值差的期待值，那麼公式可以改寫爲：</p>
+<p><span class="math display">\[n=f(\alpha, \beta)\times\frac{2\sigma^2}{\delta^2}\times2\]</span></p>
+</div>
+</div>
+<div class="section level3">
+<h3>樣本量計算的調整</h3>
+<p>如果我們無法成功隨訪部分患者，那麼這部分人的數據就無法獲得，實驗數據的說服力就會下降。如果我們預估計有 <span class="math inline">\(Q\%\)</span> 的人會失去隨訪，那麼我們可以將之前步驟中計算獲得的數字乘以 <span class="math inline">\(\frac{1}{1-Q\%}\)</span>。</p>
+<p>如果實驗設計是我們會在某個時間點允許治療組或對照組中的部分人變更自己的實驗方案（即治療組的參與者改進入對照組，反之亦然）。那麼所需樣本量的計算調整的方法爲：</p>
+<ul>
+<li>令 <span class="math inline">\(Q_1=\)</span> 第一組中改成第二組治療方案的人數比例；</li>
+<li>令 <span class="math inline">\(Q_2=\)</span> 第二組中改成第一組治療方案的人數比例；</li>
+<li>將之前步驟中計算獲得的樣本量數字乘以 <span class="math inline">\(\frac{1}{(1-Q_1-Q_2)^2}\)</span>。</li>
+</ul>
+<p>如果預期參與實驗治療組（而不是對照組）的人中有部分人（比例爲 <span class="math inline">\(Q\)</span>）會中斷實驗進程，那麼調整公式爲：<span class="math inline">\(\frac{1}{(1-Q)^2}\)</span>。</p>
+<p>還有的實驗會使用大於 <span class="math inline">\(1:1\)</span> 的比例設計對照組和實驗組的人數。假設這一比例爲 <span class="math inline">\(r:1\)</span> 那麼調整的樣本量數字還要乘以：<span class="math inline">\(\frac{(r+1)^2}{4r}\)</span>。</p>
 </div>
 
     </div>
