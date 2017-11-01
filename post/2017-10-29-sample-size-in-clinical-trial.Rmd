@@ -12,7 +12,7 @@ tags:
   - LSHTM
   - London
   - Clinical Trial
-summary: "臨牀實驗的樣本量計算問題 to be updated"
+summary: "臨牀實驗的樣本量計算問題"
 ---
 
 
