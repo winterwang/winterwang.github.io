@@ -239,7 +239,12 @@ Table 2: Observed trial results compared to the &lt;code&gt;truth&lt;/code&gt; o
 &lt;div id=&#34;--5--90&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;樣本量計算公式 (使用顯著水平 5%, 和檢驗效能 90%)&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[n=10.5\times\frac{[\pi_1\times(100-\pi_1)+\pi_2\times(100-\pi_2)]}{(\pi_1-\pi_2)^2}\times2\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;注意： - 上面的公式後面有 &lt;span class=&#34;math inline&#34;&gt;\(\times2\)&lt;/span&gt; 是因爲前一半公式計算的只是一組（治療或對照組）所需的樣本量。 - 這裏使用的是百分比。所以當使用比例的時候，要把 &lt;span class=&#34;math inline&#34;&gt;\(100\)&lt;/span&gt; 改成 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;。 - 使用公式計算的所需樣本量，並不是說我們需要的病例數就是計算出來的結果。上面的公式獲得的結果只是對所需樣本量的估算。&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上面的公式後面有 &lt;span class=&#34;math inline&#34;&gt;\(\times2\)&lt;/span&gt; 是因爲前一半公式計算的只是一組（治療或對照組）所需的樣本量。&lt;/li&gt;
+&lt;li&gt;這裏使用的是百分比。所以當使用比例的時候，要把 &lt;span class=&#34;math inline&#34;&gt;\(100\)&lt;/span&gt; 改成 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;使用公式計算的所需樣本量，並不是說我們需要的病例數就是計算出來的結果。上面的公式獲得的結果只是對所需樣本量的估算。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;樣本量計算公式的一般化 (不同的顯著水平和檢驗效能條件下)&lt;/h4&gt;
