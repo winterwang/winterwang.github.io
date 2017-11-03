@@ -159,6 +159,84 @@
   
   <div>
     
+    <h2><a href="https://winterwang.github.io/post/likelihood/">似然非然 Likelihood</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-11-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Nov 2, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/statistics">statistics</a
+    >, 
+    
+    <a href="/categories/study-abroad">study abroad</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/medical-statistics">Medical Statistics</a
+    >, 
+    
+    <a href="/tags/inference">inference</a
+    >, 
+    
+    <a href="/tags/london">London</a
+    >, 
+    
+    <a href="/tags/lshtm">LSHTM</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      <div id="-vs.probability-vs.inference" class="section level3">
+<h3>概率 vs. 推斷/Probability vs. Inference</h3>
+<p>在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 <span class="math inline">\(0.5\; Prob(coin\;landing\;heads)=0.5\)</span>。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。</p>
+<p><span class="math display">\[
+\binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205
+\]</span></p>
+<pre class="r"><code>dbinom(4, 10, 0.5)</code></pre>
+<pre><code>## [1] 0.2050781</code></pre>
+<pre class="r"><code># or you can calculate by hand:
+factorial(10)*(0.5^10)/(factorial(4)*(factorial(6)))</code></pre>
+<pre><code>## [1] 0.2050781</code></pre>
+<p>在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。所以這個 <span class="math inline">\(Prob(coin\;landing\;heads)\)</span> 的概率大小對於“人類”來說是未知的。所以我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。所以我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。所以，這種情況下，<strong>似然法 (likelihood)</strong> 就是我們進行參數估計的最佳手段</p>
+</div>
+<div class="section level3">
+<h3>似然和最大似然估計</h3>
+</div>
+
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
     <h2><a href="https://winterwang.github.io/post/sample-size-in-clinical-trial/">臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</a></h2>
     
 
@@ -729,65 +807,6 @@
     <div class="article-style"><p>
       
       Bayes 概念; 伯努利分佈 Bernoulli distribution ; 期望值; 方差
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="https://winterwang.github.io/post/probability-gambling-answers/">“你會用概率論來賭博嗎？”之解答</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-10-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Mon, Oct 9, 2017
-    </time>
-  </span>
-
-  
-  
-  
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/statistics">statistics</a
-    >, 
-    
-    <a href="/categories/study-abroad">study abroad</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/medical-statistics">Medical Statistics</a
-    >, 
-    
-    <a href="/tags/probability">probability</a
-    >, 
-    
-    <a href="/tags/learning-notes">learning notes</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      解答昨天的問題
       
     </p></div>
   </div>

@@ -11,6 +11,31 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>似然非然 Likelihood</title>
+      <link>https://winterwang.github.io/post/likelihood/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/likelihood/</guid>
+      <description>&lt;div id=&#34;-vs.probability-vs.inference&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;概率 vs. 推斷/Probability vs. Inference&lt;/h3&gt;
+&lt;p&gt;在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 &lt;span class=&#34;math inline&#34;&gt;\(0.5\; Prob(coin\;landing\;heads)=0.5\)&lt;/span&gt;。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dbinom(4, 10, 0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.2050781&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# or you can calculate by hand:
+factorial(10)*(0.5^10)/(factorial(4)*(factorial(6)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.2050781&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。所以這個 &lt;span class=&#34;math inline&#34;&gt;\(Prob(coin\;landing\;heads)\)&lt;/span&gt; 的概率大小對於“人類”來說是未知的。所以我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。所以我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。所以，這種情況下，&lt;strong&gt;似然法 (likelihood)&lt;/strong&gt; 就是我們進行參數估計的最佳手段&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然和最大似然估計&lt;/h3&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
       <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
@@ -350,7 +375,7 @@ Table 3: Values of &lt;span class=&#34;math inline&#34;&gt;\(f(\alpha, \beta)\)&
 &lt;h3&gt;比較兩組之間的均值&lt;/h3&gt;
 &lt;p&gt;許多臨牀實驗不光關心患者是否被治癒或者死亡，另外還有許多實驗的主要結果是連續變量：例如，腎功能（腎小球濾過率），或收縮期血壓。然而背後的原理其實還是一樣的。&lt;/p&gt;
 &lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;樣本兩計算公式&lt;/h4&gt;
+&lt;h4&gt;樣本量計算公式&lt;/h4&gt;
 &lt;p&gt;然而，另外一個必須考慮的因素：治療組對照組測量結果的標準差 (standard deviation, &lt;span class=&#34;math inline&#34;&gt;\(sd, \sigma\)&lt;/span&gt;)。這裏先考慮兩者標準差相同的情況。標準差的數據通常來自與先行研究的科學文獻，有些（土豪）實驗會先進行預實驗獲得想要的實驗數據–標準差。通常，建議像比較百分比那樣，調整改變一下不同的檢驗顯著水品和檢驗效能，計算多個所需樣本量來互相比較參考。&lt;/p&gt;
 &lt;p&gt;比較兩組均值時需要用到的數學標記：&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -1737,89 +1762,6 @@ i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;Orthogonal matrices&lt;/a&gt;&lt;/strong&gt; have the following property: &lt;span class=&#34;math inline&#34;&gt;\(AA^T=A^TA=I\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>倫敦城漫步 (2)</title>
-      <link>https://winterwang.github.io/post/first-impression-of-london2/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/first-impression-of-london2/</guid>
-      <description>
-
-&lt;p&gt;我們學科 (Medical Statistics) 是爲數不多的在 Orientation 周就有一半以上的時間在上課的學科。別的學科像 Epidemiology 這周還集體去劍橋大學見學啥的。幾乎都是第二周，也就是10月2日週一開始的時候才有大量的必修和選修課。所以不見得再有太多時間寫見聞和體驗。（也沒有時間出去玩了&amp;hellip;..）不過學習的內容還是會來更新一下，給各位有個印象，也讓大家都來判斷以下，這裏的碩士課程的內容和質量到底如何。&lt;/p&gt;
-
-&lt;h4 id=&#34;9月22日-isw-ucl-福爾摩斯博物館-的紀念品商店&#34;&gt;9月22日 ISW &amp;amp; UCL &amp;amp; 福爾摩斯博物館（的紀念品商店）&lt;/h4&gt;
-
-&lt;p&gt;忘了交代，9月21日和22日都是 Internatioanal Student Welcome (留學生歡迎會, ISW) 的日子。充滿對這一年的期待，和但是是否自己能最終倖存下來的不安，坐在這樣壓力巨大的梯形教室裏，我和這麼多來自世界各地的年輕人成爲了同學：
-&lt;img src=&#34;https://winterwang.github.io/img/1015171443.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;這個教室就是大名鼎鼎的 &lt;a href=&#34;http://johnsnowbicentenary.lshtm.ac.uk/about-john-snow/&#34; target=&#34;_blank&#34;&gt;John Snow&lt;/a&gt; Lecture Theatre。我就知道你以爲是這個人：
-&lt;img src=&#34;https://winterwang.github.io/img/Jonsnow.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;其實歷史上的 Snow 同學可是奠定了近代流行病學基礎的巨人。比這個 bastard 強$^{9999999}$ 多了好麼，快去維基百科自學去。&lt;/p&gt;
-
-&lt;p&gt;這個大名鼎鼎的水泵就是他拆的！
-&lt;img src=&#34;https://winterwang.github.io/img/1759791785.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;閒話少敘，註冊參加時，排隊的樣子：
-&lt;img src=&#34;https://winterwang.github.io/img/1738788923.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;領到自己的卡，寫上自己的名，和課程名稱 (原諒我的粗鄙的筆跡)：
-&lt;img src=&#34;https://winterwang.github.io/img/39418260.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;看這梯形教室有多陡峭：（據說梯形教室陡峭的程度和學習壓力成正比）&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/876198141.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;學校還請來了倫敦警察（可愛壞）薯熟來跟大家講我以前感覺只有在中國才會有的防盜防火防學長的故事：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/697554235.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;22日中午結束以後我就步行在大學附近閒逛，UCL就在我們大學 Keppel Street 往北一點點。連3分鐘都不到。看這&lt;strong&gt;大學&lt;/strong&gt;，真有&lt;strong&gt;大學&lt;/strong&gt;的感覺：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/761318563.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;爲數不多的晴天在這一週已經碰到兩天了。是不是應該買張彩票試試看？（笑）
-UCL是以前高中同班同學待過（一個已經回廈門），和正在待的地方（一個正在博士後/Research Assistant?）。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/16618557.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;大學對面是UCL的醫學院：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/979802270.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有那麼一點點霍格沃茨的感覺。我在校內略逛了以下，起身前去貝克街。如果你聽說過貝克街，那你一定聽說過221號B。因爲這是小說裏福爾摩斯和華生的住址。來之前我就查過了，距離倫敦大學步行半個小時左右，中途還會經過杜莎夫人蠟像館（聽起來就令人覺得索然無味的地方）。&lt;/p&gt;
-
-&lt;p&gt;當我來到貝克街的時候，路邊有個福爾摩斯的雕像，許多人駐足和心目中世界上最聰明的男人合影留念：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/801300689.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;旁邊還有一個貝克街的公共汽車站證明了這可是真實存在的地址哦：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1411584999.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;但是其實這裏只是貝克街的起點。走到 Baker Street 221 B 之後我被門口排的長隊驚呆了：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1790216276.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;於是我趕緊跟在隊的最後面排隊，大概五分鐘過後有個老頭過來問說，你買了門票了嗎？ 我說我還以爲這裏就是排隊買門票呢。他說這些人都是排隊進福爾摩斯紀念館的。旁邊的小房間現在是紀念品商店，可以在那裏買到門票。所以我就轉身進入了紀念品商店。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1556464625.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;商店裏還真是應有盡有。你能想到的關於福爾摩斯的任何東西。而且大多數價格都不便宜：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/2032661472.jpg&#34; alt=&#34;&#34; /&gt;
-這個杯子賣八鎊，低下寫着英國製造。&lt;/p&gt;
-
-&lt;p&gt;這頂帽子，全羊毛手工製作，也寫着英國製造，49鎊一頂：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_20170922_165434.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;這兩個東西正好也是我現在需要的。所以我就買了下來。但是進入紀念館的門票竟然要16英鎊。我想還是等我有學生優惠了以後再來問問看吧。說不定可以便宜一些。打道回府的路上又經過UCL，在這棟標誌性的建築物門口的長椅上坐了許久，休息，沉思。側面的角度還是很有感覺的呢。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1277846351.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

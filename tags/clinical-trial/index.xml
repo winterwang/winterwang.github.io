@@ -350,7 +350,7 @@ Table 3: Values of &lt;span class=&#34;math inline&#34;&gt;\(f(\alpha, \beta)\)&
 &lt;h3&gt;比較兩組之間的均值&lt;/h3&gt;
 &lt;p&gt;許多臨牀實驗不光關心患者是否被治癒或者死亡，另外還有許多實驗的主要結果是連續變量：例如，腎功能（腎小球濾過率），或收縮期血壓。然而背後的原理其實還是一樣的。&lt;/p&gt;
 &lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;樣本兩計算公式&lt;/h4&gt;
+&lt;h4&gt;樣本量計算公式&lt;/h4&gt;
 &lt;p&gt;然而，另外一個必須考慮的因素：治療組對照組測量結果的標準差 (standard deviation, &lt;span class=&#34;math inline&#34;&gt;\(sd, \sigma\)&lt;/span&gt;)。這裏先考慮兩者標準差相同的情況。標準差的數據通常來自與先行研究的科學文獻，有些（土豪）實驗會先進行預實驗獲得想要的實驗數據–標準差。通常，建議像比較百分比那樣，調整改變一下不同的檢驗顯著水品和檢驗效能，計算多個所需樣本量來互相比較參考。&lt;/p&gt;
 &lt;p&gt;比較兩組均值時需要用到的數學標記：&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
