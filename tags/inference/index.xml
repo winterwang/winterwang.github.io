@@ -31,6 +31,361 @@ factorial(10)*(0.5^10)/(factorial(4)*(factorial(6)))&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;似然和最大似然估計&lt;/h3&gt;
+&lt;p&gt;此處用二項分佈的例子來理解似然法的概念：假設我們觀察到10個對象中有4個患病，我們假定這個患病的概率爲 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;。於是我們就有了下面的模型：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型：&lt;/strong&gt; 我們假定患病與否是一個服從&lt;strong&gt;二項分佈的隨機變量&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(10,\pi)\)&lt;/span&gt;。同時也默認每個人之間是否患病是相互獨立的。 &lt;strong&gt;數據：&lt;/strong&gt; 觀察到的數據是，10人中有4人患病。於是 &lt;span class=&#34;math inline&#34;&gt;\(x=4\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;現在按照觀察到的數據，參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 變成了未知數：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(X=4|\pi)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;此時我們會很自然的考慮，當 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 是未知數的時候，&lt;strong&gt;它取值爲多大的時候才能讓這個事件（即：10人中4人患病）發生的概率最大？&lt;/strong&gt; 所以我們可以將不同的數值代入 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 來計算該事件在不同概率的情況下發生的可能性到底是多少：&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+Table 1: The probability of observing &lt;span class=&#34;math inline&#34;&gt;\(X=4\)&lt;/span&gt;
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+事件 &lt;span class=&#34;math inline&#34;&gt;\(X=4\)&lt;/span&gt; 發生的概率
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.088
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;0.4&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;0.251&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.205
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.111
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.006
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;很顯然，如果 &lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt; 時，我們觀察到的事件發生的概率要比 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 取其它值時更大。於是小總結一下目前爲止的步驟如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;觀察到實驗數據（10人中4個患病）；&lt;/li&gt;
+&lt;li&gt;假定這數據服從二項分佈的概率模型，計算不同（&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的取值不同的）情況下，該事件按照假定模型發生的概率；&lt;/li&gt;
+&lt;li&gt;通過比較，我們選擇了能夠讓觀察時間發生概率最高的參數取值 (&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt;)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至此，我們可以知道，似然方程，是一個關於未知參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的函數，我們目前位置做的就是找到這個函數的最大值 (maximised)，和使之成爲最大值時的 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; ：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;我們可以畫出這個似然方程的形狀， &lt;span class=&#34;math inline&#34;&gt;\(\pi\in[0,1]\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,1,by=0.001)
+y &amp;lt;- (factorial(10)/(factorial(4)*(factorial(6))))*(x^4)*((1-x)^6)
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,0.3), ylab = &amp;quot;L(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+title(&amp;quot;Figure 1. Binomial Likelihood&amp;quot;)
+abline(h=0.251, lty=2)
+abline(v=0.4, lty=2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;從圖形上我們也能確認，&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt; 時能夠讓這個似然方程取得最大值。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然方程的一般化定義&lt;/h3&gt;
+&lt;p&gt;對於一個概率模型，如果其參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;，那麼在給定觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 時，該參數的似然方程被定義爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(L(\theta|\underline{x})=P(\underline{x}|\theta)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\underline{x}|\theta)\)&lt;/span&gt; 可以是概率（離散分佈）方程，也可以是概率密度（連續型變量）方程。對於此方程，&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 是給定的，然後再計算某些時間發生的概率。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(L(\theta|\underline{x})\)&lt;/span&gt; 是一個關於參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的方程，此時，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 是固定不變的（觀察值）。我們希望通過這個方程求出能夠使觀察到的事件發生概率最大的參數值。&lt;/li&gt;
+&lt;li&gt;似然方程&lt;strong&gt;不是&lt;/strong&gt;一個概率密度方程。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;另一個例子：&lt;/p&gt;
+&lt;p&gt;有一組觀察數據是離散型隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，它符合概率方程 &lt;span class=&#34;math inline&#34;&gt;\(f(x|\theta)\)&lt;/span&gt;。下表羅列了當 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 分別取值 &lt;span class=&#34;math inline&#34;&gt;\(1,2,3\)&lt;/span&gt; 時的概率方程的值，試求每個觀察值 &lt;span class=&#34;math inline&#34;&gt;\(X = 0,1,2,3,4\)&lt;/span&gt; 的最大似然參數估計：&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+Exercise 1
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|1)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|2)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|3)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+Exercise 1 answer
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|1)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|2)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|3)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;1&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;1&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;2&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;3&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;3&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-log-likelihood&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;對數似然方程 log-likelihood&lt;/h3&gt;
+&lt;p&gt;似然方程的最大值，可通過求 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 的最大值獲得，也可以通過求該方程的對數方程 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 的最大值獲得。傳統上，我們估計最大方程的最大值的時候，會給參數戴一頂“帽子”（因爲這是觀察獲得的數據告訴我們的參數）： &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt;。並且我們發現對數似然方程比一般的似然方程更加容易微分，因此求似然方程的最大值就變成了求對數似然方程的最大值：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=\ell^\prime(\theta)=0\\
+AND\\
+\frac{d^2\ell}{d\theta^2}&amp;lt;0\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;要注意的是，微分不提定總是能幫助我們求額的似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,3,by=0.001)
+y &amp;lt;- (x-1)^2-5
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(-5,0-1), ylab = &amp;quot;L(\U03B8)&amp;quot;, xlab = &amp;quot;\U03B8&amp;quot;)
+title(&amp;quot;Figure 2. Likelihood function with \n a limited domain&amp;quot;)
+abline(v=3, lty=2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;-lthetadata--ellthetadata-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明：當 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 取最大值時，該方程的對數方程 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 也是最大值：&lt;/h4&gt;
+&lt;p&gt;如果似然方程是連續可導，只有一個最大值，且可以二次求導，假設 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 使該方程取最大值，那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{dL}{d\theta}=0, \frac{d^2L}{d\theta^2}&amp;lt;0 \Rightarrow \theta=\hat{\theta}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(\ell=logL\)&lt;/span&gt; 那麼 &lt;span class=&#34;math inline&#34;&gt;\(\frac{d\ell}{dL}=\ell^\prime=\frac{1}{L}\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=\frac{d\ell}{dL}\cdot\frac{dL}{d\theta}=\frac{1}{L}\cdot\frac{dL}{d\theta}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 取最大值時：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=0\Leftrightarrow\frac{1}{L}\cdot\frac{dL}{d\theta}=0\\
+\because \frac{1}{L}\neq0 \\
+\therefore \frac{dL}{d\theta}=0\\
+\Leftrightarrow \theta=\hat{\theta}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\frac{d^2\ell}{d\theta^2} &amp;amp;= \frac{d}{d\theta}(\frac{d\ell}{dL}\cdot\frac{dL}{d\theta})\\
+ &amp;amp;= \frac{d\ell}{dL}\cdot\frac{d^2L}{d\theta^2} + \frac{dL}{d\theta}\cdot\frac{d}{d\theta}(\frac{d\ell}{dL})
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(\theta=\hat{\theta}\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\frac{dL}{d\theta}=0\)&lt;/span&gt; 且 &lt;span class=&#34;math inline&#34;&gt;\(\frac{d^2L}{d\theta^2}&amp;lt;0 \Rightarrow \frac{d^2\ell}{d\theta^2}&amp;lt;0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，求獲得 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 最大值的 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 即可令 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 獲得最大值。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-maximum-likelihood-estimator-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;極大似然估計 (maximum likelihood estimator) 的性質：&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;漸進無偏 Asymptotically unbiased: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow \infty \Rightarrow E(\hat{\Theta}) \rightarrow \theta\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;漸進最高效能 Asymptotically efficient: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow \infty \Rightarrow Var(\hat{\Theta})\)&lt;/span&gt; 是所有參數中方差最小的估計&lt;/li&gt;
+&lt;li&gt;漸進正態分佈 Asymptotically normal: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow \infty \Rightarrow \hat{\Theta} \sim N(\theta, Var(\hat{\Theta}))\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
