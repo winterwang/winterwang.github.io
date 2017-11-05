@@ -134,7 +134,7 @@ abline(v=0.4, lty=2)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(L(\theta|\underline{x})=P(\underline{x}|\theta)\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;注意：&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\underline{x}|\theta)\)&lt;/span&gt; 可以是概率（離散分佈）方程，也可以是概率密度（連續型變量）方程。對於此方程，&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 是給定的，然後再計算某些時間發生的概率。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\underline{x}|\theta)\)&lt;/span&gt; 可以是概率（離散分佈）方程，也可以是概率密度（連續型變量）方程。對於此方程，&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 是給定的，然後再計算某些事件發生的概率。&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(L(\theta|\underline{x})\)&lt;/span&gt; 是一個關於參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的方程，此時，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 是固定不變的（觀察值）。我們希望通過這個方程求出能夠使觀察到的事件發生概率最大的參數值。&lt;/li&gt;
 &lt;li&gt;似然方程&lt;strong&gt;不是&lt;/strong&gt;一個概率密度方程。&lt;/li&gt;
 &lt;/ol&gt;
