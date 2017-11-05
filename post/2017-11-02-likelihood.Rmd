@@ -30,11 +30,12 @@ factorial(10)*(0.5^10)/(factorial(4)*(factorial(6)))
 
 在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。所以這個 $Prob(coin\;landing\;heads)$ 的概率大小對於“人類”來說是未知的。所以我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。所以我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。所以，這種情況下，**似然法 (likelihood)** 就是我們進行參數估計的最佳手段
 
-### 似然和最大似然估計
+### 似然和極大似然估計
 
 此處用二項分佈的例子來理解似然法的概念：假設我們觀察到10個對象中有4個患病，我們假定這個患病的概率爲 $\pi$。於是我們就有了下面的模型：
 
 **模型：** 我們假定患病與否是一個服從**二項分佈的隨機變量**，$X\sim Bin(10,\pi)$。同時也默認每個人之間是否患病是相互獨立的。
+
 **數據：** 觀察到的數據是，10人中有4人患病。於是 $x=4$。
 
 現在按照觀察到的數據，參數 $\pi$ 變成了未知數：
@@ -256,7 +257,7 @@ $$\frac{d\ell}{d\theta}=\ell^\prime(\theta)=0\\
 AND\\
 \frac{d^2\ell}{d\theta^2}<0$$
 
-要注意的是，微分不提定總是能幫助我們求額的似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：
+要注意的是，微分不一定總是能幫助我們求額的似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：
 
 ```{r fig.height=4, fig.width=5, message=FALSE, warning=FALSE}
 x <- seq(0,3,by=0.001)
@@ -294,9 +295,49 @@ $$
 
 所以，求獲得 $\ell(\theta|data)$ 最大值的 $\theta$ 即可令 $L(\theta|data)$ 獲得最大值。
 
-### 極大似然估計 (maximum likelihood estimator) 的性質：
+### 極大似然估計 (maximum likelihood estimator, MLE) 的性質：
 
 1. 漸進無偏 Asymptotically unbiased: <br> $n\rightarrow \infty \Rightarrow E(\hat{\Theta}) \rightarrow \theta$
 2. 漸進最高效能 Asymptotically efficient: <br> $n\rightarrow \infty \Rightarrow Var(\hat{\Theta})$ 是所有參數中方差最小的估計
 3. 漸進正態分佈 Asymptotically normal: <br> $n\rightarrow \infty \Rightarrow \hat{\Theta} \sim N(\theta, Var(\hat{\Theta}))$
-4.
+4. 變形後依然保持不變 Transformation invariant: <br> $\hat{\Theta}$ 是 $\theta$ 的MLE時 $\Rightarrow g(\hat{\Theta})$ 是 $g(\theta)$ 的 MLE
+5. 信息足夠充分 Sufficient：<br> $\hat{\Theta}$ 包含了觀察數據中所有的能夠用於估計參數的信息
+6. 始終不變 consistent: <br> $n\rightarrow\infty\Rightarrow\hat{\Theta}\rightarrow\theta$ 或者可以寫成：$\varepsilon>0, lim_{n\rightarrow\infty}P(|\hat{\Theta}-\theta|>\varepsilon)=0$
+
+### 率的似然估計 Likelihood for a rate
+
+如果在一項研究中，參與者有各自不同的追蹤隨訪時間（長度），那麼我們應該把事件（疾病）的發病率用率的形式（多少事件每單位人年, e.g. per person year of observation）。如果這個發病率的參數用 $\lambda$ 來表示，所有參與對象的隨訪時間之和爲 $p$ 人年。那麼這段時間內的期望事件（疾病發病）次數爲：$\mu=\lambda p$。假設事件（疾病發病）發生是相互獨立的，可以使用泊松分佈來模擬期望事件（疾病發病）次數 $D$：
+
+$$D\sim Poi(\mu)$$
+
+假設我們觀察到了 $D=d$ 個事件，我們獲得這個觀察值的概率應該用以下的模型：
+
+$$Prob(D=d)=e^{-\mu}\frac{\mu^d}{d!}=e^{-\lambda p}\frac{\lambda^dp^d}{d!}$$
+
+因此，$\lambda$ 的似然方程是：
+
+$$L(\lambda|observed \;data)=e^{-\lambda p}\frac{\lambda^dp^d}{d!}$$
+
+所以，$\lambda$ 的對數似然方程是：
+
+$$
+\begin{aligned}
+\ell(\lambda|observed\;data) &= log(e^{-\lambda p}\frac{\lambda^dp^d}{d!}) \\
+  &= -\lambda p+d\:log(\lambda)+d\:log(p)-log(d!) \\
+\end{aligned}
+$$
+
+解 $\ell^\prime(\lambda|data)=0$:
+
+$$
+\begin{aligned}
+\ell^\prime(\lambda|data) &= -p+\frac{d}{\lambda}=0\\
+\Rightarrow \hat{\lambda} &= \frac{d}{p} \\
+\end{aligned}
+$$
+
+**注意：**
+在對數似然方程中，不包含參數的部分，對與似然方程的形狀不產生任何影響，我們在微分對數似然方程的時候，這部分也都自動消失。所以不包含參數的部分，與我們如何獲得極大似然估計是無關的。因此，我們常常在寫對數似然方程的時候就把其中沒有參數的部分直接忽略了。例如上面泊松分佈的似然方程中，$d\:log(p)-log(d!)$ 不包含參數 $\lambda$ 可以直接不寫出來。
+
+
+### 有 $n$ 個獨立觀察時的似然方程和對數似然方程
