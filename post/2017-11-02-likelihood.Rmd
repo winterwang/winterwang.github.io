@@ -341,3 +341,7 @@ $$
 
 
 ### 有 $n$ 個獨立觀察時的似然方程和對數似然方程
+當有多個獨立觀察時，總體的似然方程等於各個觀察值的似然方程之**乘積**。如果 $X_1,\dots,X_n\stackrel{i.i.d}{\sim}f(\cdot|\theta)$
+
+$$L(\theta|x_1,\cdots,x_n)=f(x_1,\cdots,x_n|\theta)=\prod_{i=1}^nf(x_i|\theta)\\
+\Rightarrow \ell(\theta|x_1,\cdots,x_n)=\sum_{i=1}^nlog(f(x_i|\theta))$$

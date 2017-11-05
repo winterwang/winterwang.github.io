@@ -656,6 +656,9 @@ abline(v=3, lty=2)</code></pre>
 </div>
 <div id="-n-" class="section level3">
 <h3>有 <span class="math inline">\(n\)</span> 個獨立觀察時的似然方程和對數似然方程</h3>
+<p>當有多個獨立觀察時，總體的似然方程等於各個觀察值的似然方程之<strong>乘積</strong>。如果 <span class="math inline">\(X_1,\dots,X_n\stackrel{i.i.d}{\sim}f(\cdot|\theta)\)</span></p>
+<p><span class="math display">\[L(\theta|x_1,\cdots,x_n)=f(x_1,\cdots,x_n|\theta)=\prod_{i=1}^nf(x_i|\theta)\\
+\Rightarrow \ell(\theta|x_1,\cdots,x_n)=\sum_{i=1}^nlog(f(x_i|\theta))\]</span></p>
 </div>
 
     </div>

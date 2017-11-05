@@ -416,6 +416,9 @@ abline(v=3, lty=2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;-n-&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立觀察時的似然方程和對數似然方程&lt;/h3&gt;
+&lt;p&gt;當有多個獨立觀察時，總體的似然方程等於各個觀察值的似然方程之&lt;strong&gt;乘積&lt;/strong&gt;。如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\dots,X_n\stackrel{i.i.d}{\sim}f(\cdot|\theta)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\theta|x_1,\cdots,x_n)=f(x_1,\cdots,x_n|\theta)=\prod_{i=1}^nf(x_i|\theta)\\
+\Rightarrow \ell(\theta|x_1,\cdots,x_n)=\sum_{i=1}^nlog(f(x_i|\theta))\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
