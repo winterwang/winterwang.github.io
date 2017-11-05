@@ -114,7 +114,7 @@ Table 1: The probability of observing &lt;span class=&#34;math inline&#34;&gt;\(
 &lt;ul&gt;
 &lt;li&gt;觀察到實驗數據（10人中4個患病）；&lt;/li&gt;
 &lt;li&gt;假定這數據服從二項分佈的概率模型，計算不同（&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的取值不同的）情況下，該事件按照假定模型發生的概率；&lt;/li&gt;
-&lt;li&gt;通過比較，我們選擇了能夠讓觀察時間發生概率最高的參數取值 (&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt;)。&lt;/li&gt;
+&lt;li&gt;通過比較，我們選擇了能夠讓觀察事件發生概率最高的參數取值 (&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt;)。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;至此，我們可以知道，似然方程，是一個關於未知參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的函數，我們目前位置做的就是找到這個函數的最大值 (maximised)，和使之成爲最大值時的 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; ：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]&lt;/span&gt;&lt;/p&gt;
