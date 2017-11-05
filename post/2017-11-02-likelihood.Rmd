@@ -257,7 +257,7 @@ $$\frac{d\ell}{d\theta}=\ell^\prime(\theta)=0\\
 AND\\
 \frac{d^2\ell}{d\theta^2}<0$$
 
-要注意的是，微分不一定總是能幫助我們求額的似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：
+要注意的是，微分不一定總是能幫助我們求得似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：
 
 ```{r fig.height=4, fig.width=5, message=FALSE, warning=FALSE}
 x <- seq(0,3,by=0.001)

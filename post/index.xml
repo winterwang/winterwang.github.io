@@ -351,7 +351,7 @@ Exercise 1 answer
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=\ell^\prime(\theta)=0\\
 AND\\
 \frac{d^2\ell}{d\theta^2}&amp;lt;0\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;要注意的是，微分不一定總是能幫助我們求額的似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：&lt;/p&gt;
+&lt;p&gt;要注意的是，微分不一定總是能幫助我們求得似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,3,by=0.001)
 y &amp;lt;- (x-1)^2-5
 plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(-5,0-1), ylab = &amp;quot;L(\U03B8)&amp;quot;, xlab = &amp;quot;\U03B8&amp;quot;)
