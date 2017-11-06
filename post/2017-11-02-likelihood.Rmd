@@ -9,6 +9,7 @@ categories:
 tags:
   - Medical Statistics
   - inference
+  - learning notes
   - London
   - LSHTM
 summary: "似然，似然方程的概念"

@@ -7,8 +7,146 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 02 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/medical-statistics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>對數似然比 Log-likelihood ratio</title>
+      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <description>&lt;div id=&#34;-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;對數似然比 Log-likelihood ratio&lt;/h3&gt;
+&lt;p&gt;對數似然比的想法來自於將對數似然方程圖形的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的&lt;strong&gt;對數似然比 (log-likelihood ratio)&lt;/strong&gt; 來獲得：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta)\)&lt;/span&gt; 的最大值在 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 時， 所以，&lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 就是個當 &lt;span class=&#34;math inline&#34;&gt;\(\theta=\hat{\theta}\)&lt;/span&gt; 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 &lt;span class=&#34;math inline&#34;&gt;\(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\)&lt;/span&gt; 取對數而已。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/likelihood/&#34;&gt;之前&lt;/a&gt;我們也確證了，不包含我們感興趣的參數的方程部分可以忽略掉。還是用上一節 10人中4人患病的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\\
+\Rightarrow \ell(\pi)=log[\pi^4(1-\pi)^{10-4}]\\
+\Rightarrow llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其實由上也可以看出 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 只是將對應的似然方程的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節了一下而已。形狀是沒有改變的：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
+x &amp;lt;- seq(0,1,by=0.001)
+y &amp;lt;- (x^4)*((1-x)^6)/(0.4^4*0.6^6)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,1.1),yaxt=&amp;quot;n&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;LR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+axis(2, at=seq(0,1, 0.2), las=2)
+title(main = &amp;quot;Binomial likelihood ratio&amp;quot;)
+abline(h=1.0, lty=2)
+segments(x0=0.4, y0=0, x1=0.4, y1=1, lty = 2)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
+abline(h=0, lty=2)
+segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
+&lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麼有：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f(y|\mu) &amp;amp;= \frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow L(\mu|y) &amp;amp;=\frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow \ell(\mu)&amp;amp;=log(\frac{1}{\sqrt{2\pi\tau^2}})-\frac{1}{2}(\frac{y-\mu}{\tau})^2\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;= -\frac{1}{2}(\frac{y-\mu}{\tau})^2 \\
+\Rightarrow \ell^\prime(\mu) &amp;amp;= 2\cdot[-\frac{1}{2}(\frac{y-\mu}{\tau})\cdot\frac{-1}{\tau}] \\
+&amp;amp;=\frac{y-\mu}{\tau^2} \\
+let \; \ell^\prime(\mu) &amp;amp;= 0 \\
+\Rightarrow \frac{y-\mu}{\tau^2} &amp;amp;= 0 \Rightarrow \hat{\mu} = y\\
+\because \ell^{\prime\prime}(\mu) &amp;amp;=  \frac{-1}{\tau^2} &amp;lt; 0 \\
+\therefore \hat{\mu} &amp;amp;= y \Rightarrow \ell(\hat{\mu}=y)_{max}=0 \\
+llr(\mu)&amp;amp;=\ell(\mu)-\ell(\hat{\mu})=\ell(\mu)\\
+&amp;amp;=-\frac{1}{2}(\frac{y-\mu}{\tau})^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比&lt;/h3&gt;
+&lt;p&gt;假設一組觀察值來自正態分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+L(\mu|\underline{x}) &amp;amp;=\prod_{i=1}^nf(x_i|\mu)\\
+\Rightarrow \ell(\mu|\underline{x}) &amp;amp;=\sum_{i=1}^nlogf(x_i|\mu)\\
+&amp;amp;=\sum_{i=1}^n[-\frac{1}{2}(\frac{x_i-\mu}{\sigma})^2]\\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\\
+&amp;amp;=-\frac{1}{2\sigma^2}[\sum_{i=1}^n(x_i-\bar{x})^2+\sum_{i=1}^n(\bar{x}-\mu)^2]\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(\bar{x}-\mu)^2\\
+&amp;amp;=-\frac{n}{2\sigma^2}(\bar{x}-\mu)^2 \\
+&amp;amp;=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\\
+\because \ell(\hat{\mu}) &amp;amp;= 0 \\
+\therefore llr(\mu) &amp;amp;= \ell(\mu)-\ell(\hat{\mu}) = \ell(\mu)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比的分佈&lt;/h3&gt;
+&lt;p&gt;假設我們用 &lt;span class=&#34;math inline&#34;&gt;\(\mu_0\)&lt;/span&gt; 表示總體均數這一參數的值。要注意的是，每當樣本被重新取樣，似然，對數似然方程，對數似然比都隨着觀察值而變 (即有自己的分佈)。&lt;/p&gt;
+&lt;p&gt;考慮一個服從正態分佈的單樣本 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu_0,\tau^2)\)&lt;/span&gt;。那麼它的對數似然比：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu_0|Y)=\ell(\mu_0)-\ell(\hat{\mu})=-\frac{1}{2}(\frac{Y-\mu_0}{\tau})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;的定義：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\because \frac{Y-\mu_0}{\tau}\sim N(0,1)\\
+\Rightarrow (\frac{Y-\mu_0}{\tau})^2 \sim \mathcal{X}_1^2\\
+\therefore -2llr(\mu_0|Y) \sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，如果有一組服從正態分佈的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu_0,\sigma^2)\)&lt;/span&gt;，且 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知的話：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\mu_0|\bar{X})\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+根據&lt;a href=&#34;https://winterwang.github.io/post/central-limit-theory/&#34;&gt;中心極限定理&lt;/a&gt;，可以將上面的結論一般化： 
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}f(x|\theta)\)&lt;/span&gt;。 那麼當重複多次從參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta_0\)&lt;/span&gt; 的總體中取樣時，那麼統計量 &lt;span class=&#34;math inline&#34;&gt;\(-2llr(\theta_0)\)&lt;/span&gt; 會漸進於自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 的卡方分佈： &lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\xrightarrow[n\rightarrow\infty]{}\;\sim \mathcal{X}_1^2\]&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然比信賴區間&lt;/h3&gt;
+&lt;p&gt;如果樣本量 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 足夠大 (通常應該大於 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt;)，根據上面的定理：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(-2llr(\theta_0)\leqslant \mathcal{X}_{1,0.95}^2=3.84) = 0.95\\
+\Rightarrow Prob(llr(\theta_0)\geqslant-3.84/2=1.92) = 0.95\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;故似然比的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間就是能夠滿足 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)=-1.92\)&lt;/span&gt; 的兩個 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 值。&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以二項分佈數據爲例&lt;/h4&gt;
+&lt;p&gt;繼續用本文開頭的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果令 &lt;span class=&#34;math inline&#34;&gt;\(llr(\pi)=-1.92\)&lt;/span&gt; 在代數上可能較難獲得答案。然而從圖形上，如果我們在 &lt;span class=&#34;math inline&#34;&gt;\(y=-1.92\)&lt;/span&gt; 畫一條橫線，和該似然比方程曲線相交的兩個點就是我們想要求的信賴區間的上限和下限：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,1,by=0.001)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+abline(h=0, lty=2)
+abline(h=-1.92, lty=2)
+segments(x0=0.15, y0=-12, x1=0.15, y1=-1.92, lty = 2)
+segments(x0=0.7, y0=-12, x1=0.7, y1=-1.92, lty = 2)
+axis(1, at=c(0.15,0.7))
+text(0.9, -1, &amp;quot;-1.92&amp;quot;)
+arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
+arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
+title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以正態分佈數據爲例：&lt;/h4&gt;
+&lt;p&gt;本文前半部分證明過， &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
+=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;很顯然，這是一個關於 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的二次方程，且最大值在 MLE &lt;span class=&#34;math inline&#34;&gt;\(\hat{\mu}=\bar{x}\)&lt;/span&gt; 時取值 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。所以可以通過對數似然比法求出均值的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2\times[-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2]=3.84\\
+\Rightarrow L=\bar{x}-\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意到這和我我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>似然非然 Likelihood</title>
@@ -2064,102 +2202,6 @@ a_3 &amp;amp; b_3 &amp;amp; c_3
 \end{array}\right) \;(d_1d_2d_3\neq0), B 與上面3. 相同。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 27</title>
-      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
-      <description>&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
-\begin{array}{c}
-x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
-x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\
-\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\
-x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
-\end{array}
-\right), \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-\vdots \\
-a_n
-\end{array}
-\right), \underline{0}=\left(
-\begin{array}{c}
-\underline{0}\\
-\underline{0}\\
-\vdots\\
-\underline{0}\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X\underline{a}=\underline{0}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;即： &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-\left\{
-\begin{array}{ll}
-x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n  = 0\\
-x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n  = 0\\
-\cdots\\
-x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n  = 0\\
-\end{array}
-\right.
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;這樣的方程式與之前的不同，等號右邊全部都是 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;. 如果係數矩陣的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|X|\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X|=\begin{vmatrix}
-x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
-x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\
-\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\
-x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
-\end{vmatrix}\neq0\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;那麽這個連立方程式的解，我們通過&lt;a href=&#34;https://winterwang.github.io/post/cramers-formula/&#34;&gt;克萊姆法則&lt;/a&gt;公式知道有且僅有 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=\underline{0}\)&lt;/span&gt;， 即 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=\cdots=a_n=0\)&lt;/span&gt; (自明解, trivial solution)&lt;/p&gt;
-&lt;p&gt;此外，如果此連立方程組有非自明解 (&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\neq0\)&lt;/span&gt;) 那麽相應的， &lt;span class=&#34;math inline&#34;&gt;\(|X|=0\)&lt;/span&gt;。多元變量分析時我們多關心的是非自明解。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;diff_alert&#34;&gt;重點記住：&lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\neq0\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(|X|=0\)&lt;/span&gt;； &lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=0\)&lt;/span&gt; 時, &lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} a_1+2a_2 = 0\\ 2a_1+a_2 = 0\\ \end{array} \right. \end{align}\)&lt;/span&gt; 的係數矩陣 &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 1 &amp;amp; 2 \\ 2 &amp;amp; 1 \\ \end{array} \right)\)&lt;/span&gt; 的行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} 1 &amp;amp; 2\\ 2 &amp;amp; 1\\ \end{vmatrix}=-3\neq0\)&lt;/span&gt; 所以此同次連立一次方程組的解有且僅有 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=0\)&lt;/span&gt; (自明解)。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} -a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 2a_1-4a_2 = 0 \;\;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)&lt;/span&gt; &lt;br&gt;的係數行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} -1 &amp;amp; 2\\ 2 &amp;amp; -4\\ \end{vmatrix}=0\)&lt;/span&gt;，因此除了自明解 &lt;span class=&#34;math inline&#34;&gt;\(a_1=a_2=0\)&lt;/span&gt; 之外，還有非自明解。由於 &lt;span class=&#34;math inline&#34;&gt;\((2)=-2\times(1)\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\((1),(2)\)&lt;/span&gt; 實質上是一個相同的方程式。 按照&lt;a href=&#34;https://winterwang.github.io/post/2017-02-12-t/&#34;&gt;前述方法&lt;/a&gt;，我們設定 &lt;span class=&#34;math inline&#34;&gt;\(a_2=s\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為非零任意實數)，則 &lt;span class=&#34;math inline&#34;&gt;\(a_1=2s\)&lt;/span&gt;。所以可以將這個方程組的非自明解寫作： &lt;span class=&#34;math display&#34;&gt;\[\underline{a}=s\left(
-\begin{array}{c}
-2\\
-1
-\end{array}
-\right), s 為非零任意實數。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\star 自明解和非自明解同時表述時可以寫作: \underline{a}=s\left( \begin{array}{c} 2\\ 1 \end{array} \right),\\ s 為任意實數。\)&lt;/span&gt;&lt;/p&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} (1-\lambda)a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 4a_1+(3-\lambda)a_2 = 0 \;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)&lt;/span&gt; 有非自明解的條件為： &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-\begin{vmatrix}
-1-\lambda &amp;amp; 2\\
-4 &amp;amp; 3-\lambda
-\end{vmatrix} &amp;amp; = (1-\lambda)(3-\lambda)-4\times2 \\
-&amp;amp; = 3-4\lambda+\lambda^2-8 \\
-&amp;amp; = \lambda^2-4\lambda-5 \\
-&amp;amp; = (\lambda+1)(\lambda-5) \\
-&amp;amp; = 0
-\end{align}\\
-\therefore \lambda=-1, 5\]&lt;/span&gt; &lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda=-1\)&lt;/span&gt; 時，代入 &lt;span class=&#34;math inline&#34;&gt;\((1),(2)\)&lt;/span&gt; 得&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{ll}  2a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\  4a_1+4a_2 = 0 \;\;\;\;\;\;\;(2)\\  \end{array}  \right.  \end{align}\)&lt;/span&gt; 為實質上只有一個方程 &lt;span class=&#34;math inline&#34;&gt;\(a_1+a_2=0\)&lt;/span&gt; 的方程組。令 &lt;span class=&#34;math inline&#34;&gt;\(a_2=s\)&lt;/span&gt;， 則 &lt;span class=&#34;math inline&#34;&gt;\(a_1=-s\)&lt;/span&gt;。因此此時方程組的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=s\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 意外的任意實數)。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda=5\)&lt;/span&gt; 時，同理可得， &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=t\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 意外的任意實數)。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;方程組 &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\begin{align} \left\{ \begin{array}{r} (5-\lambda)a_1+2a_2-4a_3 = 0\\ -3a_1-\lambda a_2+4a_3 = 0\\ 6a_1+6a_2-(1+\lambda)a_3 = 0\\ \end{array} \right. \end{align}\)&lt;/span&gt; 擁有非自明解的條件為： &lt;span class=&#34;math display&#34;&gt;\[\begin{vmatrix}
-5-\lambda &amp;amp; 2        &amp;amp; -4 \\
--3        &amp;amp; -\lambda &amp;amp; 4  \\
-6         &amp;amp; 6        &amp;amp; -(1+\lambda)
-\end{vmatrix}=0\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;按照以前我們做過的&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;練習&lt;/a&gt;將行列式按照 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 展開： &lt;span class=&#34;math display&#34;&gt;\[-\lambda^3+4\lambda^2-\lambda-6=\\
--(\lambda+1)(\lambda-2)(\lambda-3)=0\\
-\therefore \lambda=-1,2,3\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = -1\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  6a_1+2a_2-4a_3 = 0\\  -3a_1+ a_2+4a_3 = 0\\  6a_1+6a_2 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=s\left(  \begin{array}{c}  1\\  -1\\  1  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 2\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  3a_1+2a_2-4a_3 = 0\\  -3a_1-2a_2+4a_3 = 0\\  6a_1+6a_2-3a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=t\left(  \begin{array}{c}  6\\  -5\\  2  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 3\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\((\zeta)\)&lt;/span&gt; 變為：&lt;span class=&#34;math inline&#34;&gt;\(\begin{align}  \left\{  \begin{array}{r}  2a_1+2a_2-4a_3 = 0\\  -3a_1-3a_2+4a_3 = 0\\  6a_1+6a_2-4a_3 = 0\\  \end{array}  \right.  \end{align}\)&lt;/span&gt;，此時的非自明解為 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=u\left(  \begin{array}{c}  1\\  -1\\  0  \end{array}  \right)\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt; 為 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 以外的任意實數)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(3, 4\)&lt;/span&gt; 與後面的固有值問題關係深刻。&lt;/p&gt;
 </description>
     </item>
     

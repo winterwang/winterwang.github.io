@@ -7,8 +7,146 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 02 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/london/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>對數似然比 Log-likelihood ratio</title>
+      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <description>&lt;div id=&#34;-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;對數似然比 Log-likelihood ratio&lt;/h3&gt;
+&lt;p&gt;對數似然比的想法來自於將對數似然方程圖形的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的&lt;strong&gt;對數似然比 (log-likelihood ratio)&lt;/strong&gt; 來獲得：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta)\)&lt;/span&gt; 的最大值在 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 時， 所以，&lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 就是個當 &lt;span class=&#34;math inline&#34;&gt;\(\theta=\hat{\theta}\)&lt;/span&gt; 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 &lt;span class=&#34;math inline&#34;&gt;\(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\)&lt;/span&gt; 取對數而已。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/likelihood/&#34;&gt;之前&lt;/a&gt;我們也確證了，不包含我們感興趣的參數的方程部分可以忽略掉。還是用上一節 10人中4人患病的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\\
+\Rightarrow \ell(\pi)=log[\pi^4(1-\pi)^{10-4}]\\
+\Rightarrow llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其實由上也可以看出 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 只是將對應的似然方程的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節了一下而已。形狀是沒有改變的：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
+x &amp;lt;- seq(0,1,by=0.001)
+y &amp;lt;- (x^4)*((1-x)^6)/(0.4^4*0.6^6)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,1.1),yaxt=&amp;quot;n&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;LR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+axis(2, at=seq(0,1, 0.2), las=2)
+title(main = &amp;quot;Binomial likelihood ratio&amp;quot;)
+abline(h=1.0, lty=2)
+segments(x0=0.4, y0=0, x1=0.4, y1=1, lty = 2)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
+abline(h=0, lty=2)
+segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
+&lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麼有：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f(y|\mu) &amp;amp;= \frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow L(\mu|y) &amp;amp;=\frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow \ell(\mu)&amp;amp;=log(\frac{1}{\sqrt{2\pi\tau^2}})-\frac{1}{2}(\frac{y-\mu}{\tau})^2\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;= -\frac{1}{2}(\frac{y-\mu}{\tau})^2 \\
+\Rightarrow \ell^\prime(\mu) &amp;amp;= 2\cdot[-\frac{1}{2}(\frac{y-\mu}{\tau})\cdot\frac{-1}{\tau}] \\
+&amp;amp;=\frac{y-\mu}{\tau^2} \\
+let \; \ell^\prime(\mu) &amp;amp;= 0 \\
+\Rightarrow \frac{y-\mu}{\tau^2} &amp;amp;= 0 \Rightarrow \hat{\mu} = y\\
+\because \ell^{\prime\prime}(\mu) &amp;amp;=  \frac{-1}{\tau^2} &amp;lt; 0 \\
+\therefore \hat{\mu} &amp;amp;= y \Rightarrow \ell(\hat{\mu}=y)_{max}=0 \\
+llr(\mu)&amp;amp;=\ell(\mu)-\ell(\hat{\mu})=\ell(\mu)\\
+&amp;amp;=-\frac{1}{2}(\frac{y-\mu}{\tau})^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比&lt;/h3&gt;
+&lt;p&gt;假設一組觀察值來自正態分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+L(\mu|\underline{x}) &amp;amp;=\prod_{i=1}^nf(x_i|\mu)\\
+\Rightarrow \ell(\mu|\underline{x}) &amp;amp;=\sum_{i=1}^nlogf(x_i|\mu)\\
+&amp;amp;=\sum_{i=1}^n[-\frac{1}{2}(\frac{x_i-\mu}{\sigma})^2]\\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\\
+&amp;amp;=-\frac{1}{2\sigma^2}[\sum_{i=1}^n(x_i-\bar{x})^2+\sum_{i=1}^n(\bar{x}-\mu)^2]\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(\bar{x}-\mu)^2\\
+&amp;amp;=-\frac{n}{2\sigma^2}(\bar{x}-\mu)^2 \\
+&amp;amp;=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\\
+\because \ell(\hat{\mu}) &amp;amp;= 0 \\
+\therefore llr(\mu) &amp;amp;= \ell(\mu)-\ell(\hat{\mu}) = \ell(\mu)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比的分佈&lt;/h3&gt;
+&lt;p&gt;假設我們用 &lt;span class=&#34;math inline&#34;&gt;\(\mu_0\)&lt;/span&gt; 表示總體均數這一參數的值。要注意的是，每當樣本被重新取樣，似然，對數似然方程，對數似然比都隨着觀察值而變 (即有自己的分佈)。&lt;/p&gt;
+&lt;p&gt;考慮一個服從正態分佈的單樣本 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu_0,\tau^2)\)&lt;/span&gt;。那麼它的對數似然比：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu_0|Y)=\ell(\mu_0)-\ell(\hat{\mu})=-\frac{1}{2}(\frac{Y-\mu_0}{\tau})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;的定義：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\because \frac{Y-\mu_0}{\tau}\sim N(0,1)\\
+\Rightarrow (\frac{Y-\mu_0}{\tau})^2 \sim \mathcal{X}_1^2\\
+\therefore -2llr(\mu_0|Y) \sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，如果有一組服從正態分佈的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu_0,\sigma^2)\)&lt;/span&gt;，且 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知的話：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\mu_0|\bar{X})\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+根據&lt;a href=&#34;https://winterwang.github.io/post/central-limit-theory/&#34;&gt;中心極限定理&lt;/a&gt;，可以將上面的結論一般化： 
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}f(x|\theta)\)&lt;/span&gt;。 那麼當重複多次從參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta_0\)&lt;/span&gt; 的總體中取樣時，那麼統計量 &lt;span class=&#34;math inline&#34;&gt;\(-2llr(\theta_0)\)&lt;/span&gt; 會漸進於自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 的卡方分佈： &lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\xrightarrow[n\rightarrow\infty]{}\;\sim \mathcal{X}_1^2\]&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然比信賴區間&lt;/h3&gt;
+&lt;p&gt;如果樣本量 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 足夠大 (通常應該大於 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt;)，根據上面的定理：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(-2llr(\theta_0)\leqslant \mathcal{X}_{1,0.95}^2=3.84) = 0.95\\
+\Rightarrow Prob(llr(\theta_0)\geqslant-3.84/2=1.92) = 0.95\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;故似然比的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間就是能夠滿足 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)=-1.92\)&lt;/span&gt; 的兩個 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 值。&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以二項分佈數據爲例&lt;/h4&gt;
+&lt;p&gt;繼續用本文開頭的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果令 &lt;span class=&#34;math inline&#34;&gt;\(llr(\pi)=-1.92\)&lt;/span&gt; 在代數上可能較難獲得答案。然而從圖形上，如果我們在 &lt;span class=&#34;math inline&#34;&gt;\(y=-1.92\)&lt;/span&gt; 畫一條橫線，和該似然比方程曲線相交的兩個點就是我們想要求的信賴區間的上限和下限：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,1,by=0.001)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+abline(h=0, lty=2)
+abline(h=-1.92, lty=2)
+segments(x0=0.15, y0=-12, x1=0.15, y1=-1.92, lty = 2)
+segments(x0=0.7, y0=-12, x1=0.7, y1=-1.92, lty = 2)
+axis(1, at=c(0.15,0.7))
+text(0.9, -1, &amp;quot;-1.92&amp;quot;)
+arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
+arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
+title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以正態分佈數據爲例：&lt;/h4&gt;
+&lt;p&gt;本文前半部分證明過， &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
+=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;很顯然，這是一個關於 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的二次方程，且最大值在 MLE &lt;span class=&#34;math inline&#34;&gt;\(\hat{\mu}=\bar{x}\)&lt;/span&gt; 時取值 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。所以可以通過對數似然比法求出均值的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2\times[-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2]=3.84\\
+\Rightarrow L=\bar{x}-\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意到這和我我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>似然非然 Likelihood</title>
@@ -1992,175 +2130,6 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/jal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>留學筆記</title>
-      <link>https://winterwang.github.io/post/2017-03-16/</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-16/</guid>
-      <description>
-
-&lt;h2 id=&#34;尋找並確定合適自己的大學-合適的課程&#34;&gt;尋找並確定合適自己的大學，合適的課程&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;英國，還是美國？ 這是一個問題
-
-&lt;ul&gt;
-&lt;li&gt;我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。&lt;/li&gt;
-&lt;li&gt;上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。&lt;/li&gt;
-&lt;li&gt;加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。&lt;/li&gt;
-&lt;li&gt;另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/7754267&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:Pocock-S-J-Life&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:Pocock-S-J-Life&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：&lt;br&gt;我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Theory&lt;br&gt; (偏重理論)&lt;/td&gt;
-&lt;td&gt;Cambridge&lt;/td&gt;
-&lt;td&gt;Mathematical Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Sheffield&lt;/td&gt;
-&lt;td&gt;Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;University College London&lt;/td&gt;
-&lt;td&gt;Applied Stochastic Systems&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Oxford&lt;/td&gt;
-&lt;td&gt;Applied Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Kent&lt;/td&gt;
-&lt;td&gt;Statistics&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Reading&lt;/td&gt;
-&lt;td&gt;Biometry&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Southampton&lt;/td&gt;
-&lt;td&gt;Statistics with Application in Medicine&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;$\downdownarrows$&lt;/td&gt;
-&lt;td&gt;Leicester&lt;/td&gt;
-&lt;td&gt;Medical Statistics &amp;amp; Information Technology&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Applications (偏重實踐)&lt;/td&gt;
-&lt;td&gt;London School of Hygiene &amp;amp; Tropical Medicine&lt;/td&gt;
-&lt;td&gt;Medical Statitics&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;確認申請時間-申請要點-雅思成績要求-是否有面試-推薦信&#34;&gt;確認申請時間，申請要點（雅思成績要求，是否有面試，推薦信）&lt;/h2&gt;
-
-&lt;p&gt;決定了申請 LSHTM 以後，便要開始準備材料，確定截止時間，以及雅思成績的要求等。&lt;/p&gt;
-
-&lt;p&gt;我之前並無申請歐美大學的經驗，許多都是這次申請過程中自己摸索的。總結一下就是，留學申請這種事，自己來就可以搞定了。經過仔細鑽研LSHTM的醫學統計碩士課程&lt;a href=&#34;http://www.lshtm.ac.uk/study/masters/msms.html&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;，確認雅思成績要求總分不低於7，聽說讀單項最低不低於5.5，寫作不低於6.5以後，便着手開始集中複習英語的計劃。&lt;/p&gt;
-
-&lt;p&gt;至於申請截止時間，&lt;a href=&#34;http://www.lshtm.ac.uk/study/applications/index.html&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;說的8月1日，沃天。。。9月底開學8月還能申請。不過，6月1日以後的申請要交£100的過遲申請費用。不管怎麼說，越早越好。我是2016年10月開始計劃申請的，那時候自己給自己定下目標，1月7日雅思成績如果達標，1月份之內就完成所有申請步驟。&lt;/p&gt;
-
-&lt;p&gt;面試的情況後面會再多說一些，其他課程不太瞭解，醫學統計學的碩士課程是對有可能成爲學生的人進行面試的 (potential students will be invited to join an interview)。所以估計材料交了以後很久都沒有面試的通知的話，那就可以安心在家當作自己沒有申請過，該幹嘛幹嘛了。儘量保持低調嘛。我還跟他們負責招生的人發郵件確認了，材料遞交6周左右會給面試通知。估計不錄取也是在這個時間點給通知的。&lt;/p&gt;
-
-&lt;p&gt;最後一個就是最重要的推薦人的選擇了。我邀請之前博士階段的導師，以及現在的同事。聽說美國大學要三個推薦人。英國是只要兩人的。關於如何選擇推薦人，LSHTM的網站上說的是，如果申請人正在就學，那就需要兩個都是對你的學業/學術十分瞭解的人。如果申請人已經就業，那就填最高學歷時期的導師一名，及現在的同事一名或者老闆/上司。當然，在把自己要寫的推薦人姓名信息等填入申請表格之前，要跟他們打個招呼才是。&lt;/p&gt;
-
-&lt;p&gt;至於推薦信的內容。我的博士導師收到我的邀請郵件以後欣然同意，然而那之後我並沒有收到他給我的個人評價或者推薦信內容/稿件。我想，大概(有些)認真的日本人認爲這個推薦信對申請人本人來說也應該保密的。不過我對我的導師有充分的信任，不至於在推薦信裏寫我不愛讀書行爲不端之類害我的話。他一直都是實事求是認真做事的人。另外一封推薦信來自我的同事，他對自己英文不太有自信，而且他每天就坐在我隔壁，寫了稿子就讓我看，我又請native speaker幫忙校對了以後提交的。所以我對這個第二封推薦信的內容是掌握的。&lt;/p&gt;
-
-&lt;h2 id=&#34;3個月突擊-雅思8分&#34;&gt;3個月突擊，雅思8分&lt;/h2&gt;
-
-&lt;p&gt;我以前考過兩次託福。都是裸考。一次是大學期間跟風考的，大夥兒都忙忙碌碌，準備考研啦，準備託福GRE出國拉，所以我也想說考一個，看看這些英語考試都考什麼內容。如果您來我這裏想瞭解託福雅思考試的祕籍，抱歉出門左轉去&lt;a href=&#34;https://www.hujiang.com/&#34; target=&#34;_blank&#34;&gt;滬江外語&lt;/a&gt;吧。我每日也都是用的他家的APP和資源（主要是聽寫BBC新聞）。另外推薦一個背單詞的軟件：&lt;a href=&#34;https://www.baicizhan.com/&#34; target=&#34;_blank&#34;&gt;百詞斬&lt;/a&gt;。&lt;a href=&#34;https://www.shanbay.com/&#34; target=&#34;_blank&#34;&gt;扇貝單詞&lt;/a&gt;也不錯。不過個人還是對百詞斬比較偏愛。也許是先入爲主吧。第一次打開時，設置自己的背誦單詞表（雅思詞彙）然後設定好時間，和背詞計劃。我是設定了每日100個單詞。每天堅持一百個，直到考試前一天。百詞斬的app會再每天第一次打開app的時候提醒，並且複習昨天或者最近背誦過的生詞。感覺他們應該是用了一些算法的，大約是根據個人背誦單詞的記錄（傳說中的記憶曲線？），以及錯誤次數來選出每天複習的詞彙的，這一點百詞斬很厲害。&lt;/p&gt;
-
-&lt;p&gt;除了背單詞，就是尋找合適的老師練習寫作和口語了。在此我就不去給某寶作廣告了。我找了兩個雅思作文老師練習，每天都有寫作的作業，一天 task 1 第二天 task 2 這樣。有的老師只提供作文修改和點評，有的還會給你上課，當然費用就比前一種稍微貴一些。能提供授課服務的老師基本上就是具有新東方，環球雅思等授課經驗的作文老師。作文老師推薦的教材可以在此介紹一下:
-&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/ieltswriting.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;至於口語，某寶上的口語外教中介等類似商品就更多了。基本上應該都是菲律賓的口語老師。一開始我也抱着忐忑的心情預約試聽了以下，擔心菲律賓的口語老師可能會有類似印度人的難懂口音。後來的事實證明自己完全是多慮了。至少在我聽課的那幾位菲律賓的外教的口音都較爲純正。況且每個人的口音（應該）都是天生的/後天跟父母學的，不必擔心自己上了幾天口語可就變成怪怪的阿三口音。另外記得以前看過文章說英語母語者能辨別很多不同的口音，所以關鍵不是口音影響一個人的表達，而是你到底真的會不會表達。而且如果你的有點異國口音的英語常常還會被認爲很有趣，很性感，或者很有特點。個人認爲典型的中國人的口音其實多數情況下不太性感，但是你也可以變得像下面這個人一樣風趣幽默（點擊圖片可以看到他講的中式腔調的英語笑話，老外一樣被逗得一樂一樂的）:
-&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/joewong.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
-於是我的口語課就固定爲每天早晨9點鐘開始一個小時，和老師練習過去口語考過的題目。各種常見/不常見話題的切磋和準備。許多話題是根本想不到的。比如，“請描述一次你參加過的婚禮”，或者“請用英語講一個中國歷史上的有趣的故事”這樣的題目，讓我用中文來講述我還要愣上個1分鐘，更不要說在分秒必爭的口語考試中被問道這樣的題目，基本就等於告訴你回去準備再交錢考試了。&lt;/p&gt;
-
-&lt;p&gt;備考雅思是一段辛苦的過程。堅持每日練習才能保持良好的考試/競技狀態，口語和作文是中國人的短板。聽力和寫作常常有不少人（包括我）可以拿到接近滿分。我一開始備考時也是覺得要把過去劍橋雅思的4-11套&lt;a href=&#34;https://book.douban.com/subject/1479127/&#34; target=&#34;_blank&#34;&gt;全真練習題&lt;/a&gt;全部過一邊，題海戰術嘛。後來被寫作的老師敲了警鐘。他說：「聽力和閱讀如果每天都花過多的時間去做的話，對於你來說提高很有限，因爲你都只有錯很少的題目，只是自己刷高分滿足自己的虛榮心而已。到頭來短板的作文和口語都沒有時間練習的話，總分還是上不去。」於是我聽從了寫作老師的話，改爲三四天做一套聽力和閱讀。當然每次都是用考試時的標準來。所以其實一直到了考前，我也沒有把4-11的所有過去試題都練習完。只是挑着做了一些。關於考場的真實感受和我的考分。可以看我之前的&lt;a href=&#34;https://winterwang.github.io/post/2017-01-07-ielts-test/&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&#34;1個月集中-文件準備&#34;&gt;1個月集中，文件準備&lt;/h2&gt;
-
-&lt;p&gt;考完雅思考試以後等待考試成績公佈的這段時間，我便開始着手準備申請所需要的各種文件。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;最近的大學院（就是我的博士課程）成績單，英文版。&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;博士學位證書，和名古屋大學的畢業證書的英文版。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1和2由於是要開英文版的，聯繫名古屋大學的留學生辦公室，申請郵寄辦理（無手續費），然後附上回信的信封和郵票就可以了。&lt;/li&gt;
-&lt;li&gt;另外，爲了以防萬一，我又拜託之前本科階段上海交大的指導老師幫忙開具了本科階段的學位證書，畢業證書的英文版，以及當年的成績單。（看了當時的成績單，不禁回想當年在上海求學的日子。曾經有段時間，在中國訪問facebook是不需要任何技巧的。那個時候，我們還有google reader，還有google.cn。。。）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;查找了許多模板，后来选择了(&lt;a href=&#34;http://svmiller.com/blog/2016/03/svm-r-markdown-cv/&#34; target=&#34;_blank&#34;&gt;这一款&lt;/a&gt;)。&lt;code&gt;Fork&lt;/code&gt;过来以后打开&lt;code&gt;Rmd&lt;/code&gt;文件，写上自己的内容，&lt;code&gt;knit&lt;/code&gt;，pdf就生成了。生活从未如此简单与快乐。告别Micro$oft，你会更轻松。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;個人陳述(Personal Statement)寫作，修改，寫作，修改。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;格式依然是用&lt;a href=&#34;https://github.com/rohanarora/SoP&#34; target=&#34;_blank&#34;&gt;模板&lt;/a&gt;，然后内容的写作和修改，确实费了一番脑筋和功夫。先是寫了初稿，然後給了曾經上过LSHTM醫學統計課程的日本人前輩看，然後修改，又給寫推薦信的兩位導師看，然後再修改，之後再給曾經在UCL留學的高中同學，以及他認識的 native speaker 看，之後再修改。此後又给目前在UCL任教的曾經的高中同學看。最后又花錢送去潤色和校對一遍，才決定最後作爲申請文書遞交給LSHTM。六個不同的人給的意見自然會有不同，最終還是要自己作決斷和取捨的。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;跟以前的導師，現在的上司請求推薦信&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;上面提到個人陳述的時候也說到把稿子給了兩位寫推薦信的導師看。我覺得這一點十分重要。畢竟寫推薦信的導師，他要知道你自己在個人陳述中自我推薦了什麼，才能再在推薦信裏加以強調。深以爲然。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;備齊材料-終於可以申請了&#34;&gt;備齊材料，終於可以申請了！&lt;/h2&gt;
-
-&lt;p&gt;上面的各種文件備齊了以後，就是直接在線填寫申請表格了。表格中仍有部分內容需要自己填寫的。在此不再贅述。 按下申請按鈕之後，LSHTM發來確認信。估計是系統自動發送的。之後便是等待兩位推薦人在線遞交推薦信了。兩位推薦人交齊了推薦信，已經是我申請提交之後一個月左右的事了。之後該是進入和文書審查階段。&lt;/p&gt;
-
-&lt;h2 id=&#34;面試來了-面試真的來了&#34;&gt;面試來了！面試真的來了！&lt;/h2&gt;
-
-&lt;p&gt;過了兩到三週。課程的聯絡人(Admissions Administrator)發來郵件說安排一下Skype面試的時間。&lt;/p&gt;
-
-&lt;h2 id=&#34;我被錄取了&#34;&gt;我被錄取了！&lt;/h2&gt;
-
-&lt;h2 id=&#34;補交畢業證書的原件&#34;&gt;補交畢業證書的原件&lt;/h2&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:Pocock-S-J-Life&#34;&gt;Pocock, S. J. Life as an academic medical statistician and how to survive it. Statist. Med. 14, 209–222 (1995). &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:Pocock-S-J-Life&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     

@@ -7,8 +7,559 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 29 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/learning-notes/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>對數似然比 Log-likelihood ratio</title>
+      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <description>&lt;div id=&#34;-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;對數似然比 Log-likelihood ratio&lt;/h3&gt;
+&lt;p&gt;對數似然比的想法來自於將對數似然方程圖形的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的&lt;strong&gt;對數似然比 (log-likelihood ratio)&lt;/strong&gt; 來獲得：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta)\)&lt;/span&gt; 的最大值在 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 時， 所以，&lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 就是個當 &lt;span class=&#34;math inline&#34;&gt;\(\theta=\hat{\theta}\)&lt;/span&gt; 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 &lt;span class=&#34;math inline&#34;&gt;\(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\)&lt;/span&gt; 取對數而已。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/likelihood/&#34;&gt;之前&lt;/a&gt;我們也確證了，不包含我們感興趣的參數的方程部分可以忽略掉。還是用上一節 10人中4人患病的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\\
+\Rightarrow \ell(\pi)=log[\pi^4(1-\pi)^{10-4}]\\
+\Rightarrow llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其實由上也可以看出 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 只是將對應的似然方程的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節了一下而已。形狀是沒有改變的：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
+x &amp;lt;- seq(0,1,by=0.001)
+y &amp;lt;- (x^4)*((1-x)^6)/(0.4^4*0.6^6)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,1.1),yaxt=&amp;quot;n&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;LR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+axis(2, at=seq(0,1, 0.2), las=2)
+title(main = &amp;quot;Binomial likelihood ratio&amp;quot;)
+abline(h=1.0, lty=2)
+segments(x0=0.4, y0=0, x1=0.4, y1=1, lty = 2)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
+abline(h=0, lty=2)
+segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
+&lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麼有：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f(y|\mu) &amp;amp;= \frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow L(\mu|y) &amp;amp;=\frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow \ell(\mu)&amp;amp;=log(\frac{1}{\sqrt{2\pi\tau^2}})-\frac{1}{2}(\frac{y-\mu}{\tau})^2\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;= -\frac{1}{2}(\frac{y-\mu}{\tau})^2 \\
+\Rightarrow \ell^\prime(\mu) &amp;amp;= 2\cdot[-\frac{1}{2}(\frac{y-\mu}{\tau})\cdot\frac{-1}{\tau}] \\
+&amp;amp;=\frac{y-\mu}{\tau^2} \\
+let \; \ell^\prime(\mu) &amp;amp;= 0 \\
+\Rightarrow \frac{y-\mu}{\tau^2} &amp;amp;= 0 \Rightarrow \hat{\mu} = y\\
+\because \ell^{\prime\prime}(\mu) &amp;amp;=  \frac{-1}{\tau^2} &amp;lt; 0 \\
+\therefore \hat{\mu} &amp;amp;= y \Rightarrow \ell(\hat{\mu}=y)_{max}=0 \\
+llr(\mu)&amp;amp;=\ell(\mu)-\ell(\hat{\mu})=\ell(\mu)\\
+&amp;amp;=-\frac{1}{2}(\frac{y-\mu}{\tau})^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比&lt;/h3&gt;
+&lt;p&gt;假設一組觀察值來自正態分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+L(\mu|\underline{x}) &amp;amp;=\prod_{i=1}^nf(x_i|\mu)\\
+\Rightarrow \ell(\mu|\underline{x}) &amp;amp;=\sum_{i=1}^nlogf(x_i|\mu)\\
+&amp;amp;=\sum_{i=1}^n[-\frac{1}{2}(\frac{x_i-\mu}{\sigma})^2]\\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\\
+&amp;amp;=-\frac{1}{2\sigma^2}[\sum_{i=1}^n(x_i-\bar{x})^2+\sum_{i=1}^n(\bar{x}-\mu)^2]\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(\bar{x}-\mu)^2\\
+&amp;amp;=-\frac{n}{2\sigma^2}(\bar{x}-\mu)^2 \\
+&amp;amp;=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\\
+\because \ell(\hat{\mu}) &amp;amp;= 0 \\
+\therefore llr(\mu) &amp;amp;= \ell(\mu)-\ell(\hat{\mu}) = \ell(\mu)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比的分佈&lt;/h3&gt;
+&lt;p&gt;假設我們用 &lt;span class=&#34;math inline&#34;&gt;\(\mu_0\)&lt;/span&gt; 表示總體均數這一參數的值。要注意的是，每當樣本被重新取樣，似然，對數似然方程，對數似然比都隨着觀察值而變 (即有自己的分佈)。&lt;/p&gt;
+&lt;p&gt;考慮一個服從正態分佈的單樣本 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu_0,\tau^2)\)&lt;/span&gt;。那麼它的對數似然比：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu_0|Y)=\ell(\mu_0)-\ell(\hat{\mu})=-\frac{1}{2}(\frac{Y-\mu_0}{\tau})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;的定義：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\because \frac{Y-\mu_0}{\tau}\sim N(0,1)\\
+\Rightarrow (\frac{Y-\mu_0}{\tau})^2 \sim \mathcal{X}_1^2\\
+\therefore -2llr(\mu_0|Y) \sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，如果有一組服從正態分佈的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu_0,\sigma^2)\)&lt;/span&gt;，且 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知的話：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\mu_0|\bar{X})\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+根據&lt;a href=&#34;https://winterwang.github.io/post/central-limit-theory/&#34;&gt;中心極限定理&lt;/a&gt;，可以將上面的結論一般化： 
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}f(x|\theta)\)&lt;/span&gt;。 那麼當重複多次從參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta_0\)&lt;/span&gt; 的總體中取樣時，那麼統計量 &lt;span class=&#34;math inline&#34;&gt;\(-2llr(\theta_0)\)&lt;/span&gt; 會漸進於自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 的卡方分佈： &lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\xrightarrow[n\rightarrow\infty]{}\;\sim \mathcal{X}_1^2\]&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然比信賴區間&lt;/h3&gt;
+&lt;p&gt;如果樣本量 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 足夠大 (通常應該大於 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt;)，根據上面的定理：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(-2llr(\theta_0)\leqslant \mathcal{X}_{1,0.95}^2=3.84) = 0.95\\
+\Rightarrow Prob(llr(\theta_0)\geqslant-3.84/2=1.92) = 0.95\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;故似然比的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間就是能夠滿足 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)=-1.92\)&lt;/span&gt; 的兩個 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 值。&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以二項分佈數據爲例&lt;/h4&gt;
+&lt;p&gt;繼續用本文開頭的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果令 &lt;span class=&#34;math inline&#34;&gt;\(llr(\pi)=-1.92\)&lt;/span&gt; 在代數上可能較難獲得答案。然而從圖形上，如果我們在 &lt;span class=&#34;math inline&#34;&gt;\(y=-1.92\)&lt;/span&gt; 畫一條橫線，和該似然比方程曲線相交的兩個點就是我們想要求的信賴區間的上限和下限：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,1,by=0.001)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+abline(h=0, lty=2)
+abline(h=-1.92, lty=2)
+segments(x0=0.15, y0=-12, x1=0.15, y1=-1.92, lty = 2)
+segments(x0=0.7, y0=-12, x1=0.7, y1=-1.92, lty = 2)
+axis(1, at=c(0.15,0.7))
+text(0.9, -1, &amp;quot;-1.92&amp;quot;)
+arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
+arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
+title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以正態分佈數據爲例：&lt;/h4&gt;
+&lt;p&gt;本文前半部分證明過， &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
+=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;很顯然，這是一個關於 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的二次方程，且最大值在 MLE &lt;span class=&#34;math inline&#34;&gt;\(\hat{\mu}=\bar{x}\)&lt;/span&gt; 時取值 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。所以可以通過對數似然比法求出均值的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2\times[-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2]=3.84\\
+\Rightarrow L=\bar{x}-\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意到這和我我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>似然非然 Likelihood</title>
+      <link>https://winterwang.github.io/post/likelihood/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/likelihood/</guid>
+      <description>&lt;div id=&#34;-vs.probability-vs.inference&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;概率 vs. 推斷/Probability vs. Inference&lt;/h3&gt;
+&lt;p&gt;在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 &lt;span class=&#34;math inline&#34;&gt;\(0.5\; Prob(coin\;landing\;heads)=0.5\)&lt;/span&gt;。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dbinom(4, 10, 0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.2050781&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# or you can calculate by hand:
+factorial(10)*(0.5^10)/(factorial(4)*(factorial(6)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.2050781&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 &lt;span class=&#34;math inline&#34;&gt;\(Prob(coin\;landing\;heads)\)&lt;/span&gt; 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，&lt;strong&gt;似然法 (likelihood)&lt;/strong&gt; 就是我們進行參數估計的最佳手段。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然和極大似然估計&lt;/h3&gt;
+&lt;p&gt;此處用二項分佈的例子來理解似然法的概念：假設我們觀察到10個對象中有4個患病，我們假定這個患病的概率爲 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;。於是我們就有了下面的模型：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型：&lt;/strong&gt; 我們假定患病與否是一個服從&lt;strong&gt;二項分佈的隨機變量&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(10,\pi)\)&lt;/span&gt;。同時也默認每個人之間是否患病是相互獨立的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;數據：&lt;/strong&gt; 觀察到的數據是，10人中有4人患病。於是 &lt;span class=&#34;math inline&#34;&gt;\(x=4\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;現在按照觀察到的數據，參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 變成了未知數：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(X=4|\pi)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;此時我們會很自然的考慮，當 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 是未知數的時候，&lt;strong&gt;它取值爲多大的時候才能讓這個事件（即：10人中4人患病）發生的概率最大？&lt;/strong&gt; 所以我們可以將不同的數值代入 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 來計算該事件在不同概率的情況下發生的可能性到底是多少：&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+Table 1: The probability of observing &lt;span class=&#34;math inline&#34;&gt;\(X=4\)&lt;/span&gt;
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+事件 &lt;span class=&#34;math inline&#34;&gt;\(X=4\)&lt;/span&gt; 發生的概率
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.088
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;0.4&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;0.251&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.205
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.111
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.006
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;很顯然，如果 &lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt; 時，我們觀察到的事件發生的概率要比 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 取其它值時更大。於是小總結一下目前爲止的步驟如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;觀察到實驗數據（10人中4個患病）；&lt;/li&gt;
+&lt;li&gt;假定這數據服從二項分佈的概率模型，計算不同（&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的取值不同的）情況下，該事件按照假定模型發生的概率；&lt;/li&gt;
+&lt;li&gt;通過比較，我們選擇了能夠讓觀察事件發生概率最高的參數取值 (&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt;)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至此，我們可以知道，似然方程，是一個關於未知參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的函數，我們目前位置做的就是找到這個函數的最大值 (maximised)，和使之成爲最大值時的 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; ：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;我們可以畫出這個似然方程的形狀， &lt;span class=&#34;math inline&#34;&gt;\(\pi\in[0,1]\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,1,by=0.001)
+y &amp;lt;- (factorial(10)/(factorial(4)*(factorial(6))))*(x^4)*((1-x)^6)
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,0.3), ylab = &amp;quot;L(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+title(&amp;quot;Figure 1. Binomial Likelihood&amp;quot;)
+abline(h=0.251, lty=2)
+abline(v=0.4, lty=2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;從圖形上我們也能確認，&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt; 時能夠讓這個似然方程取得最大值。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然方程的一般化定義&lt;/h3&gt;
+&lt;p&gt;對於一個概率模型，如果其參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;，那麼在給定觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 時，該參數的似然方程被定義爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(L(\theta|\underline{x})=P(\underline{x}|\theta)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\underline{x}|\theta)\)&lt;/span&gt; 可以是概率（離散分佈）方程，也可以是概率密度（連續型變量）方程。對於此方程，&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 是給定的，然後再計算某些事件發生的概率。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(L(\theta|\underline{x})\)&lt;/span&gt; 是一個關於參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的方程，此時，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 是固定不變的（觀察值）。我們希望通過這個方程求出能夠使觀察到的事件發生概率最大的參數值。&lt;/li&gt;
+&lt;li&gt;似然方程&lt;strong&gt;不是&lt;/strong&gt;一個概率密度方程。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;另一個例子：&lt;/p&gt;
+&lt;p&gt;有一組觀察數據是離散型隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，它符合概率方程 &lt;span class=&#34;math inline&#34;&gt;\(f(x|\theta)\)&lt;/span&gt;。下表羅列了當 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 分別取值 &lt;span class=&#34;math inline&#34;&gt;\(1,2,3\)&lt;/span&gt; 時的概率方程的值，試求每個觀察值 &lt;span class=&#34;math inline&#34;&gt;\(X = 0,1,2,3,4\)&lt;/span&gt; 的最大似然參數估計：&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+Exercise 1
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|1)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|2)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|3)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class=&#34;table table-striped table-bordered&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+Exercise 1 answer
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|1)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|2)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f(x|3)\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;1&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;1&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;2&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;3&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1/3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;strong&gt;3&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-log-likelihood&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;對數似然方程 log-likelihood&lt;/h3&gt;
+&lt;p&gt;似然方程的最大值，可通過求 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 的最大值獲得，也可以通過求該方程的對數方程 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 的最大值獲得。傳統上，我們估計最大方程的最大值的時候，會給參數戴一頂“帽子”（因爲這是觀察獲得的數據告訴我們的參數）： &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt;。並且我們發現對數似然方程比一般的似然方程更加容易微分，因此求似然方程的最大值就變成了求對數似然方程的最大值：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=\ell^\prime(\theta)=0\\
+AND\\
+\frac{d^2\ell}{d\theta^2}&amp;lt;0\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;要注意的是，微分不一定總是能幫助我們求得似然方程的最大值。如果說參數本身的定義域是有界限的話，微分就行不通了：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,3,by=0.001)
+y &amp;lt;- (x-1)^2-5
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(-5,0-1), ylab = &amp;quot;L(\U03B8)&amp;quot;, xlab = &amp;quot;\U03B8&amp;quot;)
+title(&amp;quot;Figure 2. Likelihood function with \n a limited domain&amp;quot;)
+abline(v=3, lty=2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;-lthetadata--ellthetadata-&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明：當 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 取最大值時，該方程的對數方程 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 也是最大值：&lt;/h4&gt;
+&lt;p&gt;如果似然方程是連續可導，只有一個最大值，且可以二次求導，假設 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 使該方程取最大值，那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{dL}{d\theta}=0, \frac{d^2L}{d\theta^2}&amp;lt;0 \Rightarrow \theta=\hat{\theta}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(\ell=logL\)&lt;/span&gt; 那麼 &lt;span class=&#34;math inline&#34;&gt;\(\frac{d\ell}{dL}=\ell^\prime=\frac{1}{L}\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=\frac{d\ell}{dL}\cdot\frac{dL}{d\theta}=\frac{1}{L}\cdot\frac{dL}{d\theta}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 取最大值時：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{d\ell}{d\theta}=0\Leftrightarrow\frac{1}{L}\cdot\frac{dL}{d\theta}=0\\
+\because \frac{1}{L}\neq0 \\
+\therefore \frac{dL}{d\theta}=0\\
+\Leftrightarrow \theta=\hat{\theta}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\frac{d^2\ell}{d\theta^2} &amp;amp;= \frac{d}{d\theta}(\frac{d\ell}{dL}\cdot\frac{dL}{d\theta})\\
+ &amp;amp;= \frac{d\ell}{dL}\cdot\frac{d^2L}{d\theta^2} + \frac{dL}{d\theta}\cdot\frac{d}{d\theta}(\frac{d\ell}{dL})
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(\theta=\hat{\theta}\)&lt;/span&gt; 時，&lt;span class=&#34;math inline&#34;&gt;\(\frac{dL}{d\theta}=0\)&lt;/span&gt; 且 &lt;span class=&#34;math inline&#34;&gt;\(\frac{d^2L}{d\theta^2}&amp;lt;0 \Rightarrow \frac{d^2\ell}{d\theta^2}&amp;lt;0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，求獲得 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 最大值的 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 即可令 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 獲得最大值。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-maximum-likelihood-estimator-mle-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;極大似然估計 (maximum likelihood estimator, MLE) 的性質：&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;漸進無偏 Asymptotically unbiased: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow \infty \Rightarrow E(\hat{\Theta}) \rightarrow \theta\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;漸進最高效能 Asymptotically efficient: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow \infty \Rightarrow Var(\hat{\Theta})\)&lt;/span&gt; 是所有參數中方差最小的估計&lt;/li&gt;
+&lt;li&gt;漸進正態分佈 Asymptotically normal: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow \infty \Rightarrow \hat{\Theta} \sim N(\theta, Var(\hat{\Theta}))\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;變形後依然保持不變 Transformation invariant: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\hat{\Theta}\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的MLE時 &lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow g(\hat{\Theta})\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(g(\theta)\)&lt;/span&gt; 的 MLE&lt;/li&gt;
+&lt;li&gt;信息足夠充分 Sufficient：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\hat{\Theta}\)&lt;/span&gt; 包含了觀察數據中所有的能夠用於估計參數的信息&lt;/li&gt;
+&lt;li&gt;始終不變 consistent: &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\Rightarrow\hat{\Theta}\rightarrow\theta\)&lt;/span&gt; 或者可以寫成：&lt;span class=&#34;math inline&#34;&gt;\(\varepsilon&amp;gt;0, lim_{n\rightarrow\infty}P(|\hat{\Theta}-\theta|&amp;gt;\varepsilon)=0\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-likelihood-for-a-rate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;率的似然估計 Likelihood for a rate&lt;/h3&gt;
+&lt;p&gt;如果在一項研究中，參與者有各自不同的追蹤隨訪時間（長度），那麼我們應該把事件（疾病）的發病率用率的形式（多少事件每單位人年, e.g. per person year of observation）。如果這個發病率的參數用 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 來表示，所有參與對象的隨訪時間之和爲 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 人年。那麼這段時間內的期望事件（疾病發病）次數爲：&lt;span class=&#34;math inline&#34;&gt;\(\mu=\lambda p\)&lt;/span&gt;。假設事件（疾病發病）發生是相互獨立的，可以使用泊松分佈來模擬期望事件（疾病發病）次數 &lt;span class=&#34;math inline&#34;&gt;\(D\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[D\sim Poi(\mu)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;假設我們觀察到了 &lt;span class=&#34;math inline&#34;&gt;\(D=d\)&lt;/span&gt; 個事件，我們獲得這個觀察值的概率應該用以下的模型：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(D=d)=e^{-\mu}\frac{\mu^d}{d!}=e^{-\lambda p}\frac{\lambda^dp^d}{d!}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;因此，&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的似然方程是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\lambda|observed \;data)=e^{-\lambda p}\frac{\lambda^dp^d}{d!}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的對數似然方程是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\ell(\lambda|observed\;data) &amp;amp;= log(e^{-\lambda p}\frac{\lambda^dp^d}{d!}) \\
+  &amp;amp;= -\lambda p+d\:log(\lambda)+d\:log(p)-log(d!) \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;解 &lt;span class=&#34;math inline&#34;&gt;\(\ell^\prime(\lambda|data)=0\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\ell^\prime(\lambda|data) &amp;amp;= -p+\frac{d}{\lambda}=0\\
+\Rightarrow \hat{\lambda} &amp;amp;= \frac{d}{p} \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 在對數似然方程中，不包含參數的部分，對與似然方程的形狀不產生任何影響，我們在微分對數似然方程的時候，這部分也都自動消失。所以不包含參數的部分，與我們如何獲得極大似然估計是無關的。因此，我們常常在寫對數似然方程的時候就把其中沒有參數的部分直接忽略了。例如上面泊松分佈的似然方程中，&lt;span class=&#34;math inline&#34;&gt;\(d\:log(p)-log(d!)\)&lt;/span&gt; 不包含參數 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 可以直接不寫出來。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立觀察時的似然方程和對數似然方程&lt;/h3&gt;
+&lt;p&gt;當有多個獨立觀察時，總體的似然方程等於各個觀察值的似然方程之&lt;strong&gt;乘積&lt;/strong&gt;。如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\dots,X_n\stackrel{i.i.d}{\sim}f(\cdot|\theta)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\theta|x_1,\cdots,x_n)=f(x_1,\cdots,x_n|\theta)=\prod_{i=1}^nf(x_i|\theta)\\
+\Rightarrow \ell(\theta|x_1,\cdots,x_n)=\sum_{i=1}^nlog(f(x_i|\theta))\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
@@ -1574,128 +2125,6 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\  4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\  2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\  2 &amp;amp; 1&amp;amp; 2&amp;amp; -3 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3&lt;br&gt; 1. 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第3行，作新的第一行； 2. 第2行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2，作新的第2行； 3. 第4行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 作新的第4行&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix}  0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 3\\  0 &amp;amp; 8 &amp;amp; 8 &amp;amp; 1\\  2 &amp;amp; -3 &amp;amp; -4 &amp;amp; 2\\  0 &amp;amp; 4 &amp;amp; 6 &amp;amp; -5 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1行衹有第4個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp;amp; 8 &amp;amp; 8 \\ 2 &amp;amp; -3 &amp;amp; -4 \\ 0 &amp;amp; 4 &amp;amp; 6 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1列衹有第2個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp;amp; 8 \\ 4 &amp;amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>https://winterwang.github.io/post/2017-03-15/</link>
-      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-15/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;行列式的定義與計算&lt;/h2&gt;
-
-&lt;div class=&#34;theorem&#34;&gt;
-&lt;span id=&#34;thm:unnamed-chunk-1&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  (determinant)  &lt;/strong&gt;&lt;/span&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A= (a_{ij})=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\)&lt;/span&gt; 的&lt;strong&gt;行列式(determinant)&lt;/strong&gt;被定義爲是，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的全部成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{11},a_{12},\cdots,a_{nn}\)&lt;/span&gt; 的函數，這個函數是一個&lt;strong&gt;標量(scalar)&lt;/strong&gt;。
-&lt;/div&gt;
-
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的行列式(&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;次行列式)，被記作：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|, |a_{ij}|, \det(A), \det(a_{ij})， \begin{vmatrix} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \notag \end{vmatrix}\)&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;1次行列式：
-&lt;span class=&#34;math display&#34; id=&#34;eq:determinant1&#34;&gt;\[\begin{equation}
-A=(a_{11}), |A|=a_{11}
-\tag{1}
-\end{equation}\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;2次行列式：
-&lt;span class=&#34;math display&#34; id=&#34;eq:determinant2&#34;&gt;\[\begin{equation}
-A=\left(
-\begin{array}{}
-a_{11} &amp;amp; a_{12}\\
-a_{21} &amp;amp; a_{22}\\
-\end{array}
-\right), |A|=a_{11}a_{12}-a_{12}a_{21}
-\tag{2}
-\end{equation}\]&lt;/span&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt; 次行列式
-&lt;span class=&#34;math display&#34; id=&#34;eq:determinant3&#34;&gt;\[\begin{equation}
-A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
-\tag{3}
-\end{equation}\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次行列式&lt;br&gt; 假如&lt;a href=&#34;#eq:determinant3&#34;&gt;(3)&lt;/a&gt;成立：&lt;br&gt; 對於：&lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\\ |A|=\begin{vmatrix} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \notag \end{vmatrix}\\ \left\{ \begin{array}{} (4)\;=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{ij}A_{ij}+\cdots+a_{in}A_{in}\\ (5)\;=a_{1j}A_{i1}+a_{2j}A_{2j}+\cdots+a_{ij}A_{ij}+\cdots+a_{nj}A_{nj}\\  \end{array} \right.\)&lt;/span&gt;&lt;br&gt; 式子 &lt;span class=&#34;math inline&#34;&gt;\((4)\)&lt;/span&gt; 被稱爲行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行&lt;strong&gt;展開式(expansion of &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; according to elements of row &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;)&lt;/strong&gt;。同樣的，式子 &lt;span class=&#34;math inline&#34;&gt;\((5)\)&lt;/span&gt; 被稱爲行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列展開式。&lt;span class=&#34;math inline&#34;&gt;\(|A_{ij}|(i=1,2,\cdots,n;j=1,2,\cdots,n)\)&lt;/span&gt; 被稱爲 成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}\)&lt;/span&gt; 的&lt;strong&gt;餘因子(cofactor)&lt;/strong&gt;，定義如下：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A_{ij}=(-1)^{i+j}D_{ij}\\ \;\;\;\;=(-1)^{i+j}\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1,j-1} &amp;amp; a_{1,j+1} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2,j-1} &amp;amp; a_{2,j+1} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{i-1,1} &amp;amp; a_{i-1,2} &amp;amp; \cdots &amp;amp; a_{i-1,j-1} &amp;amp; a_{i-1,j+1} &amp;amp; \cdots &amp;amp; a_{i-1,n}\\ a_{i+1,1} &amp;amp; a_{i+1,2} &amp;amp; \cdots &amp;amp; a_{i+1,j-1} &amp;amp; a_{i+1,,j+1} &amp;amp; \cdots &amp;amp; a_{i+1,n}\\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1,j-1} &amp;amp; a_{1,j+1} &amp;amp; \cdots &amp;amp; a_{1n}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(D_{ij}\)&lt;/span&gt; 正如上面等式最右端所寫，其實是行列式 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 剔除了第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 行和第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列的 &lt;span class=&#34;math inline&#34;&gt;\((n-1)\)&lt;/span&gt; 次行列式，又被叫做行列式 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的&lt;strong&gt;小行列式(minor)&lt;/strong&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;餘因子矩陣&lt;/h2&gt;
-&lt;p&gt;以 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}\)&lt;/span&gt; 的餘因子 &lt;span class=&#34;math inline&#34;&gt;\(A_{ij}\)&lt;/span&gt; 作成分&lt;strong&gt;的矩陣&lt;/strong&gt;&lt;span class=&#34;diff_alert&#34;&gt;的轉置矩陣&lt;/span&gt;作被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的&lt;strong&gt;餘因子矩陣(adjoint matrix, adjugate matrix)&lt;/strong&gt;。標記爲 &lt;span class=&#34;math inline&#34;&gt;\(adj(A)\)&lt;/span&gt;。也就是說：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left( \begin{array}{c} A_{11}&amp;amp; A_{12} &amp;amp; \cdots &amp;amp; A_{1n}\\ A_{21}&amp;amp; A_{22} &amp;amp; \cdots &amp;amp; A_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ A_{n1}&amp;amp; A_{n2} &amp;amp; \cdots &amp;amp; A_{nn} \end{array} \right)^t=\left( \begin{array}{c} A_{11}&amp;amp; A_{21} &amp;amp; \cdots &amp;amp; A_{n1}\\ A_{12}&amp;amp; A_{22} &amp;amp; \cdots &amp;amp; A_{n2}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ A_{1n}&amp;amp; A_{2n} &amp;amp; \cdots &amp;amp; A_{nn} \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;我們來試着計算行列式：&lt;br&gt; 1. &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 次行列式&lt;br&gt; 以方程&lt;a href=&#34;#eq:determinant2&#34;&gt;(2)&lt;/a&gt;的定義計算：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12}\\  a_{21} &amp;amp; a_{22}\\  \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;br&gt; 此公式可以用下列 &lt;strong&gt;示意圖(薩呂法則, Sarrus’ rule)&lt;/strong&gt; 來記憶: 　&lt;img src=&#34;https://winterwang.github.io/img/sarrus.png&#34; /&gt;&lt;br&gt; 也就是，沿着右下方向將所有成分相乘以後用加號 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 號連接起來，沿着左下的方向的所有成分則相乘以後用減號 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 號連接起來。最後將這兩者相加獲得行列式的值。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;練習： 求 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{array} \right)\)&lt;/span&gt; 的行列式和餘因子矩陣。&lt;/p&gt;
-&lt;p&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{vmatrix}=4\times3-2\times1=10\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left( \begin{array}{} A_{11} &amp;amp; A_{21}\\ A_{12} &amp;amp; A_{22}\\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{11}=(-1)^{(1+1)}\times3\\ A_{21}=(-1)^{(2+1)}\times2\\ A_{12}=(-1)^{(1+2)}\times1\\ A_{22}=(-1)^{2+2}\times4\\ \therefore adj(A)=\left( \begin{array}{r} 3 &amp;amp; -2\\ -1 &amp;amp; 4\\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt; 注意：餘因子&lt;strong&gt;矩陣&lt;/strong&gt;，終究是一個矩陣而非行列式。&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;三次矩陣&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A=\left(  \begin{array}{c}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\  a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\  \end{array}  \right)\)&lt;/span&gt; 的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt; 要如何用 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的成分來表示呢？ &lt;br&gt; 我們發現，代入上面第 &lt;span class=&#34;math inline&#34;&gt;\((4)\)&lt;/span&gt; 個式子 &lt;span class=&#34;math inline&#34;&gt;\(n=3\)&lt;/span&gt; 的情況來計算。&lt;br&gt; 在這裏，我們就按照 &lt;span class=&#34;math inline&#34;&gt;\(i=1\)&lt;/span&gt; 的情況來展開。&lt;span class=&#34;diff_alert&#34;&gt; (注意：&lt;span class=&#34;math inline&#34;&gt;\(i=2, i=3\)&lt;/span&gt; 的情況展開，結果也是一樣的。)&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-|A| &amp;amp;= a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}\\
-    &amp;amp;= a_{11}(-1)^{1+1}D_{11}+a_{12}(-1)^{1+2}D_{12}\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}(-1)^{1+3}D_{13}\\
-    &amp;amp;= a_{11}\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}-a_{12}\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix}\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\
-    &amp;amp;= a_{11}(a_{22}a_{23}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{31}a_{23})\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}(a_{21}a_{32}-a_{22}a_{31})\\
-    &amp;amp;=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}\\
-    &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
-   \end{align}\]&lt;/span&gt;
-&lt;br&gt; 我們也可以利用薩呂法則（下圖）來記住計算過程：&lt;br&gt; &lt;img src=&#34;https://winterwang.github.io/img/sarrus33.png&#34; /&gt;&lt;br&gt; 另外，可以得到如下的餘因子：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A_{11}=\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}, A_{12}=-\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{13}=\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{21}=-\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix},  A_{22}=\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{23}=-\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{31}=\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23}\\\end{vmatrix},  A_{32}=-\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23}\\\end{vmatrix},  A_{33}=\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22}\\\end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 因此餘因子矩陣爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{12} &amp;amp; A_{13}\\  A_{21} &amp;amp; A_{22} &amp;amp; A_{23}\\  A_{31} &amp;amp; A_{32} &amp;amp; A_{33}\\  \end{array}  \right)^t=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{21} &amp;amp; A_{23}\\  A_{12} &amp;amp; A_{22} &amp;amp; A_{32}\\  A_{13} &amp;amp; A_{23} &amp;amp; A_{33}\\  \end{array}  \right)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;table style=&#34;width:6%;&#34;&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;5%&#34; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;練習：試求矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{r} 6 &amp;amp; 1 &amp;amp; -3\\ 3 &amp;amp; 5 &amp;amp; 7\\ 2 &amp;amp; -1 &amp;amp; 3\\ \end{array} \right)\)&lt;/span&gt; 的行列式和餘因子矩陣&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(|A|= \begin{vmatrix} 6 &amp;amp; 1 &amp;amp; -3\\ 3 &amp;amp; 5 &amp;amp; 7\\ 2 &amp;amp; -1 &amp;amp; 3\\ \end{vmatrix}\\ \;\;\;\;\:=6\times5\times3+1\times7\times2+(-3)\times3\times(-1)\\ \;\;\;\;\;\:\;\;\;\;\:-\{6\times7\times(-1)+1\times3\times3+(-3)\times5\times2\}\\ \;\;\;\;\:=113-(-63)=176\\ \\ A_{11}=\begin{vmatrix}5 &amp;amp; 7\\ -1 &amp;amp; 3\\\end{vmatrix}=15-(-7)=22\\ A_{12}=\begin{vmatrix}3 &amp;amp; 7\\ 2&amp;amp; 3\\\end{vmatrix}=9-14=-5\\ A_{13}=\begin{vmatrix}3 &amp;amp; 5\\ 2 &amp;amp; -1\\\end{vmatrix}=-3-10=-13\\ A_{21}=\begin{vmatrix}1 &amp;amp; -3\\ -1 &amp;amp; 3\\\end{vmatrix}=3-3=0\\ A_{22}=\begin{vmatrix}6 &amp;amp; -3\\ 2 &amp;amp; 3\\\end{vmatrix}=18-(-6)=24\\ A_{23}=\begin{vmatrix}6 &amp;amp; 1\\ 2 &amp;amp; -1\\\end{vmatrix}=-6-2=-8\\ A_{31}=\begin{vmatrix}1 &amp;amp; -3\\5 &amp;amp; 7\\\end{vmatrix}=7-(-15)=22\\ A_{32}=\begin{vmatrix}6 &amp;amp; -3\\3 &amp;amp; 7\\\end{vmatrix}=42-(-9)=51\\ A_{33}=\begin{vmatrix}6 &amp;amp; 1\\ 3 &amp;amp; 5\\\end{vmatrix}=30-3=27\\ \Longrightarrow adj(A)=\left( \begin{array}{r} 22 &amp;amp; 5 &amp;amp; -13 \\ 0 &amp;amp; 24&amp;amp; -8 \\ 22 &amp;amp; 51&amp;amp; 27 \\ \end{array} \right)^t=\left( \begin{array}{r} 22 &amp;amp; 0 &amp;amp; 22\\ 5 &amp;amp; 24 &amp;amp; 51\\ -13 &amp;amp; -8 &amp;amp; 27\\ \end{array} \right)\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table style=&#34;width:6%;&#34;&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;5%&#34; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;練習： 求3次矩陣的固有值時(將來敘述)需要的行列式&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a-\lambda &amp;amp; b &amp;amp; c\\ d &amp;amp; e-\lambda &amp;amp; f\\ g &amp;amp; h &amp;amp; i-\lambda \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 展開以後，整理爲關於 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的式子：&lt;br&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a-\lambda &amp;amp; b &amp;amp; c\\ d &amp;amp; e-\lambda &amp;amp; f\\ g &amp;amp; h &amp;amp; i-\lambda \end{vmatrix}\\ =(a-\lambda)(e-\lambda)(i-\lambda)+bfg+dhc\\ \;\;\;\;\;-\{g(e-\lambda)c+bd(i-\lambda)+(a-\lambda)fh\}\\ =-\lambda^3+(a+e+i)\lambda^2+(bd+cg+fh-ae-ei-ai)\lambda\\ \;\;\;\;\;+(aei+bfg+cdh-afh-bdi-ecg)\)&lt;/span&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;4次行列式：&lt;br&gt; 試求&lt;span class=&#34;math inline&#34;&gt;\(A=\left(  \begin{array}{} a_{11}&amp;amp; a_{12}&amp;amp; a_{13}&amp;amp; a_{14}\\ a_{21}&amp;amp; a_{22}&amp;amp; a_{23}&amp;amp; a_{24}\\ a_{31}&amp;amp; a_{32}&amp;amp; a_{33}&amp;amp; a_{34}\\ a_{41}&amp;amp; a_{42}&amp;amp; a_{43}&amp;amp; a_{44}  \end{array}  \right)\\  \;\;=\left(  \begin{array}{r} -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\ 4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\ 2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\ 2 &amp;amp; 1&amp;amp; 2&amp;amp; -3  \end{array}  \right)\)&lt;/span&gt; &lt;br&gt;的行列式 &lt;span class=&#34;math inline&#34;&gt;\(|A|\)&lt;/span&gt;：&lt;br&gt; 由於第2行有成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt; 我們以第二行展開行列式，因爲 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}=0\)&lt;/span&gt;，所以 &lt;span class=&#34;math inline&#34;&gt;\(a_{23}A_{23}=0\)&lt;/span&gt; 可以省略：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=a_{21}A_{21}+a_{22}A_{22}+a_{24}A_{24}\\  \;\;\;\;\:=a_{21}(-1)^{2+1}D_{21}+a_{22}(-1)^{2+2}D_{22}+a_{24}(-1)^{2+4}D_{24}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{21}=(-1)^{2+1}\begin{vmatrix}  a_{12} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{32} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{42} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  3 &amp;amp; 4 &amp;amp; 1\\  -3 &amp;amp; -4 &amp;amp; 2\\  1 &amp;amp; 2&amp;amp; -3\\  \end{vmatrix}=6\\  A_{22}=(-1)^{2+2}\begin{vmatrix}  a_{11} &amp;amp; a_{13} &amp;amp; a_{14}\\  a_{31} &amp;amp; a_{33} &amp;amp; a_{34}\\  a_{41} &amp;amp; a_{43} &amp;amp; a_{44}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=\begin{vmatrix}  -2 &amp;amp; 4 &amp;amp;1\\  2 &amp;amp; -4 &amp;amp;2\\  2 &amp;amp; 2 &amp;amp;-3\\  \end{vmatrix}=36\\  A_{24}=(-1)^{2+4}\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\  a_{41} &amp;amp; a_{42} &amp;amp; a_{43}\\  \end{vmatrix}\\  \;\;\;\;\;\;\;\;\;=-\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4\\  2 &amp;amp; -3 &amp;amp;-4\\  2 &amp;amp; 1 &amp;amp;2\\  \end{vmatrix}=0\\  \therefore |A|=4\times6+2\times36+5\times0=96\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;然而，&lt;strong&gt;4次以上的矩陣的行列式計算，沒有類似薩呂法則的計算方法。&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>https://winterwang.github.io/post/2017-03-13/</link>
-      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-13/</guid>
-      <description>&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;正定，半正定 (正值，半正值)&lt;/h2&gt;
-&lt;p&gt;對於任意的非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; ，如果2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 始終滿足 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} &amp;gt; 0\)&lt;/span&gt; &lt;strong&gt;注意此處無等號&lt;/strong&gt;。我們稱這個2次型爲&lt;strong&gt;正定(positive definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;正定矩陣(positive definite matrix)&lt;/strong&gt;。另外，如果任意非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; 始終滿足2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} \geqslant 0\)&lt;/span&gt;， 這個2次型被叫做&lt;strong&gt;半正定(positive semi-definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;半正定矩陣(positive semi-definite matrix)&lt;/strong&gt;。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; 2 &amp;amp; 4\\ 2 &amp;amp; 2 &amp;amp; 3\\ 4 &amp;amp; 3 &amp;amp; 25 \end{array} \right)\)&lt;/span&gt;，2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 是正定。因爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=5x_1^2+2x_2^2+25x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+4x_1x_2+8x_1x_3+6x_2x_3\\\;\;\;\;\;\;\;\;\;\:=(2x_1+x_2)^2+(x_2+3x_3)^2+(x_1+4x_3)^2\\ \because \underline{x}\neq\underline{0}=\left( \begin{array}{} 0\\ 0\\ 0 \end{array} \right)\\ \therefore \underline{x}^tA\underline{x}&amp;gt;0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; -6 &amp;amp; 3\\ -6 &amp;amp; 25 &amp;amp; 32\\ 3 &amp;amp; 32 &amp;amp; 73 \end{array} \right)\)&lt;/span&gt;，2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 是半正定。因爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=5x_1^2+25x_2^2+73x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-12x_1x_2+6x_2x_3+64x_1x_3\\ \;\;\;\;\;\;\;\;\;\:=(2x_1-3x_3)^2+(x_1+3x_3)^2+(4x_2+8x_3)^2\\\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because \underline{x}=\left( \begin{array}{c} 3\\ 2\\ -1 \end{array} \right)\)&lt;/span&gt; 時 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=0\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore \underline{x}^tA\underline{x} \geqslant0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)(\neq\underline{0})\)&lt;/span&gt; 與單位矩陣 &lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 構成的2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tE_n\underline{x}=\underline{x}^t\underline{x}=\sum\limits_{i=1}^nx_i^2&amp;gt;0\)&lt;/span&gt; 是爲正定。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right), \underline{\frac{1}{n}}=\left( \begin{array}{c} \frac{1}{n}\\ \frac{1}{n}\\ \vdots \\ \frac{1}{n} \end{array} \right)\)&lt;/span&gt; 已知，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\underline{1/n}=\sum\limits_{i=1}^nx_i\cdot \frac{1}{n}=\bar{x}\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的平均值)，包含了 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個 &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 的橫向量： &lt;span class=&#34;math inline&#34;&gt;\((\bar{x}，\bar{x},\cdots,\bar{x})\)&lt;/span&gt; 展開以後成爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((\bar{x}，\bar{x},\cdots,\bar{x})\\ \;\;\;\;\;\;\;\;\;\:=(x_1, x_2, \cdots, x_n)\left( \begin{array}{c} \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n}\\ \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ \frac{1}{n} &amp;amp; \frac{1}{n} &amp;amp; \cdots &amp;amp; \frac{1}{n} \end{array} \right)\\ \;\;\;\;\;\;\;\;\;\:=\underline{x}U\)&lt;/span&gt;&lt;br&gt; 令 &lt;span class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt; 代表上面第二個等式中有半部分的矩陣。那麼將之從右往左乘以 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 我們可以得到：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tU\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\underline{x}=(\bar{x},\bar{x},\cdots,\bar{x})\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)\\ =\sum\limits_{i=1}^n\bar{x}x_i=\bar{x}\sum\limits_{i=1}^nx_i=n\bar{x}^2\)&lt;/span&gt;&lt;br&gt; 利用上面的式子，我們可以得到，&lt;strong&gt;偏差平方和(sum of squared deviation, SS)&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 爲 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次單位矩陣。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(SS=\sum\limits_{i=1}^n(x_i-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2x_i\bar{x}+\bar{x}^2)\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2n\bar{x}^2+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^tE_n\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t(E_n-U)\underline{x}\\ \because when \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)=\left( \begin{array}{c} \bar{x}\\ \bar{x}\\ \vdots\\ \bar{x} \end{array} \right), \&amp;amp; (\bar{x}\neq0), SS=0\\ \therefore \underline{x}^t(E_n-U)\underline{x}\;是半正定2次型。\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;雙一次型&lt;/h2&gt;
-&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_m \end{array} \right), A=\left( \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mn} \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\)&lt;/span&gt; 來說，&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{y}=\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{ij}x_iy_j\)&lt;/span&gt; 既是 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的1次型，也是 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 的1次型，所以又叫做 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\underline{y}\)&lt;/span&gt; 的&lt;strong&gt;雙1次型(bilinear form)&lt;/strong&gt;。雙1次型是一個標量(scalar)。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right), B=(b_{ij})=\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; 1 &amp;amp; 1\\ 1 &amp;amp; 0 &amp;amp; 1 \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tB\underline{y}=\sum\limits_{i=1}^3\sum\limits_{j=1}^3b_{ij}x_iy_j=(x_1+x_3, x_2, x_2+x_3)\left( \begin{array}{c} y_1\\ y_2\\ y_3 \end{array} \right)\\ \;\;\;\;\:=x_1y_1+x_2y_2+x_2y_3+x_3y_1+x_3y_3\\ \;\;\;\;\:=x_1y_1+x_2(y_2+y_3)+x_3(y_1+y_3) \; \bf (\underline{x} 的1次型)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\;\;\;\;\;\:=y_1(x_1+x_3)+x_2y_2+(x_2+x_3)y_3 \;\bf (\underline{y} 的1次型)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{l}=\left( \begin{array}{c} l_1\\ l_2\\ \end{array} \right), T=\left( \begin{array}{c} t_{11} &amp;amp; t_{12} &amp;amp; t_{13}\\ t_{21} &amp;amp; t_{22} &amp;amp; t_{23}\\ \end{array} \right), \underline{m}=\left( \begin{array}{c} m_1\\ m_2\\ m_3 \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{l}^tT\underline{m}=\sum\limits_{i=1}^2\sum\limits_{j=1}^3t_{ij}l_im_j\\ \;\;\;\;\;\;\;\;\;\;=l_1t_{11}m_1+l_1t_{12}m_2+l_1t_{13}m_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2t_{21}m_1+l_2t_{22}m_2+l_3t_{23}m_3\\ \;\;\;\;\;\;\;\;\;\;=l_1(t_{11}m_1+t_{12}m_2+t_{13}m_3)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+l_2(t_{21}m_1+t_{22}m_2+t_{23}m_3) \;\;(\underline{l} \textbf{的1次型})\\ \;\;\;\;\;\;\;\;\;\;=(t_{11}l_1+t_{21}l_2)m_1+(t_{12}l_1+t_{22}l_2)m_2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(t_{13}l_1+t_{23}l_2)m_3\;\;(\underline{m} \textbf{的1次型})\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

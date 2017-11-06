@@ -7,8 +7,146 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 02 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/study-abroad/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>對數似然比 Log-likelihood ratio</title>
+      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <description>&lt;div id=&#34;-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;對數似然比 Log-likelihood ratio&lt;/h3&gt;
+&lt;p&gt;對數似然比的想法來自於將對數似然方程圖形的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的&lt;strong&gt;對數似然比 (log-likelihood ratio)&lt;/strong&gt; 來獲得：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta)\)&lt;/span&gt; 的最大值在 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 時， 所以，&lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 就是個當 &lt;span class=&#34;math inline&#34;&gt;\(\theta=\hat{\theta}\)&lt;/span&gt; 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 &lt;span class=&#34;math inline&#34;&gt;\(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\)&lt;/span&gt; 取對數而已。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/likelihood/&#34;&gt;之前&lt;/a&gt;我們也確證了，不包含我們感興趣的參數的方程部分可以忽略掉。還是用上一節 10人中4人患病的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\\
+\Rightarrow \ell(\pi)=log[\pi^4(1-\pi)^{10-4}]\\
+\Rightarrow llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其實由上也可以看出 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 只是將對應的似然方程的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節了一下而已。形狀是沒有改變的：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
+x &amp;lt;- seq(0,1,by=0.001)
+y &amp;lt;- (x^4)*((1-x)^6)/(0.4^4*0.6^6)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,1.1),yaxt=&amp;quot;n&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;LR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+axis(2, at=seq(0,1, 0.2), las=2)
+title(main = &amp;quot;Binomial likelihood ratio&amp;quot;)
+abline(h=1.0, lty=2)
+segments(x0=0.4, y0=0, x1=0.4, y1=1, lty = 2)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
+abline(h=0, lty=2)
+segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
+&lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麼有：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f(y|\mu) &amp;amp;= \frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow L(\mu|y) &amp;amp;=\frac{1}{\sqrt{2\pi\tau^2}}e^{(-\frac{1}{2}(\frac{y-\mu}{\tau})^2)} \\
+\Rightarrow \ell(\mu)&amp;amp;=log(\frac{1}{\sqrt{2\pi\tau^2}})-\frac{1}{2}(\frac{y-\mu}{\tau})^2\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;= -\frac{1}{2}(\frac{y-\mu}{\tau})^2 \\
+\Rightarrow \ell^\prime(\mu) &amp;amp;= 2\cdot[-\frac{1}{2}(\frac{y-\mu}{\tau})\cdot\frac{-1}{\tau}] \\
+&amp;amp;=\frac{y-\mu}{\tau^2} \\
+let \; \ell^\prime(\mu) &amp;amp;= 0 \\
+\Rightarrow \frac{y-\mu}{\tau^2} &amp;amp;= 0 \Rightarrow \hat{\mu} = y\\
+\because \ell^{\prime\prime}(\mu) &amp;amp;=  \frac{-1}{\tau^2} &amp;lt; 0 \\
+\therefore \hat{\mu} &amp;amp;= y \Rightarrow \ell(\hat{\mu}=y)_{max}=0 \\
+llr(\mu)&amp;amp;=\ell(\mu)-\ell(\hat{\mu})=\ell(\mu)\\
+&amp;amp;=-\frac{1}{2}(\frac{y-\mu}{\tau})^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比&lt;/h3&gt;
+&lt;p&gt;假設一組觀察值來自正態分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+L(\mu|\underline{x}) &amp;amp;=\prod_{i=1}^nf(x_i|\mu)\\
+\Rightarrow \ell(\mu|\underline{x}) &amp;amp;=\sum_{i=1}^nlogf(x_i|\mu)\\
+&amp;amp;=\sum_{i=1}^n[-\frac{1}{2}(\frac{x_i-\mu}{\sigma})^2]\\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\\
+&amp;amp;=-\frac{1}{2\sigma^2}[\sum_{i=1}^n(x_i-\bar{x})^2+\sum_{i=1}^n(\bar{x}-\mu)^2]\\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;=-\frac{1}{2\sigma^2}\sum_{i=1}^n(\bar{x}-\mu)^2\\
+&amp;amp;=-\frac{n}{2\sigma^2}(\bar{x}-\mu)^2 \\
+&amp;amp;=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\\
+\because \ell(\hat{\mu}) &amp;amp;= 0 \\
+\therefore llr(\mu) &amp;amp;= \ell(\mu)-\ell(\hat{\mu}) = \ell(\mu)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;n-&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立正態分佈樣本的對數似然比的分佈&lt;/h3&gt;
+&lt;p&gt;假設我們用 &lt;span class=&#34;math inline&#34;&gt;\(\mu_0\)&lt;/span&gt; 表示總體均數這一參數的值。要注意的是，每當樣本被重新取樣，似然，對數似然方程，對數似然比都隨着觀察值而變 (即有自己的分佈)。&lt;/p&gt;
+&lt;p&gt;考慮一個服從正態分佈的單樣本 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu_0,\tau^2)\)&lt;/span&gt;。那麼它的對數似然比：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu_0|Y)=\ell(\mu_0)-\ell(\hat{\mu})=-\frac{1}{2}(\frac{Y-\mu_0}{\tau})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;的定義：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\because \frac{Y-\mu_0}{\tau}\sim N(0,1)\\
+\Rightarrow (\frac{Y-\mu_0}{\tau})^2 \sim \mathcal{X}_1^2\\
+\therefore -2llr(\mu_0|Y) \sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以，如果有一組服從正態分佈的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu_0,\sigma^2)\)&lt;/span&gt;，且 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知的話：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\mu_0|\bar{X})\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+根據&lt;a href=&#34;https://winterwang.github.io/post/central-limit-theory/&#34;&gt;中心極限定理&lt;/a&gt;，可以將上面的結論一般化： 
+&lt;div class=&#34;theorem&#34;&gt;
+&lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}f(x|\theta)\)&lt;/span&gt;。 那麼當重複多次從參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta_0\)&lt;/span&gt; 的總體中取樣時，那麼統計量 &lt;span class=&#34;math inline&#34;&gt;\(-2llr(\theta_0)\)&lt;/span&gt; 會漸進於自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 的卡方分佈： &lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\xrightarrow[n\rightarrow\infty]{}\;\sim \mathcal{X}_1^2\]&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&#34;section level3&#34;&gt;
+&lt;h3&gt;似然比信賴區間&lt;/h3&gt;
+&lt;p&gt;如果樣本量 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 足夠大 (通常應該大於 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt;)，根據上面的定理：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\sim \mathcal{X}_1^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(-2llr(\theta_0)\leqslant \mathcal{X}_{1,0.95}^2=3.84) = 0.95\\
+\Rightarrow Prob(llr(\theta_0)\geqslant-3.84/2=1.92) = 0.95\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;故似然比的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間就是能夠滿足 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)=-1.92\)&lt;/span&gt; 的兩個 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 值。&lt;/p&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以二項分佈數據爲例&lt;/h4&gt;
+&lt;p&gt;繼續用本文開頭的例子：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果令 &lt;span class=&#34;math inline&#34;&gt;\(llr(\pi)=-1.92\)&lt;/span&gt; 在代數上可能較難獲得答案。然而從圖形上，如果我們在 &lt;span class=&#34;math inline&#34;&gt;\(y=-1.92\)&lt;/span&gt; 畫一條橫線，和該似然比方程曲線相交的兩個點就是我們想要求的信賴區間的上限和下限：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- seq(0,1,by=0.001)
+z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)
+plot(x, z, type = &amp;quot;l&amp;quot;, ylim = c(-10, 1), yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE,
+     ylab = &amp;quot;llr(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot; )
+axis(2, at=seq(-10, 0, 2), las=2)
+abline(h=0, lty=2)
+abline(h=-1.92, lty=2)
+segments(x0=0.15, y0=-12, x1=0.15, y1=-1.92, lty = 2)
+segments(x0=0.7, y0=-12, x1=0.7, y1=-1.92, lty = 2)
+axis(1, at=c(0.15,0.7))
+text(0.9, -1, &amp;quot;-1.92&amp;quot;)
+arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
+arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
+title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以正態分佈數據爲例：&lt;/h4&gt;
+&lt;p&gt;本文前半部分證明過， &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
+=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;很顯然，這是一個關於 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的二次方程，且最大值在 MLE &lt;span class=&#34;math inline&#34;&gt;\(\hat{\mu}=\bar{x}\)&lt;/span&gt; 時取值 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。所以可以通過對數似然比法求出均值的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2\times[-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2]=3.84\\
+\Rightarrow L=\bar{x}-\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
+note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意到這和我我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>似然非然 Likelihood</title>
@@ -2057,110 +2195,6 @@ UCL是以前高中同班同學待過（一個已經回廈門），和正在待�
 &lt;p&gt;這兩個東西正好也是我現在需要的。所以我就買了下來。但是進入紀念館的門票竟然要16英鎊。我想還是等我有學生優惠了以後再來問問看吧。說不定可以便宜一些。打道回府的路上又經過UCL，在這棟標誌性的建築物門口的長椅上坐了許久，休息，沉思。側面的角度還是很有感覺的呢。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1277846351.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>漫步倫敦城 (1)</title>
-      <link>https://winterwang.github.io/post/first-impression-of-london/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/first-impression-of-london/</guid>
-      <description>
-
-&lt;p&gt;在倫敦生活過完了第一周，似乎快要步入正軌了。因為許許多多的前輩告誡說，第一周是唯一可以輕鬆度過的時間，一定要珍惜好好利用。多看看倫敦，多四處走走。&lt;/p&gt;
-
-&lt;p&gt;於是我很聽話的每天都四處走走。接下來打算把這幾天去過的地方盡量根據回憶都列舉一下：&lt;/p&gt;
-
-&lt;h4 id=&#34;9月19日-大英博物館初體驗&#34;&gt;9月19日 大英博物館初體驗&lt;/h4&gt;
-
-&lt;p&gt;國王十字車站附近的郵局 → 大英博物館&lt;/p&gt;
-
-&lt;p&gt;從宿舍往北步行十五分鐘左右，就是大英圖書館，圖書館的旁邊就能看到國王十字車站 (King&amp;rsquo;s Cross Station)。所有剛到英國的留學生（簽證在6個月以上的吧？），都要去自己申請簽證時登記的郵局領取BRP卡。BRP卡就相當於日本的在留卡，也就是登記一下外國人的個人信息，住址和在留期限。我當時登記的是這個最近的郵局，叫做國王十字車站郵局 (Kings Cross Post Office)。&lt;/p&gt;
-
-&lt;p&gt;去郵局的路上看到了兩個騎著高頭大馬的帥氣警察。不敢從正面拍，所以走到了後面才趕緊拍了一張：
-&lt;img src=&#34;https://winterwang.github.io/img/188242805.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然後你也會看到一個非常有巴洛克風的建築物：
-&lt;img src=&#34;https://winterwang.github.io/img/1279177784.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;這個叫做 &lt;a href=&#34;http://www.marriott.com/hotels/travel/lonpr-st-pancras-renaissance-hotel-london/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2&#34; target=&#34;_blank&#34;&gt;St. Pancras Renaissance Hotel London&lt;/a&gt;，中文名應該是聖潘克拉斯萬麗酒店。如果你玩過&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%BA%E5%AE%A2%E6%95%99%E6%A2%9D%EF%BC%9A%E6%A2%9F%E9%9B%84&#34; target=&#34;_blank&#34;&gt;刺客信條梟雄&lt;/a&gt;。一定會對這樣的建築印象深刻。&lt;/p&gt;
-
-&lt;p&gt;郵局內部真的是破爛不堪，連中國三線城市的郵政儲蓄營業廳都不如，櫃檯工作的好多是黑人和印度人，口音很重，態度蠻橫。要做好心理準備。而且標識十分不明，你必須問周圍的人我現在排的隊是幹什麼的。&lt;/p&gt;
-
-&lt;p&gt;領完我的BRP卡之後，又往回走，到宿舍以南步行也是10分鐘左右，進入大英博物館。從正門走時，因為每個進入大英博物館的人如果有帶包都要打開給警備員查看。所以入口處隊伍非常的長。後來聽說從後門走的話人就少很多。不過這天不是週末，所以我得以很快的通過安檢進入博物館。&lt;/p&gt;
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;p&gt;&lt;strong&gt;最重要的是，大英博物館是免費的！&lt;/strong&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-
-
-&lt;p&gt;大英博物館外觀：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0123.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;進入大英博物館的玄關以後，視野一下子就開闊起來:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0129.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;果然從世界各地搶來的東西展覽起來就是有底氣！ 呵呵！&lt;/p&gt;
-
-&lt;p&gt;當然英國人對世界人類瑰寶的保存還是花了不少力氣。我花了一個小時左右看了古埃及部分，一點點古希臘，還有一個專門展覽人類各種貨幣的展廳。&lt;strong&gt;牆裂推薦！&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0125.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0124.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;9月20日-暴走倫敦城&#34;&gt;9月20日 暴走倫敦城&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1865771317.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;谷歌事無鉅細記錄了我一天的行程。早晨我起床吃了早飯就離開宿舍前往&lt;a href=&#34;https://skygarden.london/&#34; target=&#34;_blank&#34;&gt;天空花園 (Sky Garden)&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;出發來倫敦之前，通過閱讀學校給的關於倫敦的簡單介紹，知道了這個地方。應該是類似新加坡 &lt;a href=&#34;http://www.marinabaysands.com/sands-skypark/observation-deck.html&#34; target=&#34;_blank&#34;&gt;Sky Park&lt;/a&gt;。的空中花園。天氣晴朗的時候可以俯瞰全城的地標性建築物。
-不同的是倫敦的天空花園是免費，且要預約的。如果你打開上面天空花園的網頁鏈接，就能看見預約的方法。我提前預約了週三早晨10點半進入參觀的門票。如果我沒有記錯的話，新加坡的空中花園不用預約，但是需要在門口乘電梯的地方購買門票，一個人應該是15新幣的樣子。&lt;/p&gt;
-
-&lt;p&gt;Sky Garden 的外觀：
-&lt;img src=&#34;https://winterwang.github.io/img/508099424.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;週三天氣很不好，看不清楚太遠的地方。不過畢竟登高望遠，泰晤士河兩岸，倫敦塔橋等建築物還是能看得見：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0130.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/453454807.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;霧濛濛的是不是感覺比北京天氣還糟糕？！ 這麼說有點不公平，因為我沒在北京生活過。客觀點說倫敦空氣質量還不錯，天氣很不好。據說到了冬天抑鬱症的人就會增加。&lt;/p&gt;
-
-&lt;p&gt;雖然預約的是10點半到11點半一個小時，不過整個花園不大，天氣不好所以也沒什麼看頭，十五分鐘我就下來了。看著地圖又繼續往泰晤士河邊走。中途路過&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%80%AB%E6%95%A6%E5%A4%A7%E7%81%AB&#34; target=&#34;_blank&#34;&gt;倫敦大火&lt;/a&gt;紀念碑：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0136.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;經過倫敦橋(你以為倫敦橋有多壯觀？看了你會失望)以後你會發現這種橋在黃浦江上可能還根本算不上是一座橋。也就跟我們村里小河邊看櫻花的那個橋差不太多。。。&lt;/p&gt;
-
-&lt;p&gt;可能倫敦“城裡人”會不同意我的話哈哈，請多見諒，您是城里人嘛。&lt;/p&gt;
-
-&lt;p&gt;到了泰晤士河南岸，往西走，去塔橋 (Tower Bridge) 的路上會看見一艘軍艦停靠在港口：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0137.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;估計和停靠在珍珠港的軍艦一樣曾經在戰爭中服役。只不過從外觀規模上來看這艘軍艦顯然小很多。門票有點小貴，所以我也沒有花錢進去。經過軍艦以後是個不大不小的廣場。讓我想起了廈門輪渡碼頭。不過，再往前就是壯觀的塔橋了 (Tower Bridge)：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0144-EFFECTS.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;塔橋在大船要進入泰晤士河的時候是可以從中間舉起，讓船通過然後再放下的。之前都只在風景明信片裡面看過的建築物，我終於有幸在上面留下我的足跡。走上塔橋意味著就離開南岸，又回到北岸了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1101681166.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/584841134.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;回宿舍的路上，我注意觀察了路邊的ATM機器。絕大部分都是只在牆壁上挖了一個洞，放個機器。讓人超級沒有安全感的。密碼被周圍的人看了咋辦？ 取了多少錢都被周圍的人看見了，有人見財起意咋辦？ 英國人都不在乎這些嗎？ 好像銀行的建築物裡面的ATM機器可能可以多少讓人有點安全感吧。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/860210008.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;機器上方的字的意思是取錢不收手續費。這非常的好。於是我在一個車站的較為隱蔽的角落裡的 ATM 嘗試著用 manepartners 的卡著取了些現金。後來手機一查，還是扣了我 1.5 鎊的手續費。估計多半是 manepartners 扣去了的。&lt;/p&gt;
-
-&lt;p&gt;回到宿舍，我暴走了近 10 公里的腳都已不聽使喚，我還盤算著這樣白天足夠累了的話，夜裡就能多睡睡，把時差快點調整過來。誒，調整時差也應該有個人區別，也許我就是屬於不太容易調整時差的那類吧。&lt;/p&gt;
 </description>
     </item>
     
