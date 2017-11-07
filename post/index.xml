@@ -47,8 +47,45 @@
 &lt;li&gt;任意的對數似然比方程 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 都可以考慮用一個二次方程來近似： &lt;span class=&#34;math display&#34;&gt;\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;其中&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp;M=\hat\theta\\ &amp;amp;S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}\\ &amp;amp;when \\  &amp;amp; n\rightarrow\infty \Rightarrow  \begin{cases}  S^2\rightarrow Var(\hat\theta) \\  S\rightarrow SE(\hat\theta)  \end{cases} \end{aligned}\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;/h4&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;近似法估算對數似然比的信賴區間&lt;/h4&gt;
+&lt;p&gt;一旦我們決定了使用正態近似法來模擬對數似然比方程，對數似然比的信賴區間算法就回到了前一節中我們算過的方法，也就是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[-2f(\theta)&amp;lt;\mathcal{X}_{1,(1-\alpha)}^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;故信賴區間爲： &lt;span class=&#34;math inline&#34;&gt;\(m\pm\sqrt{\mathcal{X}_{1,(1-\alpha)}^2}S\)&lt;/span&gt;。求&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 水平的信賴區間時，&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}_{1,0.95}^2=3.84\)&lt;/span&gt;，所以就又看到了熟悉的 &lt;span class=&#34;math inline&#34;&gt;\(M\pm1.96S\)&lt;/span&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以泊松分佈爲例&lt;/h4&gt;
+&lt;p&gt;一個被追蹤的樣本，經過了 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 人年的觀察，記錄到了 &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt; 個我們要研究的事件：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[D\sim po(\mu), where \mu=\lambda p\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Step 1. 找極大似然估計 (MLE)，&lt;a href=&#34;https://winterwang.github.io/post/likelihood/&#34;&gt;之前介紹似然方程時推導過的泊松分佈的似然方程&lt;/a&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+P(D=d|\lambda) &amp;amp;= \frac{e^{-\mu}\cdot\mu^d}{d!} \\
+ &amp;amp;=\frac{e^{-\lambda p}\cdot\lambda^d p^d}{d!} \\
+omitting&amp;amp;\;terms\;not\;in\;\mu \\
+&amp;amp;\Rightarrow \ell(\lambda) = dlog\lambda - \lambda p \\
+&amp;amp;\Rightarrow \ell^\prime(\lambda) = \frac{d}{\lambda} -p \\
+&amp;amp;\Rightarrow \hat\lambda=\frac{d}{p} = \textbf{M}
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Step 2. 求似然方程的二階導數，確認 MLE 是使方程獲得最大值的點，然後確定 &lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+&amp;amp; \ell^\prime(\lambda) = \frac{d}{\lambda} -p \\
+&amp;amp; \Rightarrow \ell^{\prime\prime}(\lambda) = -\frac{d}{\lambda^2}&amp;lt;0 \Rightarrow \textbf{MLE is maximum} \\
+&amp;amp; S^2 = \left.-\frac{1}{\ell^{\prime\prime}(\lambda)}\right\vert_{\lambda=\hat{\lambda}=d/p} = -\frac{1}{-d/\hat\lambda^2} = -\frac{1}{-d/(d/p)^2} \\
+&amp;amp;\Rightarrow S^2 = \frac{d}{p^2} \\
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Step 3. 把前兩部求得的 &lt;span class=&#34;math inline&#34;&gt;\(MLE\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt; 代入近似的二次方程：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+&amp;amp; \hat\lambda=\frac{d}{p}=M,\; S^2 = \frac{d}{p^2}  \\
+&amp;amp; using\;approximate\;quadratic\;llr \\
+&amp;amp; q(\lambda) = -\frac{1}{2}(\frac{\lambda-M}{S})^2\\
+&amp;amp;\Rightarrow q(\lambda) = -\frac{1}{2}(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2\\
+&amp;amp; let \; q(\lambda)=-1.92\\
+&amp;amp;\Rightarrow -\frac{1}{2}(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2=-1.92\\
+&amp;amp;(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2=3.84\\
+&amp;amp;\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}} = \pm1.96\\
+&amp;amp;\Rightarrow 95\%CI \;for \;\lambda = \frac{d}{p}\pm1.96\frac{\sqrt{d}}{p}
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;結論就是： 發病（死亡）率 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間爲： &lt;span class=&#34;math inline&#34;&gt;\(M\pm1.96S\)&lt;/span&gt;。所以我們不需要每次都代入對數似然比方程，只要算出 &lt;span class=&#34;math inline&#34;&gt;\(MLE = M\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 之後代入這個公式就可以用二次方程近似法算出信賴區間。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

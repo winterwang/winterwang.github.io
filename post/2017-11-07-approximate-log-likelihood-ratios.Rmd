@@ -71,4 +71,52 @@ $\ell^{\prime\prime}(\theta)=-\frac{1}{SE^2}$ $\Rightarrow$ 被叫做 **Fisher i
     \end{aligned}$
 
 
-####
+#### 近似法估算對數似然比的信賴區間
+
+一旦我們決定了使用正態近似法來模擬對數似然比方程，對數似然比的信賴區間算法就回到了前一節中我們算過的方法，也就是：
+
+$$-2f(\theta)<\mathcal{X}_{1,(1-\alpha)}^2$$
+
+故信賴區間爲： $m\pm\sqrt{\mathcal{X}_{1,(1-\alpha)}^2}S$。求$95\%$ 水平的信賴區間時，$\mathcal{X}_{1,0.95}^2=3.84$，所以就又看到了熟悉的 $M\pm1.96S$。
+
+#### 以泊松分佈爲例
+
+一個被追蹤的樣本，經過了 $p$ 人年的觀察，記錄到了 $d$ 個我們要研究的事件：
+
+$$D\sim po(\mu), where \mu=\lambda p$$
+
+Step 1. 找極大似然估計 (MLE)，[之前介紹似然方程時推導過的泊松分佈的似然方程](https://winterwang.github.io/post/likelihood/)：
+
+$$\begin{aligned}
+P(D=d|\lambda) &= \frac{e^{-\mu}\cdot\mu^d}{d!} \\
+ &=\frac{e^{-\lambda p}\cdot\lambda^d p^d}{d!} \\
+omitting&\;terms\;not\;in\;\mu \\
+&\Rightarrow \ell(\lambda) = dlog\lambda - \lambda p \\
+&\Rightarrow \ell^\prime(\lambda) = \frac{d}{\lambda} -p \\
+&\Rightarrow \hat\lambda=\frac{d}{p} = \textbf{M}
+\end{aligned}$$
+
+Step 2. 求似然方程的二階導數，確認 MLE 是使方程獲得最大值的點，然後確定 $S^2$：
+
+$$\begin{aligned}
+& \ell^\prime(\lambda) = \frac{d}{\lambda} -p \\
+& \Rightarrow \ell^{\prime\prime}(\lambda) = -\frac{d}{\lambda^2}<0 \Rightarrow \textbf{MLE is maximum} \\
+& S^2 = \left.-\frac{1}{\ell^{\prime\prime}(\lambda)}\right\vert_{\lambda=\hat{\lambda}=d/p} = -\frac{1}{-d/\hat\lambda^2} = -\frac{1}{-d/(d/p)^2} \\
+&\Rightarrow S^2 = \frac{d}{p^2} \\
+\end{aligned}$$
+
+Step 3. 把前兩部求得的 $MLE$ 和 $S^2$ 代入近似的二次方程：
+
+$$\begin{aligned}
+& \hat\lambda=\frac{d}{p}=M,\; S^2 = \frac{d}{p^2}  \\
+& using\;approximate\;quadratic\;llr \\
+& q(\lambda) = -\frac{1}{2}(\frac{\lambda-M}{S})^2\\
+&\Rightarrow q(\lambda) = -\frac{1}{2}(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2\\
+& let \; q(\lambda)=-1.92\\
+&\Rightarrow -\frac{1}{2}(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2=-1.92\\
+&(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2=3.84\\
+&\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}} = \pm1.96\\
+&\Rightarrow 95\%CI \;for \;\lambda = \frac{d}{p}\pm1.96\frac{\sqrt{d}}{p}
+\end{aligned}$$
+
+結論就是： 發病（死亡）率 $\lambda$ 的 $95\%$ 信賴區間爲： $M\pm1.96S$。所以我們不需要每次都代入對數似然比方程，只要算出 $MLE = M$ 和 $S$ 之後代入這個公式就可以用二次方程近似法算出信賴區間。

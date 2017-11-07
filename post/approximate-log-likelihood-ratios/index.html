@@ -290,8 +290,45 @@
 <li>任意的對數似然比方程 <span class="math inline">\(llr(\theta)\)</span> 都可以考慮用一個二次方程來近似： <span class="math display">\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]</span></li>
 <li>其中<br> <span class="math inline">\(\begin{aligned} &amp;M=\hat\theta\\ &amp;S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}\\ &amp;when \\  &amp; n\rightarrow\infty \Rightarrow  \begin{cases}  S^2\rightarrow Var(\hat\theta) \\  S\rightarrow SE(\hat\theta)  \end{cases} \end{aligned}\)</span></li>
 </ol>
-<div id="section" class="section level4">
-<h4></h4>
+<div class="section level4">
+<h4>近似法估算對數似然比的信賴區間</h4>
+<p>一旦我們決定了使用正態近似法來模擬對數似然比方程，對數似然比的信賴區間算法就回到了前一節中我們算過的方法，也就是：</p>
+<p><span class="math display">\[-2f(\theta)&lt;\mathcal{X}_{1,(1-\alpha)}^2\]</span></p>
+<p>故信賴區間爲： <span class="math inline">\(m\pm\sqrt{\mathcal{X}_{1,(1-\alpha)}^2}S\)</span>。求<span class="math inline">\(95\%\)</span> 水平的信賴區間時，<span class="math inline">\(\mathcal{X}_{1,0.95}^2=3.84\)</span>，所以就又看到了熟悉的 <span class="math inline">\(M\pm1.96S\)</span>。</p>
+</div>
+<div class="section level4">
+<h4>以泊松分佈爲例</h4>
+<p>一個被追蹤的樣本，經過了 <span class="math inline">\(p\)</span> 人年的觀察，記錄到了 <span class="math inline">\(d\)</span> 個我們要研究的事件：</p>
+<p><span class="math display">\[D\sim po(\mu), where \mu=\lambda p\]</span></p>
+<p>Step 1. 找極大似然估計 (MLE)，<a href="https://winterwang.github.io/post/likelihood/">之前介紹似然方程時推導過的泊松分佈的似然方程</a>：</p>
+<p><span class="math display">\[\begin{aligned}
+P(D=d|\lambda) &amp;= \frac{e^{-\mu}\cdot\mu^d}{d!} \\
+ &amp;=\frac{e^{-\lambda p}\cdot\lambda^d p^d}{d!} \\
+omitting&amp;\;terms\;not\;in\;\mu \\
+&amp;\Rightarrow \ell(\lambda) = dlog\lambda - \lambda p \\
+&amp;\Rightarrow \ell^\prime(\lambda) = \frac{d}{\lambda} -p \\
+&amp;\Rightarrow \hat\lambda=\frac{d}{p} = \textbf{M}
+\end{aligned}\]</span></p>
+<p>Step 2. 求似然方程的二階導數，確認 MLE 是使方程獲得最大值的點，然後確定 <span class="math inline">\(S^2\)</span>：</p>
+<p><span class="math display">\[\begin{aligned}
+&amp; \ell^\prime(\lambda) = \frac{d}{\lambda} -p \\
+&amp; \Rightarrow \ell^{\prime\prime}(\lambda) = -\frac{d}{\lambda^2}&lt;0 \Rightarrow \textbf{MLE is maximum} \\
+&amp; S^2 = \left.-\frac{1}{\ell^{\prime\prime}(\lambda)}\right\vert_{\lambda=\hat{\lambda}=d/p} = -\frac{1}{-d/\hat\lambda^2} = -\frac{1}{-d/(d/p)^2} \\
+&amp;\Rightarrow S^2 = \frac{d}{p^2} \\
+\end{aligned}\]</span></p>
+<p>Step 3. 把前兩部求得的 <span class="math inline">\(MLE\)</span> 和 <span class="math inline">\(S^2\)</span> 代入近似的二次方程：</p>
+<p><span class="math display">\[\begin{aligned}
+&amp; \hat\lambda=\frac{d}{p}=M,\; S^2 = \frac{d}{p^2}  \\
+&amp; using\;approximate\;quadratic\;llr \\
+&amp; q(\lambda) = -\frac{1}{2}(\frac{\lambda-M}{S})^2\\
+&amp;\Rightarrow q(\lambda) = -\frac{1}{2}(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2\\
+&amp; let \; q(\lambda)=-1.92\\
+&amp;\Rightarrow -\frac{1}{2}(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2=-1.92\\
+&amp;(\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}})^2=3.84\\
+&amp;\frac{\lambda-\frac{d}{p}}{\frac{\sqrt{d}}{p}} = \pm1.96\\
+&amp;\Rightarrow 95\%CI \;for \;\lambda = \frac{d}{p}\pm1.96\frac{\sqrt{d}}{p}
+\end{aligned}\]</span></p>
+<p>結論就是： 發病（死亡）率 <span class="math inline">\(\lambda\)</span> 的 <span class="math inline">\(95\%\)</span> 信賴區間爲： <span class="math inline">\(M\pm1.96S\)</span>。所以我們不需要每次都代入對數似然比方程，只要算出 <span class="math inline">\(MLE = M\)</span> 和 <span class="math inline">\(S\)</span> 之後代入這個公式就可以用二次方程近似法算出信賴區間。</p>
 </div>
 </div>
 
