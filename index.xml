@@ -87,6 +87,56 @@ omitting&amp;amp;\;terms\;not\;in\;\mu \\
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;結論就是： 發病（死亡）率 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間爲： &lt;span class=&#34;math inline&#34;&gt;\(M\pm1.96S\)&lt;/span&gt;。所以我們不需要每次都代入對數似然比方程，只要算出 &lt;span class=&#34;math inline&#34;&gt;\(MLE = M\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 之後代入這個公式就可以用二次方程近似法算出信賴區間。&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以二項分佈爲例&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[K\sim Bin(n,\pi)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Step 1. 找極大似然估計 (MLE)：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+&amp;amp; Prob(K=k) = \pi^k(1-\pi)\binom{n}{k}\\
+&amp;amp;\Rightarrow L(\pi|k) = \pi^k(1-\pi)\binom{n}{k}\\
+&amp;amp;omitting\;terms\;not\;in\;\pi \\
+&amp;amp;\Rightarrow \ell(\pi) = k\:log\pi+(n-k)log(1-\pi) \\
+&amp;amp;\ell^\prime(\pi) = \frac{k}{\pi}-\frac{n-k}{1-\pi} \\
+&amp;amp; let\;\ell^\prime(\hat\pi) =0 \\
+&amp;amp;\Rightarrow \frac{k}{\hat\pi}-\frac{n-k}{1-\hat\pi}=0\\
+&amp;amp;\Rightarrow \frac{\hat\pi}{1-\hat\pi}=\frac{k}{n-k}\\
+&amp;amp;\Rightarrow \frac{\hat\pi}{1-\hat\pi}=\frac{k/n}{1-k/n}\\
+&amp;amp;\Rightarrow \hat\pi=\frac{k}{n} = p = \textbf{M}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Step 2. 將對數似然方程的二次微分 (二階導數)，確認在 MLE 爲極大值，並確認 &lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+&amp;amp;\ell^\prime(\pi) = \frac{k}{\pi}-\frac{n-k}{1-\pi} \\
+&amp;amp;\ell^{\prime\prime}(\pi)=\frac{-k}{\pi^2}-\frac{n-k}{(1-\pi)^2} &amp;lt;0 \\
+&amp;amp;\therefore at\;\textbf{MLE}\;\ell(\pi)\;has\;maximum \\
+S^2&amp;amp;=\left.-\frac{1}{\ell^{\prime\prime}(\pi)}\right\vert_{\hat\pi=\hat{\hat\pi}=k/n=p}\\
+&amp;amp;=\frac{1}{\frac{k}{\hat\pi^2}+\frac{n-k}{(1-\hat\pi)^2}}\\
+&amp;amp;=\frac{\hat\pi^2(1-\hat\pi)^2}{k(1-\hat\pi)^2+(n-k)\hat\pi^2}\\
+&amp;amp;=\frac{P^2(1-P)^2}{np(1-p)^2+(n-np)p^2}\\
+&amp;amp;=\frac{p(1-p)}{n(1-p)+np}\\
+&amp;amp;=\frac{p(1-p)}{n}\\
+&amp;amp;\Rightarrow S=\sqrt{\frac{p(1-p)}{n}}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Step 3. 將求得的 MLE 和 &lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt; 代入近似信賴區間：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+95\% CI \;for \; \pi:\\
+M\pm1.96S=p\pm1.96\sqrt{\frac{p(1-p)}{n}}\\
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-parameter-transformations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;參數轉化 parameter transformations&lt;/h3&gt;
+&lt;p&gt;如果將參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 通過某種數學方程轉化成 &lt;span class=&#34;math inline&#34;&gt;\(g(\theta)\)&lt;/span&gt;，那麼我們可以認爲，轉化後的方程的 MLE 爲 &lt;span class=&#34;math inline&#34;&gt;\(g(\hat\theta)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta\)&lt;/span&gt; 是參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的 MLE。&lt;/p&gt;
+&lt;p&gt;類似地，如果 &lt;span class=&#34;math inline&#34;&gt;\(\theta_1 \sim \theta_2\)&lt;/span&gt; 是參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的似然比信賴區間，那麼 &lt;span class=&#34;math inline&#34;&gt;\(g(\theta_1)\sim g(\theta_2)\)&lt;/span&gt; 就是 &lt;span class=&#34;math inline&#34;&gt;\(g(\theta)\)&lt;/span&gt; 的似然比信賴區間。&lt;/p&gt;
+&lt;p&gt;以下爲轉換參數以後獲取信賴區間的步驟：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;將參數通過某些數學方程（通常是取對數）轉化，使新的對數似然比方程更加接近二次方程的對稱圖形。&lt;br&gt; Transform parameter so that &lt;span class=&#34;math inline&#34;&gt;\(llr\)&lt;/span&gt; is closer to a quadratic shape.&lt;/li&gt;
+&lt;li&gt;用本節學到的二次方程近似法，求得轉化後的參數的似然比信賴區間。 &lt;br&gt; Use our quadratic approximation on the transformed parameter to calculate our likelihood ratio confidence intervals.&lt;/li&gt;
+&lt;li&gt;將第2步計算獲得的似然比信賴區間再通過轉化參數時的逆函數轉換回去，以獲得原參數的似然比信賴區間。&lt;br&gt; Transform the confidence intervals back, or to any scale we wish – they remain valid.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

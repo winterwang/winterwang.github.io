@@ -120,3 +120,61 @@ $$\begin{aligned}
 \end{aligned}$$
 
 結論就是： 發病（死亡）率 $\lambda$ 的 $95\%$ 信賴區間爲： $M\pm1.96S$。所以我們不需要每次都代入對數似然比方程，只要算出 $MLE = M$ 和 $S$ 之後代入這個公式就可以用二次方程近似法算出信賴區間。
+
+#### 以二項分佈爲例
+
+$$K\sim Bin(n,\pi)$$
+
+Step 1. 找極大似然估計 (MLE)：
+
+$$
+\begin{aligned}
+& Prob(K=k) = \pi^k(1-\pi)\binom{n}{k}\\
+&\Rightarrow L(\pi|k) = \pi^k(1-\pi)\binom{n}{k}\\
+&omitting\;terms\;not\;in\;\pi \\
+&\Rightarrow \ell(\pi) = k\:log\pi+(n-k)log(1-\pi) \\
+&\ell^\prime(\pi) = \frac{k}{\pi}-\frac{n-k}{1-\pi} \\
+& let\;\ell^\prime(\hat\pi) =0 \\
+&\Rightarrow \frac{k}{\hat\pi}-\frac{n-k}{1-\hat\pi}=0\\
+&\Rightarrow \frac{\hat\pi}{1-\hat\pi}=\frac{k}{n-k}\\
+&\Rightarrow \frac{\hat\pi}{1-\hat\pi}=\frac{k/n}{1-k/n}\\
+&\Rightarrow \hat\pi=\frac{k}{n} = p = \textbf{M}
+\end{aligned}
+$$
+
+Step 2. 將對數似然方程的二次微分 (二階導數)，確認在 MLE 爲極大值，並確認 $S^2$：
+
+$$
+\begin{aligned}
+&\ell^\prime(\pi) = \frac{k}{\pi}-\frac{n-k}{1-\pi} \\
+&\ell^{\prime\prime}(\pi)=\frac{-k}{\pi^2}-\frac{n-k}{(1-\pi)^2} <0 \\
+&\therefore at\;\textbf{MLE}\;\ell(\pi)\;has\;maximum \\
+S^2&=\left.-\frac{1}{\ell^{\prime\prime}(\pi)}\right\vert_{\hat\pi=\hat{\hat\pi}=k/n=p}\\
+&=\frac{1}{\frac{k}{\hat\pi^2}+\frac{n-k}{(1-\hat\pi)^2}}\\
+&=\frac{\hat\pi^2(1-\hat\pi)^2}{k(1-\hat\pi)^2+(n-k)\hat\pi^2}\\
+&=\frac{P^2(1-P)^2}{np(1-p)^2+(n-np)p^2}\\
+&=\frac{p(1-p)}{n(1-p)+np}\\
+&=\frac{p(1-p)}{n}\\
+&\Rightarrow S=\sqrt{\frac{p(1-p)}{n}}
+\end{aligned}
+$$
+
+Step 3. 將求得的 MLE 和 $S^2$ 代入近似信賴區間：
+
+$$
+95\% CI \;for \; \pi:\\
+M\pm1.96S=p\pm1.96\sqrt{\frac{p(1-p)}{n}}\\
+$$
+
+
+### 參數轉化 parameter transformations
+
+如果將參數 $\theta$ 通過某種數學方程轉化成 $g(\theta)$，那麼我們可以認爲，轉化後的方程的 MLE 爲 $g(\hat\theta)$，其中 $\hat\theta$ 是參數 $\theta$ 的 MLE。
+
+類似地，如果 $\theta_1 \sim \theta_2$ 是參數 $\theta$ 的似然比信賴區間，那麼 $g(\theta_1)\sim g(\theta_2)$ 就是 $g(\theta)$ 的似然比信賴區間。
+
+以下爲轉換參數以後獲取信賴區間的步驟：
+
+1. 將參數通過某些數學方程（通常是取對數）轉化，使新的對數似然比方程更加接近二次方程的對稱圖形。<br> Transform parameter so that $llr$ is closer to a quadratic shape.
+2. 用本節學到的二次方程近似法，求得轉化後的參數的似然比信賴區間。 <br> Use our quadratic approximation on the transformed parameter to calculate our likelihood ratio confidence intervals.
+3. 將第2步計算獲得的似然比信賴區間再通過轉化參數時的逆函數轉換回去，以獲得原參數的似然比信賴區間。<br> Transform the confidence intervals back, or to any scale we wish – they remain valid.
