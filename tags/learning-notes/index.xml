@@ -7,8 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/learning-notes/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>approximate log-likelihood ratios</title>
+      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
+      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
+      <description>&lt;p&gt;爲什麼要用二次方程近似對數似然比方程？&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (&lt;a href=&#34;https://winterwang.github.io/post/log-likelihood-ratio/&#34;&gt;binomial example&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。&lt;/li&gt;
+&lt;li&gt;所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;-normal-approximation-to-the-log-likelihood&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;正態近似法求對數似然 Normal approximation to the log-likelihood&lt;/h3&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/log-likelihood-ratio/&#34;&gt;前一節&lt;/a&gt;，如果樣本均數的分佈符合正態分佈：&lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\sim N(\mu, \sigma^2/n)\)&lt;/span&gt;。那麼樣本均數的對數似然比爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中， &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 是正態分佈總體均數 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的極大似然估計 (maximum likelihood estimator, MLE)。如果已知總體的方差參數，那麼 &lt;span class=&#34;math inline&#34;&gt;\(\sigma/\sqrt{n}\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 的標準誤 (standard error)。&lt;/p&gt;
+&lt;p&gt;因此，假設 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 是我們想尋找的總體參數。有些人提議可以使用下面的關於 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的二次方程來做近似：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 的標準誤爲 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;。如果我們正確地選用 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;，那我們就可以用這樣的方程來近似求真實觀察數據的似然 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;通過近似正態對數似然比，&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 應當選用使方程取最大值時，參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的極大似然估計 &lt;span class=&#34;math inline&#34;&gt;\(M=\hat{\Theta}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;但是在選用標準誤 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 上必須滿足下列條件：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 是極大似然估計 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\Theta}\)&lt;/span&gt; 的標準誤。&lt;/li&gt;
+&lt;li&gt;被選擇的 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left.\frac{d^2}{d\theta^2}\ell(\theta)\right\vert_{\theta=\hat{\theta}}=\ell^{\prime\prime}(\hat{\theta})=-\frac{1}{S^2}\\
+\Rightarrow S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在正態分佈的例子下，&lt;span class=&#34;math inline&#34;&gt;\(M=\bar{x}, S=\sigma/\sqrt{n}\)&lt;/span&gt;。對數似然比方程最大值時的曲率（二階導數）恰好就爲標準誤的平方的負倒數：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\ell^{\prime\prime}(\theta)=-\frac{1}{SE^2}\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow\)&lt;/span&gt; 被叫做 &lt;strong&gt;Fisher information&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;稍微總結一下：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;任意的對數似然比方程 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 都可以考慮用一個二次方程來近似： &lt;span class=&#34;math display&#34;&gt;\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;其中&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp;M=\hat\theta\\ &amp;amp;S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}\\ &amp;amp;when \\  &amp;amp; n\rightarrow\infty \Rightarrow  \begin{cases}  S^2\rightarrow Var(\hat\theta) \\  S\rightarrow SE(\hat\theta)  \end{cases} \end{aligned}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
@@ -142,7 +186,7 @@ title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% li
 \Rightarrow L=\bar{x}-\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;注意到這和我我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;p&gt;注意到這和我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -2071,59 +2115,6 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(E=E^t=(A^{-1}A)^t=A^t(A^{-1})^t\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;等式兩邊從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}\)&lt;/span&gt;&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\((A^t)^{-1}E=(A^t)^{-1}A^t(A^{-1})^t\\ \therefore (A^t)^{-1}=(A^{-1})^t\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://winterwang.github.io/post/2017-04-02/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;行列式的性質&lt;/h2&gt;
-&lt;p&gt;具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;轉置矩陣的行列式，與轉置前的行列式一致。即：&lt;span class=&#34;math inline&#34;&gt;\(|A^t|=|A|\)&lt;/span&gt;。 &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix}  1 &amp;amp; 2 &amp;amp; 3 \\  4 &amp;amp; 5 &amp;amp; 6 \\  7 &amp;amp; 8 &amp;amp; 9 \\  \end{vmatrix}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;任意一列（或者任意一行）若乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍，那麼這個矩陣的行列式結果也將是乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ \lambda a_{21} &amp;amp;\lambda a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \lambda a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;任意一列（或者任意一行）的各成分乘以 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21}\pm \lambda a_{11} &amp;amp; a_{22}\pm \lambda a_{12} &amp;amp; a_{23}\pm \lambda a_{13}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}，\\ \begin{vmatrix} a_{11} &amp;amp; a_{12}\pm \lambda a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22}\pm \lambda a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32}\pm \lambda a_{31} &amp;amp; a_{33}\\ \end{vmatrix},\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} \pm \frac{a_{11}}{\lambda} &amp;amp; a_{22}\pm \frac{a_{12}}{\lambda} &amp;amp; a_{23}\pm \frac{a_{13}}{\lambda}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}, \\ \begin{vmatrix} a_{11} &amp;amp; a_{12}\pm \frac{a_{11}}{\lambda} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22}\pm \frac{a_{21}}{\lambda} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32}\pm \frac{a_{31}}{\lambda} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 上述行列式與行列式 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt; 結果相同。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;符合下列條件時，行列式的值爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;任意一行（或者列）的全部成分均爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; 時。&lt;/li&gt;
-&lt;li&gt;矩陣中若有兩行（或者兩列）的對應成分全部相同時。&lt;/li&gt;
-&lt;li&gt;矩陣中若有兩行（或者兩列）的對應成分均成一定比例時。&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\  a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\  0 &amp;amp; 0 &amp;amp; 0\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp;amp; b &amp;amp; c\\  a &amp;amp; b &amp;amp; c\\  d &amp;amp; e &amp;amp; f\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp;amp; b &amp;amp; c\\  ka &amp;amp; kb &amp;amp; kc\\  d &amp;amp; e &amp;amp; f\\  \end{vmatrix}=0\)&lt;/span&gt;&lt;br&gt; 由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;。此性質與多重線性迴歸的多重共線性有直接關係。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)&lt;/span&gt; （第一行和第二行對調成分）&lt;/li&gt;
-&lt;li&gt;對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ 0 &amp;amp; a_{22} &amp;amp; 0\\ 0 &amp;amp; 0 &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ 0 &amp;amp; a_{22} &amp;amp; a_{23}\\ 0 &amp;amp; 0 &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; 0\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;矩陣中如果有任意一行（或列），衹有一個成分為非零成分，可以將該矩陣的行列式降次：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; 0 &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}=a_{11}(-1)^{1+1}\begin{vmatrix} a_{22} &amp;amp; a_{23} \\ a_{32} &amp;amp; a_{33} \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; 0\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; 0\\ \end{vmatrix}=a_{23}(-1)^{1+1}\begin{vmatrix} a_{11} &amp;amp; a_{12} \\ a_{31} &amp;amp; a_{32} \end{vmatrix}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 同時都是正方形矩陣時，&lt;span class=&#34;math inline&#34;&gt;\(|AB|=|A|·|B|\)&lt;/span&gt;。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;strong&gt;證明&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A=\left(\begin{array}{c} 0 &amp;amp; 4 &amp;amp; 2\\ -1 &amp;amp; 3 &amp;amp; 7\\ 6 &amp;amp; 5 &amp;amp; 9\\  \end{array}\right)\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(B=\left(\begin{array}{c} 2 &amp;amp; 3 &amp;amp; 4\\ -2 &amp;amp; 7 &amp;amp; 1\\ 4 &amp;amp; 6 &amp;amp; 0\\  \end{array}\right)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(|AB|=|A|·|B|\)&lt;/span&gt; 成立&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;解&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\because AB=\left(\begin{array}{c}  0 &amp;amp; 40 &amp;amp; 4\\  20 &amp;amp; 60 &amp;amp; -1\\  38 &amp;amp; 107 &amp;amp; 29\\  \end{array}\right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\therefore |AB|=\begin{vmatrix}  0 &amp;amp; 40 &amp;amp; 4\\  20 &amp;amp; 60 &amp;amp; -1\\  38 &amp;amp; 107 &amp;amp; 29\\  \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3： 第2列 - 第3列 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 10 作新的第2列&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 0 &amp;amp; 4\\ 20 &amp;amp; 70 &amp;amp; -1\\ 38 &amp;amp; -183 &amp;amp; 29\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7： 第一行衹有第三個元素非零，可以降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=4(-1)^{1+3}\begin{vmatrix}  20 &amp;amp; 70 \\  38 &amp;amp; -183\end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質2: 第一行所有元素除以10, 將 10 提前。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=4\times10\begin{vmatrix}  2 &amp;amp; 7 \\  38 &amp;amp; -183\end{vmatrix}\\  =40(-366-266)\\=-25280\)&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix}  0 &amp;amp; 4 &amp;amp; 2\\  -1 &amp;amp; 3 &amp;amp; 7\\  6 &amp;amp; 5 &amp;amp; 9\\  \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3: 第2列 - 第3列 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2 作爲新的第二列元素&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 0 &amp;amp; 2\\ -1 &amp;amp; -11 &amp;amp; 7\\ 6 &amp;amp; -13 &amp;amp; 9\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第一行衹有第三個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=2(-1)^{1+3}\begin{vmatrix} -1 &amp;amp; -11 \\ 6 &amp;amp; -13\end{vmatrix}\\=2(13+66)=158\)&lt;/span&gt; &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(|B|=\begin{vmatrix} 2 &amp;amp; 3 &amp;amp; 4\\ -2 &amp;amp; 7 &amp;amp; 1\\ 4 &amp;amp; 6 &amp;amp; 0\\ \end{vmatrix}\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3: 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第2行作新的第1行； 第3行 - 第1行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2 作新的第三行&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix} 0 &amp;amp; 10 &amp;amp; 5\\ -2 &amp;amp; 7 &amp;amp; 1\\ 0 &amp;amp; 0 &amp;amp; -8\\ \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第三行衹有第三個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-8(-1)^{3+3}\begin{vmatrix} 0 &amp;amp; 10 \\ -2 &amp;amp; 7\end{vmatrix}\\=-8\times20=-160\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;綜上可得&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(|A|·|B|=158\times(-160)=-25280=|AB|\)&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;3&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;試用這一節介紹的行列式性質，求解前一節&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;例(3)&lt;/a&gt;的行列式值。&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;解&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  -2 &amp;amp; 3 &amp;amp;4 &amp;amp; 1\\  4 &amp;amp; 2&amp;amp; 0&amp;amp; 5\\  2 &amp;amp;-3&amp;amp; -4&amp;amp; 2\\  2 &amp;amp; 1&amp;amp; 2&amp;amp; -3 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質3&lt;br&gt; 1. 第1行 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 第3行，作新的第一行； 2. 第2行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 &lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; 2，作新的第2行； 3. 第4行 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 第3行 作新的第4行&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(=\begin{vmatrix}  0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 3\\  0 &amp;amp; 8 &amp;amp; 8 &amp;amp; 1\\  2 &amp;amp; -3 &amp;amp; -4 &amp;amp; 2\\  0 &amp;amp; 4 &amp;amp; 6 &amp;amp; -5 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1行衹有第4個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp;amp; 8 &amp;amp; 8 \\ 2 &amp;amp; -3 &amp;amp; -4 \\ 0 &amp;amp; 4 &amp;amp; 6 \end{vmatrix}\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt;利用性質7: 第1列衹有第2個元素非零，降次。&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp;amp; 8 \\ 4 &amp;amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

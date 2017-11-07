@@ -1,0 +1,74 @@
+---
+title: approximate log-likelihood ratios
+author: ''
+date: '2017-11-07'
+slug: approximate-log-likelihood-ratios
+categories:
+  - statistics
+  - study abroad
+tags:
+  - inference
+  - learning notes
+  - Medical Statistics
+  - London
+  - LSHTM
+summary: "近似法求對數似然比"
+---
+
+爲什麼要用二次方程近似對數似然比方程？
+
+1. 上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 ([binomial example](https://winterwang.github.io/post/log-likelihood-ratio/))。
+2. 我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。
+3. 所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。
+
+
+
+### 正態近似法求對數似然 Normal approximation to the log-likelihood
+
+根據[前一節](https://winterwang.github.io/post/log-likelihood-ratio/)，如果樣本均數的分佈符合正態分佈：$\bar{X}\sim N(\mu, \sigma^2/n)$。那麼樣本均數的對數似然比爲：
+
+$$llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2$$
+
+其中， $\bar{x}$ 是正態分佈總體均數 $\mu$ 的極大似然估計 (maximum likelihood estimator, MLE)。如果已知總體的方差參數，那麼 $\sigma/\sqrt{n}$ 是 $\bar{x}$ 的標準誤 (standard error)。
+
+因此，假設 $\theta$ 是我們想尋找的總體參數。有些人提議可以使用下面的關於 $\theta$ 的二次方程來做近似：
+
+$$f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2$$
+
+上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， $M$ 的標準誤爲 $S$。如果我們正確地選用 $M$ 和 $S$，那我們就可以用這樣的方程來近似求真實觀察數據的似然 $\ell(\theta|data)$。
+
+通過近似正態對數似然比，$M$ 應當選用使方程取最大值時，參數 $\theta$ 的極大似然估計 $M=\hat{\Theta}$。
+
+但是在選用標準誤 $S$ 上必須滿足下列條件：
+
+1. $S$ 是極大似然估計 $\hat{\Theta}$ 的標準誤。
+2. 被選擇的 $S$ 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。
+
+由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：
+
+$$\left.\frac{d^2}{d\theta^2}\ell(\theta)\right\vert_{\theta=\hat{\theta}}=\ell^{\prime\prime}(\hat{\theta})=-\frac{1}{S^2}\\
+\Rightarrow S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}
+$$
+
+在正態分佈的例子下，$M=\bar{x}, S=\sigma/\sqrt{n}$。對數似然比方程最大值時的曲率（二階導數）恰好就爲標準誤的平方的負倒數：
+
+$\ell^{\prime\prime}(\theta)=-\frac{1}{SE^2}$ $\Rightarrow$ 被叫做 **Fisher information**。
+
+稍微總結一下：
+
+1. 任意的對數似然比方程 $llr(\theta)$ 都可以考慮用一個二次方程來近似：
+    $$f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2$$
+2. 其中<br>
+    $\begin{aligned}
+    &M=\hat\theta\\
+    &S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}\\
+    &when \\
+     & n\rightarrow\infty \Rightarrow
+     \begin{cases}
+     S^2\rightarrow Var(\hat\theta) \\
+     S\rightarrow SE(\hat\theta)
+     \end{cases}
+    \end{aligned}$
+
+
+####

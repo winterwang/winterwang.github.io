@@ -173,4 +173,4 @@ $$-2\times[-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2]=3.84\\
 U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 note: \;\sqrt{3.84}=1.96$$
 
-注意到這和我我們[之前](https://winterwang.github.io/post/frequentist-statistical-inference02/)求的正態分佈均值的信賴區間公式完全一致。
+注意到這和我們[之前](https://winterwang.github.io/post/frequentist-statistical-inference02/)求的正態分佈均值的信賴區間公式完全一致。

@@ -7,8 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/statistics/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>approximate log-likelihood ratios</title>
+      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
+      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
+      <description>&lt;p&gt;爲什麼要用二次方程近似對數似然比方程？&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (&lt;a href=&#34;https://winterwang.github.io/post/log-likelihood-ratio/&#34;&gt;binomial example&lt;/a&gt;)。&lt;/li&gt;
+&lt;li&gt;我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。&lt;/li&gt;
+&lt;li&gt;所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;-normal-approximation-to-the-log-likelihood&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;正態近似法求對數似然 Normal approximation to the log-likelihood&lt;/h3&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/log-likelihood-ratio/&#34;&gt;前一節&lt;/a&gt;，如果樣本均數的分佈符合正態分佈：&lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\sim N(\mu, \sigma^2/n)\)&lt;/span&gt;。那麼樣本均數的對數似然比爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中， &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 是正態分佈總體均數 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的極大似然估計 (maximum likelihood estimator, MLE)。如果已知總體的方差參數，那麼 &lt;span class=&#34;math inline&#34;&gt;\(\sigma/\sqrt{n}\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(\bar{x}\)&lt;/span&gt; 的標準誤 (standard error)。&lt;/p&gt;
+&lt;p&gt;因此，假設 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 是我們想尋找的總體參數。有些人提議可以使用下面的關於 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的二次方程來做近似：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 的標準誤爲 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;。如果我們正確地選用 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;，那我們就可以用這樣的方程來近似求真實觀察數據的似然 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;通過近似正態對數似然比，&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 應當選用使方程取最大值時，參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的極大似然估計 &lt;span class=&#34;math inline&#34;&gt;\(M=\hat{\Theta}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;但是在選用標準誤 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 上必須滿足下列條件：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 是極大似然估計 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\Theta}\)&lt;/span&gt; 的標準誤。&lt;/li&gt;
+&lt;li&gt;被選擇的 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left.\frac{d^2}{d\theta^2}\ell(\theta)\right\vert_{\theta=\hat{\theta}}=\ell^{\prime\prime}(\hat{\theta})=-\frac{1}{S^2}\\
+\Rightarrow S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在正態分佈的例子下，&lt;span class=&#34;math inline&#34;&gt;\(M=\bar{x}, S=\sigma/\sqrt{n}\)&lt;/span&gt;。對數似然比方程最大值時的曲率（二階導數）恰好就爲標準誤的平方的負倒數：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\ell^{\prime\prime}(\theta)=-\frac{1}{SE^2}\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow\)&lt;/span&gt; 被叫做 &lt;strong&gt;Fisher information&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;稍微總結一下：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;任意的對數似然比方程 &lt;span class=&#34;math inline&#34;&gt;\(llr(\theta)\)&lt;/span&gt; 都可以考慮用一個二次方程來近似： &lt;span class=&#34;math display&#34;&gt;\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;其中&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp;M=\hat\theta\\ &amp;amp;S^2=\left.-\frac{1}{\ell^{\prime\prime}(\theta)}\right\vert_{\theta=\hat{\theta}}\\ &amp;amp;when \\  &amp;amp; n\rightarrow\infty \Rightarrow  \begin{cases}  S^2\rightarrow Var(\hat\theta) \\  S\rightarrow SE(\hat\theta)  \end{cases} \end{aligned}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
@@ -142,7 +186,7 @@ title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% li
 \Rightarrow L=\bar{x}-\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;注意到這和我我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;p&gt;注意到這和我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -2152,62 +2196,6 @@ i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;Singular or non-invertible matrix&lt;/a&gt;&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(det(A)=0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Idempotent matrices(冪等矩陣)&lt;/strong&gt; are square and the following is true: &lt;span class=&#34;math inline&#34;&gt;\(AA=A^2=A\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;Orthogonal matrices&lt;/a&gt;&lt;/strong&gt; have the following property: &lt;span class=&#34;math inline&#34;&gt;\(AA^T=A^TA=I\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;行向量乘以矩陣，乘以列向量可得標量&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt;的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;這樣的乘法計算通過&lt;a href=&#34;https://winterwang.github.io/post/2017-02-22/&#34;&gt;矩陣&lt;/a&gt;（包括&lt;a href=&#34;https://winterwang.github.io/post/2017-02-19/&#34;&gt;向量&lt;/a&gt;）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。&lt;/p&gt;
-&lt;p&gt;在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： &lt;span class=&#34;math display&#34;&gt;\[\underline{x}=\left(
-\begin{array}{c}
-x_1 \\
-x_2 \\
-x_3
-\end{array}\right), \underline{a}=\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-a_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\)&lt;/span&gt; &lt;br&gt;其中 &lt;span class=&#34;math display&#34;&gt;\[D=\left(
-\begin{array}{c}
-a_1 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; a_2 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; a_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2\\ =(a_1x_1+a_2x_2+a_3x_3)^t(a_1x_1+a_2x_2+a_3x_3)\\=\left\{(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\right\}^t(a_1, a_2, a_3)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =(\underline{a}^t\underline{x})^t\underline{a}^t\underline{x}\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}\\ \Rightarrow\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ a_2 &amp;amp; 0 &amp;amp; 0 \\ a_3 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_2 &amp;amp; a_3 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \end{array}\right)\underline{x}\\ =\underline{x}^tAA^t\underline{x}\\ =\underline{x}A_0\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[A=\left(
-\begin{array}{c}
-a_1 &amp;amp; 0 &amp;amp; 0 \\
-a_2 &amp;amp; 0 &amp;amp; 0 \\
-a_3 &amp;amp; 0 &amp;amp; 0
-\end{array}\right), A_0=\left(
-\begin{array}{c}
-a_1^2 &amp;amp; a_1a_2 &amp;amp; a_1a_3 \\
-a_2a_1 &amp;amp; a_2^2 &amp;amp; a_2a_3 \\
-a_3a_1 &amp;amp; a_3a_2 &amp;amp; a_3^2
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((a_1x_1+a_2x_2+a_3x_3)^2+(b_1x_1+b_2x_2+b_3x_3)^2\\+(c_1x_1+c_2x_2+c_3x_3)^2\\ =\underline{x}^t\underline{a}\underline{a}^t\underline{x}+\underline{x}^t\underline{b}\underline{b}^t\underline{x}+\underline{x}^t\underline{c}\underline{c}^t\underline{x}\\ =\underline{x}^t(\underline{a}\underline{a}^t+\underline{b}\underline{b}^t+\underline{c}\underline{c}^t)\underline{x}\\ =\underline{x}^t(\underline{a} \underline{b} \underline{c})\left( \begin{array}{c} \underline{a}^t \\ \underline{b}^t \\ \underline{c}^t \end{array}\right)\underline{x}\\ =\underline{x}^t\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\underline{x}\\ =\underline{x}^tBB^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[B=\left(
-\begin{array}{c}
-a_1 &amp;amp; b_1 &amp;amp; c_1 \\
-a_2 &amp;amp; b_2 &amp;amp; c_2 \\
-a_3 &amp;amp; b_3 &amp;amp; c_3
-\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{(a_1x_1+a_2x_2+a_3x_3)^2}{d_1}+ \frac{(b_1x_1+b_2x_2+b_3x_3)^2}{d_2}\\ +\frac{(c_1x_1+c_2x_2+c_3x_3)^2}{d_3}\)&lt;/span&gt;&lt;br&gt; 根據上面第1個練習 &lt;span class=&#34;math inline&#34;&gt;\(=(a_1x_1+a_2x_2+a_3x_3, b_1x_1+b_2x_2+b_3x_3, c_1x_1+c_2x_2+c_3x_3)\\ \left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\left( \begin{array}{c} a_1x_1+a_2x_2+a_3x_3 \\ b_1x_1+b_2x_2+b_3x_3 \\ c_1x_1+c_2x_2+c_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; b_1 &amp;amp; c_1 \\ a_2 &amp;amp; b_2 &amp;amp; c_2 \\ a_3 &amp;amp; b_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} 1/d_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1/d_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1/d_3 \end{array}\right)\\ \left( \begin{array}{c} a_1 &amp;amp; a_1 &amp;amp; a_1 \\ b_2 &amp;amp; b_2 &amp;amp; b_2 \\ c_3 &amp;amp; c_3 &amp;amp; c_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tBD^{-1}B^t\underline{x}\)&lt;/span&gt; &lt;br&gt; 其中 &lt;span class=&#34;math display&#34;&gt;\[D^{-1}=\left(
-\begin{array}{c}
-1/d_1 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; 1/d_2 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; 1/d_3
-\end{array}\right) \;(d_1d_2d_3\neq0), B 與上面3. 相同。\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
