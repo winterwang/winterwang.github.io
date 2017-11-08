@@ -111,7 +111,7 @@ omitting&amp;amp;\;terms\;not\;in\;\mu \\
 &amp;amp;\ell^\prime(\pi) = \frac{k}{\pi}-\frac{n-k}{1-\pi} \\
 &amp;amp;\ell^{\prime\prime}(\pi)=\frac{-k}{\pi^2}-\frac{n-k}{(1-\pi)^2} &amp;lt;0 \\
 &amp;amp;\therefore at\;\textbf{MLE}\;\ell(\pi)\;has\;maximum \\
-S^2&amp;amp;=\left.-\frac{1}{\ell^{\prime\prime}(\pi)}\right\vert_{\hat\pi=\hat{\hat\pi}=k/n=p}\\
+S^2&amp;amp;=\left.-\frac{1}{\ell^{\prime\prime}(\pi)}\right\vert_{\pi=\hat\pi=k/n=p}\\
 &amp;amp;=\frac{1}{\frac{k}{\hat\pi^2}+\frac{n-k}{(1-\hat\pi)^2}}\\
 &amp;amp;=\frac{\hat\pi^2(1-\hat\pi)^2}{k(1-\hat\pi)^2+(n-k)\hat\pi^2}\\
 &amp;amp;=\frac{P^2(1-P)^2}{np(1-p)^2+(n-np)p^2}\\
@@ -142,7 +142,7 @@ M\pm1.96S=p\pm1.96\sqrt{\frac{p(1-p)}{n}}\\
 &lt;p&gt;當我們用泊松分佈模擬事件在某段時間內發生率 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 時，注意到這個事件發生率必須滿足 &lt;span class=&#34;math inline&#34;&gt;\(\lambda&amp;gt;0\)&lt;/span&gt;。當事件發生次數較低時，會讓似然方程的圖形被擠壓在低值附近。如果嘗試用對數轉換 &lt;span class=&#34;math inline&#34;&gt;\(\lambda \rightarrow log(\lambda)\)&lt;/span&gt; 此時 &lt;span class=&#34;math inline&#34;&gt;\(log(\lambda)\)&lt;/span&gt; 就不再被限制與 &lt;span class=&#34;math inline&#34;&gt;\(&amp;gt;0\)&lt;/span&gt;。下面我們嘗試尋找對數轉換過後的 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(\beta=log(\lambda), \Rightarrow e^\beta=\lambda\)&lt;/span&gt; 從本文上半部分中我們已知 &lt;span class=&#34;math inline&#34;&gt;\(\hat\lambda=\frac{d}{p}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;對數轉換以後的 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 是什麼? &lt;br&gt;根據定義，&lt;span class=&#34;math inline&#34;&gt;\(MLE(\beta)=MLE[log(\lambda)=log(\hat\lambda)]\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow M=\hat\beta=log(\frac{d}{p})\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;對數轉換以後的 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 是什麼? &lt;br&gt;根據定義，&lt;span class=&#34;math inline&#34;&gt;\(MLE(\beta)=MLE[log(\lambda)]=log(\hat\lambda)\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow M=\hat\beta=log(\frac{d}{p})\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;對數轉換以後的 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 是什麼? &lt;br&gt; 泊松分佈的對數似然方程是：&lt;span class=&#34;math inline&#34;&gt;\(\ell(\lambda|d)=d log(\lambda) - \lambda p\)&lt;/span&gt; 用 &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; 替換掉 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;&lt;/p&gt;
 &lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp; \ell(\beta|d)=d \beta - pe^\beta\\ &amp;amp; \Rightarrow \ell^\prime(\beta)=d-pe^\beta \Rightarrow \ell^{\prime\prime}(\beta)=-pe^\beta \\ &amp;amp; S^2 = \left.-\frac{1}{\ell^{\prime\prime}(\beta)}\right\vert_{\beta=\hat{\beta}} = \left.\frac{1}{pe^\beta}\right\vert_{\beta=\hat{\beta}} = \frac{1}{pe^{log(d/p)}}\\ &amp;amp;\Rightarrow S^2=\frac{1}{d} \therefore S=\frac{1}{\sqrt{d}} \end{aligned}\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;轉換後的近似二次方程：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp; q(\beta) = -\frac{1}{2}(\frac{\beta-M}{S})^2 = -\frac{1}{2}(\frac{\beta-log(\frac{d}{p})}{\frac{1}{\sqrt{d}}})^2 \end{aligned}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
@@ -352,7 +352,7 @@ title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% li
 &lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;以正態分佈數據爲例：&lt;/h4&gt;
+&lt;h4&gt;以正態分佈數據爲例&lt;/h4&gt;
 &lt;p&gt;本文前半部分證明過， &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)&lt;/span&gt;，先假設 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 已知。將觀察數據 &lt;span class=&#34;math inline&#34;&gt;\(x_1,\cdots, x_n\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt;。 那麼：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
 =-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]&lt;/span&gt;&lt;/p&gt;
@@ -362,6 +362,801 @@ title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% li
 U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;注意到這和我們&lt;a href=&#34;https://winterwang.github.io/post/frequentist-statistical-inference02/&#34;&gt;之前&lt;/a&gt;求的正態分佈均值的信賴區間公式完全一致。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exercise&lt;/h3&gt;
+&lt;div id=&#34;q1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Q1&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;假設十個對象中有三人死亡，用二項分佈模型來模擬這個例子，求這個例子中參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的似然方程和圖形 (likelihood) ?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  L(\pi|3) &amp;amp;= \binom{10}{3}\pi^3(1-\pi)^{10-3} \\  omitting\;&amp;amp;terms\;not\;in\;\mu \\  \Rightarrow \ell(\pi|3) &amp;amp;= log[\pi^3(1-\pi)^7] \\  &amp;amp;= 3log\pi+7log(1-\pi)\\  \Rightarrow \ell^\prime(\pi|3)&amp;amp;= \frac{3}{\pi}-\frac{7}{1-\pi} \\  let \; \ell^\prime&amp;amp; =0\\  &amp;amp;\frac{3}{\pi}-\frac{7}{1-\pi} = 0 \\  &amp;amp;\frac{3-10\pi}{\pi(1-\pi)} = 0 \\  \Rightarrow MLE &amp;amp;= \hat\pi = 0.3 \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;計算似然比，並作圖，注意方程圖形未變，&lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸的變化；取對數似然比，並作圖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;LR &amp;lt;- L/max(L) ; head(LR)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.0000000000 0.0004191759 0.0031233631 0.0098110584 0.0216286076
+## [6] 0.0392577320&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(pi, LR, type = &amp;quot;l&amp;quot;, ylim = c(0, 1),yaxt=&amp;quot;n&amp;quot;, col=&amp;quot;darkblue&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+grid(NA, 5, lwd = 1)
+axis(2, at=seq(0,1,0.2), las=2)
+title(main = &amp;quot;Binomial likelihood ratio function\n 3 out of 10 subjects&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;logLR &amp;lt;- log(L/max(L))
+plot(pi, logLR, type = &amp;quot;l&amp;quot;, ylim = c(-4, 0),yaxt=&amp;quot;n&amp;quot;, col=&amp;quot;darkblue&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+grid(NA, 5, lwd = 1)
+axis(2, at=seq(-4,0,1), las=2)
+title(main = &amp;quot;Binomial log-likelihood ratio function\n 3 out of 10 subjects&amp;quot;)
+abline(h=-1.92, lty=1, col=&amp;quot;red&amp;quot;)
+axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Q2&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;與上面用同樣的模型，但是觀察人數變爲 &lt;span class=&#34;math inline&#34;&gt;\(100\)&lt;/span&gt; 人 患病人數爲 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt; 人，試作對數似然比方程之圖形，與上圖對比：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;可以看出，兩組數據的 MLE 都是一致的， &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.3\)&lt;/span&gt;，但是對數似然比方程圖形在 樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n=100\)&lt;/span&gt; 時比 &lt;span class=&#34;math inline&#34;&gt;\(n=10\)&lt;/span&gt; 時窄很多，由此產生的似然比信賴區間也就窄很多（精確很多）。所以對數似然比方程的曲率（二階導數），反映了觀察獲得數據提供的對總體參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 推斷過程中的信息量。而且當樣本量較大時，對數似然比方程也更加接近左右對稱的二次方程曲線。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q3&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Q3&lt;/h4&gt;
+&lt;p&gt;在一個實施了160人年的追蹤調查中，觀察到8個死亡案例。使用泊松分佈模型，繪製對數似然比方程圖形，從圖形上目視推測極大似然比的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  d = 8, \;p &amp;amp;= 160\; person\cdot year \\  \Rightarrow D\sim Poi(\mu &amp;amp;=\lambda p) \\  L(\lambda|data) &amp;amp;= Prob(D=d=8) \\  &amp;amp;= e^{-\mu}\frac{\mu^d}{d!} \\  &amp;amp;= e^{-\lambda p}\frac{\lambda^d p^d}{d!} \\  omitting&amp;amp;\;terms\;not\;in\;\lambda \\  &amp;amp;= e^{-\lambda p}\lambda^d \\ \Rightarrow \ell(\lambda|data)&amp;amp;= log(e^{-\lambda p}\lambda^d) \\  &amp;amp;= d\cdot log(\lambda)-\lambda p \\  &amp;amp; = 8\times log(\lambda) - 160\times\lambda \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
+&lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+lambda
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+LogLR
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.010
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-6.4755033
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.011
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-5.8730219
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.012
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-5.3369308
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.013
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-4.8565892
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.014
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-4.4237254
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.015
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-4.0317824
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.016
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-3.6754743
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.017
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-3.3504773
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.018
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-3.0532100
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.019
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.7806722
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.020
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.5303259
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.021
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.3000045
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+0.022
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+-2.0878444
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+0.023
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+-1.8922303
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.024
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.7117534
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.025
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.5451774
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.026
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.3914117
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.027
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.2494891
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.028
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.1185480
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.029
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.9978174
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.030
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.8866050
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.031
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.7842864
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.032
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.6902968
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.033
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.6041236
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.034
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.5252998
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.035
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.4533996
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.036
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.3880325
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.037
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.3288407
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.038
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.2754948
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.039
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.2276909
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.040
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1851484
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.041
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1476075
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.042
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1148271
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.043
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0865831
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.044
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0626670
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.045
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0428841
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.046
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0270529
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.047
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0150032
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.048
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0065760
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.049
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0016217
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.050
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.0000000
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.051
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0015790
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.052
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0062343
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.053
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0138487
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.054
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0243117
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.055
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0375186
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.056
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0533705
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.057
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0717739
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.058
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.0926400
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.059
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1158845
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.060
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1414275
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.061
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1691931
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.062
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.1991090
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.063
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.2311062
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.064
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.2651194
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.065
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.3010859
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.066
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.3389461
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.067
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.3786431
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.068
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.4201224
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.069
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.4633320
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.070
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.5082221
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.071
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.5547450
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.072
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.6028551
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.073
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.6525085
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.074
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.7036633
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.075
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.7562791
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.076
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.8103173
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.077
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.8657407
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.078
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.9225134
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.079
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-0.9806012
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.080
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.0399710
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.081
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.1005908
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.082
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.1624301
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.083
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.2254592
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.084
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.2896497
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.085
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.3549740
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.086
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.4214057
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.087
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.4889191
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.088
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.5574895
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.089
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.6270931
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.090
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.6977067
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.091
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.7693080
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.092
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-1.8418754
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+0.093
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+-1.9153881
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+0.094
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;font-weight: bold;color: white;background-color: #D7261E;&#34;&gt;
+-1.9898258
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.095
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.0651689
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.096
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.1413985
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.097
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.2184962
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.098
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.2964442
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.099
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.3752252
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.100
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+-2.4548226
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;所以從列表數據結合圖形， 可以找到信賴區間的下限在 0.022~0.023 之間， 上限在 0.093～0.094 之間。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

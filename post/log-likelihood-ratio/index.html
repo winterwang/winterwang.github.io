@@ -376,7 +376,7 @@ title(main = &quot;Log-likelihood ratio for binomial example, \n with 95% likeli
 <p>從上圖中可以讀出，<span class="math inline">\(95\%\)</span> 對數似然比信賴區間就是 <span class="math inline">\((0.15, 0.7)\)</span></p>
 </div>
 <div class="section level4">
-<h4>以正態分佈數據爲例：</h4>
+<h4>以正態分佈數據爲例</h4>
 <p>本文前半部分證明過， <span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)</span>，先假設 <span class="math inline">\(\sigma^2\)</span> 已知。將觀察數據 <span class="math inline">\(x_1,\cdots, x_n\)</span> 標記爲 <span class="math inline">\(\underline{x}\)</span>。 那麼：</p>
 <p><span class="math display">\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
 =-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]</span></p>
@@ -386,6 +386,801 @@ title(main = &quot;Log-likelihood ratio for binomial example, \n with 95% likeli
 U=\bar{x}+\sqrt{3.84}\frac{\sigma}{\sqrt{n}} \\
 note: \;\sqrt{3.84}=1.96\]</span></p>
 <p>注意到這和我們<a href="https://winterwang.github.io/post/frequentist-statistical-inference02/">之前</a>求的正態分佈均值的信賴區間公式完全一致。</p>
+</div>
+</div>
+<div id="exercise" class="section level3">
+<h3>Exercise</h3>
+<div id="q1" class="section level4">
+<h4>Q1</h4>
+<ol style="list-style-type: lower-alpha">
+<li>假設十個對象中有三人死亡，用二項分佈模型來模擬這個例子，求這個例子中參數 <span class="math inline">\(\pi\)</span> 的似然方程和圖形 (likelihood) ?</li>
+</ol>
+</div>
+<div class="section level4">
+<h4>解</h4>
+<p><span class="math inline">\(\begin{aligned}  L(\pi|3) &amp;= \binom{10}{3}\pi^3(1-\pi)^{10-3} \\  omitting\;&amp;terms\;not\;in\;\mu \\  \Rightarrow \ell(\pi|3) &amp;= log[\pi^3(1-\pi)^7] \\  &amp;= 3log\pi+7log(1-\pi)\\  \Rightarrow \ell^\prime(\pi|3)&amp;= \frac{3}{\pi}-\frac{7}{1-\pi} \\  let \; \ell^\prime&amp; =0\\  &amp;\frac{3}{\pi}-\frac{7}{1-\pi} = 0 \\  &amp;\frac{3-10\pi}{\pi(1-\pi)} = 0 \\  \Rightarrow MLE &amp;= \hat\pi = 0.3 \end{aligned}\)</span></p>
+<p><img src="/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png" width="480" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>計算似然比，並作圖，注意方程圖形未變，<span class="math inline">\(y\)</span> 軸的變化；取對數似然比，並作圖</li>
+</ol>
+<pre class="r"><code>LR &lt;- L/max(L) ; head(LR)</code></pre>
+<pre><code>## [1] 0.0000000000 0.0004191759 0.0031233631 0.0098110584 0.0216286076
+## [6] 0.0392577320</code></pre>
+<pre class="r"><code>plot(pi, LR, type = &quot;l&quot;, ylim = c(0, 1),yaxt=&quot;n&quot;, col=&quot;darkblue&quot;,
+     frame.plot = FALSE, ylab = &quot;&quot;, xlab = &quot;\U03C0&quot;)
+grid(NA, 5, lwd = 1)
+axis(2, at=seq(0,1,0.2), las=2)
+title(main = &quot;Binomial likelihood ratio function\n 3 out of 10 subjects&quot;)</code></pre>
+<p><img src="/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png" width="480" /></p>
+<pre class="r"><code>logLR &lt;- log(L/max(L))
+plot(pi, logLR, type = &quot;l&quot;, ylim = c(-4, 0),yaxt=&quot;n&quot;, col=&quot;darkblue&quot;,
+     frame.plot = FALSE, ylab = &quot;&quot;, xlab = &quot;\U03C0&quot;)
+grid(NA, 5, lwd = 1)
+axis(2, at=seq(-4,0,1), las=2)
+title(main = &quot;Binomial log-likelihood ratio function\n 3 out of 10 subjects&quot;)
+abline(h=-1.92, lty=1, col=&quot;red&quot;)
+axis(4, at=-1.92, las=0)</code></pre>
+<p><img src="/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png" width="480" /></p>
+</div>
+<div id="q2" class="section level4">
+<h4>Q2</h4>
+<ol style="list-style-type: lower-alpha">
+<li>與上面用同樣的模型，但是觀察人數變爲 <span class="math inline">\(100\)</span> 人 患病人數爲 <span class="math inline">\(30\)</span> 人，試作對數似然比方程之圖形，與上圖對比：</li>
+</ol>
+<p><img src="/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png" width="480" /></p>
+<p>可以看出，兩組數據的 MLE 都是一致的， <span class="math inline">\(\hat\pi=0.3\)</span>，但是對數似然比方程圖形在 樣本量爲 <span class="math inline">\(n=100\)</span> 時比 <span class="math inline">\(n=10\)</span> 時窄很多，由此產生的似然比信賴區間也就窄很多（精確很多）。所以對數似然比方程的曲率（二階導數），反映了觀察獲得數據提供的對總體參數 <span class="math inline">\(\pi\)</span> 推斷過程中的信息量。而且當樣本量較大時，對數似然比方程也更加接近左右對稱的二次方程曲線。</p>
+</div>
+<div id="q3" class="section level4">
+<h4>Q3</h4>
+<p>在一個實施了160人年的追蹤調查中，觀察到8個死亡案例。使用泊松分佈模型，繪製對數似然比方程圖形，從圖形上目視推測極大似然比的 <span class="math inline">\(95\%\)</span> 信賴區間。</p>
+</div>
+<div id="-1" class="section level4">
+<h4>解</h4>
+<p><span class="math inline">\(\begin{aligned}  d = 8, \;p &amp;= 160\; person\cdot year \\  \Rightarrow D\sim Poi(\mu &amp;=\lambda p) \\  L(\lambda|data) &amp;= Prob(D=d=8) \\  &amp;= e^{-\mu}\frac{\mu^d}{d!} \\  &amp;= e^{-\lambda p}\frac{\lambda^d p^d}{d!} \\  omitting&amp;\;terms\;not\;in\;\lambda \\  &amp;= e^{-\lambda p}\lambda^d \\ \Rightarrow \ell(\lambda|data)&amp;= log(e^{-\lambda p}\lambda^d) \\  &amp;= d\cdot log(\lambda)-\lambda p \\  &amp; = 8\times log(\lambda) - 160\times\lambda \end{aligned}\)</span></p>
+<img src="/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png" width="480" />
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+lambda
+</th>
+<th style="text-align:right;">
+LogLR
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.010
+</td>
+<td style="text-align:right;">
+-6.4755033
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.011
+</td>
+<td style="text-align:right;">
+-5.8730219
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.012
+</td>
+<td style="text-align:right;">
+-5.3369308
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.013
+</td>
+<td style="text-align:right;">
+-4.8565892
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.014
+</td>
+<td style="text-align:right;">
+-4.4237254
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.015
+</td>
+<td style="text-align:right;">
+-4.0317824
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.016
+</td>
+<td style="text-align:right;">
+-3.6754743
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.017
+</td>
+<td style="text-align:right;">
+-3.3504773
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.018
+</td>
+<td style="text-align:right;">
+-3.0532100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.019
+</td>
+<td style="text-align:right;">
+-2.7806722
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.020
+</td>
+<td style="text-align:right;">
+-2.5303259
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.021
+</td>
+<td style="text-align:right;">
+-2.3000045
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+0.022
+</td>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+-2.0878444
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+0.023
+</td>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+-1.8922303
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.024
+</td>
+<td style="text-align:right;">
+-1.7117534
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.025
+</td>
+<td style="text-align:right;">
+-1.5451774
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.026
+</td>
+<td style="text-align:right;">
+-1.3914117
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.027
+</td>
+<td style="text-align:right;">
+-1.2494891
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.028
+</td>
+<td style="text-align:right;">
+-1.1185480
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.029
+</td>
+<td style="text-align:right;">
+-0.9978174
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.030
+</td>
+<td style="text-align:right;">
+-0.8866050
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.031
+</td>
+<td style="text-align:right;">
+-0.7842864
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.032
+</td>
+<td style="text-align:right;">
+-0.6902968
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.033
+</td>
+<td style="text-align:right;">
+-0.6041236
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.034
+</td>
+<td style="text-align:right;">
+-0.5252998
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.035
+</td>
+<td style="text-align:right;">
+-0.4533996
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.036
+</td>
+<td style="text-align:right;">
+-0.3880325
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.037
+</td>
+<td style="text-align:right;">
+-0.3288407
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.038
+</td>
+<td style="text-align:right;">
+-0.2754948
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.039
+</td>
+<td style="text-align:right;">
+-0.2276909
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.040
+</td>
+<td style="text-align:right;">
+-0.1851484
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.041
+</td>
+<td style="text-align:right;">
+-0.1476075
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.042
+</td>
+<td style="text-align:right;">
+-0.1148271
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.043
+</td>
+<td style="text-align:right;">
+-0.0865831
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.044
+</td>
+<td style="text-align:right;">
+-0.0626670
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.045
+</td>
+<td style="text-align:right;">
+-0.0428841
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.046
+</td>
+<td style="text-align:right;">
+-0.0270529
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.047
+</td>
+<td style="text-align:right;">
+-0.0150032
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:right;">
+-0.0065760
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.049
+</td>
+<td style="text-align:right;">
+-0.0016217
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.050
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.051
+</td>
+<td style="text-align:right;">
+-0.0015790
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.052
+</td>
+<td style="text-align:right;">
+-0.0062343
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.053
+</td>
+<td style="text-align:right;">
+-0.0138487
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.054
+</td>
+<td style="text-align:right;">
+-0.0243117
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.055
+</td>
+<td style="text-align:right;">
+-0.0375186
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.056
+</td>
+<td style="text-align:right;">
+-0.0533705
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.057
+</td>
+<td style="text-align:right;">
+-0.0717739
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.058
+</td>
+<td style="text-align:right;">
+-0.0926400
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.059
+</td>
+<td style="text-align:right;">
+-0.1158845
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.060
+</td>
+<td style="text-align:right;">
+-0.1414275
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.061
+</td>
+<td style="text-align:right;">
+-0.1691931
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.062
+</td>
+<td style="text-align:right;">
+-0.1991090
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.063
+</td>
+<td style="text-align:right;">
+-0.2311062
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.064
+</td>
+<td style="text-align:right;">
+-0.2651194
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.065
+</td>
+<td style="text-align:right;">
+-0.3010859
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.066
+</td>
+<td style="text-align:right;">
+-0.3389461
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.067
+</td>
+<td style="text-align:right;">
+-0.3786431
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.068
+</td>
+<td style="text-align:right;">
+-0.4201224
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.069
+</td>
+<td style="text-align:right;">
+-0.4633320
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.070
+</td>
+<td style="text-align:right;">
+-0.5082221
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.071
+</td>
+<td style="text-align:right;">
+-0.5547450
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.072
+</td>
+<td style="text-align:right;">
+-0.6028551
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.073
+</td>
+<td style="text-align:right;">
+-0.6525085
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.074
+</td>
+<td style="text-align:right;">
+-0.7036633
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.075
+</td>
+<td style="text-align:right;">
+-0.7562791
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.076
+</td>
+<td style="text-align:right;">
+-0.8103173
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.077
+</td>
+<td style="text-align:right;">
+-0.8657407
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.078
+</td>
+<td style="text-align:right;">
+-0.9225134
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.079
+</td>
+<td style="text-align:right;">
+-0.9806012
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.080
+</td>
+<td style="text-align:right;">
+-1.0399710
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.081
+</td>
+<td style="text-align:right;">
+-1.1005908
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.082
+</td>
+<td style="text-align:right;">
+-1.1624301
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.083
+</td>
+<td style="text-align:right;">
+-1.2254592
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.084
+</td>
+<td style="text-align:right;">
+-1.2896497
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.085
+</td>
+<td style="text-align:right;">
+-1.3549740
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.086
+</td>
+<td style="text-align:right;">
+-1.4214057
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.087
+</td>
+<td style="text-align:right;">
+-1.4889191
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.088
+</td>
+<td style="text-align:right;">
+-1.5574895
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.089
+</td>
+<td style="text-align:right;">
+-1.6270931
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.090
+</td>
+<td style="text-align:right;">
+-1.6977067
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.091
+</td>
+<td style="text-align:right;">
+-1.7693080
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.092
+</td>
+<td style="text-align:right;">
+-1.8418754
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+0.093
+</td>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+-1.9153881
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+0.094
+</td>
+<td style="text-align:right;font-weight: bold;color: white;background-color: #D7261E;">
+-1.9898258
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.095
+</td>
+<td style="text-align:right;">
+-2.0651689
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.096
+</td>
+<td style="text-align:right;">
+-2.1413985
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.097
+</td>
+<td style="text-align:right;">
+-2.2184962
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.098
+</td>
+<td style="text-align:right;">
+-2.2964442
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.099
+</td>
+<td style="text-align:right;">
+-2.3752252
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.100
+</td>
+<td style="text-align:right;">
+-2.4548226
+</td>
+</tr>
+</tbody>
+</table>
+<p>所以從列表數據結合圖形， 可以找到信賴區間的下限在 0.022~0.023 之間， 上限在 0.093～0.094 之間。</p>
 </div>
 </div>
 

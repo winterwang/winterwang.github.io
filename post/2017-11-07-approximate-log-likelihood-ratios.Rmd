@@ -149,7 +149,7 @@ $$
 &\ell^\prime(\pi) = \frac{k}{\pi}-\frac{n-k}{1-\pi} \\
 &\ell^{\prime\prime}(\pi)=\frac{-k}{\pi^2}-\frac{n-k}{(1-\pi)^2} <0 \\
 &\therefore at\;\textbf{MLE}\;\ell(\pi)\;has\;maximum \\
-S^2&=\left.-\frac{1}{\ell^{\prime\prime}(\pi)}\right\vert_{\hat\pi=\hat{\hat\pi}=k/n=p}\\
+S^2&=\left.-\frac{1}{\ell^{\prime\prime}(\pi)}\right\vert_{\pi=\hat\pi=k/n=p}\\
 &=\frac{1}{\frac{k}{\hat\pi^2}+\frac{n-k}{(1-\hat\pi)^2}}\\
 &=\frac{\hat\pi^2(1-\hat\pi)^2}{k(1-\hat\pi)^2+(n-k)\hat\pi^2}\\
 &=\frac{P^2(1-P)^2}{np(1-p)^2+(n-np)p^2}\\
@@ -185,7 +185,7 @@ $$
 
 令 $\beta=log(\lambda), \Rightarrow e^\beta=\lambda$ 從本文上半部分中我們已知 $\hat\lambda=\frac{d}{p}$。
 
-- 對數轉換以後的 $M$ 是什麼? <br>根據定義，$MLE(\beta)=MLE[log(\lambda)=log(\hat\lambda)]$
+- 對數轉換以後的 $M$ 是什麼? <br>根據定義，$MLE(\beta)=MLE[log(\lambda)]=log(\hat\lambda)$
   $\Rightarrow M=\hat\beta=log(\frac{d}{p})$
 - 對數轉換以後的 $S$ 是什麼? <br> 泊松分佈的對數似然方程是：$\ell(\lambda|d)=d log(\lambda) - \lambda p$ 用 $\beta$ 替換掉 $\lambda$
 
