@@ -11,7 +11,7 @@
     <atom:link href="/tags/lshtm/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>approximate log-likelihood ratios</title>
+      <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
       <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
@@ -137,6 +137,94 @@ M\pm1.96S=p\pm1.96\sqrt{\frac{p(1-p)}{n}}\\
 &lt;li&gt;用本節學到的二次方程近似法，求得轉化後的參數的似然比信賴區間。 &lt;br&gt; Use our quadratic approximation on the transformed parameter to calculate our likelihood ratio confidence intervals.&lt;/li&gt;
 &lt;li&gt;將第2步計算獲得的似然比信賴區間再通過轉化參數時的逆函數轉換回去，以獲得原參數的似然比信賴區間。&lt;br&gt; Transform the confidence intervals back, or to any scale we wish – they remain valid.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以泊松分佈爲例&lt;/h4&gt;
+&lt;p&gt;當我們用泊松分佈模擬事件在某段時間內發生率 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 時，注意到這個事件發生率必須滿足 &lt;span class=&#34;math inline&#34;&gt;\(\lambda&amp;gt;0\)&lt;/span&gt;。當事件發生次數較低時，會讓似然方程的圖形被擠壓在低值附近。如果嘗試用對數轉換 &lt;span class=&#34;math inline&#34;&gt;\(\lambda \rightarrow log(\lambda)\)&lt;/span&gt; 此時 &lt;span class=&#34;math inline&#34;&gt;\(log(\lambda)\)&lt;/span&gt; 就不再被限制與 &lt;span class=&#34;math inline&#34;&gt;\(&amp;gt;0\)&lt;/span&gt;。下面我們嘗試尋找對數轉換過後的 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(\beta=log(\lambda), \Rightarrow e^\beta=\lambda\)&lt;/span&gt; 從本文上半部分中我們已知 &lt;span class=&#34;math inline&#34;&gt;\(\hat\lambda=\frac{d}{p}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;對數轉換以後的 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 是什麼? &lt;br&gt;根據定義，&lt;span class=&#34;math inline&#34;&gt;\(MLE(\beta)=MLE[log(\lambda)=log(\hat\lambda)]\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow M=\hat\beta=log(\frac{d}{p})\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;對數轉換以後的 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 是什麼? &lt;br&gt; 泊松分佈的對數似然方程是：&lt;span class=&#34;math inline&#34;&gt;\(\ell(\lambda|d)=d log(\lambda) - \lambda p\)&lt;/span&gt; 用 &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; 替換掉 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp; \ell(\beta|d)=d \beta - pe^\beta\\ &amp;amp; \Rightarrow \ell^\prime(\beta)=d-pe^\beta \Rightarrow \ell^{\prime\prime}(\beta)=-pe^\beta \\ &amp;amp; S^2 = \left.-\frac{1}{\ell^{\prime\prime}(\beta)}\right\vert_{\beta=\hat{\beta}} = \left.\frac{1}{pe^\beta}\right\vert_{\beta=\hat{\beta}} = \frac{1}{pe^{log(d/p)}}\\ &amp;amp;\Rightarrow S^2=\frac{1}{d} \therefore S=\frac{1}{\sqrt{d}} \end{aligned}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;轉換後的近似二次方程：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp; q(\beta) = -\frac{1}{2}(\frac{\beta-M}{S})^2 = -\frac{1}{2}(\frac{\beta-log(\frac{d}{p})}{\frac{1}{\sqrt{d}}})^2 \end{aligned}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間 &lt;span class=&#34;math inline&#34;&gt;\(=log(\frac{d}{p})\pm1.96\frac{1}{\sqrt{d}}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間 &lt;span class=&#34;math inline&#34;&gt;\(=exp(log(\frac{d}{p})\pm1.96\frac{1}{\sqrt{d}})\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;以二項分佈爲例&lt;/h4&gt;
+&lt;p&gt;在研究對象 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人中觀察到 &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; 個人患有某種疾病。&lt;/p&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(\beta=log(\pi) \Rightarrow \pi=e^\beta\)&lt;/span&gt; 從上文的推倒也已知 &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=\frac{k}{n}=p\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned} &amp;amp;\Rightarrow \ell(\beta)=klog\pi+(n-k)log(1-\pi)=k\beta+(n-k)log(1-e^\beta) \\ &amp;amp;\Rightarrow \ell^{\prime}(\beta)=k-\frac{(n-k)(e^\beta)}{1-e^\beta} \\ &amp;amp;\Rightarrow \ell^{\prime\prime}(\beta)=-(n-k)\frac{e^\beta(1-e^\beta)+e^{2\beta}}{(1-e^\beta)^2} \\ &amp;amp; \ell^{\prime\prime}(\beta)= -(n-k)\frac{e^\beta}{(1-e^\beta)^2}\\ &amp;amp;\Rightarrow S^2 = \left.-\frac{1}{\ell^{\prime\prime}(\beta)}\right\vert_{\beta=\hat{\beta}} = \frac{(1-e^{\hat\beta})^2}{(n-k)e^{\hat\beta}} \\ &amp;amp;\because \hat\beta=log(\hat\pi) \\ &amp;amp;\therefore e^{\hat\beta} = \frac{k}{n}\\ &amp;amp;\Rightarrow S^2=\frac{(1-\frac{k}{n})^2}{(n-k)\frac{k}{n}}=\frac{n-k}{nk}=\frac{1}{k}-\frac{1}{n}\\ &amp;amp; \Rightarrow S=\sqrt{\frac{1}{k}-\frac{1}{n}}\\ \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercise&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exercise&lt;/h3&gt;
+&lt;div id=&#34;q1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Q1&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;在&lt;span class=&#34;math inline&#34;&gt;\(n=100\)&lt;/span&gt;人中觀察到有&lt;span class=&#34;math inline&#34;&gt;\(k=40\)&lt;/span&gt;人患病，假設每個人只有患病，不患病兩個狀態，用二項分佈來模擬這個數據，&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 爲患病的概率。下面是 &lt;span class=&#34;math inline&#34;&gt;\(\pi \in [0.2,0.6]\)&lt;/span&gt; 區間的對數似然比方程曲線。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pi &amp;lt;- seq(0.2, 0.6, by=0.01)
+L &amp;lt;- (pi^40)*((1-pi)^60)
+Lmax &amp;lt;- rep(max(L), 41)
+LR &amp;lt;- L/Lmax
+logLR &amp;lt;- log(LR)
+
+plot(pi, logLR, type = &amp;quot;l&amp;quot;, ylim = c(-11, 0),yaxt=&amp;quot;n&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;logLR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+grid(NA, 5, lwd = 2) # add some horizontal grid on the background
+axis(2, at=seq(-12,0,2), las=2)
+title(main = &amp;quot;Figure 1. Binomial log-likelihood ratio&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;用一個二次方程來模擬上面的對數似然比曲線：&lt;span class=&#34;math inline&#34;&gt;\(f(\pi)=-\frac{(\pi-M)^2}{2S^2}\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(M=\hat\pi=\frac{k}{n}=0.4\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(S^2=\frac{p(1-p)}{n}=0.0024\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mai = c(1.2, 0.5, 1, 0.7))
+quad &amp;lt;- -(pi-0.4)^2/(2*0.0024)
+plot(pi, quad, type = &amp;quot;l&amp;quot;, ylim = c(-4, 0),yaxt=&amp;quot;n&amp;quot;, col=&amp;quot;red&amp;quot;,
+     frame.plot = FALSE, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
+lines(pi, logLR, col=&amp;quot;black&amp;quot;)
+grid(NA, 4, lwd = 1) # add some horizontal grid on the background
+axis(2, at=seq(-4,0,1), las=2)
+title(main = &amp;quot;Figure 2. Quadratic approximation\n of binomial log-likelihood ratio \n 40 out of 100 subjects&amp;quot;)
+abline(h=-1.92, lty=1, col=&amp;quot;red&amp;quot;)
+axis(4, at=-1.92, las=2)
+
+legend(x=0.27, y= -5.5 ,xpd = TRUE,  legend=c(&amp;quot;logLR&amp;quot;,&amp;quot;Quadratic&amp;quot;), bty = &amp;quot;n&amp;quot;,
+       col=c(&amp;quot;black&amp;quot;,&amp;quot;red&amp;quot;), lty=c(1,1), horiz = TRUE) #the legend is below the graph&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;q2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Q2&lt;/h4&gt;
+&lt;p&gt;依舊使用二項分佈數據來模擬，觀察不同的事件數量和樣本量對近似計算的影響。&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;類比上面的問題，用同樣的 &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.4\)&lt;/span&gt;，但是 &lt;span class=&#34;math inline&#34;&gt;\(n=10, k=4\)&lt;/span&gt; 時的圖形：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.4, n=1000, k=400\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.01, n=100, k=1\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意此圖中紅線提示的近似二次曲線，信賴區間的下限已經低於0，是無法接受的近似。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.01, n=1000, k=10\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.01, n=10000, k=100\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.99, n=100, k=99\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意此圖中紅線提示的近似二次曲線，信賴區間的上限已經大於1，和上面的 Figure 5. 一樣也是無法接受的近似。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;總結： 二次方程近似時，在二項分佈的情況下，隨着 &lt;span class=&#34;math inline&#34;&gt;\(n, k\)&lt;/span&gt; 增加，近似越理想。&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
