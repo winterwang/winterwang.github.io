@@ -11,6 +11,28 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>徒手打造一個假設檢驗</title>
+      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
+      <description>&lt;div id=&#34;-hypothesis-testing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;什麼是假設檢驗 Hypothesis testing&lt;/h3&gt;
+&lt;p&gt;一般來說，我們的&lt;strong&gt;假設&lt;/strong&gt;（或者叫&lt;strong&gt;假說&lt;/strong&gt;）是對與我們實驗觀察數據來自的總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作&lt;strong&gt;零假設&lt;/strong&gt;（或者叫&lt;strong&gt;原假設&lt;/strong&gt;），null hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;)；另一個是與之對應的（互補的）替代假設，althernative hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_1/H_A\)&lt;/span&gt;)。&lt;/p&gt;
+&lt;p&gt;例如，若 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是一個服從二項分佈的隨機離散變量 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(5, \theta)\)&lt;/span&gt;。可以考慮如下的零假設和替代假設：&lt;span class=&#34;math inline&#34;&gt;\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”）&lt;/li&gt;
+&lt;li&gt;從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：（這一段很繞）&lt;/p&gt;
+&lt;p&gt;上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;，複雜的 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt;。如此一來當零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 不被拒絕時，我們並不一定就接受之。因爲無證據證明 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt; 不等於有證據證明 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;。&lt;em&gt;&lt;strong&gt;(Absence of evidence is not evidence of absence).&lt;/strong&gt;&lt;/em&gt; 換句話說，無證據讓我們拒絕 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 本身並不成爲支持 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。&lt;/p&gt;
+&lt;p&gt;在樣本空間 sample space 中，決定了零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 &lt;span class=&#34;math inline&#34;&gt;\(\mathfrak{R}\)&lt;/span&gt; 來標記。&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
       <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
@@ -3006,76 +3028,6 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\
 P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;你是否選擇了改變主意了呢？&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>你會用概率論來賭博嗎？</title>
-      <link>https://winterwang.github.io/post/probability-gambling/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
-      <description>&lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/product/0471827223/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&#34;&gt;Quick Calculus: Short Manual of Self-instruction&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_070.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。&lt;/p&gt;
-&lt;p&gt;下面想介紹一下上週學習的概率的基礎問題。&lt;/p&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;首先是最基礎的&lt;strong&gt;三個概率的公理&lt;/strong&gt;：&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;對於任意事件 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，它發生的概率 &lt;span class=&#34;math inline&#34;&gt;\(P(A)\)&lt;/span&gt; 滿足這樣的不等式： &lt;span class=&#34;math inline&#34;&gt;\(0 \leqslant P(A) \leqslant 1\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\Omega)=1\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; 是全樣本空間 (total sample space)&lt;/li&gt;
-&lt;li&gt;對於互斥（相互獨立）的事件 &lt;span class=&#34;math inline&#34;&gt;\(A_1, A_2, \dots, A_n\)&lt;/span&gt; 有如下的等式關係： &lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;你是不是覺得上面三條公理都是&lt;strong&gt;廢話&lt;/strong&gt;。 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。&lt;code&gt;(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/venngram.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明：&lt;/h4&gt;
-&lt;p&gt;先考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2\)&lt;/span&gt; 是什麼（拆分成三個互斥事件）&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2 = (A_1\cap \bar{A_2})\cup(\bar{A_1}\cap A_2)\cup(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;運用上面的公理&lt;del&gt;2&lt;/del&gt; 3&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore P(A_1 \cup A_2) = P(A_1\cap \bar{A_2}) + P(\bar{A_1}\cap A_2) + P(A_1\cap A_2) \;\;\;\;\;\;(1)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;再考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1=(A_1\cap A_2)\cup(A_1\cap\bar{A_2})\)&lt;/span&gt; 繼續拆分成兩個互斥事件&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore P(A_1)=P(A_1\cap A_2)+P(A_1\cap\bar{A_2})\)&lt;/span&gt; 整理一下：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cap\bar{A_2})=P(A_1)-P(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;同理可得: &lt;span class=&#34;math inline&#34;&gt;\(P(\bar{A_1}\cap A_2)=P(A_2)-P(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;代入上面第(1)式可得：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1 \cup A_2) =P(A_1)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_2)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;=P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-conditional-probability&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;條件概率 Conditional probability&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)=\frac{P(A\cap S)}{P(S)}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S) = P(A|S)P(S)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-independence-&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;獨立 (independence) 的定義&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;兩個事件定義爲互爲獨立時 (&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; are said to be independent &lt;strong&gt;if and only if&lt;/strong&gt;) &lt;span class=&#34;math display&#34;&gt;\[P(A\cap B)=P(A)P(B)\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;因爲從條件概率的概念我們已知&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap B) = P(A|B)P(B)\)&lt;/span&gt; &lt;br&gt;所以&lt;span class=&#34;math inline&#34;&gt;\(P(A|B)=P(A)\)&lt;/span&gt; 即：事件 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; 無法提供事件 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的任何有效訊息 (&lt;strong&gt;&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 互相獨立&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;賭博問題&lt;/h2&gt;
-&lt;p&gt;終於來到本次話題的重點了。我要扣題了哦。語文老師快在此加分。&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_071.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
-&lt;p&gt;答案明天揭曉。&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     

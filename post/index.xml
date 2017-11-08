@@ -11,6 +11,28 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>徒手打造一個假設檢驗</title>
+      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
+      <description>&lt;div id=&#34;-hypothesis-testing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;什麼是假設檢驗 Hypothesis testing&lt;/h3&gt;
+&lt;p&gt;一般來說，我們的&lt;strong&gt;假設&lt;/strong&gt;（或者叫&lt;strong&gt;假說&lt;/strong&gt;）是對與我們實驗觀察數據來自的總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作&lt;strong&gt;零假設&lt;/strong&gt;（或者叫&lt;strong&gt;原假設&lt;/strong&gt;），null hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;)；另一個是與之對應的（互補的）替代假設，althernative hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_1/H_A\)&lt;/span&gt;)。&lt;/p&gt;
+&lt;p&gt;例如，若 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是一個服從二項分佈的隨機離散變量 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(5, \theta)\)&lt;/span&gt;。可以考慮如下的零假設和替代假設：&lt;span class=&#34;math inline&#34;&gt;\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”）&lt;/li&gt;
+&lt;li&gt;從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：（這一段很繞）&lt;/p&gt;
+&lt;p&gt;上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;，複雜的 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt;。如此一來當零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 不被拒絕時，我們並不一定就接受之。因爲無證據證明 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt; 不等於有證據證明 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;。&lt;em&gt;&lt;strong&gt;(Absence of evidence is not evidence of absence).&lt;/strong&gt;&lt;/em&gt; 換句話說，無證據讓我們拒絕 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 本身並不成爲支持 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。&lt;/p&gt;
+&lt;p&gt;在樣本空間 sample space 中，決定了零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 &lt;span class=&#34;math inline&#34;&gt;\(\mathfrak{R}\)&lt;/span&gt; 來標記。&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
       <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
@@ -3054,78 +3076,6 @@ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}
 &lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
 &lt;p&gt;答案明天揭曉。&lt;/p&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>萬衆期待，英國黑暗料理</title>
-      <link>https://winterwang.github.io/post/black-meal/</link>
-      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/black-meal/</guid>
-      <description>
-
-&lt;h3 id=&#34;雞腿不錯但是旁邊的配菜有點像中藥味的壓縮餅乾-2017-10-08-ihdining-room&#34;&gt;雞腿不錯但是旁邊的配菜有點像中藥味的壓縮餅乾 (2017-10-08 @IHdining room)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/953062095.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;哈利波特特約飲料-butterbeer-奶油啤酒-2017-10-07-warner-bros-studio-tour-london-https-www-wbstudiotour-co-uk&#34;&gt;哈利波特特約飲料 Butterbeer （奶油啤酒）(2017-10-07 @&lt;a href=&#34;https://www.wbstudiotour.co.uk/&#34; target=&#34;_blank&#34;&gt;Warner Bros. Studio Tour London&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/244977493.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;以爲是甜食的派結果裏面包着牛肉的奇怪料理-2017-10-07-ihdining-room&#34;&gt;以爲是甜食的派結果裏面包着牛肉的奇怪料理 (2017-10-07 @IHdining room)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1959199628.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;羅素廣場地鐵站門口的小攤賣的超划算味道很正的新鮮草莓-2017-10-05-russel-square-station-https-www-google-co-uk-maps-place-russell-square-station-51-523111-0-1265731-17z-data-3m1-4b1-4m5-3m4-1s0x48761b30d8fe5173-0xcf6c5a5908686210-8m2-3d51-523111-4d-0-1243844-hl-en&#34;&gt;羅素廣場地鐵站門口的小攤賣的超划算味道很正的新鮮草莓！(2017-10-05 @&lt;a href=&#34;https://www.google.co.uk/maps/place/Russell+Square+Station/@51.523111,-0.1265731,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b30d8fe5173:0xcf6c5a5908686210!8m2!3d51.523111!4d-0.1243844?hl=en&#34; target=&#34;_blank&#34;&gt;Russel Square Station&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1040178656.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;价值5镑的食堂素食色拉一盒-2017-10-02-lshtm食堂&#34;&gt;价值5镑的食堂素食色拉一盒 (2017-10-02@LSHTM食堂)&lt;/h3&gt;
-
-&lt;p&gt;新鮮，但是米飯有點夾生。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/41913438.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;味道超讚牛肉披薩-diavolo-2017-09-28-pizza-express-in-charlotte-street-https-www-pizzaexpress-com-charlotte-street-utm-source-google-utm-medium-places-utm-campaign-charlotte-street&#34;&gt;味道超讚牛肉披薩 Diavolo (2017-09-28 @&lt;a href=&#34;https://www.pizzaexpress.com/charlotte-street?utm_source=Google&amp;amp;utm_medium=Places&amp;amp;utm_campaign=charlotte-street&#34; target=&#34;_blank&#34;&gt;Pizza Express in Charlotte Street&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_20170928_184500.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;菜單上的說明是這樣滴：
-Hot spiced beef, pepperoni, mozzarella, tomato, green pepper, red onion and Tabasco, with your choice of hot green, Roquito or jalapeño peppers. Available as Classic or Romana&lt;/p&gt;
-
-&lt;h3 id=&#34;羊肉味的奶油夾心三明治-2017-09-24-store-street-espresso-http-www-storestespresso-co-uk&#34;&gt;羊肉味的奶油夾心三明治 (2017-09-24 @&lt;a href=&#34;http://www.storestespresso.co.uk/&#34; target=&#34;_blank&#34;&gt;Store Street Espresso&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;我點菜之前還故意跟收銀員小妹搭訕，讓她推薦一下今天的特色三明治。
-她推薦的這個 Goat Cheese Sandwich。 當然我一開始聽到這名字的時候就有點猶豫。但是想說既然是推薦的應該至少不會有什麼怪味道。結果事實證明了，我的想法是多麼的幼稚。&lt;/p&gt;
-
-&lt;p&gt;看這剛出爐的香噴噴的三明治，我咬下第一口就差點吐了。羊羶味在我喉嚨和鼻腔中打轉。後悔也來不及了。另外我同同時還點了 Espresso。就是特濃咖啡。口味超重！不能喝濃咖啡的一定要慎點！！！！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1388034054.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;酸酸的不知道怎麼形容的麵包-日期忘了-估計是剛到的第二個早晨的早餐-ihdining-room&#34;&gt;酸酸的不知道怎麼形容的麵包 (日期忘了，估計是剛到的第二個早晨的早餐@IHdining room)&lt;/h3&gt;
-
-&lt;p&gt;這麵包吃起來鬆鬆的，然額，麵的味道有些酸，又不像是過期食品，而像是本來就應該是這樣的味道的酸麵包。讓人不想再嘗試第二次。。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/890249589.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;美味海鮮飯-2017-09-24-ciao-bella-http-ciaobellarestaurant-co-uk&#34;&gt;美味海鮮飯 (2017-09-24 @&lt;a href=&#34;http://ciaobellarestaurant.co.uk/&#34; target=&#34;_blank&#34;&gt;Ciao Bella&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;感謝&lt;a href=&#34;https://kclpure.kcl.ac.uk/portal/li.yan.html&#34; target=&#34;_blank&#34;&gt;顏師兄&lt;/a&gt;帶領，終於找到了一家可以吃到正常大米的飯店了！且海鮮量超足！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/737031981.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;看起來很奇怪的整魚炸薯條&#34;&gt;看起來很奇怪的整魚炸薯條&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/656438330.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;外觀其實讓人沒什麼食慾的烤魚&#34;&gt;外觀其實讓人沒什麼食慾的烤魚&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1628745573.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;酸奶放在白煮雞胸肉上&#34;&gt;酸奶放在白煮雞胸肉上&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0185.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

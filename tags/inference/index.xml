@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 07 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/inference/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>徒手打造一個假設檢驗</title>
+      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
+      <description>&lt;div id=&#34;-hypothesis-testing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;什麼是假設檢驗 Hypothesis testing&lt;/h3&gt;
+&lt;p&gt;一般來說，我們的&lt;strong&gt;假設&lt;/strong&gt;（或者叫&lt;strong&gt;假說&lt;/strong&gt;）是對與我們實驗觀察數據來自的總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作&lt;strong&gt;零假設&lt;/strong&gt;（或者叫&lt;strong&gt;原假設&lt;/strong&gt;），null hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;)；另一個是與之對應的（互補的）替代假設，althernative hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_1/H_A\)&lt;/span&gt;)。&lt;/p&gt;
+&lt;p&gt;例如，若 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是一個服從二項分佈的隨機離散變量 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(5, \theta)\)&lt;/span&gt;。可以考慮如下的零假設和替代假設：&lt;span class=&#34;math inline&#34;&gt;\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”）&lt;/li&gt;
+&lt;li&gt;從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：（這一段很繞）&lt;/p&gt;
+&lt;p&gt;上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;，複雜的 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt;。如此一來當零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 不被拒絕時，我們並不一定就接受之。因爲無證據證明 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt; 不等於有證據證明 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;。&lt;em&gt;&lt;strong&gt;(Absence of evidence is not evidence of absence).&lt;/strong&gt;&lt;/em&gt; 換句話說，無證據讓我們拒絕 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 本身並不成爲支持 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。&lt;/p&gt;
+&lt;p&gt;在樣本空間 sample space 中，決定了零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 &lt;span class=&#34;math inline&#34;&gt;\(\mathfrak{R}\)&lt;/span&gt; 來標記。&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
