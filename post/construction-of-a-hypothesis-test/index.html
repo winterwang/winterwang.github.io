@@ -314,7 +314,7 @@ TRUTH
 <span class="math inline">\(\checkmark\)</span>
 </td>
 <td style="text-align:center;">
-Type I error
+<span class="math inline">\(\alpha\)</span> <br> Type I error
 </td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@ Type I error
 <span class="math inline">\(H_1\)</span> is true
 </td>
 <td style="text-align:center;">
-Type II error
+<span class="math inline">\(\beta\)</span> <br> Type II error
 </td>
 <td style="text-align:center;">
 <span class="math inline">\(\checkmark\)</span>
@@ -332,8 +332,33 @@ Type II error
 </table>
 <p>假如一個假設檢驗是關於總體參數 <span class="math inline">\(\theta\)</span> 的：</p>
 <p><span class="math display">\[H_0: \theta=\theta_0 \;vs.\; H_1: \theta=\theta_1 \]</span></p>
-<p>那麼這個檢驗的效能被定義爲當替代假設爲“真”時，拒絕零假設的概率：</p>
+<p>這個檢驗的效能被定義爲當替代假設爲“真”時，拒絕零假設的概率（能夠檢驗出有真實差別的能力）：</p>
 <p><strong>Power</strong> <span class="math inline">\(=Prob(\underline{x}\in\mathfrak{R}|H_1\; is\; true) = 1-Prob(Type \; II\; error)\)</span></p>
+<p>檢驗的顯著性水平用 <span class="math inline">\(\alpha\)</span> 來表示。<span class="math inline">\(\alpha\)</span> 的直觀意義就是，檢驗結果錯誤的拒絕了零假設 <span class="math inline">\(H_0\)</span>，接受了替代假設 <span class="math inline">\(H_1\)</span>，即假陽性的概率。</p>
+<p><span class="math inline">\(Prob(\underline{x}\in \mathfrak{R} |H_0 \;is\;true)=Prob(Type\;I\;error)\)</span></p>
+<div class="section level4">
+<h4>以二項分佈爲例</h4>
+<p>用本文開頭的例子： <span class="math inline">\(X\sim Bin(5,\theta)\)</span>。和我們建立的零假設和替代假設：<span class="math inline">\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)</span>：</p>
+<p>考慮兩種檢驗方法：</p>
+<ol style="list-style-type: decimal">
+<li>A 方法：當且僅當5次觀察都爲“成功”時才拒絕 <span class="math inline">\(H_0 (i.e.\; X=5)\)</span>。所以此時判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 爲 <span class="math inline">\(5\)</span>。檢驗效能爲：<span class="math inline">\(Prob(X=5|H_1 \;is\;true)=(\frac{2}{3})^5=0.1317\)</span>。顯著性水平爲 <span class="math inline">\(Prob(X=5|H_0\;is\;true)=(\frac{1}{2})^5=0.03125\)</span>。</li>
+<li>B 方法：當觀察到3,4,5次“成功”時，拒絕 <span class="math inline">\(H_0 (i.e.\; X=3,4,5)\)</span>。此時判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 爲 <span class="math inline">\(3,4,5\)</span>。檢驗效能爲：<span class="math inline">\(Prob(X=3,4,or\:5|H_1\;is\;ture)=\sum_{i=3}^5(\frac{2}{3})^i(\frac{1}{3})^{5-i}\approx0.7901\)</span>；顯著性水平爲：<span class="math inline">\(Prob(X=3,4,5|H_0\;is\;true)=\sum_{i=3}^5(\frac{1}{2})^i(\frac{1}{2})^{5-i}=0.5\)</span></li>
+</ol>
+<pre class="r"><code># the power in test B
+dbinom(3,5,2/3)+dbinom(4,5,2/3)+dbinom(5,5,2/3)</code></pre>
+<pre><code>## [1] 0.7901235</code></pre>
+<pre class="r"><code># the size in test B
+dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
+<pre><code>## [1] 0.5</code></pre>
+<p>比較上面兩種檢驗方法，可以看到，用B方法時，我們有更高的概率獲得假陽性結果（第一類錯誤，錯誤地拒絕 <span class="math inline">\(H_0\)</span>，接受 <span class="math inline">\(H_1\)</span>)，但是也有更高的檢驗效能（真陽性更高）。這個例子就說明了，試圖提高檢驗效能的同時，會提高犯第一類錯誤的概率。實際操作中我們常常將第一類錯誤的概率固定，例如 <span class="math inline">\(\alpha=0.05\)</span>，然後儘可能選擇效能最高的檢驗方法。</p>
+</div>
+</div>
+<div class="section level3">
+<h3>如何選擇要檢驗的統計量</h3>
+<p>在上面的二項分佈的實驗中，“成功的次數” 是我們感興趣的要檢驗的統計量。但也可能是第一次出現 “成功” 之前的實驗次數，或者，任何與假設相關的統計量。相似的，如果觀察不是離散變量而是連續的，可以拿來檢驗的指標就有很多，如均值，中位數，衆數，幾何平均值等。</p>
+<p>幸運地是，當明確了零假設和替代假設後，我們可以利用 <a href="https://en.wikipedia.org/wiki/Neyman%E2%80%93Pearson_lemma">Neyman-Pearson lemma</a> 公式來決定使用哪個統計量做檢驗<strong>最有效</strong>：</p>
+<p><span class="math display">\[=\frac{L_{H_0}}{L_{H_1}}\]</span></p>
+<p>這公式很直觀，因爲當數據更加支持 <span class="math inline">\(H_1\)</span> 時 (<span class="math inline">\(L_{H_1}\)</span> 更大)，<span class="math inline">\(H_0\)</span> 的可能性相對更小，就更應該被拒絕。而且，上面這個<strong>似然比公式</strong>（區分與之前討論的似然比，前面討論的似然比只是所有的似然和極大似然之間的比，此處的似然比只是純粹在探討兩個假設之間可能性之比。）由於似然比越小，他的對數越小，使用對數似然比常常更加直觀：<span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span>。</p>
 </div>
 
     </div>
