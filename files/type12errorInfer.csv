@@ -1,0 +1,3 @@
+TRUTH,,Accept H0,Reject H0
+TRUTH,H0 is true,correct,Type I error
+TRUTH,H1 is true,Type II error,correct

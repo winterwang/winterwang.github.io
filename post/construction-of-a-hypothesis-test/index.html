@@ -272,6 +272,69 @@
 <p>上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 <span class="math inline">\(H_0\)</span>，複雜的 <span class="math inline">\(H_1\)</span>。如此一來當零假設 <span class="math inline">\(H_0\)</span> 不被拒絕時，我們並不一定就接受之。因爲無證據證明 <span class="math inline">\(H_1\)</span> 不等於有證據證明 <span class="math inline">\(H_0\)</span>。<em><strong>(Absence of evidence is not evidence of absence).</strong></em> 換句話說，無證據讓我們拒絕 <span class="math inline">\(H_0\)</span> 本身並不成爲支持 <span class="math inline">\(H_0\)</span> 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。</p>
 <p>在樣本空間 sample space 中，決定了零假設 <span class="math inline">\(H_0\)</span> 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 <span class="math inline">\(\mathfrak{R}\)</span> 來標記。</p>
 </div>
+<div class="section level3">
+<h3>錯誤概率和效能方程</h3>
+<p>這一部分可以參考之前<a href="https://winterwang.github.io/post/sample-size-in-clinical-trial/">臨牀試驗樣本量計算</a>的部分。</p>
+<table class="table table-striped table-bordered" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 1: Definition of Type I and Type II error
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="2">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+SAMPLE
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(\underline{x} \notin \mathfrak{R}\)</span> Accept <span class="math inline">\(H_0\)</span>
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(\underline{x} \in \mathfrak{R}\)</span> Reject <span class="math inline">\(H_0\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;vertical-align: middle !important;" rowspan="2">
+TRUTH
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(H_0\)</span> is true
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\checkmark\)</span>
+</td>
+<td style="text-align:center;">
+Type I error
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<span class="math inline">\(H_1\)</span> is true
+</td>
+<td style="text-align:center;">
+Type II error
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\checkmark\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>假如一個假設檢驗是關於總體參數 <span class="math inline">\(\theta\)</span> 的：</p>
+<p><span class="math display">\[H_0: \theta=\theta_0 \;vs.\; H_1: \theta=\theta_1 \]</span></p>
+<p>那麼這個檢驗的效能被定義爲當替代假設爲“真”時，拒絕零假設的概率：</p>
+<p><strong>Power</strong> <span class="math inline">\(=Prob(\underline{x}\in\mathfrak{R}|H_1\; is\; true) = 1-Prob(Type \; II\; error)\)</span></p>
+</div>
 
     </div>
   </div>
