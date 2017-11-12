@@ -356,9 +356,84 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <div class="section level3">
 <h3>如何選擇要檢驗的統計量</h3>
 <p>在上面的二項分佈的實驗中，“成功的次數” 是我們感興趣的要檢驗的統計量。但也可能是第一次出現 “成功” 之前的實驗次數，或者，任何與假設相關的統計量。相似的，如果觀察不是離散變量而是連續的，可以拿來檢驗的指標就有很多，如均值，中位數，衆數，幾何平均值等。</p>
-<p>幸運地是，當明確了零假設和替代假設後，我們可以利用 <a href="https://en.wikipedia.org/wiki/Neyman%E2%80%93Pearson_lemma">Neyman-Pearson lemma</a> 公式來決定使用哪個統計量做檢驗<strong>最有效</strong>：</p>
+<p>幸運地是，當明確了零假設和替代假設後，我們可以利用 <a href="https://en.wikipedia.org/wiki/Neyman%E2%80%93Pearson_lemma">Neyman-Pearson lemma</a> 似然比公式<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>:</p>
+<p>來決定使用哪個統計量做檢驗<strong>最有效</strong>：</p>
 <p><span class="math display">\[=\frac{L_{H_0}}{L_{H_1}}\]</span></p>
-<p>這公式很直觀，因爲當數據更加支持 <span class="math inline">\(H_1\)</span> 時 (<span class="math inline">\(L_{H_1}\)</span> 更大)，<span class="math inline">\(H_0\)</span> 的可能性相對更小，就更應該被拒絕。而且，上面這個<strong>似然比公式</strong>（區分與<a href="https://winterwang.github.io/post/log-likelihood-ratio/">之前討論的似然比</a>，之前討論的似然比只是所有的似然和極大似然之間的比，此處的似然比只是純粹在探討兩個假設之間可能性之比。）由於似然比越小，他的對數越小，使用對數似然比常常更加直觀：<span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span>。</p>
+<p>這公式很直觀，因爲當數據更加支持 <span class="math inline">\(H_1\)</span> 時 (<span class="math inline">\(L_{H_1}\)</span> 更大)，<span class="math inline">\(H_0\)</span> 的可能性相對更小，就更應該被拒絕。而且，由於似然比越小，他的對數就越小，使用對數似然比常常更加直觀：<span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span>。</p>
+<p>那到底要多小才算小？這個進入拒絕域的閾值由兩個指標來決定：</p>
+<ol style="list-style-type: decimal">
+<li>被檢驗統計量的樣本分佈</li>
+<li>第一類錯誤概率 <span class="math inline">\(\alpha\)</span></li>
+</ol>
+<div class="section level4">
+<h4>以已知方差的正態分佈爲例</h4>
+<p>假如已知 <span class="math inline">\(X_1, \cdots, X_n \stackrel{i.i.d}{\sim} N(\mu, \sigma^2)\)</span> 而且方差 <span class="math inline">\(\sigma^2\)</span> 也是已知的。如果令 <span class="math inline">\(H_0: \mu=5\; ;H_1: \mu=10\)</span> 可以通過如下的方法找到我們需要的最佳檢驗統計量 <u>best statistic</u> 根據之前的<a href="https://winterwang.github.io/post/log-likelihood-ratio/">推導</a>可知正態分佈的似然方程如下：</p>
+<p><span class="math display">\[\ell(\mu|\underline{x}) =-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\]</span></p>
+<p>所以已知 <span class="math inline">\(\sigma^2\)</span> 時，我們的零假設和替代假設之間的對數似然比 <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span>:</p>
+<p><span class="math display">\[\ell_{H_0}-\ell_{H_1}=-\frac{1}{2\sigma^2}(\sum_{i=1}^n(x_i-5)^2-\sum_{i=1}^n(x_i-10)^2)\]</span></p>
+<p>然俄，我們只需要考慮隨着數據變化的部分，所以忽略掉不變的部分<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>：</p>
+<p><span class="math display">\[
+\begin{aligned} 
+\ell_{H_0}-\ell_{H_1} &amp; = -(\sum_{i=1}^n(x_i-5)^2-\sum_{i=i}^n(x_i-10)^2)\\
+                &amp; = 75n - 2\times(10-5)\sum_{i=1}^nx_i \\
+\end{aligned}
+\]</span></p>
+<p>所以只要樣本和 <span class="math inline">\(\sum_{i=1}^nx_i\)</span> <u>(最佳統計量 best statistic)</u> 足夠大，零假設就會被拒絕。而且注意到最佳統計量可以乘以任何常數用作新的最佳統計量。所以爲了方便我們就用樣本均數 <span class="math inline">\(\frac{1}{n}\sum_{i=1}^nx_i\)</span> 作此處的最佳統計量。所以此時，我們的最佳檢驗就是當樣本均值足夠大，超過某個閾值時，我們拒絕零假設。而且，樣本均值的樣本分佈是可以知道的，這樣就便於我們繼續計算下一步：拒絕域 （判別區域）。</p>
+</div>
+</div>
+<div id="-composite-hypotheses" class="section level3">
+<h3>複合假設 composite hypotheses</h3>
+<p>目前爲止我們討論的假設檢驗限制太多，實際操作時，我們多考慮類似如下的假設：</p>
+<ol style="list-style-type: decimal">
+<li>$H_0: =_0 ;v.s.; H_1: &gt;_0 $ [<strong>單側</strong>的替代假設]</li>
+<li><span class="math inline">\(H_0: \theta=\theta_0 \;v.s.\; H_1: \theta\neq\theta_0\)</span> [<strong>雙側</strong>的替代假設]</li>
+</ol>
+<p>所以我們面臨的問題是簡單假設中用於判定的最佳統計量，是否還適用？我們一一來看：</p>
+<div class="section level4">
+<h4>單側替代假設</h4>
+<p>之前的推導中我們發現，樣本均值越大，零假設和替代假設的對數似然比 <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> 越小。所以我們在樣本均值較大時，拒絕零假設，那麼就可以把原來使用的簡單替代假設 <span class="math inline">\(H_1: \mu=10\)</span> 擴展爲，任意大於 <span class="math inline">\(5\)</span> 的 <span class="math inline">\(\mu\)</span> ，即 <span class="math inline">\(\mu&gt;5\)</span> 。因爲大於 <span class="math inline">\(5\)</span> 的任何均值，都提供了更小的對數似然比，都會讓我們拒絕零假設。所以在正態分佈時，單側替代假設的最佳檢驗統計量還是<strong>樣本均值</strong>。</p>
+</div>
+<div class="section level4">
+<h4>雙側替代假設</h4>
+<p>雙側替代假設的情況下，我們無法繼續使用樣本均值作爲最佳統計量。因爲當我們想檢驗：<span class="math inline">\(H_0: \mu=5 \;v.s.\; H_1: \mu&lt;5\)</span> 時，必須獲得足夠小的樣本均值才能讓我們拒絕零假設。先按下不表。</p>
+</div>
+</div>
+<div id="-how-to-quantify-evidence-against-h_0" class="section level3">
+<h3>如何獲得反對零假設的證據 how to quantify evidence against <span class="math inline">\(H_0\)</span></h3>
+<p>重新再考慮符合假設：<span class="math inline">\(H_0: \theta=\theta_0\;v.s.\;H_1: \theta&gt;\theta_0\)</span> 假如存在一個總是可用的最佳檢驗統計量，用 <span class="math inline">\(T\)</span> 來標記 (或 <span class="math inline">\(T(x)\)</span>)， 這個統計量足夠大時，我們拒絕 <span class="math inline">\(H_0\)</span>。 別忘了我們還要定義判別區域：</p>
+<p><span class="math display">\[Prob(\underline{x}\in\mathfrak{R}|H_0)=\alpha\]</span></p>
+<p>如果我們知道 <span class="math inline">\(T\)</span> 的樣本分佈，我們很容易就可以使用一個閾值 <span class="math inline">\(c\)</span> 來定義這個判別區域：</p>
+<p><span class="math display">\[Prob(T\geqslant c|H_0)=\alpha\]</span></p>
+<p>更加正式的，我們定義判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 爲：</p>
+<p><span class="math display">\[{\underline{x}:Prob(T(x)\geqslant c|H_0)=\alpha}\]</span></p>
+<p>換句話說，當統計量 <span class="math inline">\(T&gt;c\)</span> 時，我們拒絕 <span class="math inline">\(H_0\)</span> 。如果先不考慮拒絕或不拒絕的二元判定，我們可以用一個連續型測量值來量化反對零假設 <span class="math inline">\(H_0\)</span> 的證據。再考慮從觀察數據中獲得的 <span class="math inline">\(T\)</span> ，即數據告訴我們的 <span class="math inline">\(t\)</span> 。所以，當 <span class="math inline">\(t\)</span> 值越大，說明觀察值相對零假設 <span class="math inline">\(H_0\)</span> 越往極端的方向走。因此我們可以用 <span class="math inline">\(T\)</span> 的樣本分佈來計算觀察值大大於等於這個閾值（極端值）時的概率：</p>
+<p><span class="math display">\[p=Prob(T\geqslant t|H_0)\]</span></p>
+<p>這個概率公式被稱爲是單側 <span class="math inline">\(p\)</span> 值 <strong>(one-side p-value)</strong>。單側 <span class="math inline">\(p\)</span> 值越小，統計量 <span class="math inline">\(T\)</span> 的樣本空間就有越小比例（越強）的證據支持零假設 <span class="math inline">\(H_0\)</span>。</p>
+<p>我們把這以思想用到假設檢驗中時，就可以認爲：</p>
+<p><span class="math display">\[p&lt;\alpha \Leftrightarrow t&gt;c\]</span></p>
+<p>所以用我們一貫的設定 <span class="math inline">\(\alpha=0.05\)</span>，所以如果計算獲得 <span class="math inline">\(p&lt;0.05\)</span> 我們就認爲獲得了足夠強的拒絕零假設 <span class="math inline">\(H_0\)</span> 的證據。</p>
+<div class="section level4">
+<h4>回到正態分佈的均值比較問題上來（單側替代假設）</h4>
+<p>繼續考慮 <span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim} N(\mu, \sigma^2)\)</span>，假設已知 <span class="math inline">\(\sigma^2=10\)</span>，我們要檢驗的是 <span class="math inline">\(H_0: \mu=5 \;v.s.\; \mu&gt;5\)</span></p>
+<ol style="list-style-type: decimal">
+<li>確定最佳檢驗統計量：已經證明過，單側替代假設的最佳檢驗統計量是<strong>樣本均值</strong>。</li>
+<li>確定該統計量的樣本分佈：已知樣本均數的樣本分佈是 <span class="math inline">\(\bar{X}\sim N(\mu,\sigma^2/n)\)</span> 。<br><span class="math inline">\(\Rightarrow Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)\)</span>，所以在 <span class="math inline">\(H_0\)</span> 條件下，<span class="math inline">\(\Rightarrow Z=\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}} \sim N(0,1)\)</span></li>
+<li>所以當一個檢驗的一類錯誤概率設定爲 <span class="math inline">\(\alpha=0.05\)</span> 時，我們使用的判別區域使統計量據落在該判別區域內的概率爲 <span class="math inline">\(0.05\)</span> ：<br> <span class="math inline">\(Prob(\bar{X}\geqslant c|H_0) = 0.05\)</span> <br> 已知在標準正態分佈時，<span class="math inline">\(Prob(Z\geqslant1.64)=0.05=Prob(\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}}\geqslant1.64)\)</span></li>
+<li>假設樣本量是 <span class="math inline">\(10\)</span>，那麼數據的判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 就是 <span class="math inline">\(\bar{X}\geqslant5.64\)</span>。</li>
+<li>假設觀察數據告訴我們，<span class="math inline">\(\bar{X}=7.76\)</span> 。那麼這一組觀察數據計算得到的統計量落在了判別區域內，所以說是有足夠的證據拒絕接受 <span class="math inline">\(H_0\)</span> 的。</li>
+<li>我們可以給這個觀察數據計算相應的單側 <span class="math inline">\(p\)</span> 值：<br> <span class="math inline">\(p=Prob(\bar{X}\geqslant7.76|H_0)=Prob(Z+5\geqslant7.76)\\=Prob(Z\geqslant2.76)=0.003\)</span> <br> 所以，數據告訴我們，在 <span class="math inline">\(H_0\)</span> 的前提下，觀察值出現的概率是 <span class="math inline">\(0.3\%\)</span> 。即，在無數次取樣實驗中，僅有 <span class="math inline">\(0.3\%\)</span> 的結果可以給出支持 <span class="math inline">\(H_0\)</span> 的證據。因此我們拒絕 <span class="math inline">\(H_0\)</span> 接受 <span class="math inline">\(H_1\)</span>。</li>
+</ol>
+</div>
+</div>
+<div id="-p-" class="section level3">
+<h3>雙側替代假設情況下，雙側 <span class="math inline">\(p\)</span> 值的定量方法</h3>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>區分與<a href="https://winterwang.github.io/post/log-likelihood-ratio/">之前討論的似然比</a>，之前討論的似然比只是所有的似然和極大似然之間的比，此處的似然比只是純粹在探討兩個假設之間可能性之比。<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Rememer that <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> is a random variable: the data varies <strong>each time</strong> we sample, with consequently varying relative support for the hypotheses, and so we are only interested in that part of <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> which depends on the results, the data, which vary with each sample (i.e. which contains the random part); the constant part provides no information on the relative support the data give to the hypotheses, so we ignore it.<a href="#fnref2">↩</a></p></li>
+</ol>
 </div>
 
     </div>
