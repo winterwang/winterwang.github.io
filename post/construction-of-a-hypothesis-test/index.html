@@ -373,7 +373,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <p><span class="math display">\[\ell_{H_0}-\ell_{H_1}=-\frac{1}{2\sigma^2}(\sum_{i=1}^n(x_i-5)^2-\sum_{i=1}^n(x_i-10)^2)\]</span></p>
 <p>然俄，我們只需要考慮隨着數據變化的部分，所以忽略掉不變的部分<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>：</p>
 <p><span class="math display">\[
-\begin{aligned} 
+\begin{aligned}
 \ell_{H_0}-\ell_{H_1} &amp; = -(\sum_{i=1}^n(x_i-5)^2-\sum_{i=i}^n(x_i-10)^2)\\
                 &amp; = 75n - 2\times(10-5)\sum_{i=1}^nx_i \\
 \end{aligned}
@@ -385,7 +385,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <h3>複合假設 composite hypotheses</h3>
 <p>目前爲止我們討論的假設檢驗限制太多，實際操作時，我們多考慮類似如下的假設：</p>
 <ol style="list-style-type: decimal">
-<li>$H_0: =_0 ;v.s.; H_1: &gt;_0 $ [<strong>單側</strong>的替代假設]</li>
+<li><span class="math inline">\(H_0: \theta=\theta_0 \;v.s.\; H_1: \theta&gt;\theta_0\)</span> [<strong>單側</strong>的替代假設]</li>
 <li><span class="math inline">\(H_0: \theta=\theta_0 \;v.s.\; H_1: \theta\neq\theta_0\)</span> [<strong>雙側</strong>的替代假設]</li>
 </ol>
 <p>所以我們面臨的問題是簡單假設中用於判定的最佳統計量，是否還適用？我們一一來看：</p>
@@ -405,7 +405,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <p>如果我們知道 <span class="math inline">\(T\)</span> 的樣本分佈，我們很容易就可以使用一個閾值 <span class="math inline">\(c\)</span> 來定義這個判別區域：</p>
 <p><span class="math display">\[Prob(T\geqslant c|H_0)=\alpha\]</span></p>
 <p>更加正式的，我們定義判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 爲：</p>
-<p><span class="math display">\[{\underline{x}:Prob(T(x)\geqslant c|H_0)=\alpha}\]</span></p>
+<p><span class="math display">\[\{\underline{x}:Prob(T(x)\geqslant c|H_0)=\alpha\}\]</span></p>
 <p>換句話說，當統計量 <span class="math inline">\(T&gt;c\)</span> 時，我們拒絕 <span class="math inline">\(H_0\)</span> 。如果先不考慮拒絕或不拒絕的二元判定，我們可以用一個連續型測量值來量化反對零假設 <span class="math inline">\(H_0\)</span> 的證據。再考慮從觀察數據中獲得的 <span class="math inline">\(T\)</span> ，即數據告訴我們的 <span class="math inline">\(t\)</span> 。所以，當 <span class="math inline">\(t\)</span> 值越大，說明觀察值相對零假設 <span class="math inline">\(H_0\)</span> 越往極端的方向走。因此我們可以用 <span class="math inline">\(T\)</span> 的樣本分佈來計算觀察值大大於等於這個閾值（極端值）時的概率：</p>
 <p><span class="math display">\[p=Prob(T\geqslant t|H_0)\]</span></p>
 <p>這個概率公式被稱爲是單側 <span class="math inline">\(p\)</span> 值 <strong>(one-side p-value)</strong>。單側 <span class="math inline">\(p\)</span> 值越小，統計量 <span class="math inline">\(T\)</span> 的樣本空間就有越小比例（越強）的證據支持零假設 <span class="math inline">\(H_0\)</span>。</p>
@@ -414,12 +414,12 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <p>所以用我們一貫的設定 <span class="math inline">\(\alpha=0.05\)</span>，所以如果計算獲得 <span class="math inline">\(p&lt;0.05\)</span> 我們就認爲獲得了足夠強的拒絕零假設 <span class="math inline">\(H_0\)</span> 的證據。</p>
 <div class="section level4">
 <h4>回到正態分佈的均值比較問題上來（單側替代假設）</h4>
-<p>繼續考慮 <span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim} N(\mu, \sigma^2)\)</span>，假設已知 <span class="math inline">\(\sigma^2=10\)</span>，我們要檢驗的是 <span class="math inline">\(H_0: \mu=5 \;v.s.\; \mu&gt;5\)</span></p>
+<p>繼續考慮 <span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim} N(\mu, \sigma^2)\)</span>，假設已知 <span class="math inline">\(\sigma^2=10\)</span>，我們要檢驗的是 <span class="math inline">\(H_0: \mu=5 \;v.s.\; H_1: \mu&gt;5\)</span></p>
 <ol style="list-style-type: decimal">
 <li>確定最佳檢驗統計量：已經證明過，單側替代假設的最佳檢驗統計量是<strong>樣本均值</strong>。</li>
 <li>確定該統計量的樣本分佈：已知樣本均數的樣本分佈是 <span class="math inline">\(\bar{X}\sim N(\mu,\sigma^2/n)\)</span> 。<br><span class="math inline">\(\Rightarrow Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)\)</span>，所以在 <span class="math inline">\(H_0\)</span> 條件下，<span class="math inline">\(\Rightarrow Z=\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}} \sim N(0,1)\)</span></li>
-<li>所以當一個檢驗的一類錯誤概率設定爲 <span class="math inline">\(\alpha=0.05\)</span> 時，我們使用的判別區域使統計量據落在該判別區域內的概率爲 <span class="math inline">\(0.05\)</span> ：<br> <span class="math inline">\(Prob(\bar{X}\geqslant c|H_0) = 0.05\)</span> <br> 已知在標準正態分佈時，<span class="math inline">\(Prob(Z\geqslant1.64)=0.05=Prob(\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}}\geqslant1.64)\)</span></li>
-<li>假設樣本量是 <span class="math inline">\(10\)</span>，那麼數據的判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 就是 <span class="math inline">\(\bar{X}\geqslant5.64\)</span>。</li>
+<li>所以當一個檢驗的一類錯誤概率設定爲 <span class="math inline">\(\alpha=0.05\)</span> 時，我們使用的判別區域使統計量據落在該判別區域內的概率爲 <span class="math inline">\(0.05\)</span>：<br> <span class="math inline">\(Prob(\bar{X}\geqslant c|H_0) = 0.05\)</span> <br> 已知在標準正態分佈時，<span class="math inline">\(Prob(Z\geqslant1.64)=0.05=Prob(\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}}\geqslant1.64)\)</span></li>
+<li>假設樣本量是 <span class="math inline">\(10\)</span>，那麼數據的判別區域 <span class="math inline">\(\mathfrak{R}\)</span> 就是 <span class="math inline">\(\bar{X}\geqslant6.64\)</span>。</li>
 <li>假設觀察數據告訴我們，<span class="math inline">\(\bar{X}=7.76\)</span> 。那麼這一組觀察數據計算得到的統計量落在了判別區域內，所以說是有足夠的證據拒絕接受 <span class="math inline">\(H_0\)</span> 的。</li>
 <li>我們可以給這個觀察數據計算相應的單側 <span class="math inline">\(p\)</span> 值：<br> <span class="math inline">\(p=Prob(\bar{X}\geqslant7.76|H_0)=Prob(Z+5\geqslant7.76)\\=Prob(Z\geqslant2.76)=0.003\)</span> <br> 所以，數據告訴我們，在 <span class="math inline">\(H_0\)</span> 的前提下，觀察值出現的概率是 <span class="math inline">\(0.3\%\)</span> 。即，在無數次取樣實驗中，僅有 <span class="math inline">\(0.3\%\)</span> 的結果可以給出支持 <span class="math inline">\(H_0\)</span> 的證據。因此我們拒絕 <span class="math inline">\(H_0\)</span> 接受 <span class="math inline">\(H_1\)</span>。</li>
 </ol>

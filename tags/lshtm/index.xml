@@ -130,7 +130,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\ell_{H_0}-\ell_{H_1}=-\frac{1}{2\sigma^2}(\sum_{i=1}^n(x_i-5)^2-\sum_{i=1}^n(x_i-10)^2)\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;然俄，我們只需要考慮隨着數據變化的部分，所以忽略掉不變的部分&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned} 
+\begin{aligned}
 \ell_{H_0}-\ell_{H_1} &amp;amp; = -(\sum_{i=1}^n(x_i-5)^2-\sum_{i=i}^n(x_i-10)^2)\\
                 &amp;amp; = 75n - 2\times(10-5)\sum_{i=1}^nx_i \\
 \end{aligned}
@@ -142,7 +142,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;複合假設 composite hypotheses&lt;/h3&gt;
 &lt;p&gt;目前爲止我們討論的假設檢驗限制太多，實際操作時，我們多考慮類似如下的假設：&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;$H_0: =_0 ;v.s.; H_1: &amp;gt;_0 $ [&lt;strong&gt;單側&lt;/strong&gt;的替代假設]&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_0: \theta=\theta_0 \;v.s.\; H_1: \theta&amp;gt;\theta_0\)&lt;/span&gt; [&lt;strong&gt;單側&lt;/strong&gt;的替代假設]&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(H_0: \theta=\theta_0 \;v.s.\; H_1: \theta\neq\theta_0\)&lt;/span&gt; [&lt;strong&gt;雙側&lt;/strong&gt;的替代假設]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;所以我們面臨的問題是簡單假設中用於判定的最佳統計量，是否還適用？我們一一來看：&lt;/p&gt;
@@ -162,7 +162,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;如果我們知道 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 的樣本分佈，我們很容易就可以使用一個閾值 &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 來定義這個判別區域：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(T\geqslant c|H_0)=\alpha\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;更加正式的，我們定義判別區域 &lt;span class=&#34;math inline&#34;&gt;\(\mathfrak{R}\)&lt;/span&gt; 爲：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[{\underline{x}:Prob(T(x)\geqslant c|H_0)=\alpha}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\{\underline{x}:Prob(T(x)\geqslant c|H_0)=\alpha\}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;換句話說，當統計量 &lt;span class=&#34;math inline&#34;&gt;\(T&amp;gt;c\)&lt;/span&gt; 時，我們拒絕 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 。如果先不考慮拒絕或不拒絕的二元判定，我們可以用一個連續型測量值來量化反對零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 的證據。再考慮從觀察數據中獲得的 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; ，即數據告訴我們的 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 。所以，當 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 值越大，說明觀察值相對零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 越往極端的方向走。因此我們可以用 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 的樣本分佈來計算觀察值大大於等於這個閾值（極端值）時的概率：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[p=Prob(T\geqslant t|H_0)\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;這個概率公式被稱爲是單側 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 值 &lt;strong&gt;(one-side p-value)&lt;/strong&gt;。單側 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 值越小，統計量 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 的樣本空間就有越小比例（越強）的證據支持零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;。&lt;/p&gt;
@@ -171,12 +171,12 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;所以用我們一貫的設定 &lt;span class=&#34;math inline&#34;&gt;\(\alpha=0.05\)&lt;/span&gt;，所以如果計算獲得 &lt;span class=&#34;math inline&#34;&gt;\(p&amp;lt;0.05\)&lt;/span&gt; 我們就認爲獲得了足夠強的拒絕零假設 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 的證據。&lt;/p&gt;
 &lt;div class=&#34;section level4&#34;&gt;
 &lt;h4&gt;回到正態分佈的均值比較問題上來（單側替代假設）&lt;/h4&gt;
-&lt;p&gt;繼續考慮 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim} N(\mu, \sigma^2)\)&lt;/span&gt;，假設已知 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2=10\)&lt;/span&gt;，我們要檢驗的是 &lt;span class=&#34;math inline&#34;&gt;\(H_0: \mu=5 \;v.s.\; \mu&amp;gt;5\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;繼續考慮 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim} N(\mu, \sigma^2)\)&lt;/span&gt;，假設已知 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2=10\)&lt;/span&gt;，我們要檢驗的是 &lt;span class=&#34;math inline&#34;&gt;\(H_0: \mu=5 \;v.s.\; H_1: \mu&amp;gt;5\)&lt;/span&gt;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;確定最佳檢驗統計量：已經證明過，單側替代假設的最佳檢驗統計量是&lt;strong&gt;樣本均值&lt;/strong&gt;。&lt;/li&gt;
 &lt;li&gt;確定該統計量的樣本分佈：已知樣本均數的樣本分佈是 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\sim N(\mu,\sigma^2/n)\)&lt;/span&gt; 。&lt;br&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)\)&lt;/span&gt;，所以在 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 條件下，&lt;span class=&#34;math inline&#34;&gt;\(\Rightarrow Z=\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}} \sim N(0,1)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;所以當一個檢驗的一類錯誤概率設定爲 &lt;span class=&#34;math inline&#34;&gt;\(\alpha=0.05\)&lt;/span&gt; 時，我們使用的判別區域使統計量據落在該判別區域內的概率爲 &lt;span class=&#34;math inline&#34;&gt;\(0.05\)&lt;/span&gt; ：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(Prob(\bar{X}\geqslant c|H_0) = 0.05\)&lt;/span&gt; &lt;br&gt; 已知在標準正態分佈時，&lt;span class=&#34;math inline&#34;&gt;\(Prob(Z\geqslant1.64)=0.05=Prob(\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}}\geqslant1.64)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;假設樣本量是 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;，那麼數據的判別區域 &lt;span class=&#34;math inline&#34;&gt;\(\mathfrak{R}\)&lt;/span&gt; 就是 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\geqslant5.64\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;所以當一個檢驗的一類錯誤概率設定爲 &lt;span class=&#34;math inline&#34;&gt;\(\alpha=0.05\)&lt;/span&gt; 時，我們使用的判別區域使統計量據落在該判別區域內的概率爲 &lt;span class=&#34;math inline&#34;&gt;\(0.05\)&lt;/span&gt;：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(Prob(\bar{X}\geqslant c|H_0) = 0.05\)&lt;/span&gt; &lt;br&gt; 已知在標準正態分佈時，&lt;span class=&#34;math inline&#34;&gt;\(Prob(Z\geqslant1.64)=0.05=Prob(\frac{\bar{X}-5}{\sqrt{10}/\sqrt{n}}\geqslant1.64)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;假設樣本量是 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;，那麼數據的判別區域 &lt;span class=&#34;math inline&#34;&gt;\(\mathfrak{R}\)&lt;/span&gt; 就是 &lt;span class=&#34;math inline&#34;&gt;\(\bar{X}\geqslant6.64\)&lt;/span&gt;。&lt;/li&gt;
 &lt;li&gt;假設觀察數據告訴我們，&lt;span class=&#34;math inline&#34;&gt;\(\bar{X}=7.76\)&lt;/span&gt; 。那麼這一組觀察數據計算得到的統計量落在了判別區域內，所以說是有足夠的證據拒絕接受 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 的。&lt;/li&gt;
 &lt;li&gt;我們可以給這個觀察數據計算相應的單側 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 值：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(p=Prob(\bar{X}\geqslant7.76|H_0)=Prob(Z+5\geqslant7.76)\\=Prob(Z\geqslant2.76)=0.003\)&lt;/span&gt; &lt;br&gt; 所以，數據告訴我們，在 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 的前提下，觀察值出現的概率是 &lt;span class=&#34;math inline&#34;&gt;\(0.3\%\)&lt;/span&gt; 。即，在無數次取樣實驗中，僅有 &lt;span class=&#34;math inline&#34;&gt;\(0.3\%\)&lt;/span&gt; 的結果可以給出支持 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 的證據。因此我們拒絕 &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; 接受 &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt;。&lt;/li&gt;
 &lt;/ol&gt;
