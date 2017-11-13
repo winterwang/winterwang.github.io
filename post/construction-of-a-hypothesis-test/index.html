@@ -427,6 +427,23 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 </div>
 <div id="-p-" class="section level3">
 <h3>雙側替代假設情況下，雙側 <span class="math inline">\(p\)</span> 值的定量方法</h3>
+<p><img src="/post/2017-11-08-construction-of-a-hypothesis-test_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
+<p>此處故意使用一個左右不對稱的概率密度分佈來解釋。</p>
+<p>現在的替代假設是雙側的：</p>
+<p><span class="math display">\[H_0: \theta=\theta_0 \;v.s.\; H_1:  \theta\neq\theta_0\]</span></p>
+<p>正常來說，雙側的假設檢驗應該分成兩個單側檢驗。即：</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(H_1: \theta&gt;\theta_0\)</span>;</li>
+<li><span class="math inline">\(H_1: \theta&lt;\theta_0\)</span>.</li>
+</ol>
+<p>每個單側檢驗都有自己的最佳檢驗統計量。令 <span class="math inline">\(T\)</span> 是 1. 的最佳檢驗統計量，該統計量的樣本分佈如上圖所示（左右不對稱）。假如觀察數據給出的統計量爲 <span class="math inline">\(t2\)</span>，那麼在概率上反對零假設的情況可以有兩種：</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(T\geqslant t2\)</span> 其中， <span class="math inline">\(Prob(T\geqslant t2|H_0)=p1\)</span>;</li>
+<li><span class="math inline">\(T\leqslant t1\)</span> 其中， <span class="math inline">\(Prob(T\leqslant t1|H_0) =p1\)</span></li>
+</ol>
+<p>所以概率密度分佈兩側的距離可以不對稱，但是只要左右兩側概率密度分佈的面積(<span class="math inline">\(=p1\)</span>)相同，那麼就可以直接認爲，雙側 <span class="math inline">\(p\)</span> 值是兩側面積之和 (<span class="math inline">\(p=2\times p1\)</span>)，且觀察數據提供的統計量落在這兩個面積內的話，都足以提供證據拒絕零假設 <span class="math inline">\(H_0\)</span>。</p>
+<p>回到上文中單側 <span class="math inline">\(p\)</span> 值爲<span class="math inline">\(0.003\)</span>，故雙側 <span class="math inline">\(p\)</span> 值就是它的兩倍：</p>
+<p><span class="math inline">\(p1=Prob(\bar{X}\geqslant7.76|H_0)=Prob(Z+5\geqslant7.76)\\=Prob(Z\geqslant2.76)=0.003\\ \Rightarrow p=2\times p1=0.006\)</span></p>
 </div>
 <div class="footnotes">
 <hr />
