@@ -7,8 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/project/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
+      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;We are drowning in information and starving for knowledge.
+Click the graph and you can learn what I learnt.&lt;/p&gt;
+
+&lt;p&gt;&amp;mdash; Chaochen Wang in London 2017.09&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/cover.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Aichi Workers&#39; Cohort Study | 愛知職域コホート研究</title>
