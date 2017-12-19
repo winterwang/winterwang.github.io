@@ -205,7 +205,7 @@
     
     <url>
       <loc>https://winterwang.github.io/talk/example-talk/</loc>
-      <lastmod>2017-08-19T00:00:00+00:00</lastmod>
+      <lastmod>2017-08-19T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -524,14 +524,6 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/</loc>
-      <lastmod>2017-02-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>https://winterwang.github.io/project/aichi/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
     </url>
@@ -612,7 +604,23 @@
     
     
     <url>
+      <loc>https://winterwang.github.io/tags/academic/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://winterwang.github.io/slides/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://winterwang.github.io/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1303,6 +1311,15 @@
     
     <url>
       <loc>https://winterwang.github.io/tags/60s-science/</loc>
+      <lastmod>2016-10-13T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://winterwang.github.io/tags/60s-science/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1338,8 +1355,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/basic-mathematics/</loc>
-      <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+      <loc>https://winterwang.github.io/tags/bbc/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1347,8 +1364,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/bbc/</loc>
-      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+      <loc>https://winterwang.github.io/tags/basic-mathematics/</loc>
+      <lastmod>2017-10-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1508,6 +1525,15 @@
     
     
     <url>
+      <loc>https://winterwang.github.io/tags/lshtm/</loc>
+      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://winterwang.github.io/tags/leaflet/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -1553,15 +1579,6 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/lshtm/</loc>
-      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>https://winterwang.github.io/tags/mathjax/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -1572,7 +1589,7 @@
     
     <url>
       <loc>https://winterwang.github.io/tags/medical-statistics/</loc>
-      <lastmod>2017-11-14T00:00:00+00:00</lastmod>
+      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1580,7 +1597,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/posts/</loc>
+      <loc>https://winterwang.github.io/tags/medical-statistics/</loc>
+      <lastmod>2017-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1642,8 +1660,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/reading/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+      <loc>https://winterwang.github.io/tags/rmaps/</loc>
+      <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1651,8 +1669,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/rmaps/</loc>
-      <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+      <loc>https://winterwang.github.io/tags/reading/</loc>
+      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -1697,7 +1715,7 @@
     
     <url>
       <loc>https://winterwang.github.io/tags/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

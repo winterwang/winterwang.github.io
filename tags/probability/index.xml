@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Probability on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/probability/</link>
+    <link>/tags/probability/</link>
     <description>Recent content in Probability on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <link>/post/central-limit-theorem-application/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <guid>/post/central-limit-theorem-application/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
 &lt;ul&gt;
@@ -66,7 +66,7 @@ P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
 1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -95,7 +95,7 @@ pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/p
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
 pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;從上面兩個例題也能看出，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 越小，正態分佈模擬的誤差就越大。&lt;/p&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X \sim Poisson(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X\leqslant20)\)&lt;/span&gt;。&lt;/li&gt;
@@ -118,7 +118,7 @@ ppois(20, lambda=30)&lt;/code&gt;&lt;/pre&gt;
 pnorm((20.5-30)/sqrt(30))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.04141871&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;這兩個其實有些小差距。不過看下圖，其模擬還是很到位的。只是正態分佈的面積明顯確實比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X_1+X_2\leqslant40)\)&lt;/span&gt;。&lt;/li&gt;
 &lt;/ol&gt;
@@ -142,7 +142,7 @@ ppois(40, lambda=60)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
 pnorm((40.5-60)/sqrt(60))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.005910569&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt; 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt; 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -262,10 +262,10 @@ Var(length_6 | length_2) &amp;amp;= \sigma_6^2(1-\rho_{6,2}^2) \\
     
     <item>
       <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
+      <link>/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
+      <guid>/post/normal-distribution/</guid>
       <description>&lt;div id=&#34;-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;概率密度曲線 probability density function， PDF&lt;/h3&gt;
 &lt;ul&gt;
@@ -292,7 +292,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
   stat_function(fun = dnorm,
                 xlim = c(-1.3,0.4),
                 geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;： &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\int_{-\infty}^\infty xf(x)dx\)&lt;/span&gt;&lt;/li&gt;
@@ -324,7 +324,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
 &lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
 &lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
@@ -337,20 +337,20 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
     
     <item>
       <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
+      <link>/post/probability-gambling-answers/</link>
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
+      <guid>/post/probability-gambling-answers/</guid>
       <description>&lt;p&gt;前情提要：&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_071.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_071.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;答案是：必須改變主意才能提高中獎概率。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_072.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_072.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;解說一下：&lt;/p&gt;
@@ -368,15 +368,15 @@ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}
     
     <item>
       <title>你會用概率論來賭博嗎？</title>
-      <link>https://winterwang.github.io/post/probability-gambling/</link>
+      <link>/post/probability-gambling/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
+      <guid>/post/probability-gambling/</guid>
       <description>&lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/product/0471827223/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&#34;&gt;Quick Calculus: Short Manual of Self-instruction&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_070.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_070.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。&lt;/p&gt;
@@ -392,7 +392,7 @@ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}
 &lt;p&gt;然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/venngram.png&#34; /&gt;
+&lt;img src=&#34;/img/venngram.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;div class=&#34;section level4&#34;&gt;
@@ -427,7 +427,7 @@ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}
 &lt;h2&gt;賭博問題&lt;/h2&gt;
 &lt;p&gt;終於來到本次話題的重點了。我要扣題了哦。語文老師快在此加分。&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_071.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_071.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;

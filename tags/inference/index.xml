@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inference on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/inference/</link>
+    <link>/tags/inference/</link>
     <description>Recent content in Inference on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
+      <link>/post/construction-of-a-hypothesis-test/</link>
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
+      <guid>/post/construction-of-a-hypothesis-test/</guid>
       <description>&lt;div id=&#34;-hypothesis-testing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;什麼是假設檢驗 Hypothesis testing&lt;/h3&gt;
 &lt;p&gt;一般來說，我們的&lt;strong&gt;假設&lt;/strong&gt;（或者叫&lt;strong&gt;假說&lt;/strong&gt;）是對與我們實驗觀察數據來自的總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作&lt;strong&gt;零假設&lt;/strong&gt;（或者叫&lt;strong&gt;原假設&lt;/strong&gt;），null hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;)；另一個是與之對應的（互補的）替代假設，althernative hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_1/H_A\)&lt;/span&gt;)。&lt;/p&gt;
@@ -184,7 +184,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;-p-&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;雙側替代假設情況下，雙側 &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; 值的定量方法&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-08-construction-of-a-hypothesis-test_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-08-construction-of-a-hypothesis-test_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;此處故意使用一個左右不對稱的概率密度分佈來解釋。&lt;/p&gt;
 &lt;p&gt;現在的替代假設是雙側的：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[H_0: \theta=\theta_0 \;v.s.\; H_1:  \theta\neq\theta_0\]&lt;/span&gt;&lt;/p&gt;
@@ -214,10 +214,10 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
+      <link>/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
+      <guid>/post/approximate-log-likelihood-ratios/</guid>
       <description>&lt;p&gt;爲什麼要用二次方程近似對數似然比方程？&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (&lt;a href=&#34;https://winterwang.github.io/post/log-likelihood-ratio/&#34;&gt;binomial example&lt;/a&gt;)。&lt;/li&gt;
@@ -377,7 +377,7 @@ plot(pi, logLR, type = &amp;quot;l&amp;quot;, ylim = c(-11, 0),yaxt=&amp;quot;n&
 grid(NA, 5, lwd = 2) # add some horizontal grid on the background
 axis(2, at=seq(-12,0,2), las=2)
 title(main = &amp;quot;Figure 1. Binomial log-likelihood ratio&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;用一個二次方程來模擬上面的對數似然比曲線：&lt;span class=&#34;math inline&#34;&gt;\(f(\pi)=-\frac{(\pi-M)^2}{2S^2}\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(M=\hat\pi=\frac{k}{n}=0.4\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(S^2=\frac{p(1-p)}{n}=0.0024\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -394,7 +394,7 @@ axis(4, at=-1.92, las=2)
 
 legend(x=0.27, y= -5.5 ,xpd = TRUE,  legend=c(&amp;quot;logLR&amp;quot;,&amp;quot;Quadratic&amp;quot;), bty = &amp;quot;n&amp;quot;,
        col=c(&amp;quot;black&amp;quot;,&amp;quot;red&amp;quot;), lty=c(1,1), horiz = TRUE) #the legend is below the graph&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q2&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Q2&lt;/h4&gt;
@@ -402,29 +402,29 @@ legend(x=0.27, y= -5.5 ,xpd = TRUE,  legend=c(&amp;quot;logLR&amp;quot;,&amp;quo
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;類比上面的問題，用同樣的 &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.4\)&lt;/span&gt;，但是 &lt;span class=&#34;math inline&#34;&gt;\(n=10, k=4\)&lt;/span&gt; 時的圖形：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.4, n=1000, k=400\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.01, n=100, k=1\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;注意此圖中紅線提示的近似二次曲線，信賴區間的下限已經低於0，是無法接受的近似。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.01, n=1000, k=10\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.01, n=10000, k=100\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.99, n=100, k=99\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;注意此圖中紅線提示的近似二次曲線，信賴區間的上限已經大於1，和上面的 Figure 5. 一樣也是無法接受的近似。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-07-approximate-log-likelihood-ratios_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;總結： 二次方程近似時，在二項分佈的情況下，隨着 &lt;span class=&#34;math inline&#34;&gt;\(n, k\)&lt;/span&gt; 增加，近似越理想。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -433,10 +433,10 @@ legend(x=0.27, y= -5.5 ,xpd = TRUE,  legend=c(&amp;quot;logLR&amp;quot;,&amp;quo
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
-      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <link>/post/log-likelihood-ratio/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <guid>/post/log-likelihood-ratio/</guid>
       <description>&lt;div id=&#34;-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;對數似然比 Log-likelihood ratio&lt;/h3&gt;
 &lt;p&gt;對數似然比的想法來自於將對數似然方程圖形的 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的&lt;strong&gt;對數似然比 (log-likelihood ratio)&lt;/strong&gt; 來獲得：&lt;/p&gt;
@@ -463,7 +463,7 @@ axis(2, at=seq(-10, 0, 2), las=2)
 title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
 abline(h=0, lty=2)
 segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;section level4&#34;&gt;
 &lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
 &lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
@@ -550,7 +550,7 @@ text(0.9, -1, &amp;quot;-1.92&amp;quot;)
 arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
 arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
 title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;section level4&#34;&gt;
@@ -577,7 +577,7 @@ note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&#34;section level4&#34;&gt;
 &lt;h4&gt;解&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  L(\pi|3) &amp;amp;= \binom{10}{3}\pi^3(1-\pi)^{10-3} \\  omitting\;&amp;amp;terms\;not\;in\;\mu \\  \Rightarrow \ell(\pi|3) &amp;amp;= log[\pi^3(1-\pi)^7] \\  &amp;amp;= 3log\pi+7log(1-\pi)\\  \Rightarrow \ell^\prime(\pi|3)&amp;amp;= \frac{3}{\pi}-\frac{7}{1-\pi} \\  let \; \ell^\prime&amp;amp; =0\\  &amp;amp;\frac{3}{\pi}-\frac{7}{1-\pi} = 0 \\  &amp;amp;\frac{3-10\pi}{\pi(1-\pi)} = 0 \\  \Rightarrow MLE &amp;amp;= \hat\pi = 0.3 \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;計算似然比，並作圖，注意方程圖形未變，&lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸的變化；取對數似然比，並作圖&lt;/li&gt;
 &lt;/ol&gt;
@@ -589,7 +589,7 @@ note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 grid(NA, 5, lwd = 1)
 axis(2, at=seq(0,1,0.2), las=2)
 title(main = &amp;quot;Binomial likelihood ratio function\n 3 out of 10 subjects&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;logLR &amp;lt;- log(L/max(L))
 plot(pi, logLR, type = &amp;quot;l&amp;quot;, ylim = c(-4, 0),yaxt=&amp;quot;n&amp;quot;, col=&amp;quot;darkblue&amp;quot;,
      frame.plot = FALSE, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
@@ -598,14 +598,14 @@ axis(2, at=seq(-4,0,1), las=2)
 title(main = &amp;quot;Binomial log-likelihood ratio function\n 3 out of 10 subjects&amp;quot;)
 abline(h=-1.92, lty=1, col=&amp;quot;red&amp;quot;)
 axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q2&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Q2&lt;/h4&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;與上面用同樣的模型，但是觀察人數變爲 &lt;span class=&#34;math inline&#34;&gt;\(100\)&lt;/span&gt; 人 患病人數爲 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt; 人，試作對數似然比方程之圖形，與上圖對比：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;可以看出，兩組數據的 MLE 都是一致的， &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.3\)&lt;/span&gt;，但是對數似然比方程圖形在 樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n=100\)&lt;/span&gt; 時比 &lt;span class=&#34;math inline&#34;&gt;\(n=10\)&lt;/span&gt; 時窄很多，由此產生的似然比信賴區間也就窄很多（精確很多）。所以對數似然比方程的曲率（二階導數），反映了觀察獲得數據提供的對總體參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 推斷過程中的信息量。而且當樣本量較大時，對數似然比方程也更加接近左右對稱的二次方程曲線。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q3&#34; class=&#34;section level4&#34;&gt;
@@ -615,7 +615,7 @@ axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;解&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  d = 8, \;p &amp;amp;= 160\; person\cdot year \\  \Rightarrow D\sim Poi(\mu &amp;amp;=\lambda p) \\  L(\lambda|data) &amp;amp;= Prob(D=d=8) \\  &amp;amp;= e^{-\mu}\frac{\mu^d}{d!} \\  &amp;amp;= e^{-\lambda p}\frac{\lambda^d p^d}{d!} \\  omitting&amp;amp;\;terms\;not\;in\;\lambda \\  &amp;amp;= e^{-\lambda p}\lambda^d \\ \Rightarrow \ell(\lambda|data)&amp;amp;= log(e^{-\lambda p}\lambda^d) \\  &amp;amp;= d\cdot log(\lambda)-\lambda p \\  &amp;amp; = 8\times log(\lambda) - 160\times\lambda \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
-&lt;img src=&#34;https://winterwang.github.io/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
 &lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1366,10 +1366,10 @@ LogLR
     
     <item>
       <title>似然非然 Likelihood</title>
-      <link>https://winterwang.github.io/post/likelihood/</link>
+      <link>/post/likelihood/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/likelihood/</guid>
+      <guid>/post/likelihood/</guid>
       <description>&lt;div id=&#34;-vs.probability-vs.inference&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;概率 vs. 推斷/Probability vs. Inference&lt;/h3&gt;
 &lt;p&gt;在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 &lt;span class=&#34;math inline&#34;&gt;\(0.5\; Prob(coin\;landing\;heads)=0.5\)&lt;/span&gt;。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。&lt;/p&gt;
@@ -1479,7 +1479,7 @@ plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,0.3), ylab = &amp;quot;L(\U0
 title(&amp;quot;Figure 1. Binomial Likelihood&amp;quot;)
 abline(h=0.251, lty=2)
 abline(v=0.4, lty=2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;從圖形上我們也能確認，&lt;span class=&#34;math inline&#34;&gt;\(\pi=0.4\)&lt;/span&gt; 時能夠讓這個似然方程取得最大值。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;section level3&#34;&gt;
@@ -1711,7 +1711,7 @@ y &amp;lt;- (x-1)^2-5
 plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(-5,0-1), ylab = &amp;quot;L(\U03B8)&amp;quot;, xlab = &amp;quot;\U03B8&amp;quot;)
 title(&amp;quot;Figure 2. Likelihood function with \n a limited domain&amp;quot;)
 abline(v=3, lty=2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-11-02-likelihood_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;-lthetadata--ellthetadata-&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;證明：當 &lt;span class=&#34;math inline&#34;&gt;\(L(\theta|data)\)&lt;/span&gt; 取最大值時，該方程的對數方程 &lt;span class=&#34;math inline&#34;&gt;\(\ell(\theta|data)\)&lt;/span&gt; 也是最大值：&lt;/h4&gt;
 &lt;p&gt;如果似然方程是連續可導，只有一個最大值，且可以二次求導，假設 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}\)&lt;/span&gt; 使該方程取最大值，那麼：&lt;/p&gt;
@@ -1779,10 +1779,10 @@ abline(v=3, lty=2)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>卡方分佈 chi square distribution</title>
-      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
+      <link>/post/chi-square-distribution/</link>
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
+      <guid>/post/chi-square-distribution/</guid>
       <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;卡方分佈的期望和方差的證明：&lt;/h3&gt;
 &lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\sim N(0,1)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(X^2\sim \mathcal{X}_1^2\)&lt;/span&gt;&lt;/p&gt;
@@ -1900,10 +1900,10 @@ E(X_1^4) &amp;amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}
     
     <item>
       <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
+      <link>/post/frequentist-statistical-inference02/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
+      <guid>/post/frequentist-statistical-inference02/</guid>
       <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;估計量和他們的樣本分佈&lt;/h3&gt;
 &lt;p&gt;例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。&lt;/p&gt;
@@ -1949,7 +1949,7 @@ Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L=\bar{Y}-c \Rightarrow Prob(L&amp;gt;\mu)=0.025 \\
   U=\bar{Y}+c \Rightarrow Prob(U&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_082.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_082.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;接下來就是推倒（故意的）&lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 的過程啦：&lt;/p&gt;
@@ -2098,10 +2098,10 @@ Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
+      <link>/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
+      <guid>/post/frequentist-statistical-inference01/</guid>
       <description>&lt;div id=&#34;-population-and-sample&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;人羣與樣本 (population and sample)&lt;/h3&gt;
 &lt;p&gt;討論樣本時，需考慮下面幾個問題：&lt;/p&gt;
@@ -2145,13 +2145,13 @@ Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>https://winterwang.github.io/post/central-limit-theory/</link>
+      <link>/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
+      <guid>/post/central-limit-theory/</guid>
       <description>&lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/IMG_0522.png&#34; /&gt;
+&lt;img src=&#34;/img/IMG_0522.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
@@ -2215,15 +2215,15 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
     
     <item>
       <title>你會用概率論來賭博嗎？</title>
-      <link>https://winterwang.github.io/post/probability-gambling/</link>
+      <link>/post/probability-gambling/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
+      <guid>/post/probability-gambling/</guid>
       <description>&lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/product/0471827223/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&#34;&gt;Quick Calculus: Short Manual of Self-instruction&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_070.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_070.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。&lt;/p&gt;
@@ -2239,7 +2239,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;p&gt;然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/venngram.png&#34; /&gt;
+&lt;img src=&#34;/img/venngram.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;div class=&#34;section level4&#34;&gt;
@@ -2274,7 +2274,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;h2&gt;賭博問題&lt;/h2&gt;
 &lt;p&gt;終於來到本次話題的重點了。我要扣題了哦。語文老師快在此加分。&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_071.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_071.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;

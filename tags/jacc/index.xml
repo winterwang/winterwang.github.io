@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jacc on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/jacc/</link>
+    <link>/tags/jacc/</link>
     <description>Recent content in Jacc on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>the Japan Collaborative Cohort (JACC) Study | 大規模コホート研究</title>
-      <link>https://winterwang.github.io/project/jacc/</link>
+      <link>/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/jacc/</guid>
+      <guid>/project/jacc/</guid>
       <description></description>
     </item>
     

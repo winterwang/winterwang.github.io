@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basic Mathematics on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/basic-mathematics/</link>
+    <link>/tags/basic-mathematics/</link>
     <description>Recent content in Basic Mathematics on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <link>/post/central-limit-theorem-application/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <guid>/post/central-limit-theorem-application/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
 &lt;ul&gt;
@@ -66,7 +66,7 @@ P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
 1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -95,7 +95,7 @@ pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/p
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
 pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;從上面兩個例題也能看出，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 越小，正態分佈模擬的誤差就越大。&lt;/p&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X \sim Poisson(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X\leqslant20)\)&lt;/span&gt;。&lt;/li&gt;
@@ -118,7 +118,7 @@ ppois(20, lambda=30)&lt;/code&gt;&lt;/pre&gt;
 pnorm((20.5-30)/sqrt(30))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.04141871&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;這兩個其實有些小差距。不過看下圖，其模擬還是很到位的。只是正態分佈的面積明顯確實比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X_1+X_2\leqslant40)\)&lt;/span&gt;。&lt;/li&gt;
 &lt;/ol&gt;
@@ -142,7 +142,7 @@ ppois(40, lambda=60)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
 pnorm((40.5-60)/sqrt(60))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.005910569&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt; 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt; 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -262,13 +262,13 @@ Var(length_6 | length_2) &amp;amp;= \sigma_6^2(1-\rho_{6,2}^2) \\
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>https://winterwang.github.io/post/central-limit-theory/</link>
+      <link>/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
+      <guid>/post/central-limit-theory/</guid>
       <description>&lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/IMG_0522.png&#34; /&gt;
+&lt;img src=&#34;/img/IMG_0522.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
@@ -332,10 +332,10 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
     
     <item>
       <title>你買的彩票中獎概率到底有多少？</title>
-      <link>https://winterwang.github.io/post/probability3/</link>
+      <link>/post/probability3/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability3/</guid>
+      <guid>/post/probability3/</guid>
       <description>&lt;div id=&#34;-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;二項分佈的概念 Binomial distribution&lt;/h3&gt;
 &lt;p&gt;二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次相互獨立的&lt;a href=&#34;https://winterwang.github.io/post/probability2-4/&#34;&gt;成功率爲 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的伯努利實驗&lt;/a&gt; (&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; independent Bernoulli trials) 中成功的次數。&lt;/p&gt;
@@ -472,10 +472,10 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
     
     <item>
       <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
+      <link>/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
+      <guid>/post/normal-distribution/</guid>
       <description>&lt;div id=&#34;-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;概率密度曲線 probability density function， PDF&lt;/h3&gt;
 &lt;ul&gt;
@@ -502,7 +502,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
   stat_function(fun = dnorm,
                 xlim = c(-1.3,0.4),
                 geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;： &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\int_{-\infty}^\infty xf(x)dx\)&lt;/span&gt;&lt;/li&gt;
@@ -534,7 +534,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
 &lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
 &lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
@@ -547,10 +547,10 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
     
     <item>
       <title>概率論2</title>
-      <link>https://winterwang.github.io/post/probability2-4/</link>
+      <link>/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability2-4/</guid>
+      <guid>/post/probability2-4/</guid>
       <description>&lt;div id=&#34;bayes-&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Bayes 理論的概念&lt;/h3&gt;
 &lt;p&gt;許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 &lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;&lt;/p&gt;
@@ -566,7 +566,7 @@ P(A\cap S)=P(S|A)P(A)\]&lt;/span&gt; 這兩個等式是完全等價的。我們�
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_073.png&#34; /&gt;
+&lt;img src=&#34;/img/Selection_073.png&#34; /&gt;
 
 &lt;/div&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
@@ -656,10 +656,10 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
     
     <item>
       <title>Maths Revisions</title>
-      <link>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</link>
+      <link>/post/notes-of-basic-rules-in-maths/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</guid>
+      <guid>/post/notes-of-basic-rules-in-maths/</guid>
       <description>&lt;div id=&#34;function-calculus&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Function, Calculus&lt;/h2&gt;
 &lt;div id=&#34;exponential-rules&#34; class=&#34;section level3&#34;&gt;
@@ -718,10 +718,10 @@ log_a1=0
     
     <item>
       <title>Matrix Revisions</title>
-      <link>https://winterwang.github.io/post/matrix-revision/</link>
+      <link>/post/matrix-revision/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/matrix-revision/</guid>
+      <guid>/post/matrix-revision/</guid>
       <description>&lt;div id=&#34;basic-definition-and-notations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Basic Definition and notations:&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -832,10 +832,10 @@ i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
+      <link>/post/plus-equations-and-matrix-multiplication/</link>
       <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
+      <guid>/post/plus-equations-and-matrix-multiplication/</guid>
       <description>&lt;div class=&#34;section level4&#34;&gt;
 &lt;h4&gt;行向量乘以矩陣，乘以列向量可得標量&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt;的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
@@ -888,10 +888,10 @@ a_3 &amp;amp; b_3 &amp;amp; c_3
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 27</title>
-      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
+      <link>/post/homogeneouse-linear-equations/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
+      <guid>/post/homogeneouse-linear-equations/</guid>
       <description>&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
 \begin{array}{c}
 x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
@@ -984,10 +984,10 @@ x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 26</title>
-      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
+      <link>/post/elementary-row-operations/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
+      <guid>/post/elementary-row-operations/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34;&gt;擴大係數矩陣&lt;/a&gt; &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 通過行的基本變形，轉化成爲 &lt;span class=&#34;math inline&#34;&gt;\((E \underline{y}^*)\)&lt;/span&gt; 的時候，寫在右側的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}^*\)&lt;/span&gt; 就是所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
@@ -1110,10 +1110,10 @@ a_3 \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
+      <link>/post/cramers-formula/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
+      <guid>/post/cramers-formula/</guid>
       <description>&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
 &lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
@@ -1182,10 +1182,10 @@ a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>https://winterwang.github.io/post/inverse-matrix-method/</link>
+      <link>/post/inverse-matrix-method/</link>
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
+      <guid>/post/inverse-matrix-method/</guid>
       <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣法解連立一次方程式&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;時(&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;)，給 &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 等式兩邊同時乘以 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;，可以得到 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。由此方法可以得到 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。&lt;/p&gt;
@@ -1264,10 +1264,10 @@ a_3 \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
+      <link>/post/linear-simultaneous-equation/</link>
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
+      <guid>/post/linear-simultaneous-equation/</guid>
       <description>&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;可以看成是利用：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
@@ -1288,10 +1288,10 @@ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <link>/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
+      <guid>/post/inverse-matrix/</guid>
       <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
 $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
 
@@ -1476,10 +1476,10 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
     
     <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>https://winterwang.github.io/post/2017-07-07/</link>
+      <link>/post/2017-07-07/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
+      <guid>/post/2017-07-07/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行的基本變形&lt;/h2&gt;
 

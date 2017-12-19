@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jmicc on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/jmicc/</link>
+    <link>/tags/jmicc/</link>
     <description>Recent content in Jmicc on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Japan Multi-Institutional Collaborative Cohort (J-MICC) Study</title>
-      <link>https://winterwang.github.io/project/jmicc/</link>
+      <link>/project/jmicc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/jmicc/</guid>
+      <guid>/project/jmicc/</guid>
       <description></description>
     </item>
     

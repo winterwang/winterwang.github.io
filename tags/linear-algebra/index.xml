@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linear Algebra on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/linear-algebra/</link>
+    <link>/tags/linear-algebra/</link>
     <description>Recent content in Linear Algebra on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Matrix Revisions</title>
-      <link>https://winterwang.github.io/post/matrix-revision/</link>
+      <link>/post/matrix-revision/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/matrix-revision/</guid>
+      <guid>/post/matrix-revision/</guid>
       <description>&lt;div id=&#34;basic-definition-and-notations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Basic Definition and notations:&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -126,10 +126,10 @@ i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
+      <link>/post/plus-equations-and-matrix-multiplication/</link>
       <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
+      <guid>/post/plus-equations-and-matrix-multiplication/</guid>
       <description>&lt;div class=&#34;section level4&#34;&gt;
 &lt;h4&gt;行向量乘以矩陣，乘以列向量可得標量&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\)&lt;/span&gt; 的形式其實質上均爲 &lt;span class=&#34;math inline&#34;&gt;\(1\times1\)&lt;/span&gt;的標量，即最早我們接觸到的&lt;a href=&#34;https://winterwang.github.io/post/2017-02-06/&#34;&gt;加法算式&lt;/a&gt;。&lt;/p&gt;
@@ -182,10 +182,10 @@ a_3 &amp;amp; b_3 &amp;amp; c_3
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 27</title>
-      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
+      <link>/post/homogeneouse-linear-equations/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
+      <guid>/post/homogeneouse-linear-equations/</guid>
       <description>&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
 \begin{array}{c}
 x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\
@@ -278,10 +278,10 @@ x_{n1}  &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 26</title>
-      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
+      <link>/post/elementary-row-operations/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
+      <guid>/post/elementary-row-operations/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/linear-simultaneous-equation/&#34;&gt;擴大係數矩陣&lt;/a&gt; &lt;span class=&#34;math inline&#34;&gt;\((X \underline{y})\)&lt;/span&gt; 通過行的基本變形，轉化成爲 &lt;span class=&#34;math inline&#34;&gt;\((E \underline{y}^*)\)&lt;/span&gt; 的時候，寫在右側的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}^*\)&lt;/span&gt; 就是所求的 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}\)&lt;/span&gt;。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
@@ -404,10 +404,10 @@ a_3 \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
+      <link>/post/cramers-formula/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
+      <guid>/post/cramers-formula/</guid>
       <description>&lt;div id=&#34;-cramers-formula&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
 &lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
@@ -476,10 +476,10 @@ a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>https://winterwang.github.io/post/inverse-matrix-method/</link>
+      <link>/post/inverse-matrix-method/</link>
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
+      <guid>/post/inverse-matrix-method/</guid>
       <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;逆矩陣法解連立一次方程式&lt;/h3&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;時(&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;)，給 &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 等式兩邊同時乘以 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;，可以得到 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。由此方法可以得到 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。&lt;/p&gt;
@@ -558,10 +558,10 @@ a_3 \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
+      <link>/post/linear-simultaneous-equation/</link>
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
+      <guid>/post/linear-simultaneous-equation/</guid>
       <description>&lt;p&gt;連立一次方程式： &lt;span class=&#34;math inline&#34;&gt;\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;可以看成是利用：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
@@ -582,10 +582,10 @@ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>https://winterwang.github.io/post/2017-07-07/</link>
+      <link>/post/2017-07-07/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
+      <guid>/post/2017-07-07/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行的基本變形&lt;/h2&gt;
 
@@ -708,10 +708,10 @@ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記20</title>
-      <link>https://winterwang.github.io/post/2017-07-06/</link>
+      <link>/post/2017-07-06/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
+      <guid>/post/2017-07-06/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;逆矩陣&lt;/h2&gt;
 &lt;div class=&#34;section level3&#34;&gt;
@@ -747,10 +747,10 @@ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://winterwang.github.io/post/2017-04-02/</link>
+      <link>/post/2017-04-02/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
+      <guid>/post/2017-04-02/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行列式的性質&lt;/h2&gt;
 &lt;p&gt;具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。&lt;/p&gt;
@@ -800,10 +800,10 @@ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} &amp;amp; y_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>https://winterwang.github.io/post/2017-03-15/</link>
+      <link>/post/2017-03-15/</link>
       <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-15/</guid>
+      <guid>/post/2017-03-15/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;行列式的定義與計算&lt;/h2&gt;
 
@@ -840,7 +840,7 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
 &lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;餘因子矩陣&lt;/h2&gt;
 &lt;p&gt;以 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的成分 &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}\)&lt;/span&gt; 的餘因子 &lt;span class=&#34;math inline&#34;&gt;\(A_{ij}\)&lt;/span&gt; 作成分&lt;strong&gt;的矩陣&lt;/strong&gt;&lt;span class=&#34;diff_alert&#34;&gt;的轉置矩陣&lt;/span&gt;作被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(A_{n\times n}\)&lt;/span&gt; 的&lt;strong&gt;餘因子矩陣(adjoint matrix, adjugate matrix)&lt;/strong&gt;。標記爲 &lt;span class=&#34;math inline&#34;&gt;\(adj(A)\)&lt;/span&gt;。也就是說：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left( \begin{array}{c} A_{11}&amp;amp; A_{12} &amp;amp; \cdots &amp;amp; A_{1n}\\ A_{21}&amp;amp; A_{22} &amp;amp; \cdots &amp;amp; A_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ A_{n1}&amp;amp; A_{n2} &amp;amp; \cdots &amp;amp; A_{nn} \end{array} \right)^t=\left( \begin{array}{c} A_{11}&amp;amp; A_{21} &amp;amp; \cdots &amp;amp; A_{n1}\\ A_{12}&amp;amp; A_{22} &amp;amp; \cdots &amp;amp; A_{n2}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ A_{1n}&amp;amp; A_{2n} &amp;amp; \cdots &amp;amp; A_{nn} \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;我們來試着計算行列式：&lt;br&gt; 1. &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 次行列式&lt;br&gt; 以方程&lt;a href=&#34;#eq:determinant2&#34;&gt;(2)&lt;/a&gt;的定義計算：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12}\\  a_{21} &amp;amp; a_{22}\\  \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;br&gt; 此公式可以用下列 &lt;strong&gt;示意圖(薩呂法則, Sarrus’ rule)&lt;/strong&gt; 來記憶: 　&lt;img src=&#34;https://winterwang.github.io/img/sarrus.png&#34; /&gt;&lt;br&gt; 也就是，沿着右下方向將所有成分相乘以後用加號 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 號連接起來，沿着左下的方向的所有成分則相乘以後用減號 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 號連接起來。最後將這兩者相加獲得行列式的值。&lt;/p&gt;
+&lt;p&gt;我們來試着計算行列式：&lt;br&gt; 1. &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 次行列式&lt;br&gt; 以方程&lt;a href=&#34;#eq:determinant2&#34;&gt;(2)&lt;/a&gt;的定義計算：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12}\\  a_{21} &amp;amp; a_{22}\\  \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;br&gt; 此公式可以用下列 &lt;strong&gt;示意圖(薩呂法則, Sarrus’ rule)&lt;/strong&gt; 來記憶: 　&lt;img src=&#34;/img/sarrus.png&#34; /&gt;&lt;br&gt; 也就是，沿着右下方向將所有成分相乘以後用加號 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 號連接起來，沿着左下的方向的所有成分則相乘以後用減號 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 號連接起來。最後將這兩者相加獲得行列式的值。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;練習： 求 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{array} \right)\)&lt;/span&gt; 的行列式和餘因子矩陣。&lt;/p&gt;
 &lt;p&gt;解： &lt;span class=&#34;math inline&#34;&gt;\(|A|=\begin{vmatrix} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{vmatrix}=4\times3-2\times1=10\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left( \begin{array}{} A_{11} &amp;amp; A_{21}\\ A_{12} &amp;amp; A_{22}\\ \end{array} \right)\)&lt;/span&gt; &lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\because A_{11}=(-1)^{(1+1)}\times3\\ A_{21}=(-1)^{(2+1)}\times2\\ A_{12}=(-1)^{(1+2)}\times1\\ A_{22}=(-1)^{2+2}\times4\\ \therefore adj(A)=\left( \begin{array}{r} 3 &amp;amp; -2\\ -1 &amp;amp; 4\\ \end{array} \right)\)&lt;/span&gt;&lt;br&gt; &lt;span class=&#34;diff_alert&#34;&gt; 注意：餘因子&lt;strong&gt;矩陣&lt;/strong&gt;，終究是一個矩陣而非行列式。&lt;/span&gt;&lt;/p&gt;
@@ -858,7 +858,7 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     &amp;amp;=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{11}a_{23}a_{32}\\
     &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
    \end{align}\]&lt;/span&gt;
-&lt;br&gt; 我們也可以利用薩呂法則（下圖）來記住計算過程：&lt;br&gt; &lt;img src=&#34;https://winterwang.github.io/img/sarrus33.png&#34; /&gt;&lt;br&gt; 另外，可以得到如下的餘因子：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A_{11}=\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}, A_{12}=-\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{13}=\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{21}=-\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix},  A_{22}=\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{23}=-\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{31}=\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23}\\\end{vmatrix},  A_{32}=-\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23}\\\end{vmatrix},  A_{33}=\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22}\\\end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 因此餘因子矩陣爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{12} &amp;amp; A_{13}\\  A_{21} &amp;amp; A_{22} &amp;amp; A_{23}\\  A_{31} &amp;amp; A_{32} &amp;amp; A_{33}\\  \end{array}  \right)^t=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{21} &amp;amp; A_{23}\\  A_{12} &amp;amp; A_{22} &amp;amp; A_{32}\\  A_{13} &amp;amp; A_{23} &amp;amp; A_{33}\\  \end{array}  \right)\)&lt;/span&gt;&lt;/li&gt;
+&lt;br&gt; 我們也可以利用薩呂法則（下圖）來記住計算過程：&lt;br&gt; &lt;img src=&#34;/img/sarrus33.png&#34; /&gt;&lt;br&gt; 另外，可以得到如下的餘因子：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(A_{11}=\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}, A_{12}=-\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{13}=\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{21}=-\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix},  A_{22}=\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix},  A_{23}=-\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\  A_{31}=\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23}\\\end{vmatrix},  A_{32}=-\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23}\\\end{vmatrix},  A_{33}=\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22}\\\end{vmatrix}\)&lt;/span&gt;&lt;br&gt; 因此餘因子矩陣爲：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(adj(A)=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{12} &amp;amp; A_{13}\\  A_{21} &amp;amp; A_{22} &amp;amp; A_{23}\\  A_{31} &amp;amp; A_{32} &amp;amp; A_{33}\\  \end{array}  \right)^t=\left(  \begin{array}{c}  A_{11} &amp;amp; A_{21} &amp;amp; A_{23}\\  A_{12} &amp;amp; A_{22} &amp;amp; A_{32}\\  A_{13} &amp;amp; A_{23} &amp;amp; A_{33}\\  \end{array}  \right)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;table style=&#34;width:6%;&#34;&gt;
 &lt;colgroup&gt;
@@ -895,10 +895,10 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     
     <item>
       <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>https://winterwang.github.io/post/2017-03-13/</link>
+      <link>/post/2017-03-13/</link>
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-13/</guid>
+      <guid>/post/2017-03-13/</guid>
       <description>&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;正定，半正定 (正值，半正值)&lt;/h2&gt;
 &lt;p&gt;對於任意的非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; ，如果2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}\)&lt;/span&gt; 始終滿足 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} &amp;gt; 0\)&lt;/span&gt; &lt;strong&gt;注意此處無等號&lt;/strong&gt;。我們稱這個2次型爲&lt;strong&gt;正定(positive definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;正定矩陣(positive definite matrix)&lt;/strong&gt;。另外，如果任意非零向量 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}(\neq\underline{0})\)&lt;/span&gt; 始終滿足2次型 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x} \geqslant 0\)&lt;/span&gt;， 這個2次型被叫做&lt;strong&gt;半正定(positive semi-definite)&lt;/strong&gt;，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;爲&lt;strong&gt;半正定矩陣(positive semi-definite matrix)&lt;/strong&gt;。&lt;/p&gt;
@@ -922,10 +922,10 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     
     <item>
       <title>「統計解析のための線形代数」復習筆記16</title>
-      <link>https://winterwang.github.io/post/2017-03-11/</link>
+      <link>/post/2017-03-11/</link>
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-11/</guid>
+      <guid>/post/2017-03-11/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;二次型(形式)&lt;/h2&gt;
 &lt;p&gt;對於 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}=\left( \begin{array}{c} x_{1}\\ x_{2}\\ \vdots\\ x_{n} \end{array} \right), A=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\)&lt;/span&gt; 那麼：&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^n\sum\limits_{j=1}^na_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i \neq j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}(a_{ij}+a_{ji})x_ix_j\)&lt;/span&gt;&lt;br&gt; 被稱爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{x}\)&lt;/span&gt; 的同次2次式。又被叫做關於 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,\cdots,x_n\)&lt;/span&gt; 的&lt;strong&gt;2次型(quadratic form)&lt;/strong&gt;。特別的，當 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 爲對稱矩陣時的2次型：&lt;span class=&#34;math inline&#34;&gt;\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^na_{ii}x_i^2+2\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}a_{ij}x_ix_j\)&lt;/span&gt; 在多元變量分析中十分重要。&lt;/p&gt;
@@ -941,10 +941,10 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     
     <item>
       <title>「統計解析のための線形代数」復習筆記15</title>
-      <link>https://winterwang.github.io/post/2017-03-08/</link>
+      <link>/post/2017-03-08/</link>
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-08/</guid>
+      <guid>/post/2017-03-08/</guid>
       <description>&lt;div class=&#34;section level2&#34;&gt;
 &lt;h2&gt;單位矩陣&lt;/h2&gt;
 &lt;p&gt;對角成分全部都是 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; (此時我們假定有 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個)，的對角矩陣被叫做&lt;strong&gt;單位矩陣(identity matrix, unit matrix)&lt;/strong&gt;。寫作： &lt;span class=&#34;math inline&#34;&gt;\(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\)&lt;/span&gt; 下標 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 常被省略。一般的，將 &lt;span class=&#34;math inline&#34;&gt;\(E_n\)&lt;/span&gt; 從左往右乘以 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次正方形矩陣 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，的結果和從右往左相乘的結果是相等的： &lt;span class=&#34;math inline&#34;&gt;\(E_nA=AE_n=A\)&lt;/span&gt;。&lt;/p&gt;
@@ -1041,10 +1041,10 @@ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>https://winterwang.github.io/post/2017-03-01/</link>
+      <link>/post/2017-03-01/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-01/</guid>
+      <guid>/post/2017-03-01/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;updated: 2017-03-07&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;

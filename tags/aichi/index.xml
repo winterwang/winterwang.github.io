@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aichi on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/aichi/</link>
+    <link>/tags/aichi/</link>
     <description>Recent content in Aichi on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Aichi Workers&#39; Cohort Study | 愛知職域コホート研究</title>
-      <link>https://winterwang.github.io/project/aichi/</link>
+      <link>/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/aichi/</guid>
+      <guid>/project/aichi/</guid>
       <description></description>
     </item>
     

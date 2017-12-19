@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Be ambitious</title>
-    <link>https://winterwang.github.io/publication/</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
-      <link>https://winterwang.github.io/publication/hpylorimeta/</link>
+      <link>/publication/hpylorimeta/</link>
       <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/hpylorimeta/</guid>
+      <guid>/publication/hpylorimeta/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -24,7 +24,7 @@
 
 &lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
 
@@ -34,10 +34,10 @@
     
     <item>
       <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
-      <link>https://winterwang.github.io/publication/okuda/</link>
+      <link>/publication/okuda/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/okuda/</guid>
+      <guid>/publication/okuda/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Helicobacter pylori infection is associated with gastric cancer; thus, early diagnosis and treatment are crucial. Since &lt;em&gt;H. pylori&lt;/em&gt; infection in adolescents or young adults shows few symptoms, screening tests are necessary for this population. In this study, the accuracy of the rapid urine-&lt;em&gt;H. pylori&lt;/em&gt; antibody (u-HpAb) test was evaluated and compared to that of urine and serum &lt;em&gt;H. pylori&lt;/em&gt; enzyme-linked immunosorbent assays (u-HpELISA and s-HpELISA, respectively) in junior high school students.&lt;/p&gt;
@@ -59,26 +59,26 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://winterwang.github.io/publication/palau/</link>
+      <link>/publication/palau/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/palau/</guid>
+      <guid>/publication/palau/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 
 &lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
-      <link>https://winterwang.github.io/publication/jaccmatsunaga/</link>
+      <link>/publication/jaccmatsunaga/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/jaccmatsunaga/</guid>
+      <guid>/publication/jaccmatsunaga/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -95,10 +95,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
-      <link>https://winterwang.github.io/publication/jaccstress_colorectal/</link>
+      <link>/publication/jaccstress_colorectal/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/jaccstress_colorectal/</guid>
+      <guid>/publication/jaccstress_colorectal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -109,10 +109,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>https://winterwang.github.io/publication/steppalau/</link>
+      <link>/publication/steppalau/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/steppalau/</guid>
+      <guid>/publication/steppalau/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -123,10 +123,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
-      <link>https://winterwang.github.io/publication/esophageal/</link>
+      <link>/publication/esophageal/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/esophageal/</guid>
+      <guid>/publication/esophageal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -151,10 +151,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
-      <link>https://winterwang.github.io/publication/jaccbreast/</link>
+      <link>/publication/jaccbreast/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/jaccbreast/</guid>
+      <guid>/publication/jaccbreast/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -165,10 +165,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>https://winterwang.github.io/publication/jaccseaweed/</link>
+      <link>/publication/jaccseaweed/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/jaccseaweed/</guid>
+      <guid>/publication/jaccseaweed/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -179,10 +179,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>https://winterwang.github.io/publication/fhdm2/</link>
+      <link>/publication/fhdm2/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/fhdm2/</guid>
+      <guid>/publication/fhdm2/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -207,10 +207,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
-      <link>https://winterwang.github.io/publication/bfskip/</link>
+      <link>/publication/bfskip/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/bfskip/</guid>
+      <guid>/publication/bfskip/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -235,10 +235,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Smoking and Diabetes: Is the Association Mediated by Adiponectin, Leptin, or C-reactive Protein?</title>
-      <link>https://winterwang.github.io/publication/smmd/</link>
+      <link>/publication/smmd/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/smmd/</guid>
+      <guid>/publication/smmd/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -255,10 +255,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Milk drinking and mortality: findings from the Japan Collaborative Cohort Study</title>
-      <link>https://winterwang.github.io/publication/milk/</link>
+      <link>/publication/milk/</link>
       <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/milk/</guid>
+      <guid>/publication/milk/</guid>
       <description>
 
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
@@ -283,10 +283,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
-      <link>https://winterwang.github.io/publication/globalobesity/</link>
+      <link>/publication/globalobesity/</link>
       <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/globalobesity/</guid>
+      <guid>/publication/globalobesity/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -297,10 +297,10 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://winterwang.github.io/publication/liverfat/</link>
+      <link>/publication/liverfat/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication/liverfat/</guid>
+      <guid>/publication/liverfat/</guid>
       <description>
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;

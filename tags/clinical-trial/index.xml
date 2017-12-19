@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clinical Trial on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/clinical-trial/</link>
+    <link>/tags/clinical-trial/</link>
     <description>Recent content in Clinical Trial on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
+      <link>/post/sample-size-in-clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
+      <guid>/post/sample-size-in-clinical-trial/</guid>
       <description>&lt;div class=&#34;section level3&#34;&gt;
 &lt;h3&gt;背景&lt;/h3&gt;
 &lt;p&gt;計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在&lt;/p&gt;
