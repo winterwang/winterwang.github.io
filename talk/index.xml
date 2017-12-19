@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Be ambitious</title>
-    <link>/talk/</link>
+    <link>https://winterwang.github.io/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Prevalence of H.pylori infection in Japan by birth cohort, from 1908 to 2003 -- a systematic review and meta-regression analysis</title>
-      <link>/talk/example-talk/</link>
+      <link>https://winterwang.github.io/talk/example-talk/</link>
       <pubDate>Sat, 19 Aug 2017 00:00:00 +0100</pubDate>
       
-      <guid>/talk/example-talk/</guid>
+      <guid>https://winterwang.github.io/talk/example-talk/</guid>
       <description>
 
 &lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;

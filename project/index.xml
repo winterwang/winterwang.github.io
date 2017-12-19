@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Be ambitious</title>
-    <link>/project/</link>
+    <link>https://winterwang.github.io/project/</link>
     <description>Recent content in Projects on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
-      <link>/project/lshtmlearningnote/</link>
+      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/lshtmlearningnote/</guid>
+      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;We are drowning in information and starving for knowledge.
 Click the graph and you can learn what I learnt.&lt;/p&gt;
@@ -23,43 +23,43 @@ Click the graph and you can learn what I learnt.&lt;/p&gt;
 &lt;p&gt;&amp;mdash; Chaochen Wang in London 2017.09&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/cover.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/cover.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Aichi Workers&#39; Cohort Study | 愛知職域コホート研究</title>
-      <link>/project/aichi/</link>
+      <link>https://winterwang.github.io/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/aichi/</guid>
+      <guid>https://winterwang.github.io/project/aichi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Genome Cohort on Psychosocial traits (GCOP) Study</title>
-      <link>/project/gcop/</link>
+      <link>https://winterwang.github.io/project/gcop/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/gcop/</guid>
+      <guid>https://winterwang.github.io/project/gcop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Japan Multi-Institutional Collaborative Cohort (J-MICC) Study</title>
-      <link>/project/jmicc/</link>
+      <link>https://winterwang.github.io/project/jmicc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/jmicc/</guid>
+      <guid>https://winterwang.github.io/project/jmicc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>the Japan Collaborative Cohort (JACC) Study | 大規模コホート研究</title>
-      <link>/project/jacc/</link>
+      <link>https://winterwang.github.io/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/project/jacc/</guid>
+      <guid>https://winterwang.github.io/project/jacc/</guid>
       <description></description>
     </item>
     
