@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
     
     <url>
-      <loc>https://winterwang.github.io/project/lshtmlearningnote/</loc>
+    
+      <loc>/project/lshtmlearningnote/</loc>
       <lastmod>2017-11-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -12,7 +13,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</loc>
+    
+      <loc>/post/construction-of-a-hypothesis-test/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -20,7 +22,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</loc>
+    
+      <loc>/post/approximate-log-likelihood-ratios/</loc>
       <lastmod>2017-11-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -28,7 +31,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/log-likelihood-ratio/</loc>
+    
+      <loc>/post/log-likelihood-ratio/</loc>
       <lastmod>2017-11-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -36,7 +40,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/likelihood/</loc>
+    
+      <loc>/post/likelihood/</loc>
       <lastmod>2017-11-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -44,7 +49,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/sample-size-in-clinical-trial/</loc>
+    
+      <loc>/post/sample-size-in-clinical-trial/</loc>
       <lastmod>2017-10-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -52,7 +58,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/hpylorimeta/</loc>
+    
+      <loc>/publication/hpylorimeta/</loc>
       <lastmod>2017-10-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -60,7 +67,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/chi-square-distribution/</loc>
+    
+      <loc>/post/chi-square-distribution/</loc>
       <lastmod>2017-10-26T00:00:00+00:00</lastmod>
     </url>
     
@@ -68,7 +76,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/frequentist-statistical-inference02/</loc>
+    
+      <loc>/post/frequentist-statistical-inference02/</loc>
       <lastmod>2017-10-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -76,7 +85,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/frequentist-statistical-inference01/</loc>
+    
+      <loc>/post/frequentist-statistical-inference01/</loc>
       <lastmod>2017-10-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -84,7 +94,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/central-limit-theorem-application/</loc>
+    
+      <loc>/post/central-limit-theorem-application/</loc>
       <lastmod>2017-10-21T00:00:00+00:00</lastmod>
     </url>
     
@@ -92,7 +103,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/central-limit-theory/</loc>
+    
+      <loc>/post/central-limit-theory/</loc>
       <lastmod>2017-10-19T00:00:00+00:00</lastmod>
     </url>
     
@@ -100,7 +112,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/probability3/</loc>
+    
+      <loc>/post/probability3/</loc>
       <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -108,7 +121,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/normal-distribution/</loc>
+    
+      <loc>/post/normal-distribution/</loc>
       <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -116,7 +130,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/probability2-4/</loc>
+    
+      <loc>/post/probability2-4/</loc>
       <lastmod>2017-10-10T00:00:00+00:00</lastmod>
     </url>
     
@@ -124,7 +139,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/probability-gambling-answers/</loc>
+    
+      <loc>/post/probability-gambling-answers/</loc>
       <lastmod>2017-10-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -132,7 +148,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/probability-gambling/</loc>
+    
+      <loc>/post/probability-gambling/</loc>
       <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -140,7 +157,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/black-meal/</loc>
+    
+      <loc>/post/black-meal/</loc>
       <lastmod>2017-10-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -148,7 +166,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</loc>
+    
+      <loc>/post/notes-of-basic-rules-in-maths/</loc>
       <lastmod>2017-09-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -156,7 +175,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/matrix-revision/</loc>
+    
+      <loc>/post/matrix-revision/</loc>
       <lastmod>2017-09-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -164,7 +184,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/first-impression-of-london2/</loc>
+    
+      <loc>/post/first-impression-of-london2/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -172,7 +193,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/first-impression-of-london/</loc>
+    
+      <loc>/post/first-impression-of-london/</loc>
       <lastmod>2017-09-26T00:00:00+00:00</lastmod>
     </url>
     
@@ -180,7 +202,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/london-life-started/</loc>
+    
+      <loc>/post/london-life-started/</loc>
       <lastmod>2017-09-20T00:00:00+00:00</lastmod>
     </url>
     
@@ -188,7 +211,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/uk-visa-succeed/</loc>
+    
+      <loc>/post/uk-visa-succeed/</loc>
       <lastmod>2017-08-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -196,7 +220,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/iea-in-saitama/</loc>
+    
+      <loc>/post/iea-in-saitama/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -204,7 +229,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/talk/example-talk/</loc>
+    
+      <loc>/talk/example-talk/</loc>
       <lastmod>2017-08-19T00:00:00+01:00</lastmod>
     </url>
     
@@ -212,7 +238,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</loc>
+    
+      <loc>/post/plus-equations-and-matrix-multiplication/</loc>
       <lastmod>2017-08-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -220,7 +247,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/homogeneouse-linear-equations/</loc>
+    
+      <loc>/post/homogeneouse-linear-equations/</loc>
       <lastmod>2017-08-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -228,7 +256,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/elementary-row-operations/</loc>
+    
+      <loc>/post/elementary-row-operations/</loc>
       <lastmod>2017-08-10T00:00:00+00:00</lastmod>
     </url>
     
@@ -236,7 +265,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/cramers-formula/</loc>
+    
+      <loc>/post/cramers-formula/</loc>
       <lastmod>2017-08-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -244,7 +274,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/inverse-matrix-method/</loc>
+    
+      <loc>/post/inverse-matrix-method/</loc>
       <lastmod>2017-08-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -252,7 +283,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/linear-simultaneous-equation/</loc>
+    
+      <loc>/post/linear-simultaneous-equation/</loc>
       <lastmod>2017-08-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -260,7 +292,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/inverse-matrix/</loc>
+    
+      <loc>/post/inverse-matrix/</loc>
       <lastmod>2017-08-03T00:00:00+00:00</lastmod>
     </url>
     
@@ -268,7 +301,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/visa-application/</loc>
+    
+      <loc>/post/visa-application/</loc>
       <lastmod>2017-08-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -276,7 +310,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/unconditional/</loc>
+    
+      <loc>/post/unconditional/</loc>
       <lastmod>2017-07-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -284,7 +319,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-07-07/</loc>
+    
+      <loc>/post/2017-07-07/</loc>
       <lastmod>2017-07-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -292,7 +328,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-07-06/</loc>
+    
+      <loc>/post/2017-07-06/</loc>
       <lastmod>2017-07-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -300,7 +337,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-06-12/</loc>
+    
+      <loc>/post/2017-06-12/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -308,7 +346,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-05-31/</loc>
+    
+      <loc>/post/2017-05-31/</loc>
       <lastmod>2017-05-31T00:00:00+00:00</lastmod>
     </url>
     
@@ -316,7 +355,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-05-30/</loc>
+    
+      <loc>/post/2017-05-30/</loc>
       <lastmod>2017-05-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -324,7 +364,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/okuda/</loc>
+    
+      <loc>/publication/okuda/</loc>
       <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     </url>
     
@@ -332,7 +373,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/palau/</loc>
+    
+      <loc>/publication/palau/</loc>
       <lastmod>2017-04-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -340,7 +382,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-04-02/</loc>
+    
+      <loc>/post/2017-04-02/</loc>
       <lastmod>2017-04-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -348,7 +391,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-03-16/</loc>
+    
+      <loc>/post/2017-03-16/</loc>
       <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -356,7 +400,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-03-15/</loc>
+    
+      <loc>/post/2017-03-15/</loc>
       <lastmod>2017-03-15T00:00:00+00:00</lastmod>
     </url>
     
@@ -364,7 +409,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/dictation2017-03-13/</loc>
+    
+      <loc>/post/dictation2017-03-13/</loc>
       <lastmod>2017-03-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -372,7 +418,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-03-13/</loc>
+    
+      <loc>/post/2017-03-13/</loc>
       <lastmod>2017-03-13T00:00:00+00:00</lastmod>
     </url>
     
@@ -380,7 +427,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-03-11/</loc>
+    
+      <loc>/post/2017-03-11/</loc>
       <lastmod>2017-03-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -388,7 +436,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-03-08/</loc>
+    
+      <loc>/post/2017-03-08/</loc>
       <lastmod>2017-03-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -396,7 +445,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/jaccmatsunaga/</loc>
+    
+      <loc>/publication/jaccmatsunaga/</loc>
       <lastmod>2017-03-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -404,7 +454,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-03-01/</loc>
+    
+      <loc>/post/2017-03-01/</loc>
       <lastmod>2017-03-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -412,7 +463,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-28/</loc>
+    
+      <loc>/post/2017-02-28/</loc>
       <lastmod>2017-02-28T00:00:00+00:00</lastmod>
     </url>
     
@@ -420,7 +472,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-22/</loc>
+    
+      <loc>/post/2017-02-22/</loc>
       <lastmod>2017-02-22T00:00:00+00:00</lastmod>
     </url>
     
@@ -428,7 +481,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-21/</loc>
+    
+      <loc>/post/2017-02-21/</loc>
       <lastmod>2017-02-21T00:00:00+00:00</lastmod>
     </url>
     
@@ -436,7 +490,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-19/</loc>
+    
+      <loc>/post/2017-02-19/</loc>
       <lastmod>2017-02-20T00:00:00+00:00</lastmod>
     </url>
     
@@ -444,7 +499,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-18/</loc>
+    
+      <loc>/post/2017-02-18/</loc>
       <lastmod>2017-02-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -452,7 +508,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-17/</loc>
+    
+      <loc>/post/2017-02-17/</loc>
       <lastmod>2017-02-17T00:00:00+00:00</lastmod>
     </url>
     
@@ -460,7 +517,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-16/</loc>
+    
+      <loc>/post/2017-02-16/</loc>
       <lastmod>2017-02-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -468,7 +526,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-15/</loc>
+    
+      <loc>/post/2017-02-15/</loc>
       <lastmod>2017-02-15T00:00:00+00:00</lastmod>
     </url>
     
@@ -476,7 +535,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-13/</loc>
+    
+      <loc>/post/2017-02-13/</loc>
       <lastmod>2017-02-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -484,7 +544,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-12-t/</loc>
+    
+      <loc>/post/2017-02-12-t/</loc>
       <lastmod>2017-02-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -492,7 +553,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-10/</loc>
+    
+      <loc>/post/2017-02-10/</loc>
       <lastmod>2017-02-10T00:00:00+00:00</lastmod>
     </url>
     
@@ -500,7 +562,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-08/</loc>
+    
+      <loc>/post/2017-02-08/</loc>
       <lastmod>2017-02-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -508,7 +571,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-02-06/</loc>
+    
+      <loc>/post/2017-02-06/</loc>
       <lastmod>2017-02-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -516,7 +580,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-01-07-ielts-test/</loc>
+    
+      <loc>/post/2017-01-07-ielts-test/</loc>
       <lastmod>2017-02-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -524,7 +589,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/project/aichi/</loc>
+    
+      <loc>/project/aichi/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -532,7 +598,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/project/gcop/</loc>
+    
+      <loc>/project/gcop/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -540,7 +607,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/project/jmicc/</loc>
+    
+      <loc>/project/jmicc/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -548,7 +616,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/project/jacc/</loc>
+    
+      <loc>/project/jacc/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -556,7 +625,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/jaccstress_colorectal/</loc>
+    
+      <loc>/publication/jaccstress_colorectal/</loc>
       <lastmod>2017-01-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -564,7 +634,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/steppalau/</loc>
+    
+      <loc>/publication/steppalau/</loc>
       <lastmod>2017-01-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -572,7 +643,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-1-5/</loc>
+    
+      <loc>/post/2017-1-5/</loc>
       <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -580,7 +652,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-1-4/</loc>
+    
+      <loc>/post/2017-1-4/</loc>
       <lastmod>2017-01-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -588,7 +661,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-1-3/</loc>
+    
+      <loc>/post/2017-1-3/</loc>
       <lastmod>2017-01-03T00:00:00+00:00</lastmod>
     </url>
     
@@ -596,7 +670,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-1-2/</loc>
+    
+      <loc>/post/2017-1-2/</loc>
       <lastmod>2017-01-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -604,7 +679,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/academic/</loc>
+    
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -612,7 +688,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/slides/</loc>
+    
+      <loc>/slides/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -620,7 +697,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/</loc>
+    
+      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -628,7 +706,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/</loc>
+    
+      <loc>/publication/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -636,7 +715,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/talk/</loc>
+    
+      <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -644,7 +724,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2017-1-1/</loc>
+    
+      <loc>/post/2017-1-1/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -652,7 +733,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-31/</loc>
+    
+      <loc>/post/2016-12-31/</loc>
       <lastmod>2016-12-31T00:00:00+00:00</lastmod>
     </url>
     
@@ -660,7 +742,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-30/</loc>
+    
+      <loc>/post/2016-12-30/</loc>
       <lastmod>2016-12-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -668,7 +751,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-29/</loc>
+    
+      <loc>/post/2016-12-29/</loc>
       <lastmod>2016-12-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -676,7 +760,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-28/</loc>
+    
+      <loc>/post/2016-12-28/</loc>
       <lastmod>2016-12-28T00:00:00+00:00</lastmod>
     </url>
     
@@ -684,7 +769,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-27/</loc>
+    
+      <loc>/post/2016-12-27/</loc>
       <lastmod>2016-12-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -692,7 +778,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-26/</loc>
+    
+      <loc>/post/2016-12-26/</loc>
       <lastmod>2016-12-26T00:00:00+00:00</lastmod>
     </url>
     
@@ -700,7 +787,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-25/</loc>
+    
+      <loc>/post/2016-12-25/</loc>
       <lastmod>2016-12-25T00:00:00+00:00</lastmod>
     </url>
     
@@ -708,7 +796,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-22/</loc>
+    
+      <loc>/post/2016-12-22/</loc>
       <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     </url>
     
@@ -716,7 +805,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-21/</loc>
+    
+      <loc>/post/2016-12-21/</loc>
       <lastmod>2016-12-21T00:00:00+00:00</lastmod>
     </url>
     
@@ -724,7 +814,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-20/</loc>
+    
+      <loc>/post/2016-12-20/</loc>
       <lastmod>2016-12-20T00:00:00+00:00</lastmod>
     </url>
     
@@ -732,7 +823,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-19/</loc>
+    
+      <loc>/post/2016-12-19/</loc>
       <lastmod>2016-12-19T00:00:00+00:00</lastmod>
     </url>
     
@@ -740,7 +832,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-18/</loc>
+    
+      <loc>/post/2016-12-18/</loc>
       <lastmod>2016-12-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -748,7 +841,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-17/</loc>
+    
+      <loc>/post/2016-12-17/</loc>
       <lastmod>2016-12-17T00:00:00+00:00</lastmod>
     </url>
     
@@ -756,7 +850,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-16/</loc>
+    
+      <loc>/post/2016-12-16/</loc>
       <lastmod>2016-12-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -764,7 +859,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-15/</loc>
+    
+      <loc>/post/2016-12-15/</loc>
       <lastmod>2016-12-15T00:00:00+00:00</lastmod>
     </url>
     
@@ -772,7 +868,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-14/</loc>
+    
+      <loc>/post/2016-12-14/</loc>
       <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -780,7 +877,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-13/</loc>
+    
+      <loc>/post/2016-12-13/</loc>
       <lastmod>2016-12-13T00:00:00+00:00</lastmod>
     </url>
     
@@ -788,7 +886,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-12/</loc>
+    
+      <loc>/post/2016-12-12/</loc>
       <lastmod>2016-12-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -796,7 +895,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-11/</loc>
+    
+      <loc>/post/2016-12-11/</loc>
       <lastmod>2016-12-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -804,7 +904,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-10/</loc>
+    
+      <loc>/post/2016-12-10/</loc>
       <lastmod>2016-12-10T00:00:00+00:00</lastmod>
     </url>
     
@@ -812,7 +913,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-9/</loc>
+    
+      <loc>/post/2016-12-9/</loc>
       <lastmod>2016-12-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -820,7 +922,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-8/</loc>
+    
+      <loc>/post/2016-12-8/</loc>
       <lastmod>2016-12-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -828,7 +931,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-7/</loc>
+    
+      <loc>/post/2016-12-7/</loc>
       <lastmod>2016-12-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -836,7 +940,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-6/</loc>
+    
+      <loc>/post/2016-12-6/</loc>
       <lastmod>2016-12-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -844,7 +949,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-5/</loc>
+    
+      <loc>/post/2016-12-5/</loc>
       <lastmod>2016-12-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -852,7 +958,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-4/</loc>
+    
+      <loc>/post/2016-12-4/</loc>
       <lastmod>2016-12-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -860,7 +967,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-3/</loc>
+    
+      <loc>/post/2016-12-3/</loc>
       <lastmod>2016-12-03T00:00:00+00:00</lastmod>
     </url>
     
@@ -868,7 +976,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-2/</loc>
+    
+      <loc>/post/2016-12-2/</loc>
       <lastmod>2016-12-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -876,7 +985,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-12-1/</loc>
+    
+      <loc>/post/2016-12-1/</loc>
       <lastmod>2016-12-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -884,7 +994,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-30/</loc>
+    
+      <loc>/post/2016-11-30/</loc>
       <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -892,7 +1003,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-29/</loc>
+    
+      <loc>/post/2016-11-29/</loc>
       <lastmod>2016-11-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -900,7 +1012,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-28/</loc>
+    
+      <loc>/post/2016-11-28/</loc>
       <lastmod>2016-11-28T00:00:00+00:00</lastmod>
     </url>
     
@@ -908,7 +1021,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-27/</loc>
+    
+      <loc>/post/2016-11-27/</loc>
       <lastmod>2016-11-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -916,7 +1030,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/esophageal/</loc>
+    
+      <loc>/publication/esophageal/</loc>
       <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     </url>
     
@@ -924,7 +1039,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-25/</loc>
+    
+      <loc>/post/2016-11-25/</loc>
       <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     </url>
     
@@ -932,7 +1048,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-24/</loc>
+    
+      <loc>/post/2016-11-24/</loc>
       <lastmod>2016-11-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -940,7 +1057,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-23/</loc>
+    
+      <loc>/post/2016-11-23/</loc>
       <lastmod>2016-11-23T00:00:00+00:00</lastmod>
     </url>
     
@@ -948,7 +1066,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-22/</loc>
+    
+      <loc>/post/2016-11-22/</loc>
       <lastmod>2016-11-22T00:00:00+00:00</lastmod>
     </url>
     
@@ -956,7 +1075,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-21/</loc>
+    
+      <loc>/post/2016-11-21/</loc>
       <lastmod>2016-11-21T00:00:00+00:00</lastmod>
     </url>
     
@@ -964,7 +1084,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-19/</loc>
+    
+      <loc>/post/2016-11-19/</loc>
       <lastmod>2016-11-19T00:00:00+00:00</lastmod>
     </url>
     
@@ -972,7 +1093,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-18/</loc>
+    
+      <loc>/post/2016-11-18/</loc>
       <lastmod>2016-11-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -980,7 +1102,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-17/</loc>
+    
+      <loc>/post/2016-11-17/</loc>
       <lastmod>2016-11-17T00:00:00+00:00</lastmod>
     </url>
     
@@ -988,7 +1111,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-16/</loc>
+    
+      <loc>/post/2016-11-16/</loc>
       <lastmod>2016-11-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -996,7 +1120,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-15/</loc>
+    
+      <loc>/post/2016-11-15/</loc>
       <lastmod>2016-11-15T00:00:00+00:00</lastmod>
     </url>
     
@@ -1004,7 +1129,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-14/</loc>
+    
+      <loc>/post/2016-11-14/</loc>
       <lastmod>2016-11-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -1012,7 +1138,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-12/</loc>
+    
+      <loc>/post/2016-11-12/</loc>
       <lastmod>2016-11-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -1020,7 +1147,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-11/</loc>
+    
+      <loc>/post/2016-11-11/</loc>
       <lastmod>2016-11-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -1028,7 +1156,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-11-10/</loc>
+    
+      <loc>/post/2016-11-10/</loc>
       <lastmod>2016-11-10T00:00:00+00:00</lastmod>
     </url>
     
@@ -1036,7 +1165,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-10-13/</loc>
+    
+      <loc>/post/2016-10-13/</loc>
       <lastmod>2016-10-13T00:00:00+00:00</lastmod>
     </url>
     
@@ -1044,7 +1174,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-10-7/</loc>
+    
+      <loc>/post/2016-10-7/</loc>
       <lastmod>2016-10-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -1052,7 +1183,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-10-6/</loc>
+    
+      <loc>/post/2016-10-6/</loc>
       <lastmod>2016-10-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -1060,7 +1192,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/jaccbreast/</loc>
+    
+      <loc>/publication/jaccbreast/</loc>
       <lastmod>2016-09-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -1068,7 +1201,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-08-11/</loc>
+    
+      <loc>/post/2016-08-11/</loc>
       <lastmod>2016-08-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -1076,7 +1210,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-8-10/</loc>
+    
+      <loc>/post/2016-8-10/</loc>
       <lastmod>2016-08-10T00:00:00+00:00</lastmod>
     </url>
     
@@ -1084,7 +1219,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-8-5/</loc>
+    
+      <loc>/post/2016-8-5/</loc>
       <lastmod>2016-08-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -1092,7 +1228,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-8-4-powerball/</loc>
+    
+      <loc>/post/2016-8-4-powerball/</loc>
       <lastmod>2016-08-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -1100,7 +1237,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-08-03-gutbacteria/</loc>
+    
+      <loc>/post/2016-08-03-gutbacteria/</loc>
       <lastmod>2016-08-03T00:00:00+00:00</lastmod>
     </url>
     
@@ -1108,7 +1246,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-08-02-honey/</loc>
+    
+      <loc>/post/2016-08-02-honey/</loc>
       <lastmod>2016-08-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -1116,7 +1255,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-05-31-rmaps/</loc>
+    
+      <loc>/post/2016-05-31-rmaps/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
     </url>
     
@@ -1124,7 +1264,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-05-27-hello-world/</loc>
+    
+      <loc>/post/2016-05-27-hello-world/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -1132,7 +1273,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/jaccseaweed/</loc>
+    
+      <loc>/publication/jaccseaweed/</loc>
       <lastmod>2016-05-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1140,7 +1282,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-3-8/</loc>
+    
+      <loc>/post/2016-3-8/</loc>
       <lastmod>2016-03-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -1148,7 +1291,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-3-4/</loc>
+    
+      <loc>/post/2016-3-4/</loc>
       <lastmod>2016-03-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -1156,7 +1300,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-3-1/</loc>
+    
+      <loc>/post/2016-3-1/</loc>
       <lastmod>2016-03-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1164,7 +1309,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-2-25/</loc>
+    
+      <loc>/post/2016-2-25/</loc>
       <lastmod>2016-02-25T00:00:00+00:00</lastmod>
     </url>
     
@@ -1172,7 +1318,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-2-22/</loc>
+    
+      <loc>/post/2016-2-22/</loc>
       <lastmod>2016-02-22T00:00:00+00:00</lastmod>
     </url>
     
@@ -1180,7 +1327,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-2-18/</loc>
+    
+      <loc>/post/2016-2-18/</loc>
       <lastmod>2016-02-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -1188,7 +1336,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-2-2/</loc>
+    
+      <loc>/post/2016-2-2/</loc>
       <lastmod>2016-02-15T00:00:00+00:00</lastmod>
     </url>
     
@@ -1196,7 +1345,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2016-2-15/</loc>
+    
+      <loc>/post/2016-2-15/</loc>
       <lastmod>2016-02-15T00:00:00+00:00</lastmod>
     </url>
     
@@ -1204,7 +1354,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/fhdm2/</loc>
+    
+      <loc>/publication/fhdm2/</loc>
       <lastmod>2015-12-31T00:00:00+00:00</lastmod>
     </url>
     
@@ -1212,7 +1363,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2015-9-18/</loc>
+    
+      <loc>/post/2015-9-18/</loc>
       <lastmod>2015-09-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -1220,7 +1372,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/post/2015-9-16/</loc>
+    
+      <loc>/post/2015-9-16/</loc>
       <lastmod>2015-09-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -1228,7 +1381,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/bfskip/</loc>
+    
+      <loc>/publication/bfskip/</loc>
       <lastmod>2015-05-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -1236,7 +1390,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/smmd/</loc>
+    
+      <loc>/publication/smmd/</loc>
       <lastmod>2015-02-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -1244,7 +1399,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/milk/</loc>
+    
+      <loc>/publication/milk/</loc>
       <lastmod>2015-01-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -1252,7 +1408,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/globalobesity/</loc>
+    
+      <loc>/publication/globalobesity/</loc>
       <lastmod>2014-11-11T00:00:00+00:00</lastmod>
     </url>
     
@@ -1260,7 +1417,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/liverfat/</loc>
+    
+      <loc>/publication/liverfat/</loc>
       <lastmod>2014-07-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1268,7 +1426,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/uemuradietary/</loc>
+    
+      <loc>/publication/uemuradietary/</loc>
       <lastmod>2014-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1276,7 +1435,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/crpdm2/</loc>
+    
+      <loc>/publication/crpdm2/</loc>
       <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1284,7 +1444,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication/blood-c3_liverfat/</loc>
+    
+      <loc>/publication/blood-c3_liverfat/</loc>
       <lastmod>2011-05-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -1292,7 +1453,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication_types/1/</loc>
+    
+      <loc>/publication_types/1/</loc>
       <lastmod>2011-05-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1301,7 +1463,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication_types/2/</loc>
+    
+      <loc>/publication_types/2/</loc>
       <lastmod>2017-10-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1310,7 +1473,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/60s-science/</loc>
+    
+      <loc>/tags/60s-science/</loc>
       <lastmod>2016-10-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1319,7 +1483,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/60s-science/</loc>
+    
+      <loc>/tags/60s-science/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1328,7 +1493,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication_types/7/</loc>
+    
+      <loc>/publication_types/7/</loc>
       <lastmod>2014-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1337,7 +1503,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication_types/8/</loc>
+    
+      <loc>/publication_types/8/</loc>
       <lastmod>2016-11-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1346,7 +1513,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/aichi/</loc>
+    
+      <loc>/tags/aichi/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1355,7 +1523,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/bbc/</loc>
+    
+      <loc>/tags/bbc/</loc>
       <lastmod>2017-03-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1364,7 +1533,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/basic-mathematics/</loc>
+    
+      <loc>/tags/basic-mathematics/</loc>
       <lastmod>2017-10-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1373,7 +1543,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/</loc>
+    
+      <loc>/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1382,7 +1553,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/</loc>
+    
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -1390,7 +1562,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/clinical-trial/</loc>
+    
+      <loc>/tags/clinical-trial/</loc>
       <lastmod>2017-10-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1399,7 +1572,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/conference/</loc>
+    
+      <loc>/tags/conference/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1408,7 +1582,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/conference/</loc>
+    
+      <loc>/categories/conference/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1417,7 +1592,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/diary/</loc>
+    
+      <loc>/categories/diary/</loc>
       <lastmod>2017-10-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1426,7 +1602,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/dictation/</loc>
+    
+      <loc>/tags/dictation/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1435,7 +1612,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/dictation/</loc>
+    
+      <loc>/categories/dictation/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1444,7 +1622,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/english-learning/</loc>
+    
+      <loc>/tags/english-learning/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1453,7 +1632,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/experience/</loc>
+    
+      <loc>/tags/experience/</loc>
       <lastmod>2017-10-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1462,7 +1642,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/gcop/</loc>
+    
+      <loc>/tags/gcop/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1471,7 +1652,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/iea/</loc>
+    
+      <loc>/tags/iea/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1480,7 +1662,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/ielts-test/</loc>
+    
+      <loc>/tags/ielts-test/</loc>
       <lastmod>2017-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1489,7 +1672,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/inference/</loc>
+    
+      <loc>/tags/inference/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1498,7 +1682,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/interactive/</loc>
+    
+      <loc>/tags/interactive/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1507,7 +1692,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/jacc/</loc>
+    
+      <loc>/tags/jacc/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1516,7 +1702,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/jmicc/</loc>
+    
+      <loc>/tags/jmicc/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1525,7 +1712,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/lshtm/</loc>
+    
+      <loc>/tags/lshtm/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1534,7 +1722,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/leaflet/</loc>
+    
+      <loc>/tags/leaflet/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1543,7 +1732,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/learning-notes/</loc>
+    
+      <loc>/tags/learning-notes/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1552,7 +1742,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/linear-algebra/</loc>
+    
+      <loc>/tags/linear-algebra/</loc>
       <lastmod>2017-09-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1561,7 +1752,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/listening/</loc>
+    
+      <loc>/tags/listening/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1570,7 +1762,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/london/</loc>
+    
+      <loc>/tags/london/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1579,7 +1772,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/mathjax/</loc>
+    
+      <loc>/tags/mathjax/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1588,7 +1782,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/medical-statistics/</loc>
+    
+      <loc>/tags/medical-statistics/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1597,7 +1792,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/medical-statistics/</loc>
+    
+      <loc>/tags/medical-statistics/</loc>
       <lastmod>2017-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1606,7 +1802,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/presentation/</loc>
+    
+      <loc>/tags/presentation/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1615,7 +1812,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/probability/</loc>
+    
+      <loc>/tags/probability/</loc>
       <lastmod>2017-10-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1624,7 +1822,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/project/</loc>
+    
+      <loc>/project/</loc>
       <lastmod>2017-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1633,7 +1832,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/publication_types/</loc>
+    
+      <loc>/publication_types/</loc>
       <lastmod>2011-05-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1642,7 +1842,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/r/</loc>
+    
+      <loc>/tags/r/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1651,7 +1852,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/r-techniques/</loc>
+    
+      <loc>/categories/r-techniques/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1660,7 +1862,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/rmaps/</loc>
+    
+      <loc>/tags/rmaps/</loc>
       <lastmod>2016-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1669,7 +1872,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/reading/</loc>
+    
+      <loc>/tags/reading/</loc>
       <lastmod>2017-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1678,7 +1882,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/saitama/</loc>
+    
+      <loc>/tags/saitama/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1687,7 +1892,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/speaking/</loc>
+    
+      <loc>/tags/speaking/</loc>
       <lastmod>2017-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1696,7 +1902,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/statistics/</loc>
+    
+      <loc>/categories/statistics/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1705,7 +1912,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/study-abroad/</loc>
+    
+      <loc>/categories/study-abroad/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1714,7 +1922,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/</loc>
+    
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1723,7 +1932,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/test/</loc>
+    
+      <loc>/tags/test/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1732,7 +1942,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/categories/test/</loc>
+    
+      <loc>/categories/test/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -1741,7 +1952,8 @@
     
     
     <url>
-      <loc>https://winterwang.github.io/tags/writing/</loc>
+    
+      <loc>/tags/writing/</loc>
       <lastmod>2017-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
