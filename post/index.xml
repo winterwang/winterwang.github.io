@@ -11,6 +11,32 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>日落在下午四點</title>
+      <link>https://winterwang.github.io/post/luan/</link>
+      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/luan/</guid>
+      <description>&lt;p&gt;倫敦的生活已經過去四個月，每天和統計學公式打交道的我，今天不想在這裏寫任何公式。說說這四個月想更新一直偷懶沒更新的那些在倫敦衛生與熱帶醫學院度過的平凡的日子。&lt;/p&gt;
+
+&lt;p&gt;寒假時去了普利茅斯，和康沃爾。康沃爾是個很有意思的名字 Cornwall。字面意思是玉米牆。我是去自己本來計劃聖誕節想去的 Homestay。&lt;a href=&#34;http://www.hostuk.org/&#34; target=&#34;_blank&#34;&gt;HOST UK&lt;/a&gt; 本來負責我的人告訴我聖誕節可能有點困難，聖誕節前的週末可以的話就去康沃爾的一對退休的老人家裏去做客吧。於是週五一早踏上了一個多月前就從網上訂好的倫敦的帕丁頓去往卡爾斯托克 (Calstock) 的西大不列顛列車。說來諷刺的是，大英帝國建立了世界上第一條火車，如今我一個老外來到這個國家卻在嫌棄這裏的火車慢如老牛拉車。&lt;/p&gt;
+
+&lt;p&gt;和我一起享受英國農村四天三晚的 Homestay 的還有另一個來自毛里求斯的印度人學生。我們一路同行從倫敦出發。整列火車從離開倫敦時的滿員，乘客隨着車窗外樓房的減少而逐漸減少。&lt;del&gt;腦海裏推算了一下，這絕對是有意義的正相關。&lt;/del&gt; 到了普利茅斯只剩下包括我倆在內，絕對只有個位數的人。&lt;/p&gt;
+
+&lt;p&gt;我也沒打算把整個四天三晚都去了哪裏在這裏記流水帳，印象深刻的是我們和老爺爺老太太每晚每晚的長談。還好來自毛里求斯的印度人英文流利，我一個人跟這些老人肯定是無法聊到深夜的。他們聊他們的老當益壯，用腳丈量非洲大陸的那些經歷和記憶，我們侃我們的年輕氣盛和那些無處發泄的憂國憂民。走時，老爺爺把自己收藏了多年的一個據說來自唐朝中國的佛像給了我，說，我希望你帶它回到它來自的地方。我想起我們都站在康沃爾的大西洋沿岸峭壁懸崖，放眼望着法國的方向，腳下全是泥巴。&lt;/p&gt;
+
+&lt;p&gt;我在老人家的留言本上寫下了我在中國和日本的地址電話，中日英三語，生怕他們真的會在中國或者日本迷路。隔天回到了倫敦的房間，我收到老爺爺發來的郵件，淡然如水，卻彷若那些夜晚我們促膝長談時說的話：“你豐富了我們的人生，在你我的道路重新交集前，保重。You have enriched our lives. Until our paths cross again, take care.”&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;英國冬季的日照時間短得可憐。白天離開宿舍去大學時天黑着，下午下課離開大學時，天依然是黑着的。加上我們統計系的課許多都在地下的教室裏，我跟其他人打趣說，我現在的生活像一隻土撥鼠。我在地下，推導着讓我內心無比踏實的那些數學公式。&lt;/p&gt;
+
+&lt;p&gt;有時候，我會十分的想念日本的生活。有時候，我又會無比的思念廈門的日子。這些落腳過的地方，只有上海的感覺越來越模糊。不知道我懷念的是名古屋乾淨的街道，是廈門的沙茶面的味道，還是那些夜晚打完工以後路邊的便利店門口騎着腳踏車路過的那時的我，也許還有那個在白城沙灘上可以悠閒地聽海浪拍岸聲的那個無腦少年。不清楚緣由地，只有上海的記憶在大腦中逐漸變得不那麼色彩斑斕。我也很好奇多年以後我會怎樣回憶倫敦？ 也許只剩下記憶裏土撥鼠一樣的無聊日子，還有貴死你不償命的宿舍房租。&lt;/p&gt;
+
+&lt;p&gt;跨年那晚我和幾個同學走在滿目瘡痍的倫敦街頭，焰火散去，人去城空，2018年就已經被我們踩在了腳下。眼看着這新的一年在凌亂中開始，但願過程也不要太過殘酷。這一年唯一的目標是順利完成這沒日沒夜 (說好聽是朝思暮想) 的醫學統計學碩士。還有的話就是希望家人孩子平安，待我回到你們身邊，我們再也不要用小的可憐的手機屏幕來看彼此，我要帶你們去看整個世界。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>萬衆期待，英國黑暗料理</title>
       <link>https://winterwang.github.io/post/black-meal/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
@@ -3287,37 +3313,6 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
-      <description>&lt;p&gt;前情提要：&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_071.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;答案是：必須改變主意才能提高中獎概率。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_072.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;解說一下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。&lt;/li&gt;
-&lt;li&gt;假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
-&lt;li&gt;假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以按照圖中給出的計算概率樹的過程可以得到:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\
-P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;你是否選擇了改變主意了呢？&lt;/p&gt;
 </description>
     </item>
     

@@ -11,6 +11,32 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>日落在下午四點</title>
+      <link>https://winterwang.github.io/post/luan/</link>
+      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/luan/</guid>
+      <description>&lt;p&gt;倫敦的生活已經過去四個月，每天和統計學公式打交道的我，今天不想在這裏寫任何公式。說說這四個月想更新一直偷懶沒更新的那些在倫敦衛生與熱帶醫學院度過的平凡的日子。&lt;/p&gt;
+
+&lt;p&gt;寒假時去了普利茅斯，和康沃爾。康沃爾是個很有意思的名字 Cornwall。字面意思是玉米牆。我是去自己本來計劃聖誕節想去的 Homestay。&lt;a href=&#34;http://www.hostuk.org/&#34; target=&#34;_blank&#34;&gt;HOST UK&lt;/a&gt; 本來負責我的人告訴我聖誕節可能有點困難，聖誕節前的週末可以的話就去康沃爾的一對退休的老人家裏去做客吧。於是週五一早踏上了一個多月前就從網上訂好的倫敦的帕丁頓去往卡爾斯托克 (Calstock) 的西大不列顛列車。說來諷刺的是，大英帝國建立了世界上第一條火車，如今我一個老外來到這個國家卻在嫌棄這裏的火車慢如老牛拉車。&lt;/p&gt;
+
+&lt;p&gt;和我一起享受英國農村四天三晚的 Homestay 的還有另一個來自毛里求斯的印度人學生。我們一路同行從倫敦出發。整列火車從離開倫敦時的滿員，乘客隨着車窗外樓房的減少而逐漸減少。&lt;del&gt;腦海裏推算了一下，這絕對是有意義的正相關。&lt;/del&gt; 到了普利茅斯只剩下包括我倆在內，絕對只有個位數的人。&lt;/p&gt;
+
+&lt;p&gt;我也沒打算把整個四天三晚都去了哪裏在這裏記流水帳，印象深刻的是我們和老爺爺老太太每晚每晚的長談。還好來自毛里求斯的印度人英文流利，我一個人跟這些老人肯定是無法聊到深夜的。他們聊他們的老當益壯，用腳丈量非洲大陸的那些經歷和記憶，我們侃我們的年輕氣盛和那些無處發泄的憂國憂民。走時，老爺爺把自己收藏了多年的一個據說來自唐朝中國的佛像給了我，說，我希望你帶它回到它來自的地方。我想起我們都站在康沃爾的大西洋沿岸峭壁懸崖，放眼望着法國的方向，腳下全是泥巴。&lt;/p&gt;
+
+&lt;p&gt;我在老人家的留言本上寫下了我在中國和日本的地址電話，中日英三語，生怕他們真的會在中國或者日本迷路。隔天回到了倫敦的房間，我收到老爺爺發來的郵件，淡然如水，卻彷若那些夜晚我們促膝長談時說的話：“你豐富了我們的人生，在你我的道路重新交集前，保重。You have enriched our lives. Until our paths cross again, take care.”&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;英國冬季的日照時間短得可憐。白天離開宿舍去大學時天黑着，下午下課離開大學時，天依然是黑着的。加上我們統計系的課許多都在地下的教室裏，我跟其他人打趣說，我現在的生活像一隻土撥鼠。我在地下，推導着讓我內心無比踏實的那些數學公式。&lt;/p&gt;
+
+&lt;p&gt;有時候，我會十分的想念日本的生活。有時候，我又會無比的思念廈門的日子。這些落腳過的地方，只有上海的感覺越來越模糊。不知道我懷念的是名古屋乾淨的街道，是廈門的沙茶面的味道，還是那些夜晚打完工以後路邊的便利店門口騎着腳踏車路過的那時的我，也許還有那個在白城沙灘上可以悠閒地聽海浪拍岸聲的那個無腦少年。不清楚緣由地，只有上海的記憶在大腦中逐漸變得不那麼色彩斑斕。我也很好奇多年以後我會怎樣回憶倫敦？ 也許只剩下記憶裏土撥鼠一樣的無聊日子，還有貴死你不償命的宿舍房租。&lt;/p&gt;
+
+&lt;p&gt;跨年那晚我和幾個同學走在滿目瘡痍的倫敦街頭，焰火散去，人去城空，2018年就已經被我們踩在了腳下。眼看着這新的一年在凌亂中開始，但願過程也不要太過殘酷。這一年唯一的目標是順利完成這沒日沒夜 (說好聽是朝思暮想) 的醫學統計學碩士。還有的話就是希望家人孩子平安，待我回到你們身邊，我們再也不要用小的可憐的手機屏幕來看彼此，我要帶你們去看整個世界。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>萬衆期待，英國黑暗料理</title>
       <link>https://winterwang.github.io/post/black-meal/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
@@ -3141,81 +3167,6 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
        &amp;amp;= \mu^2 + \mu -\mu^2 \\
        &amp;amp;= \mu
 \end{align}\]&lt;/span&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
-      <description>&lt;div id=&#34;-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;概率密度曲線 probability density function， PDF&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;一個隨機連續型變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 它的性質由一個對應的&lt;strong&gt;概率密度方程 (probability density function, PDF)&lt;/strong&gt; 決定。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在給定的範圍區間內，如 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b, (a &amp;lt; b)\)&lt;/span&gt;，它的概率滿足:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;這個相關的方程，在 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b\)&lt;/span&gt; 區間內的積分，就是這個連續變量在這個區間內取值的概率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# R codes for drawing a standard normal distribution by using ggplot2
-library(ggplot2)
-p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
-  stat_function(fun = dnorm)
-p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) +
-  theme(plot.subtitle = element_text(vjust = 1),
-        plot.caption = element_text(vjust = 1),
-        axis.text.x = element_text(size = 12),
-        axis.text.y = element_text(size = 12),
-        plot.title = element_text(size = 10, face = &amp;quot;bold&amp;quot;, hjust = 0.5),
-        panel.background = element_rect(fill = &amp;quot;ivory&amp;quot;)) +
-  labs(title = &amp;quot;Probability density functions \n for standard normal distribution&amp;quot;,
-       x = NULL, y = NULL) +
-  stat_function(fun = dnorm,
-                xlim = c(-1.3,0.4),
-                geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;： &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\int_{-\infty}^\infty xf(x)dx\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;正態分佈&lt;/h3&gt;
-&lt;p&gt;如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，和它的方差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;，來描述這組數據。記爲：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim N(\mu, \sigma^2)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它的概率密度方程可以表述爲：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(x) =\mu\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\sigma^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;標準正態分佈&lt;/h3&gt;
-&lt;p&gt;標準正態分佈的期望（或者均值）爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;，方差爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;記爲：&lt;span class=&#34;math inline&#34;&gt;\(Z \sim N(0,1)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;它的概率密度方程表述爲：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{1}{\sqrt{2\pi}}exp(-\frac{z^2}{2})\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
-&lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Z=\frac{X-\mu}{\sigma}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
