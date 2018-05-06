@@ -11,6 +11,27 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>To do list</title>
+      <link>https://winterwang.github.io/post/todotestt/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/todotestt/</guid>
+      <description>&lt;p&gt;試試看用 &lt;a href=&#34;https://shrektan.com/post/2018/04/02/blogdown-todo/&#34; target=&#34;_blank&#34;&gt;Blogdown 來管理自己的待辦事項&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-1;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-2;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-3;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 完成 Causal inference 作業;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 完成 ASM Edmund 作業;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 寫一篇日志回顧最近 LSHTM 的生活;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 復習 Analytical Technique;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 反省自己爲什麼效率這麼低。。。。。。&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>日落在下午四點</title>
       <link>https://winterwang.github.io/post/luan/</link>
       <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
@@ -3203,115 +3224,6 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
 &lt;li&gt;任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Z=\frac{X-\mu}{\sigma}\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>概率論2</title>
-      <link>https://winterwang.github.io/post/probability2-4/</link>
-      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability2-4/</guid>
-      <description>&lt;div id=&#34;bayes-&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Bayes 理論的概念&lt;/h3&gt;
-&lt;p&gt;許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 &lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;這裏先引入貝葉斯的概念：&lt;/p&gt;
-&lt;p&gt;我們可以將 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)\)&lt;/span&gt; 寫成： &lt;span class=&#34;math display&#34;&gt;\[P(A\cap S)=P(A|S)P(S)\\or\\
-P(A\cap S)=P(S|A)P(A)\]&lt;/span&gt; 這兩個等式是完全等價的。我們將他們連起來：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)P(A)=P(A|S)P(S)\\
-\Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;是不是看起來又像是寫了一堆&lt;strong&gt;廢話&lt;/strong&gt;？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。&lt;/p&gt;
-&lt;p&gt;再繼續，我們可以利用另外一個&lt;strong&gt;廢話&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;用上面的公式替換掉 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;可以得到&lt;strong&gt;貝葉斯理論公式&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/Selection_073.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
-        &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
-        &amp;amp;= 0.24
-\end{align}\]&lt;/span&gt;
-&lt;p&gt;所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(&lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;)。&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-expectation--or-mean---variance&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;期望 Expectation (或均值 or mean) 和 方差 Variance&lt;/h3&gt;
-&lt;p&gt;期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; (discrete random variables)，它的期望被定義爲：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(X)=\sum_x xP(X=x)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;所以就是將所有 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 來標記。&lt;/p&gt;
-&lt;p&gt;方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;實際上我們更加常用的是它的另外一個公式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X)=E(X^2)-E(X)^2\]&lt;/span&gt;&lt;/p&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明 上面兩個方差公式相等&lt;/h4&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-Var(x)  &amp;amp;= E((X-\mu)^2) \\
-        &amp;amp;= E(X^2-2X\mu+\mu^2)\\
-        &amp;amp;= E(X^2) - 2\mu E(X) + \mu^2\\
-        &amp;amp;= E(X^2) - 2\mu^2 + \mu^2 \\
-        &amp;amp;= E(X^2) - \mu^2 \\
-        &amp;amp;= E(X^2) - E(X)^2
-\end{align}\]&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;方差的性質：&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(X+b)=Var(X)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(aX)=a^2Var(X)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(aX+b)=a^2Var(X)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-bernoulli-distribution&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;伯努利分佈 Bernoulli distribution&lt;/h3&gt;
-&lt;p&gt;伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;。那麼我們可以計算這個分佈的期望值:&lt;/p&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-E(X) &amp;amp;=\sum_x xP(X=x) \\
-     &amp;amp;=1\times\pi + 0\times(1-\pi)\\
-     &amp;amp;=\pi
-\end{align}\]&lt;/span&gt;
-&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(x=x^2\)&lt;/span&gt;，因爲 &lt;span class=&#34;math inline&#34;&gt;\(x=0,1\)&lt;/span&gt;, 所以 &lt;span class=&#34;math inline&#34;&gt;\(E[X^2]=E[X]\)&lt;/span&gt;，那麼方差爲：&lt;/p&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-Var(X) &amp;amp;=E[X^2]-E[X]^2 \\
-       &amp;amp;=E[X]-E[X]^2 \\
-       &amp;amp;=\pi - \pi^2 \\
-       &amp;amp;=\pi(1-\pi)
-\end{align}\]&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id=&#34;xy--a-exyexey-b-varxyvarxvary&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;證明，&lt;span class=&#34;math inline&#34;&gt;\(X,Y\)&lt;/span&gt; 爲互爲獨立的隨機離散變量時，&lt;br&gt;a) &lt;span class=&#34;math inline&#34;&gt;\(E(XY)=E(X)E(Y)\)&lt;/span&gt; ; &lt;br&gt;b) &lt;span class=&#34;math inline&#34;&gt;\(Var(X+Y)=Var(X)+Var(Y)\)&lt;/span&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;&lt;strong&gt;證明&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-E(XY) &amp;amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
-\because &amp;amp;\; X,Y are\;independent\;to\;each\;other \\
-\therefore &amp;amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
-      &amp;amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
-      &amp;amp;=E(X)E(Y)
-\end{align}\]&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;&lt;strong&gt;證明&lt;/strong&gt; 根據方差的定義：
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
- &amp;amp; \; Expand \\
- &amp;amp;=E(X^2+2XY+Y^2)-(E(X)+E(Y))^2\\
- &amp;amp;=E(X^2)+E(Y^2)+2E(XY)\\
- &amp;amp;\;\;\; - E(X)^2-E(Y)^2-2E(X)E(Y)\\
- &amp;amp;\; We\;just\;showed\; E(XY)=E(X)E(Y)\\
- &amp;amp;=E(X^2)-E(X)^2+E(Y^2)-E(Y)^2 \\
- &amp;amp;=Var(X)+Var(Y)
-\end{align}\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
