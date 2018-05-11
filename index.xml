@@ -55,7 +55,11 @@
 &lt;ul&gt;
 &lt;li&gt;[2018-05-08 23:45 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 完成 ASM Edmund 作業;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 完成 ASM Edmund 作業;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-11 08:15 30%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;寫一篇日志回顧最近 LSHTM 的生活;&lt;/del&gt;
 
 &lt;ul&gt;
