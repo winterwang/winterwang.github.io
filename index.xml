@@ -55,6 +55,7 @@
 &lt;ul&gt;
 &lt;li&gt;[2018-05-08 23:45 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 學習去年的 Generalised linear mixed effect modelling lecture 5-6;&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 完成 ASM Edmund 作業;
 
 &lt;ul&gt;
