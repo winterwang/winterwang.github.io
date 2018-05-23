@@ -344,18 +344,31 @@
 <h2>行列式的性質</h2>
 <p>具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。</p>
 <ol style="list-style-type: decimal">
-<li>轉置矩陣的行列式，與轉置前的行列式一致。即：<span class="math inline">\(|A^t|=|A|\)</span>。 <br> <span class="math inline">\(|A|=\begin{vmatrix}  1 &amp; 2 &amp; 3 \\  4 &amp; 5 &amp; 6 \\  7 &amp; 8 &amp; 9 \\  \end{vmatrix}\)</span></li>
-<li>任意一列（或者任意一行）若乘以 <span class="math inline">\(\lambda\)</span> 倍，那麼這個矩陣的行列式結果也將是乘以 <span class="math inline">\(\lambda\)</span> 倍。<br> <span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ \lambda a_{21} &amp;\lambda a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span><br> <span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; \lambda a_{13}\\ a_{21} &amp; a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span></li>
-<li><p>任意一列（或者任意一行）的各成分乘以 <span class="math inline">\(\lambda\)</span> 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。<br> <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21}\pm \lambda a_{11} &amp; a_{22}\pm \lambda a_{12} &amp; a_{23}\pm \lambda a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}，\\ \begin{vmatrix} a_{11} &amp; a_{12}\pm \lambda a_{11} &amp; a_{13}\\ a_{21} &amp; a_{22}\pm \lambda a_{21} &amp; a_{23}\\ a_{31} &amp; a_{32}\pm \lambda a_{31} &amp; a_{33}\\ \end{vmatrix},\)</span> <br> <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} \pm \frac{a_{11}}{\lambda} &amp; a_{22}\pm \frac{a_{12}}{\lambda} &amp; a_{23}\pm \frac{a_{13}}{\lambda}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}, \\ \begin{vmatrix} a_{11} &amp; a_{12}\pm \frac{a_{11}}{\lambda} &amp; a_{13}\\ a_{21} &amp; a_{22}\pm \frac{a_{21}}{\lambda} &amp; a_{23}\\ a_{31} &amp; a_{32}\pm \frac{a_{31}}{\lambda} &amp; a_{33}\\ \end{vmatrix}\)</span><br> 上述行列式與行列式 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> 結果相同。</p></li>
+<li>轉置矩陣的行列式，與轉置前的行列式一致。即：<span class="math inline">\(|A^t|=|A|\)</span>。 <br>
+<span class="math inline">\(|A|=\begin{vmatrix}  1 &amp; 2 &amp; 3 \\  4 &amp; 5 &amp; 6 \\  7 &amp; 8 &amp; 9 \\ \end{vmatrix}\)</span></li>
+<li>任意一列（或者任意一行）若乘以 <span class="math inline">\(\lambda\)</span> 倍，那麼這個矩陣的行列式結果也將是乘以 <span class="math inline">\(\lambda\)</span> 倍。<br>
+<span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ \lambda a_{21} &amp;\lambda a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span><br>
+<span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; \lambda a_{13}\\ a_{21} &amp; a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span></li>
+<li><p>任意一列（或者任意一行）的各成分乘以 <span class="math inline">\(\lambda\)</span> 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21}\pm \lambda a_{11} &amp; a_{22}\pm \lambda a_{12} &amp; a_{23}\pm \lambda a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}，\\ \begin{vmatrix} a_{11} &amp; a_{12}\pm \lambda a_{11} &amp; a_{13}\\ a_{21} &amp; a_{22}\pm \lambda a_{21} &amp; a_{23}\\ a_{31} &amp; a_{32}\pm \lambda a_{31} &amp; a_{33}\\ \end{vmatrix},\)</span> <br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} \pm \frac{a_{11}}{\lambda} &amp; a_{22}\pm \frac{a_{12}}{\lambda} &amp; a_{23}\pm \frac{a_{13}}{\lambda}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}, \\ \begin{vmatrix} a_{11} &amp; a_{12}\pm \frac{a_{11}}{\lambda} &amp; a_{13}\\ a_{21} &amp; a_{22}\pm \frac{a_{21}}{\lambda} &amp; a_{23}\\ a_{31} &amp; a_{32}\pm \frac{a_{31}}{\lambda} &amp; a_{33}\\ \end{vmatrix}\)</span><br>
+上述行列式與行列式 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> 結果相同。</p></li>
 <li>符合下列條件時，行列式的值爲 <span class="math inline">\(0\)</span>
 <ul>
 <li>任意一行（或者列）的全部成分均爲 <span class="math inline">\(0\)</span> 時。</li>
 <li>矩陣中若有兩行（或者兩列）的對應成分全部相同時。</li>
-<li>矩陣中若有兩行（或者兩列）的對應成分均成一定比例時。<br> <span class="math inline">\(\begin{vmatrix}  a_{11} &amp; a_{12} &amp; a_{13}\\  a_{21} &amp; a_{22} &amp; a_{23}\\  0 &amp; 0 &amp; 0\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp; b &amp; c\\  a &amp; b &amp; c\\  d &amp; e &amp; f\\  \end{vmatrix}=0\\  \begin{vmatrix}  a &amp; b &amp; c\\  ka &amp; kb &amp; kc\\  d &amp; e &amp; f\\  \end{vmatrix}=0\)</span><br> 由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 <span class="math inline">\(0\)</span>。此性質與多重線性迴歸的多重共線性有直接關係。</li>
+<li>矩陣中若有兩行（或者兩列）的對應成分均成一定比例時。<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ 0 &amp; 0 &amp; 0\\ \end{vmatrix}=0\\ \begin{vmatrix} a &amp; b &amp; c\\ a &amp; b &amp; c\\ d &amp; e &amp; f\\ \end{vmatrix}=0\\ \begin{vmatrix} a &amp; b &amp; c\\ ka &amp; kb &amp; kc\\ d &amp; e &amp; f\\ \end{vmatrix}=0\)</span><br>
+由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 <span class="math inline">\(0\)</span>。此性質與多重線性迴歸的多重共線性有直接關係。</li>
 </ul></li>
-<li>一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）<br> <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp; a_{22} &amp; a_{23}\\ a_{11} &amp; a_{12} &amp; a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> （第一行和第二行對調成分）</li>
-<li>對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積<br> <span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ 0 &amp; a_{22} &amp; 0\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ 0 &amp; a_{22} &amp; a_{23}\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; 0\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)</span></li>
-<li><p>矩陣中如果有任意一行（或列），衹有一個成分為非零成分，可以將該矩陣的行列式降次：<br> <span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}(-1)^{1+1}\begin{vmatrix} a_{22} &amp; a_{23} \\ a_{32} &amp; a_{33} \end{vmatrix}\)</span> <br> <br> <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; 0\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; 0\\ \end{vmatrix}=a_{23}(-1)^{1+1}\begin{vmatrix} a_{11} &amp; a_{12} \\ a_{31} &amp; a_{32} \end{vmatrix}\)</span></p></li>
+<li>一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp; a_{22} &amp; a_{23}\\ a_{11} &amp; a_{12} &amp; a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> （第一行和第二行對調成分）</li>
+<li>對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ 0 &amp; a_{22} &amp; 0\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ 0 &amp; a_{22} &amp; a_{23}\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; 0\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)</span></li>
+<li><p>矩陣中如果有任意一行（或列），衹有一個成分為非零成分，可以將該矩陣的行列式降次：<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}(-1)^{1+1}\begin{vmatrix} a_{22} &amp; a_{23} \\ a_{32} &amp; a_{33} \end{vmatrix}\)</span> <br>
+<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; 0\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; 0\\ \end{vmatrix}=a_{23}(-1)^{1+1}\begin{vmatrix} a_{11} &amp; a_{12} \\ a_{31} &amp; a_{32} \end{vmatrix}\)</span></p></li>
 <li><p><span class="math inline">\(A, B\)</span> 同時都是正方形矩陣時，<span class="math inline">\(|AB|=|A|·|B|\)</span>。</p></li>
 </ol>
 <hr />
@@ -366,8 +379,25 @@
 </div>
 <div class="section level3">
 <h3>解</h3>
-<p><span class="math inline">\(\because AB=\left(\begin{array}{c}  0 &amp; 40 &amp; 4\\  20 &amp; 60 &amp; -1\\  38 &amp; 107 &amp; 29\\  \end{array}\right)\)</span> <br> <span class="math inline">\(\therefore |AB|=\begin{vmatrix}  0 &amp; 40 &amp; 4\\  20 &amp; 60 &amp; -1\\  38 &amp; 107 &amp; 29\\  \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質3： 第2列 - 第3列 <span class="math inline">\(\times\)</span> 10 作新的第2列</span><br> <span class="math inline">\(=\begin{vmatrix} 0 &amp; 0 &amp; 4\\ 20 &amp; 70 &amp; -1\\ 38 &amp; -183 &amp; 29\\ \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質7： 第一行衹有第三個元素非零，可以降次。</span><br> <span class="math inline">\(=4(-1)^{1+3}\begin{vmatrix}  20 &amp; 70 \\  38 &amp; -183\end{vmatrix}\)</span> <br> <span class="diff_alert">利用性質2: 第一行所有元素除以10, 將 10 提前。</span><br> <span class="math inline">\(=4\times10\begin{vmatrix}  2 &amp; 7 \\  38 &amp; -183\end{vmatrix}\\  =40(-366-266)\\=-25280\)</span><br> <br> <span class="math inline">\(|A|=\begin{vmatrix}  0 &amp; 4 &amp; 2\\  -1 &amp; 3 &amp; 7\\  6 &amp; 5 &amp; 9\\  \end{vmatrix}\)</span> <br> <span class="diff_alert">利用性質3: 第2列 - 第3列 <span class="math inline">\(\times\)</span> 2 作爲新的第二列元素</span><br> <span class="math inline">\(=\begin{vmatrix} 0 &amp; 0 &amp; 2\\ -1 &amp; -11 &amp; 7\\ 6 &amp; -13 &amp; 9\\ \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質7: 第一行衹有第三個元素非零，降次。</span><br> <span class="math inline">\(=2(-1)^{1+3}\begin{vmatrix} -1 &amp; -11 \\ 6 &amp; -13\end{vmatrix}\\=2(13+66)=158\)</span> <br></p>
-<p><span class="math inline">\(|B|=\begin{vmatrix} 2 &amp; 3 &amp; 4\\ -2 &amp; 7 &amp; 1\\ 4 &amp; 6 &amp; 0\\ \end{vmatrix}\)</span> <br> <span class="diff_alert">利用性質3: 第1行 <span class="math inline">\(+\)</span> 第2行作新的第1行； 第3行 - 第1行 <span class="math inline">\(\times\)</span> 2 作新的第三行</span><br> <span class="math inline">\(=\begin{vmatrix} 0 &amp; 10 &amp; 5\\ -2 &amp; 7 &amp; 1\\ 0 &amp; 0 &amp; -8\\ \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質7: 第三行衹有第三個元素非零，降次。</span><br> <span class="math inline">\(=-8(-1)^{3+3}\begin{vmatrix} 0 &amp; 10 \\ -2 &amp; 7\end{vmatrix}\\=-8\times20=-160\)</span></p>
+<p><span class="math inline">\(\because AB=\left(\begin{array}{c}  0 &amp; 40 &amp; 4\\  20 &amp; 60 &amp; -1\\  38 &amp; 107 &amp; 29\\  \end{array}\right)\)</span> <br>
+<span class="math inline">\(\therefore |AB|=\begin{vmatrix}  0 &amp; 40 &amp; 4\\  20 &amp; 60 &amp; -1\\  38 &amp; 107 &amp; 29\\  \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質3： 第2列 - 第3列 <span class="math inline">\(\times\)</span> 10 作新的第2列</span><br>
+<span class="math inline">\(=\begin{vmatrix} 0 &amp; 0 &amp; 4\\ 20 &amp; 70 &amp; -1\\ 38 &amp; -183 &amp; 29\\ \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質7： 第一行衹有第三個元素非零，可以降次。</span><br>
+<span class="math inline">\(=4(-1)^{1+3}\begin{vmatrix}  20 &amp; 70 \\  38 &amp; -183\end{vmatrix}\)</span> <br>
+<span class="diff_alert">利用性質2: 第一行所有元素除以10, 將 10 提前。</span><br>
+<span class="math inline">\(=4\times10\begin{vmatrix}  2 &amp; 7 \\  38 &amp; -183\end{vmatrix}\\  =40(-366-266)\\=-25280\)</span><br>
+<br>
+<span class="math inline">\(|A|=\begin{vmatrix}  0 &amp; 4 &amp; 2\\  -1 &amp; 3 &amp; 7\\  6 &amp; 5 &amp; 9\\  \end{vmatrix}\)</span> <br>
+<span class="diff_alert">利用性質3: 第2列 - 第3列 <span class="math inline">\(\times\)</span> 2 作爲新的第二列元素</span><br>
+<span class="math inline">\(=\begin{vmatrix} 0 &amp; 0 &amp; 2\\ -1 &amp; -11 &amp; 7\\ 6 &amp; -13 &amp; 9\\ \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質7: 第一行衹有第三個元素非零，降次。</span><br>
+<span class="math inline">\(=2(-1)^{1+3}\begin{vmatrix} -1 &amp; -11 \\ 6 &amp; -13\end{vmatrix}\\=2(13+66)=158\)</span> <br></p>
+<p><span class="math inline">\(|B|=\begin{vmatrix} 2 &amp; 3 &amp; 4\\ -2 &amp; 7 &amp; 1\\ 4 &amp; 6 &amp; 0\\ \end{vmatrix}\)</span> <br>
+<span class="diff_alert">利用性質3: 第1行 <span class="math inline">\(+\)</span> 第2行作新的第1行； 第3行 - 第1行 <span class="math inline">\(\times\)</span> 2 作新的第三行</span><br>
+<span class="math inline">\(=\begin{vmatrix} 0 &amp; 10 &amp; 5\\ -2 &amp; 7 &amp; 1\\ 0 &amp; 0 &amp; -8\\ \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質7: 第三行衹有第三個元素非零，降次。</span><br>
+<span class="math inline">\(=-8(-1)^{3+3}\begin{vmatrix} 0 &amp; 10 \\ -2 &amp; 7\end{vmatrix}\\=-8\times20=-160\)</span></p>
 </div>
 <div class="section level3">
 <h3>綜上可得</h3>
@@ -380,8 +410,16 @@
 </div>
 <div id="-1" class="section level3">
 <h3>解</h3>
-<p><span class="math inline">\(\begin{vmatrix}  -2 &amp; 3 &amp;4 &amp; 1\\  4 &amp; 2&amp; 0&amp; 5\\  2 &amp;-3&amp; -4&amp; 2\\  2 &amp; 1&amp; 2&amp; -3 \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質3<br> 1. 第1行 <span class="math inline">\(+\)</span> 第3行，作新的第一行； 2. 第2行 <span class="math inline">\(-\)</span> 第3行 <span class="math inline">\(\times\)</span> 2，作新的第2行； 3. 第4行 <span class="math inline">\(-\)</span> 第3行 作新的第4行</span><br></p>
-<p><span class="math inline">\(=\begin{vmatrix}  0 &amp; 0 &amp; 0 &amp; 3\\  0 &amp; 8 &amp; 8 &amp; 1\\  2 &amp; -3 &amp; -4 &amp; 2\\  0 &amp; 4 &amp; 6 &amp; -5 \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質7: 第1行衹有第4個元素非零，降次。</span><br> <span class="math inline">\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp; 8 &amp; 8 \\ 2 &amp; -3 &amp; -4 \\ 0 &amp; 4 &amp; 6 \end{vmatrix}\)</span><br> <span class="diff_alert">利用性質7: 第1列衹有第2個元素非零，降次。</span><br> <span class="math inline">\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp; 8 \\ 4 &amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)</span></p>
+<p><span class="math inline">\(\begin{vmatrix}  -2 &amp; 3 &amp;4 &amp; 1\\  4 &amp; 2&amp; 0&amp; 5\\  2 &amp;-3&amp; -4&amp; 2\\  2 &amp; 1&amp; 2&amp; -3 \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質3<br>
+1. 第1行 <span class="math inline">\(+\)</span> 第3行，作新的第一行；
+2. 第2行 <span class="math inline">\(-\)</span> 第3行 <span class="math inline">\(\times\)</span> 2，作新的第2行；
+3. 第4行 <span class="math inline">\(-\)</span> 第3行 作新的第4行</span><br></p>
+<p><span class="math inline">\(=\begin{vmatrix}  0 &amp; 0 &amp; 0 &amp; 3\\  0 &amp; 8 &amp; 8 &amp; 1\\  2 &amp; -3 &amp; -4 &amp; 2\\  0 &amp; 4 &amp; 6 &amp; -5 \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質7: 第1行衹有第4個元素非零，降次。</span><br>
+<span class="math inline">\(=3(-1)^{1+4}\begin{vmatrix} 0 &amp; 8 &amp; 8 \\ 2 &amp; -3 &amp; -4 \\ 0 &amp; 4 &amp; 6 \end{vmatrix}\)</span><br>
+<span class="diff_alert">利用性質7: 第1列衹有第2個元素非零，降次。</span><br>
+<span class="math inline">\(=-3 \times 2(-1)^{1+2}\begin{vmatrix} 8 &amp; 8 \\ 4 &amp; 6 \end{vmatrix}\\ =6 \times (8 \times 6 - 4\times 8)\\ =96\)</span></p>
 </div>
 </div>
 

@@ -440,7 +440,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <div class="section level3">
 <h3>如何選擇要檢驗的統計量</h3>
 <p>在上面的二項分佈的實驗中，“成功的次數” 是我們感興趣的要檢驗的統計量。但也可能是第一次出現 “成功” 之前的實驗次數，或者，任何與假設相關的統計量。相似的，如果觀察不是離散變量而是連續的，可以拿來檢驗的指標就有很多，如均值，中位數，衆數，幾何平均值等。</p>
-<p>幸運地是，當明確了零假設和替代假設後，我們可以利用 <a href="https://en.wikipedia.org/wiki/Neyman%E2%80%93Pearson_lemma">Neyman-Pearson lemma</a> 似然比公式<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>:</p>
+<p>幸運地是，當明確了零假設和替代假設後，我們可以利用 <a href="https://en.wikipedia.org/wiki/Neyman%E2%80%93Pearson_lemma">Neyman-Pearson lemma</a> 似然比公式<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
 <p>來決定使用哪個統計量做檢驗<strong>最有效</strong>：</p>
 <p><span class="math display">\[=\frac{L_{H_0}}{L_{H_1}}\]</span></p>
 <p>這公式很直觀，因爲當數據更加支持 <span class="math inline">\(H_1\)</span> 時 (<span class="math inline">\(L_{H_1}\)</span> 更大)，<span class="math inline">\(H_0\)</span> 的可能性相對更小，就更應該被拒絕。而且，由於似然比越小，他的對數就越小，使用對數似然比常常更加直觀：<span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span>。</p>
@@ -455,7 +455,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <p><span class="math display">\[\ell(\mu|\underline{x}) =-\frac{1}{2\sigma^2}\sum_{i=1}^n(x_i-\mu)^2\]</span></p>
 <p>所以已知 <span class="math inline">\(\sigma^2\)</span> 時，我們的零假設和替代假設之間的對數似然比 <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span>:</p>
 <p><span class="math display">\[\ell_{H_0}-\ell_{H_1}=-\frac{1}{2\sigma^2}(\sum_{i=1}^n(x_i-5)^2-\sum_{i=1}^n(x_i-10)^2)\]</span></p>
-<p>然俄，我們只需要考慮隨着數據變化的部分，所以忽略掉不變的部分<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>：</p>
+<p>然俄，我們只需要考慮隨着數據變化的部分，所以忽略掉不變的部分<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>：</p>
 <p><span class="math display">\[
 \begin{aligned}
 \ell_{H_0}-\ell_{H_1} &amp; = -(\sum_{i=1}^n(x_i-5)^2-\sum_{i=i}^n(x_i-10)^2)\\
@@ -532,8 +532,8 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>區分與<a href="https://winterwang.github.io/post/log-likelihood-ratio/">之前討論的似然比</a>，之前討論的似然比只是所有的似然和極大似然之間的比，此處的似然比只是純粹在探討兩個假設之間可能性之比。<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Rememer that <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> is a random variable: the data varies <strong>each time</strong> we sample, with consequently varying relative support for the hypotheses, and so we are only interested in that part of <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> which depends on the results, the data, which vary with each sample (i.e. which contains the random part); the constant part provides no information on the relative support the data give to the hypotheses, so we ignore it.<a href="#fnref2">↩</a></p></li>
+<li id="fn1"><p>區分與<a href="https://winterwang.github.io/post/log-likelihood-ratio/">之前討論的似然比</a>，之前討論的似然比只是所有的似然和極大似然之間的比，此處的似然比只是純粹在探討兩個假設之間可能性之比。<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Rememer that <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> is a random variable: the data varies <strong>each time</strong> we sample, with consequently varying relative support for the hypotheses, and so we are only interested in that part of <span class="math inline">\(\ell_{H_0}-\ell_{H_1}\)</span> which depends on the results, the data, which vary with each sample (i.e. which contains the random part); the constant part provides no information on the relative support the data give to the hypotheses, so we ignore it.<a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 

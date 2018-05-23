@@ -347,11 +347,7 @@
 <h3>二項分佈的概念 Binomial distribution</h3>
 <p>二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 <span class="math inline">\(n\)</span> 次相互獨立的<a href="https://winterwang.github.io/post/probability2-4/">成功率爲 <span class="math inline">\(\pi\)</span> 的伯努利實驗</a> (<span class="math inline">\(n\)</span> independent Bernoulli trials) 中成功的次數。</p>
 <p>當 <span class="math inline">\(X\)</span> 服從二項分佈，記爲 <span class="math inline">\(X \sim binomial(n, \pi)\)</span> 或<span class="math inline">\(X \sim bin(n, \pi)\)</span>。它的(第 <span class="math inline">\(x\)</span> 次實驗的)概率被定義爲：</p>
-<span class="math display">\[\begin{align}
-P(X=x) &amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\
-       &amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
-       &amp; for\;\; x = 0,1,2,\dots,n
-\end{align}\]</span>
+
 <div class="section level4">
 <h4>二項分佈的期望和方差</h4>
 <ul>
@@ -361,20 +357,20 @@ P(X=x) &amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\
 <li>用 <span class="math inline">\(X_i, i =1,\dots, n\)</span> 標記每個相互獨立的伯努利實驗。</li>
 <li>那麼我們可以知道 <span class="math inline">\(X=\sum_{i=1}^nX_i\)</span>。
 <span class="math display">\[\begin{align} E(X) &amp;= E(\sum_{i=1}^nX_i)\\
-                 &amp;= E(X_1+X_2+\cdots+X_n) \\
-                 &amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\
-                 &amp;= \sum_{i=1}^nE(X_i)\\
-                 &amp;= \sum_{i=1}^n\pi \\
-                 &amp;= n\pi
-  \end{align}\]</span></li>
+                   &amp;= E(X_1+X_2+\cdots+X_n) \\
+                   &amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\
+                   &amp;= \sum_{i=1}^nE(X_i)\\
+                   &amp;= \sum_{i=1}^n\pi \\
+                   &amp;= n\pi
+\end{align}\]</span></li>
 </ul></li>
 <li>方差 <span class="math inline">\(Var(X)\)</span>
 <span class="math display">\[\begin{align}
 Var(X) &amp;= Var(\sum_{i=1}^nX_i) \\
-    &amp;= Var(X_i+X_2+\cdots+X_n) \\
-    &amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\
-    &amp;= \sum_{i=1}^nVar(X_i) \\
-    &amp;= n\pi(1-\pi) \\
+      &amp;= Var(X_i+X_2+\cdots+X_n) \\
+      &amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\
+      &amp;= \sum_{i=1}^nVar(X_i) \\
+      &amp;= n\pi(1-\pi) \\
 \end{align}\]</span></li>
 </ul>
 </div>
@@ -397,15 +393,13 @@ Var(X) &amp;= Var(\sum_{i=1}^nX_i) \\
 <li>開獎時從 <span class="math inline">\(59\)</span> 個號碼球中隨機抽取 <span class="math inline">\(6\)</span> 個</li>
 <li>如果六個號碼全部猜中(不分順序)，你可以成爲百萬富翁。請問一次猜中全部 <span class="math inline">\(6\)</span> 個號碼的概率是多少？</li>
 </ul>
-<p>從 <span class="math inline">\(59\)</span> 個號碼中隨機取出任意 <span class="math inline">\(6\)</span> 個號碼的方法有 <span class="math inline">\(^{59}C_6\)</span> 種。 <span class="math display">\[^{59}C_6=\frac{59!}{6!(59-6)!}=45,057,474\]</span></p>
+<p>從 <span class="math inline">\(59\)</span> 個號碼中隨機取出任意 <span class="math inline">\(6\)</span> 個號碼的方法有 <span class="math inline">\(^{59}C_6\)</span> 種。
+<span class="math display">\[^{59}C_6=\frac{59!}{6!(59-6)!}=45,057,474\]</span></p>
 <p>每次選取六個號碼做爲一組的可能性相同，所以，你買了一組樂透號碼，能中獎的概率就是 <span class="math inline">\(1/45,057,474 = 0.00000002219\)</span>。你還會再去買彩票麼？</p>
 <div id="-3-" class="section level4">
 <h4>如果我只想中其中的 <span class="math inline">\(3\)</span> 個號碼，概率有多大？</h4>
 <p>用超幾何分佈的概率公式：</p>
-<span class="math display">\[\begin{align}
-P(X=3) &amp;= \frac{^6C_3\times ^{53}C_3}{^{59}C_6} \\
-       &amp;= 0.010
-\end{align}\]</span>
+
 <p>你有 <span class="math inline">\(1\%\)</span> 的可能中獎。換句話說，如果中三個以上的數字算中獎的話，你買的彩票中獎的概率低於 <span class="math inline">\(1\%\)</span>。是不是覺得下次送錢給博彩公司的時候還不如跟我一起喝一杯咖啡划算？</p>
 </div>
 </div>
@@ -428,9 +422,9 @@ P(X=3) &amp;= \frac{^6C_3\times ^{53}C_3}{^{59}C_6} \\
 <li>所以 <span class="math inline">\(X\)</span> 的概率方程就是：
 <span class="math display">\[\begin{align}
 P(X=x) &amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
-   &amp;= \binom{n}{x}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
-   &amp;= \frac{n!}{x!(n-x)!}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
-   &amp;=\frac{n!}{n^x(n-x)!}\frac{\mu^x}{x!}(1-\frac{\mu}{n})^{n-x}\\
+     &amp;= \binom{n}{x}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+     &amp;= \frac{n!}{x!(n-x)!}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+     &amp;=\frac{n!}{n^x(n-x)!}\frac{\mu^x}{x!}(1-\frac{\mu}{n})^{n-x}\\
 當 n\rightarrow\infty   &amp;\; x \ll n (x遠小於n) 時\\
 \frac{n!}{n^x(n-x)!} &amp;=\frac{n(n-1)\dots(n-x+1)}{n^x} \rightarrow 1\\
 (1-\frac{\mu}{n})^{n-x} &amp;\approx  (1-\frac{\mu}{n})^n \rightarrow e^{-\mu}\\
@@ -445,34 +439,13 @@ P(X=x) &amp;\rightarrow \frac{\mu^x}{x!}e^{-\mu}
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(E(X)=\mu\)</span></li>
 </ol>
-<span class="math display">\[\begin{align}
-E(X)  &amp;=  \sum_{x=0}^\infty xP(X=x) \\
-      &amp;=  \sum_{x=0}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
-      &amp;= 0+ \sum_{x=1}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
-      &amp;=  \sum_{x=1}^\infty \frac{\mu^x}{(x-1)!}e^{-\mu} \\
-      &amp;=  \mu\sum_{x=1}^\infty \frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
-這個時候我們用i&amp;=x-1 替換掉所有的 x \\
-      &amp;=  \mu\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu} \\
-注意到右半部分 &amp;\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu}=1 是一個\\泊松分佈的所有&amp;概率和 \\
-      &amp;= \mu
-\end{align}\]</span>
+
 <ol start="2" style="list-style-type: decimal">
-<li><span class="math inline">\(Var(x)=\mu\)</span> 爲了找到 <span class="math inline">\(Var(X)\)</span>，我們用公式 <span class="math inline">\(Var(X)=E(X^2)-E(X)^2\)</span></li>
+<li><span class="math inline">\(Var(x)=\mu\)</span>
+爲了找到 <span class="math inline">\(Var(X)\)</span>，我們用公式 <span class="math inline">\(Var(X)=E(X^2)-E(X)^2\)</span></li>
 </ol>
 <p>我們需要找到 <span class="math inline">\(E(X^2)\)</span></p>
-<span class="math display">\[\begin{align}
-E(X^2) &amp;= \sum_{x=0}^\infty x^2\frac{\mu^x}{x!}e^{-\mu} \\
-       &amp;= \mu \sum_{x=1}^\infty x\frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
-這個時候我們用i&amp;=x-1 替換掉所有的 x \\
-       &amp;= \mu \sum_{i=0}^\infty (i+1)\frac{\mu^{i}}{i!}e^{-\mu} \\
-       &amp;= \mu(\sum_{i=0}^\infty i\frac{\mu^i}{i!}e^{-\mu} + \sum_{i=0}^\infty \frac{\mu^i}{i!}e^{-\mu}) \\
-       &amp;= \mu(E(X)+1) \\
-       &amp;= \mu^2+\mu \\
-因此，代入上面&amp;提到的方差公式： \\
-Var(X) &amp;= E(X^2) - E(X)^2 \\
-       &amp;= \mu^2 + \mu -\mu^2 \\
-       &amp;= \mu
-\end{align}\]</span>
+
 </div>
 
       </div>

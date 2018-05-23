@@ -349,7 +349,8 @@
 <p><strong>模型假設：</strong> 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 <span class="math inline">\(Y_i\)</span> 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 <span class="math inline">\(\mu\)</span>，總體方差爲 <span class="math inline">\(\sigma^2\)</span>。那麼這個模型可以簡單的被寫成：</p>
 <p><span class="math display">\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]</span></p>
 <p><strong>總體均值 <span class="math inline">\(\mu\)</span> 的估計量：</strong> 顯然算術平均值: <span class="math inline">\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)</span> 是我們用於估計總體均值的估計量。</p>
-<p><strong>估計量的樣本分佈：</strong> <span class="math display">\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]</span></p>
+<p><strong>估計量的樣本分佈：</strong>
+<span class="math display">\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]</span></p>
 <div class="section level4">
 <h4>證明</h4>
 <p><span class="math display">\[
@@ -368,7 +369,8 @@ Var(\bar{Y}) &amp;= Var(\frac{1}{n}\sum Y_i) \\
 </div>
 <div id="-zfracbary-musqrtvarbary--zsim-n01" class="section level4">
 <h4>證明當 <span class="math inline">\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)</span> 時， <span class="math inline">\(Z\sim N(0,1)\)</span>:</h4>
-<p>由式子可知， <span class="math inline">\(Z\)</span> 只是由一組服從正態分佈的數據 <span class="math inline">\(\bar{Y}\)</span> 線性轉換 (linear transformation) 而來，所以 <span class="math inline">\(Z\)</span> 本身也服從正態分佈 <span class="math display">\[
+<p>由式子可知， <span class="math inline">\(Z\)</span> 只是由一組服從正態分佈的數據 <span class="math inline">\(\bar{Y}\)</span> 線性轉換 (linear transformation) 而來，所以 <span class="math inline">\(Z\)</span> 本身也服從正態分佈
+<span class="math display">\[
 \begin{aligned}
 E(Z) &amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
      &amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
@@ -387,10 +389,7 @@ Var(Z) &amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
 <p>因此，我們可以定義 <span class="math inline">\(95\%\)</span> 信賴區間的上限和下限分別是：</p>
 <p><span class="math display">\[L=\bar{Y}-c \Rightarrow Prob(L&gt;\mu)=0.025 \\
   U=\bar{Y}+c \Rightarrow Prob(U&lt;\mu)=0.025\]</span></p>
-<div class="figure">
-<img src="/img/Selection_082.png" />
-
-</div>
+<p><img src="/img/Selection_082.png" /></p>
 <p>接下來就是推倒（故意的）<span class="math inline">\(c\)</span> 的過程啦：</p>
 <p><span class="math display">\[
 \begin{aligned}

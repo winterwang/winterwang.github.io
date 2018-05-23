@@ -114,8 +114,8 @@ dbinom(4, 10, 0.5)## [1] 0.2050781# or you can calculate by hand:factorial(10
       <description>背景計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在
 如何將實驗對象隨機分配 (randomisation)設計對照組 (control group)合適（且必須）的貫徹盲法 (blinding)另外一個同樣重要的問題是–“我到底需要多少樣本?”
 一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：
-統計學方案。 從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。經濟上的因素。 然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。倫理道德上的因素。 許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？實驗本身的可信度。 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。這裏我們只考慮沒有其他任何因素的影響下，1. 統計學方案上該如何計算準確的所需樣本量的大小。
-比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：Table 1: Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI治療組溶栓酶安慰劑p.value1st Australiann=264n=253死亡人數26 (9.8%)32 (12.</description>
+統計學方案。從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。經濟上的因素。然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。倫理道德上的因素。許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？實驗本身的可信度。如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。這裏我們只考慮沒有其他任何因素的影響下，1. 統計學方案上該如何計算準確的所需樣本量的大小。
+比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：Table 1: Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI治療組溶栓酶安慰劑p.values1st Australiann=264n=253死亡人數26 (9.8%)32 (12.</description>
     </item>
     
     <item>
@@ -125,7 +125,7 @@ dbinom(4, 10, 0.5)## [1] 0.2050781# or you can calculate by hand:factorial(10
       
       <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
       <description>卡方分佈的期望和方差的證明：當 \(X\sim N(0,1)\) 時， \(X^2\sim \mathcal{X}_1^2\)
-如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)， 那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
+如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)，那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
 其中： \(\mathcal{X}_n^2\) 表示自由度爲 \(n\) 的卡方分佈。
 且 \(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)
 卡方分佈的期望：\[E(X_1^2)=Var(X)+[E(X)]^2=1+0=1\]
@@ -146,7 +146,7 @@ dbinom(4, 10, 0.5)## [1] 0.2050781# or you can calculate by hand:factorial(10
 模型假設： 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 \(Y_i\) 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 \(\mu\)，總體方差爲 \(\sigma^2\)。那麼這個模型可以簡單的被寫成：
 \[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]
 總體均值 \(\mu\) 的估計量： 顯然算術平均值: \(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\) 是我們用於估計總體均值的估計量。
-估計量的樣本分佈： \[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]
+估計量的樣本分佈：\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]
 證明\[\begin{aligned}E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\&amp;amp;= \frac{1}{n}E(\sum Y_i) \\&amp;amp;= \frac{1}{n}\sum E(Y_i) \\&amp;amp;= \frac{1}{n}n\mu = \mu \\Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\\because Y_i \;are &amp;amp;\; independent \\&amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\&amp;amp;= \frac{1}{n^2} n Var(Y_i) \\&amp;amp;= \frac{\sigma^2}{n}\end{aligned}\]</description>
     </item>
     
@@ -169,8 +169,8 @@ dbinom(4, 10, 0.5)## [1] 0.2050781# or you can calculate by hand:factorial(10
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>二項分佈的正態分佈近似假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\)根據二項分佈的概率公式，計算將會變得很繁瑣複雜。解決辦法：應用中心極限定理。中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
-問題在於，多大的 \(n\) 才能算大樣本呢？當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)泊松分佈的正態分佈近似假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
+      <description>二項分佈的正態分佈近似假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\)根據二項分佈的概率公式，計算將會變得很繁瑣複雜。解決辦法：應用中心極限定理。中心極限定理告訴我們，當樣本量足夠大時:\[X\sim N（n\pi, n\pi(1-\pi))\]
+問題在於，多大的 \(n\) 才能算大樣本呢？當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)泊松分佈的正態分佈近似假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理：\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
 需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
 正態分佈模擬的校正：continuity corrections如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
     </item>

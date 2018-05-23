@@ -349,7 +349,8 @@
 <li>假設我們有大量(<span class="math inline">\(n\rightarrow\infty\)</span>)的二項分佈實驗 <span class="math inline">\(X\sim Bin(n, \pi)\)</span></li>
 <li>根據<a href="https://winterwang.github.io/post/probability3/">二項分佈的概率公式</a>，計算將會變得很繁瑣複雜。</li>
 <li>解決辦法：應用中心極限定理。</li>
-<li><p><a href="https://winterwang.github.io/post/probability3/">中心極限定理</a>告訴我們，當樣本量足夠大時: <span class="math display">\[X\sim N（n\pi, n\pi(1-\pi))\]</span></p></li>
+<li><p><a href="https://winterwang.github.io/post/probability3/">中心極限定理</a>告訴我們，當樣本量足夠大時:
+<span class="math display">\[X\sim N（n\pi, n\pi(1-\pi))\]</span></p></li>
 <li>問題在於，多大的 <span class="math inline">\(n\)</span> 才能算大樣本呢？
 <ul>
 <li>當且僅當 (only and if only) <span class="math inline">\(n&gt;20\)</span> AND <span class="math inline">\(n\pi&gt;5\)</span> AND <span class="math inline">\(n(1-\pi)&gt;5\)</span></li>
@@ -361,7 +362,8 @@
 <ul>
 <li>假設時間 <span class="math inline">\(t\)</span> 內某事件的發生次數服從泊松分佈 <span class="math inline">\(X\sim Po(\mu)\)</span>。</li>
 <li>考慮將這段時間 <span class="math inline">\(t\)</span> 等分成 <span class="math inline">\(n\)</span> 個時間段。那麼第 <span class="math inline">\(i\)</span> 時間段內事件發生次數依舊服從泊松分佈 <span class="math inline">\(X_i\sim Po(\frac{\mu}{n})\)</span>。且 <span class="math inline">\(E(X_i)=\mu/n, Var(X_i)=\mu/n\)</span>。</li>
-<li><p>那麼原先的 <span class="math inline">\(X\)</span> 可以被視爲是將這無數的小時間段的 <span class="math inline">\(X_i\)</span> 相加。應用中心極限定理： <span class="math display">\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]</span></p></li>
+<li><p>那麼原先的 <span class="math inline">\(X\)</span> 可以被視爲是將這無數的小時間段的 <span class="math inline">\(X_i\)</span> 相加。應用中心極限定理：
+<span class="math display">\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]</span></p></li>
 <li><p>需要注意的是，這段時間 (<span class="math inline">\(t\)</span>) 內發生的事件次數 (<span class="math inline">\(\lambda\)</span>) : <span class="math inline">\(\lambda t =\mu&gt;10\)</span> ，這樣的正態分佈模擬才能成立。</p></li>
 </ul>
 </div>
@@ -469,23 +471,27 @@ ppois(40, lambda=60)</code></pre>
 <pre class="r"><code># 快來看用中心極限定理模擬正態分佈獲得的概率：
 pnorm((40.5-60)/sqrt(60))</code></pre>
 <pre><code>## [1] 0.005910569</code></pre>
-<p><img src="/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png" width="672" /> 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。</p>
+<p><img src="/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。</p>
 </div>
 </div>
 </div>
 <div class="section level2">
 <h2>兩個連續隨機變量</h2>
 <ul>
-<li><p>假定 <span class="math inline">\(X_1, X_2\)</span> 是兩個連續隨機變量： <span class="math display">\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
-  E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
-  Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]</span></p></li>
-<li><p>利用矩陣的標記法，可以將 <span class="math inline">\(X_1, X_2\)</span> 標記爲 <span class="math inline">\(\textbf{X}=(X_1, X_2)^T\)</span>, 即： <span class="math display">\[\textbf{X}=\left(
+<li><p>假定 <span class="math inline">\(X_1, X_2\)</span> 是兩個連續隨機變量：
+<span class="math display">\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
+E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
+Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]</span></p></li>
+<li><p>利用矩陣的標記法，可以將 <span class="math inline">\(X_1, X_2\)</span> 標記爲 <span class="math inline">\(\textbf{X}=(X_1, X_2)^T\)</span>, 即：
+<span class="math display">\[\textbf{X}=\left(
 \begin{array}{c}
 X_1\\
 X_2\\
 \end{array}
 \right)\]</span></p></li>
-<li><p>上面的所有內容都可以標記爲： <span class="math display">\[E(\textbf{X})=\mathbf{\mu}=\left(
+<li><p>上面的所有內容都可以標記爲：
+<span class="math display">\[E(\textbf{X})=\mathbf{\mu}=\left(
 \begin{array}{c}
 \mu_1\\
 \mu_2\\
@@ -527,8 +533,10 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 <h2>條件分佈和邊緣分佈的概念</h2>
 <ul>
 <li>如果 <span class="math inline">\(\textbf{X}=(X_1, X_2)^T\)</span> 的兩個變量都服從正態分佈；</li>
-<li><p>那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈: <span class="math display">\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]</span></p></li>
-<li>同樣的，<span class="math inline">\(X_1\)</span> 的給出 <span class="math inline">\(X_2\)</span> 的條件分佈 (condition distribution) 也服從正態分佈： <span class="math display">\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
+<li><p>那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈:
+<span class="math display">\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]</span></p></li>
+<li>同樣的，<span class="math inline">\(X_1\)</span> 的給出 <span class="math inline">\(X_2\)</span> 的條件分佈 (condition distribution) 也服從正態分佈：
+<span class="math display">\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
  Var(X_1|X_2)=\sigma_1^2(1-\rho^2)\]</span></li>
 <li><p>反之亦然。</p></li>
 </ul>
@@ -538,9 +546,13 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 <p>上面的概念過於抽象，用血壓的例子：</p>
 <p>收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。</p>
 <ul>
-<li><p>條件期望: <span class="math display">\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]</span></p></li>
-<li><p>實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：<br> 他的收縮期血壓的期望值就可以用上面的式子計算： <span class="math display">\[E(SBP|DBP=95)=136\]</span></p></li>
-<li><p>條件方差爲： <span class="math display">\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&lt;15^2\]</span></p></li>
+<li><p>條件期望:
+<span class="math display">\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]</span></p></li>
+<li><p>實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：<br>
+他的收縮期血壓的期望值就可以用上面的式子計算：
+<span class="math display">\[E(SBP|DBP=95)=136\]</span></p></li>
+<li><p>條件方差爲：
+<span class="math display">\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&lt;15^2\]</span></p></li>
 <li><p>所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(<strong>方差變小</strong>)了。</p></li>
 </ul>
 <div id="-1" class="section level3">
@@ -566,7 +578,8 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 </div>
 <div id="-5" class="section level4">
 <h4>解</h4>
-<p><span class="math inline">\(6\)</span> 歲時和 <span class="math inline">\(2\)</span> 歲時腿長的相關係數 (correlation, <span class="math inline">\(\rho_{6,2}\)</span>) 爲： <span class="math display">\[
+<p><span class="math inline">\(6\)</span> 歲時和 <span class="math inline">\(2\)</span> 歲時腿長的相關係數 (correlation, <span class="math inline">\(\rho_{6,2}\)</span>) 爲：
+<span class="math display">\[
 \begin{aligned}
 \rho_{6,2} &amp;= \frac{Cov_{6,2}}{\sqrt{Var(length_6)}\sqrt{Var(length_2)}}\\
 &amp;= \frac{13.7}{\sqrt{22.2}\sqrt{29}}=0.54

@@ -343,7 +343,10 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <div class="section level3">
+        <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div class="section level3">
 <h3>背景</h3>
 <p>計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在</p>
 <ol style="list-style-type: decimal">
@@ -354,10 +357,14 @@
 <p>另外一個同樣重要的問題是–<strong>“我到底需要多少樣本?”</strong></p>
 <p>一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：</p>
 <ol style="list-style-type: decimal">
-<li><strong>統計學方案。</strong> <br> 從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。</li>
-<li>經濟上的因素。 <br> 然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。</li>
-<li>倫理道德上的因素。 <br> 許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？</li>
-<li>實驗本身的可信度。 <br> 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。</li>
+<li><strong>統計學方案。</strong>
+<br> 從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。</li>
+<li>經濟上的因素。
+<br> 然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。</li>
+<li>倫理道德上的因素。
+<br> 許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？</li>
+<li>實驗本身的可信度。
+<br> 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。</li>
 </ol>
 <p>這裏我們只考慮沒有其他任何因素的影響下，<strong>1. 統計學方案</strong>上該如何計算準確的所需樣本量的大小。</p>
 比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：
@@ -377,7 +384,7 @@
 安慰劑
 </th>
 <th style="text-align:left;">
-p.value
+p.values
 </th>
 </tr>
 </thead>
@@ -411,7 +418,7 @@ p = 0.32
 </tr>
 <tr>
 <td style="text-align:left;">
-評價
+評價指標
 </td>
 <td style="text-align:left;">
 Risk ratio
@@ -451,7 +458,7 @@ p &lt; 0.001
 </tr>
 <tr>
 <td style="text-align:left;">
-評價
+評價指標
 </td>
 <td style="text-align:left;">
 Risk ratio
@@ -469,11 +476,17 @@ Risk ratio
 <div class="section level3">
 <h3>決定所需樣本量大小的統計學因素</h3>
 <ol style="list-style-type: decimal">
-<li><p>實驗主要結果的測量/比較方法是什麼？ What is the principal outcome measure of the trial? <br> 一項臨牀實驗的主要結果，應該是切合該實驗的主要目的的。並且應當能夠客觀評價。(如死亡率的改善，治癒率的提高等等)</p></li>
-<li><p>實驗數據準備分析的方案是什麼？ How will the data be analysed to detect a treatment difference? <br> 實驗結果獲得的數據是連續型的 (血壓，血糖值，BMI)？還是分類的離散變量 (死亡的發生與否，疾病的治癒與否)？統計學上認爲的，治療結果提示有意義的差別時的概率。通常定爲 5%。(p &lt; 0.05)</p></li>
-<li><p>對照組的試驗期望結果是怎樣的？ What results are expected in the control group? <br> 當然我們不可能事先預知實驗對照組可能出現的結果。此處只討論我們的預期結果。大多數情況下，我們可以從已經進行過的類似臨牀試驗報告中獲得，或者是從非臨牀干預型研究（觀察型研究）報告中獲得對照組的期望結果。</p></li>
-<li><p>如果實驗藥物在治療上確實有差異，當這個差異最小爲多少時希望能從設計的實驗中被檢測到？ How small a treatment difference, if it exists, is important to detect? <br> 這一條恐怕是每個臨牀實驗在設計階段最重要，最敏感也是最難做出決定的。如果我們已知這個藥物療效和對照相比差別很大，那麼樣本量不用很大，就足以提供值得信賴的證據。不過臨牀上常常會認爲療效差距不必<strong>非常的</strong>顯著，但是在臨牀意義上也是十分重要的。 <br> 常常在這個問題上會引起衆多討論，因爲醫生和患者可能認爲任何一點差異都是有臨牀意義的。但是如果我們想檢測出較小的差距，會需要非常巨大的樣本量，這將會是十分不切合實際的。<strong>What needs to be decided upon is the smallest clinically relevant difference that would be important to detect if it were true.</strong></p></li>
-<li><p>在上面第 4 條被決定了以後，還要確定的是我們需要多大的把握來相信這個被檢測出來的療效差別？ With what degree of certainty is needed to be able to detect the treatment difference in 4? <br> 在實際臨牀實驗中，結論是從觀察數據中得來的，而不是從我們預想的那個“未知的實驗效果”。觀察獲得的療效差別，可能比預想的大（有效），也很可能比預想的小（無效）。設計較好的臨牀實驗應該有足夠機率觀察到有意義的療效差別，即使觀察得到的結果不如預期的大。當然要增加我們觀察到有意義的療效差別，最簡單的辦法是增加樣本量。這個條件的含義是，當療效真差別真實存在，我們要有足夠大的把握把它通過實驗觀察到。</p></li>
+<li><p>實驗主要結果的測量/比較方法是什麼？ What is the principal outcome measure of the trial?
+<br> 一項臨牀實驗的主要結果，應該是切合該實驗的主要目的的。並且應當能夠客觀評價。(如死亡率的改善，治癒率的提高等等)</p></li>
+<li><p>實驗數據準備分析的方案是什麼？ How will the data be analysed to detect a treatment difference?
+<br> 實驗結果獲得的數據是連續型的 (血壓，血糖值，BMI)？還是分類的離散變量 (死亡的發生與否，疾病的治癒與否)？統計學上認爲的，治療結果提示有意義的差別時的概率。通常定爲 5%。(p &lt; 0.05)</p></li>
+<li><p>對照組的試驗期望結果是怎樣的？ What results are expected in the control group?
+<br> 當然我們不可能事先預知實驗對照組可能出現的結果。此處只討論我們的預期結果。大多數情況下，我們可以從已經進行過的類似臨牀試驗報告中獲得，或者是從非臨牀干預型研究（觀察型研究）報告中獲得對照組的期望結果。</p></li>
+<li><p>如果實驗藥物在治療上確實有差異，當這個差異最小爲多少時希望能從設計的實驗中被檢測到？ How small a treatment difference, if it exists, is important to detect?
+<br> 這一條恐怕是每個臨牀實驗在設計階段最重要，最敏感也是最難做出決定的。如果我們已知這個藥物療效和對照相比差別很大，那麼樣本量不用很大，就足以提供值得信賴的證據。不過臨牀上常常會認爲療效差距不必<strong>非常的</strong>顯著，但是在臨牀意義上也是十分重要的。
+<br> 常常在這個問題上會引起衆多討論，因爲醫生和患者可能認爲任何一點差異都是有臨牀意義的。但是如果我們想檢測出較小的差距，會需要非常巨大的樣本量，這將會是十分不切合實際的。<strong>What needs to be decided upon is the smallest clinically relevant difference that would be important to detect if it were true.</strong></p></li>
+<li><p>在上面第 4 條被決定了以後，還要確定的是我們需要多大的把握來相信這個被檢測出來的療效差別？ With what degree of certainty is needed to be able to detect the treatment difference in 4?
+<br> 在實際臨牀實驗中，結論是從觀察數據中得來的，而不是從我們預想的那個“未知的實驗效果”。觀察獲得的療效差別，可能比預想的大（有效），也很可能比預想的小（無效）。設計較好的臨牀實驗應該有足夠機率觀察到有意義的療效差別，即使觀察得到的結果不如預期的大。當然要增加我們觀察到有意義的療效差別，最簡單的辦法是增加樣本量。這個條件的含義是，當療效真差別真實存在，我們要有足夠大的把握把它通過實驗觀察到。</p></li>
 </ol>
 </div>
 <div id="-type-i-and-type-ii-errors" class="section level3">

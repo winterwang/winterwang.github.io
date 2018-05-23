@@ -342,7 +342,9 @@
       <div class="article-style" itemprop="articleBody">
         <div id="-1" class="section level2">
 <h2>分解平方和 1</h2>
-<p>樣本量均爲 <span class="math inline">\(n\)</span> 的兩變量 <span class="math inline">\(z, \hat{z}\)</span> 如下表，已知這兩個變量滿足條件：<br> <span class="math inline">\(\bar{z}=\frac{1}{n}\sum\limits_{i=1}^nz_i=\frac{1}{n}\sum\limits_{i=1}^n\hat{z}_i=\bar{\hat{z}},\)</span> <br> <span class="math inline">\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</span></p>
+<p>樣本量均爲 <span class="math inline">\(n\)</span> 的兩變量 <span class="math inline">\(z, \hat{z}\)</span> 如下表，已知這兩個變量滿足條件：<br>
+<span class="math inline">\(\bar{z}=\frac{1}{n}\sum\limits_{i=1}^nz_i=\frac{1}{n}\sum\limits_{i=1}^n\hat{z}_i=\bar{\hat{z}},\)</span> <br>
+<span class="math inline">\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</span></p>
 <table>
 <thead>
 <tr class="header">
@@ -386,15 +388,19 @@
 </table>
 <p>此時我們有：</p>
 <ul>
-<li><strong>全平方和</strong>(全変動，總平方和，總變動， <strong>Total sum of Squares</strong>)：<br> <span class="math inline">\(S_T=(z_i-\bar{z})^2+(z_2-\bar{z})^2+\cdots+(z_n-\bar{z})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\bar{z})^2\)</span></li>
-<li><strong>回歸平方和</strong>(回歸變動，<strong>Regression sum of Squares</strong>)<br> <span class="math inline">\(S_R=(\hat{z_1}-\bar{\hat{z}})^2+(\hat{z_2}-\bar{\hat{z}})^2+\cdots+(\hat{z_n}-\bar{\hat{z}})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(\hat{z_i}-\bar{\hat{z}})^2=\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2\)</span></li>
-<li><strong>殘差平方和</strong>(誤差平方和，殘差變動，誤差變動，<strong>residual sum of Squares</strong>)<br> <span class="math inline">\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\)</span></li>
+<li><strong>全平方和</strong>(全変動，總平方和，總變動， <strong>Total sum of Squares</strong>)：<br>
+<span class="math inline">\(S_T=(z_i-\bar{z})^2+(z_2-\bar{z})^2+\cdots+(z_n-\bar{z})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\bar{z})^2\)</span></li>
+<li><strong>回歸平方和</strong>(回歸變動，<strong>Regression sum of Squares</strong>)<br>
+<span class="math inline">\(S_R=(\hat{z_1}-\bar{\hat{z}})^2+(\hat{z_2}-\bar{\hat{z}})^2+\cdots+(\hat{z_n}-\bar{\hat{z}})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(\hat{z_i}-\bar{\hat{z}})^2=\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2\)</span></li>
+<li><strong>殘差平方和</strong>(誤差平方和，殘差變動，誤差變動，<strong>residual sum of Squares</strong>)<br>
+<span class="math inline">\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\)</span></li>
 <li>上面三個平方和之間，有如下的關系：
 <span class="math display" id="eq:Sumofsquares">\[\begin{equation}
   S_T=S_R+S_e
   \tag{1}
   \end{equation}\]</span>
-<br> 既：全平方和等於殘差平方和與回歸平方和之和。<a href="#eq:Sumofsquares">(1)</a>式被稱爲<strong>平方和的分解(decomposition of sum of squares)</strong></li>
+<br>
+既：全平方和等於殘差平方和與回歸平方和之和。<a href="#eq:Sumofsquares">(1)</a>式被稱爲<strong>平方和的分解(decomposition of sum of squares)</strong></li>
 </ul>
 <div id="refeqsumofsquares" class="section level5">
 <h5>證明<a href="#eq:Sumofsquares">(1)</a>式</h5>
@@ -411,7 +417,9 @@ S_T &amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\
 &amp; = S_e + S_R
 \end{split}
 \end{equation}
-\]</span> 最後一步等式，利用了一開始給出的條件 <span class="math inline">\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</span><br> 這裏的平方和分解與<strong>回歸分析</strong>有着緊密的聯系。</p>
+\]</span>
+最後一步等式，利用了一開始給出的條件 <span class="math inline">\(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</span><br>
+這裏的平方和分解與<strong>回歸分析</strong>有着緊密的聯系。</p>
 </div>
 </div>
 <div id="-2" class="section level2">
@@ -457,11 +465,16 @@ S_T &amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\
 </table>
 <p>此時我們有：</p>
 <ul>
-<li>樣本<strong>平均值</strong>： <br> <span class="math inline">\(\bar{z_1}=\frac{1}{n}\sum\limits_{i=1}^nz_{i1}, \;\bar{z_2}=\frac{1}{m}\sum\limits_{i=1}^mz_{i2}\)</span></li>
-<li>樣本<strong>總平均值</strong>： <br> <span class="math inline">\(\bar{z}=\frac{1}{n+m}(\sum\limits_{i=1}^nz_{i1}+\sum\limits_{i=1}^mz_{i2})\)</span></li>
-<li>全<strong>平方和</strong> (全変動，總平方和，總變動, <strong>Total sum of Squares</strong>)：<br> <span class="math inline">\(S_T=\left\{(z_{11}-\bar{z})^2+(z_{21}-\bar{z})^2+\cdots+(z_{n1}-\bar{z})^2\right\}\\  \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z})^2+(z_{22}-\bar{z})^2+\cdots+(z_{m2}-\bar{z})^2\right\}\\  \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z})^2\)</span></li>
-<li><strong>羣內平方和</strong>(組內平方和，級內平方和，羣內變動，級內變動，變量內平方和，變量內變動，<strong>Within-groups sum of Squares</strong>)：<br> <span class="math inline">\(S_W=\left\{(z_{11}-\bar{z_1})^2+(z_{21}-\bar{z_1})^2+\cdots+(z_{n1}-\bar{z_1})^2\right\}\\  \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z_2})^2+(z_{22}-\bar{z_2})^2+\cdots+(z_{m2}-\bar{z_2})^2\right\}\\  \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z_2})^2\)</span></li>
-<li><strong>羣間平方和</strong>(組間平方和，級間平方和，羣間變動，級間變動，變量間平方和，變量間變動，<strong>Between-groups sum of Squares</strong>)：<br> <span class="math inline">\(S_B=\left\{(\bar{z_1}-\bar{z})^2+(\bar{z_1}-\bar{z})^2+\cdots+(\bar{z_1}-\bar{z})^2\right\}\\ \;\;\;\;\;\;\;\;+\left\{(\bar{z_2}-\bar{z})^2+(\bar{z_2}-\bar{z})^2+\cdots+(\bar{z_2}-\bar{z})^2\right\}\\ \;\;\;\;=\sum\limits_{i=1}^n(\bar{z_1}-\bar{z})^2+\sum\limits_{i=1}^m(\bar{z_2}-\bar{z})^2\\ \;\;\;\;=n(\bar{z_1}-\bar{z})^2+m(\bar{z_2}-\bar{z})^2\)</span></li>
+<li>樣本<strong>平均值</strong>： <br>
+<span class="math inline">\(\bar{z_1}=\frac{1}{n}\sum\limits_{i=1}^nz_{i1}, \;\bar{z_2}=\frac{1}{m}\sum\limits_{i=1}^mz_{i2}\)</span></li>
+<li>樣本<strong>總平均值</strong>： <br>
+<span class="math inline">\(\bar{z}=\frac{1}{n+m}(\sum\limits_{i=1}^nz_{i1}+\sum\limits_{i=1}^mz_{i2})\)</span></li>
+<li>全<strong>平方和</strong> (全変動，總平方和，總變動, <strong>Total sum of Squares</strong>)：<br>
+<span class="math inline">\(S_T=\left\{(z_{11}-\bar{z})^2+(z_{21}-\bar{z})^2+\cdots+(z_{n1}-\bar{z})^2\right\}\\ \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z})^2+(z_{22}-\bar{z})^2+\cdots+(z_{m2}-\bar{z})^2\right\}\\ \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z})^2\)</span></li>
+<li><strong>羣內平方和</strong>(組內平方和，級內平方和，羣內變動，級內變動，變量內平方和，變量內變動，<strong>Within-groups sum of Squares</strong>)：<br>
+<span class="math inline">\(S_W=\left\{(z_{11}-\bar{z_1})^2+(z_{21}-\bar{z_1})^2+\cdots+(z_{n1}-\bar{z_1})^2\right\}\\ \;\;\;\;\;\;\;\;+\left\{(z_{12}-\bar{z_2})^2+(z_{22}-\bar{z_2})^2+\cdots+(z_{m2}-\bar{z_2})^2\right\}\\ \;\;\;\;=\sum\limits_{i=1}^n(z_{i1}-\bar{z_1})^2+\sum\limits_{i=1}^m(z_{i2}-\bar{z_2})^2\)</span></li>
+<li><strong>羣間平方和</strong>(組間平方和，級間平方和，羣間變動，級間變動，變量間平方和，變量間變動，<strong>Between-groups sum of Squares</strong>)：<br>
+<span class="math inline">\(S_B=\left\{(\bar{z_1}-\bar{z})^2+(\bar{z_1}-\bar{z})^2+\cdots+(\bar{z_1}-\bar{z})^2\right\}\\ \;\;\;\;\;\;\;\;+\left\{(\bar{z_2}-\bar{z})^2+(\bar{z_2}-\bar{z})^2+\cdots+(\bar{z_2}-\bar{z})^2\right\}\\ \;\;\;\;=\sum\limits_{i=1}^n(\bar{z_1}-\bar{z})^2+\sum\limits_{i=1}^m(\bar{z_2}-\bar{z})^2\\ \;\;\;\;=n(\bar{z_1}-\bar{z})^2+m(\bar{z_2}-\bar{z})^2\)</span></li>
 <li>上面三個平方和之間有如下的關系：
 <span class="math display" id="eq:Sumofsqua">\[\begin{equation}
 S_T=S_W+S_B

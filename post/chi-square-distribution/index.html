@@ -346,7 +346,8 @@
         <div class="section level3">
 <h3>卡方分佈的期望和方差的證明：</h3>
 <p>當 <span class="math inline">\(X\sim N(0,1)\)</span> 時， <span class="math inline">\(X^2\sim \mathcal{X}_1^2\)</span></p>
-<p>如果 <span class="math inline">\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)</span>， 那麼 <span class="math inline">\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)</span></p>
+<p>如果 <span class="math inline">\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)</span>，
+那麼 <span class="math inline">\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)</span></p>
 <p>其中： <span class="math inline">\(\mathcal{X}_n^2\)</span> 表示自由度爲 <span class="math inline">\(n\)</span> 的卡方分佈。</p>
 <p>且 <span class="math inline">\(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)</span></p>
 <div class="section level4">
@@ -378,7 +379,8 @@ E(X_1^4) &amp;= \int_{-\infty}^{+\infty} x^4f(x)dx \\
          &amp;=\frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^3(-x)e^{(-\frac{x^2}{2})}dx
 \end{aligned}
 \]</span></p>
-<p>令 <span class="math inline">\(u=x^3, v=e^{(-\frac{x^2}{2})},t=-\frac{x^2}{2}\)</span> 可以推導：</p>
+<p>令 <span class="math inline">\(u=x^3, v=e^{(-\frac{x^2}{2})},t=-\frac{x^2}{2}\)</span>
+可以推導：</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{dv}{dx} &amp;= \frac{dv}{dt}\frac{dt}{dx} \\
@@ -412,7 +414,8 @@ E(X_1^4) &amp;= \frac{-3}{\sqrt{2\pi}}\{[a\:b] \rvert_{-\infty}^{+\infty} - \int
 \]</span></p>
 <p>下面令 <span class="math inline">\(I=\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})}dx\\ \Rightarrow I^2=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{(-\frac{x^2+y^2}{2})}dxdy\)</span></p>
 <p>接下來需要用到 <a href="https://www.youtube.com/watch?v=r0fv9V9GHdo">座標轉換</a>的知識，將 <span class="math inline">\(x,y\)</span> 表示的笛卡爾座標，轉換爲用角度 <span class="math inline">\(\theta\)</span> 和半徑 <span class="math inline">\(r\)</span> 表示的形式。之後的證明可以在<a href="https://www.youtube.com/watch?v=fWOGfzC3IeY">油管</a>上看到，但是我還是繼續證明下去。</p>
-<p>直角座標系 (cartesian coordinators) 和 極座標系 (polar coordinators) 之間轉換的關係如下：</p>
+<p>直角座標系 (cartesian coordinators) 和
+極座標系 (polar coordinators) 之間轉換的關係如下：</p>
 <p><span class="math display">\[
 \begin{aligned}
 x&amp;=r\:cos\theta\\
@@ -420,7 +423,8 @@ y&amp;=r\:sin\theta\\
 r^2&amp;=x^2+y^2\\
 \end{aligned}
 \]</span></p>
-<p>座標轉換以後可以繼續求 <span class="math inline">\(E(X_1^4)\)</span>。 在那之前我們先求 <span class="math inline">\(I^2\)</span>。 注意轉換座標系統以後，<span class="math inline">\(\theta\in[0,2\pi], r\in[0,+\infty]\)</span></p>
+<p>座標轉換以後可以繼續求 <span class="math inline">\(E(X_1^4)\)</span>。 在那之前我們先求 <span class="math inline">\(I^2\)</span>。
+注意轉換座標系統以後，<span class="math inline">\(\theta\in[0,2\pi], r\in[0,+\infty]\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 I^2 &amp;= \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{(-\frac{x^2+y^2}{2})}dxdy \\
@@ -450,7 +454,8 @@ E(X_1^4) &amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})
 \Rightarrow Var(X_n^2) &amp;= 2n
 \end{aligned}
 \]</span></p>
-<p>結論：<span class="math inline">\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)</span> 時，<span class="math inline">\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)</span> 服從卡方分佈，其期望 <span class="math inline">\(E(X_n^2)=n\)</span>，方差 <span class="math inline">\(Var(X_n^2)=2n\)</span>。 根據<a href="https://winterwang.github.io/post/central-limit-theory/">中心極限定理</a></p>
+<p>結論：<span class="math inline">\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)</span> 時，<span class="math inline">\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)</span> 服從卡方分佈，其期望 <span class="math inline">\(E(X_n^2)=n\)</span>，方差 <span class="math inline">\(Var(X_n^2)=2n\)</span>。
+根據<a href="https://winterwang.github.io/post/central-limit-theory/">中心極限定理</a></p>
 <p><span class="math display">\[n\rightarrow \infty, X_n^2\sim N(n, 2n)\]</span></p>
 </div>
 </div>
@@ -489,9 +494,9 @@ E(X_1^4) &amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})
   <h3>Related</h3>
   <ul>
     
-    <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
-    
     <li><a href="/post/frequentist-statistical-inference02/">估計和精確度的概念</a></li>
+    
+    <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
     
     <li><a href="/post/central-limit-theory/">偉大的中心極限定理</a></li>
     

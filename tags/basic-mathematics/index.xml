@@ -18,8 +18,8 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>二項分佈的正態分佈近似假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\)根據二項分佈的概率公式，計算將會變得很繁瑣複雜。解決辦法：應用中心極限定理。中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
-問題在於，多大的 \(n\) 才能算大樣本呢？當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)泊松分佈的正態分佈近似假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
+      <description>二項分佈的正態分佈近似假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\)根據二項分佈的概率公式，計算將會變得很繁瑣複雜。解決辦法：應用中心極限定理。中心極限定理告訴我們，當樣本量足夠大時:\[X\sim N（n\pi, n\pi(1-\pi))\]
+問題在於，多大的 \(n\) 才能算大樣本呢？當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)泊松分佈的正態分佈近似假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理：\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
 需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
 正態分佈模擬的校正：continuity corrections如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
     </item>
@@ -31,13 +31,13 @@
       
       <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
       <description>最近明顯可以感覺到課程的步驟開始加速。看我的課表：
-手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
+手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
 這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。
 今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。
 協方差 Covariance之前我們定義過，兩個獨立連續隨機變量 \(X,Y\) 之和的方差 Variance ：
 \[Var(X+Y)=Var(X)+Var(Y)\]
 然而如果他們並不相互獨立的話：
-\[\begin{aligned}Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\&amp;amp;= E[(X+Y)-(E(X)+E(Y))^2] \\&amp;amp;= E[(X-E(X)) - (Y-E(Y))^2] \\&amp;amp;= E[(X-E(X))^2+(Y-E(Y))^2 \\&amp;amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\&amp;amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]\end{aligned}\]可以發現在兩者和的方差公式展開之後多了一部分 \(E[(X-E(X))(Y-E(Y))]\)。 這個多出來的一部分就說明了二者 \((X, Y)\) 之間的關係。它被定義爲協方差 (Covariance): \[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]
+\[\begin{aligned}Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\&amp;amp;= E[(X+Y)-(E(X)+E(Y))^2] \\&amp;amp;= E[(X-E(X)) - (Y-E(Y))^2] \\&amp;amp;= E[(X-E(X))^2+(Y-E(Y))^2 \\&amp;amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\&amp;amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]\end{aligned}\]可以發現在兩者和的方差公式展開之後多了一部分 \(E[(X-E(X))(Y-E(Y))]\)。 這個多出來的一部分就說明了二者 \((X, Y)\) 之間的關係。它被定義爲協方差 (Covariance):\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]
 所以：
 \[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]
 要記住，協方差只能用於評價(X,Y)之間的線性關係 (Linear Association)。
@@ -53,7 +53,7 @@
       <guid>https://winterwang.github.io/post/probability3/</guid>
       <description>二項分佈的概念 Binomial distribution二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 \(n\) 次相互獨立的成功率爲 \(\pi\) 的伯努利實驗 (\(n\) independent Bernoulli trials) 中成功的次數。
 當 \(X\) 服從二項分佈，記爲 \(X \sim binomial(n, \pi)\) 或\(X \sim bin(n, \pi)\)。它的(第 \(x\) 次實驗的)概率被定義爲：
-\[\begin{align}P(X=x) &amp;amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\&amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\&amp;amp; for\;\; x = 0,1,2,\dots,n\end{align}\]二項分佈的期望和方差期望 \(E(X)\)若 \(X \sim bin(n,\pi)\)，那麼 \(X\) 就是這一系列獨立伯努利實驗中成功的次數。用 \(X_i, i =1,\dots, n\) 標記每個相互獨立的伯努利實驗。那麼我們可以知道 \(X=\sum_{i=1}^nX_i\)。\[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\&amp;amp;= E(X_1+X_2+\cdots+X_n) \\&amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\&amp;amp;= \sum_{i=1}^nE(X_i)\\&amp;amp;= \sum_{i=1}^n\pi \\&amp;amp;= n\pi\end{align}\]方差 \(Var(X)\)\[\begin{align}Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\&amp;amp;= Var(X_i+X_2+\cdots+X_n) \\&amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\&amp;amp;= \sum_{i=1}^nVar(X_i) \\&amp;amp;= n\pi(1-\pi) \\\end{align}\]超幾何分佈 hypergeometric distribution假設我們從總人數爲 \(N\) 的人羣中，採集一個樣本 \(n\)。假如已知在總體人羣中(\(N\))有 \(M\) 人患有某種疾病。請問採集的樣本 \(X=n\) 中患有這種疾病的人，服從怎樣的分佈？</description>
+二項分佈的期望和方差期望 \(E(X)\)若 \(X \sim bin(n,\pi)\)，那麼 \(X\) 就是這一系列獨立伯努利實驗中成功的次數。用 \(X_i, i =1,\dots, n\) 標記每個相互獨立的伯努利實驗。那麼我們可以知道 \(X=\sum_{i=1}^nX_i\)。\[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\&amp;amp;= E(X_1+X_2+\cdots+X_n) \\&amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\&amp;amp;= \sum_{i=1}^nE(X_i)\\&amp;amp;= \sum_{i=1}^n\pi \\&amp;amp;= n\pi\end{align}\]方差 \(Var(X)\)\[\begin{align}Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\&amp;amp;= Var(X_i+X_2+\cdots+X_n) \\&amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\&amp;amp;= \sum_{i=1}^nVar(X_i) \\&amp;amp;= n\pi(1-\pi) \\\end{align}\]超幾何分佈 hypergeometric distribution假設我們從總人數爲 \(N\) 的人羣中，採集一個樣本 \(n\)。假如已知在總體人羣中(\(N\))有 \(M\) 人患有某種疾病。請問採集的樣本 \(X=n\) 中患有這種疾病的人，服從怎樣的分佈？</description>
     </item>
     
     <item>
@@ -74,20 +74,25 @@
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/probability2-4/</guid>
-      <description>Bayes 理論的概念許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 \(P(S|A)\)
+      <description>Bayes 理論的概念許多時候，我們需要將概率中的條件相互對調。例如：在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 \(P(S|A)\)
 這裏先引入貝葉斯的概念：
-我們可以將 \(P(A\cap S)\) 寫成： \[P(A\cap S)=P(A|S)P(S)\\or\\P(A\cap S)=P(S|A)P(A)\] 這兩個等式是完全等價的。我們將他們連起來：
+我們可以將 \(P(A\cap S)\) 寫成：\[P(A\cap S)=P(A|S)P(S)\\or\\P(A\cap S)=P(S|A)P(A)\]這兩個等式是完全等價的。我們將他們連起來：
 \[P(S|A)P(A)=P(A|S)P(S)\\\Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]
-是不是看起來又像是寫了一堆廢話？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。
+是不是看起來又像是寫了一堆廢話？沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。
 再繼續，我們可以利用另外一個廢話：\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)
 用上面的公式替換掉 \(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)
 可以得到貝葉斯理論公式：
 \[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]
 回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：
-\[\begin{align}P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\&amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\&amp;amp;= 0.24\end{align}\]所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(\(P(S|A)\))。
-期望 Expectation (或均值 or mean) 和 方差 Variance期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 \(X\) (discrete random variables)，它的期望被定義爲：
+所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(\(P(S|A)\))。
+期望 Expectation (或均值 or mean) 和 方差 Variance期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。對於離散型隨機變量 \(X\) (discrete random variables)，它的期望被定義爲：
 \[E(X)=\sum_x xP(X=x)\]
-所以就是將所有 \(X\) 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 \(\mu\) 來標記。</description>
+所以就是將所有 \(X\) 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 \(\mu\) 來標記。
+方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：
+\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]
+實際上我們更加常用的是它的另外一個公式：
+\[Var(X)=E(X^2)-E(X)^2\]
+證明 上面兩個方差公式相等方差的性質：\(Var(X+b)=Var(X)\)\(Var(aX)=a^2Var(X)\)\(Var(aX+b)=a^2Var(X)\)伯努利分佈 Bernoulli distribution伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 \(\pi\)。那麼我們可以計算這個分佈的期望值:</description>
     </item>
     
     <item>
@@ -119,8 +124,8 @@
       <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
       <description>行向量乘以矩陣，乘以列向量可得標量\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\) 或者 \(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\) 的形式其實質上均爲 \(1\times1\)的標量，即最早我們接觸到的加法算式。
 這樣的乘法計算通過矩陣（包括向量）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。
-在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： \[\underline{x}=\left(\begin{array}{c}x_1 \\x_2 \\x_3\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3\end{array}\right)\]
-\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\) 其中 \[D=\left(\begin{array}{c}a_1 &amp;amp; 0 &amp;amp; 0 \\0 &amp;amp; a_2 &amp;amp; 0 \\0 &amp;amp; 0 &amp;amp; a_3\end{array}\right)\]</description>
+在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習：\[\underline{x}=\left(\begin{array}{c}x_1 \\x_2 \\x_3\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3\end{array}\right)\]
+\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\) 其中\[D=\left(\begin{array}{c}a_1 &amp;amp; 0 &amp;amp; 0 \\0 &amp;amp; a_2 &amp;amp; 0 \\0 &amp;amp; 0 &amp;amp; a_3\end{array}\right)\]</description>
     </item>
     
     <item>
@@ -132,7 +137,7 @@
       <description>\[X=\left(\begin{array}{c}x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\\vdots \\a_n\end{array}\right), \underline{0}=\left(\begin{array}{c}\underline{0}\\\underline{0}\\\vdots\\\underline{0}\\\end{array}\right)\]
 用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：
 \[X\underline{a}=\underline{0}\]
-即： \[\begin{align}\left\{\begin{array}{ll}x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = 0\\x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = 0\\\cdots\\x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = 0\\\end{array}\right.</description>
+即：\[\begin{align}\left\{\begin{array}{ll}x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = 0\\x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = 0\\\cdots\\x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = 0\\\end{array}\right.</description>
     </item>
     
     <item>
@@ -143,7 +148,7 @@
       <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
       <description>擴大係數矩陣 \((X \underline{y})\) 通過行的基本變形，轉化成爲 \((E \underline{y}^*)\) 的時候，寫在右側的 \(\underline{y}^*\) 就是所求的 \(\underline{a}\)。
 練習 解下列連立一次方程式\[\begin{align}\left\{\begin{array}{ll}a_1+2a_2+a_3 = 2\\2a_1+a_2+a_3 = 3\\a_1+a_2+2a_3 = 3\end{array}\right.\end{align}\]
-解此連立方程組的擴大係數矩陣爲： \[(X \underline{y})=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3\end{array}\right)\] 下面開始行變形： \[\left(\begin{array}{c}1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\\end{array}\right) \begin{align}\left\{\begin{array}{rr}(1)\\(2)\\(3)\end{array}\right.</description>
+解此連立方程組的擴大係數矩陣爲：\[(X \underline{y})=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3\end{array}\right)\]下面開始行變形：\[\left(\begin{array}{c}1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\\end{array}\right) \begin{align}\left\{\begin{array}{rr}(1)\\(2)\\(3)\end{array}\right.</description>
     </item>
     
     <item>
@@ -167,7 +172,7 @@
       <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
       <description>逆矩陣法解連立一次方程式\(X\) 為正則矩陣時(\(|X|\neq0\))，給 \(X\underline{a}=\underline{y}\) 等式兩邊同時乘以 \(X^{-1}\)，可以得到 \(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)。由此方法可以得到 \(\underline{a}=X^{-1}\underline{y}\)。
 練習 解下列連立一次方程式\[\begin{align}\left\{\begin{array}{ll}a_1+2a_2+a_3 = 2\\2a_1+a_2+a_3 = 3\\a_1+a_2+2a_3 = 3\end{array}\right.\end{align}\]
-解元連立方程式可以寫作\(X\underline{a}=\underline{y}\)，其中 \[X=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 \\2 &amp;amp; 1 &amp;amp; 1 \\1 &amp;amp; 1 &amp;amp; 2\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3 \\\end{array}\right), \underline{y}=\left(\begin{array}{c}2 \\3 \\3 \\\end{array}\right)\] 之前我們已經用行的基本變形法和逆矩陣法分別計算過了 \(X^{-1}\) ： \[X^{-1}=\left(\begin{array}{c}-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\3/4 &amp;amp; -1/4 &amp;amp; -1/4\\-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\\end{array}\right)\]</description>
+解元連立方程式可以寫作\(X\underline{a}=\underline{y}\)，其中\[X=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 \\2 &amp;amp; 1 &amp;amp; 1 \\1 &amp;amp; 1 &amp;amp; 2\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3 \\\end{array}\right), \underline{y}=\left(\begin{array}{c}2 \\3 \\3 \\\end{array}\right)\]之前我們已經用行的基本變形法和逆矩陣法分別計算過了 \(X^{-1}\) ：\[X^{-1}=\left(\begin{array}{c}-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\3/4 &amp;amp; -1/4 &amp;amp; -1/4\\-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\\end{array}\right)\]</description>
     </item>
     
     <item>
@@ -176,7 +181,7 @@
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>連立一次方程式： \(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)
+      <description>連立一次方程式：\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)
 可以看成是利用：
 \(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)</description>
     </item>
@@ -202,7 +207,7 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       
       <guid>https://winterwang.github.io/post/2017-07-07/</guid>
       <description>行的基本變形Theorem 1 (行的基本變形) 對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。
-給任意一行乘以/除以一個非零的數。給任意一行加上/減去另外任意行的倍數。將任意兩行的對應元素互換。練習基本變形：用行的基本變形求矩陣 \(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\) 的逆矩陣 \(X^{-1}\) 首先，將矩陣 \(X\) 和同次單位矩陣 \(E_3\) 的元素寫成如下的左右並列的形式（用點隔開）\((X, E)\)。數字 (1) (2) (3) 表示行數：
+給任意一行乘以/除以一個非零的數。給任意一行加上/減去另外任意行的倍數。將任意兩行的對應元素互換。練習基本變形：用行的基本變形求矩陣 \(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\) 的逆矩陣 \(X^{-1}\) 首先，將矩陣 \(X\) 和同次單位矩陣 \(E_3\) 的元素寫成如下的左右並列的形式（用點隔開）\((X, E)\)。數字 (1) (2) (3) 表示行數：
 \[\left(\begin{array}{c}1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 1 &amp;amp; 0\\1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\\end{array}\right) \begin{align}\left\{\begin{array}{rr}(1)\\(2)\\(3)\end{array}\right.</description>
     </item>
     
@@ -275,7 +280,7 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-08/</guid>
-      <description>單位矩陣對角成分全部都是 \(1\) (此時我們假定有 \(n\) 個)，的對角矩陣被叫做單位矩陣(identity matrix, unit matrix)。寫作： \(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\) 下標 \(n\) 常被省略。一般的，將 \(E_n\) 從左往右乘以 \(n\) 次正方形矩陣 \(A\)，的結果和從右往左相乘的結果是相等的： \(E_nA=AE_n=A\)。</description>
+      <description>單位矩陣對角成分全部都是 \(1\) (此時我們假定有 \(n\) 個)，的對角矩陣被叫做單位矩陣(identity matrix, unit matrix)。寫作：\(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\) 下標 \(n\) 常被省略。一般的，將 \(E_n\) 從左往右乘以 \(n\) 次正方形矩陣 \(A\)，的結果和從右往左相乘的結果是相等的： \(E_nA=AE_n=A\)。</description>
     </item>
     
     <item>
@@ -325,7 +330,7 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-19/</guid>
-      <description>向量的內積 (inner product)Theorem 1 (vectors inner product) 向量的內積運算，僅限定於維度相同的兩個向量之間。一個向量爲橫向量寫在左側，一個向量爲列向量寫在右側，兩個向量的相對應成分一一相乘，然後將各成分乘積相加的過程，我們稱之爲內積(inner product, scalar product)運算。內積運算結果通常不會是向量，而是標量(scalar)，或正或負，或爲零。向量 \(\underline{a}\) 與向量 \(\underline{b}\) 的內積寫作：\(\underline{a}^t\underline{b}, \underline{b}^t\underline{a}\) 或者寫作： \(\underline{a}\cdot\underline{b}, (\underline{a},\underline{b}), &amp;lt;\underline{a},\underline{b}&amp;gt;\)。內積爲 \(0\) 的向量我們稱他們爲正交向量(orthogonal)，寫作：\(\underline{a}\perp\underline{b}\)。 內積，與和記號: \(\sum\) 有緊密聯系。我們常常會把 \(\sum\) 式子/量寫成向量的內積形式。練習列向量 \(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\) 的內積：
+      <description>向量的內積 (inner product)Theorem 1 (vectors inner product) 向量的內積運算，僅限定於維度相同的兩個向量之間。一個向量爲橫向量寫在左側，一個向量爲列向量寫在右側，兩個向量的相對應成分一一相乘，然後將各成分乘積相加的過程，我們稱之爲內積(inner product, scalar product)運算。內積運算結果通常不會是向量，而是標量(scalar)，或正或負，或爲零。向量 \(\underline{a}\) 與向量 \(\underline{b}\) 的內積寫作：\(\underline{a}^t\underline{b}, \underline{b}^t\underline{a}\) 或者寫作： \(\underline{a}\cdot\underline{b}, (\underline{a},\underline{b}), &amp;lt;\underline{a},\underline{b}&amp;gt;\)。內積爲 \(0\) 的向量我們稱他們爲正交向量(orthogonal)，寫作：\(\underline{a}\perp\underline{b}\)。內積，與和記號: \(\sum\) 有緊密聯系。我們常常會把 \(\sum\) 式子/量寫成向量的內積形式。練習列向量 \(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\) 的內積：
 \(\underline{a}^t\underline{b}=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}^t\underline{a}\)
 橫向量 \(\underline{a}=(a_1,a_2,a_3), \underline{b}=(b_1,b_2,b_3)\) 的內積：
 \(\underline{a}\underline{b}^t=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}\underline{a}^t\)
@@ -372,7 +377,7 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
 全平方和(全変動，總平方和，總變動， Total sum of Squares)：
 \(S_T=(z_i-\bar{z})^2+(z_2-\bar{z})^2+\cdots+(z_n-\bar{z})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\bar{z})^2\)回歸平方和(回歸變動，Regression sum of Squares)
 \(S_R=(\hat{z_1}-\bar{\hat{z}})^2+(\hat{z_2}-\bar{\hat{z}})^2+\cdots+(\hat{z_n}-\bar{\hat{z}})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(\hat{z_i}-\bar{\hat{z}})^2=\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2\)殘差平方和(誤差平方和，殘差變動，誤差變動，residual sum of Squares)
-\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\)上面三個平方和之間，有如下的關系：\[\begin{equation}S_T=S_R+S_e\tag{1}\end{equation}\]既：全平方和等於殘差平方和與回歸平方和之和。(1)式被稱爲平方和的分解(decomposition of sum of squares)證明(1)式解：\[\begin{equation}\begin{split}S_T &amp;amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})+(\hat{z_i}-\bar{z})\right\}^2\\&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})^2+(\hat{z_i}-\bar{z})^2+2(z_i-\hat{z_i})(\hat{z_i}-\bar{z})\right\}\\&amp;amp; = \sum\limits_{i=1}^n(z_i-\hat{z_i})^2+\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2 + 0\\&amp;amp; = S_e + S_R\end{split}\end{equation}\] 最後一步等式，利用了一開始給出的條件 \(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</description>
+\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\)上面三個平方和之間，有如下的關系：\[\begin{equation}S_T=S_R+S_e\tag{1}\end{equation}\]既：全平方和等於殘差平方和與回歸平方和之和。(1)式被稱爲平方和的分解(decomposition of sum of squares)證明(1)式解：\[\begin{equation}\begin{split}S_T &amp;amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})+(\hat{z_i}-\bar{z})\right\}^2\\&amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})^2+(\hat{z_i}-\bar{z})^2+2(z_i-\hat{z_i})(\hat{z_i}-\bar{z})\right\}\\&amp;amp; = \sum\limits_{i=1}^n(z_i-\hat{z_i})^2+\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2 + 0\\&amp;amp; = S_e + S_R\end{split}\end{equation}\]最後一步等式，利用了一開始給出的條件 \(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</description>
     </item>
     
     <item>
@@ -381,8 +386,8 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-15/</guid>
-      <description>數據的變換平均值附近的偏差:各個數值 \(x_i\) 與樣本平均值 \(\bar{x}\) 的差 \[x_i^\prime=x_i-\bar{x} (i = 1,2,\cdots,n)\] 稱爲數據 \(x_i\) 在它的平均值 \(\bar{x}\) 附近的偏差(deviation)。通常我們說求偏差，指的是，對數據 \(x_i\) 進行偏差轉換。這個過程又被稱作是中心變換(centering)關於偏差，我們列舉如下兩個有特徵的的概括統計：樣本平均值：\[\begin{equation}\bar{x}^\prime=\frac{1}{n}\sum_{i=1}^nx_i^\prime=0\tag{1}\end{equation}\]樣本偏差平方和：\[\begin{equation}SS^\prime=\sum_{i=1}^n(x^\prime)^2=SS\tag{2}\end{equation}\]練習：證明(1)解：證明(1): \[\bar{x}^\prime=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})}{n}\\\;\;\;=\frac{\sum\limits_{i=1}^nx_i-n\bar{x}}{n}\\\;\;\;=\frac{\sum\limits_{i=1}^nx_i}{n}-\bar{x}\\\;\;\;=\bar{x}-\bar{x}=0\]
-數據的標準化：將數據 \(x_i\) 的平均值 \(\bar{x}\) 附近的偏差除以樣本標準偏差 \(s\) 從而獲得下面式子所表示的數據 \(z_i\) 的過程，被叫做數據的標準化 (standardization)：\[\begin{equation}z_i=\frac{x_i-\bar{x}}{s}\tag{3}\end{equation}\]標準化後的數據 \(z_i\) 的概括統計有下列特徵：樣本平均值：\[\begin{equation}\bar{z}=\frac{1}{n}\sum_{i=1}^nz_i=0\tag{4}\end{equation}\]樣本方差:\[\begin{equation}s_{z}^2=\frac{1}{n}\sum_{i=1}^nz_i^2=1\tag{5}\end{equation}\]由於標準化數據具有上述兩個非常顯著的特徵，均值爲 \(0\)，方差爲 \(1\)，因此我們實際分析數據過程中常常對數據進行標準化。標準化以後的數據，單位消失，變成了一組無名數\(\divideontimes\) 數據的標準化，有時你會看到被定義爲:\[\begin{equation}z_i=\frac{x_i-\bar{x}}{u}\tag{6}\end{equation}\]此時的不偏樣本方差爲：\[\begin{equation}u_z^2=\frac{1}{n-1}\sum_{i=1}{n}z_i^2=1\tag{7}\end{equation}\]2變量數據的概括統計：樣本量同爲 \(n\) 的 \(2\) 變量 \(x_1,x_2\) 的數據，表示爲如下表格：個体の番号変量 \(x_1\)変量 \(x_2\)\(1\)\(x_{11}\)\(x_{12}\)\(2\)\(x_{21}\)\(x_{22}\)\(\vdots\)\(\vdots\)\(\vdots\)\(i\)\(x_{i1}\)\(x_{i2}\)\(\vdots\)\(\vdots\)\(\vdots\)\(n\)\(x_{n1}\)\(x_{n2}\)按照變量 \(x_1,x_2\) 各自的定義：樣本平均值：\(\bar{x_1}=\frac{1}{n}\sum\limits_{i=1}^nx_{i1}, \; \bar{x_2}=\frac{1}{n}\sum\limits_{i=1}^nx_{i2}\)樣本偏差平方和: \(SS_1=\sum\limits_{i=1}^n(x_{i1}-\bar{x_1})^2, \; SS_2=\sum\limits_{i=1}^n(x_{i2}-\bar{x_2})^2\)樣本方差： \(s_1^2=\frac{SS_1}{n}, \; s_2^2=\frac{SS_2}{n}\)樣本標準偏差： \(s_1=\sqrt{s_1^2}, \; s_2=\sqrt{s_2^2}\)不偏樣本方差： \(u_1^2=\frac{SS}{n-1}, \; u_2^2=\frac{SS_2}{n-1}\)不偏樣本方差平方根: \(u_1=\sqrt{u_1^2}, \; u_2=\sqrt{u_2^2}\)對於這樣一對變量 \(x_1,x_2\) 來說，我們又可以追加如下的概括統計：樣本總體平均值： \(\bar{x}=\frac{1}{n+n}(\sum\limits_{i-1}^nx_{i1}+\sum\limits_{i-1}^nx_{i2})\)樣本方差積和(cross-product)：\[\begin{equation}\begin{split}S_{12} &amp;amp; = \sum_{i=1}^n(x_{i1}-\bar{x_1})\cdot(x_{i2}-\bar{x_2})\\&amp;amp; = \sum_{i=1}^n(x_{i1}x_{i2}-\bar{x_1}x_{i2}-x_{i1}\bar{x_2}+\bar{x_1}\bar{x_2})\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\sum_{i=1}^nx_{i2}-{\sum_{i=1}^nx_{i1}}\bar{x_2}+n\bar{x_1}\bar{x_2}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\cdot n\bar{x_2}-n\bar{x_1}\cdot\bar{x_2}+n\bar{x_1}\bar{x_2}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\bar{x_1}\cdot\bar{x_2}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\frac{\sum\limits_{i=1}^nx_{i1}}{n}\cdot\frac{\sum\limits_{i=1}^nx_{i2}}{n}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\frac{1}{n}(\sum_{i=1}^nx_{i1})(\sum_{i=1}^nx_{i2}) = S_{21}\end{split}\tag{8}\end{equation}\]樣本協方差(covariance，共分散)：\(s_{12}=\frac{S_{12}}{n}=\frac{S_{21}}{n}=s_{21}\)</description>
+      <description>數據的變換平均值附近的偏差:各個數值 \(x_i\) 與樣本平均值 \(\bar{x}\) 的差 \[x_i^\prime=x_i-\bar{x} (i = 1,2,\cdots,n)\] 稱爲數據 \(x_i\) 在它的平均值 \(\bar{x}\) 附近的偏差(deviation)。通常我們說求偏差，指的是，對數據 \(x_i\) 進行偏差轉換。這個過程又被稱作是中心變換(centering)關於偏差，我們列舉如下兩個有特徵的的概括統計：樣本平均值：\[\begin{equation}\bar{x}^\prime=\frac{1}{n}\sum_{i=1}^nx_i^\prime=0\tag{1}\end{equation}\]樣本偏差平方和：\[\begin{equation}SS^\prime=\sum_{i=1}^n(x^\prime)^2=SS\tag{2}\end{equation}\]練習：證明(1)解：證明(1):\[\bar{x}^\prime=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})}{n}\\\;\;\;=\frac{\sum\limits_{i=1}^nx_i-n\bar{x}}{n}\\\;\;\;=\frac{\sum\limits_{i=1}^nx_i}{n}-\bar{x}\\\;\;\;=\bar{x}-\bar{x}=0\]
+數據的標準化：將數據 \(x_i\) 的平均值 \(\bar{x}\) 附近的偏差除以樣本標準偏差 \(s\) 從而獲得下面式子所表示的數據 \(z_i\) 的過程，被叫做數據的標準化 (standardization)：\[\begin{equation}z_i=\frac{x_i-\bar{x}}{s}\tag{3}\end{equation}\]標準化後的數據 \(z_i\) 的概括統計有下列特徵：樣本平均值：\[\begin{equation}\bar{z}=\frac{1}{n}\sum_{i=1}^nz_i=0\tag{4}\end{equation}\]樣本方差:\[\begin{equation}s_{z}^2=\frac{1}{n}\sum_{i=1}^nz_i^2=1\tag{5}\end{equation}\]由於標準化數據具有上述兩個非常顯著的特徵，均值爲 \(0\)，方差爲 \(1\)，因此我們實際分析數據過程中常常對數據進行標準化。標準化以後的數據，單位消失，變成了一組無名數\(\divideontimes\) 數據的標準化，有時你會看到被定義爲:\[\begin{equation}z_i=\frac{x_i-\bar{x}}{u}\tag{6}\end{equation}\] 此時的不偏樣本方差爲：\[\begin{equation}u_z^2=\frac{1}{n-1}\sum_{i=1}{n}z_i^2=1\tag{7}\end{equation}\]2變量數據的概括統計：樣本量同爲 \(n\) 的 \(2\) 變量 \(x_1,x_2\) 的數據，表示爲如下表格：個体の番号変量 \(x_1\)変量 \(x_2\)\(1\)\(x_{11}\)\(x_{12}\)\(2\)\(x_{21}\)\(x_{22}\)\(\vdots\)\(\vdots\)\(\vdots\)\(i\)\(x_{i1}\)\(x_{i2}\)\(\vdots\)\(\vdots\)\(\vdots\)\(n\)\(x_{n1}\)\(x_{n2}\)按照變量 \(x_1,x_2\) 各自的定義：樣本平均值：\(\bar{x_1}=\frac{1}{n}\sum\limits_{i=1}^nx_{i1}, \; \bar{x_2}=\frac{1}{n}\sum\limits_{i=1}^nx_{i2}\)樣本偏差平方和: \(SS_1=\sum\limits_{i=1}^n(x_{i1}-\bar{x_1})^2, \; SS_2=\sum\limits_{i=1}^n(x_{i2}-\bar{x_2})^2\)樣本方差： \(s_1^2=\frac{SS_1}{n}, \; s_2^2=\frac{SS_2}{n}\)樣本標準偏差： \(s_1=\sqrt{s_1^2}, \; s_2=\sqrt{s_2^2}\)不偏樣本方差： \(u_1^2=\frac{SS}{n-1}, \; u_2^2=\frac{SS_2}{n-1}\)不偏樣本方差平方根: \(u_1=\sqrt{u_1^2}, \; u_2=\sqrt{u_2^2}\)對於這樣一對變量 \(x_1,x_2\) 來說，我們又可以追加如下的概括統計：樣本總體平均值： \(\bar{x}=\frac{1}{n+n}(\sum\limits_{i-1}^nx_{i1}+\sum\limits_{i-1}^nx_{i2})\)樣本方差積和(cross-product)：\[\begin{equation}\begin{split}S_{12} &amp;amp; = \sum_{i=1}^n(x_{i1}-\bar{x_1})\cdot(x_{i2}-\bar{x_2})\\&amp;amp; = \sum_{i=1}^n(x_{i1}x_{i2}-\bar{x_1}x_{i2}-x_{i1}\bar{x_2}+\bar{x_1}\bar{x_2})\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\sum_{i=1}^nx_{i2}-{\sum_{i=1}^nx_{i1}}\bar{x_2}+n\bar{x_1}\bar{x_2}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\cdot n\bar{x_2}-n\bar{x_1}\cdot\bar{x_2}+n\bar{x_1}\bar{x_2}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\bar{x_1}\cdot\bar{x_2}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\frac{\sum\limits_{i=1}^nx_{i1}}{n}\cdot\frac{\sum\limits_{i=1}^nx_{i2}}{n}\\&amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\frac{1}{n}(\sum_{i=1}^nx_{i1})(\sum_{i=1}^nx_{i2}) = S_{21}\end{split}\tag{8}\end{equation}\]</description>
     </item>
     
     <item>
@@ -411,9 +416,9 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description>函數的最大值最小值問題沒有制約條件的情況函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
+      <description>函數的最大值最小值問題沒有制約條件的情況函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程\[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\]要成立(必要條件)。
 1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\\;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
-\[\begin{align}\frac{\partial F}{\partial a_1}&amp;amp;=-2\left\{y_1-(a_1+a_2x_1)\right\}-2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2\left\{y_n-(a_1+a_2x_n)\right\}\\&amp;amp;= -2\sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0 \Leftrightarrow \sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0\\\Leftrightarrow \sum_{i=1}^ny_i &amp;amp;= a_1\cdot n+a_2\sum_{i=1}^nx_i (1)\\\\\frac{\partial F}{\partial a_2}&amp;amp;=-2x_1\left\{y_1-(a_1+a_2x_1)\right\}-2x_2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2x_3\left\{y_n-(a_1+a_2x_n)\right\}\\&amp;amp;= -2\sum_{i=1}^nx_i\left\{y_i-(a_1+a_2x_i)\right\}=0\\\Leftrightarrow \sum_{i=1}^nx_iy_i &amp;amp;=a_1\sum_{i=1}^nx_i+a_2\sum_{i=1}^nx_i^2 (2)\\&amp;amp;將(1)(2)連立方程求解即可。在回歸分析中，\\&amp;amp;這個連立方程組被稱作正規方程組(Normal \;equation)\end{align}\]求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]\[\begin{align}解連立方程：\\\frac{\partial F}{\partial a_1} &amp;amp; = 2a_1+a_2+a_3-6=0\\\frac{\partial F}{\partial a_2} &amp;amp; = a_1+2a_2+a_3-3=0\\\frac{\partial F}{\partial a_3} &amp;amp; = a_1+a_2+2a_3-7=0\\答：&amp;amp; a_1=2, a_2=-1,a_3=3\end{align}\]</description>
+求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小：\[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]</description>
     </item>
     
     <item>
@@ -433,7 +438,7 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-06/</guid>
-      <description>和記號\(\sum\)\(\sum\) 的性質 (1) 下標(添字) \(x_1 + x_2 + x_3 + \dots + x_n\) 記作如下:\[\sum_{i=1}^{n}x_i\]\(\sum_{i=1}^{n}x_i\) 中的\(i\) 稱爲dummy index可以簡略寫爲：\(\sum x\) 或者 \(\sum_1 x_i\), \(\sum x_i\)\(\sum\) 的性質 (2)\[\begin{equation}\sum_{i=1}^{n}(ax_i + by_i)= a\sum_{i=1}^{n}x_i + b\sum_{i=1}^{n}y_i \tag{1}\end{equation}\]\(\sum_{i=1}^{n}ax_i = a\sum_{i=1}^{n}x_i\) 常數(定数)可以提前\(\sum_{i=1}^{n}a = na\)\(\sum_{i=1}^{n}1 = n\)\(\sum_{i=1}^{n}(ax_i+b) = a\sum_{i=1}^{n}x_i + nb\)公式(1)的應用: \[\begin{aligned}\sum_{i=1}^{n}(ax_i -by_i)^2 &amp;amp;= \sum_{i=1}^{n}(a^2x_i^2 - 2abx_iy_i + b^2y_i^2) \\&amp;amp;= \sum_{i=1}^{n}a^2x_i^2 -\sum_{i=1}^{n}2abx_iy_i + \sum_{i=1}^{n}b^2y_i^2 \\&amp;amp;= a^2\sum_{i=1}^{n}x_i^2 - 2ab\sum_{i=1}^{n}x_iy_i + b^2\sum_{i=1}^{n}y_i^2\end{aligned}\]但是，乘法或平方有如下性質，計算方差(分散)或者相關系數時需要注意：\[\sum_{i=1}^{n}x_i^2 \neq (\sum_{i=1}^{n}x_i)^2\] 以及 \[\sum_{i=1}^{n}x_iy_i \neq (\sum_{i=1}^{n}x_i)(\sum_{i=1}^{n}y_i)\]自然數的冪運算之和(冪[べき]乗の和)的公式: \[\begin{aligned}1+2+3+\dots+n &amp;amp;= \sum_{t=1}^{n}t = \frac{n(n+1)}{2}\\1^2+2^2+3^2+\dots+n^2 &amp;amp;= \sum_{t=1}^{n}t^2 = \frac{n(n+1)(2n+1)}{6} \\1^3+2^3+3^3+\dots+n^3 &amp;amp;= \sum_{t=1}^{n}t^3 = {\frac{n(n+1)}{2}}^2 \\1^4+2^4+3^4+\dots+n^4 &amp;amp;= \sum_{t=1}^{n}t^4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\end{aligned}\] 上面的公式將會應用在時間序列分析，斯皮尔曼等级相关系数(スピアマンの順位相関係数)的定義公式的推導。</description>
+      <description>和記號\(\sum\)\(\sum\) 的性質 (1)下標(添字) \(x_1 + x_2 + x_3 + \dots + x_n\) 記作如下:\[\sum_{i=1}^{n}x_i\]\(\sum_{i=1}^{n}x_i\) 中的\(i\) 稱爲dummy index可以簡略寫爲：\(\sum x\) 或者 \(\sum_1 x_i\), \(\sum x_i\)\(\sum\) 的性質 (2)\[\begin{equation}\sum_{i=1}^{n}(ax_i + by_i)= a\sum_{i=1}^{n}x_i + b\sum_{i=1}^{n}y_i \tag{1}\end{equation}\]\(\sum_{i=1}^{n}ax_i = a\sum_{i=1}^{n}x_i\) 常數(定数)可以提前\(\sum_{i=1}^{n}a = na\)\(\sum_{i=1}^{n}1 = n\)\(\sum_{i=1}^{n}(ax_i+b) = a\sum_{i=1}^{n}x_i + nb\)公式(1)的應用:\[\begin{aligned}\sum_{i=1}^{n}(ax_i -by_i)^2 &amp;amp;= \sum_{i=1}^{n}(a^2x_i^2 - 2abx_iy_i + b^2y_i^2) \\&amp;amp;= \sum_{i=1}^{n}a^2x_i^2 -\sum_{i=1}^{n}2abx_iy_i + \sum_{i=1}^{n}b^2y_i^2 \\&amp;amp;= a^2\sum_{i=1}^{n}x_i^2 - 2ab\sum_{i=1}^{n}x_iy_i + b^2\sum_{i=1}^{n}y_i^2\end{aligned}\]但是，乘法或平方有如下性質，計算方差(分散)或者相關系數時需要注意：\[\sum_{i=1}^{n}x_i^2 \neq (\sum_{i=1}^{n}x_i)^2\] 以及 \[\sum_{i=1}^{n}x_iy_i \neq (\sum_{i=1}^{n}x_i)(\sum_{i=1}^{n}y_i)\]自然數的冪運算之和(冪[べき]乗の和)的公式:\[\begin{aligned}1+2+3+\dots+n &amp;amp;= \sum_{t=1}^{n}t = \frac{n(n+1)}{2}\\1^2+2^2+3^2+\dots+n^2 &amp;amp;= \sum_{t=1}^{n}t^2 = \frac{n(n+1)(2n+1)}{6} \\1^3+2^3+3^3+\dots+n^3 &amp;amp;= \sum_{t=1}^{n}t^3 = {\frac{n(n+1)}{2}}^2 \\1^4+2^4+3^4+\dots+n^4 &amp;amp;= \sum_{t=1}^{n}t^4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\end{aligned}\]上面的公式將會應用在時間序列分析，斯皮尔曼等级相关系数(スピアマンの順位相関係数)的定義公式的推導。</description>
     </item>
     
   </channel>

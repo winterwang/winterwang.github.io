@@ -367,33 +367,39 @@
 <p>包含了 <span class="math inline">\(n\)</span> 個獨立變量 <span class="math inline">\(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n\)</span>的函數，即多變量函數 <span class="math inline">\(F(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n)\)</span> 關於 <span class="math inline">\(a_i (i=1,2,\cdots,n)\)</span> 的偏微分 <em>(partial differentiation)</em> 的定義是，把 <span class="math inline">\(a_i\)</span> 以外的獨立變量當做常數（定数），將函數 <span class="math inline">\(F\)</span> 對變量 <span class="math inline">\(a_i\)</span> 求微分，寫作： <span class="math inline">\(\frac{\partial F}{\partial a_i}\)</span>。</p>
 <p>以下爲了便於說明，以三個變量爲例。</p>
 <ol style="list-style-type: decimal">
-<li><p>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1+a_2+a_3=\sum\limits_{i=1}^3a_i\)</span> 對於三個獨立變量分別求偏微分： <span class="math display">\[\frac{\partial F}{\partial a_1}=1，\frac{\partial F}{\partial a_2}=1， \frac{\partial F}{\partial a_3}=1\]</span></p></li>
-<li><p>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1b_1+a_2b_2+a_3b_3=\sum\limits_{i=1}^3a_ib_i\)</span> 對於三個獨立變量分別求偏微分： <span class="math display">\[\frac{\partial F}{\partial a_1}=b_1，\frac{\partial F}{\partial a_2}=b_2， \frac{\partial F}{\partial a_3}=b_3\]</span></p></li>
-<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1^2+a_2^2+a_3^2=a_1\cdot a_1+a_2\cdot a_2+a_3\cdot a_3\\=\sum\limits_{i=1}^3a_i^2=\sum\limits_{i=1}^3a_i\cdot a_i \;對三個變量分別求偏微分：\)</span>　 <span class="math display">\[\frac{\partial F}{\partial a_1}=2a_1，\frac{\partial F}{\partial a_2}=2a_2， \frac{\partial F}{\partial a_3}=2a_3\]</span></li>
-<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=\lambda_1a_1^2+\lambda_2a_2^2+\lambda_3a_3^2=a_1\cdot\lambda_1\cdot a_1+a_2\cdot\lambda_2\cdot a_2+a_3\cdot\lambda_3\cdot a_3\\=\sum\limits_{i=1}^3\lambda_ia_i^2=\sum\limits_{i=1}^3a_i\cdot\lambda_i\cdot a_i \; 對三個變量分別求偏微分：\)</span> <span class="math display">\[\frac{\partial F}{\partial a_1}=2\lambda_1a_1，\frac{\partial F}{\partial a_2}=2\lambda_2a_2， \frac{\partial F}{\partial a_3}=2\lambda_3a_3\]</span></li>
-<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=(b_1-\lambda a_1)^2+(b_2-\lambda a_2)^2+(b_3-\lambda a_3)^2\\=\sum\limits_{i=1}^3(b_i-\lambda a_i)^2=\sum\limits_{i=1}^3(b_i-\lambda a_i)(b_i-\lambda a_i)\;對三個變量求偏微分：\)</span> <span class="math display">\[\frac{\partial F}{\partial a_1}=-2\lambda(b_1-\lambda a_1)，\frac{\partial F}{\partial a_2}=-2\lambda(b_2-\lambda a_2)， \frac{\partial F}{\partial a_3}=-2\lambda(b_3-\lambda a_3)\]</span></li>
+<li><p>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1+a_2+a_3=\sum\limits_{i=1}^3a_i\)</span> 對於三個獨立變量分別求偏微分：
+<span class="math display">\[\frac{\partial F}{\partial a_1}=1，\frac{\partial F}{\partial a_2}=1， \frac{\partial F}{\partial a_3}=1\]</span></p></li>
+<li><p>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1b_1+a_2b_2+a_3b_3=\sum\limits_{i=1}^3a_ib_i\)</span> 對於三個獨立變量分別求偏微分：
+<span class="math display">\[\frac{\partial F}{\partial a_1}=b_1，\frac{\partial F}{\partial a_2}=b_2， \frac{\partial F}{\partial a_3}=b_3\]</span></p></li>
+<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=a_1^2+a_2^2+a_3^2=a_1\cdot a_1+a_2\cdot a_2+a_3\cdot a_3\\=\sum\limits_{i=1}^3a_i^2=\sum\limits_{i=1}^3a_i\cdot a_i \;對三個變量分別求偏微分：\)</span>　
+<span class="math display">\[\frac{\partial F}{\partial a_1}=2a_1，\frac{\partial F}{\partial a_2}=2a_2， \frac{\partial F}{\partial a_3}=2a_3\]</span></li>
+<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=\lambda_1a_1^2+\lambda_2a_2^2+\lambda_3a_3^2=a_1\cdot\lambda_1\cdot a_1+a_2\cdot\lambda_2\cdot a_2+a_3\cdot\lambda_3\cdot a_3\\=\sum\limits_{i=1}^3\lambda_ia_i^2=\sum\limits_{i=1}^3a_i\cdot\lambda_i\cdot a_i \; 對三個變量分別求偏微分：\)</span>
+<span class="math display">\[\frac{\partial F}{\partial a_1}=2\lambda_1a_1，\frac{\partial F}{\partial a_2}=2\lambda_2a_2， \frac{\partial F}{\partial a_3}=2\lambda_3a_3\]</span></li>
+<li>函數 <span class="math inline">\(F(a_1,a_2,a_3)=(b_1-\lambda a_1)^2+(b_2-\lambda a_2)^2+(b_3-\lambda a_3)^2\\=\sum\limits_{i=1}^3(b_i-\lambda a_i)^2=\sum\limits_{i=1}^3(b_i-\lambda a_i)(b_i-\lambda a_i)\;對三個變量求偏微分：\)</span>
+<span class="math display">\[\frac{\partial F}{\partial a_1}=-2\lambda(b_1-\lambda a_1)，\frac{\partial F}{\partial a_2}=-2\lambda(b_2-\lambda a_2)， \frac{\partial F}{\partial a_3}=-2\lambda(b_3-\lambda a_3)\]</span></li>
 <li>函數 <span class="math inline">\(F = a_{11}x_1y_1 + a_{12}x_1y_2 + a_{13}x_1y_3 \\ \;\;\;\;\;\;+a_{21}x_2y_1+a_{22}x_2y_2+a_{23}x_2y_3\\ \;\;\;\;\;\;+a_{31}x_3y_1+a_{32}x_3y_2+a_{33}x_3y_3\\ \;\;\;=\sum\limits_{i=1}^3\sum\limits_{i=1}^3a_{ij}x_iy_j\;對三個變量求偏微分：\)</span>
 <ul>
 <li><span class="math inline">\(F(x_1,x_2,x_3)\)</span>, 即視爲 <span class="math inline">\(x_1,x_2,x_3\)</span> 的函數的時候：</li>
 </ul>
 <p><span class="math display">\[
-\frac{\partial F}{\partial x_1}=a_{11}y_1+a_{12}y_2+a_{13}y_3=\sum_{j=1}^3a_{1j}y_j \\
-\frac{\partial F}{\partial x_2}=a_{21}y_1+a_{22}y_2+a_{23}y_3=\sum_{j=1}^3a_{2j}y_j \\
-\frac{\partial F}{\partial x_3}=a_{31}y_1+a_{32}y_2+a_{33}y_3=\sum_{j=1}^3a_{3j}y_j \\
-將上面三個式子總結一下就是: \\
-\frac{\partial F}{\partial x_i}=\sum_{j=1}^3a_{ij}y_j (i=1,2,3)
-\]</span></p>
+ \frac{\partial F}{\partial x_1}=a_{11}y_1+a_{12}y_2+a_{13}y_3=\sum_{j=1}^3a_{1j}y_j \\
+ \frac{\partial F}{\partial x_2}=a_{21}y_1+a_{22}y_2+a_{23}y_3=\sum_{j=1}^3a_{2j}y_j \\
+ \frac{\partial F}{\partial x_3}=a_{31}y_1+a_{32}y_2+a_{33}y_3=\sum_{j=1}^3a_{3j}y_j \\
+ 將上面三個式子總結一下就是: \\
+ \frac{\partial F}{\partial x_i}=\sum_{j=1}^3a_{ij}y_j (i=1,2,3)
+ \]</span></p>
 <ul>
 <li><span class="math inline">\(F(y_1,y_2,y_3)\)</span>, 即視爲 <span class="math inline">\(y_1,y_2,y_3\)</span> 的函數的時候：</li>
 </ul>
 <p><span class="math display">\[
-\frac{\partial F}{\partial y_1}=a_{11}x_1+a_{21}x_2+a_{31}x_3=\sum_{i=1}^3a_{i1}x_i \\
-\frac{\partial F}{\partial y_2}=a_{12}x_1+a_{22}x_2+a_{32}x_3=\sum_{i=1}^3a_{i2}x_i \\
-\frac{\partial F}{\partial y_3}=a_{13}x_1+a_{32}x_2+a_{33}x_3=\sum_{i=1}^3a_{i3}x_i \\
-將上面三個式子總結一下就是: \\
-\frac{\partial F}{\partial x_i}=\sum_{i=1}^3a_{ij}x_i (j=1,2,3)
-\]</span></p></li>
-<li><p>函數 <span class="math inline">\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;=a_{11}x_1^2+2a_{12}x_1x_2+2a_{13}x_1x_3+a_{22}x_2^2+2a_{23}x_2x_3+a_{33}x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^3a_{ii}x_i^2+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&lt;j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\;\;\;\;==\sum\limits_{i=1}^3x_ia_{ii}x_i+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&lt;j}x_ia_{ij}x_j\;對三個變量求偏微分：\)</span> <span class="math display">\[\frac{\partial F}{\partial x_1}=2(a_{11}x_1+a_{12}x_2+a_{13}x_3)\\
+ \frac{\partial F}{\partial y_1}=a_{11}x_1+a_{21}x_2+a_{31}x_3=\sum_{i=1}^3a_{i1}x_i \\
+ \frac{\partial F}{\partial y_2}=a_{12}x_1+a_{22}x_2+a_{32}x_3=\sum_{i=1}^3a_{i2}x_i \\
+ \frac{\partial F}{\partial y_3}=a_{13}x_1+a_{32}x_2+a_{33}x_3=\sum_{i=1}^3a_{i3}x_i \\
+ 將上面三個式子總結一下就是: \\
+ \frac{\partial F}{\partial x_i}=\sum_{i=1}^3a_{ij}x_i (j=1,2,3)
+ \]</span></p></li>
+<li><p>函數 <span class="math inline">\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;=a_{11}x_1^2+2a_{12}x_1x_2+2a_{13}x_1x_3+a_{22}x_2^2+2a_{23}x_2x_3+a_{33}x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^3a_{ii}x_i^2+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&lt;j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\;\;\;\;==\sum\limits_{i=1}^3x_ia_{ii}x_i+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&lt;j}x_ia_{ij}x_j\;對三個變量求偏微分：\)</span>
+<span class="math display">\[\frac{\partial F}{\partial x_1}=2(a_{11}x_1+a_{12}x_2+a_{13}x_3)\\
 \frac{\partial F}{\partial x_2}=2(a_{12}x_1+a_{22}x_2+a_{23}x_3)\\
 \frac{\partial F}{\partial x_3}=2(a_{13}x_1+a_{23}x_2+a_{33}x_3)\]</span></p></li>
 <li><p>函數 <span class="math inline">\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ G(x_1,x_2,x_3)=b_{11}x_1x_1+b_{12}x_1x_2+b_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{12}x_2x_1+b_{12}x_2x_2+b_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{13}x_3x_1+b_{23}x_3x_2+b_{33}x_3x_3\\\;對三個變量求偏微分：\)</span></p></li>

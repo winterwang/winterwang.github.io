@@ -345,32 +345,31 @@
       <div class="article-style" itemprop="articleBody">
         <div id="bayes-" class="section level3">
 <h3>Bayes 理論的概念</h3>
-<p>許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 <span class="math inline">\(P(S|A)\)</span></p>
+<p>許多時候，我們需要將概率中的條件相互對調。
+例如：
+在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 <span class="math inline">\(P(S|A)\)</span></p>
 <p>這裏先引入貝葉斯的概念：</p>
-<p>我們可以將 <span class="math inline">\(P(A\cap S)\)</span> 寫成： <span class="math display">\[P(A\cap S)=P(A|S)P(S)\\or\\
-P(A\cap S)=P(S|A)P(A)\]</span> 這兩個等式是完全等價的。我們將他們連起來：</p>
+<p>我們可以將 <span class="math inline">\(P(A\cap S)\)</span> 寫成：
+<span class="math display">\[P(A\cap S)=P(A|S)P(S)\\or\\
+P(A\cap S)=P(S|A)P(A)\]</span>
+這兩個等式是完全等價的。我們將他們連起來：</p>
 <p><span class="math display">\[P(S|A)P(A)=P(A|S)P(S)\\
 \Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]</span></p>
-<p>是不是看起來又像是寫了一堆<strong>廢話</strong>？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。</p>
+<p>是不是看起來又像是寫了一堆<strong>廢話</strong>？
+沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。</p>
 <p>再繼續，我們可以利用另外一個<strong>廢話</strong>：<span class="math inline">\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)</span></p>
 <p>用上面的公式替換掉 <span class="math inline">\(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)</span></p>
 <p>可以得到<strong>貝葉斯理論公式</strong>：</p>
 <p><span class="math display">\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]</span></p>
 <p>回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：</p>
-<div class="figure">
-<img src="/img/Selection_073.png" />
+<p><img src="/img/Selection_073.png" /></p>
 
-</div>
-<span class="math display">\[\begin{align}
-P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
-        &amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
-        &amp;= 0.24
-\end{align}\]</span>
 <p>所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(<span class="math inline">\(P(S|A)\)</span>)。</p>
 </div>
 <div id="-expectation--or-mean---variance" class="section level3">
 <h3>期望 Expectation (或均值 or mean) 和 方差 Variance</h3>
-<p>期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 <span class="math inline">\(X\)</span> (discrete random variables)，它的期望被定義爲：</p>
+<p>期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。
+對於離散型隨機變量 <span class="math inline">\(X\)</span> (discrete random variables)，它的期望被定義爲：</p>
 <p><span class="math display">\[E(X)=\sum_x xP(X=x)\]</span></p>
 <p>所以就是將所有 <span class="math inline">\(X\)</span> 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 <span class="math inline">\(\mu\)</span> 來標記。</p>
 <p>方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：</p>
@@ -379,14 +378,7 @@ P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
 <p><span class="math display">\[Var(X)=E(X^2)-E(X)^2\]</span></p>
 <div id="-" class="section level4">
 <h4>證明 上面兩個方差公式相等</h4>
-<span class="math display">\[\begin{align}
-Var(x)  &amp;= E((X-\mu)^2) \\
-        &amp;= E(X^2-2X\mu+\mu^2)\\
-        &amp;= E(X^2) - 2\mu E(X) + \mu^2\\
-        &amp;= E(X^2) - 2\mu^2 + \mu^2 \\
-        &amp;= E(X^2) - \mu^2 \\
-        &amp;= E(X^2) - E(X)^2
-\end{align}\]</span>
+
 </div>
 <div class="section level4">
 <h4>方差的性質：</h4>
@@ -400,18 +392,9 @@ Var(x)  &amp;= E((X-\mu)^2) \\
 <div id="-bernoulli-distribution" class="section level3">
 <h3>伯努利分佈 Bernoulli distribution</h3>
 <p>伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 <span class="math inline">\(\pi\)</span>。那麼我們可以計算這個分佈的期望值:</p>
-<span class="math display">\[\begin{align}
-E(X) &amp;=\sum_x xP(X=x) \\
-     &amp;=1\times\pi + 0\times(1-\pi)\\
-     &amp;=\pi
-\end{align}\]</span>
+
 <p>由於 <span class="math inline">\(x=x^2\)</span>，因爲 <span class="math inline">\(x=0,1\)</span>, 所以 <span class="math inline">\(E[X^2]=E[X]\)</span>，那麼方差爲：</p>
-<span class="math display">\[\begin{align}
-Var(X) &amp;=E[X^2]-E[X]^2 \\
-       &amp;=E[X]-E[X]^2 \\
-       &amp;=\pi - \pi^2 \\
-       &amp;=\pi(1-\pi)
-\end{align}\]</span>
+
 </div>
 <div id="xy--a-exyexey-b-varxyvarxvary" class="section level3">
 <h3>證明，<span class="math inline">\(X,Y\)</span> 爲互爲獨立的隨機離散變量時，<br>a) <span class="math inline">\(E(XY)=E(X)E(Y)\)</span> ; <br>b) <span class="math inline">\(Var(X+Y)=Var(X)+Var(Y)\)</span></h3>
@@ -420,25 +403,20 @@ Var(X) &amp;=E[X^2]-E[X]^2 \\
 <li><strong>證明</strong></li>
 </ol></li>
 </ul>
-<span class="math display">\[\begin{align}
-E(XY) &amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
-\because &amp;\; X,Y are\;independent\;to\;each\;other \\
-\therefore &amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
-      &amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
-      &amp;=E(X)E(Y)
-\end{align}\]</span>
+
 <ul>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li><strong>證明</strong> 根據方差的定義：
+<li><strong>證明</strong>
+根據方差的定義：
 <span class="math display">\[\begin{align}
 Var(X+Y) &amp;= E((X+Y)^2)-E(X+Y)^2 \\
- &amp; \; Expand \\
- &amp;=E(X^2+2XY+Y^2)-(E(X)+E(Y))^2\\
- &amp;=E(X^2)+E(Y^2)+2E(XY)\\
- &amp;\;\;\; - E(X)^2-E(Y)^2-2E(X)E(Y)\\
- &amp;\; We\;just\;showed\; E(XY)=E(X)E(Y)\\
- &amp;=E(X^2)-E(X)^2+E(Y^2)-E(Y)^2 \\
- &amp;=Var(X)+Var(Y)
+    &amp; \; Expand \\
+    &amp;=E(X^2+2XY+Y^2)-(E(X)+E(Y))^2\\
+    &amp;=E(X^2)+E(Y^2)+2E(XY)\\
+    &amp;\;\;\; - E(X)^2-E(Y)^2-2E(X)E(Y)\\
+    &amp;\; We\;just\;showed\; E(XY)=E(X)E(Y)\\
+    &amp;=E(X^2)-E(X)^2+E(Y^2)-E(Y)^2 \\
+    &amp;=Var(X)+Var(Y)
 \end{align}\]</span></li>
 </ol></li>
 </ul>

@@ -343,7 +343,10 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <div id="-log-likelihood-ratio" class="section level3">
+        <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div id="-log-likelihood-ratio" class="section level3">
 <h3>對數似然比 Log-likelihood ratio</h3>
 <p>對數似然比的想法來自於將對數似然方程圖形的 <span class="math inline">\(y\)</span> 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的<strong>對數似然比 (log-likelihood ratio)</strong> 來獲得：</p>
 <p><span class="math display">\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]</span></p>
@@ -423,7 +426,8 @@ omitting&amp;\;terms\;not\;in\;\mu \\
 \therefore -2llr(\mu_0|Y) \sim \mathcal{X}_1^2\]</span></p>
 <p>所以，如果有一組服從正態分佈的觀察值：<span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu_0,\sigma^2)\)</span>，且 <span class="math inline">\(\sigma^2\)</span> 已知的話：</p>
 <p><span class="math display">\[-2llr(\mu_0|\bar{X})\sim \mathcal{X}_1^2\]</span></p>
-根據<a href="https://winterwang.github.io/post/central-limit-theory/">中心極限定理</a>，可以將上面的結論一般化： 
+根據<a href="https://winterwang.github.io/post/central-limit-theory/">中心極限定理</a>，可以將上面的結論一般化：
+
 <div class="theorem">
 <span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 1  </strong></span>如果 <span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}f(x|\theta)\)</span>。 那麼當重複多次從參數爲 <span class="math inline">\(\theta_0\)</span> 的總體中取樣時，那麼統計量 <span class="math inline">\(-2llr(\theta_0)\)</span> 會漸進於自由度爲 <span class="math inline">\(1\)</span> 的卡方分佈： <span class="math display">\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\xrightarrow[n\rightarrow\infty]{}\;\sim \mathcal{X}_1^2\]</span>
 </div>
@@ -461,7 +465,8 @@ title(main = &quot;Log-likelihood ratio for binomial example, \n with 95% likeli
 </div>
 <div class="section level4">
 <h4>以正態分佈數據爲例</h4>
-<p>本文前半部分證明過， <span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)</span>，先假設 <span class="math inline">\(\sigma^2\)</span> 已知。將觀察數據 <span class="math inline">\(x_1,\cdots, x_n\)</span> 標記爲 <span class="math inline">\(\underline{x}\)</span>。 那麼：</p>
+<p>本文前半部分證明過，
+<span class="math inline">\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}N(\mu,\sigma^2)\)</span>，先假設 <span class="math inline">\(\sigma^2\)</span> 已知。將觀察數據 <span class="math inline">\(x_1,\cdots, x_n\)</span> 標記爲 <span class="math inline">\(\underline{x}\)</span>。 那麼：</p>
 <p><span class="math display">\[llr(\mu|\underline{x}) = \ell(\mu|\underline{x})-\ell(\hat{\mu}) = \ell(\mu|\underline{x}) \\
 =-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]</span></p>
 <p>很顯然，這是一個關於 <span class="math inline">\(\mu\)</span> 的二次方程，且最大值在 MLE <span class="math inline">\(\hat{\mu}=\bar{x}\)</span> 時取值 <span class="math inline">\(0\)</span>。所以可以通過對數似然比法求出均值的 <span class="math inline">\(95\%\)</span> 信賴區間公式：</p>
@@ -1305,9 +1310,9 @@ LogLR
     
     <li><a href="/post/chi-square-distribution/">卡方分佈 chi square distribution</a></li>
     
-    <li><a href="/post/frequentist-statistical-inference02/">估計和精確度的概念</a></li>
-    
     <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
+    
+    <li><a href="/post/frequentist-statistical-inference02/">估計和精確度的概念</a></li>
     
     <li><a href="/post/sample-size-in-clinical-trial/">臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</a></li>
     

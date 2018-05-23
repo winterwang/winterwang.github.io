@@ -364,7 +364,8 @@ a_n
 \right)\]</span></p>
 <p>用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：</p>
 <p><span class="math display">\[X\underline{a}=\underline{0}\]</span></p>
-<p>即： <span class="math display">\[\begin{align}
+<p>即：
+<span class="math display">\[\begin{align}
 \left\{
 \begin{array}{ll}
 x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n  = 0\\
@@ -374,7 +375,8 @@ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n  = 0\\
 \end{array}
 \right.
 \end{align}\]</span></p>
-<p>這樣的方程式與之前的不同，等號右邊全部都是 <span class="math inline">\(0\)</span>. 如果係數矩陣的行列式 <span class="math inline">\(|X|\)</span></p>
+<p>這樣的方程式與之前的不同，等號右邊全部都是 <span class="math inline">\(0\)</span>.
+如果係數矩陣的行列式 <span class="math inline">\(|X|\)</span></p>
 <p><span class="math display">\[|X|=\begin{vmatrix}
 x_{1} &amp; x_{12} &amp; \cdots &amp; x_{1n}\\
 x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2n}\\
@@ -386,7 +388,8 @@ x_{n1}  &amp; x_{n2} &amp; \cdots &amp; x_{nn}
 <p><span class="diff_alert">重點記住：<br><span class="math inline">\(\underline{a}\neq0\)</span> 時， <span class="math inline">\(|X|=0\)</span>； <br><span class="math inline">\(\underline{a}=0\)</span> 時, <span class="math inline">\(|X|\neq0\)</span></span></p>
 <ol style="list-style-type: decimal">
 <li><p>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} a_1+2a_2 = 0\\ 2a_1+a_2 = 0\\ \end{array} \right. \end{align}\)</span> 的係數矩陣 <span class="math inline">\(\left( \begin{array}{c} 1 &amp; 2 \\ 2 &amp; 1 \\ \end{array} \right)\)</span> 的行列式 <span class="math inline">\(\begin{vmatrix} 1 &amp; 2\\ 2 &amp; 1\\ \end{vmatrix}=-3\neq0\)</span> 所以此同次連立一次方程組的解有且僅有 <span class="math inline">\(a_1=a_2=0\)</span> (自明解)。</p></li>
-<li><p>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} -a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 2a_1-4a_2 = 0 \;\;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)</span> <br>的係數行列式 <span class="math inline">\(\begin{vmatrix} -1 &amp; 2\\ 2 &amp; -4\\ \end{vmatrix}=0\)</span>，因此除了自明解 <span class="math inline">\(a_1=a_2=0\)</span> 之外，還有非自明解。由於 <span class="math inline">\((2)=-2\times(1)\)</span>，<span class="math inline">\((1),(2)\)</span> 實質上是一個相同的方程式。 按照<a href="https://winterwang.github.io/post/2017-02-12-t/">前述方法</a>，我們設定 <span class="math inline">\(a_2=s\)</span> (<span class="math inline">\(s\)</span> 為非零任意實數)，則 <span class="math inline">\(a_1=2s\)</span>。所以可以將這個方程組的非自明解寫作： <span class="math display">\[\underline{a}=s\left(
+<li><p>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} -a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 2a_1-4a_2 = 0 \;\;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)</span> <br>的係數行列式 <span class="math inline">\(\begin{vmatrix} -1 &amp; 2\\ 2 &amp; -4\\ \end{vmatrix}=0\)</span>，因此除了自明解 <span class="math inline">\(a_1=a_2=0\)</span> 之外，還有非自明解。由於 <span class="math inline">\((2)=-2\times(1)\)</span>，<span class="math inline">\((1),(2)\)</span> 實質上是一個相同的方程式。 按照<a href="https://winterwang.github.io/post/2017-02-12-t/">前述方法</a>，我們設定 <span class="math inline">\(a_2=s\)</span> (<span class="math inline">\(s\)</span> 為非零任意實數)，則 <span class="math inline">\(a_1=2s\)</span>。所以可以將這個方程組的非自明解寫作：
+<span class="math display">\[\underline{a}=s\left(
 \begin{array}{c}
 2\\
 1
@@ -395,7 +398,8 @@ x_{n1}  &amp; x_{n2} &amp; \cdots &amp; x_{nn}
 </ol>
 <p><span class="math inline">\(\star 自明解和非自明解同時表述時可以寫作: \underline{a}=s\left( \begin{array}{c} 2\\ 1 \end{array} \right),\\ s 為任意實數。\)</span></p>
 <ol start="3" style="list-style-type: decimal">
-<li>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} (1-\lambda)a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 4a_1+(3-\lambda)a_2 = 0 \;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)</span> 有非自明解的條件為： <span class="math display">\[\begin{align}
+<li>方程組 <span class="math inline">\(\begin{align} \left\{ \begin{array}{ll} (1-\lambda)a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\ 4a_1+(3-\lambda)a_2 = 0 \;\;\;\;\;\;\;(2)\\ \end{array} \right. \end{align}\)</span> 有非自明解的條件為：
+<span class="math display">\[\begin{align}
 \begin{vmatrix}
 1-\lambda &amp; 2\\
 4 &amp; 3-\lambda
@@ -405,20 +409,23 @@ x_{n1}  &amp; x_{n2} &amp; \cdots &amp; x_{nn}
 &amp; = (\lambda+1)(\lambda-5) \\
 &amp; = 0
 \end{align}\\
-\therefore \lambda=-1, 5\]</span> <br></li>
+\therefore \lambda=-1, 5\]</span>
+<br></li>
 </ol>
 <ul>
 <li><span class="math inline">\(\lambda=-1\)</span> 時，代入 <span class="math inline">\((1),(2)\)</span> 得<br> <span class="math inline">\(\begin{align}  \left\{  \begin{array}{ll}  2a_1+2a_2 = 0 \;\;\;\;\;\;\;(1)\\  4a_1+4a_2 = 0 \;\;\;\;\;\;\;(2)\\  \end{array}  \right.  \end{align}\)</span> 為實質上只有一個方程 <span class="math inline">\(a_1+a_2=0\)</span> 的方程組。令 <span class="math inline">\(a_2=s\)</span>， 則 <span class="math inline">\(a_1=-s\)</span>。因此此時方程組的非自明解為 <span class="math inline">\(\underline{a}=s\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)</span> (<span class="math inline">\(s\)</span> 為 <span class="math inline">\(0\)</span> 意外的任意實數)。</li>
 <li><span class="math inline">\(\lambda=5\)</span> 時，同理可得， <span class="math inline">\(\underline{a}=t\left(  \begin{array}{c}  1\\  2  \end{array}  \right)\)</span> (<span class="math inline">\(t\)</span> 為 <span class="math inline">\(0\)</span> 意外的任意實數)。</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
-<li>方程組 <span class="math inline">\((\zeta)\begin{align} \left\{ \begin{array}{r} (5-\lambda)a_1+2a_2-4a_3 = 0\\ -3a_1-\lambda a_2+4a_3 = 0\\ 6a_1+6a_2-(1+\lambda)a_3 = 0\\ \end{array} \right. \end{align}\)</span> 擁有非自明解的條件為： <span class="math display">\[\begin{vmatrix}
+<li>方程組 <span class="math inline">\((\zeta)\begin{align} \left\{ \begin{array}{r} (5-\lambda)a_1+2a_2-4a_3 = 0\\ -3a_1-\lambda a_2+4a_3 = 0\\ 6a_1+6a_2-(1+\lambda)a_3 = 0\\ \end{array} \right. \end{align}\)</span> 擁有非自明解的條件為：
+<span class="math display">\[\begin{vmatrix}
 5-\lambda &amp; 2        &amp; -4 \\
 -3        &amp; -\lambda &amp; 4  \\
 6         &amp; 6        &amp; -(1+\lambda)
 \end{vmatrix}=0\]</span></li>
 </ol>
-<p>按照以前我們做過的<a href="https://winterwang.github.io/post/2017-03-15/">練習</a>將行列式按照 <span class="math inline">\(\lambda\)</span> 展開： <span class="math display">\[-\lambda^3+4\lambda^2-\lambda-6=\\
+<p>按照以前我們做過的<a href="https://winterwang.github.io/post/2017-03-15/">練習</a>將行列式按照 <span class="math inline">\(\lambda\)</span> 展開：
+<span class="math display">\[-\lambda^3+4\lambda^2-\lambda-6=\\
 -(\lambda+1)(\lambda-2)(\lambda-3)=0\\
 \therefore \lambda=-1,2,3\]</span></p>
 <ul>

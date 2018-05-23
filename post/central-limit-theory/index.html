@@ -344,10 +344,7 @@
 
       <div class="article-style" itemprop="articleBody">
         <p>最近明顯可以感覺到課程的步驟開始加速。看我的課表：</p>
-<div class="figure">
-<img src="/img/IMG_0522.png" />
-
-</div>
+<p><img src="/img/IMG_0522.png" /></p>
 <p>手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。</p>
 <p>這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。</p>
 <p>今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。</p>
@@ -364,7 +361,8 @@ Var(X+Y) &amp;= E[((X+Y)-E(X+Y))^2] \\
          &amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\
          &amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]
 \end{aligned}\]</span>
-<p>可以發現在兩者和的方差公式展開之後多了一部分 <span class="math inline">\(E[(X-E(X))(Y-E(Y))]\)</span>。 這個多出來的一部分就說明了二者 <span class="math inline">\((X, Y)\)</span> 之間的關係。它被定義爲協方差 (Covariance): <span class="math display">\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]</span></p>
+<p>可以發現在兩者和的方差公式展開之後多了一部分 <span class="math inline">\(E[(X-E(X))(Y-E(Y))]\)</span>。 這個多出來的一部分就說明了二者 <span class="math inline">\((X, Y)\)</span> 之間的關係。它被定義爲協方差 (Covariance):
+<span class="math display">\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]</span></p>
 <p>所以：</p>
 <p><span class="math display">\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]</span></p>
 <div class="alert alert-note">
@@ -387,7 +385,8 @@ Var(X+Y) &amp;= E[((X+Y)-E(X+Y))^2] \\
 <h2>相關 Correlation</h2>
 <ul>
 <li>協方差雖然<span class="math inline">\(Cov(X,Y)\)</span> 的大小很大程度上會被他們各自的單位和波動大小左右。</li>
-<li>我們將協方差標準化(除以各自的標準差 s.d.) (standardization) 之後，就可以得到相關係數 Corr (<span class="math inline">\(-1\sim1\)</span>): <span class="math display">\[Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\]</span></li>
+<li>我們將協方差標準化(除以各自的標準差 s.d.) (standardization) 之後，就可以得到相關係數 Corr (<span class="math inline">\(-1\sim1\)</span>):
+<span class="math display">\[Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\]</span></li>
 </ul>
 </div>
 <div id="-the-central-limit-theory" class="section level2">
@@ -396,10 +395,13 @@ Var(X+Y) &amp;= E[((X+Y)-E(X+Y))^2] \\
 <p>偉大的中心極限定理告訴我們：</p>
 <p><span class="diff_alert"><strong>當樣本量足夠大時，樣本均值 <span class="math inline">\(\bar{X}_n\)</span> 的分佈爲正態分佈，這個特性與樣本來自的人羣的分佈 <span class="math inline">\(X_i\)</span> 無關。</strong></span></p>
 <p><strong>再說一遍：</strong></p>
-<p>如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: <span class="math inline">\(E(X)=\mu;\;Var(X)=\sigma^2\)</span>。 根據中心極限定理，可以得到：</p>
+<p>如果對象是獨立同分佈 i.i.d (identically and independently distributed)。那麼它的總體期望和方差分別是: <span class="math inline">\(E(X)=\mu;\;Var(X)=\sigma^2\)</span>。
+根據中心極限定理，可以得到：</p>
 <ul>
-<li>當樣本量增加，樣本均值的分佈服從正態分佈： <span class="math display">\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]</span></li>
-<li>也可以寫作，當樣本量增加： <span class="math display">\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]</span></li>
+<li>當樣本量增加，樣本均值的分佈服從正態分佈：
+<span class="math display">\[\bar{X}_n\sim N(\mu, \frac{\sigma^2}{n})\]</span></li>
+<li>也可以寫作，當樣本量增加：
+<span class="math display">\[\sum_{i=1}^nX_i \sim N(n\mu,n\sigma^2)\]</span></li>
 <li>有了這個定理，我們可以拋開樣本空間(<span class="math inline">\(X\)</span>)的分佈，也不用假定它服從正態分佈。</li>
 <li><span class="diff_alert">但是樣本的均值，卻總是服從正態分佈的。</span>簡直是太完美了！！！！！！</li>
 </ul>
