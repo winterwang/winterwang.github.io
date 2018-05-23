@@ -2,40 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on Be ambitious</title>
-    <link>/tags/test/</link>
+    <link>https://winterwang.github.io/tags/test/</link>
     <description>Recent content in Test on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Fri, 27 May 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/test/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://winterwang.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Hello World</title>
-      <link>/post/2016-05-27-hello-world/</link>
+      <link>https://winterwang.github.io/post/2016-05-27-hello-world/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-05-27-hello-world/</guid>
-      <description>&lt;div id=&#34;dairy-consumption-and-risk-of-stroke&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Dairy Consumption and Risk of Stroke&lt;/h1&gt;
-&lt;div id=&#34;dairy-consumption-and-risk-of-stroke-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Dairy Consumption and Risk of Stroke&lt;/h2&gt;
-&lt;div id=&#34;dairy-consumption-and-risk-of-stroke-2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Dairy Consumption and Risk of Stroke&lt;/h3&gt;
-&lt;div id=&#34;dairy-consumption-and-risk-of-stroke-3&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Dairy Consumption and &lt;del&gt;Risk&lt;/del&gt; of Stroke&lt;/h4&gt;
-&lt;div id=&#34;dairy-consumption-and-risk-of-stroke-4&#34; class=&#34;section level5&#34;&gt;
-&lt;h5&gt;Dairy Consumption and Risk of Stroke&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;list 1&lt;span class=&#34;math inline&#34;&gt;\(^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;list 2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <guid>https://winterwang.github.io/post/2016-05-27-hello-world/</guid>
+      <description>Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke  list 1\(^2\) list 2       </description>
     </item>
     
   </channel>

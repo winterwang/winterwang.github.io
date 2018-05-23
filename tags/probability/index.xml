@@ -2,438 +2,70 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Probability on Be ambitious</title>
-    <link>/tags/probability/</link>
+    <link>https://winterwang.github.io/tags/probability/</link>
     <description>Recent content in Probability on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/probability/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://winterwang.github.io/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>中心極限定理的應用</title>
-      <link>/post/central-limit-theorem-application/</link>
+      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/central-limit-theorem-application/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;假設我們有大量(&lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;)的二項分佈實驗 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(n, \pi)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;二項分佈的概率公式&lt;/a&gt;，計算將會變得很繁瑣複雜。&lt;/li&gt;
-&lt;li&gt;解決辦法：應用中心極限定理。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;中心極限定理&lt;/a&gt;告訴我們，當樣本量足夠大時: &lt;span class=&#34;math display&#34;&gt;\[X\sim N（n\pi, n\pi(1-\pi))\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;問題在於，多大的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 才能算大樣本呢？
-&lt;ul&gt;
-&lt;li&gt;當且僅當 (only and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;泊松分佈的正態分佈近似&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;假設時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 內某事件的發生次數服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Po(\mu)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;考慮將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段。那麼第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 時間段內事件發生次數依舊服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\sim Po(\frac{\mu}{n})\)&lt;/span&gt;。且 &lt;span class=&#34;math inline&#34;&gt;\(E(X_i)=\mu/n, Var(X_i)=\mu/n\)&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;那麼原先的 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可以被視爲是將這無數的小時間段的 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 相加。應用中心極限定理： &lt;span class=&#34;math display&#34;&gt;\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;需要注意的是，這段時間 (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;) 內發生的事件次數 (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) : &lt;span class=&#34;math inline&#34;&gt;\(\lambda t =\mu&amp;gt;10\)&lt;/span&gt; ，這樣的正態分佈模擬才能成立。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;continuity-corrections&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;正態分佈模擬的校正：continuity corrections&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。&lt;/li&gt;
-&lt;li&gt;例如：我們如果用正態分佈模擬來計算 &lt;span class=&#34;math inline&#34;&gt;\(P(X=15)\)&lt;/span&gt;，那麼實際上我們應該計算的是 &lt;span class=&#34;math inline&#34;&gt;\(P(14.5&amp;lt;X&amp;lt;15.5)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;例題&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(100,0.5)\)&lt;/span&gt;，求 &lt;span class=&#34;math inline&#34;&gt;\(P(X&amp;gt;60)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-\because X&amp;amp;\sim Bin(100, 0.5) \\ \therefore E(X) &amp;amp;=n\pi=50 \\
-Var(X) &amp;amp;= n\pi(1-\pi) =25=5^2\\
-P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
-         &amp;amp;= 1-P(Z\leqslant\frac{60.5-50}{\sqrt{25}}) \\
-         &amp;amp;= 1-P(Z\leqslant2.1) \\
-         &amp;amp;= 1-\Phi(2.1) \\
-         &amp;amp;= 1-0.982 = 0.018
-\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-1-pbinom(60, size=100, prob=0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.0176001&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\because B &amp;amp;\; \sim Bin(48, 0.75) \\
-\therefore E(X) &amp;amp;\; =n\pi=36 \\
-           Var(X) &amp;amp;\; =n\pi(1-\pi)=9=3^2 \\
-P(30&amp;lt;X&amp;lt;39) &amp;amp;\; = P(31\leqslant X\leqslant 38)\\
-     &amp;amp;\; = P(30.5\leqslant Y \leqslant 38.5) \\
-     Y\;is\;the&amp;amp;\;normal\;approximation \\
-     &amp;amp;\;= P(Y&amp;lt;38.5) - P(Y&amp;lt;30.5) \\
-     &amp;amp;\;= P(Z\leqslant\frac{38.5-36}{3})-
-          P(Z\leqslant\frac{30.5-36}{3}) \\
-     &amp;amp;\;= P(Z\leqslant0.833) - P(Z\leqslant-1.833) \\
-     &amp;amp;\;= \Phi(0.833)-\Phi(-1.833) \\
-     &amp;amp;\;= 0.798-0.033 = 0.764
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.7578159&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;從上面兩個例題也能看出，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 越小，正態分佈模擬的誤差就越大。&lt;/p&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X \sim Poisson(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X\leqslant20)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-2&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\because E(X)=\mu=30, \;Var(X)=\mu=30=(\sqrt{30})^2 \\
- \begin{aligned}
- Pr(X\leqslant20) &amp;amp;= P(Z\leqslant\frac{20.5-30}{\sqrt{30}}) \\
-                  &amp;amp;= P(Z\leqslant-1.734) \\
-                  &amp;amp;= \Phi(-1.734) \\
-                  &amp;amp;= 0.0414
- \end{aligned}
- \]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-ppois(20, lambda=30)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.03528462&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-pnorm((20.5-30)/sqrt(30))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.04141871&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;這兩個其實有些小差距。不過看下圖，其模擬還是很到位的。只是正態分佈的面積明顯確實比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X_1+X_2\leqslant40)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-3&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E(X_1+X_2) &amp;amp;\;= E(X_1)+E(X_2) = 30+30 = 60\\
-Var(X_1+X_2) &amp;amp;\;= Var(X_1)+Var(X_2) = 30+30 \\
-             &amp;amp;\;= (\sqrt{60})^2 \\
-P(X_1+X_2\leqslant 40) &amp;amp;\;= P(Z \leqslant \frac{40.5-60}{\sqrt{60}}) \\
-           &amp;amp;\;= P(Z\leqslant-2.517) \\
-           &amp;amp;\;= \Phi(-2.517) \\
-           &amp;amp;\;= 0.006
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-ppois(40, lambda=60)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.00398281&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-pnorm((40.5-60)/sqrt(60))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.005910569&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt; 又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;兩個連續隨機變量&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;假定 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 是兩個連續隨機變量： &lt;span class=&#34;math display&#34;&gt;\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
-  E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
-  Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;利用矩陣的標記法，可以將 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt;, 即： &lt;span class=&#34;math display&#34;&gt;\[\textbf{X}=\left(
-\begin{array}{c}
-X_1\\
-X_2\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;上面的所有內容都可以標記爲： &lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
-\begin{array}{c}
-\mu_1\\
-\mu_2\\
-\end{array}
-\right)\\
-Covariance \;matrix: \\
-Var(\textbf{X})=\mathbf{\Sigma}=\left(
-\begin{array}{c}
-\sigma_1^2 &amp;amp; \sigma_{12}\\
-\sigma_{12} &amp;amp; \sigma_1^2\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;兩個連續隨機變量 例子：&lt;/h2&gt;
-&lt;p&gt;假如要看收縮期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt;) 和舒張期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt;) 之間的關係：&lt;/p&gt;
-&lt;p&gt;下列爲已知條件：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那麼， 我們可以把這些信息用下面的方法來標記：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
-\begin{array}{c}
-130\\
-90\\
-\end{array}
-\right)\\
-Var(\textbf{X})=\mathbf{\Sigma}=\left(
-\begin{array}{c}
-225 &amp;amp; 112.5\\
-112.5 &amp;amp; 225\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;條件分佈和邊緣分佈的概念&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt; 的兩個變量都服從正態分佈；&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈: &lt;span class=&#34;math display&#34;&gt;\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;同樣的，&lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; 的給出 &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; 的條件分佈 (condition distribution) 也服從正態分佈： &lt;span class=&#34;math display&#34;&gt;\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
- Var(X_1|X_2)=\sigma_1^2(1-\rho^2)\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;反之亦然。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;條件分佈和邊緣分佈的例子&lt;/h2&gt;
-&lt;p&gt;上面的概念過於抽象，用血壓的例子：&lt;/p&gt;
-&lt;p&gt;收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;條件期望: &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：&lt;br&gt; 他的收縮期血壓的期望值就可以用上面的式子計算： &lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP=95)=136\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;條件方差爲： &lt;span class=&#34;math display&#34;&gt;\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&amp;lt;15^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(&lt;strong&gt;方差變小&lt;/strong&gt;)了。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;例題&lt;/h3&gt;
-&lt;p&gt;有 (閒) 人記錄了 &lt;span class=&#34;math inline&#34;&gt;\(1494\)&lt;/span&gt; 名兒童在 &lt;span class=&#34;math inline&#34;&gt;\(2, 4, 6\)&lt;/span&gt; 歲時的腿長度。已知在記錄的這三個年齡時的平均腿長度分別爲 &lt;span class=&#34;math inline&#34;&gt;\(85 cm, 103cm, 114cm\)&lt;/span&gt;。協方差矩陣如下:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-22.2 &amp;amp; 11.8 &amp;amp; 13.7\\
-11.8 &amp;amp; 26.3 &amp;amp; 21.5\\
-13.7 &amp;amp; 21.5 &amp;amp; 29.0
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;假定，這三個年齡記錄的這些兒童的腿長度數據（聯合分佈, joint distribution）服從三個變量正態分佈。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;求 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 歲時這些兒童的腿長度的邊緣分佈 (marginal distribution)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;-4&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X_{age=2} \sim N(85, \sigma_{age=2}^2=22.2)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;求他們 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 歲時腿長度的 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 歲時的條件分佈。(Find the distribution of leg length age 6 conditional on leg length at age 2.)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-5&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 歲時和 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 歲時腿長的相關係數 (correlation, &lt;span class=&#34;math inline&#34;&gt;\(\rho_{6,2}\)&lt;/span&gt;) 爲： &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\rho_{6,2} &amp;amp;= \frac{Cov_{6,2}}{\sqrt{Var(length_6)}\sqrt{Var(length_2)}}\\
-&amp;amp;= \frac{13.7}{\sqrt{22.2}\sqrt{29}}=0.54
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;條件分佈套用上面提到的公式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E(length_6 | length_2) &amp;amp;= \mu_6+\frac{\rho_{6,2}\sigma_6}{\sigma_2}(length_2-\mu_2) \\
-&amp;amp;= 114+\frac{0.54\times\sqrt{29.0}}{\sqrt{22.2}}(length_2-85)\\
-Var(length_6 | length_2) &amp;amp;= \sigma_6^2(1-\rho_{6,2}^2) \\
-                         &amp;amp;= 29.0\times(1-0.54^2) =20.5
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <description>二項分佈的正態分佈近似  假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\) 根據二項分佈的概率公式，計算將會變得很繁瑣複雜。 解決辦法：應用中心極限定理。 中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
+ 問題在於，多大的 \(n\) 才能算大樣本呢？  當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)    泊松分佈的正態分佈近似  假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。 考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。 那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
+ 需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
+   正態分佈模擬的校正：continuity corrections  如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。 例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
     </item>
     
     <item>
       <title>正態分佈</title>
-      <link>/post/normal-distribution/</link>
+      <link>https://winterwang.github.io/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/normal-distribution/</guid>
-      <description>&lt;div id=&#34;-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;概率密度曲線 probability density function， PDF&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;一個隨機連續型變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 它的性質由一個對應的&lt;strong&gt;概率密度方程 (probability density function, PDF)&lt;/strong&gt; 決定。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在給定的範圍區間內，如 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b, (a &amp;lt; b)\)&lt;/span&gt;，它的概率滿足:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;這個相關的方程，在 &lt;span class=&#34;math inline&#34;&gt;\(a\sim b\)&lt;/span&gt; 區間內的積分，就是這個連續變量在這個區間內取值的概率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# R codes for drawing a standard normal distribution by using ggplot2
-library(ggplot2)
-p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
-  stat_function(fun = dnorm)
-p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) +
-  theme(plot.subtitle = element_text(vjust = 1),
-        plot.caption = element_text(vjust = 1),
-        axis.text.x = element_text(size = 12),
-        axis.text.y = element_text(size = 12),
-        plot.title = element_text(size = 10, face = &amp;quot;bold&amp;quot;, hjust = 0.5),
-        panel.background = element_rect(fill = &amp;quot;ivory&amp;quot;)) +
-  labs(title = &amp;quot;Probability density functions \n for standard normal distribution&amp;quot;,
-       x = NULL, y = NULL) +
-  stat_function(fun = dnorm,
-                xlim = c(-1.3,0.4),
-                geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;： &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\int_{-\infty}^\infty xf(x)dx\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;正態分佈&lt;/h3&gt;
-&lt;p&gt;如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，和它的方差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;，來描述這組數據。記爲：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X \sim N(\mu, \sigma^2)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它的概率密度方程可以表述爲：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(x) =\mu\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\sigma^2\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;標準正態分佈&lt;/h3&gt;
-&lt;p&gt;標準正態分佈的期望（或者均值）爲 &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;，方差爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;記爲：&lt;span class=&#34;math inline&#34;&gt;\(Z \sim N(0,1)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;它的概率密度方程表述爲：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{1}{\sqrt{2\pi}}exp(-\frac{z^2}{2})\]&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
-&lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Z=\frac{X-\mu}{\sigma}\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
+      <description>概率密度曲線 probability density function， PDF  一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
+ 在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
+  \[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
+ 這個相關的方程，在 \(a\sim b\) 區間內的積分，就是這個連續變量在這個區間內取值的概率。  # R codes for drawing a standard normal distribution by using ggplot2 library(ggplot2) p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) + stat_function(fun = dnorm) p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) + theme(plot.subtitle = element_text(vjust = 1), plot.</description>
     </item>
     
     <item>
       <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>/post/probability-gambling-answers/</link>
+      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/probability-gambling-answers/</guid>
-      <description>&lt;p&gt;前情提要：&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/Selection_071.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;答案是：必須改變主意才能提高中獎概率。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/Selection_072.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;解說一下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。&lt;/li&gt;
-&lt;li&gt;假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
-&lt;li&gt;假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以按照圖中給出的計算概率樹的過程可以得到:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\
-P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;你是否選擇了改變主意了呢？&lt;/p&gt;
-</description>
+      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
+      <description>前情提要：
+ 假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
+答案是：必須改變主意才能提高中獎概率。
+上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：
+ 解說一下：
+ 假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。 假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。 假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。  所以按照圖中給出的計算概率樹的過程可以得到:
+\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]
+你是否選擇了改變主意了呢？</description>
     </item>
     
     <item>
       <title>你會用概率論來賭博嗎？</title>
-      <link>/post/probability-gambling/</link>
+      <link>https://winterwang.github.io/post/probability-gambling/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/probability-gambling/</guid>
-      <description>&lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/product/0471827223/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&#34;&gt;Quick Calculus: Short Manual of Self-instruction&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/Selection_070.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。&lt;/p&gt;
-&lt;p&gt;下面想介紹一下上週學習的概率的基礎問題。&lt;/p&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;首先是最基礎的&lt;strong&gt;三個概率的公理&lt;/strong&gt;：&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;對於任意事件 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;，它發生的概率 &lt;span class=&#34;math inline&#34;&gt;\(P(A)\)&lt;/span&gt; 滿足這樣的不等式： &lt;span class=&#34;math inline&#34;&gt;\(0 \leqslant P(A) \leqslant 1\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(\Omega)=1\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; 是全樣本空間 (total sample space)&lt;/li&gt;
-&lt;li&gt;對於互斥（相互獨立）的事件 &lt;span class=&#34;math inline&#34;&gt;\(A_1, A_2, \dots, A_n\)&lt;/span&gt; 有如下的等式關係： &lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;你是不是覺得上面三條公理都是&lt;strong&gt;廢話&lt;/strong&gt;。 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。&lt;code&gt;(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/venngram.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明：&lt;/h4&gt;
-&lt;p&gt;先考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2\)&lt;/span&gt; 是什麼（拆分成三個互斥事件）&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2 = (A_1\cap \bar{A_2})\cup(\bar{A_1}\cap A_2)\cup(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;運用上面的公理&lt;del&gt;2&lt;/del&gt; 3&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore P(A_1 \cup A_2) = P(A_1\cap \bar{A_2}) + P(\bar{A_1}\cap A_2) + P(A_1\cap A_2) \;\;\;\;\;\;(1)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;再考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1=(A_1\cap A_2)\cup(A_1\cap\bar{A_2})\)&lt;/span&gt; 繼續拆分成兩個互斥事件&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore P(A_1)=P(A_1\cap A_2)+P(A_1\cap\bar{A_2})\)&lt;/span&gt; 整理一下：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cap\bar{A_2})=P(A_1)-P(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;同理可得: &lt;span class=&#34;math inline&#34;&gt;\(P(\bar{A_1}\cap A_2)=P(A_2)-P(A_1\cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;代入上面第(1)式可得：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1 \cup A_2) =P(A_1)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_2)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;=P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-conditional-probability&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;條件概率 Conditional probability&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)=\frac{P(A\cap S)}{P(S)}\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S) = P(A|S)P(S)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-independence-&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;獨立 (independence) 的定義&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;兩個事件定義爲互爲獨立時 (&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; are said to be independent &lt;strong&gt;if and only if&lt;/strong&gt;) &lt;span class=&#34;math display&#34;&gt;\[P(A\cap B)=P(A)P(B)\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;因爲從條件概率的概念我們已知&lt;br&gt; &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap B) = P(A|B)P(B)\)&lt;/span&gt; &lt;br&gt;所以&lt;span class=&#34;math inline&#34;&gt;\(P(A|B)=P(A)\)&lt;/span&gt; 即：事件 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; 無法提供事件 &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; 的任何有效訊息 (&lt;strong&gt;&lt;span class=&#34;math inline&#34;&gt;\(A, B\)&lt;/span&gt; 互相獨立&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;賭博問題&lt;/h2&gt;
-&lt;p&gt;終於來到本次話題的重點了。我要扣題了哦。語文老師快在此加分。&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/Selection_071.png&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
-&lt;p&gt;答案明天揭曉。&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
+      <description>轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，更多的情況下還會把真相給掩蓋住了。
+我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：
+Quick Calculus: Short Manual of Self-instruction
+ 上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。
+下面想介紹一下上週學習的概率的基礎問題。
+首先是最基礎的三個概率的公理： 對於任意事件 \(A\)，它發生的概率 \(P(A)\) 滿足這樣的不等式： \(0 \leqslant P(A) \leqslant 1\) \(P(\Omega)=1\) , \(\Omega\) 是全樣本空間 (total sample space) 對於互斥（相互獨立）的事件 \(A_1, A_2, \dots, A_n\) 有如下的等式關係： \(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)  你是不是覺得上面三條公理都是廢話。 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)
+然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：
+\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)</description>
     </item>
     
   </channel>

@@ -2,130 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leaflet on Be ambitious</title>
-    <link>/tags/leaflet/</link>
+    <link>https://winterwang.github.io/tags/leaflet/</link>
     <description>Recent content in Leaflet on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Tue, 31 May 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/leaflet/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://winterwang.github.io/tags/leaflet/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>rMaps: 超級酷的地圖</title>
-      <link>/post/2016-05-31-rmaps/</link>
+      <link>https://winterwang.github.io/post/2016-05-31-rmaps/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-05-31-rmaps/</guid>
-      <description>
-
-&lt;p&gt;今日仰視&lt;a href=&#34;https://github.com/ramnathv/slidify&#34; target=&#34;_blank&#34;&gt;slidify&lt;/a&gt;作者&lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt;的github頁面發現超酷的&lt;a href=&#34;https://github.com/ramnathv/rMaps&#34; target=&#34;_blank&#34;&gt;rMaps&lt;/a&gt;包，抄過來在自己電腦上實驗一下。&lt;/p&gt;
-
-&lt;h4 id=&#34;下載&#34;&gt;下載&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;  require(devtools)
-  install_github(&#39;ramnathv/rCharts@dev&#39;)
-  install_github(&#39;ramnathv/rMaps&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;繪制美國2010年的各州的犯罪率-crime-rates-per-100-000-by-state-at-2010&#34;&gt;繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010&lt;/h4&gt;
-
-&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/mymap.html&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;利用以下的R編碼在Rstudio裏實現上圖效果&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  library(rMaps)
-  map &amp;lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010))
-  map
-  map$publish(&amp;quot;Crime Rates (per 100, 000) by State across Years&amp;quot;) # &amp;lt;- 引號中的將會是生成的動態地圖的網頁名稱
-  ## Loading required package: httr
-  ## Please enter your github username: ***** # &amp;lt;- 在此處輸入你自己的github用戶名
-  ## Please enter your github password: ***** # &amp;lt;- 在此輸入你自己的github用戶密碼
-  ## Your gist has been published
-  ## View chart at http://rcharts.github.io/viewer/***** # &amp;lt;- 會出現生成的網頁版可互動地圖鏈接
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;你也可以用下面的編碼將網頁保存爲獨立的html文件(注意：無網絡連接時可能無法正常顯示)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  map$save(&amp;quot;mymap.html&amp;quot;, cdn = TRUE) # &amp;lt;- 引號中爲保存的目標文件名稱
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;繪制1960-2010年每年的各州犯罪率-crime-rates-per-100-000-by-state-from-1960-2010&#34;&gt;繪制1960-2010年每年的各州犯罪率 Crime Rates (per 100, 000) by State from 1960-2010&lt;/h4&gt;
-
-&lt;h4 id=&#34;帶滑動條的可互動地圖-animated-choropleth&#34;&gt;帶滑動條的可互動地圖/Animated Choropleth&lt;/h4&gt;
-
-&lt;p&gt;編碼:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  ichoropleth(Crime ~ State, data = violent_crime, animate = &amp;quot;Year&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;效果:(你可以拖動左上角的滑動條顯示每年的各州犯罪率，&lt;strong&gt;越來越高，今年老川上臺估計全線飄高。。。&lt;/strong&gt;)
-&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/map_bar.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;上圖的自動播放版-animated-choropleth-注意左上角出現播放按鈕&#34;&gt;上圖的自動播放版/Animated Choropleth(注意左上角出現播放按鈕)&lt;/h4&gt;
-
-&lt;p&gt;編碼:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ichoropleth(Crime ~ State, data = violent_crime, animate = &amp;quot;Year&amp;quot;, play = TRUE)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;效果:&lt;/p&gt;
-
-&lt;iframe chart_1=&#34;&#34; height=&#34;500&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps&#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/map_play.html&#34;&gt;&lt;/iframe&gt;
-
-&lt;h5 id=&#34;以下为2016年6月2日更新&#34;&gt;以下为2016年6月2日更新&lt;/h5&gt;
-
-&lt;h4 id=&#34;普通青年用的-伦敦市区-地图&#34;&gt;普通青年用的(伦敦市区)地图：&lt;/h4&gt;
-
-&lt;p&gt;代码:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  map &amp;lt;- Leaflet$new()
-  map$setView(c(51.505, -0.09), zoom = 13)
-  map$tileLayer(provider = &#39;Stamen.Watercolor&#39;) # &amp;lt;- 地图颜色为水彩效果
-  # map$tileLayer(provider = &amp;quot;OpenStreetMap&amp;quot;) # &amp;lt;- 无水彩效果地图
-  map$marker(
-    c(51.5, -0.09),
-    bindPopup = &#39;Hi. I am a popup&#39;
-  )
-  map
-
-
-    library(rMaps)
-    library(leaflet)
-      map &amp;lt;- Leaflet$new()
-      map$setView(c(51.505, -0.09), zoom = 13)
-      #map$tileLayer(provider = &#39;Stamen.Watercolor&#39;) # &amp;lt;- 地图颜色为水彩效果
-      map$tileLayer(provider = &amp;quot;OpenStreetMap&amp;quot;) # &amp;lt;- 无水彩效果地图
-      map$marker(
-        c(51.5209, -0.1303),
-        bindPopup = &#39;Hi. I am in LSHTM&#39;
-      )
-      map
-      map$save(&#39;mychart.html&#39;, cdn = TRUE)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;黑白色圖:
-&lt;iframe chart_1=&#34;&#34; height=&#34;410&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/stamenLondon.html&#34;&gt;&lt;/iframe&gt;
-一般色彩圖:
-&lt;iframe chart_1=&#34;&#34; height=&#34;410&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;/fig/normalLondon.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;以下爲自娛自樂&#34;&gt;以下爲自娛自樂&lt;/h4&gt;
-
-&lt;p&gt;編碼:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    L2 &amp;lt;- Leaflet$new()
-    L2$setView(c(35.175776,  137.040663), 13)
-    L2$tileLayer(provider = &amp;quot;OpenStreetMap&amp;quot;)
-    L2$marker(
-      c(35.191379, 137.047885),
-      bindPopup = &#39;Hi. I am here. | 快来打我啊！&#39;
-    )
-    L2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;效果:
-&lt;iframe chart_1=&#34;&#34; height=&#34;400&#34; width=&#34;720&#34; id=&#34;iframe-&#34; class=&#34;rChart datamaps &#34; seamless=&#34;&#34; scrolling=&#34;no&#34; src=&#34;
-/fig/nagakute.html&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-</description>
+      <guid>https://winterwang.github.io/post/2016-05-31-rmaps/</guid>
+      <description>今日仰視slidify作者Ramnath Vaidyanathan的github頁面發現超酷的rMaps包，抄過來在自己電腦上實驗一下。
+下載  require(devtools) install_github(&#39;ramnathv/rCharts@dev&#39;) install_github(&#39;ramnathv/rMaps&#39;)  繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010  利用以下的R編碼在Rstudio裏實現上圖效果
+ library(rMaps) map &amp;lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010)) map map$publish(&amp;quot;Crime Rates (per 100, 000) by State across Years&amp;quot;) # &amp;lt;- 引號中的將會是生成的動態地圖的網頁名稱 ## Loading required package: httr ## Please enter your github username: ***** # &amp;lt;- 在此處輸入你自己的github用戶名 ## Please enter your github password: ***** # &amp;lt;- 在此輸入你自己的github用戶密碼 ## Your gist has been published ## View chart at http://rcharts.</description>
     </item>
     
   </channel>

@@ -2,40 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1 on Be ambitious</title>
-    <link>/publication_types/1/</link>
+    <link>https://winterwang.github.io/publication_types/1/</link>
     <description>Recent content in 1 on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/1/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://winterwang.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
-      <link>/publication/blood-c3_liverfat/</link>
+      <link>https://winterwang.github.io/publication/blood-c3_liverfat/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>/publication/blood-c3_liverfat/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-
-&lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
-
-&lt;p&gt;We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.&lt;/p&gt;
-
-&lt;h3 id=&#34;methods&#34;&gt;Methods:&lt;/h3&gt;
-
-&lt;p&gt;Middle-aged male subjects who drank less than 46 g/day alcohol (n=40) were studied. H1 magnetic resonance spectroscopy was used to quantify liver fat content, (3T, Siemens MR, TE=30 ms). Volume of interest was selected in the right liver lobe with a size of 4×4×4 cm. The spectrogram was analyzed by LCModel.&lt;/p&gt;
-
-&lt;h3 id=&#34;results&#34;&gt;Results:&lt;/h3&gt;
-
-&lt;p&gt;Mean age and body mass index were 62.5 years and 24.5 kg/m&lt;sup&gt;2&lt;/sup&gt; . The geometric mean and 95% confidence interval of C3 (mg/dl) in the lowest, medium, and highest liver fat tertile were 96.5 (92.8, 100.5), 111.1 (104.6, 115.6), 112.2 (106.7, 117.9), respectively after adjustment for age, body mass index, smoking status, alcohol intake and blood FFA level (one-way ANCOVA p=0.008, linear p=0.010).&lt;/p&gt;
-
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
-
-&lt;p&gt;We found a linear and positive relationship between C3 and liver fat content. Present findings may implicate hepatocyte injury already present with accumulation of triacylglycerol.&lt;/p&gt;
-</description>
+      <guid>https://winterwang.github.io/publication/blood-c3_liverfat/</guid>
+      <description>Abstract Objective: We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.
+Methods: Middle-aged male subjects who drank less than 46 g/day alcohol (n=40) were studied. H1 magnetic resonance spectroscopy was used to quantify liver fat content, (3T, Siemens MR, TE=30 ms). Volume of interest was selected in the right liver lobe with a size of 4×4×4 cm.</description>
     </item>
     
   </channel>

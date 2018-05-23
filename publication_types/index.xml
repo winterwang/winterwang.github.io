@@ -2,47 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types on Be ambitious</title>
-    <link>/publication_types/</link>
+    <link>https://winterwang.github.io/publication_types/</link>
     <description>Recent content in Publication_types on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://winterwang.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>1</title>
-      <link>/publication_types/1/</link>
+      <link>https://winterwang.github.io/publication_types/1/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/1/</guid>
+      <guid>https://winterwang.github.io/publication_types/1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2</title>
-      <link>/publication_types/2/</link>
+      <link>https://winterwang.github.io/publication_types/2/</link>
       <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/2/</guid>
+      <guid>https://winterwang.github.io/publication_types/2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>7</title>
-      <link>/publication_types/7/</link>
+      <link>https://winterwang.github.io/publication_types/7/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/7/</guid>
+      <guid>https://winterwang.github.io/publication_types/7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>8</title>
-      <link>/publication_types/8/</link>
+      <link>https://winterwang.github.io/publication_types/8/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/8/</guid>
+      <guid>https://winterwang.github.io/publication_types/8/</guid>
       <description></description>
     </item>
     
