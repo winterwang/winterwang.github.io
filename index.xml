@@ -24,6 +24,7 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-18 12:00]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 大塚敏美財団メールを返信する&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Hierarchical discrete data modeling Lecture 1-4;&lt;/del&gt;
 
 &lt;ul&gt;
