@@ -148,7 +148,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-04-30]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2013年 LSHTM 試題 Paper 1-7;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 14:09 18 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -211,7 +215,7 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
 
 &lt;ul&gt;
-&lt;li&gt;[done 2018-05-27 14:07, 18 min used]&lt;/li&gt;
+&lt;li&gt;[done 2018-05-27 15:07,278 min used]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
 
