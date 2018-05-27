@@ -97,9 +97,13 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
 
 &lt;ul&gt;
-&lt;li&gt;[done 2018-05-25 21:32 done 35 min]&lt;/li&gt;
+&lt;li&gt;[2018-05-25 21:32 done 35 min]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-6;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-27 13:39 done 15 min]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-7;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-8;
 
@@ -204,7 +208,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-19 13:43]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2014年 LSHTM 試題 Paper 1-7;&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 14:07, 18 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
 
 &lt;ul&gt;
