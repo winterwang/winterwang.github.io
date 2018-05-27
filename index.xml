@@ -75,7 +75,11 @@
 &lt;ul&gt;
 &lt;li&gt;[2018-05-18 12:21 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-6;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 11:15]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-7;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
 
