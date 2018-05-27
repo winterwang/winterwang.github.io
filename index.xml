@@ -389,7 +389,11 @@
 &lt;ul&gt;
 &lt;li&gt;[2018-05-21 11:09 答案可能有錯的 AT?]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2017年 LSHTM 試題 Paper 1-8;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-27 12:34 done, 28 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
 
 &lt;ul&gt;
