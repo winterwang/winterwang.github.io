@@ -67,7 +67,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-29 17:01]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2009 年 LSHTM 試題 Paper 2-3 (survival question);&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2009 年 LSHTM 試題 Paper 2-3 (survival question);&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-29 18:19]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-1;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
 
