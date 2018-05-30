@@ -338,7 +338,11 @@
 &lt;ul&gt;
 &lt;li&gt;[2018-05-28 14:15 done within 25 min, Poisson regression model is within my range of ability]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2015年 LSHTM 試題 Paper 2-7;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-30 17:07 done. 40 min used. Quite difficult Weibull model with AFT feature.]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
 
 &lt;ul&gt;
