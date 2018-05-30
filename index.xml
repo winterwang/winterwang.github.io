@@ -317,7 +317,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-24 13:56]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2015年 LSHTM 試題 Paper 2-2;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 16:14 29 min used, somewhat easy I can have about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-3;&lt;/del&gt;
 
 &lt;ul&gt;
