@@ -385,7 +385,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-23 18:00]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-2;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 01:03 very difficult competing risk(subdistribution) model]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-3;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -402,7 +406,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-28 11:55 matched case-control study]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-7;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 13:09 Weibull model with connection to AFT model]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
 
 &lt;ul&gt;
