@@ -271,7 +271,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-28 16:50 got 19 points out of 20 I like this one]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2014年 LSHTM 試題 Paper 2-8;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 18:38 36 min used, survival questions]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-1;&lt;/del&gt;
 
 &lt;ul&gt;
