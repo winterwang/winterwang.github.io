@@ -189,7 +189,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-28 extreeeeeeeemely^99^ difficult GLM]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2013年 LSHTM 試題 Paper 2-6;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 in 37 min]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
 
 &lt;ul&gt;
