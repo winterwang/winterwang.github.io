@@ -46,6 +46,24 @@
 &lt;li&gt;[2018-05-06 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;LSHTM 統計學學習筆記&lt;/a&gt; &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/cox-.html&#34; target=&#34;_blank&#34;&gt;生存分析章節-Cox-models&lt;/a&gt;;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Multinomial logistic regression model;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Oridinal logisitic regression model;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，貝葉斯進階章節;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，用 STATA 或者 R 分析 SME 流行病學數據的實踐部分;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 學習 Latent Class Analysis 方法;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 熟悉 NDNS 數據框架結構，思考分析方法;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 辦理法國簽證所需的材料;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;大學學生在校證明;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 銀行三個月存款證明；&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 歐洲之星(7月?)訂票;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 巴黎青年旅館訂房 (聯繫下正好在法國的 なっちゃん家?);&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 旅行保險;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; BRP 複印;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 護照複印;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 簽證申請書;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Probablity;(2018-05-16 to 17)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Inference;(2018-05-17 to 18)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Clinical Trial;(2018-05-19 to 20)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
@@ -54,7 +72,7 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Regression; (2018-05-24 to 25)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Robust statistics; (2018-05-27)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 GLM (2018-05-28 to 29)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 複習 Survival Analysis&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Survival Analysis (2018-05-39 to 31)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 複習 Bayesian&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;反省自己爲什麼效率這麼低。。。。。&lt;/del&gt;
 
