@@ -433,8 +433,9 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
 
-&lt;ul&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
 &lt;li&gt;[done 2018-05-27 23:58 45 min used]&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2018-05-31 15:22 challenged again 32 min used, answers improved.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
 
