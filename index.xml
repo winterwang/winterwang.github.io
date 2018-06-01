@@ -11,40 +11,13 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>To do list 2018 May</title>
-      <link>https://winterwang.github.io/post/todotest/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      <title>Todo 2018 June</title>
+      <link>https://winterwang.github.io/post/todo-2018-june/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/todotest/</guid>
-      <description>&lt;p&gt;試試看用 &lt;a href=&#34;https://shrektan.com/post/2018/04/02/blogdown-todo/&#34; target=&#34;_blank&#34;&gt;Blogdown 來管理自己的待辦事項&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Causal inference 作業&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[done 2018-05-18 12:00]&lt;/li&gt;
-&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+      <guid>https://winterwang.github.io/post/todo-2018-june/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 大塚敏美財団メールを返信する&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Hierarchical discrete data modeling Lecture 1-4;&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[2018-05-08 23:45 done]&lt;/li&gt;
-&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Generalised linear mixed effect modelling lecture 5-6;&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[2018-05-12 16:00 done]&lt;/li&gt;
-&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;完成 ASM Edmund 作業;&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[2018-05-18 03:20 done]&lt;/li&gt;
-&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;寫一篇日志回顧最近 LSHTM 的生活;&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[2018-05-06 done]&lt;/li&gt;
-&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;LSHTM 統計學學習筆記&lt;/a&gt; &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/cox-.html&#34; target=&#34;_blank&#34;&gt;生存分析章節-Cox-models&lt;/a&gt;;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Multinomial logistic regression model;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Oridinal logisitic regression model;&lt;/label&gt;&lt;/li&gt;
@@ -65,6 +38,90 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 簽證申請書;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;近三个月内的证件照，尺寸3.5cm x 4.5cm，白底&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 把 &lt;a href=&#34;https://github.com/winterwang/overleaf-thesis-template&#34; target=&#34;_blank&#34;&gt;LaTeX 模板&lt;/a&gt; 調整到 &lt;a href=&#34;https://github.com/pzhaonet/bookdownplus&#34; target=&#34;_blank&#34;&gt;Bookdownplus 的模板之一&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 複習 Bayesian&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2011年 LSHTM 試題 Paper 1-1;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2011年 LSHTM 試題 Paper 1-3;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2011年 LSHTM 試題 Paper 1-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2011年 LSHTM 試題 Paper 1-7;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 1-1;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 1-3;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 1-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 1-7;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-1;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-2;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-3;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-5;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-6;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2012年 LSHTM 試題 Paper 2-8;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2013年 LSHTM 試題 Paper 1-1;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2013年 LSHTM 試題 Paper 2-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2014年 LSHTM 試題 Paper 2-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2015年 LSHTM 試題 Paper 2-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2016年 LSHTM 試題 Paper 2-4;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[ ] 2017年 LSHTM 試題 Paper 2-4;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>To do list 2018 May</title>
+      <link>https://winterwang.github.io/post/todotest/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/todotest/</guid>
+      <description>&lt;p&gt;試試看用 &lt;a href=&#34;https://shrektan.com/post/2018/04/02/blogdown-todo/&#34; target=&#34;_blank&#34;&gt;Blogdown 來管理自己的待辦事項&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Causal inference 作業&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-18 12:00]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Hierarchical discrete data modeling Lecture 1-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-08 23:45 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Generalised linear mixed effect modelling lecture 5-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-12 16:00 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;完成 ASM Edmund 作業;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-18 03:20 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;寫一篇日志回顧最近 LSHTM 的生活;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-06 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Probablity;(2018-05-16 to 17)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Inference;(2018-05-17 to 18)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Clinical Trial;(2018-05-19 to 20)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
@@ -74,13 +131,11 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Robust statistics; (2018-05-27)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 GLM (2018-05-28 to 29)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Survival Analysis (2018-05-39 to 31)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 複習 Bayesian&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;反省自己爲什麼效率這麼低。。。。。&lt;/del&gt;
 
 &lt;ul&gt;
 &lt;li&gt;解決辦法就是把自己的 to do 放在網頁上，刺激自己。(2018-05-06 done)&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 把 &lt;a href=&#34;https://github.com/winterwang/overleaf-thesis-template&#34; target=&#34;_blank&#34;&gt;LaTeX 模板&lt;/a&gt; 調整到 &lt;a href=&#34;https://github.com/pzhaonet/bookdownplus&#34; target=&#34;_blank&#34;&gt;Bookdownplus 的模板之一&lt;/a&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2008年 LSHTM 試題 Paper 2-2 (survival question);&lt;/del&gt;
 
 &lt;ul&gt;
@@ -91,14 +146,11 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-29 18:19]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-1;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
 
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-24 17:01 40 min used]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-3;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -109,20 +161,16 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-27 11:15]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2011年 LSHTM 試題 Paper 1-7;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
 
 &lt;ul&gt;
 &lt;li&gt;[2018-05-19 22:50 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-1;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
 
 &lt;ul&gt;
 &lt;li&gt;[2018-05-19 23:43 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-3;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -133,25 +181,16 @@
 &lt;ul&gt;
 &lt;li&gt;[2018-05-27 13:39 done 15 min]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-7;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-8;
 
 &lt;ul&gt;
 &lt;li&gt;[2018-05-18 22:00 done]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-1;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-2;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-3;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-5;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-6;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
 
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-25 35 min but brutally beaten]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-8;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2013年 LSHTM 試題 Paper 1-1;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -202,7 +241,6 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-07 2230; challenged again 2018-05-25 20:58 35 min used]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2013年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -278,7 +316,6 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-14 23:18; twice challenge 2018-05-25 17:20 better now]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2014年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -354,7 +391,6 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-25 13:58]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2015年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -430,7 +466,6 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-25 01:38 40 min used]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2016年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
 
 &lt;ul class=&#34;task-list&#34;&gt;
@@ -510,7 +545,6 @@
 &lt;li&gt;[2018-05-27 20:00 very difficult combined with ordinal logistic regression]&lt;/li&gt;
 &lt;li&gt;[2018-05-31 14:35 challenged again, 40 min, still very difficult but improved]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2017年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
 
 &lt;ul&gt;
@@ -3284,269 +3318,6 @@ Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;當從樣本數據計算獲得的估計量的信賴區間很寬，說明了這個收集來的數據提供了很少的參數信息，導致估計變得很不精確。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;看到這裏的都是好漢一條啊！ 我不知道你暈了麼有，反正我是已經暈了。。。。&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;二項分佈的正態分佈近似&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;假設我們有大量(&lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;)的二項分佈實驗 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(n, \pi)\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;根據&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;二項分佈的概率公式&lt;/a&gt;，計算將會變得很繁瑣複雜。&lt;/li&gt;
-&lt;li&gt;解決辦法：應用中心極限定理。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/probability3/&#34;&gt;中心極限定理&lt;/a&gt;告訴我們，當樣本量足夠大時:
-&lt;span class=&#34;math display&#34;&gt;\[X\sim N（n\pi, n\pi(1-\pi))\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;問題在於，多大的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 才能算大樣本呢？
-&lt;ul&gt;
-&lt;li&gt;當且僅當 (only and if only) &lt;span class=&#34;math inline&#34;&gt;\(n&amp;gt;20\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n\pi&amp;gt;5\)&lt;/span&gt; AND &lt;span class=&#34;math inline&#34;&gt;\(n(1-\pi)&amp;gt;5\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;泊松分佈的正態分佈近似&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;假設時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 內某事件的發生次數服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Po(\mu)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;考慮將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段。那麼第 &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 時間段內事件發生次數依舊服從泊松分佈 &lt;span class=&#34;math inline&#34;&gt;\(X_i\sim Po(\frac{\mu}{n})\)&lt;/span&gt;。且 &lt;span class=&#34;math inline&#34;&gt;\(E(X_i)=\mu/n, Var(X_i)=\mu/n\)&lt;/span&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;那麼原先的 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可以被視爲是將這無數的小時間段的 &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; 相加。應用中心極限定理：
-&lt;span class=&#34;math display&#34;&gt;\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;需要注意的是，這段時間 (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;) 內發生的事件次數 (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) : &lt;span class=&#34;math inline&#34;&gt;\(\lambda t =\mu&amp;gt;10\)&lt;/span&gt; ，這樣的正態分佈模擬才能成立。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;continuity-corrections&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;正態分佈模擬的校正：continuity corrections&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。&lt;/li&gt;
-&lt;li&gt;例如：我們如果用正態分佈模擬來計算 &lt;span class=&#34;math inline&#34;&gt;\(P(X=15)\)&lt;/span&gt;，那麼實際上我們應該計算的是 &lt;span class=&#34;math inline&#34;&gt;\(P(14.5&amp;lt;X&amp;lt;15.5)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;例題&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(100,0.5)\)&lt;/span&gt;，求 &lt;span class=&#34;math inline&#34;&gt;\(P(X&amp;gt;60)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-\because X&amp;amp;\sim Bin(100, 0.5) \\ \therefore E(X) &amp;amp;=n\pi=50 \\
-Var(X) &amp;amp;= n\pi(1-\pi) =25=5^2\\
-P(X&amp;gt;60)  &amp;amp;= 1-P(X\leqslant60) \\
-         &amp;amp;= 1-P(Z\leqslant\frac{60.5-50}{\sqrt{25}}) \\
-         &amp;amp;= 1-P(Z\leqslant2.1) \\
-         &amp;amp;= 1-\Phi(2.1) \\
-         &amp;amp;= 1-0.982 = 0.018
-\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-1-pbinom(60, size=100, prob=0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.0176001&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-1-pnorm((60.5-50)/sqrt(25))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.01786442&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(48, 0.75)\)&lt;/span&gt;, 求 &lt;span class=&#34;math inline&#34;&gt;\(P(30&amp;lt;X&amp;lt;39)\)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\because B &amp;amp;\; \sim Bin(48, 0.75) \\
-\therefore E(X) &amp;amp;\; =n\pi=36 \\
-           Var(X) &amp;amp;\; =n\pi(1-\pi)=9=3^2 \\
-P(30&amp;lt;X&amp;lt;39) &amp;amp;\; = P(31\leqslant X\leqslant 38)\\
-     &amp;amp;\; = P(30.5\leqslant Y \leqslant 38.5) \\
-     Y\;is\;the&amp;amp;\;normal\;approximation \\
-     &amp;amp;\;= P(Y&amp;lt;38.5) - P(Y&amp;lt;30.5) \\
-     &amp;amp;\;= P(Z\leqslant\frac{38.5-36}{3})-
-          P(Z\leqslant\frac{30.5-36}{3}) \\
-     &amp;amp;\;= P(Z\leqslant0.833) - P(Z\leqslant-1.833) \\
-     &amp;amp;\;= \Phi(0.833)-\Phi(-1.833) \\
-     &amp;amp;\;= 0.798-0.033 = 0.764
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-pbinom(38, size=48, prob=0.75)-pbinom(30, size=48, prob=0.75)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.7578159&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.7642951&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;從上面兩個例題也能看出，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 越小，正態分佈模擬的誤差就越大。&lt;/p&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X \sim Poisson(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X\leqslant20)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-2&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\because E(X)=\mu=30, \;Var(X)=\mu=30=(\sqrt{30})^2 \\
- \begin{aligned}
- Pr(X\leqslant20) &amp;amp;= P(Z\leqslant\frac{20.5-30}{\sqrt{30}}) \\
-                  &amp;amp;= P(Z\leqslant-1.734) \\
-                  &amp;amp;= \Phi(-1.734) \\
-                  &amp;amp;= 0.0414
- \end{aligned}
- \]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-ppois(20, lambda=30)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.03528462&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-pnorm((20.5-30)/sqrt(30))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.04141871&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;這兩個其實有些小差距。不過看下圖，其模擬還是很到位的。只是正態分佈的面積明顯確實比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;已知 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)\)&lt;/span&gt; 求 &lt;span class=&#34;math inline&#34;&gt;\(P(X_1+X_2\leqslant40)\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-3&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E(X_1+X_2) &amp;amp;\;= E(X_1)+E(X_2) = 30+30 = 60\\
-Var(X_1+X_2) &amp;amp;\;= Var(X_1)+Var(X_2) = 30+30 \\
-             &amp;amp;\;= (\sqrt{60})^2 \\
-P(X_1+X_2\leqslant 40) &amp;amp;\;= P(Z \leqslant \frac{40.5-60}{\sqrt{60}}) \\
-           &amp;amp;\;= P(Z\leqslant-2.517) \\
-           &amp;amp;\;= \Phi(-2.517) \\
-           &amp;amp;\;= 0.006
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看實際用傻瓜算法計算獲得的概率：
-ppois(40, lambda=60)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.00398281&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 快來看用中心極限定理模擬正態分佈獲得的概率：
-pnorm((40.5-60)/sqrt(60))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.005910569&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2017-10-21-central-limit-theorem-application_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;
-又一次，正態分佈的面積比泊松分佈的小柱子面積要大一些。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;兩個連續隨機變量&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;假定 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 是兩個連續隨機變量：
-&lt;span class=&#34;math display&#34;&gt;\[E(X_1)=\mu_1, Var(X_1)=\sigma_1^2 \\
-E(X_2)=\mu_2, Var(X_2)=\sigma_2^2 \\
-Corr(X_1, X_2)=\rho \Rightarrow Cov(X_1, X_2)=\rho\sigma_1\sigma_2=\sigma_{12}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;利用矩陣的標記法，可以將 &lt;span class=&#34;math inline&#34;&gt;\(X_1, X_2\)&lt;/span&gt; 標記爲 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt;, 即：
-&lt;span class=&#34;math display&#34;&gt;\[\textbf{X}=\left(
-\begin{array}{c}
-X_1\\
-X_2\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;上面的所有內容都可以標記爲：
-&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
-\begin{array}{c}
-\mu_1\\
-\mu_2\\
-\end{array}
-\right)\\
-Covariance \;matrix: \\
-Var(\textbf{X})=\mathbf{\Sigma}=\left(
-\begin{array}{c}
-\sigma_1^2 &amp;amp; \sigma_{12}\\
-\sigma_{12} &amp;amp; \sigma_1^2\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;兩個連續隨機變量 例子：&lt;/h2&gt;
-&lt;p&gt;假如要看收縮期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt;) 和舒張期血壓 (&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt;) 之間的關係：&lt;/p&gt;
-&lt;p&gt;下列爲已知條件：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(130\)&lt;/span&gt;， 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(15\)&lt;/span&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 的均值爲 &lt;span class=&#34;math inline&#34;&gt;\(90\)&lt;/span&gt;, 標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(SBP\)&lt;/span&gt; 和 &lt;span class=&#34;math inline&#34;&gt;\(DBP\)&lt;/span&gt; 之間的相關係數爲 &lt;span class=&#34;math inline&#34;&gt;\(0.75\)&lt;/span&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那麼， 我們可以把這些信息用下面的方法來標記：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(\textbf{X})=\mathbf{\mu}=\left(
-\begin{array}{c}
-130\\
-90\\
-\end{array}
-\right)\\
-Var(\textbf{X})=\mathbf{\Sigma}=\left(
-\begin{array}{c}
-225 &amp;amp; 112.5\\
-112.5 &amp;amp; 225\\
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;條件分佈和邊緣分佈的概念&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(\textbf{X}=(X_1, X_2)^T\)&lt;/span&gt; 的兩個變量都服從正態分佈；&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;那麼這兩個變量的邊緣分佈 (marginal distribution) 也服從正態分佈:
-&lt;span class=&#34;math display&#34;&gt;\[X_1\sim N(\mu_1,\sigma_1^2), X_2\sim N(\mu, \sigma_2^2)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;同樣的，&lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; 的給出 &lt;span class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; 的條件分佈 (condition distribution) 也服從正態分佈：
-&lt;span class=&#34;math display&#34;&gt;\[E(X_1|X_2)=\mu_1+\frac{\rho\sigma_1}{\sigma_2}(X_2-\mu_2) \\
- Var(X_1|X_2)=\sigma_1^2(1-\rho^2)\]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;反之亦然。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
-&lt;h2&gt;條件分佈和邊緣分佈的例子&lt;/h2&gt;
-&lt;p&gt;上面的概念過於抽象，用血壓的例子：&lt;/p&gt;
-&lt;p&gt;收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;條件期望:
-&lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP)=130+\frac{0.75\times15}{10}(DBP-90)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;實際如果來了一個病人，他說他只記得自己測的舒張期血壓是95：&lt;br&gt;
-他的收縮期血壓的期望值就可以用上面的式子計算：
-&lt;span class=&#34;math display&#34;&gt;\[E(SBP|DBP=95)=136\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;條件方差爲：
-&lt;span class=&#34;math display&#34;&gt;\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&amp;lt;15^2\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(&lt;strong&gt;方差變小&lt;/strong&gt;)了。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;例題&lt;/h3&gt;
-&lt;p&gt;有 (閒) 人記錄了 &lt;span class=&#34;math inline&#34;&gt;\(1494\)&lt;/span&gt; 名兒童在 &lt;span class=&#34;math inline&#34;&gt;\(2, 4, 6\)&lt;/span&gt; 歲時的腿長度。已知在記錄的這三個年齡時的平均腿長度分別爲 &lt;span class=&#34;math inline&#34;&gt;\(85 cm, 103cm, 114cm\)&lt;/span&gt;。協方差矩陣如下:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\left(
-\begin{array}{c}
-22.2 &amp;amp; 11.8 &amp;amp; 13.7\\
-11.8 &amp;amp; 26.3 &amp;amp; 21.5\\
-13.7 &amp;amp; 21.5 &amp;amp; 29.0
-\end{array}
-\right)\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;假定，這三個年齡記錄的這些兒童的腿長度數據（聯合分佈, joint distribution）服從三個變量正態分佈。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;求 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 歲時這些兒童的腿長度的邊緣分佈 (marginal distribution)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;-4&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X_{age=2} \sim N(85, \sigma_{age=2}^2=22.2)\]&lt;/span&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;求他們 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 歲時腿長度的 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 歲時的條件分佈。(Find the distribution of leg length age 6 conditional on leg length at age 2.)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-5&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;解&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 歲時和 &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; 歲時腿長的相關係數 (correlation, &lt;span class=&#34;math inline&#34;&gt;\(\rho_{6,2}\)&lt;/span&gt;) 爲：
-&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\rho_{6,2} &amp;amp;= \frac{Cov_{6,2}}{\sqrt{Var(length_6)}\sqrt{Var(length_2)}}\\
-&amp;amp;= \frac{13.7}{\sqrt{22.2}\sqrt{29}}=0.54
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;條件分佈套用上面提到的公式：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E(length_6 | length_2) &amp;amp;= \mu_6+\frac{\rho_{6,2}\sigma_6}{\sigma_2}(length_2-\mu_2) \\
-&amp;amp;= 114+\frac{0.54\times\sqrt{29.0}}{\sqrt{22.2}}(length_2-85)\\
-Var(length_6 | length_2) &amp;amp;= \sigma_6^2(1-\rho_{6,2}^2) \\
-                         &amp;amp;= 29.0\times(1-0.54^2) =20.5
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
