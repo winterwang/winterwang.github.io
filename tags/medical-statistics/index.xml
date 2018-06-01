@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Medical Statistics on Be ambitious</title>
+    <title>Medical-Statistics on Be ambitious</title>
     <link>https://winterwang.github.io/tags/medical-statistics/</link>
-    <description>Recent content in Medical Statistics on Be ambitious</description>
+    <description>Recent content in Medical-Statistics on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
+      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>什麼是假設檢驗 Hypothesis testing一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
+      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
+      <description>We are drowning in information and starving for knowledge. Click the graph and you can learn what I learnt.
+&amp;mdash; Chaochen Wang in London 2017.09</description>
+    </item>
+    
+  </channel>
+</rss>就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
 例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
 當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
 從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”）從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）注意：（這一段很繞）
