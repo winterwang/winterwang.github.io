@@ -55,7 +55,11 @@
 &lt;li&gt;[done 2018-06-03 17:30 linear regression, really need to pay attention in reading the question]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-4;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-7;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-7;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-03 22:30 Binomial exact test]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-1;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-2;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-3;&lt;/label&gt;&lt;/li&gt;
