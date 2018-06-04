@@ -176,6 +176,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;[2018-05-18 22:00 done]&lt;/li&gt;
+&lt;li&gt;[2018-06-04 11:27 done again, when use transformation for MLE, we need to substitute it back to the loglikelihood function to find the standard error of the newly transformed variable]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
 
