@@ -60,13 +60,29 @@
 &lt;ul&gt;
 &lt;li&gt;[done 2018-06-03 22:30 Binomial exact test]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-1;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, coefficient and rho, 75% about]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-2;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-3;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-5;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, too much to write as a survival question, about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, too much to write about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-6;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 2-8;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, GLM about 90%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2013年 LSHTM 試題 Paper 1-1;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2013年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 2014年 LSHTM 試題 Paper 2-4;&lt;/label&gt;&lt;/li&gt;
@@ -182,6 +198,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;[done 2018-05-25 35 min but brutally beaten]&lt;/li&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test 90%]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
 
