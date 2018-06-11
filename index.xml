@@ -21,6 +21,8 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; PCA analysis learning&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Cluster analysis learning&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Comment and response to AACE&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Test on Ubuntu 18.04&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 尝试从Ubuntu, 日本語を試す&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;更新 &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;LSHTM 統計學學習筆記&lt;/a&gt; &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/cox-.html&#34; target=&#34;_blank&#34;&gt;生存分析章節-Cox-models&lt;/a&gt;;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Multinomial logistic regression model;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Oridinal logisitic regression model;&lt;/label&gt;&lt;/li&gt;
