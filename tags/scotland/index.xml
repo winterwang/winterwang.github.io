@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scotland on Be ambitious</title>
+    <link>https://winterwang.github.io/tags/scotland/</link>
+    <description>Recent content in Scotland on Be ambitious</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
+    <lastBuildDate>Sun, 24 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://winterwang.github.io/tags/scotland/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>蘇格蘭高地7日公路之旅</title>
+      <link>https://winterwang.github.io/post/scotland-highland-road-trip/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/scotland-highland-road-trip/</guid>
+      <description>高地旅行2018-06-13～2018-06-20</description>
+    </item>
+    
+  </channel>
+</rss>

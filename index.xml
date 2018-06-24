@@ -11,6 +11,36 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Summer Project Schedule</title>
+      <link>https://winterwang.github.io/post/summer-project-schedule/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/summer-project-schedule/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Data analysis finish by 2018-07-24&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Paper structure confirm by 2018-08-01&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Paper draft complete by 2018-08-24&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-24
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>蘇格蘭高地7日公路之旅</title>
+      <link>https://winterwang.github.io/post/scotland-highland-road-trip/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/scotland-highland-road-trip/</guid>
+      <description>&lt;p&gt;高地旅行2018-06-13～2018-06-20&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Todo 2018 June</title>
       <link>https://winterwang.github.io/post/todo-2018-june/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
@@ -3116,251 +3146,6 @@ E(X_1^4) &amp;amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[n\rightarrow \infty, X_n^2\sim N(n, 2n)\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
-      <description>&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;估計量和他們的樣本分佈&lt;/h3&gt;
-&lt;p&gt;例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;模型假設：&lt;/strong&gt; 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 &lt;span class=&#34;math inline&#34;&gt;\(Y_i\)&lt;/span&gt; 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;，總體方差爲 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt;。那麼這個模型可以簡單的被寫成：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;總體均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的估計量：&lt;/strong&gt; 顯然算術平均值: &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)&lt;/span&gt; 是我們用於估計總體均值的估計量。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;估計量的樣本分佈：&lt;/strong&gt;
-&lt;span class=&#34;math display&#34;&gt;\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\
-           &amp;amp;= \frac{1}{n}E(\sum Y_i) \\
-           &amp;amp;= \frac{1}{n}\sum E(Y_i) \\
-           &amp;amp;= \frac{1}{n}n\mu = \mu \\
-Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\
-\because Y_i \;are &amp;amp;\; independent   \\
-            &amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\
-            &amp;amp;= \frac{1}{n^2} n Var(Y_i) \\
-            &amp;amp;= \frac{\sigma^2}{n}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-zfracbary-musqrtvarbary--zsim-n01&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明當 &lt;span class=&#34;math inline&#34;&gt;\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(Z\sim N(0,1)\)&lt;/span&gt;:&lt;/h4&gt;
-&lt;p&gt;由式子可知， &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 只是由一組服從正態分佈的數據 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 線性轉換 (linear transformation) 而來，所以 &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; 本身也服從正態分佈
-&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E(Z) &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}E[\bar{Y}-\mu] \\
-     &amp;amp;= \frac{1}{\sqrt{Var(\bar{Y})}}[\mu-\mu] = 0 \\
-Var(Z) &amp;amp;= \frac{1}{Var(\bar{Y})}Var[\bar{Y}-\mu] \\
-       &amp;amp;= \frac{1}{Var(\bar{Y})}Var(\bar{Y}) =1 \\
-\therefore Z \;&amp;amp;\sim N(0,1)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的信賴區間：&lt;/strong&gt; 上節說道，&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;假定我們用 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 作爲信賴區間的水平。那麼下面我們嘗試推導一下信賴區間的計算公式。從長遠來說（也就是假設我們從總體中抽樣無數次，每次都進行信賴區間的計算，也獲得無數個信賴區間），這些信賴區間中有 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 是包含了總體的真實均值（但是卻是未知）的，而且這些信賴區間由於是從一個服從正態分佈的數據而來，它們也服從正態分佈（對真實均值左右對稱）。所以我們有理由相信，可以找到一個數值 &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Prob(\bar{Y} &amp;gt; \mu+c) = 0.025 \\
-  Prob(\bar{Y} &amp;lt; \mu-c) = 0.025\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;因此，我們可以定義 &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 信賴區間的上限和下限分別是：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[L=\bar{Y}-c \Rightarrow Prob(L&amp;gt;\mu)=0.025 \\
-  U=\bar{Y}+c \Rightarrow Prob(U&amp;lt;\mu)=0.025\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/Selection_082.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;接下來就是推倒（故意的）&lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; 的過程啦：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-Prob(\bar{Y}&amp;gt;\mu+c)=Prob(\bar{Y}-\mu&amp;gt;c) \;&amp;amp;= 0.025 \\
-\Rightarrow Prob(\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}} &amp;gt; \frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
-\Rightarrow Prob(Z&amp;gt;\frac{c}{\sqrt{Var(\bar{Y})}}) \;&amp;amp;= 0.025 \\
-上面已經證明了 Z\sim N(0,1) \\
-而且我們也已知 Prob(Z&amp;gt;1.96) \;&amp;amp;= 0.025 \\
-所以只要令 \frac{c}{\sqrt{Var(\bar{Y})}} =1.96 \\
-\Rightarrow c=1.96\sqrt{Var(\bar{Y})} \\
-所以總體均值\mu 的 95\% 信賴區間就是: \\
-\mu = \bar{Y}\pm1.96\sqrt{Var(\bar{Y})}=\bar{Y}\pm &amp;amp; 1.96\frac{\sigma}{\sqrt{n}}\\
-其中，\sqrt{Var(\bar{Y})} 就是我們熟知的估計量 \bar{Y} &amp;amp;的標準誤。
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;估計量的特質&lt;/h3&gt;
-&lt;p&gt;考慮以下的問題：&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;什麼因素決定了一個估計量 (estimator) 的好壞，是否實用？&lt;/li&gt;
-&lt;li&gt;如果有其他的可選擇估計量，該如何取捨呢？&lt;/li&gt;
-&lt;li&gt;當情況複雜的時候，我們該如何尋找合適的估計量？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;偏倚&lt;/h4&gt;
-&lt;p&gt;假設 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 是我們估計總體參數 &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; 的一個估計量。一般來說我們希望估計量的樣本分佈可以在 &lt;code&gt;“正確的位置”&lt;/code&gt; 左右均勻分佈。換句話說我們希望：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(T)=\theta\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;如果實現了這個條件，我們說這樣的估計量是無偏的 (&lt;code&gt;unbiased&lt;/code&gt;)。然而，天下哪有這等好事，我們叫真實值和估計量之間的差距爲偏倚：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[bias(T) = E(T)-\theta\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;其實偏倚完全等於零並不是最重要，許多常見的估計量都是有偏倚的。重要的是，這個偏倚會隨着樣本量的增加而逐漸趨近於零。所以我們就可以認爲這樣的估計量是漸進無偏的 (asymptotically unbiased)：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;\\E(T)=\theta\\
-T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{n\rightarrow\infty}E(T)=\theta\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-efficiency&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;估計量的效能 Efficiency&lt;/h4&gt;
-&lt;p&gt;通常，我們希望一個估計量 (estimator) 的偏倚要小，同時，它的樣本分佈也希望能儘可能的不要波動太大。換句話說，我們還希望估計量的方差越小越好。&lt;/p&gt;
-&lt;p&gt;如果說，兩個估計量有相同的偏倚，均可以選擇來推斷總體，我們說，其中樣本分佈的方差小的那個（波動幅度小）的那個估計量是相對更好的。因爲樣本分佈方差越小，說明可以&lt;strong&gt;更加精確的&lt;/strong&gt;估計總體參數。這兩個估計量的方差之比：&lt;span class=&#34;math inline&#34;&gt;\(Var(S)/Var(T)\)&lt;/span&gt; 被叫做這兩個估計量的&lt;strong&gt;相對效能 (relative efficiency)&lt;/strong&gt;。所以我們用估計量去推斷總體時，需要選用效能最高，精確度最好的估計量 &lt;strong&gt;(the minimum variance unbiased estimator/an efficient estimator)&lt;/strong&gt;。&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level4&#34;&gt;
-&lt;h4&gt;均值和中位數的相對效能&lt;/h4&gt;
-&lt;p&gt;在一個服從 &lt;span class=&#34;math inline&#34;&gt;\(N(\mu,\sigma^2)\)&lt;/span&gt; 正態分佈的數據中，中位數和均值是一樣的，也都同時等於總體均值參數 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;。而且，樣本均數 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 和樣本中位數 &lt;span class=&#34;math inline&#34;&gt;\(\dot{Y}\)&lt;/span&gt; 都是對總體均值的無偏估計量。那麼應該選用中位數還是平均值呢？&lt;/p&gt;
-&lt;p&gt;之前證明過當 &lt;span class=&#34;math inline&#34;&gt;\(Y_i \sim N(\mu,\sigma^2)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(Var(\bar{Y}=\sigma^2/n)\)&lt;/span&gt;。然而，當 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 較大的時候，可以證明的是：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(\dot{Y})=\frac{\pi}{2}\frac{\sigma^2}{n}\approx1.571\frac{\sigma^2}{n}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;因此，這兩個估計量的相對效能就是：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{Var(\dot{Y})}{Var(\bar{Y})}\approx1.571\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-mean-square-error-mse&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;均方差 mean square error (MSE)&lt;/h3&gt;
-&lt;p&gt;兩個估計量的偏倚不同時，可以比較他們和總體參數之間的差距，這被叫做均方差, Mean Square Error (MSE)。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[MSE(T)=E[(T-\theta)^2]\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;這裏用一個數學技巧，將式子中的估計量和總體參數之間的差，分成兩個部分：一是估計量本身的方差 (&lt;span class=&#34;math inline&#34;&gt;\(T-E(T)\)&lt;/span&gt;)，一是估計量的偏倚 (&lt;span class=&#34;math inline&#34;&gt;\(E(T)-\theta\)&lt;/span&gt;)。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-MSE(T) &amp;amp;= E[(T-\theta)^2] \\
-       &amp;amp;= E\{[T-E(T)+E(T)-\theta]^2\} \\
-       &amp;amp;= E\{[T-E(T)]^2+[E(T)-\theta]^2 \\
-       &amp;amp; \;\;\;\;\; \;\;+2[T-E(T)][E(T)-\theta]\} \\
-       &amp;amp;= E\{[T-E(T)]^2\}+E\{[E(T)-\theta]^2\} + 0\\
-       &amp;amp;= Var(T) + [bias(T)^2]
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;總體方差的估計，自由度&lt;/h3&gt;
-&lt;p&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(Y_i \sim (\mu, \sigma^2)\)&lt;/span&gt;，並不需要默認或者假定它服從正態分佈或者任何分佈。那麼它的方差我們會用：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\mu)\]&lt;/span&gt;&lt;/p&gt;
-&lt;div id=&#34;-v_mu--sigma2-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明 &lt;span class=&#34;math inline&#34;&gt;\(V_{\mu}\)&lt;/span&gt; 是 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 的無偏估計：&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-V_{\mu} &amp;amp;= \frac{1}{n}\sum_{i=1}^n(Y_i-\mu) \\
-需要證明 &amp;amp;E(V_{\mu}) = \sigma^2 \\
-\Rightarrow E(V_{\mu}) &amp;amp;= \frac{1}{n}\sum_{i=1}^nE(Y_i-\mu)^2 \\
-        &amp;amp;= \frac{1}{n}\sum_{i=1}^nVar(Y_i) \\
-        &amp;amp;= \frac{1}{n}\sum_{i=1}^n\sigma^2 \\
-        &amp;amp;= \sigma^2
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;然而通常情況下，我們並不知道總體的均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;。因此，只好用樣本的均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 來估計 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt;。所以上面的方程就變成了：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\bar{Y})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;你如果仔細觀察認真思考，就會發現，上面這個式子是&lt;code&gt;有問題的&lt;/code&gt;。這個大問題就在於，&lt;span class=&#34;math inline&#34;&gt;\(Y_i-\bar{Y}\)&lt;/span&gt; 中我們忽略掉了樣本均值 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 和總體均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 之間的差 (&lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}-\mu\)&lt;/span&gt;)。因此上面的計算式來估計總體方差時，很顯然是會低估平均平方差，從而低估了總體方差。&lt;/p&gt;
-&lt;p&gt;這裏需要引入&lt;strong&gt;自由度 (degree of freedom)&lt;/strong&gt; 在參數估計中的概念。&lt;/p&gt;
-&lt;p&gt;字面上可以理解爲：自由度是估計過程中使用了多少互相獨立的信息。所以在上面第一個公式中：&lt;span class=&#34;math inline&#34;&gt;\(V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\mu)\)&lt;/span&gt;。所有的 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個觀察值互相獨立，不僅如此，他們還對總體均值獨立。然而在第二個我們用 &lt;span class=&#34;math inline&#34;&gt;\(\bar{Y}\)&lt;/span&gt; 取代了 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 的公式中，樣本均數則與觀察值不互相獨立。因爲&lt;strong&gt;樣本均數必然總是落在觀察值的中間&lt;/strong&gt;。然而總體均數並不一定就會落在觀察值中間。總體均數，和觀察值之間是自由，獨立的。因此，當我們觀察到 &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt; 個觀察值時，剩下的最後一個觀察值，決定了樣本均值的大小。所以說，樣本均值的自由度，是 &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;所以，加入了自由度的討論，我們可以相信，用樣本估計總體的方差時，使用下面的公式將會是總體方差的無偏估計：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[V_{n-1}=\frac{1}{n-1}\sum_{i=1}^n(Y_i-\bar{Y})=\frac{n}{n-1}V_n\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明&lt;/h4&gt;
-&lt;p&gt;利用上面也用到過的證明方法 – 把樣本和總體均值之間的差分成兩部分：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-V_{\mu} &amp;amp;= \frac{1}{n}\sum_{i=1}^n(Y_i-\mu)^2 \\
-        &amp;amp;= \frac{1}{n}\sum_{i=1}^n[(Y_i-\bar{Y})+(\bar{Y}-\mu)]^2 \\
-        &amp;amp;= \frac{1}{n}\sum_{i=1}^n[(Y_i-\bar{Y})^2+(\bar{Y}-\mu)^2\\
-        &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;+2(Y_i-\bar{Y})(\bar{Y}-\mu)]\\
-        &amp;amp;=\frac{1}{n}\sum_{i=1}^n(Y_i-\bar{Y})^2+\frac{1}{n}\sum_{i=1}^n(\bar{Y}-\mu)^2\\
-        &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;+\frac{2}{n}(\bar{Y}-\mu)\sum_{i=1}^n(Y_i-\bar{Y}) \\
-        &amp;amp;= V_n+(\bar{Y}-\mu)^2 \\ &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;(note\;that\;\sum_{i=1}^n(Y_i-\bar{Y})=0) \\
-\Rightarrow  V_n &amp;amp;= V_{\mu}-(\bar{Y}-\mu)^2  \\
-\therefore E(V_n)&amp;amp;= E(V_{\mu}) - E[(\bar{Y}-\mu)^2] \\
-                 &amp;amp;= Var(Y)-Var(\bar{Y}) \\
-                 &amp;amp;= \sigma^2-\frac{\sigma^2}{n} \\
-                 &amp;amp;= \sigma^2(\frac{n-1}{n})
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;因此，我們看見 &lt;span class=&#34;math inline&#34;&gt;\(V_n\)&lt;/span&gt; 正如上面討論的那樣，是低估了總體方差的。雖然當 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt; 時無限接近 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 但是依然是低估了的。所以，我們可以對之進行修正：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E[\frac{n}{n-1}V_n]     &amp;amp;= \frac{n}{n-1}E[V_n] =\sigma^2 \\
-\Rightarrow E[V_{n-1}]  &amp;amp;= \sigma^2
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;section level3&#34;&gt;
-&lt;h3&gt;樣本方差的樣本分佈&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt; 常用來標記樣本方差，取代上面我們用到的 &lt;span class=&#34;math inline&#34;&gt;\(V_{n-1}\)&lt;/span&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[S^2=\frac{1}{n-1}\sum_{i=1}^n(Y_i-\bar{Y})^2\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;而且上面也證明了，&lt;span class=&#34;math inline&#34;&gt;\(E(S^2)=\sigma^2\)&lt;/span&gt; 是總體方差的無偏估計。然而，要注意的是，樣本標準差 &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{S^2}\)&lt;/span&gt; 卻不是總體標準差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; 的無偏估計（因爲並不是線性變換，而是開了根號）。&lt;/p&gt;
-&lt;div id=&#34;-s--sigma-&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;證明樣本標準差 &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; 不是總體標準差 &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; 的無偏估計&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-Var(S)               &amp;amp;=E(S^2)-[E(S)]^2 \\
-\Rightarrow [E(S)]^2 &amp;amp;=E(S^2)-Var(S) \\
-\because E(S^2)      &amp;amp;=\sigma^2 \\
-\therefore   [E(S)]^2 &amp;amp;=\sigma^2-Var(S) \\
-             E(S)     &amp;amp;=\sqrt{\sigma^2-Var(S)} \\
-\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;可見樣本標準差是低估了總體標準差的。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;另外可以被證明的是：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\frac{n-1}{\sigma^2}S^2\sim \mathcal{X}_{n-1}^2\\
-Var(S^2)=\frac{2\sigma^4}{n-1}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{X}^2_m\)&lt;/span&gt;： 自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; 的&lt;a href=&#34;https://winterwang.github.io/post/chi-square-distribution/&#34;&gt;卡方分佈&lt;/a&gt;。是在圖形上向右歪曲的分佈。當自由度增加時，會越來越接近正態分佈。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
-      <description>&lt;div id=&#34;-population-and-sample&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;人羣與樣本 (population and sample)&lt;/h3&gt;
-&lt;p&gt;討論樣本時，需考慮下面幾個問題：&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;樣本是否具有代表性？&lt;/li&gt;
-&lt;li&gt;人羣被準確定義了嗎？&lt;/li&gt;
-&lt;li&gt;我們感興趣的“人羣”是否可以是無限大（多）的？&lt;/li&gt;
-&lt;li&gt;我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？&lt;/li&gt;
-&lt;li&gt;我們從所有可能的人羣中抽樣了嗎？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-sample-and-statistic&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;樣本和統計量 (sample and statistic)&lt;/h3&gt;
-&lt;p&gt;通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的&lt;strong&gt;統計量 (statistics)&lt;/strong&gt;。我們用已知樣本去推斷未知總體的過程就叫做&lt;strong&gt;估計 (estimate)&lt;/strong&gt;。這個想要被推斷的總體或人羣的值，被叫做&lt;strong&gt;參數 (parameter)&lt;/strong&gt;，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做&lt;strong&gt;估計量 (estimator)&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;所有的統計量，都有&lt;strong&gt;樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)&lt;/strong&gt;。推斷的過程歸納如下：&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;從總體或人羣中抽樣 (樣本量 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;)&lt;/li&gt;
-&lt;li&gt;計算這個樣本的合適統計量，從而用於估計它在整體或人羣中的值。&lt;/li&gt;
-&lt;li&gt;我們還需要決定計算獲得的統計量的樣本分佈（假定會抽樣無數次）。&lt;/li&gt;
-&lt;li&gt;一旦可以精確地確認樣本分佈，我們就可以定量地計算出使用步驟2中獲得的統計量估計總體或人羣的參數時的準確度。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-estimation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;估計 Estimation&lt;/h3&gt;
-&lt;p&gt;從樣本的均值，推斷總體或人羣的均值是一種估計。我們的目的是，從已知樣本中計算一個儘可能接近那個未知的總體或人羣參數的值。一個估計量有兩個與生俱來的性質 (properties)：1) 偏倚 (bias); 2) 精確度 (precision)。這兩個性質都可以從樣本分佈和估計量獲得。&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;偏倚： 偏倚簡單說就是樣本分佈的均值，也就是我們從樣本中計算獲得的估計量，和我們想要拿它來估計的總體或人羣的參數之間的差距。(The bias is the difference between the mean of the sampling distribution – the expected or average value of the estimator – and the population parameter being estimated.) 一個小的偏倚，確保了我們從樣本中計算獲得的估計值（假設我們抽樣無數次，計算無數個樣本估計值）&lt;strong&gt;均勻地&lt;/strong&gt;分佈在總體或人羣參數的左右兩邊。偏倚本身並不是太大的問題，但是假如樣本量增加，偏倚依然存在（估計量不一致, inconsistent），那常常意味着是抽樣過程出現了問題。例如：&lt;br&gt;用簡單隨機抽樣法獲得的樣本均值，就是總體或人羣均值的無偏估計 (unbiased estimator)。如果抽樣時由於某些主觀客觀的原因導致較小的樣本很少被抽樣（抽樣過程出了問題，脫離了簡單隨機抽樣原則），那麼此時得到的樣本均值就會是一個過高的估計值 (upward biased estimator)。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;精確度：估計值的精確度可以通過樣本分佈的方差或標準差來評價（簡單說是樣本分佈的方差越低，波動越小，精確度越高）。樣本分佈的標準差被定義爲估計值的標準誤。假如估計量是樣本均值，那麼樣本分佈的標準差（估計量的標準誤）和樣本數據之間有如下的關係：
-&lt;span class=&#34;math display&#34;&gt;\[均值的標準誤 = \frac{樣本數據的標準差}{\sqrt{樣本量大小}}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在一些簡單的情況下，通常估計值的選用不言自明（例如均值，或者百分比）。但是在複雜的情況下，我們可能可以有多個不同類型的估計量可以選擇，他們也常常各有利弊，需要我們做出取捨。&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;-confidence-intervals&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;信賴區間 confidence intervals&lt;/h3&gt;
-&lt;p&gt;從樣本中計算估計量獲得的一個估計值，只是一個&lt;strong&gt;點估計 (point estimate)&lt;/strong&gt;。對比之下，信賴區間就是一個對這個點估計的精確度的體現。信賴區間越窄，說明我們對於總體或人羣的參數的可能取值的範圍估計越精確。&lt;/p&gt;
-&lt;p&gt;信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。&lt;strong&gt;每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt;）。&lt;/strong&gt; 常用的這個概率值就是 &lt;span class=&#34;math inline&#34;&gt;\(95\%, 90\%, 99\%\)&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;當從樣本數據計算獲得的估計量的信賴區間很寬，說明了這個收集來的數據提供了很少的參數信息，導致估計變得很不精確。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;看到這裏的都是好漢一條啊！ 我不知道你暈了麼有，反正我是已經暈了。。。。&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
