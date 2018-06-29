@@ -54,8 +54,8 @@
 &lt;li&gt;2018-06-29
 
 &lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Read the book collins2010latent - Latent Class and Latent Transition Analysis: With Applications in the Social, Behavioral, and Health Sciences&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Finish data management for NDNS 8 years data&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the book collins2010latent - Latent Class and Latent Transition Analysis: With Applications in the Social, Behavioral, and Health Sciences (Done until 4.3)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Data management for NDNS 8 years data (70%)&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn how to do LCA in R&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn how to do LCA in SAS with repeated measurement&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Find whether there is any possibility of conducting the same method in R or STATA&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
