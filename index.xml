@@ -75,6 +75,8 @@
 &lt;li&gt;2018-07-03&lt;br /&gt;
 
 &lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &amp;ldquo;Maybe we should try with the threshold at 25% only as per the existing guidelines (although those are per meal)?&amp;rdquo;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &amp;ldquo;consider separating weekdays from weekends if we are not averaging the four days?&amp;rdquo;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn how to do LCA with repeated measurement&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Find whether there is any possibility of conducting the same method in R or STATA&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Try to start writing about the introduction;&lt;/label&gt;&lt;/li&gt;
