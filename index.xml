@@ -129,7 +129,7 @@
     </item>
     
     <item>
-      <title>Todo 2018 June</title>
+      <title>Todo 2018 June-September</title>
       <link>https://winterwang.github.io/post/todo-2018-june/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
@@ -146,7 +146,7 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 論文寫作進度&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 學習 Latent Class Analysis 方法;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 熟悉 NDNS 數據框架結構，思考分析方法;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;熟悉 NDNS 數據框架結構，思考分析方法;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Comment and response to AACE&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Test on Ubuntu 18.04&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;尝试从Ubuntu, 日本語を試す&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
