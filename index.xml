@@ -335,16 +335,18 @@ adj. 使人畏缩的；使人气馁的；令人怯步的
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Use multilevel latent class analysis;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Think about the mathmatical theory behind the mixed LCA, write to PROC LCA group if necessary;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;2018-07-23~25&lt;/p&gt;
+&lt;li&gt;2018-07-23~25
 
 &lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn about the survey package in R&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn about the survey package in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish writing about the methodology;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Write some introduction;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-26&lt;br /&gt;
 
-&lt;li&gt;&lt;p&gt;[x] &lt;del&gt;Write some introduction;&lt;/del&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;[ ] Read about the carbo-fibre ratio references.&lt;/p&gt;&lt;/li&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Let&amp;rsquo;s finish analysis of the classes and health outcomes.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Read about the carbo-fibre ratio references.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
