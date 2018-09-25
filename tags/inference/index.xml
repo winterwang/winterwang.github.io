@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inference on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/inference/</link>
-    <description>Recent content in Inference on Be ambitious</description>
+    <title>inference on Be ambitious</title>
+    <link>/tags/inference/</link>
+    <description>Recent content in inference on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/tags/inference/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/inference/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
+      <link>/post/construction-of-a-hypothesis-test/</link>
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
+      <guid>/post/construction-of-a-hypothesis-test/</guid>
       <description>什麼是假設檢驗 Hypothesis testing 一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
 例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
 當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
@@ -30,10 +30,10 @@
     
     <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
+      <link>/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
+      <guid>/post/approximate-log-likelihood-ratios/</guid>
       <description>爲什麼要用二次方程近似對數似然比方程？
 上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (binomial example)。 我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。 所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。  正態近似法求對數似然 Normal approximation to the log-likelihood 根據前一節，如果樣本均數的分佈符合正態分佈：\(\bar{X}\sim N(\mu, \sigma^2/n)\)。那麼樣本均數的對數似然比爲：
 \[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]
@@ -49,10 +49,10 @@
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
-      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <link>/post/log-likelihood-ratio/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <guid>/post/log-likelihood-ratio/</guid>
       <description>對數似然比 Log-likelihood ratio 對數似然比的想法來自於將對數似然方程圖形的 \(y\) 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的對數似然比 (log-likelihood ratio) 來獲得：
 \[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]
 由於 \(\ell(\theta)\) 的最大值在 \(\hat{\theta}\) 時， 所以，\(llr(\theta)\) 就是個當 \(\theta=\hat{\theta}\) 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 \(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\) 取對數而已。
@@ -64,10 +64,10 @@ par(mfrow=c(1,2)) x &amp;lt;- seq(0,1,by=0.001) y &amp;lt;- (x^4)*((1-x)^6)/(0.4
     
     <item>
       <title>似然非然 Likelihood</title>
-      <link>https://winterwang.github.io/post/likelihood/</link>
+      <link>/post/likelihood/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/likelihood/</guid>
+      <guid>/post/likelihood/</guid>
       <description>概率 vs. 推斷/Probability vs. Inference 在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
 \[ \binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205 \]
 dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10)*(0.5^10)/(factorial(4)*(factorial(6))) ## [1] 0.2050781 在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 \(Prob(coin\;landing\;heads)\) 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，似然法 (likelihood) 就是我們進行參數估計的最佳手段。
@@ -82,10 +82,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>卡方分佈 chi square distribution</title>
-      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
+      <link>/post/chi-square-distribution/</link>
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
+      <guid>/post/chi-square-distribution/</guid>
       <description>卡方分佈的期望和方差的證明： 當 \(X\sim N(0,1)\) 時， \(X^2\sim \mathcal{X}_1^2\)
 如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)， 那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
 其中： \(\mathcal{X}_n^2\) 表示自由度爲 \(n\) 的卡方分佈。
@@ -100,10 +100,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
+      <link>/post/frequentist-statistical-inference02/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
+      <guid>/post/frequentist-statistical-inference02/</guid>
       <description>估計量和他們的樣本分佈 例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 \(n\) 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。
 模型假設： 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 \(Y_i\) 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 \(\mu\)，總體方差爲 \(\sigma^2\)。那麼這個模型可以簡單的被寫成：
 \[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]
@@ -114,10 +114,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
+      <link>/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
+      <guid>/post/frequentist-statistical-inference01/</guid>
       <description>人羣與樣本 (population and sample) 討論樣本時，需考慮下面幾個問題：
 樣本是否具有代表性？ 人羣被準確定義了嗎？ 我們感興趣的“人羣”是否可以是無限大（多）的？ 我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？ 我們從所有可能的人羣中抽樣了嗎？   樣本和統計量 (sample and statistic) 通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的統計量 (statistics)。我們用已知樣本去推斷未知總體的過程就叫做估計 (estimate)。這個想要被推斷的總體或人羣的值，被叫做參數 (parameter)，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做估計量 (estimator)。
 所有的統計量，都有樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)。推斷的過程歸納如下：
@@ -127,10 +127,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>https://winterwang.github.io/post/central-limit-theory/</link>
+      <link>/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
+      <guid>/post/central-limit-theory/</guid>
       <description>最近明顯可以感覺到課程的步驟開始加速。看我的課表：
 手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
 這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。
@@ -148,10 +148,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>你會用概率論來賭博嗎？</title>
-      <link>https://winterwang.github.io/post/probability-gambling/</link>
+      <link>/post/probability-gambling/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
+      <guid>/post/probability-gambling/</guid>
       <description>轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，更多的情況下還會把真相給掩蓋住了。
 我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：
 Quick Calculus: Short Manual of Self-instruction

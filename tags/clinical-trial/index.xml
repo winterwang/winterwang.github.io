@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clinical Trial on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/clinical-trial/</link>
+    <link>/tags/clinical-trial/</link>
     <description>Recent content in Clinical Trial on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sun, 29 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/tags/clinical-trial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/clinical-trial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
+      <link>/post/sample-size-in-clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
+      <guid>/post/sample-size-in-clinical-trial/</guid>
       <description>背景 計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在
 如何將實驗對象隨機分配 (randomisation) 設計對照組 (control group) 合適（且必須）的貫徹盲法 (blinding)  另外一個同樣重要的問題是–“我到底需要多少樣本?”
 一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：

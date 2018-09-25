@@ -2,103 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Be ambitious</title>
-    <link>https://winterwang.github.io/home/</link>
+    <link>/home/</link>
     <description>Recent content in Homes on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://winterwang.github.io/home/about/</link>
+      <link>/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/about/</guid>
-      <description>Biography | 關於我 I am now working as an assistant professor in Aichi Medical University. Here is the home page of our department. I finished my PhD from the Department of Public Health, Graduate School of Medicine, Nagoya University in 2016. Currently I am doing my second master degree on Medical Statistics at London School of Hygiene &amp;amp; Tropical Medicine. You can find my cv here. I am capable of doing statistical analyses using a variety of softwares including STATA, SAS.</description>
+      <guid>/home/about/</guid>
+      <description>Biography | 關於我 I am now working as an assistant professor in Aichi Medical University. Here is the home page of our department. I finished my MSc of Medical Statistics from the London School of Hygiene &amp;amp; Tropical Medicine in 2018 and PhD in Epidemiology from the Department of Public Health, Graduate School of Medicine, Nagoya University in 2016. You can find my cv here. I am capable of doing statistical analyses using a variety of softwares including STATA, SAS.</description>
     </item>
     
     <item>
       <title>Selected Publications</title>
-      <link>https://winterwang.github.io/home/publications_selected/</link>
+      <link>/home/publications_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0900</pubDate>
       
-      <guid>https://winterwang.github.io/home/publications_selected/</guid>
+      <guid>/home/publications_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Publications</title>
-      <link>https://winterwang.github.io/home/publications/</link>
+      <link>/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/publications/</guid>
+      <guid>/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://winterwang.github.io/home/talks/</link>
+      <link>/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/talks/</guid>
+      <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>https://winterwang.github.io/home/posts/</link>
+      <link>/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/posts/</guid>
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Presentations</title>
-      <link>https://winterwang.github.io/home/slides/</link>
+      <link>/home/slides/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/slides/</guid>
+      <guid>/home/slides/</guid>
       <description>2018  Project Talk of my MSc of Medical Statistics@LSHTM, London, 23$^{th}$ April, The timing of carbohydrates intake in the UK population, Oral, slides  2017  名大愛知医大名市大ゲノム勉強会1, Nagoya, 16$^{th}$ May, Introduction of the usage of GCTA program, Oral, slides 名大愛知医大名市大ゲノム勉強会2, Nagoya, 20$^{th}$ June, Preliminary results of GWAS analysis of Psychological Traits in Okazaki Cohort Study, Oral, slides 基盤(B)井上班班会議, Tokyo, 14$^{th}$ July, がん関連感染症の出生年別保有率推計方法, How to estimate prevalence of H. pylori by birth year in Japanese population, Oral, slides The 21st International Epidemiological Association (IEA) World Congress of Epidemiology (WCE2017), Saitama, 19$^{th}$~22$^{th}$ Japan, Prevalence of H.</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://winterwang.github.io/home/projects/</link>
+      <link>/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/projects/</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching Materials</title>
-      <link>https://winterwang.github.io/home/teaching/</link>
+      <link>/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/teaching/</guid>
+      <guid>/home/teaching/</guid>
       <description> 平成29年(2017)  栄養疫学 (Nutritional Epidemiolgoy), 4&amp;frasl;17, slides  平成28年(2016)  基礎医学セミナー1st, 4&amp;frasl;21, Introduction, slides 基礎医学セミナー2nd, 4&amp;frasl;28, Pubmed and etc, slides 基礎医学セミナー3rd, 5&amp;frasl;19, About Zotero, slides 基礎医学セミナー4th, 5&amp;frasl;26, Critical appraisal of the literature, slides 疫学演習, 6&amp;frasl;20, slides 社会医学実習, 6&amp;frasl;23, Guidance, textbook, example  </description>
     </item>
     
     <item>
       <title>Tags</title>
-      <link>https://winterwang.github.io/home/tags/</link>
+      <link>/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0900</pubDate>
       
-      <guid>https://winterwang.github.io/home/tags/</guid>
+      <guid>/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://winterwang.github.io/home/contact/</link>
+      <link>/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/home/contact/</guid>
+      <guid>/home/contact/</guid>
       <description></description>
     </item>
     

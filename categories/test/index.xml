@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Test on Be ambitious</title>
-    <link>https://winterwang.github.io/categories/test/</link>
-    <description>Recent content in Test on Be ambitious</description>
+    <title>test on Be ambitious</title>
+    <link>/categories/test/</link>
+    <description>Recent content in test on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Fri, 27 May 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello World</title>
-      <link>https://winterwang.github.io/post/2016-05-27-hello-world/</link>
+      <link>/post/2016-05-27-hello-world/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2016-05-27-hello-world/</guid>
+      <guid>/post/2016-05-27-hello-world/</guid>
       <description>Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke  list 1\(^2\) list 2       </description>
     </item>
     

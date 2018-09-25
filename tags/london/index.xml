@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>London on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/london/</link>
+    <link>/tags/london/</link>
     <description>Recent content in London on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sun, 14 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/tags/london/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/london/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>日落在下午四點</title>
-      <link>https://winterwang.github.io/post/luan/</link>
+      <link>/post/luan/</link>
       <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/luan/</guid>
+      <guid>/post/luan/</guid>
       <description>倫敦的生活已經過去四個月，每天和統計學公式打交道的我，今天不想在這裏寫任何公式。說說這四個月想更新一直偷懶沒更新的那些在倫敦衛生與熱帶醫學院度過的平凡的日子。
 寒假時去了普利茅斯，和康沃爾。康沃爾是個很有意思的名字 Cornwall。字面意思是玉米牆。我是去自己本來計劃聖誕節想去的 Homestay。HOST UK 本來負責我的人告訴我聖誕節可能有點困難，聖誕節前的週末可以的話就去康沃爾的一對退休的老人家裏去做客吧。於是週五一早踏上了一個多月前就從網上訂好的倫敦的帕丁頓去往卡爾斯托克 (Calstock) 的西大不列顛列車。說來諷刺的是，大英帝國建立了世界上第一條火車，如今我一個老外來到這個國家卻在嫌棄這裏的火車慢如老牛拉車。
 和我一起享受英國農村四天三晚的 Homestay 的還有另一個來自毛里求斯的印度人學生。我們一路同行從倫敦出發。整列火車從離開倫敦時的滿員，乘客隨着車窗外樓房的減少而逐漸減少。腦海裏推算了一下，這絕對是有意義的正相關。 到了普利茅斯只剩下包括我倆在內，絕對只有個位數的人。
@@ -30,19 +30,19 @@
     
     <item>
       <title>萬衆期待，英國黑暗料理</title>
-      <link>https://winterwang.github.io/post/black-meal/</link>
+      <link>/post/black-meal/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/black-meal/</guid>
+      <guid>/post/black-meal/</guid>
       <description>康沃爾的牛肉餡餅！ 贊！ (2017-12-16 @The Shop in the Square) 看起來美味但是甜到牙痛的聖誕蛋糕 (2017-12-17 @Calstock Homestay) 香腸美味！烤雞美味！洋蔥有點糊但是還是很美味！ (2017-12-16 @Jane&amp;amp;Ian&amp;rsquo;s Homestay) 在中國城買到最贊的國貨！廈門鐵觀音 (2017-12-09 @London China Town) 貴到無法下手的三文魚壽司 (2017-12-06 @Waitrose) 和日本一風堂味道一樣但是貴一倍的豚骨拉麵 (2017-12-02 @London Ippudo) 學校附近和同學一起去喝過最棒的拿鐵，缺點是杯子太小 (2017-12-01 @Tap Caffee) Brunch 在長頸鹿餐廳可以打8折 (2017-11-29 @Giraffe) 約克郡的傳統午餐，美味牛肉 (2017-11-26 @The Judge&amp;rsquo;s Lodging) 謝菲爾德的聖誕街市賣的烤香腸 (2017-11-25 @Sheffield) 日本同學從日本帶來的速食味增湯，美味至極 (2017-11-23 @International Hall) 國王十字車站對面的新加坡華人餐廳，海南雞飯不錯 (2017-11-01 @Chop Chop Noodle Bar) 同學宿舍裏的自制小炒 (2017-10-21 @The Garden Hall) 大英博物館前的中餐館的水煮魚 (2017-10-20 @Chang&amp;rsquo;s Noodle) 大英博物館前的都可茶飲買到的原味珍珠奶茶 £3.5 有學生優惠 (2017-10-20 @Coco) 雞腿不錯但是旁邊的配菜有點像中藥味的壓縮餅乾 (2017-10-08 @IHdining room) 哈利波特特約飲料 Butterbeer （奶油啤酒）(2017-10-07 @Warner Bros.</description>
     </item>
     
     <item>
       <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
+      <link>/post/construction-of-a-hypothesis-test/</link>
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
+      <guid>/post/construction-of-a-hypothesis-test/</guid>
       <description>什麼是假設檢驗 Hypothesis testing 一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
 例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
 當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
@@ -55,10 +55,10 @@
     
     <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
+      <link>/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
+      <guid>/post/approximate-log-likelihood-ratios/</guid>
       <description>爲什麼要用二次方程近似對數似然比方程？
 上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (binomial example)。 我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。 所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。  正態近似法求對數似然 Normal approximation to the log-likelihood 根據前一節，如果樣本均數的分佈符合正態分佈：\(\bar{X}\sim N(\mu, \sigma^2/n)\)。那麼樣本均數的對數似然比爲：
 \[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]
@@ -74,10 +74,10 @@
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
-      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
+      <link>/post/log-likelihood-ratio/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
+      <guid>/post/log-likelihood-ratio/</guid>
       <description>對數似然比 Log-likelihood ratio 對數似然比的想法來自於將對數似然方程圖形的 \(y\) 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的對數似然比 (log-likelihood ratio) 來獲得：
 \[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]
 由於 \(\ell(\theta)\) 的最大值在 \(\hat{\theta}\) 時， 所以，\(llr(\theta)\) 就是個當 \(\theta=\hat{\theta}\) 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 \(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\) 取對數而已。
@@ -89,10 +89,10 @@ par(mfrow=c(1,2)) x &amp;lt;- seq(0,1,by=0.001) y &amp;lt;- (x^4)*((1-x)^6)/(0.4
     
     <item>
       <title>似然非然 Likelihood</title>
-      <link>https://winterwang.github.io/post/likelihood/</link>
+      <link>/post/likelihood/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/likelihood/</guid>
+      <guid>/post/likelihood/</guid>
       <description>概率 vs. 推斷/Probability vs. Inference 在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
 \[ \binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205 \]
 dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10)*(0.5^10)/(factorial(4)*(factorial(6))) ## [1] 0.2050781 在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 \(Prob(coin\;landing\;heads)\) 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，似然法 (likelihood) 就是我們進行參數估計的最佳手段。
@@ -107,10 +107,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
+      <link>/post/sample-size-in-clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
+      <guid>/post/sample-size-in-clinical-trial/</guid>
       <description>背景 計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在
 如何將實驗對象隨機分配 (randomisation) 設計對照組 (control group) 合適（且必須）的貫徹盲法 (blinding)  另外一個同樣重要的問題是–“我到底需要多少樣本?”
 一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：
@@ -120,10 +120,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>卡方分佈 chi square distribution</title>
-      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
+      <link>/post/chi-square-distribution/</link>
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
+      <guid>/post/chi-square-distribution/</guid>
       <description>卡方分佈的期望和方差的證明： 當 \(X\sim N(0,1)\) 時， \(X^2\sim \mathcal{X}_1^2\)
 如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)， 那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
 其中： \(\mathcal{X}_n^2\) 表示自由度爲 \(n\) 的卡方分佈。
@@ -138,10 +138,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
+      <link>/post/frequentist-statistical-inference02/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
+      <guid>/post/frequentist-statistical-inference02/</guid>
       <description>估計量和他們的樣本分佈 例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 \(n\) 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。
 模型假設： 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 \(Y_i\) 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 \(\mu\)，總體方差爲 \(\sigma^2\)。那麼這個模型可以簡單的被寫成：
 \[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]
@@ -152,10 +152,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
+      <link>/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
+      <guid>/post/frequentist-statistical-inference01/</guid>
       <description>人羣與樣本 (population and sample) 討論樣本時，需考慮下面幾個問題：
 樣本是否具有代表性？ 人羣被準確定義了嗎？ 我們感興趣的“人羣”是否可以是無限大（多）的？ 我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？ 我們從所有可能的人羣中抽樣了嗎？   樣本和統計量 (sample and statistic) 通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的統計量 (statistics)。我們用已知樣本去推斷未知總體的過程就叫做估計 (estimate)。這個想要被推斷的總體或人羣的值，被叫做參數 (parameter)，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做估計量 (estimator)。
 所有的統計量，都有樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)。推斷的過程歸納如下：
@@ -165,10 +165,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <link>/post/central-limit-theorem-application/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <guid>/post/central-limit-theorem-application/</guid>
       <description>二項分佈的正態分佈近似  假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\) 根據二項分佈的概率公式，計算將會變得很繁瑣複雜。 解決辦法：應用中心極限定理。 中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
  問題在於，多大的 \(n\) 才能算大樣本呢？  當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)    泊松分佈的正態分佈近似  假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。 考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。 那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
  需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
@@ -177,19 +177,19 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>Matrix Revisions</title>
-      <link>https://winterwang.github.io/post/matrix-revision/</link>
+      <link>/post/matrix-revision/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/matrix-revision/</guid>
+      <guid>/post/matrix-revision/</guid>
       <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
     </item>
     
     <item>
       <title>倫敦城漫步 (2)</title>
-      <link>https://winterwang.github.io/post/first-impression-of-london2/</link>
+      <link>/post/first-impression-of-london2/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/first-impression-of-london2/</guid>
+      <guid>/post/first-impression-of-london2/</guid>
       <description>我們學科 (Medical Statistics) 是爲數不多的在 Orientation 周就有一半以上的時間在上課的學科。別的學科像 Epidemiology 這周還集體去劍橋大學見學啥的。幾乎都是第二周，也就是10月2日週一開始的時候才有大量的必修和選修課。所以不見得再有太多時間寫見聞和體驗。（也沒有時間出去玩了&amp;hellip;..）不過學習的內容還是會來更新一下，給各位有個印象，也讓大家都來判斷以下，這裏的碩士課程的內容和質量到底如何。
 9月22日 ISW &amp;amp; UCL &amp;amp; 福爾摩斯博物館（的紀念品商店） 忘了交代，9月21日和22日都是 Internatioanal Student Welcome (留學生歡迎會, ISW) 的日子。充滿對這一年的期待，和但是是否自己能最終倖存下來的不安，坐在這樣壓力巨大的梯形教室裏，我和這麼多來自世界各地的年輕人成爲了同學： 這個教室就是大名鼎鼎的 John Snow Lecture Theatre。我就知道你以爲是這個人： 其實歷史上的 Snow 同學可是奠定了近代流行病學基礎的巨人。比這個 bastard 強$^{9999999}$ 多了好麼，快去維基百科自學去。
 這個大名鼎鼎的水泵就是他拆的！ 閒話少敘，註冊參加時，排隊的樣子： 領到自己的卡，寫上自己的名，和課程名稱 (原諒我的粗鄙的筆跡)： 看這梯形教室有多陡峭：（據說梯形教室陡峭的程度和學習壓力成正比）
@@ -210,10 +210,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>漫步倫敦城 (1)</title>
-      <link>https://winterwang.github.io/post/first-impression-of-london/</link>
+      <link>/post/first-impression-of-london/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/first-impression-of-london/</guid>
+      <guid>/post/first-impression-of-london/</guid>
       <description>在倫敦生活過完了第一周，似乎快要步入正軌了。因為許許多多的前輩告誡說，第一周是唯一可以輕鬆度過的時間，一定要珍惜好好利用。多看看倫敦，多四處走走。
 於是我很聽話的每天都四處走走。接下來打算把這幾天去過的地方盡量根據回憶都列舉一下：
 9月19日 大英博物館初體驗 國王十字車站附近的郵局 → 大英博物館
@@ -242,10 +242,10 @@ Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。�
     
     <item>
       <title>London Baby !</title>
-      <link>https://winterwang.github.io/post/london-life-started/</link>
+      <link>/post/london-life-started/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/london-life-started/</guid>
+      <guid>/post/london-life-started/</guid>
       <description>離開 飛機翱翔在俄羅斯上空。我在機艙內拿出手機，再一次看老友記第四季的最後一集。講的是 Ross 和 Emily 在倫敦的婚禮。 熟悉的歡樂劇情，不熟悉的城市。如果你對老友記像我一樣熟悉，快來跟我做朋友吧！
 十三個小時的飛行，我一直無法休息。我在憧憬這一年如痴如醉的傲遊知識海洋嗎？我離開家，離開愛妻，離開親愛的孩子們，是多麼的捨不得。我才剛踏上旅程，思念就如同潮水在心中湧起。在中部機場和妻告別時，她拿出一個小小的粉紅色信封。依依不捨的告訴我說上了飛機再看。想來和妻在一起這幾年，這是她第一次這樣細膩又柔軟的感情表達。可是我卻把整個家留在了身後，全部交給了她。這一年，要辛苦你了。
 就在離開日本的前一日，名古屋還在18號颱風的正面襲擊之下。夜晚狂風驟雨，摧枯拉朽地吹散整個城市的思念。早晨醒來，天空還是陰沉沉的，颱風仍然沒有完全過去。全家人擔心著飛機的起飛是否被影響。我們還是毅然決然地開著心愛的小西沖向了機場。在日航的櫃檯等待行李寄存時，抬頭看見大屏幕上的航班信息，名古屋-沖繩 取消， 名古屋-札幌 取消，名古屋-成田（東京） 取消。。。。 一整個屏幕都是航班取消的紅色信號。可是最後，名古屋-羽田（東京）的航班竟然顯示的是 &amp;lsquo;計劃&amp;rsquo;。拿到機票進入候機大樓以後才看見，這時天空的烏雲已經開始逐漸散去。原來，我的航班真的可以按時離開了。
@@ -263,10 +263,10 @@ Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。�
     
     <item>
       <title>UK visa succeed</title>
-      <link>https://winterwang.github.io/post/uk-visa-succeed/</link>
+      <link>/post/uk-visa-succeed/</link>
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/uk-visa-succeed/</guid>
+      <guid>/post/uk-visa-succeed/</guid>
       <description>我在近一個月前去了大阪的英國簽證中心申請了去英國的簽證。
 當時大英帝國的簽證申請就給我留下極差的印象。結果後來我的等待才是最漫長的。
 理一下時間線：
@@ -280,10 +280,10 @@ Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。�
     
     <item>
       <title>大英帝國簽證申請</title>
-      <link>https://winterwang.github.io/post/visa-application/</link>
+      <link>/post/visa-application/</link>
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/visa-application/</guid>
+      <guid>/post/visa-application/</guid>
       <description>來說說7月31日去大阪交簽證材料的事情。
 那叫一個鬱悶。 總之，我在日本還是第一次遇見如此糟糕的接待。另外，大阪的簽證辦理中心，非常不好找，建議第一次去的人挑一個不那麼熱的日子去。這樣也不會像我一樣在馬路上被曬成狗。
    
@@ -299,10 +299,10 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
     
     <item>
       <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
-      <link>https://winterwang.github.io/post/unconditional/</link>
+      <link>/post/unconditional/</link>
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/unconditional/</guid>
+      <guid>/post/unconditional/</guid>
       <description>言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。
 本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。
 結果6月8日那天收到郵件催促我快點滿足 offer 條件：
@@ -315,10 +315,10 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
     
     <item>
       <title>留學筆記</title>
-      <link>https://winterwang.github.io/post/2017-03-16/</link>
+      <link>/post/2017-03-16/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/2017-03-16/</guid>
+      <guid>/post/2017-03-16/</guid>
       <description>尋找並確定合適自己的大學，合適的課程  英國，還是美國？ 這是一個問題  我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。 上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。 加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。 另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇文章1 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：
 我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。             Theory
 (偏重理論) Cambridge Mathematical Statistics   $\downdownarrows$ Sheffield Statistics   $\downdownarrows$ University College London Applied Stochastic Systems   $\downdownarrows$ Oxford Applied Statistics   $\downdownarrows$ Kent Statistics   $\downdownarrows$ Reading Biometry   $\downdownarrows$ Southampton Statistics with Application in Medicine   $\downdownarrows$ Leicester Medical Statistics &amp;amp; Information Technology   Applications (偏重實踐) London School of Hygiene &amp;amp; Tropical Medicine Medical Statitics    確認申請時間，申請要點（雅思成績要求，是否有面試，推薦信） 決定了申請 LSHTM 以後，便要開始準備材料，確定截止時間，以及雅思成績的要求等。</description>

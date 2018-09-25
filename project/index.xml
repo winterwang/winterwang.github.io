@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Be ambitious</title>
-    <link>https://winterwang.github.io/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
-      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
+      <link>/project/lshtmlearningnote/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
+      <guid>/project/lshtmlearningnote/</guid>
       <description>We are drowning in information and starving for knowledge. Click the graph and you can learn what I learnt.
 &amp;mdash; Chaochen Wang in London 2017.09</description>
     </item>
     
     <item>
       <title>Aichi Workers&#39; Cohort Study | 愛知職域コホート研究</title>
-      <link>https://winterwang.github.io/project/aichi/</link>
+      <link>/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/aichi/</guid>
+      <guid>/project/aichi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Genome Cohort on Psychosocial traits (GCOP) Study</title>
-      <link>https://winterwang.github.io/project/gcop/</link>
+      <link>/project/gcop/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/gcop/</guid>
+      <guid>/project/gcop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Japan Multi-Institutional Collaborative Cohort (J-MICC) Study</title>
-      <link>https://winterwang.github.io/project/jmicc/</link>
+      <link>/project/jmicc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/jmicc/</guid>
+      <guid>/project/jmicc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>the Japan Collaborative Cohort (JACC) Study | 大規模コホート研究</title>
-      <link>https://winterwang.github.io/project/jacc/</link>
+      <link>/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/project/jacc/</guid>
+      <guid>/project/jacc/</guid>
       <description></description>
     </item>
     

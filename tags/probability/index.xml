@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Probability on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/probability/</link>
-    <description>Recent content in Probability on Be ambitious</description>
+    <title>probability on Be ambitious</title>
+    <link>/tags/probability/</link>
+    <description>Recent content in probability on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://winterwang.github.io/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
+      <link>/post/central-limit-theorem-application/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
+      <guid>/post/central-limit-theorem-application/</guid>
       <description>二項分佈的正態分佈近似  假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\) 根據二項分佈的概率公式，計算將會變得很繁瑣複雜。 解決辦法：應用中心極限定理。 中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
  問題在於，多大的 \(n\) 才能算大樣本呢？  當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)    泊松分佈的正態分佈近似  假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。 考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。 那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
  需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
@@ -26,10 +26,10 @@
     
     <item>
       <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
+      <link>/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
+      <guid>/post/normal-distribution/</guid>
       <description>概率密度曲線 probability density function， PDF  一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
  在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
   \[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
@@ -38,10 +38,10 @@
     
     <item>
       <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
+      <link>/post/probability-gambling-answers/</link>
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
+      <guid>/post/probability-gambling-answers/</guid>
       <description>前情提要：
 假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
 答案是：必須改變主意才能提高中獎概率。
@@ -54,10 +54,10 @@
     
     <item>
       <title>你會用概率論來賭博嗎？</title>
-      <link>https://winterwang.github.io/post/probability-gambling/</link>
+      <link>/post/probability-gambling/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/probability-gambling/</guid>
+      <guid>/post/probability-gambling/</guid>
       <description>轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，更多的情況下還會把真相給掩蓋住了。
 我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：
 Quick Calculus: Short Manual of Self-instruction
