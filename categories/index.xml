@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Be ambitious</title>
-    <link>/categories/</link>
+    <link>https://winterwang.github.io/categories/</link>
     <description>Recent content in Categories on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://winterwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>LSHTM</title>
-      <link>/categories/lshtm/</link>
+      <link>https://winterwang.github.io/categories/lshtm/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/lshtm/</guid>
+      <guid>https://winterwang.github.io/categories/lshtm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R techniques</title>
-      <link>/categories/r-techniques/</link>
+      <link>https://winterwang.github.io/categories/r-techniques/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r-techniques/</guid>
+      <guid>https://winterwang.github.io/categories/r-techniques/</guid>
       <description></description>
     </item>
     
     <item>
       <title>To do</title>
-      <link>/categories/to-do/</link>
+      <link>https://winterwang.github.io/categories/to-do/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/to-do/</guid>
+      <guid>https://winterwang.github.io/categories/to-do/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conference</title>
-      <link>/categories/conference/</link>
+      <link>https://winterwang.github.io/categories/conference/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/conference/</guid>
+      <guid>https://winterwang.github.io/categories/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>diary</title>
-      <link>/categories/diary/</link>
+      <link>https://winterwang.github.io/categories/diary/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/diary/</guid>
+      <guid>https://winterwang.github.io/categories/diary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dictation</title>
-      <link>/categories/dictation/</link>
+      <link>https://winterwang.github.io/categories/dictation/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/dictation/</guid>
+      <guid>https://winterwang.github.io/categories/dictation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>/categories/statistics/</link>
+      <link>https://winterwang.github.io/categories/statistics/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/statistics/</guid>
+      <guid>https://winterwang.github.io/categories/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>study abroad</title>
-      <link>/categories/study-abroad/</link>
+      <link>https://winterwang.github.io/categories/study-abroad/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/study-abroad/</guid>
+      <guid>https://winterwang.github.io/categories/study-abroad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>test</title>
-      <link>/categories/test/</link>
+      <link>https://winterwang.github.io/categories/test/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/test/</guid>
+      <guid>https://winterwang.github.io/categories/test/</guid>
       <description></description>
     </item>
     

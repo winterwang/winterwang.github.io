@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rMaps on Be ambitious</title>
-    <link>/tags/rmaps/</link>
+    <link>https://winterwang.github.io/tags/rmaps/</link>
     <description>Recent content in rMaps on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Tue, 31 May 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/rmaps/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://winterwang.github.io/tags/rmaps/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>rMaps: 超級酷的地圖</title>
-      <link>/post/2016-05-31-rmaps/</link>
+      <link>https://winterwang.github.io/post/2016-05-31-rmaps/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-05-31-rmaps/</guid>
+      <guid>https://winterwang.github.io/post/2016-05-31-rmaps/</guid>
       <description>今日仰視slidify作者Ramnath Vaidyanathan的github頁面發現超酷的rMaps包，抄過來在自己電腦上實驗一下。
 下載  require(devtools) install_github(&#39;ramnathv/rCharts@dev&#39;) install_github(&#39;ramnathv/rMaps&#39;)  繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010  利用以下的R編碼在Rstudio裏實現上圖效果
  library(rMaps) map &amp;lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010)) map map$publish(&amp;quot;Crime Rates (per 100, 000) by State across Years&amp;quot;) # &amp;lt;- 引號中的將會是生成的動態地圖的網頁名稱 ## Loading required package: httr ## Please enter your github username: ***** # &amp;lt;- 在此處輸入你自己的github用戶名 ## Please enter your github password: ***** # &amp;lt;- 在此輸入你自己的github用戶密碼 ## Your gist has been published ## View chart at http://rcharts.</description>

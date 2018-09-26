@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning notes on Be ambitious</title>
-    <link>/tags/learning-notes/</link>
+    <link>https://winterwang.github.io/tags/learning-notes/</link>
     <description>Recent content in learning notes on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
     <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/learning-notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://winterwang.github.io/tags/learning-notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Words, notes, and sentences that may be useful </title>
-      <link>/post/words-notes-and-sentences-that-may-be-useful/</link>
+      <link>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/words-notes-and-sentences-that-may-be-useful/</guid>
+      <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
       <description>Words Expressions Sentences terry2017discontinuous lanza2007proc collins2010latent    Words  discernable [di’sə:nəbl, -’zə:-]  ===== 辞典翻译: discernable ====== adj. 可辨别的；可认识的 ============ 网络释义 ============ -------- discernable --------- 可辨别的 方向 分辨 -- discernable recognizable -- 可辨别的 --- discernable visible ---- 可辨别的  abstinence [’æbstinəns]  ====== 辞典翻译: abstinence ====== n. 节制；节欲；戒酒；禁食 ============ 网络释义 ============ --------- abstinence --------- 节制 禁欲 禁戒 ----- alcohol abstinence ----- 酒戒断 ----- Abstinence theory ------ 节欲论 弃权 忍欲说  exhaustive [iɡ’zɔ:stiv]  ====== 辞典翻译: exhaustive ====== adj.</description>
     </item>
     
     <item>
       <title>徒手打造一個假設檢驗</title>
-      <link>/post/construction-of-a-hypothesis-test/</link>
+      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/construction-of-a-hypothesis-test/</guid>
+      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
       <description>什麼是假設檢驗 Hypothesis testing 一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
 例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
 當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
@@ -39,10 +39,10 @@
     
     <item>
       <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>/post/approximate-log-likelihood-ratios/</link>
+      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/approximate-log-likelihood-ratios/</guid>
+      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
       <description>爲什麼要用二次方程近似對數似然比方程？
 上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (binomial example)。 我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。 所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。  正態近似法求對數似然 Normal approximation to the log-likelihood 根據前一節，如果樣本均數的分佈符合正態分佈：\(\bar{X}\sim N(\mu, \sigma^2/n)\)。那麼樣本均數的對數似然比爲：
 \[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]
@@ -58,10 +58,10 @@
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
-      <link>/post/log-likelihood-ratio/</link>
+      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/log-likelihood-ratio/</guid>
+      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
       <description>對數似然比 Log-likelihood ratio 對數似然比的想法來自於將對數似然方程圖形的 \(y\) 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的對數似然比 (log-likelihood ratio) 來獲得：
 \[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]
 由於 \(\ell(\theta)\) 的最大值在 \(\hat{\theta}\) 時， 所以，\(llr(\theta)\) 就是個當 \(\theta=\hat{\theta}\) 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 \(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\) 取對數而已。
@@ -73,10 +73,10 @@ par(mfrow=c(1,2)) x &amp;lt;- seq(0,1,by=0.001) y &amp;lt;- (x^4)*((1-x)^6)/(0.4
     
     <item>
       <title>似然非然 Likelihood</title>
-      <link>/post/likelihood/</link>
+      <link>https://winterwang.github.io/post/likelihood/</link>
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/likelihood/</guid>
+      <guid>https://winterwang.github.io/post/likelihood/</guid>
       <description>概率 vs. 推斷/Probability vs. Inference 在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
 \[ \binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205 \]
 dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10)*(0.5^10)/(factorial(4)*(factorial(6))) ## [1] 0.2050781 在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 \(Prob(coin\;landing\;heads)\) 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，似然法 (likelihood) 就是我們進行參數估計的最佳手段。
@@ -91,10 +91,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>/post/sample-size-in-clinical-trial/</link>
+      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/sample-size-in-clinical-trial/</guid>
+      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
       <description>背景 計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在
 如何將實驗對象隨機分配 (randomisation) 設計對照組 (control group) 合適（且必須）的貫徹盲法 (blinding)  另外一個同樣重要的問題是–“我到底需要多少樣本?”
 一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：
@@ -104,10 +104,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>卡方分佈 chi square distribution</title>
-      <link>/post/chi-square-distribution/</link>
+      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/chi-square-distribution/</guid>
+      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
       <description>卡方分佈的期望和方差的證明： 當 \(X\sim N(0,1)\) 時， \(X^2\sim \mathcal{X}_1^2\)
 如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)， 那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
 其中： \(\mathcal{X}_n^2\) 表示自由度爲 \(n\) 的卡方分佈。
@@ -122,10 +122,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>估計和精確度的概念</title>
-      <link>/post/frequentist-statistical-inference02/</link>
+      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/frequentist-statistical-inference02/</guid>
+      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
       <description>估計量和他們的樣本分佈 例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 \(n\) 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。
 模型假設： 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 \(Y_i\) 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 \(\mu\)，總體方差爲 \(\sigma^2\)。那麼這個模型可以簡單的被寫成：
 \[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]
@@ -136,10 +136,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>/post/frequentist-statistical-inference01/</link>
+      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/frequentist-statistical-inference01/</guid>
+      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
       <description>人羣與樣本 (population and sample) 討論樣本時，需考慮下面幾個問題：
 樣本是否具有代表性？ 人羣被準確定義了嗎？ 我們感興趣的“人羣”是否可以是無限大（多）的？ 我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？ 我們從所有可能的人羣中抽樣了嗎？   樣本和統計量 (sample and statistic) 通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的統計量 (statistics)。我們用已知樣本去推斷未知總體的過程就叫做估計 (estimate)。這個想要被推斷的總體或人羣的值，被叫做參數 (parameter)，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做估計量 (estimator)。
 所有的統計量，都有樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)。推斷的過程歸納如下：
@@ -149,10 +149,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>/post/central-limit-theory/</link>
+      <link>https://winterwang.github.io/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/central-limit-theory/</guid>
+      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
       <description>最近明顯可以感覺到課程的步驟開始加速。看我的課表：
 手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
 這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。
@@ -170,10 +170,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>你買的彩票中獎概率到底有多少？</title>
-      <link>/post/probability3/</link>
+      <link>https://winterwang.github.io/post/probability3/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/probability3/</guid>
+      <guid>https://winterwang.github.io/post/probability3/</guid>
       <description>二項分佈的概念 Binomial distribution 二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 \(n\) 次相互獨立的成功率爲 \(\pi\) 的伯努利實驗 (\(n\) independent Bernoulli trials) 中成功的次數。
 當 \(X\) 服從二項分佈，記爲 \(X \sim binomial(n, \pi)\) 或\(X \sim bin(n, \pi)\)。它的(第 \(x\) 次實驗的)概率被定義爲：
 二項分佈的期望和方差  期望 \(E(X)\)  若 \(X \sim bin(n,\pi)\)，那麼 \(X\) 就是這一系列獨立伯努利實驗中成功的次數。 用 \(X_i, i =1,\dots, n\) 標記每個相互獨立的伯努利實驗。 那麼我們可以知道 \(X=\sum_{i=1}^nX_i\)。 \[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\ &amp;amp;= E(X_1+X_2+\cdots+X_n) \\ &amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\ &amp;amp;= \sum_{i=1}^nE(X_i)\\ &amp;amp;= \sum_{i=1}^n\pi \\ &amp;amp;= n\pi \end{align}\]  方差 \(Var(X)\) \[\begin{align} Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\ &amp;amp;= Var(X_i+X_2+\cdots+X_n) \\ &amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\ &amp;amp;= \sum_{i=1}^nVar(X_i) \\ &amp;amp;= n\pi(1-\pi) \\ \end{align}\]    超幾何分佈 hypergeometric distribution 假設我們從總人數爲 \(N\) 的人羣中，採集一個樣本 \(n\)。假如已知在總體人羣中(\(N\))有 \(M\) 人患有某種疾病。請問採集的樣本 \(X=n\) 中患有這種疾病的人，服從怎樣的分佈？</description>
@@ -181,10 +181,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>正態分佈</title>
-      <link>/post/normal-distribution/</link>
+      <link>https://winterwang.github.io/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/normal-distribution/</guid>
+      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
       <description>概率密度曲線 probability density function， PDF  一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
  在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
   \[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
@@ -193,10 +193,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>概率論2</title>
-      <link>/post/probability2-4/</link>
+      <link>https://winterwang.github.io/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/probability2-4/</guid>
+      <guid>https://winterwang.github.io/post/probability2-4/</guid>
       <description>Bayes 理論的概念 許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 \(P(S|A)\)
 這裏先引入貝葉斯的概念：
 我們可以將 \(P(A\cap S)\) 寫成： \[P(A\cap S)=P(A|S)P(S)\\or\\ P(A\cap S)=P(S|A)P(A)\] 這兩個等式是完全等價的。我們將他們連起來：
@@ -220,10 +220,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>/post/probability-gambling-answers/</link>
+      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/probability-gambling-answers/</guid>
+      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
       <description>前情提要：
 假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
 答案是：必須改變主意才能提高中獎概率。
@@ -236,10 +236,10 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>/post/inverse-matrix/</link>
+      <link>https://winterwang.github.io/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/inverse-matrix/</guid>
+      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
       <description>正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)： $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$
 $$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$
 其中:
@@ -250,10 +250,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>/post/2017-07-07/</link>
+      <link>https://winterwang.github.io/post/2017-07-07/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-07-07/</guid>
+      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
       <description>行的基本變形 Theorem 1 (行的基本變形) 對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。
 給任意一行乘以/除以一個非零的數。 給任意一行加上/減去另外任意行的倍數。 將任意兩行的對應元素互換。   練習基本變形： 用行的基本變形求矩陣 \(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\) 的逆矩陣 \(X^{-1}\) 首先，將矩陣 \(X\) 和同次單位矩陣 \(E_3\) 的元素寫成如下的左右並列的形式（用點隔開）\((X, E)\)。數字 (1) (2) (3) 表示行數：
 \[\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\ 2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 1 &amp;amp; 0\\ 1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\ \end{array}\right) \begin{align} \left\{ \begin{array}{rr} (1)\\ (2)\\ (3) \end{array} \right.</description>
@@ -261,10 +261,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記20</title>
-      <link>/post/2017-07-06/</link>
+      <link>https://winterwang.github.io/post/2017-07-06/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-07-06/</guid>
+      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
       <description>逆矩陣 逆矩陣定義 Theorem 1 如果對於正方形矩陣 \(A\)，存在一個正方形矩陣 \(X\) 滿足 \(AX=XA=E\) (\(E\) 爲單位矩陣) 時，這個正方形矩陣 \(X\) 被叫做 \(A\) 的逆矩陣，寫作 \(A^{-1}\)。
 存在逆矩陣 \((A^{-1})\) 的 \(A\) ，被叫做正則矩陣 (regular matrix, nonsingular matrix)。
 不存在逆矩陣的 \(A\)，被叫做奇異矩陣 (singular matrix)。
@@ -278,10 +278,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>/post/2017-04-02/</link>
+      <link>https://winterwang.github.io/post/2017-04-02/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-04-02/</guid>
+      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
       <description>行列式的性質 具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。
 轉置矩陣的行列式，與轉置前的行列式一致。即：\(|A^t|=|A|\)。 \(|A|=\begin{vmatrix} 1 &amp;amp; 2 &amp;amp; 3 \\ 4 &amp;amp; 5 &amp;amp; 6 \\ 7 &amp;amp; 8 &amp;amp; 9 \\ \end{vmatrix}\) 任意一列（或者任意一行）若乘以 \(\lambda\) 倍，那麼這個矩陣的行列式結果也將是乘以 \(\lambda\) 倍。
 \(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ \lambda a_{21} &amp;amp;\lambda a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)
@@ -290,20 +290,20 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>/post/2017-03-15/</link>
+      <link>https://winterwang.github.io/post/2017-03-15/</link>
       <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-15/</guid>
+      <guid>https://winterwang.github.io/post/2017-03-15/</guid>
       <description>行列式的定義與計算 Theorem 1 (determinant) \(n\) 次正方形矩陣 \(A= (a_{ij})=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\) 的行列式(determinant)被定義爲是，\(A\) 的全部成分 \(a_{11},a_{12},\cdots,a_{nn}\) 的函數，這個函數是一個標量(scalar)。  \(n\)次正方形矩陣 \(A\) 的行列式(\(n\)次行列式)，被記作：
 \(|A|, |a_{ij}|, \det(A), \det(a_{ij})， \begin{vmatrix} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \notag \end{vmatrix}\)</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>/post/2017-03-13/</link>
+      <link>https://winterwang.github.io/post/2017-03-13/</link>
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-13/</guid>
+      <guid>https://winterwang.github.io/post/2017-03-13/</guid>
       <description>正定，半正定 (正值，半正值) 對於任意的非零向量 \(\underline{x}(\neq\underline{0})\) ，如果2次型 \(\underline{x}^tA\underline{x}\) 始終滿足 \(\underline{x}^tA\underline{x} &amp;gt; 0\) 注意此處無等號。我們稱這個2次型爲正定(positive definite)，\(A\)爲正定矩陣(positive definite matrix)。另外，如果任意非零向量 \(\underline{x}(\neq\underline{0})\) 始終滿足2次型 \(\underline{x}^tA\underline{x} \geqslant 0\)， 這個2次型被叫做半正定(positive semi-definite)，\(A\)爲半正定矩陣(positive semi-definite matrix)。
 \(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; 2 &amp;amp; 4\\ 2 &amp;amp; 2 &amp;amp; 3\\ 4 &amp;amp; 3 &amp;amp; 25 \end{array} \right)\)，2次型 \(\underline{x}^tA\underline{x}\) 是正定。因爲：
 \(\underline{x}^tA\underline{x}=5x_1^2+2x_2^2+25x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+4x_1x_2+8x_1x_3+6x_2x_3\\\;\;\;\;\;\;\;\;\;\:=(2x_1+x_2)^2+(x_2+3x_3)^2+(x_1+4x_3)^2\\ \because \underline{x}\neq\underline{0}=\left( \begin{array}{} 0\\ 0\\ 0 \end{array} \right)\\ \therefore \underline{x}^tA\underline{x}&amp;gt;0\)
@@ -312,10 +312,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記16</title>
-      <link>/post/2017-03-11/</link>
+      <link>https://winterwang.github.io/post/2017-03-11/</link>
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-11/</guid>
+      <guid>https://winterwang.github.io/post/2017-03-11/</guid>
       <description>二次型(形式) 對於 \(\underline{x}=\left( \begin{array}{c} x_{1}\\ x_{2}\\ \vdots\\ x_{n} \end{array} \right), A=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\) 那麼：
 \(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^n\sum\limits_{j=1}^na_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i \neq j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}(a_{ij}+a_{ji})x_ix_j\)
 被稱爲 \(\underline{x}\) 的同次2次式。又被叫做關於 \(x_1,x_2,\cdots,x_n\) 的2次型(quadratic form)。特別的，當 \(A\) 爲對稱矩陣時的2次型：\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^na_{ii}x_i^2+2\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}a_{ij}x_ix_j\) 在多元變量分析中十分重要。
@@ -324,28 +324,28 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記15</title>
-      <link>/post/2017-03-08/</link>
+      <link>https://winterwang.github.io/post/2017-03-08/</link>
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-08/</guid>
+      <guid>https://winterwang.github.io/post/2017-03-08/</guid>
       <description>單位矩陣 對角成分全部都是 \(1\) (此時我們假定有 \(n\) 個)，的對角矩陣被叫做單位矩陣(identity matrix, unit matrix)。寫作： \(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\) 下標 \(n\) 常被省略。一般的，將 \(E_n\) 從左往右乘以 \(n\) 次正方形矩陣 \(A\)，的結果和從右往左相乘的結果是相等的： \(E_nA=AE_n=A\)。</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>/post/2017-03-01/</link>
+      <link>https://winterwang.github.io/post/2017-03-01/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-01/</guid>
+      <guid>https://winterwang.github.io/post/2017-03-01/</guid>
       <description>updated: 2017-03-07  對稱矩陣 Theorem 1 (symmetric matrix) 矩陣 \(A\) 如果完全和它的轉置矩陣 \(A^t\) 相同，即：\(A=A^t\) 成立時，這樣的正方形矩陣被稱爲對稱矩陣(symmetric matrix)。對稱矩陣的成分是以主對角線(main diagonal)對稱的。  \(A=\left( \begin{array}{c} 4 &amp;amp; 3 &amp;amp; 2 &amp;amp; 1 \\ 3 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 \\ 2 &amp;amp; 6 &amp;amp; 8 &amp;amp; 9 \\ 1 &amp;amp; 7 &amp;amp; 9 &amp;amp; 0 \end{array} \right)\) 是典型的4次對稱矩陣。     數學 物理 化學    數學 \(1\) \(0.72\) \(0.62\)  物理 \(0.</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記13</title>
-      <link>/post/2017-02-28/</link>
+      <link>https://winterwang.github.io/post/2017-02-28/</link>
       <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-28/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-28/</guid>
       <description>連立一次方程式與矩陣向量的積 連立一次方程式可以改寫爲矩陣與向量的積形成的向量的形式。特別的，以連立方程式的系數作成分的矩陣被叫做系數矩陣(coefficient matrix)。當我們看到連立方程式，應該能立刻條件反射地聯想到其對應的矩陣和向量的積。
 \(\begin{align} \left\{ \begin{array}{rr} a_1+2a_2+3a_3 = 3\\ 2a_1+4a_2+5a_3 = 5\\ 3a_1+5a_2+6a_3 = 7 \end{array} \right. \end{align}\) 可以改寫成 \(\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 3 \\ 2 &amp;amp; 4 &amp;amp; 5 \\ 3 &amp;amp; 5 &amp;amp; 6 \end{array} \right)\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)=\left( \begin{array}{c} 3\\ 5\\ 7 \end{array} \right)\) 的形式。
 如果把等號右邊的列向量寫到系數矩陣的右側，形成的矩陣被叫做擴大系數矩陣(augmented coefficient)：
@@ -354,30 +354,30 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記12</title>
-      <link>/post/2017-02-22/</link>
+      <link>https://winterwang.github.io/post/2017-02-22/</link>
       <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-22/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-22/</guid>
       <description>矩陣乘法運算 矩陣乘法定義 Theorem 1 (matrix multiplication) 兩個矩陣 \(A, B\) ，只有 \(A\) 的列數和 \(B\) 的行數相等(這種特徵又被稱爲：矩陣 \(A,B\) 可整合的，conformable)時，才有定義：\(AB\)。\(AB\) 則爲新的矩陣，類型爲 \(A\) 的行數， \(B\)的列數。即：\(A_{k\times l}, \; B_{m\times n}\) 且 \(l=m\) 時才能計算乘積: \(AB_{k\times n}\)。  \(A_{2\times3}=\left( \begin{array}{c} 4 &amp;amp; 6 &amp;amp; 8\\ 2 &amp;amp; 1 &amp;amp; 3\\ \end{array} \right),\; B_{3\times2}=\left( \begin{array}{c} 0 &amp;amp; 8\\ 2 &amp;amp; -1\\ 9 &amp;amp; 4 \\ \end{array} \right)\) 時，
 “\(A\)的列數” \(=\) “\(B\) 的行數” \(= 3\)，因此積 \(AB\) 被定義，類型是 \((2,2)\) “\(B\)的列數” \(=\) “\(A\) 的行數” \(= 2\)，因此積 \(BA\) 被定義，類型是 \((3,3)\)</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記11</title>
-      <link>/post/2017-02-21/</link>
+      <link>https://winterwang.github.io/post/2017-02-21/</link>
       <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-21/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-21/</guid>
       <description>矩陣的定義 Theorem 1 (matrix) 將\(m\times n\) 個數 \(a_{ij} (i=1,2,\cdots,m; j=1,2,\cdots,n)\), 寫成縱 \(m\) 行， 橫 \(n\) 列的長方形或者正方形，左右用圓括號或者方括號包含在內。我們稱之爲 \(m\times n\) 矩陣(matrix)，或者 \((m, n)\) 矩陣。 \(m\times n\) 或者 \((m,n)\) 被稱爲是這個矩陣的類型。我們常用大寫字母來標記一個矩陣，如下面的矩陣我們標記爲 \(A\)。 如果要特別明示矩陣的類型，可以寫作 \(\mathop{A}_{m\times n}, \mathop{A}_{(m, n)}, \; A(m\times n)\)。兩個矩陣如果行數相等，列數也相等，我們稱他們爲類型相同的矩陣。構成矩陣的一個個數 \(a_{11},a_{12},\cdots,a_{mn}\) 被叫做矩陣的成分(component, element, entry)。
 第\(i\)行，第\(j\)列交叉的地方的成分，\(a_{ij}\) 被叫做 \((i,j)\) 成分。矩陣有時候也會寫成 \(A=(a_{ij})\)  \(\left( \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1j} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2j} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{i1} &amp;amp; a_{i2} &amp;amp; \cdots &amp;amp; a_{ij} &amp;amp; \cdots &amp;amp; a_{in}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mj} &amp;amp; \cdots &amp;amp; a_{mn}\\ \end{array} \right), \\ \left[ \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1j} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2j} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{i1} &amp;amp; a_{i2} &amp;amp; \cdots &amp;amp; a_{ij} &amp;amp; \cdots &amp;amp; a_{in}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mj} &amp;amp; \cdots &amp;amp; a_{mn}\\ \end{array} \right]\)</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記10</title>
-      <link>/post/2017-02-19/</link>
+      <link>https://winterwang.github.io/post/2017-02-19/</link>
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-19/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-19/</guid>
       <description>向量的內積 (inner product) Theorem 1 (vectors inner product) 向量的內積運算，僅限定於維度相同的兩個向量之間。一個向量爲橫向量寫在左側，一個向量爲列向量寫在右側，兩個向量的相對應成分一一相乘，然後將各成分乘積相加的過程，我們稱之爲內積(inner product, scalar product)運算。內積運算結果通常不會是向量，而是標量(scalar)，或正或負，或爲零。向量 \(\underline{a}\) 與向量 \(\underline{b}\) 的內積寫作：\(\underline{a}^t\underline{b}, \underline{b}^t\underline{a}\) 或者寫作： \(\underline{a}\cdot\underline{b}, (\underline{a},\underline{b}), &amp;lt;\underline{a},\underline{b}&amp;gt;\)。內積爲 \(0\) 的向量我們稱他們爲正交向量(orthogonal)，寫作：\(\underline{a}\perp\underline{b}\)。 內積，與和記號: \(\sum\) 有緊密聯系。我們常常會把 \(\sum\) 式子/量寫成向量的內積形式。  練習 列向量 \(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\) 的內積：
 \(\underline{a}^t\underline{b}=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}^t\underline{a}\)
  橫向量 \(\underline{a}=(a_1,a_2,a_3), \underline{b}=(b_1,b_2,b_3)\) 的內積：
@@ -387,10 +387,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記9</title>
-      <link>/post/2017-02-18/</link>
+      <link>https://winterwang.github.io/post/2017-02-18/</link>
       <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-18/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-18/</guid>
       <description>特殊向量 零向量 (zero vector, null vector) 全部的成分均爲\(0\)的向量，我們稱之爲零向量(zero vector, null vector), 寫作： \(\underline{0}\) 注意與標量(scalar) \(0\) 相區分。 如果想要加注零向量的維度，我們可以在右下角加上 \(n\)：\(\underline{0}_n\) ，意爲 \(n\) 維度的零向量。 不是零向量的向量又被叫做，非零向量(non-zero vector, non-null vector)。  例如： 列向量：\(\underline{0}_3=\left( \begin{array}{c} 0\\ 0\\ 0\\ \end{array} \right)\)， 行向量：\(\underline{0}_3^t=(0,0,0)\)
  \(1\) 向量 (vector with all elements 1) 當一個向量的全部成分都是數字 \(1\)，我們稱這個向量爲 \(1\) 向量。 \(\underline{1}\) 這裏也需要注意與標量 \(1\) 相區分。 如果想要加注\(1\)向量的維度，我們可以在右下角加上 \(n\)：\(\underline{1}_n\) ，意爲 \(n\) 維度的\(1\)向量。  例如：列向量：\(\underline{1}_4=\left( \begin{array}{c} 1\\ 1\\ 1\\ 1 \end{array} \right)\)， 行向量：\(\underline{1}_4^t=(1,1,1,1)\)
  第 \(i\) 基本向量 Theorem 1 (fundamental vector) \(n\) 維度的向量，假如它的第 \(i\) 個成分是自然數 \(1\)，其他的成分全部都是 \(0\)， 我們稱這樣的向量爲第 \(\textbf{i}\) 基本向量 (fundamental vector)。寫作 \(\underline{\smash{e}}_i\)。   平時我們較少用到一個單獨的基本向量。大多情況下我們用的是由 \(n\) 個單獨向量組成的一組向量。這個類型的向量與坐標軸的關系緊密。  例如：維度爲4的第 \(1\sim4\) 基本向量：\(\underline{e}_1=\left( \begin{array}{c} 1\\ 0\\ 0\\ 0 \end{array} \right), \; \underline{e}_2=\left( \begin{array}{c} 0\\ 1\\ 0\\ 0 \end{array} \right), \; \underline{e}_3=\left( \begin{array}{c} 0\\ 0\\ 1\\ 0 \end{array} \right), \; \underline{e}_4=\left( \begin{array}{c} 0\\ 0\\ 0\\ 1 \end{array} \right)\)</description>
@@ -398,10 +398,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記8</title>
-      <link>/post/2017-02-17/</link>
+      <link>https://winterwang.github.io/post/2017-02-17/</link>
       <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-17/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-17/</guid>
       <description>向量 vector 列向量 column vector 在等號的右側，將數字寫成一列，左右用圓括號或者方括號包含在內的形式，被叫做列向量(column vector)：
 \(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right), \;\; \textbf{a}=\left[ \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right]\)
  我們接下來將會繼續定義，向量的加減法，標量乘法(scalar multiplication)。把上述的向量用一個文字表示的時候，通常會記爲下劃線 \(\underline{a}\)，或者是加粗的小寫字母： \(\bf{a}\)。
@@ -415,10 +415,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記7</title>
-      <link>/post/2017-02-16/</link>
+      <link>https://winterwang.github.io/post/2017-02-16/</link>
       <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-16/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-16/</guid>
       <description>分解平方和 1 樣本量均爲 \(n\) 的兩變量 \(z, \hat{z}\) 如下表，已知這兩個變量滿足條件：
 \(\bar{z}=\frac{1}{n}\sum\limits_{i=1}^nz_i=\frac{1}{n}\sum\limits_{i=1}^n\hat{z}_i=\bar{\hat{z}},\) \(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)
   個体の番号 変量 \(z\) 変量 \(\hat{z}\)    \(1\) \(z_1\) \(\hat{z}_1\)  \(2\) \(z_2\) \(\hat{z}_2\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(i\) \(z_i\) \(\hat{z}_i\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(n\) \(z_n\) \(\hat{z}_n\)    此時我們有：
@@ -430,29 +430,29 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記6</title>
-      <link>/post/2017-02-15/</link>
+      <link>https://winterwang.github.io/post/2017-02-15/</link>
       <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-15/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-15/</guid>
       <description>數據的變換 平均值附近的偏差:  各個數值 \(x_i\) 與樣本平均值 \(\bar{x}\) 的差 \[x_i^\prime=x_i-\bar{x} (i = 1,2,\cdots,n)\] 稱爲數據 \(x_i\) 在它的平均值 \(\bar{x}\) 附近的偏差(deviation)。通常我們說求偏差，指的是，對數據 \(x_i\) 進行偏差轉換。這個過程又被稱作是中心變換(centering) 關於偏差，我們列舉如下兩個有特徵的的概括統計：  樣本平均值： \[\begin{equation} \bar{x}^\prime=\frac{1}{n}\sum_{i=1}^nx_i^\prime=0 \tag{1} \end{equation}\] 樣本偏差平方和： \[\begin{equation} SS^\prime=\sum_{i=1}^n(x^\prime)^2=SS \tag{2} \end{equation}\]    練習：證明(1)  解： 證明(1): \[\bar{x}^\prime=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})}{n}\\ \;\;\;=\frac{\sum\limits_{i=1}^nx_i-n\bar{x}}{n}\\ \;\;\;=\frac{\sum\limits_{i=1}^nx_i}{n}-\bar{x}\\ \;\;\;=\bar{x}-\bar{x}=0\]
 數據的標準化：  將數據 \(x_i\) 的平均值 \(\bar{x}\) 附近的偏差除以樣本標準偏差 \(s\) 從而獲得下面式子所表示的數據 \(z_i\) 的過程，被叫做數據的標準化 (standardization)： \[\begin{equation} z_i=\frac{x_i-\bar{x}}{s} \tag{3} \end{equation}\] 標準化後的數據 \(z_i\) 的概括統計有下列特徵：  樣本平均值： \[\begin{equation} \bar{z}=\frac{1}{n}\sum_{i=1}^nz_i=0 \tag{4} \end{equation}\] 樣本方差: \[\begin{equation} s_{z}^2=\frac{1}{n}\sum_{i=1}^nz_i^2=1 \tag{5} \end{equation}\]  由於標準化數據具有上述兩個非常顯著的特徵，均值爲 \(0\)，方差爲 \(1\)，因此我們實際分析數據過程中常常對數據進行標準化。標準化以後的數據，單位消失，變成了一組無名數 \(\divideontimes\) 數據的標準化，有時你會看到被定義爲: \[\begin{equation} z_i=\frac{x_i-\bar{x}}{u} \tag{6} \end{equation}\] 此時的不偏樣本方差爲： \[\begin{equation} u_z^2=\frac{1}{n-1}\sum_{i=1}{n}z_i^2=1 \tag{7} \end{equation}\]     2變量數據的概括統計： 樣本量同爲 \(n\) 的 \(2\) 變量 \(x_1,x_2\) 的數據，表示爲如下表格：   個体の番号 変量 \(x_1\) 変量 \(x_2\)    \(1\) \(x_{11}\) \(x_{12}\)  \(2\) \(x_{21}\) \(x_{22}\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(i\) \(x_{i1}\) \(x_{i2}\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(n\) \(x_{n1}\) \(x_{n2}\)     按照變量 \(x_1,x_2\) 各自的定義：  樣本平均值：\(\bar{x_1}=\frac{1}{n}\sum\limits_{i=1}^nx_{i1}, \; \bar{x_2}=\frac{1}{n}\sum\limits_{i=1}^nx_{i2}\) 樣本偏差平方和: \(SS_1=\sum\limits_{i=1}^n(x_{i1}-\bar{x_1})^2, \; SS_2=\sum\limits_{i=1}^n(x_{i2}-\bar{x_2})^2\) 樣本方差： \(s_1^2=\frac{SS_1}{n}, \; s_2^2=\frac{SS_2}{n}\) 樣本標準偏差： \(s_1=\sqrt{s_1^2}, \; s_2=\sqrt{s_2^2}\) 不偏樣本方差： \(u_1^2=\frac{SS}{n-1}, \; u_2^2=\frac{SS_2}{n-1}\) 不偏樣本方差平方根: \(u_1=\sqrt{u_1^2}, \; u_2=\sqrt{u_2^2}\)   對於這樣一對變量 \(x_1,x_2\) 來說，我們又可以追加如下的概括統計：  樣本總體平均值： \(\bar{x}=\frac{1}{n+n}(\sum\limits_{i-1}^nx_{i1}+\sum\limits_{i-1}^nx_{i2})\) 樣本方差積和(cross-product)： \[\begin{equation} \begin{split} S_{12} &amp;amp; = \sum_{i=1}^n(x_{i1}-\bar{x_1})\cdot(x_{i2}-\bar{x_2})\\ &amp;amp; = \sum_{i=1}^n(x_{i1}x_{i2}-\bar{x_1}x_{i2}-x_{i1}\bar{x_2}+\bar{x_1}\bar{x_2})\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\sum_{i=1}^nx_{i2}-{\sum_{i=1}^nx_{i1}}\bar{x_2}+n\bar{x_1}\bar{x_2}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\cdot n\bar{x_2}-n\bar{x_1}\cdot\bar{x_2}+n\bar{x_1}\bar{x_2}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\bar{x_1}\cdot\bar{x_2}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\frac{\sum\limits_{i=1}^nx_{i1}}{n}\cdot\frac{\sum\limits_{i=1}^nx_{i2}}{n}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\frac{1}{n}(\sum_{i=1}^nx_{i1})(\sum_{i=1}^nx_{i2}) = S_{21} \end{split} \tag{8} \end{equation}\]</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記5</title>
-      <link>/post/2017-02-13/</link>
+      <link>https://winterwang.github.io/post/2017-02-13/</link>
       <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-13/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-13/</guid>
       <description>2017-02-15 updated.  數據的種類和尺度   表1. 20歳の若者9名のデータ      性別   健康状態   体温   身長      男  女   極良  良好  普通  不良  極悪   °C   cm      1   1  0   1  0  0  0  0   36.</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記4</title>
-      <link>/post/2017-02-12-t/</link>
+      <link>https://winterwang.github.io/post/2017-02-12-t/</link>
       <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-12-t/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-12-t/</guid>
       <description>連立方程式 (simultaneous equations) 連立方程式，將與第六章談的特徵值問題(固有値問題)有緊密聯系，此處我們一起觀察幾種不同的組合：
 解同次連立1次方程式 \(\left\{ \begin{array}{ll} (1)\;a_1+2a_2+3a_3 = 0 \\ (2)\;2a_1+4a_2+5a_3 = 0 \;\\ (3)\;3a_1+5a_2+6a_3 = 0 \\ \end{array} \right.\) 由 \(2\times(1)-(2)\) 可得 \(a_3=0\) 。 代入 \((1),(2),(3)\) 式後，\((3)-(2)\) 可得 \(a_1=-a_2\) 。 代入 \((1)\) 式可得 \(a_2=0\) 。 再代入 \((4)\) 式可知 \(a_1=0\) 。最終可得 \(a_1=a_2=a_3=0\) 其實上述問題不解自明 (trivial solution)。 那麼同次1次連立方程式 (homogeneous system) 除了自明解之外，還有別的解嗎? 我們再看下面一例。
  解 \(\left\{ \begin{array}{ll} (1)\;4a_1+3a_2+6a_3 = 0 \\ (2)\;2a_1+a_2+4a_3 = 0 \;\\ (3)\;a_1+a_2+a_3 = 0 \\ \end{array} \right.\) 上述方程表面上看有三個式子，實際上由於 \((3)=\left\{(1)-(2)\right\}\div2\) 只有2個有意義的方程式。如此這般，有3個未知數，卻只有兩個連立方程組，是無法求解的。如果將三個未知數中的一個例如 \(a_3\) 視爲常數(定数) (寫作：\(s\) ) 即： \((4)\;a_3=s\) 整理方程組得到新的連立方程 \(\left\{ \begin{array}{ll} (1^\prime)\;4a_1+3a_2 = -6s \\ (2^\prime)\;2a_1+a_2 = -4s \;\\ \end{array} \right.</description>
@@ -460,10 +460,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記3</title>
-      <link>/post/2017-02-10/</link>
+      <link>https://winterwang.github.io/post/2017-02-10/</link>
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-10/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-10/</guid>
       <description>函數的最大值最小值問題 沒有制約條件的情況 函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
 1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
 求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]    </description>
@@ -471,10 +471,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記2</title>
-      <link>/post/2017-02-08/</link>
+      <link>https://winterwang.github.io/post/2017-02-08/</link>
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-08/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-08/</guid>
       <description>偏微分 1個變量的函數的微分 公式： 函數 \(f(a)\) 關於變量 \(a\) 的微分，被定義爲： \(\lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}\) , 寫作 \(\frac{df}{da}\), 具有下列性質：  \(f(a) = a^n\) 時， \(\frac{df}{da} = na^{n-1}\) 重要 \(\frac{d}{da}\left\{kf(a)+lg(a)\right\}=k\frac{df}{da}+l\frac{dg}{da}\) (\(k,l\) 是常數) \(\frac{d}{da}\left\{f(a) \cdot g(a)\right\}=\frac{df}{da}g(a)+f{a}\frac{dg}{da}\) \(\frac{d}{da}\left\{\frac{f(a)}{g(a)}\right\}=\frac{\frac{df}{da}g(a)-f(a)\frac{dg}{da}}{\left\{g(a)\right\}^2}\), 特別的有，\(\frac{d}{da}\left\{\frac{1}{g(a)}\right\}=-\frac{\frac{dg}{da}}{\left\{g(a)\right\}^2}\) \(y=f(b), b=g(a)\) 時， \(\frac{dy}{da}=\frac{dy}{db}\frac{db}{da}\)  2次（2階）微分 【二階導數】:
 \(f(a)\) 關於常數 \(a\) 的微分 \(\frac{df}{da}\) 的二次微分表示爲： \(\frac{d^2f}{da^2}\)
     多個變量的函數的微分 偏微分 包含了 \(n\) 個獨立變量 \(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n\)的函數，即多變量函數 \(F(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n)\) 關於 \(a_i (i=1,2,\cdots,n)\) 的偏微分 (partial differentiation) 的定義是，把 \(a_i\) 以外的獨立變量當做常數（定数），將函數 \(F\) 對變量 \(a_i\) 求微分，寫作： \(\frac{\partial F}{\partial a_i}\)。</description>
@@ -482,10 +482,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
     
     <item>
       <title>「統計解析のための線形代数」復習筆記1</title>
-      <link>/post/2017-02-06/</link>
+      <link>https://winterwang.github.io/post/2017-02-06/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-02-06/</guid>
+      <guid>https://winterwang.github.io/post/2017-02-06/</guid>
       <description>和記號\(\sum\)  \(\sum\) 的性質 (1) 下標(添字) \(x_1 + x_2 + x_3 + \dots + x_n\) 記作如下:\[\sum_{i=1}^{n}x_i\]  \(\sum_{i=1}^{n}x_i\) 中的\(i\) 稱爲dummy index 可以簡略寫爲：\(\sum x\) 或者 \(\sum_1 x_i\), \(\sum x_i\)  \(\sum\) 的性質 (2)  \[\begin{equation} \sum_{i=1}^{n}(ax_i + by_i)= a\sum_{i=1}^{n}x_i + b\sum_{i=1}^{n}y_i \tag{1} \end{equation}\] \(\sum_{i=1}^{n}ax_i = a\sum_{i=1}^{n}x_i\) 常數(定数)可以提前 \(\sum_{i=1}^{n}a = na\) \(\sum_{i=1}^{n}1 = n\) \(\sum_{i=1}^{n}(ax_i+b) = a\sum_{i=1}^{n}x_i + nb\) 公式(1)的應用: \[ \begin{aligned} \sum_{i=1}^{n}(ax_i -by_i)^2 &amp;amp;= \sum_{i=1}^{n}(a^2x_i^2 - 2abx_iy_i + b^2y_i^2) \\ &amp;amp;= \sum_{i=1}^{n}a^2x_i^2 -\sum_{i=1}^{n}2abx_iy_i + \sum_{i=1}^{n}b^2y_i^2 \\ &amp;amp;= a^2\sum_{i=1}^{n}x_i^2 - 2ab\sum_{i=1}^{n}x_iy_i + b^2\sum_{i=1}^{n}y_i^2 \end{aligned} \] 但是，乘法或平方有如下性質，計算方差(分散)或者相關系數時需要注意：\[\sum_{i=1}^{n}x_i^2 \neq (\sum_{i=1}^{n}x_i)^2\] 以及 \[\sum_{i=1}^{n}x_iy_i \neq (\sum_{i=1}^{n}x_i)(\sum_{i=1}^{n}y_i)\] 自然數的冪運算之和(冪[べき]乗の和)的公式: \[ \begin{aligned} 1+2+3+\dots+n &amp;amp;= \sum_{t=1}^{n}t = \frac{n(n+1)}{2}\\ 1^2+2^2+3^2+\dots+n^2 &amp;amp;= \sum_{t=1}^{n}t^2 = \frac{n(n+1)(2n+1)}{6} \\ 1^3+2^3+3^3+\dots+n^3 &amp;amp;= \sum_{t=1}^{n}t^3 = {\frac{n(n+1)}{2}}^2 \\ 1^4+2^4+3^4+\dots+n^4 &amp;amp;= \sum_{t=1}^{n}t^4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30} \end{aligned} \] 上面的公式將會應用在時間序列分析，斯皮尔曼等级相关系数(スピアマンの順位相関係数)的定義公式的推導。</description>
     </item>
     
