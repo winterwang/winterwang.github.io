@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 24 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/categories/to-do/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018_10 todo</title>
+      <link>https://winterwang.github.io/post/2018-10-todo/</link>
+      <pubDate>Tue, 02 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2018-10-todo/</guid>
+      <description>2018-10-02 ~ 2018-10-17 Prepare the proposal to JSPS.   </description>
+    </item>
     
     <item>
       <title>Summer Project Schedule</title>
