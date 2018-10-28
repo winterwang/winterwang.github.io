@@ -78,9 +78,15 @@
 &lt;li&gt;2018-10-25
 
 &lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://github.com/winterwang/PAC_PAM&#34; target=&#34;_blank&#34;&gt;Some preliminary analysis&lt;/a&gt; using vague prior to do &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S1341321X18300783&#34; target=&#34;_blank&#34;&gt;MabeRCT&lt;/a&gt;&lt;/del&gt;;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 6&lt;/a&gt; done;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Talk with LP AS, the next steps of writing the carb paper;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://github.com/winterwang/PAC_PAM&#34; target=&#34;_blank&#34;&gt;Some preliminary analysis&lt;/a&gt; using vague prior to do &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S1341321X18300783&#34; target=&#34;_blank&#34;&gt;MabeRCT&lt;/a&gt;;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 6&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Talk with LP AS, the next steps of writing the carb paper;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-26~29
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 7&lt;/a&gt; done;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; MLCA analyses done stratified by men and women;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Python for beginners;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Search for guideline of eradication among adolescents of H. &lt;em&gt;pylori&lt;/em&gt; in the world;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Prepare poster for &lt;a href=&#34;https://www.bna.org.uk/mediacentre/events/chrononutrition-from-epidemiology-to-molecular-mechanism-symposium-london/&#34; target=&#34;_blank&#34;&gt;conference&lt;/a&gt;.&lt;/label&gt;&lt;/li&gt;
