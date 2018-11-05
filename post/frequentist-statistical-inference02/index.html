@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.49" />
+  <meta name="generator" content="Hugo 0.50" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -343,7 +343,10 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <div class="section level3">
+        
+
+
+<div class="section level3">
 <h3>估計量和他們的樣本分佈</h3>
 <p>例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 <span class="math inline">\(n\)</span> 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。</p>
 <p><strong>模型假設：</strong> 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 <span class="math inline">\(Y_i\)</span> 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 <span class="math inline">\(\mu\)</span>，總體方差爲 <span class="math inline">\(\sigma^2\)</span>。那麼這個模型可以簡單的被寫成：</p>

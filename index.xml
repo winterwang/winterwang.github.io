@@ -16,12 +16,12 @@
       <pubDate>Sun, 04 Nov 2018 00:00:00 +0900</pubDate>
       
       <guid>https://winterwang.github.io/talk/ndns-talk-london/</guid>
-      <description>&lt;p&gt;Recent evidence suggests that there are three types of eaters (grazers, early eaters, and late eaters) according to the timing of energy consumption^(1,2)^. This study aims at finding both timing and quantity eating patterns specifically for carbohydrate (CH) intake in UK adults.
-Data from the National Diet and Nutrition Survey (NDNS) Rolling Programme (&lt;sup&gt;2008&lt;/sup&gt;&amp;frasl;&lt;sub&gt;09&lt;/sub&gt;-&lt;sup&gt;15&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;) included 6155 adults aged 19 or older in the UK. Time of the day was categorized into 7 slots: 6-9 am, 9-12 noon, 12-2 pm, 2-5 pm, 5-8 pm, 8-10 pm and 10 pm-6 am. Responses for CH intake within each time slot were categorised into:1) no energy intake, 2) CH contributed  50% or 3) CH contributed  50% of total energy. Multilevel latent class analysis (MLCA)^(3)^ models were applied to explore latent classes of CH consumption, accounting for the repeated measurement of intake on 3-4 days nested within individuals. Survey-designed multivariable regression models were used to assess the associations of CH eating patterns with hypertension and obesity.
+      <description>&lt;p&gt;Recent evidence suggests that there are three types of eaters (grazers, early eaters, and late eaters) according to the timing of energy consumption[1,2]. This study aims at finding both timing and quantity eating patterns specifically for carbohydrate (CH) intake in UK adults.
+Data from the National Diet and Nutrition Survey (NDNS) Rolling Programme (&lt;sup&gt;2008&lt;/sup&gt;&amp;frasl;&lt;sub&gt;09&lt;/sub&gt;-&lt;sup&gt;15&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;) included 6155 adults aged 19 or older in the UK. Time of the day was categorized into 7 slots: 6-9 am, 9-12 noon, 12-2 pm, 2-5 pm, 5-8 pm, 8-10 pm and 10 pm-6 am. Responses for CH intake within each time slot were categorised into:1) no energy intake, 2) CH contributed  50% or 3) CH contributed  50% of total energy. Multilevel latent class analysis (MLCA)[3] models were applied to explore latent classes of CH consumption, accounting for the repeated measurement of intake on 3-4 days nested within individuals. Survey-designed multivariable regression models were used to assess the associations of CH eating patterns with hypertension and obesity.
 Three CH eating day patterns (low/high percentage, and regular meal days) emerged from 24483 observation days, based on which three types of CH eaters were defined which could be broadly labelled as low (28.1%), moderate (28.8%), and high (43.1%) CH eaters. On average, low-CH eaters (Fig.1) consumed the highest amount of total energy intake (7985.8 kJ, p-value &amp;lt; 0.001), and they had higher percentages of energy contributed by fat and alcohol, especially after 8 pm. Moderate-CH eaters (Fig.2) consumed the lowest amount of total energy (7341.8 kJ) while they had the tendency of eating CH later in the day. High-CH eaters (Fig.3.) consumed most of their carbohydrates and energy within time slots of 6-9 am, 12-2 pm and 5-8 pm.
 The high-CH eaters profile seemed to be the healthiest. Low-CH eating which was crudely associated with higher prevalence of hypertension and obesity (p-values respectively of &amp;lt; 0.001, and 0.024) may have resulted from health/weight concerns, leading to fat or alcohol as replacements for CH. To ascertain the direction of causality in the association of CH patterns with blood pressure and obesity, prospective longitudinal studies are warranted.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/compo.eps&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/compo.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Mansukhani R, Palla L. Proc Nutr Soc. 2018 77(OCE1).&lt;/li&gt;
@@ -139,7 +139,9 @@ cancer in Japanese and to develop a risk model for the identification of individ
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
-      <description>&lt;div id=&#34;TOC&#34;&gt;
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#words&#34;&gt;Words&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#expressions&#34;&gt;Expressions&lt;/a&gt;&lt;/li&gt;
@@ -1534,7 +1536,10 @@ Click the graph and you can learn what I learnt.&lt;/p&gt;
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>&lt;div id=&#34;-hypothesis-testing&#34; class=&#34;section level3&#34;&gt;
+      <description>
+
+
+&lt;div id=&#34;-hypothesis-testing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;什麼是假設檢驗 Hypothesis testing&lt;/h3&gt;
 &lt;p&gt;一般來說，我們的&lt;strong&gt;假設&lt;/strong&gt;（或者叫&lt;strong&gt;假說&lt;/strong&gt;）是對與我們實驗觀察數據來自的總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的&lt;strong&gt;概率分佈&lt;/strong&gt;的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作&lt;strong&gt;零假設&lt;/strong&gt;（或者叫&lt;strong&gt;原假設&lt;/strong&gt;），null hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;)；另一個是與之對應的（互補的）替代假設，althernative hypothesis (&lt;span class=&#34;math inline&#34;&gt;\(H_1/H_A\)&lt;/span&gt;)。&lt;/p&gt;
 &lt;p&gt;例如，若 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 是一個服從二項分佈的隨機離散變量 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Bin(5, \theta)\)&lt;/span&gt;。可以考慮如下的零假設和替代假設：&lt;span class=&#34;math inline&#34;&gt;\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)&lt;/span&gt;。&lt;/p&gt;
@@ -1736,7 +1741,10 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
-      <description>&lt;p&gt;爲什麼要用二次方程近似對數似然比方程？&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;爲什麼要用二次方程近似對數似然比方程？&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (&lt;a href=&#34;https://winterwang.github.io/post/log-likelihood-ratio/&#34;&gt;binomial example&lt;/a&gt;)。&lt;/li&gt;
 &lt;li&gt;我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。&lt;/li&gt;
@@ -1959,7 +1967,8 @@ legend(x=0.27, y= -5.5 ,xpd = TRUE,  legend=c(&amp;quot;logLR&amp;quot;,&amp;quo
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
-      <description>&lt;script src=&#34;https://winterwang.github.io/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+      <description>
+&lt;script src=&#34;https://winterwang.github.io/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
