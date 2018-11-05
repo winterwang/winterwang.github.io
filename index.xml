@@ -16,7 +16,19 @@
       <pubDate>Sun, 04 Nov 2018 00:00:00 +0900</pubDate>
       
       <guid>https://winterwang.github.io/talk/ndns-talk-london/</guid>
-      <description></description>
+      <description>&lt;p&gt;Recent evidence suggests that there are three types of eaters (grazers, early eaters, and late eaters) according to the timing of energy consumption^(1,2)^. This study aims at finding both timing and quantity eating patterns specifically for carbohydrate (CH) intake in UK adults.
+Data from the National Diet and Nutrition Survey (NDNS) Rolling Programme (&lt;sup&gt;2008&lt;/sup&gt;&amp;frasl;&lt;sub&gt;09&lt;/sub&gt;-&lt;sup&gt;15&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;) included 6155 adults aged 19 or older in the UK. Time of the day was categorized into 7 slots: 6-9 am, 9-12 noon, 12-2 pm, 2-5 pm, 5-8 pm, 8-10 pm and 10 pm-6 am. Responses for CH intake within each time slot were categorised into:1) no energy intake, 2) CH contributed  50% or 3) CH contributed  50% of total energy. Multilevel latent class analysis (MLCA)^(3)^ models were applied to explore latent classes of CH consumption, accounting for the repeated measurement of intake on 3-4 days nested within individuals. Survey-designed multivariable regression models were used to assess the associations of CH eating patterns with hypertension and obesity.
+Three CH eating day patterns (low/high percentage, and regular meal days) emerged from 24483 observation days, based on which three types of CH eaters were defined which could be broadly labelled as low (28.1%), moderate (28.8%), and high (43.1%) CH eaters. On average, low-CH eaters (Fig.1) consumed the highest amount of total energy intake (7985.8 kJ, p-value &amp;lt; 0.001), and they had higher percentages of energy contributed by fat and alcohol, especially after 8 pm. Moderate-CH eaters (Fig.2) consumed the lowest amount of total energy (7341.8 kJ) while they had the tendency of eating CH later in the day. High-CH eaters (Fig.3.) consumed most of their carbohydrates and energy within time slots of 6-9 am, 12-2 pm and 5-8 pm.
+The high-CH eaters profile seemed to be the healthiest. Low-CH eating which was crudely associated with higher prevalence of hypertension and obesity (p-values respectively of &amp;lt; 0.001, and 0.024) may have resulted from health/weight concerns, leading to fat or alcohol as replacements for CH. To ascertain the direction of causality in the association of CH patterns with blood pressure and obesity, prospective longitudinal studies are warranted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/compo.eps&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mansukhani R, Palla L. Proc Nutr Soc. 2018 77(OCE1).&lt;/li&gt;
+&lt;li&gt;Leech RM, Worsley A, Timperio A, McNaughton SA.  Int J Behav Nutr Phys Act. 2017 14(1):3.&lt;/li&gt;
+&lt;li&gt;Finch H, Bolin J, Bolin J. Multilevel Modeling Using Mplus. Chapman and Hall/CRC; 2017&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
