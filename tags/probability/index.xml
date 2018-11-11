@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>probability on Be ambitious</title>
+    <title>Probability on Be ambitious</title>
     <link>https://winterwang.github.io/tags/probability/</link>
-    <description>Recent content in probability on Be ambitious</description>
+    <description>Recent content in Probability on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
@@ -18,10 +18,10 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>二項分佈的正態分佈近似  假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\) 根據二項分佈的概率公式，計算將會變得很繁瑣複雜。 解決辦法：應用中心極限定理。 中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
- 問題在於，多大的 \(n\) 才能算大樣本呢？  當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)    泊松分佈的正態分佈近似  假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。 考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。 那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
- 需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
-   正態分佈模擬的校正：continuity corrections  如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。 例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
+      <description>二項分佈的正態分佈近似假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\)根據二項分佈的概率公式，計算將會變得很繁瑣複雜。解決辦法：應用中心極限定理。中心極限定理告訴我們，當樣本量足夠大時:\[X\sim N（n\pi, n\pi(1-\pi))\]
+問題在於，多大的 \(n\) 才能算大樣本呢？當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)泊松分佈的正態分佈近似假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理：\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
+需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
+正態分佈模擬的校正：continuity corrections如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
     </item>
     
     <item>
@@ -30,10 +30,10 @@
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/normal-distribution/</guid>
-      <description>概率密度曲線 probability density function， PDF  一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
- 在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
-  \[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
- 這個相關的方程，在 \(a\sim b\) 區間內的積分，就是這個連續變量在這個區間內取值的概率。  # R codes for drawing a standard normal distribution by using ggplot2 library(ggplot2) p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) + stat_function(fun = dnorm) p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) + theme(plot.subtitle = element_text(vjust = 1), plot.</description>
+      <description>概率密度曲線 probability density function， PDF一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
+在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
+\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
+這個相關的方程，在 \(a\sim b\) 區間內的積分，就是這個連續變量在這個區間內取值的概率。# R codes for drawing a standard normal distribution by using ggplot2library(ggplot2)p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +stat_function(fun = dnorm)p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) +theme(plot.subtitle = element_text(vjust = 1),plot.</description>
     </item>
     
     <item>
@@ -43,12 +43,12 @@
       
       <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
       <description>前情提要：
-假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
+假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
 答案是：必須改變主意才能提高中獎概率。
 上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：
 解說一下：
- 假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。 假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。 假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。  所以按照圖中給出的計算概率樹的過程可以得到:
-\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]
+假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。所以按照圖中給出的計算概率樹的過程可以得到:
+\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]
 你是否選擇了改變主意了呢？</description>
     </item>
     
@@ -63,7 +63,7 @@
 Quick Calculus: Short Manual of Self-instruction
 上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。
 下面想介紹一下上週學習的概率的基礎問題。
-首先是最基礎的三個概率的公理： 對於任意事件 \(A\)，它發生的概率 \(P(A)\) 滿足這樣的不等式： \(0 \leqslant P(A) \leqslant 1\) \(P(\Omega)=1\) , \(\Omega\) 是全樣本空間 (total sample space) 對於互斥（相互獨立）的事件 \(A_1, A_2, \dots, A_n\) 有如下的等式關係： \(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)  你是不是覺得上面三條公理都是廢話。 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)
+首先是最基礎的三個概率的公理：對於任意事件 \(A\)，它發生的概率 \(P(A)\) 滿足這樣的不等式： \(0 \leqslant P(A) \leqslant 1\)\(P(\Omega)=1\) , \(\Omega\) 是全樣本空間 (total sample space)對於互斥（相互獨立）的事件 \(A_1, A_2, \dots, A_n\) 有如下的等式關係： \(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)你是不是覺得上面三條公理都是廢話。不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)
 然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：
 \(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)</description>
     </item>
