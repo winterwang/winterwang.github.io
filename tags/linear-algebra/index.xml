@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linear algebra on Be ambitious</title>
+    <title>linear algebra on Be ambitious</title>
     <link>https://winterwang.github.io/tags/linear-algebra/</link>
-    <description>Recent content in Linear algebra on Be ambitious</description>
+    <description>Recent content in linear algebra on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
@@ -115,8 +115,7 @@
 \(A\) 爲正則矩陣時，滿足：\(A^{-1}A=AA^{-1}=E\) 。
 顯然，單位矩陣的逆矩陣也是一個單位矩陣: \[E^{-1}E=EE^{-1}=E, E^{-1}=E\]逆矩陣的性質對於正則矩陣 \(A, B\) 有以下性質：
 \((AB)^{-1}=B^{-1}A^{-1}\)
-注意此處矩陣 \(A，B\) 的順序對調了。\((A^{-1})^{-1}=A\)\((A^{t})^{-1}=(A^{-1})^t\)\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)對角矩陣 \(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\) 的逆矩陣寫作： \(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)；
-注意此處的條件爲所有對角成分均非零: \(a_{11}a_{22}\dotsm a_{nn}\neq 0\)證明\((AB)(AB)^{-1}=E\) 等式兩邊從左往右乘以 \(A^{-1}\)</description>
+注意此處矩陣 \(A，B\) 的順序對調了。\((A^{-1})^{-1}=A\)\((A^{t})^{-1}=(A^{-1})^t\)\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)對角矩陣 \(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\) 的逆矩陣寫作： \(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)；</description>
     </item>
     
     <item>
@@ -252,8 +251,7 @@
 成分的個數爲 \(n\)，就被稱爲這個向量具有 \(n\) 個維度(次元，dimension)，或者說這個向量的維度爲 \(n\)。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的型(size, order),或者 類型(type) 一致。
 成分只有一個的向量，被特別稱爲標量(scalar)，原則上不加括號。
 將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲成分表示。在多元變量分析中，我們說到向量，多默認指的就是列向量。
-\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)
-今後我們都用字母帶下劃線，圓括號包含數字的方式表示向量。</description>
+\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)</description>
     </item>
     
     <item>
@@ -307,7 +305,7 @@
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description>函數的最大值最小值問題沒有制約條件的情況函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程\[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\]要成立(必要條件)。
+      <description>函數的最大值最小值問題沒有制約條件的情況函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程\[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\]要成立(必要條件)。
 1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\\;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
 求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小：\[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]</description>
     </item>

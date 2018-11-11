@@ -1,390 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Medical Statistics on Be ambitious</title>
+    <title>Medical-Statistics on Be ambitious</title>
     <link>https://winterwang.github.io/tags/medical-statistics/</link>
-    <description>Recent content in Medical Statistics on Be ambitious</description>
+    <description>Recent content in Medical-Statistics on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Words, notes, and sentences that may be useful </title>
-      <link>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
+      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
-      <description>WordsExpressionsSentencesterry2017discontinuouslanza2007proccollins2010latentWordsdiscernable [di’sə:nəbl, -’zə:-]===== 辞典翻译: discernable ======adj. 可辨别的；可认识的============ 网络释义 ============-------- discernable ---------可辨别的方向分辨-- discernable recognizable --可辨别的--- discernable visible ----可辨别的abstinence [’æbstinəns]====== 辞典翻译: abstinence ======n. 节制；节欲；戒酒；禁食============ 网络释义 ============--------- abstinence ---------节制禁欲禁戒----- alcohol abstinence -----酒戒断----- Abstinence theory ------节欲论弃权忍欲说exhaustive [iɡ’zɔ:stiv]====== 辞典翻译: exhaustive ======adj.</description>
-    </item>
-    
-    <item>
-      <title>Summer Project Schedule</title>
-      <link>https://winterwang.github.io/post/summer-project-schedule/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/summer-project-schedule/</guid>
-      <description>Data analysis finish by 2018-07-2431 Paper structure confirm by 2018-08-01 Paper draft complete by 2018-08-16 2018-06-24 Read and try to repeat Rll&amp;rsquo;s method in R and familarize the dataset ASAP Two papers applying Repeated Measures LCA  2018-06-25 Meeting with supervisor and Susanna Confirm the cutoff of carborhydrate consumption Talk with Rll ask about the methodology and dataset  2018-06-26 Send the summarised memo of meeting to Supervisor and etc. Read the first part fundamentals of LCA.</description>
-    </item>
-    
-    <item>
-      <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>什麼是假設檢驗 Hypothesis testing一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
-例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
-當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
-從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”）從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）注意：（這一段很繞）
-上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 \(H_0\)，複雜的 \(H_1\)。如此一來當零假設 \(H_0\) 不被拒絕時，我們並不一定就接受之。因爲無證據證明 \(H_1\) 不等於有證據證明 \(H_0\)。(Absence of evidence is not evidence of absence). 換句話說，無證據讓我們拒絕 \(H_0\) 本身並不成爲支持 \(H_0\) 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。
-在樣本空間 sample space 中，決定了零假設 \(H_0\) 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 \(\mathfrak{R}\) 來標記。
-錯誤概率和效能方程這一部分可以參考之前臨牀試驗樣本量計算的部分。
-Table 1: Definition of Type I and Type II errorSAMPLE\(\underline{x} \notin \mathfrak{R}\) Accept \(H_0\)\(\underline{x} \in \mathfrak{R}\) Reject \(H_0\)TRUTH\(H_0\) is true\(\checkmark\)\(\alpha\) Type I error\(H_1\) is true\(\beta\) Type II error\(\checkmark\)假如一個假設檢驗是關於總體參數 \(\theta\) 的：</description>
-    </item>
-    
-    <item>
-      <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
-      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
-      <description>爲什麼要用二次方程近似對數似然比方程？
-上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (binomial example)。我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。正態近似法求對數似然 Normal approximation to the log-likelihood根據前一節，如果樣本均數的分佈符合正態分佈：\(\bar{X}\sim N(\mu, \sigma^2/n)\)。那麼樣本均數的對數似然比爲：
-\[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]
-其中， \(\bar{x}\) 是正態分佈總體均數 \(\mu\) 的極大似然估計 (maximum likelihood estimator, MLE)。如果已知總體的方差參數，那麼 \(\sigma/\sqrt{n}\) 是 \(\bar{x}\) 的標準誤 (standard error)。
-因此，假設 \(\theta\) 是我們想尋找的總體參數。有些人提議可以使用下面的關於 \(\theta\) 的二次方程來做近似：
-\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]
-上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， \(M\) 的標準誤爲 \(S\)。如果我們正確地選用 \(M\) 和 \(S\)，那我們就可以用這樣的方程來近似求真實觀察數據的似然 \(\ell(\theta|data)\)。
-通過近似正態對數似然比，\(M\) 應當選用使方程取最大值時，參數 \(\theta\) 的極大似然估計 \(M=\hat{\Theta}\)。
-但是在選用標準誤 \(S\) 上必須滿足下列條件：
-\(S\) 是極大似然估計 \(\hat{\Theta}\) 的標準誤。被選擇的 \(S\) 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：
-\[\left.\frac{d^2}{d\theta^2}\ell(\theta)\right\vert_{\theta=\hat{\theta}}=\ell^{\prime\prime}(\hat{\theta})=-\frac{1}{S^2}\\\Rightarrow S^2=\left.</description>
-    </item>
-    
-    <item>
-      <title>對數似然比 Log-likelihood ratio</title>
-      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
-      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
-      <description>對數似然比 Log-likelihood ratio對數似然比的想法來自於將對數似然方程圖形的 \(y\) 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的對數似然比 (log-likelihood ratio) 來獲得：
-\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]
-由於 \(\ell(\theta)\) 的最大值在 \(\hat{\theta}\) 時， 所以，\(llr(\theta)\) 就是個當 \(\theta=\hat{\theta}\) 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 \(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\) 取對數而已。
-之前我們也確證了，不包含我們感興趣的參數的方程部分可以忽略掉。還是用上一節 10人中4人患病的例子：
-\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\\\Rightarrow \ell(\pi)=log[\pi^4(1-\pi)^{10-4}]\\\Rightarrow llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]
-其實由上也可以看出 \(llr(\theta)\) 只是將對應的似然方程的 \(y\) 軸重新調節了一下而已。形狀是沒有改變的：
-par(mfrow=c(1,2))x &amp;lt;- seq(0,1,by=0.001)y &amp;lt;- (x^4)*((1-x)^6)/(0.4^4*0.6^6)z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6)plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,1.1),yaxt=&amp;quot;n&amp;quot;,frame.plot = FALSE, ylab = &amp;quot;LR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)axis(2, at=seq(0,1, 0.2), las=2)title(main = &amp;quot;Binomial likelihood ratio&amp;quot;)abline(h=1.</description>
-    </item>
-    
-    <item>
-      <title>似然非然 Likelihood</title>
-      <link>https://winterwang.github.io/post/likelihood/</link>
-      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/likelihood/</guid>
-      <description>概率 vs. 推斷/Probability vs. Inference在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
-\[\binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205\]
-dbinom(4, 10, 0.5)## [1] 0.2050781# or you can calculate by hand:factorial(10)*(0.5^10)/(factorial(4)*(factorial(6)))## [1] 0.2050781在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 \(Prob(coin\;landing\;heads)\) 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，似然法 (likelihood) 就是我們進行參數估計的最佳手段。
-似然和極大似然估計此處用二項分佈的例子來理解似然法的概念：假設我們觀察到10個對象中有4個患病，我們假定這個患病的概率爲 \(\pi\)。於是我們就有了下面的模型：
-模型： 我們假定患病與否是一個服從二項分佈的隨機變量，\(X\sim Bin(10,\pi)\)。同時也默認每個人之間是否患病是相互獨立的。
-數據： 觀察到的數據是，10人中有4人患病。於是 \(x=4\)。
-現在按照觀察到的數據，參數 \(\pi\) 變成了未知數：
-\[Prob(X=4|\pi)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]
-此時我們會很自然的考慮，當 \(\pi\) 是未知數的時候，它取值爲多大的時候才能讓這個事件（即：10人中4人患病）發生的概率最大？ 所以我們可以將不同的數值代入 \(\pi\) 來計算該事件在不同概率的情況下發生的可能性到底是多少：
-Table 1: The probability of observing \(X=4\)\(\pi\)事件 \(X=4\) 發生的概率0.</description>
-    </item>
-    
-    <item>
-      <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
-      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
-      <description>背景計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在
-如何將實驗對象隨機分配 (randomisation)設計對照組 (control group)合適（且必須）的貫徹盲法 (blinding)另外一個同樣重要的問題是–“我到底需要多少樣本?”
-一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：
-統計學方案。從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。經濟上的因素。然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。倫理道德上的因素。許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？實驗本身的可信度。如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。這裏我們只考慮沒有其他任何因素的影響下，1. 統計學方案上該如何計算準確的所需樣本量的大小。
-比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：Table 1: Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI治療組溶栓酶安慰劑p.values1st Australiann=264n=253死亡人數26 (9.8%)32 (12.</description>
-    </item>
-    
-    <item>
-      <title>卡方分佈 chi square distribution</title>
-      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
-      <description>卡方分佈的期望和方差的證明：當 \(X\sim N(0,1)\) 時， \(X^2\sim \mathcal{X}_1^2\)
-如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)，那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
-其中： \(\mathcal{X}_n^2\) 表示自由度爲 \(n\) 的卡方分佈。
-且 \(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)
-卡方分佈的期望：\[E(X_1^2)=Var(X)+[E(X)]^2=1+0=1\]
-\[\Rightarrow E(X_n^2)=n\]
-卡方分佈的方差：\[\begin{aligned}Var(X_1^2) &amp;amp;= E(X_1^{2^2}) - E(X_1^2)^2 \\&amp;amp;= E(X_1^4)-1\end{aligned}\]
-下面來求 \(E(X_1^4)\)\[\begin{aligned}\because E(X_1) &amp;amp;= \int_{-\infty}^{+\infty} xf(x)dx \\\therefore E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx\end{aligned}\]
-已知： \(f(x)=\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}\) 代入上式：
-\[\begin{aligned}E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx \\&amp;amp;= \int_{-\infty}^{+\infty} x^4\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}dx\\&amp;amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^4e^{(-\frac{x^2}{2})}dx\\&amp;amp;=\frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^3(-x)e^{(-\frac{x^2}{2})}dx\end{aligned}\]</description>
-    </item>
-    
-    <item>
-      <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
-      <description>估計量和他們的樣本分佈例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 \(n\) 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。
-模型假設： 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 \(Y_i\) 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 \(\mu\)，總體方差爲 \(\sigma^2\)。那麼這個模型可以簡單的被寫成：
-\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]
-總體均值 \(\mu\) 的估計量： 顯然算術平均值: \(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\) 是我們用於估計總體均值的估計量。
-估計量的樣本分佈：\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]
-證明\[\begin{aligned}E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\&amp;amp;= \frac{1}{n}E(\sum Y_i) \\&amp;amp;= \frac{1}{n}\sum E(Y_i) \\&amp;amp;= \frac{1}{n}n\mu = \mu \\Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\\because Y_i \;are &amp;amp;\; independent \\&amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\&amp;amp;= \frac{1}{n^2} n Var(Y_i) \\&amp;amp;= \frac{\sigma^2}{n}\end{aligned}\]</description>
-    </item>
-    
-    <item>
-      <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
-      <description>人羣與樣本 (population and sample)討論樣本時，需考慮下面幾個問題：
-樣本是否具有代表性？人羣被準確定義了嗎？我們感興趣的“人羣”是否可以是無限大（多）的？我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？我們從所有可能的人羣中抽樣了嗎？樣本和統計量 (sample and statistic)通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的統計量 (statistics)。我們用已知樣本去推斷未知總體的過程就叫做估計 (estimate)。這個想要被推斷的總體或人羣的值，被叫做參數 (parameter)，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做估計量 (estimator)。
-所有的統計量，都有樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)。推斷的過程歸納如下：
-從總體或人羣中抽樣 (樣本量 \(n\))計算這個樣本的合適統計量，從而用於估計它在整體或人羣中的值。我們還需要決定計算獲得的統計量的樣本分佈（假定會抽樣無數次）。一旦可以精確地確認樣本分佈，我們就可以定量地計算出使用步驟2中獲得的統計量估計總體或人羣的參數時的準確度。估計 Estimation從樣本的均值，推斷總體或人羣的均值是一種估計。我們的目的是，從已知樣本中計算一個儘可能接近那個未知的總體或人羣參數的值。一個估計量有兩個與生俱來的性質 (properties)：1) 偏倚 (bias); 2) 精確度 (precision)。這兩個性質都可以從樣本分佈和估計量獲得。
-偏倚： 偏倚簡單說就是樣本分佈的均值，也就是我們從樣本中計算獲得的估計量，和我們想要拿它來估計的總體或人羣的參數之間的差距。(The bias is the difference between the mean of the sampling distribution – the expected or average value of the estimator – and the population parameter being estimated.</description>
-    </item>
-    
-    <item>
-      <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>二項分佈的正態分佈近似假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\)根據二項分佈的概率公式，計算將會變得很繁瑣複雜。解決辦法：應用中心極限定理。中心極限定理告訴我們，當樣本量足夠大時:\[X\sim N（n\pi, n\pi(1-\pi))\]
-問題在於，多大的 \(n\) 才能算大樣本呢？當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)泊松分佈的正態分佈近似假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理：\[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
-需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
-正態分佈模擬的校正：continuity corrections如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
-    </item>
-    
-    <item>
-      <title>偉大的中心極限定理</title>
-      <link>https://winterwang.github.io/post/central-limit-theory/</link>
-      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
-      <description>最近明顯可以感覺到課程的步驟開始加速。看我的課表：
-手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
-這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。
-今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。
-協方差 Covariance之前我們定義過，兩個獨立連續隨機變量 \(X,Y\) 之和的方差 Variance ：
-\[Var(X+Y)=Var(X)+Var(Y)\]
-然而如果他們並不相互獨立的話：
-\[\begin{aligned}Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\&amp;amp;= E[(X+Y)-(E(X)+E(Y))^2] \\&amp;amp;= E[(X-E(X)) - (Y-E(Y))^2] \\&amp;amp;= E[(X-E(X))^2+(Y-E(Y))^2 \\&amp;amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\&amp;amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))]\end{aligned}\]可以發現在兩者和的方差公式展開之後多了一部分 \(E[(X-E(X))(Y-E(Y))]\)。 這個多出來的一部分就說明了二者 \((X, Y)\) 之間的關係。它被定義爲協方差 (Covariance):\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]
-所以：
-\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]
-要記住，協方差只能用於評價(X,Y)之間的線性關係 (Linear Association)。
-以下是協方差 (Covariance) 的一些特殊性質：
-\(Cov(X,X)=Var(X)\)\(Cov(X,Y)=Cov(Y,X)\)\(Cov(aX,bY)=ab\:Cov(X,Y)\)\(Cov(aR+bS,cX+dY)=ac\:Cov(R,X)+ad\:Cov(R,Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+bc\:Cov(S,X)+bd\:Cov(S,Y)\)\(Cov(aX+bY,cX+dY)=ac\:Var(X)+ad\:Var(Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(ad+bc)Cov(X,Y)\)\(Cov(X+Y,X-Y)=Var(X)-Var(Y)\)If \(X, Y\) are independent.</description>
-    </item>
-    
-    <item>
-      <title>你買的彩票中獎概率到底有多少？</title>
-      <link>https://winterwang.github.io/post/probability3/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability3/</guid>
-      <description>二項分佈的概念 Binomial distribution二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 \(n\) 次相互獨立的成功率爲 \(\pi\) 的伯努利實驗 (\(n\) independent Bernoulli trials) 中成功的次數。
-當 \(X\) 服從二項分佈，記爲 \(X \sim binomial(n, \pi)\) 或\(X \sim bin(n, \pi)\)。它的(第 \(x\) 次實驗的)概率被定義爲：
-二項分佈的期望和方差期望 \(E(X)\)若 \(X \sim bin(n,\pi)\)，那麼 \(X\) 就是這一系列獨立伯努利實驗中成功的次數。用 \(X_i, i =1,\dots, n\) 標記每個相互獨立的伯努利實驗。那麼我們可以知道 \(X=\sum_{i=1}^nX_i\)。\[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\&amp;amp;= E(X_1+X_2+\cdots+X_n) \\&amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\&amp;amp;= \sum_{i=1}^nE(X_i)\\&amp;amp;= \sum_{i=1}^n\pi \\&amp;amp;= n\pi\end{align}\]方差 \(Var(X)\)\[\begin{align}Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\&amp;amp;= Var(X_i+X_2+\cdots+X_n) \\&amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\&amp;amp;= \sum_{i=1}^nVar(X_i) \\&amp;amp;= n\pi(1-\pi) \\\end{align}\]超幾何分佈 hypergeometric distribution假設我們從總人數爲 \(N\) 的人羣中，採集一個樣本 \(n\)。假如已知在總體人羣中(\(N\))有 \(M\) 人患有某種疾病。請問採集的樣本 \(X=n\) 中患有這種疾病的人，服從怎樣的分佈？</description>
-    </item>
-    
-    <item>
-      <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
-      <description>概率密度曲線 probability density function， PDF一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
-在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
-\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
-這個相關的方程，在 \(a\sim b\) 區間內的積分，就是這個連續變量在這個區間內取值的概率。# R codes for drawing a standard normal distribution by using ggplot2library(ggplot2)p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +stat_function(fun = dnorm)p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) +theme(plot.subtitle = element_text(vjust = 1),plot.</description>
-    </item>
-    
-    <item>
-      <title>概率論2</title>
-      <link>https://winterwang.github.io/post/probability2-4/</link>
-      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability2-4/</guid>
-      <description>Bayes 理論的概念許多時候，我們需要將概率中的條件相互對調。例如：在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 \(P(S|A)\)
-這裏先引入貝葉斯的概念：
-我們可以將 \(P(A\cap S)\) 寫成：\[P(A\cap S)=P(A|S)P(S)\\or\\P(A\cap S)=P(S|A)P(A)\]這兩個等式是完全等價的。我們將他們連起來：
-\[P(S|A)P(A)=P(A|S)P(S)\\\Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]
-是不是看起來又像是寫了一堆廢話？沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。
-再繼續，我們可以利用另外一個廢話：\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)
-用上面的公式替換掉 \(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)
-可以得到貝葉斯理論公式：
-\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]
-回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：
-所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(\(P(S|A)\))。
-期望 Expectation (或均值 or mean) 和 方差 Variance期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。對於離散型隨機變量 \(X\) (discrete random variables)，它的期望被定義爲：
-\[E(X)=\sum_x xP(X=x)\]
-所以就是將所有 \(X\) 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 \(\mu\) 來標記。
-方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：
-\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]
-實際上我們更加常用的是它的另外一個公式：
-\[Var(X)=E(X^2)-E(X)^2\]
-證明 上面兩個方差公式相等方差的性質：\(Var(X+b)=Var(X)\)\(Var(aX)=a^2Var(X)\)\(Var(aX+b)=a^2Var(X)\)伯努利分佈 Bernoulli distribution伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 \(\pi\)。那麼我們可以計算這個分佈的期望值:</description>
-    </item>
-    
-    <item>
-      <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
-      <description>前情提要：
-假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
-答案是：必須改變主意才能提高中獎概率。
-上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：
-解說一下：
-假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。所以按照圖中給出的計算概率樹的過程可以得到:
-\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]
-你是否選擇了改變主意了呢？</description>
-    </item>
-    
-    <item>
-      <title>Maths Revisions</title>
-      <link>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</link>
-      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</guid>
-      <description>Function, CalculusExponential Rules\[a^m \times a^n = a^{m+n} ;\;\;\;\;\;\; a^{-m} = \frac{1}{a^m}\\\frac{a^m}{a^n} = a^{m-n} ;\;\;\;\;\;\; (a^m)^n = a^{mn} \\(ab)^m=a^mb^m ;\;\;\;\;\;\; a^0=1\]
-Rules for Logarithms\[ log(ab)=log(a)+log(b) ;\;\;\;\;\;\; log(\frac{a}{b})= log(a)-log(b) \\log(a^n)=n\times log(a) ;\;\;\;\;\;\; log_aa=1 \\log_a1=0\]
-Rules for the summation and product fuctions\[\prod_{i=1}^n x_i=(x_1\cdot x_2\cdot x_3 \dots x_n) \\\prod_{i=1}^nax_i = a^n\prod_{i=1}^nx_i \\\sum_{i=1}^nx_i=(x_1+x_2+x_3+\dots+x_n) \\\sum_{i=1}^nax_i=a\sum_{i=1}^nx_i \\\sum_{i=1}^na=na\]
-Some Rules for Defferentiation\[\frac{d}{dx}a=0 ;\;\;\;\;\;\; \frac{d}{dx}ax=a \\\frac{d}{dx}x^n=nx^{n-1} ;\;\;\;\;\;\; \frac{d}{dx}log_e(x)=\frac{1}{x}\\\frac{d}{dx}e^x=e^x ;\;\;\;\;\;\; \frac{d}{dx}e^{F(x)}=\frac{dF(x)}{dx}e^{F(x)}=F^\prime(x)e^{F(x)}\\\frac{d}{dx}(F(x)+L(x))=F&amp;#39;(x)+L&amp;#39;(x)\\\frac{d}{dx}(F(x)\cdot L(x))=L(x)F&amp;#39;(x)+F(x)L&amp;#39;(x)\\\frac{d}{dx}(\frac{F(x)}{L(x)})=\frac{F&amp;#39;(x)}{L(x)}-\frac{F(x)\cdot L&amp;#39;(x)}{[L(x)]^2}=\frac{F&amp;#39;(x)L(x)-L&amp;#39;(x)F(x)}{[L(x)]^2}\]</description>
-    </item>
-    
-    <item>
-      <title>Matrix Revisions</title>
-      <link>https://winterwang.github.io/post/matrix-revision/</link>
-      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>Basic Definition and notations:An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns.The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\)The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\)A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>行向量乘以矩陣，乘以列向量可得標量\(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\) 或者 \(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\) 的形式其實質上均爲 \(1\times1\)的標量，即最早我們接觸到的加法算式。
-這樣的乘法計算通過矩陣（包括向量）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。
-在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習：\[\underline{x}=\left(\begin{array}{c}x_1 \\x_2 \\x_3\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3\end{array}\right)\]
-\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\) 其中\[D=\left(\begin{array}{c}a_1 &amp;amp; 0 &amp;amp; 0 \\0 &amp;amp; a_2 &amp;amp; 0 \\0 &amp;amp; 0 &amp;amp; a_3\end{array}\right)\]</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 27</title>
-      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
-      <description>\[X=\left(\begin{array}{c}x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\\vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn}\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\\vdots \\a_n\end{array}\right), \underline{0}=\left(\begin{array}{c}\underline{0}\\\underline{0}\\\vdots\\\underline{0}\\\end{array}\right)\]
-用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：
-\[X\underline{a}=\underline{0}\]
-即：\[\begin{align}\left\{\begin{array}{ll}x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = 0\\x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = 0\\\cdots\\x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = 0\\\end{array}\right.</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 26</title>
-      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
-      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>擴大係數矩陣 \((X \underline{y})\) 通過行的基本變形，轉化成爲 \((E \underline{y}^*)\) 的時候，寫在右側的 \(\underline{y}^*\) 就是所求的 \(\underline{a}\)。
-練習 解下列連立一次方程式\[\begin{align}\left\{\begin{array}{ll}a_1+2a_2+a_3 = 2\\2a_1+a_2+a_3 = 3\\a_1+a_2+2a_3 = 3\end{array}\right.\end{align}\]
-解此連立方程組的擴大係數矩陣爲：\[(X \underline{y})=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3\end{array}\right)\]下面開始行變形：\[\left(\begin{array}{c}1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\\end{array}\right) \begin{align}\left\{\begin{array}{rr}(1)\\(2)\\(3)\end{array}\right.</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
-      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>克萊姆法則 Cramer’s Formula當 \(X\) 爲正則矩陣（\(|X|\neq0\)）時 連立一次方程式：\(X\underline{a}=\underline{y}\) 的解可以寫作：
-\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]
-其中： \(|X_j|\) 爲矩陣 \(X\) 的第 \(j\) 列替換爲 \(\underline{y}\) 以後的矩陣的行列式。
-練習 解下列連立一次方程式\[\begin{align}\left\{\begin{array}{ll}a_1+2a_2+a_3 = 2\\2a_1+a_2+a_3 = 3\\a_1+a_2+2a_3 = 3\end{array}\right.\end{align}\]
-解\[X=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 \\2 &amp;amp; 1 &amp;amp; 1 \\1 &amp;amp; 1 &amp;amp; 2\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3 \\\end{array}\right), \underline{y}=\left(\begin{array}{c}2 \\3 \\3 \\\end{array}\right)\]</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>https://winterwang.github.io/post/inverse-matrix-method/</link>
-      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
-      <description>逆矩陣法解連立一次方程式\(X\) 為正則矩陣時(\(|X|\neq0\))，給 \(X\underline{a}=\underline{y}\) 等式兩邊同時乘以 \(X^{-1}\)，可以得到 \(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)。由此方法可以得到 \(\underline{a}=X^{-1}\underline{y}\)。
-練習 解下列連立一次方程式\[\begin{align}\left\{\begin{array}{ll}a_1+2a_2+a_3 = 2\\2a_1+a_2+a_3 = 3\\a_1+a_2+2a_3 = 3\end{array}\right.\end{align}\]
-解元連立方程式可以寫作\(X\underline{a}=\underline{y}\)，其中\[X=\left(\begin{array}{c}1 &amp;amp; 2 &amp;amp; 1 \\2 &amp;amp; 1 &amp;amp; 1 \\1 &amp;amp; 1 &amp;amp; 2\end{array}\right), \underline{a}=\left(\begin{array}{c}a_1 \\a_2 \\a_3 \\\end{array}\right), \underline{y}=\left(\begin{array}{c}2 \\3 \\3 \\\end{array}\right)\]之前我們已經用行的基本變形法和逆矩陣法分別計算過了 \(X^{-1}\) ：\[X^{-1}=\left(\begin{array}{c}-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\3/4 &amp;amp; -1/4 &amp;amp; -1/4\\-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\\end{array}\right)\]</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>連立一次方程式：\(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)
-可以看成是利用：
-\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://winterwang.github.io/post/inverse-matrix/</link>
-      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
-      <description>正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)： $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$
-$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$
-其中:
- $adj(A)$ 爲餘因子矩陣 $A_{ij}$ 爲餘因子 $D_{ij}$ 爲小行列式  (1) 之前舉過的例子再拿來試試看：
-$$X=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 1 \newline 2 &amp;amp; 1 &amp;amp; 1 \newline 1 &amp;amp; 1 &amp;amp; 2 \end{array} \right)=\left(\begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline x_{31} &amp;amp; x_{32} &amp;amp; x_{33} \end{array}\right)$$ 元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：
-$$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 \end{array}\right|=1$$</description>
-    </item>
-    
-    <item>
-      <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
-      <link>https://winterwang.github.io/post/unconditional/</link>
-      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/unconditional/</guid>
-      <description>言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。
-本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。
-結果6月8日那天收到郵件催促我快點滿足 offer 條件：
-可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。
-因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：
- For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School
- 我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：
- Your documents didn’t meet the requirements because: 1. The salary expectancy is not admissible 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days.</description>
-    </item>
-    
-    <item>
-      <title>留學筆記</title>
-      <link>https://winterwang.github.io/post/2017-03-16/</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-16/</guid>
-      <description>尋找並確定合適自己的大學，合適的課程  英國，還是美國？ 這是一個問題  我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。 上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。 加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。 另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇文章1 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：
-我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。             Theory
-(偏重理論) Cambridge Mathematical Statistics   $\downdownarrows$ Sheffield Statistics   $\downdownarrows$ University College London Applied Stochastic Systems   $\downdownarrows$ Oxford Applied Statistics   $\downdownarrows$ Kent Statistics   $\downdownarrows$ Reading Biometry   $\downdownarrows$ Southampton Statistics with Application in Medicine   $\downdownarrows$ Leicester Medical Statistics &amp;amp; Information Technology   Applications (偏重實踐) London School of Hygiene &amp;amp; Tropical Medicine Medical Statitics    確認申請時間，申請要點（雅思成績要求，是否有面試，推薦信） 決定了申請 LSHTM 以後，便要開始準備材料，確定截止時間，以及雅思成績的要求等。</description>
+      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
+      <description>We are drowning in information and starving for knowledge. Click the graph and you can learn what I learnt.
+&amp;mdash; Chaochen Wang in London 2017.09</description>
     </item>
     
   </channel>

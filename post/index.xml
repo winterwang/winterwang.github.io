@@ -27,7 +27,9 @@ P28: 毛首先罷黜了那些試圖約束青年的同僚，以此掃清了道路
 P29: 她是受難者的一個活資料庫。她一個人抗拒着數億人的遺忘。
 P40: 其實，看看事實，就知道這不但不是什麼向權勢者“造反”，而且從開始就是極權勢力的一次直接擴張。
 P46: 作爲一個中學校長，她從來沒有也幾乎不可能在上級指示之外做什麼標新立異之事，也沒有違抗過他們的命令。高層領導人的孩子，都在她主管的學校上學。然而，當革命需要打擊目標的時候，上級們就可以翻臉不認人，把一個個活人當做靶子拋出來，批判鬥爭，處分懲罰。他們根本不把他們的下級當人來看待，而只是一些數字和百分比，一些可以服務於革命目標的工具甚至靶子。冷酷是文革的一個重要特徵。文革不但嚴厲打擊反對革命的人，而且嚴厲打擊未曾反對革命的人。
-P48: 我們永遠無法知道，在卞仲耘死前的幾個小時裡，當她遭到這樣殘酷的毆打和折磨的時候，她想了些什麼。雖然她一直被人群包圍，她死在絕對的孤獨之中。當她被打的時候，沒有一個人出來制止暴行。當她快要死去的時候，沒有一個人在身邊表示同情。她從來沒有與這些打死她的人為敵，但是這些人不但打死了她，而且，在打她的時候毫不猶豫，在她被打死後也沒有覺得任何後悔或者羞愧。她孤立無援地死在紅衛兵學生的亂棒之下，甚至沒有可能作一點但反抗來保護自己。從一個活人的世界上，她被無情無意地背叛了，被拋棄了被犧牲了。</description>
+P48: 我們永遠無法知道，在卞仲耘死前的幾個小時裡，當她遭到這樣殘酷的毆打和折磨的時候，她想了些什麼。雖然她一直被人群包圍，她死在絕對的孤獨之中。當她被打的時候，沒有一個人出來制止暴行。當她快要死去的時候，沒有一個人在身邊表示同情。她從來沒有與這些打死她的人為敵，但是這些人不但打死了她，而且，在打她的時候毫不猶豫，在她被打死後也沒有覺得任何後悔或者羞愧。她孤立無援地死在紅衛兵學生的亂棒之下，甚至沒有可能作一點但反抗來保護自己。從一個活人的世界上，她被無情無意地背叛了，被拋棄了被犧牲了。
+P51: 1966年的夏天，全中國的學校變成了刑訊室，監獄，甚至殺人場。大批老師被迫害致死。
+P52; 1966年10月召開的“中共中央工作會議”發放了一個題為《把舊世界打個落花流水》的文章，其中被列為紅衛兵功績之一的，是1968年8月20日到9月底北京有1772人被打死。有理由認為實際死亡數據大於此數。但是，此數已經是極其巨大的數字。卞仲耘的死尚不在此數之中。1966年8月5日發生的卞仲耘之死，是8月殺戮的開端，經過三個星期的發展，在8月底前後達到每日被害人數的最高峰。由最高權力者號召鼓動，用中學生紅衛兵為打手，打死手無寸鐵的教育工作者如卞仲耘，以及大批沒有防衛能力的和平居民，還視為偉大功績，這實在是二十世紀統治者所作的最為殘忍和無恥的行為之一。</description>
     </item>
     
     <item>
@@ -177,8 +179,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
 上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， \(M\) 的標準誤爲 \(S\)。如果我們正確地選用 \(M\) 和 \(S\)，那我們就可以用這樣的方程來近似求真實觀察數據的似然 \(\ell(\theta|data)\)。
 通過近似正態對數似然比，\(M\) 應當選用使方程取最大值時，參數 \(\theta\) 的極大似然估計 \(M=\hat{\Theta}\)。
 但是在選用標準誤 \(S\) 上必須滿足下列條件：
-\(S\) 是極大似然估計 \(\hat{\Theta}\) 的標準誤。被選擇的 \(S\) 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：
-\[\left.\frac{d^2}{d\theta^2}\ell(\theta)\right\vert_{\theta=\hat{\theta}}=\ell^{\prime\prime}(\hat{\theta})=-\frac{1}{S^2}\\\Rightarrow S^2=\left.</description>
+\(S\) 是極大似然估計 \(\hat{\Theta}\) 的標準誤。被選擇的 \(S\) 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：</description>
     </item>
     
     <item>
@@ -224,7 +225,7 @@ dbinom(4, 10, 0.5)## [1] 0.2050781# or you can calculate by hand:factorial(10
 如何將實驗對象隨機分配 (randomisation)設計對照組 (control group)合適（且必須）的貫徹盲法 (blinding)另外一個同樣重要的問題是–“我到底需要多少樣本?”
 一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：
 統計學方案。從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。經濟上的因素。然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。倫理道德上的因素。許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？實驗本身的可信度。如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。這裏我們只考慮沒有其他任何因素的影響下，1. 統計學方案上該如何計算準確的所需樣本量的大小。
-比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：Table 1: Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI治療組溶栓酶安慰劑p.values1st Australiann=264n=253死亡人數26 (9.8%)32 (12.</description>
+比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：Table 1: Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI治療組溶栓酶安慰劑p.values1st Australiann=264n=253死亡人數26 (9.</description>
     </item>
     
     <item>
@@ -669,8 +670,7 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
 \(A\) 爲正則矩陣時，滿足：\(A^{-1}A=AA^{-1}=E\) 。
 顯然，單位矩陣的逆矩陣也是一個單位矩陣: \[E^{-1}E=EE^{-1}=E, E^{-1}=E\]逆矩陣的性質對於正則矩陣 \(A, B\) 有以下性質：
 \((AB)^{-1}=B^{-1}A^{-1}\)
-注意此處矩陣 \(A，B\) 的順序對調了。\((A^{-1})^{-1}=A\)\((A^{t})^{-1}=(A^{-1})^t\)\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)對角矩陣 \(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\) 的逆矩陣寫作： \(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)；
-注意此處的條件爲所有對角成分均非零: \(a_{11}a_{22}\dotsm a_{nn}\neq 0\)證明\((AB)(AB)^{-1}=E\) 等式兩邊從左往右乘以 \(A^{-1}\)</description>
+注意此處矩陣 \(A，B\) 的順序對調了。\((A^{-1})^{-1}=A\)\((A^{t})^{-1}=(A^{-1})^t\)\((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\)對角矩陣 \(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\) 的逆矩陣寫作： \(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)；</description>
     </item>
     
     <item>
@@ -868,8 +868,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
 成分的個數爲 \(n\)，就被稱爲這個向量具有 \(n\) 個維度(次元，dimension)，或者說這個向量的維度爲 \(n\)。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的型(size, order),或者 類型(type) 一致。
 成分只有一個的向量，被特別稱爲標量(scalar)，原則上不加括號。
 將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲成分表示。在多元變量分析中，我們說到向量，多默認指的就是列向量。
-\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)
-今後我們都用字母帶下劃線，圓括號包含數字的方式表示向量。</description>
+\(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)</description>
     </item>
     
     <item>
@@ -923,7 +922,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description>函數的最大值最小值問題沒有制約條件的情況函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程\[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\]要成立(必要條件)。
+      <description>函數的最大值最小值問題沒有制約條件的情況函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程\[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\]要成立(必要條件)。
 1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\\;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
 求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小：\[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]</description>
     </item>
@@ -1707,7 +1706,7 @@ Bees Rank Pollen by Taste
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-05-27-hello-world/</guid>
-      <description>Dairy Consumption and Risk of StrokeDairy Consumption and Risk of StrokeDairy Consumption and Risk of StrokeDairy Consumption and Risk of StrokeDairy Consumption and Risk of Strokelist 1\(^2\)list 2</description>
+      <description>Dairy Consumption and Risk of StrokeDairy Consumption and Risk of StrokeDairy Consumption and Risk of StrokeDairy Consumption and Risk of StrokeDairy Consumption and Risk of Strokelist 1\(^2\)list 2</description>
     </item>
     
     <item>

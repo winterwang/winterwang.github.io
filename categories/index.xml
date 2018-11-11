@@ -12,33 +12,6 @@
     
     
     <item>
-      <title>Conference</title>
-      <link>https://winterwang.github.io/categories/conference/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Diary</title>
-      <link>https://winterwang.github.io/categories/diary/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/diary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dictation</title>
-      <link>https://winterwang.github.io/categories/dictation/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/dictation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>LSHTM</title>
       <link>https://winterwang.github.io/categories/lshtm/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
@@ -57,7 +30,43 @@
     </item>
     
     <item>
-      <title>Sorrow</title>
+      <title>To do</title>
+      <link>https://winterwang.github.io/categories/to-do/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/to-do/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conference</title>
+      <link>https://winterwang.github.io/categories/conference/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diary</title>
+      <link>https://winterwang.github.io/categories/diary/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/diary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictation</title>
+      <link>https://winterwang.github.io/categories/dictation/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/dictation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sorrow</title>
       <link>https://winterwang.github.io/categories/sorrow/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
@@ -66,7 +75,7 @@
     </item>
     
     <item>
-      <title>Statistics</title>
+      <title>statistics</title>
       <link>https://winterwang.github.io/categories/statistics/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
@@ -75,7 +84,7 @@
     </item>
     
     <item>
-      <title>Study abroad</title>
+      <title>study abroad</title>
       <link>https://winterwang.github.io/categories/study-abroad/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -84,20 +93,11 @@
     </item>
     
     <item>
-      <title>Test</title>
+      <title>test</title>
       <link>https://winterwang.github.io/categories/test/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/categories/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>To do</title>
-      <link>https://winterwang.github.io/categories/to-do/</link>
-      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/to-do/</guid>
       <description></description>
     </item>
     

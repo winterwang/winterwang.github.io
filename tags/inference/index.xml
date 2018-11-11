@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inference on Be ambitious</title>
+    <title>inference on Be ambitious</title>
     <link>https://winterwang.github.io/tags/inference/</link>
-    <description>Recent content in Inference on Be ambitious</description>
+    <description>Recent content in inference on Be ambitious</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
@@ -43,8 +43,7 @@
 上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， \(M\) 的標準誤爲 \(S\)。如果我們正確地選用 \(M\) 和 \(S\)，那我們就可以用這樣的方程來近似求真實觀察數據的似然 \(\ell(\theta|data)\)。
 通過近似正態對數似然比，\(M\) 應當選用使方程取最大值時，參數 \(\theta\) 的極大似然估計 \(M=\hat{\Theta}\)。
 但是在選用標準誤 \(S\) 上必須滿足下列條件：
-\(S\) 是極大似然估計 \(\hat{\Theta}\) 的標準誤。被選擇的 \(S\) 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：
-\[\left.\frac{d^2}{d\theta^2}\ell(\theta)\right\vert_{\theta=\hat{\theta}}=\ell^{\prime\prime}(\hat{\theta})=-\frac{1}{S^2}\\\Rightarrow S^2=\left.</description>
+\(S\) 是極大似然估計 \(\hat{\Theta}\) 的標準誤。被選擇的 \(S\) 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：</description>
     </item>
     
     <item>
