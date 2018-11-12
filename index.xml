@@ -56,6 +56,9 @@
 
 &lt;p&gt;P63:
 1993年，筆者到校中攝下一張宿舍樓的照片。卞仲耘被打死在這座宿舍樓門口的台階上。四個住在樓裡的高中三年級的學生問我：“20多年前有人在這兒被打死，這是真的嗎？我們什麼都沒聽說過。”&lt;/p&gt;
+
+&lt;p&gt;P101:
+文革前，清華大學有108名教授，曾經被人開玩笑說好像《水滸傳》裏有“108將”。陳祖東就是這“108將”之一。陳祖東的家人聽說，到1978年，這108人只死剩下40多人了。&lt;/p&gt;
 </description>
     </item>
     
@@ -108,7 +111,7 @@
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 7&lt;/a&gt; done;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Read the victim book, and keep memo;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Prepare the manuscript for AJCN;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Commentthe Presentation Slides from LP;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Comment the Presentation Slides from LP;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
