@@ -142,13 +142,13 @@
 &lt;li&gt;2018-11-15
 
 &lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html#practical-bayesian-statistics-07&#34; target=&#34;_blank&#34;&gt;Bayesian statistics practical 7&lt;/a&gt; done;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html#practical-bayesian-statistics-07&#34; target=&#34;_blank&#34;&gt;Bayesian statistics practical 7&lt;/a&gt; done 10%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Python for beginners;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Stan for Bayesian stats;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Confirm the feedback of the project;&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Review the JAT meta-ana paper (deadline: 2018-11-28);&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Prepare the manuscript for overseas study for AMU (deadline: 2018-11-26);&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Prepare the manuscript for AJCN the tables;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN the tables, figures done;&lt;/del&gt;
 
 
 
