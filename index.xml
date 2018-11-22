@@ -21,7 +21,7 @@
 
 &lt;p&gt;P16&lt;/p&gt;
 &lt;p&gt;事後分布 &lt;span class=&#34;math inline&#34;&gt;\(p(\theta | Y)\)&lt;/span&gt;の値が最大になる点&lt;span class=&#34;math inline&#34;&gt;\(\theta^*\)&lt;/span&gt;を事後確率最大推定値 (maximum a posteriori estimate)と呼ぶ．略してMAP推定値 (MAP estimate)．&lt;/p&gt;
-&lt;p&gt;我們把能夠將事後概率分布取極大值的參數點 &lt;span class=&#34;math inline&#34;&gt;\(\theta^*\)&lt;/span&gt; 稱爲事後概率的最大似然估計值 (maximum a posteriori)，簡稱 MAP估計值 (MAP estimate)。&lt;/p&gt;
+&lt;p&gt;我們把能夠將事後概率分布取極大值的參數點 &lt;span class=&#34;math inline&#34;&gt;\(\theta^*\)&lt;/span&gt; 稱爲事後概率的最大似然估計值 (maximum a posteriori estimate)，簡稱 MAP估計值 (MAP estimate)。&lt;/p&gt;
 &lt;p&gt;P19&lt;/p&gt;
 &lt;p&gt;統計建模的一般順序&lt;/p&gt;
 &lt;ul&gt;
@@ -34,6 +34,8 @@
 &lt;li&gt;獲得推斷結果，解釋其事後概率分布的意義，繪制易於理解的模型示意圖&lt;/li&gt;
 &lt;li&gt;繪制成功之後的模型示意圖和最先使用的模型之間進行比對，重新查缺補漏&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;P23&lt;/p&gt;
+&lt;p&gt;ただいたずらにモデルを複雑化させるのは解釈のしにくさを招く．&lt;/p&gt;
 </description>
     </item>
     
