@@ -39,18 +39,49 @@
 &lt;p&gt;P30&lt;/p&gt;
 &lt;p&gt;最初にmodel ブロックの尤度の部分（と事前分布の部分）を書く．その尤度の部分に登場した変数のうち，データの変数をdataブロックに，残りの変数をparametersブロックに書いていく．&lt;/p&gt;
 &lt;p&gt;Stan的基本文法構成&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;data{
+&lt;pre&gt;&lt;code&gt;data {
  數據描述
 }
 
-parameters{
+parameters {
  想要進行MCMC事後樣本採集的參數描述
 }
 
-model{
+model {
  p(Y|theta) 似然的描述
  先驗概率分布 p(theta) 的描述
 }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把下面的模型&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Y[n] &amp;amp; \sim \text{Normal}(\mu, 1) \;\; n = 1, \dots, N \\
+\mu  &amp;amp; \sim \text{Normal}(0, 100)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;翻譯稱爲 Stan 模型語言是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N;
+  real Y[N];
+}
+
+parameters {
+  real mu;
+}
+
+model {
+  for (n in 1:N) {
+  Y[n] ~ normal(mu, 1);
+  }
+  mu ~ normal(0, 100)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中我們按照實際模型書寫的順序 model -&amp;gt; data -&amp;gt; parameter 來逐個解釋：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;model&lt;/code&gt; 模塊中 &lt;code&gt;for (n in 1:N)&lt;/code&gt; 開始的循環部分（三行）對應數學模型的 $Y[n] (, 1) n = 1, , N $　部分。&lt;/li&gt;
+&lt;li&gt;Stan 語言中，每一行描述的結尾需要用分號 &lt;code&gt;;&lt;/code&gt; 來結束。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mu ~ normal(0,100)&lt;/code&gt; 則對應數學模型中寫的先驗概率 &lt;span class=&#34;math inline&#34;&gt;\(\mu \sim \text{Normal}(0, 100)\)&lt;/span&gt; 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data&lt;/code&gt; 模塊中寫明的是 &lt;code&gt;model&lt;/code&gt; 模塊中描述的模型將要使用的數據。它包括宣示數據的個數（樣本量 &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;），以及數據本身。其中 &lt;code&gt;int N&lt;/code&gt; 意爲樣本量的數量是整數個 (integer)，&lt;code&gt;real Y[N]&lt;/code&gt; 則宣示實數有 N 個作爲數據。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parameter&lt;/code&gt; 模塊是告訴軟件需要採樣且關注的未知參數 (parameter) 是 &lt;code&gt;mu&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

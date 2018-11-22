@@ -371,18 +371,49 @@
 <p>P30</p>
 <p>最初にmodel ブロックの尤度の部分（と事前分布の部分）を書く．その尤度の部分に登場した変数のうち，データの変数をdataブロックに，残りの変数をparametersブロックに書いていく．</p>
 <p>Stan的基本文法構成</p>
-<pre><code>data{
+<pre><code>data {
  數據描述
 }
 
-parameters{
+parameters {
  想要進行MCMC事後樣本採集的參數描述
 }
 
-model{
+model {
  p(Y|theta) 似然的描述
  先驗概率分布 p(theta) 的描述
 }</code></pre>
+<p>把下面的模型</p>
+<p><span class="math display">\[
+\begin{aligned}
+Y[n] &amp; \sim \text{Normal}(\mu, 1) \;\; n = 1, \dots, N \\
+\mu  &amp; \sim \text{Normal}(0, 100)
+\end{aligned}
+\]</span></p>
+<p>翻譯稱爲 Stan 模型語言是：</p>
+<pre><code>data {
+  int N;
+  real Y[N];
+}
+
+parameters {
+  real mu;
+}
+
+model {
+  for (n in 1:N) {
+  Y[n] ~ normal(mu, 1);
+  }
+  mu ~ normal(0, 100)
+}</code></pre>
+<p>其中我們按照實際模型書寫的順序 model -&gt; data -&gt; parameter 來逐個解釋：</p>
+<ul>
+<li><code>model</code> 模塊中 <code>for (n in 1:N)</code> 開始的循環部分（三行）對應數學模型的 $Y[n] (, 1) n = 1, , N $　部分。</li>
+<li>Stan 語言中，每一行描述的結尾需要用分號 <code>;</code> 來結束。</li>
+<li><code>mu ~ normal(0,100)</code> 則對應數學模型中寫的先驗概率 <span class="math inline">\(\mu \sim \text{Normal}(0, 100)\)</span> 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的</li>
+<li><code>data</code> 模塊中寫明的是 <code>model</code> 模塊中描述的模型將要使用的數據。它包括宣示數據的個數（樣本量 <span class="math inline">\(N\)</span>），以及數據本身。其中 <code>int N</code> 意爲樣本量的數量是整數個 (integer)，<code>real Y[N]</code> 則宣示實數有 N 個作爲數據。</li>
+<li><code>parameter</code> 模塊是告訴軟件需要採樣且關注的未知參數 (parameter) 是 <code>mu</code></li>
+</ul>
 
       </div>
 
