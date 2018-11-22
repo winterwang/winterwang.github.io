@@ -18,13 +18,17 @@
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/rstan-wonderful-r/</guid>
-      <description>P16
+      <description> P16
 事後分布 \(p(\theta | Y)\)の値が最大になる点\(\theta^*\)を事後確率最大推定値 (maximum a posteriori estimate)と呼ぶ．略してMAP推定値 (MAP estimate)．
 我們把能夠將事後概率分布取極大值的參數點 \(\theta^*\) 稱爲事後概率的最大似然估計值 (maximum a posteriori estimate)，簡稱 MAP估計值 (MAP estimate)。
 P19
 統計建模的一般順序
  確定分析目的 確定數據分布 想象數據產生本身的機制：思考數據與數據之間可能的關系 寫下你所認爲的數據模型的數學表達式 用 R 模擬(simulation)並確認前一步寫下的數學模型的性質，特點 用 Stan 實際進行模型參數的推斷 獲得推斷結果，解釋其事後概率分布的意義，繪制易於理解的模型示意圖 繪制成功之後的模型示意圖和最先使用的模型之間進行比對，重新查缺補漏  P23
-ただいたずらにモデルを複雑化させるのは解釈のしにくさを招く．</description>
+ただいたずらにモデルを複雑化させるのは解釈のしにくさを招く．
+P30
+最初にmodel ブロックの尤度の部分（と事前分布の部分）を書く．その尤度の部分に登場した変数のうち，データの変数をdataブロックに，残りの変数をparametersブロックに書いていく．
+Stan的基本文法構成
+data{ 數據描述 } parameters{ 想要進行MCMC事後樣本採集的參數描述 } model{ p(Y|theta) 似然的描述 先驗概率分布 p(theta) 的描述 } </description>
     </item>
     
     <item>

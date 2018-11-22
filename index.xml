@@ -36,6 +36,21 @@
 &lt;/ul&gt;
 &lt;p&gt;P23&lt;/p&gt;
 &lt;p&gt;ただいたずらにモデルを複雑化させるのは解釈のしにくさを招く．&lt;/p&gt;
+&lt;p&gt;P30&lt;/p&gt;
+&lt;p&gt;最初にmodel ブロックの尤度の部分（と事前分布の部分）を書く．その尤度の部分に登場した変数のうち，データの変数をdataブロックに，残りの変数をparametersブロックに書いていく．&lt;/p&gt;
+&lt;p&gt;Stan的基本文法構成&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data{
+ 數據描述
+}
+
+parameters{
+ 想要進行MCMC事後樣本採集的參數描述
+}
+
+model{
+ p(Y|theta) 似然的描述
+ 先驗概率分布 p(theta) 的描述
+}&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
