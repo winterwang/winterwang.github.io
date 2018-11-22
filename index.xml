@@ -58,7 +58,7 @@ Y[n] &amp;amp; \sim \text{Normal}(\mu, 1) \;\; n = 1, \dots, N \\
 \mu  &amp;amp; \sim \text{Normal}(0, 100)
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;翻譯稱爲 Stan 模型語言是：&lt;/p&gt;
+&lt;p&gt;翻譯成爲 Stan 模型語言是：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;data {
   int N;
   real Y[N];
