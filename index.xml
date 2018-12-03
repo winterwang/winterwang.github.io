@@ -11,6 +11,31 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>2018-12 todo</title>
+      <link>https://winterwang.github.io/post/2018-12-todo/</link>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2018-12-todo/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;2018-12-03
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Read the victim book, and keep memo;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 8&lt;/a&gt; done;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Prepare the manuscript for AJCN 10% left;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Python for beginners;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Emacs;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Return the email from LP;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Application form for 12.12 Tokyo domestic travel;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Comment the 2nd version paper of seaweed;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; learn &lt;a href=&#34;https://github.com/noamross/redoc&#34; target=&#34;_blank&#34;&gt;reversible R markdown /MS word documents package&lt;/a&gt;;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Pay the you-know-what ticket.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rstan Wonderful R</title>
       <link>https://winterwang.github.io/post/rstan-wonderful-r/</link>
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
@@ -264,20 +289,6 @@ model {
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Review the JAT meta-ana paper (deadline: 2018-11-28);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;2018-11-25~12-02 (annual leave)&lt;/li&gt;
-&lt;li&gt;2018-12-03
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Read the victim book, and keep memo;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 8&lt;/a&gt; done;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Prepare the manuscript for AJCN 10% left;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Python for beginners;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Learn Emacs;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Return the email from LP;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Application form for 12.12 Tokyo domestic travel;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Comment the 2nd version paper of seaweed;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; learn &lt;a href=&#34;https://github.com/noamross/redoc&#34; target=&#34;_blank&#34;&gt;reversible R markdown /MS word documents package&lt;/a&gt;
-&lt;br /&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -1780,23 +1791,6 @@ Hot spiced beef, pepperoni, mozzarella, tomato, green pepper, red onion and Taba
 &lt;h3 id=&#34;酸奶放在白煮雞胸肉上&#34;&gt;酸奶放在白煮雞胸肉上&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0185.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
-      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;We are drowning in information and starving for knowledge.
-Click the graph and you can learn what I learnt.&lt;/p&gt;
-
-&lt;p&gt;&amp;mdash; Chaochen Wang in London 2017.09&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://winterwang.github.io/img/cover.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
