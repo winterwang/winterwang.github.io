@@ -44,7 +44,7 @@
 59,1314
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;年收入 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 被認爲是由基本年收 &lt;span class=&#34;math inline&#34;&gt;\(y_{base}\)&lt;/span&gt; 和其他影響因素 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 的均值被認爲是零。&lt;/p&gt;
-&lt;p&gt;分析目的：&lt;/p&gt;
+&lt;p&gt;g分析目的：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。&lt;/li&gt;
 &lt;/ul&gt;
@@ -62,13 +62,99 @@ ggplot(Salary, aes(x = X, y = Y)) +
     axis.ticks = element_line(size = 0.7), 
     axis.title = element_text(size = 16), 
     axis.text = element_text(size = 16, colour = &amp;quot;gray0&amp;quot;), 
-    panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) &lt;/code&gt;&lt;/pre&gt;
+    panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) +
+  scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 橫軸爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，縱軸爲 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的散點圖
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;從這個散點圖的特徵可以看出年收入確實似乎和年齡呈線性正相關。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 2, 描述線性模型&lt;/h2&gt;
+&lt;p&gt;這個簡單線性回歸模型的數學表達式可以描述如下：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+Y[n]        = y_{base}[n] + \varepsilon [n]&amp;amp;  n = 1,2,\dots,N \\
+y_{base}[n] = a + bX[n]                    &amp;amp;  n = 1,2,\dots,N \\
+\varepsilon[n] \sim \text{Normal}(0, \sigma) &amp;amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;同樣的模型你可以簡化描述成爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Y[n] \sim \text{Normal}(a + bX[n], \sigma)\;\; n = 1,2,\dots,N
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麼如果一個統計師只有經過傳統概率論觀點的訓練，他/她會在R裏面這樣來分析這個數據：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;res_lm &amp;lt;- lm(Y ~ X, data = Salary)
+summary(res_lm)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Y ~ X, data = Salary)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -155.471  -51.523   -6.663   52.822  141.349 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept) -119.697     68.148  -1.756    0.096 .  
+## X             21.904      1.518  14.428 2.47e-11 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 79.1 on 18 degrees of freedom
+## Multiple R-squared:  0.9204, Adjusted R-squared:  0.916 
+## F-statistic: 208.2 on 1 and 18 DF,  p-value: 2.466e-11&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 用這個線性回歸模型來對上面模型中的參數作出預測：
+
+X_new &amp;lt;- data.frame(X=23:60)
+conf_95 &amp;lt;- predict(res_lm, X_new, interval = &amp;quot;confidence&amp;quot;, level = 0.95)
+pred_95 &amp;lt;- predict(res_lm, X_new, interval = &amp;quot;prediction&amp;quot;, level = 0.95)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;temp_var &amp;lt;- predict(res_lm, interval=&amp;quot;prediction&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in predict.lm(res_lm, interval = &amp;quot;prediction&amp;quot;): predictions on current data refer to _future_ responses&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;new_df &amp;lt;- cbind(Salary, temp_var)
+
+ggplot(new_df, aes(x = X, y = Y)) + 
+  geom_point(shape = 1, size = 4)  + theme(plot.subtitle = element_text(vjust = 1), 
+    plot.caption = element_text(vjust = 1), 
+    axis.line = element_line(colour = &amp;quot;bisque4&amp;quot;, 
+        size = 0.2, linetype = &amp;quot;solid&amp;quot;), 
+    axis.ticks = element_line(size = 0.7), 
+    axis.title = element_text(size = 16), 
+    axis.text = element_text(size = 16, colour = &amp;quot;gray0&amp;quot;), 
+    panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) + 
+  geom_smooth(method = lm, se=TRUE, size = 0.3)+
+  scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400)) +
+   geom_line(aes(y=lwr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)+
+    geom_line(aes(y=upr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step2&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3-stan&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 3, 寫下Stan模型&lt;/h2&gt;
+&lt;pre class=&#34;stan&#34;&gt;&lt;code&gt;data {
+    int N; 
+    real X[N]; 
+    real Y[N];
+}
+
+parameters {
+    real a;
+    real b;
+    real&amp;lt;lower=0&amp;gt; sigma;
+}
+
+model {
+    for(n in 1:N) {
+        Y[n] ~ normal(a + b*X[n], sigma);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>

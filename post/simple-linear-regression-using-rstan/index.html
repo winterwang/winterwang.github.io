@@ -273,7 +273,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    3 min read
   </span>
   
 
@@ -379,7 +379,7 @@
 59,1314
 </code></pre>
 <p>年收入 <span class="math inline">\(Y\)</span> 被認爲是由基本年收 <span class="math inline">\(y_{base}\)</span> 和其他影響因素 <span class="math inline">\(\varepsilon\)</span> 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 <span class="math inline">\(\varepsilon\)</span> 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 <span class="math inline">\(\varepsilon\)</span> 的均值被認爲是零。</p>
-<p>分析目的：</p>
+<p>g分析目的：</p>
 <ul>
 <li>借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。</li>
 </ul>
@@ -397,13 +397,99 @@ ggplot(Salary, aes(x = X, y = Y)) +
     axis.ticks = element_line(size = 0.7), 
     axis.title = element_text(size = 16), 
     axis.text = element_text(size = 16, colour = &quot;gray0&quot;), 
-    panel.background = element_rect(fill = &quot;gray98&quot;)) </code></pre>
+    panel.background = element_rect(fill = &quot;gray98&quot;)) +
+  scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:step1"></span>
 <img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png" alt="橫軸爲 $X$，縱軸爲 $Y$ 的散點圖" width="80%" />
 <p class="caption">
 Figure 1: 橫軸爲 <span class="math inline">\(X\)</span>，縱軸爲 <span class="math inline">\(Y\)</span> 的散點圖
 </p>
 </div>
+<p>從這個散點圖的特徵可以看出年收入確實似乎和年齡呈線性正相關。</p>
+</div>
+<div id="step-2-" class="section level2">
+<h2>Step 2, 描述線性模型</h2>
+<p>這個簡單線性回歸模型的數學表達式可以描述如下：</p>
+<p><span class="math display">\[
+\begin{array}{l}
+Y[n]        = y_{base}[n] + \varepsilon [n]&amp;  n = 1,2,\dots,N \\
+y_{base}[n] = a + bX[n]                    &amp;  n = 1,2,\dots,N \\
+\varepsilon[n] \sim \text{Normal}(0, \sigma) &amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]</span></p>
+<p>同樣的模型你可以簡化描述成爲：</p>
+<p><span class="math display">\[
+Y[n] \sim \text{Normal}(a + bX[n], \sigma)\;\; n = 1,2,\dots,N
+\]</span></p>
+<p>那麼如果一個統計師只有經過傳統概率論觀點的訓練，他/她會在R裏面這樣來分析這個數據：</p>
+<pre class="r"><code>res_lm &lt;- lm(Y ~ X, data = Salary)
+summary(res_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Y ~ X, data = Salary)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -155.471  -51.523   -6.663   52.822  141.349 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -119.697     68.148  -1.756    0.096 .  
+## X             21.904      1.518  14.428 2.47e-11 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 79.1 on 18 degrees of freedom
+## Multiple R-squared:  0.9204, Adjusted R-squared:  0.916 
+## F-statistic: 208.2 on 1 and 18 DF,  p-value: 2.466e-11</code></pre>
+<pre class="r"><code># 用這個線性回歸模型來對上面模型中的參數作出預測：
+
+X_new &lt;- data.frame(X=23:60)
+conf_95 &lt;- predict(res_lm, X_new, interval = &quot;confidence&quot;, level = 0.95)
+pred_95 &lt;- predict(res_lm, X_new, interval = &quot;prediction&quot;, level = 0.95)</code></pre>
+<pre class="r"><code>temp_var &lt;- predict(res_lm, interval=&quot;prediction&quot;)</code></pre>
+<pre><code>## Warning in predict.lm(res_lm, interval = &quot;prediction&quot;): predictions on current data refer to _future_ responses</code></pre>
+<pre class="r"><code>new_df &lt;- cbind(Salary, temp_var)
+
+ggplot(new_df, aes(x = X, y = Y)) + 
+  geom_point(shape = 1, size = 4)  + theme(plot.subtitle = element_text(vjust = 1), 
+    plot.caption = element_text(vjust = 1), 
+    axis.line = element_line(colour = &quot;bisque4&quot;, 
+        size = 0.2, linetype = &quot;solid&quot;), 
+    axis.ticks = element_line(size = 0.7), 
+    axis.title = element_text(size = 16), 
+    axis.text = element_text(size = 16, colour = &quot;gray0&quot;), 
+    panel.background = element_rect(fill = &quot;gray98&quot;)) + 
+  geom_smooth(method = lm, se=TRUE, size = 0.3)+
+  scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400)) +
+   geom_line(aes(y=lwr), color = &quot;red&quot;, linetype = &quot;dashed&quot;)+
+    geom_line(aes(y=upr), color = &quot;red&quot;, linetype = &quot;dashed&quot;)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step2"></span>
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png" alt="用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。" width="80%" />
+<p class="caption">
+Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
+</p>
+</div>
+</div>
+<div id="step-3-stan" class="section level2">
+<h2>Step 3, 寫下Stan模型</h2>
+<pre class="stan"><code>data {
+    int N; 
+    real X[N]; 
+    real Y[N];
+}
+
+parameters {
+    real a;
+    real b;
+    real&lt;lower=0&gt; sigma;
+}
+
+model {
+    for(n in 1:N) {
+        Y[n] ~ normal(a + b*X[n], sigma);
+    }
+}</code></pre>
 </div>
 
       </div>
