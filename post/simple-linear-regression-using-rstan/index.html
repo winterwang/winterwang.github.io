@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -13,7 +11,7 @@
   <meta name="description" content="Assistant Professor">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/categories/statistics/">
+  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/">
 
   
   
@@ -64,30 +62,32 @@
   
 
   
-  <link rel="alternate" href="https://winterwang.github.io/categories/statistics/index.xml" type="application/rss+xml" title="Be ambitious">
-  <link rel="feed" href="https://winterwang.github.io/categories/statistics/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="alternate" href="https://winterwang.github.io/index.xml" type="application/rss+xml" title="Be ambitious">
+  <link rel="feed" href="https://winterwang.github.io/index.xml" type="application/rss+xml" title="Be ambitious">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/categories/statistics/">
+  <link rel="canonical" href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/categories/statistics/">
-  <meta property="og:title" content="statistics | Be ambitious">
-  <meta property="og:description" content="Assistant Professor">
+  <meta property="og:url" content="https://winterwang.github.io/post/simple-linear-regression-using-rstan/">
+  <meta property="og:title" content="Simple linear regression using Rstan--Rstan Wonderful R-(2) | Be ambitious">
+  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2017-02-16T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-01-15T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-01-15T00:00:00&#43;00:00">
   
 
   
 
-  <title>statistics | Be ambitious</title>
+  <title>Simple linear regression using Rstan--Rstan Wonderful R-(2) | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -245,94 +245,252 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+</div>
 
 
 
-<div class="universal-wrapper">
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Simple linear regression using Rstan--Rstan Wonderful R-(2)</h1>
 
-  <h1>statistics</h1>
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2019-01-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Tue, Jan 15, 2019
+    </time>
+  </span>
 
   
-
-  
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-16/">「統計解析のための線形代数」復習筆記7</a></h2>
-    <div class="article-style">
-      
-      第2章　統計の基礎 P26-30
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-15/">「統計解析のための線形代数」復習筆記6</a></h2>
-    <div class="article-style">
-      
-      第2章　統計の基礎 P22-25
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-13/">「統計解析のための線形代数」復習筆記5</a></h2>
-    <div class="article-style">
-      
-      第2章　統計の基礎 P19-22
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-12-t/">「統計解析のための線形代数」復習筆記4</a></h2>
-    <div class="article-style">
-      
-      第1章　数学の基礎 P15-17
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-10/">「統計解析のための線形代数」復習筆記3</a></h2>
-    <div class="article-style">
-      
-      第1章　数学の基礎 P11-14
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-08/">「統計解析のための線形代数」復習筆記2</a></h2>
-    <div class="article-style">
-      
-      第1章　数学の基礎 P6-10
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="https://winterwang.github.io/post/2017-02-06/">「統計解析のための線形代数」復習筆記1</a></h2>
-    <div class="article-style">
-      
-      第1章　数学の基礎 P1-5
-      
-    </div>
-  </div>
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
   
 
   
-<nav>
+  
+  <span class="middot-divider"></span>
+  <a href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r-techniques">R techniques</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
+    >, 
+    
+    <a href="/categories/bayesian">Bayesian</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f&amp;title=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f&amp;title=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+
+<p><a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt">數據 data-salary.txt</a>是架空的。</p>
+<p>某公司社員的年齡 <span class="math inline">\(X\)</span>（歲），和年收入 <span class="math inline">\(Y\)</span>（萬日元）的數據如下：</p>
+<pre><code>X,Y
+24,472
+24,403
+26,454
+32,575
+33,546
+35,781
+38,750
+40,601
+40,814
+43,792
+43,745
+44,837
+48,868
+52,988
+56,1092
+56,1007
+57,1233
+58,1202
+59,1123
+59,1314
+</code></pre>
+<p>年收入 <span class="math inline">\(Y\)</span> 被認爲是由基本年收 <span class="math inline">\(y_{base}\)</span> 和其他影響因素 <span class="math inline">\(\varepsilon\)</span> 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 <span class="math inline">\(\varepsilon\)</span> 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 <span class="math inline">\(\varepsilon\)</span> 的均值被認爲是零。</p>
+<p>分析目的：</p>
+<ul>
+<li>借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。</li>
+</ul>
+<div id="step-1-" class="section level2">
+<h2>Step 1, 確認數據分佈</h2>
+<pre class="r"><code>Salary &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&quot;, 
+                     sep = &quot;,&quot;, header = T)
+library(ggplot2)
+
+ggplot(Salary, aes(x = X, y = Y)) + 
+  geom_point(shape = 1, size = 4)  + theme(plot.subtitle = element_text(vjust = 1), 
+    plot.caption = element_text(vjust = 1), 
+    axis.line = element_line(colour = &quot;bisque4&quot;, 
+        size = 0.2, linetype = &quot;solid&quot;), 
+    axis.ticks = element_line(size = 0.7), 
+    axis.title = element_text(size = 16), 
+    axis.text = element_text(size = 16, colour = &quot;gray0&quot;), 
+    panel.background = element_rect(fill = &quot;gray98&quot;)) </code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step1"></span>
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png" alt="橫軸爲 $X$，縱軸爲 $Y$ 的散點圖" width="80%" />
+<p class="caption">
+Figure 1: 橫軸爲 <span class="math inline">\(X\)</span>，縱軸爲 <span class="math inline">\(Y\)</span> 的散點圖
+</p>
+</div>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
+    
+    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
+    
+    <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
+    
+    <li><a href="/post/construction-of-a-hypothesis-test/">徒手打造一個假設檢驗</a></li>
+    
+    <li><a href="/post/approximate-log-likelihood-ratios/">二次方程近似法求對數似然比 approximate log-likelihood ratios</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
   <ul class="pager">
     
-    <li><a href="/categories/statistics/page/4/">&lt;</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/2018-12-todo/"><span
+      aria-hidden="true">&larr;</span> 2018-12 todo</a></li>
     
+
     
   </ul>
 </nav>
 
+</div>
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
 
 </div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
@@ -426,6 +584,4 @@
 
   </body>
 </html>
-
-
 

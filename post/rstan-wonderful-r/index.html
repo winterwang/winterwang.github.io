@@ -76,7 +76,7 @@
   
   <meta property="og:site_name" content="Be ambitious">
   <meta property="og:url" content="https://winterwang.github.io/post/rstan-wonderful-r/">
-  <meta property="og:title" content="Rstan Wonderful R | Be ambitious">
+  <meta property="og:title" content="Rstan Wonderful R-(1) | Be ambitious">
   <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
   <meta property="og:locale" content="en-us">
   
@@ -87,7 +87,7 @@
 
   
 
-  <title>Rstan Wonderful R | Be ambitious</title>
+  <title>Rstan Wonderful R-(1) | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -257,7 +257,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Rstan Wonderful R</h1>
+      <h1 itemprop="name">Rstan Wonderful R-(1)</h1>
 
       
 
@@ -306,7 +306,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f"
+         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R-%281%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -320,21 +320,21 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f&amp;title=Rstan%20Wonderful%20R"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f&amp;title=Rstan%20Wonderful%20R-%281%29"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f&amp;title=Rstan%20Wonderful%20R"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f&amp;title=Rstan%20Wonderful%20R-%281%29"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Rstan%20Wonderful%20R&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f">
+         href="mailto:?subject=Rstan%20Wonderful%20R-%281%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -402,18 +402,29 @@ parameters {
 
 model {
   for (n in 1:N) {
-  Y[n] ~ normal(mu, 1);
+    Y[n] ~ normal(mu, 1);
   }
-  mu ~ normal(0, 100)
+  mu ~ normal(0, 100);
 }</code></pre>
 <p>其中我們按照實際模型書寫的順序 model -&gt; data -&gt; parameter 來逐個解釋：</p>
 <ul>
 <li><code>model</code> 模塊中 <code>for (n in 1:N)</code> 開始的循環部分（三行）對應數學模型的 $Y[n] (, 1) n = 1, , N $　部分。</li>
 <li>Stan 語言中，每一行描述的結尾需要用分號 <code>;</code> 來結束。</li>
-<li><code>mu ~ normal(0,100)</code> 則對應數學模型中寫的先驗概率 <span class="math inline">\(\mu \sim \text{Normal}(0, 100)\)</span> 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的</li>
+<li><code>mu ~ normal(0,100)</code> 則對應數學模型中寫的先驗概率 <span class="math inline">\(\mu \sim \text{Normal}(0, 100)\)</span> 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的。</li>
 <li><code>data</code> 模塊中寫明的是 <code>model</code> 模塊中描述的模型將要使用的數據。它包括宣示數據的個數（樣本量 <span class="math inline">\(N\)</span>），以及數據本身。其中 <code>int N</code> 意爲樣本量的數量是整數個 (integer)，<code>real Y[N]</code> 則宣示實數有 N 個作爲數據。</li>
 <li><code>parameter</code> 模塊是告訴軟件需要採樣且關注的未知參數 (parameter) 是 <code>mu</code></li>
+<li>在 Stan 語言中，還可以和其他語言一樣爲模型加註解釋的文字，只需要在想要做註釋的文字最開始的部分增加 <code>//</code>，如果註釋的文字超過一行，那麼在註釋的模塊前後加上 <code>/*</code> 和 <code>*/</code> 即可。</li>
+<li>另外，目前爲止主流的貝葉斯模型軟件中使用精確度 (precision) ，也就是方差的倒數來描述正態分佈 <code>normal(mean, 1/variance)</code> ，但是在Stan的語法中使用的是 <code>normal(mean, sd)</code>，也就是用標準差來描述正態分佈。</li>
 </ul>
+<p>寫Stan（或者說寫大多數的代碼）時，請遵守以下的原則：</p>
+<ol style="list-style-type: decimal">
+<li>適當縮進，以便於閱讀；</li>
+<li>表示數據的部分用大寫字母，表示參數的部分，用小寫字母；</li>
+<li>每個部分之間至少使用一個空行加以區分；</li>
+<li>請不要用<code>camelCase</code>這樣的方式（單詞之間用大寫隔開），請在單詞之間用下劃線 <code>camel_case</code> 的標記方法；</li>
+<li><code>~</code>或者<code>=</code>前後用一個字符大小的空格來隔開。</li>
+</ol>
+<p>最低限度的話，也請依照1,2兩個標準來書寫你的Stan代碼。不爲他人，也爲自己將來再讀代碼時能快速理解其涵義。往Stan的官方論壇投稿時，也必須遵守它們在手冊裏提供的 “Stan Program Style Guide” 代碼書寫規則，也是對其他寫，讀代碼的人的尊重。</p>
 
       </div>
 

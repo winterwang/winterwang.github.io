@@ -7,13 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 22 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/categories/r-techniques/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Rstan Wonderful R</title>
+      <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>
+      <link>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
+      <description>數據 data-salary.txt是架空的。
+某公司社員的年齡 \(X\)（歲），和年收入 \(Y\)（萬日元）的數據如下：
+X,Y 24,472 24,403 26,454 32,575 33,546 35,781 38,750 40,601 40,814 43,792 43,745 44,837 48,868 52,988 56,1092 56,1007 57,1233 58,1202 59,1123 59,1314  年收入 \(Y\) 被認爲是由基本年收 \(y_{base}\) 和其他影響因素 \(\varepsilon\) 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 \(\varepsilon\) 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 \(\varepsilon\) 的均值被認爲是零。
+分析目的：
+ 借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。  Step 1, 確認數據分佈 Salary &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) library(ggplot2) ggplot(Salary, aes(x = X, y = Y)) + geom_point(shape = 1, size = 4) + theme(plot.</description>
+    </item>
+    
+    <item>
+      <title>Rstan Wonderful R-(1)</title>
       <link>https://winterwang.github.io/post/rstan-wonderful-r/</link>
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
       

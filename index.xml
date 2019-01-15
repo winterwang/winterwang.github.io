@@ -11,6 +11,69 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>
+      <link>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&#34;&gt;數據 data-salary.txt&lt;/a&gt;是架空的。&lt;/p&gt;
+&lt;p&gt;某公司社員的年齡 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;（歲），和年收入 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;（萬日元）的數據如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;X,Y
+24,472
+24,403
+26,454
+32,575
+33,546
+35,781
+38,750
+40,601
+40,814
+43,792
+43,745
+44,837
+48,868
+52,988
+56,1092
+56,1007
+57,1233
+58,1202
+59,1123
+59,1314
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;年收入 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 被認爲是由基本年收 &lt;span class=&#34;math inline&#34;&gt;\(y_{base}\)&lt;/span&gt; 和其他影響因素 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 的均值被認爲是零。&lt;/p&gt;
+&lt;p&gt;分析目的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;step-1-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 1, 確認數據分佈&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Salary &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&amp;quot;, 
+                     sep = &amp;quot;,&amp;quot;, header = T)
+library(ggplot2)
+
+ggplot(Salary, aes(x = X, y = Y)) + 
+  geom_point(shape = 1, size = 4)  + theme(plot.subtitle = element_text(vjust = 1), 
+    plot.caption = element_text(vjust = 1), 
+    axis.line = element_line(colour = &amp;quot;bisque4&amp;quot;, 
+        size = 0.2, linetype = &amp;quot;solid&amp;quot;), 
+    axis.ticks = element_line(size = 0.7), 
+    axis.title = element_text(size = 16), 
+    axis.text = element_text(size = 16, colour = &amp;quot;gray0&amp;quot;), 
+    panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) &lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 橫軸爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，縱軸爲 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的散點圖
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>2018-12 todo</title>
       <link>https://winterwang.github.io/post/2018-12-todo/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
@@ -48,7 +111,7 @@
     </item>
     
     <item>
-      <title>Rstan Wonderful R</title>
+      <title>Rstan Wonderful R-(1)</title>
       <link>https://winterwang.github.io/post/rstan-wonderful-r/</link>
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
       
@@ -107,18 +170,29 @@ parameters {
 
 model {
   for (n in 1:N) {
-  Y[n] ~ normal(mu, 1);
+    Y[n] ~ normal(mu, 1);
   }
-  mu ~ normal(0, 100)
+  mu ~ normal(0, 100);
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;其中我們按照實際模型書寫的順序 model -&amp;gt; data -&amp;gt; parameter 來逐個解釋：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;model&lt;/code&gt; 模塊中 &lt;code&gt;for (n in 1:N)&lt;/code&gt; 開始的循環部分（三行）對應數學模型的 $Y[n] (, 1) n = 1, , N $　部分。&lt;/li&gt;
 &lt;li&gt;Stan 語言中，每一行描述的結尾需要用分號 &lt;code&gt;;&lt;/code&gt; 來結束。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mu ~ normal(0,100)&lt;/code&gt; 則對應數學模型中寫的先驗概率 &lt;span class=&#34;math inline&#34;&gt;\(\mu \sim \text{Normal}(0, 100)\)&lt;/span&gt; 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mu ~ normal(0,100)&lt;/code&gt; 則對應數學模型中寫的先驗概率 &lt;span class=&#34;math inline&#34;&gt;\(\mu \sim \text{Normal}(0, 100)\)&lt;/span&gt; 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;data&lt;/code&gt; 模塊中寫明的是 &lt;code&gt;model&lt;/code&gt; 模塊中描述的模型將要使用的數據。它包括宣示數據的個數（樣本量 &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;），以及數據本身。其中 &lt;code&gt;int N&lt;/code&gt; 意爲樣本量的數量是整數個 (integer)，&lt;code&gt;real Y[N]&lt;/code&gt; 則宣示實數有 N 個作爲數據。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;parameter&lt;/code&gt; 模塊是告訴軟件需要採樣且關注的未知參數 (parameter) 是 &lt;code&gt;mu&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在 Stan 語言中，還可以和其他語言一樣爲模型加註解釋的文字，只需要在想要做註釋的文字最開始的部分增加 &lt;code&gt;//&lt;/code&gt;，如果註釋的文字超過一行，那麼在註釋的模塊前後加上 &lt;code&gt;/*&lt;/code&gt; 和 &lt;code&gt;*/&lt;/code&gt; 即可。&lt;/li&gt;
+&lt;li&gt;另外，目前爲止主流的貝葉斯模型軟件中使用精確度 (precision) ，也就是方差的倒數來描述正態分佈 &lt;code&gt;normal(mean, 1/variance)&lt;/code&gt; ，但是在Stan的語法中使用的是 &lt;code&gt;normal(mean, sd)&lt;/code&gt;，也就是用標準差來描述正態分佈。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;寫Stan（或者說寫大多數的代碼）時，請遵守以下的原則：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;適當縮進，以便於閱讀；&lt;/li&gt;
+&lt;li&gt;表示數據的部分用大寫字母，表示參數的部分，用小寫字母；&lt;/li&gt;
+&lt;li&gt;每個部分之間至少使用一個空行加以區分；&lt;/li&gt;
+&lt;li&gt;請不要用&lt;code&gt;camelCase&lt;/code&gt;這樣的方式（單詞之間用大寫隔開），請在單詞之間用下劃線 &lt;code&gt;camel_case&lt;/code&gt; 的標記方法；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;或者&lt;code&gt;=&lt;/code&gt;前後用一個字符大小的空格來隔開。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最低限度的話，也請依照1,2兩個標準來書寫你的Stan代碼。不爲他人，也爲自己將來再讀代碼時能快速理解其涵義。往Stan的官方論壇投稿時，也必須遵守它們在手冊裏提供的 “Stan Program Style Guide” 代碼書寫規則，也是對其他寫，讀代碼的人的尊重。&lt;/p&gt;
 </description>
     </item>
     
@@ -1730,138 +1804,6 @@ style=&#34;transform:rotate(90deg);&#34;/&gt;
 &lt;p&gt;有時候，我會十分的想念日本的生活。有時候，我又會無比的思念廈門的日子。這些落腳過的地方，只有上海的感覺越來越模糊。不知道我懷念的是名古屋乾淨的街道，是廈門的沙茶面的味道，還是那些夜晚打完工以後路邊的便利店門口騎着腳踏車路過的那時的我，也許還有那個在白城沙灘上可以悠閒地聽海浪拍岸聲的那個無腦少年。不清楚緣由地，只有上海的記憶在大腦中逐漸變得不那麼色彩斑斕。我也很好奇多年以後我會怎樣回憶倫敦？ 也許只剩下記憶裏土撥鼠一樣的無聊日子，還有貴死你不償命的宿舍房租。&lt;/p&gt;
 
 &lt;p&gt;跨年那晚我和幾個同學走在滿目瘡痍的倫敦街頭，焰火散去，人去城空，2018年就已經被我們踩在了腳下。眼看着這新的一年在凌亂中開始，但願過程也不要太過殘酷。這一年唯一的目標是順利完成這沒日沒夜 (說好聽是朝思暮想) 的醫學統計學碩士。還有的話就是希望家人孩子平安，待我回到你們身邊，我們再也不要用小的可憐的手機屏幕來看彼此，我要帶你們去看整個世界。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>萬衆期待，英國黑暗料理</title>
-      <link>https://winterwang.github.io/post/black-meal/</link>
-      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/black-meal/</guid>
-      <description>
-
-&lt;h3 id=&#34;康沃爾的牛肉餡餅-贊-2017-12-16-the-shop-in-the-square-https-www-google-com-maps-place-the-shop-in-the-square-50-3310101-4-2021014-21z-data-4m13-1m7-3m6-1s0x0-0x0-2zntdcsde5jzuyljaitia0wraxmicwny4yilc-3b1-8m2-3d50-3311-4d-4-202-3m4-1s0x486c94411d32061f-0xc6ba3bcac8fcc931-8m2-3d50-331087-4d-4-2021739&#34;&gt;康沃爾的牛肉餡餅！ 贊！ (2017-12-16 @&lt;a href=&#34;https://www.google.com/maps/place/The+Shop+in+the+Square/@50.3310101,-4.2021014,21z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTDCsDE5JzUyLjAiTiA0wrAxMicwNy4yIlc!3b1!8m2!3d50.3311!4d-4.202!3m4!1s0x486c94411d32061f:0xc6ba3bcac8fcc931!8m2!3d50.331087!4d-4.2021739&#34; target=&#34;_blank&#34;&gt;The Shop in the Square&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1483.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;看起來美味但是甜到牙痛的聖誕蛋糕-2017-12-17-calstock-homestay&#34;&gt;看起來美味但是甜到牙痛的聖誕蛋糕 (2017-12-17 @Calstock Homestay)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1559.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;香腸美味-烤雞美味-洋蔥有點糊但是還是很美味-2017-12-16-jane-ian-s-homestay&#34;&gt;香腸美味！烤雞美味！洋蔥有點糊但是還是很美味！ (2017-12-16 @Jane&amp;amp;Ian&amp;rsquo;s Homestay)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_20171217_045212.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;在中國城買到最贊的國貨-廈門鐵觀音-2017-12-09-london-china-town&#34;&gt;在中國城買到最贊的國貨！廈門鐵觀音 (2017-12-09 @London China Town)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1374.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;貴到無法下手的三文魚壽司-2017-12-06-waitrose&#34;&gt;貴到無法下手的三文魚壽司 (2017-12-06 @Waitrose)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1356.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;和日本一風堂味道一樣但是貴一倍的豚骨拉麵-2017-12-02-london-ippudo-http-www-ippudo-co-uk&#34;&gt;和日本一風堂味道一樣但是貴一倍的豚骨拉麵 (2017-12-02 @&lt;a href=&#34;http://www.ippudo.co.uk/&#34; target=&#34;_blank&#34;&gt;London Ippudo&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1312.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;學校附近和同學一起去喝過最棒的拿鐵-缺點是杯子太小-2017-12-01-tap-caffee-http-www-tapcoffee-co-uk&#34;&gt;學校附近和同學一起去喝過最棒的拿鐵，缺點是杯子太小 (2017-12-01 @&lt;a href=&#34;http://www.tapcoffee.co.uk/&#34; target=&#34;_blank&#34;&gt;Tap Caffee&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1306.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;brunch-在長頸鹿餐廳可以打8折-2017-11-29-giraffe-https-www-giraffe-net&#34;&gt;Brunch 在長頸鹿餐廳可以打8折 (2017-11-29 @&lt;a href=&#34;https://www.giraffe.net/&#34; target=&#34;_blank&#34;&gt;Giraffe&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1293.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;約克郡的傳統午餐-美味牛肉-2017-11-26-the-judge-s-lodging-https-www-thwaites-co-uk-hotels-and-inns-inns-judges-lodging-at-york-food-and-drink-menus&#34;&gt;約克郡的傳統午餐，美味牛肉 (2017-11-26 @&lt;a href=&#34;https://www.thwaites.co.uk/hotels-and-inns/inns/judges-lodging-at-york/food-and-drink/menus/&#34; target=&#34;_blank&#34;&gt;The Judge&amp;rsquo;s Lodging&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1244.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;謝菲爾德的聖誕街市賣的烤香腸-2017-11-25-sheffield&#34;&gt;謝菲爾德的聖誕街市賣的烤香腸 (2017-11-25 @Sheffield)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1143.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;日本同學從日本帶來的速食味增湯-美味至極-2017-11-23-international-hall&#34;&gt;日本同學從日本帶來的速食味增湯，美味至極 (2017-11-23 @International Hall)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_1118.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;國王十字車站對面的新加坡華人餐廳-海南雞飯不錯-2017-11-01-chop-chop-noodle-bar-https-www-google-com-maps-place-chop-chop-noodle-bar-51-5303949-0-1226249-19z-data-4m13-1m7-3m6-1s0x0-0x0-2znthcsdmxjzq5ljgitiawwrawnycyms43ilc-3b1-8m2-3d51-5305-4d-0-1227-3m4-1s0x0-0x252e2c027563f1e4-8m2-3d51-5303959-4d-0-122609&#34;&gt;國王十字車站對面的新加坡華人餐廳，海南雞飯不錯 (2017-11-01 @&lt;a href=&#34;https://www.google.com/maps/place/Chop+Chop+Noodle+Bar/@51.5303949,-0.1226249,19z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTHCsDMxJzQ5LjgiTiAwwrAwNycyMS43Ilc!3b1!8m2!3d51.5305!4d-0.1227!3m4!1s0x0:0x252e2c027563f1e4!8m2!3d51.5303959!4d-0.122609&#34; target=&#34;_blank&#34;&gt;Chop Chop Noodle Bar&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0649.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;同學宿舍裏的自制小炒-2017-10-21-the-garden-hall&#34;&gt;同學宿舍裏的自制小炒 (2017-10-21 @The Garden Hall)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0548.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;大英博物館前的中餐館的水煮魚-2017-10-20-chang-s-noodle-https-www-google-com-maps-place-chang-s-noodle-51-517143-0-1256334-21z-data-4m13-1m7-3m6-1s0x0-0x0-2znthcsdmxjzaxljyitiawwrawnyczms44ilc-3b1-8m2-3d51-5171-4d-0-1255-3m4-1s0x48761b3301f99d9d-0x3ba6ded2ee933a5a-8m2-3d51-5172364-4d-0-1254925&#34;&gt;大英博物館前的中餐館的水煮魚 (2017-10-20 @&lt;a href=&#34;https://www.google.com/maps/place/Chang&#39;s+Noodle/@51.517143,-0.1256334,21z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTHCsDMxJzAxLjYiTiAwwrAwNyczMS44Ilc!3b1!8m2!3d51.5171!4d-0.1255!3m4!1s0x48761b3301f99d9d:0x3ba6ded2ee933a5a!8m2!3d51.5172364!4d-0.1254925&#34; target=&#34;_blank&#34;&gt;Chang&amp;rsquo;s Noodle&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0537.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;大英博物館前的都可茶飲買到的原味珍珠奶茶-3-5-有學生優惠-2017-10-20-coco-http-en-coco-tea-com&#34;&gt;大英博物館前的都可茶飲買到的原味珍珠奶茶 £3.5 有學生優惠 (2017-10-20 @&lt;a href=&#34;http://en.coco-tea.com/&#34; target=&#34;_blank&#34;&gt;Coco&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0534.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;雞腿不錯但是旁邊的配菜有點像中藥味的壓縮餅乾-2017-10-08-ihdining-room&#34;&gt;雞腿不錯但是旁邊的配菜有點像中藥味的壓縮餅乾 (2017-10-08 @IHdining room)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/953062095.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;哈利波特特約飲料-butterbeer-奶油啤酒-2017-10-07-warner-bros-studio-tour-london-https-www-wbstudiotour-co-uk&#34;&gt;哈利波特特約飲料 Butterbeer （奶油啤酒）(2017-10-07 @&lt;a href=&#34;https://www.wbstudiotour.co.uk/&#34; target=&#34;_blank&#34;&gt;Warner Bros. Studio Tour London&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/244977493.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;以爲是甜食的派結果裏面包着牛肉的奇怪料理-2017-10-07-ihdining-room&#34;&gt;以爲是甜食的派結果裏面包着牛肉的奇怪料理 (2017-10-07 @IHdining room)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1959199628.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;羅素廣場地鐵站門口的小攤賣的超划算味道很正的新鮮草莓-2017-10-05-russel-square-station-https-www-google-co-uk-maps-place-russell-square-station-51-523111-0-1265731-17z-data-3m1-4b1-4m5-3m4-1s0x48761b30d8fe5173-0xcf6c5a5908686210-8m2-3d51-523111-4d-0-1243844-hl-en&#34;&gt;羅素廣場地鐵站門口的小攤賣的超划算味道很正的新鮮草莓！(2017-10-05 @&lt;a href=&#34;https://www.google.co.uk/maps/place/Russell+Square+Station/@51.523111,-0.1265731,17z/data=!3m1!4b1!4m5!3m4!1s0x48761b30d8fe5173:0xcf6c5a5908686210!8m2!3d51.523111!4d-0.1243844?hl=en&#34; target=&#34;_blank&#34;&gt;Russel Square Station&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1040178656.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;价值5镑的食堂素食色拉一盒-2017-10-02-lshtm食堂&#34;&gt;价值5镑的食堂素食色拉一盒 (2017-10-02@LSHTM食堂)&lt;/h3&gt;
-
-&lt;p&gt;新鮮，但是米飯有點夾生。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/41913438.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;味道超讚牛肉披薩-diavolo-2017-09-28-pizza-express-in-charlotte-street-https-www-pizzaexpress-com-charlotte-street-utm-source-google-utm-medium-places-utm-campaign-charlotte-street&#34;&gt;味道超讚牛肉披薩 Diavolo (2017-09-28 @&lt;a href=&#34;https://www.pizzaexpress.com/charlotte-street?utm_source=Google&amp;amp;utm_medium=Places&amp;amp;utm_campaign=charlotte-street&#34; target=&#34;_blank&#34;&gt;Pizza Express in Charlotte Street&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_20170928_184500.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;菜單上的說明是這樣滴：
-Hot spiced beef, pepperoni, mozzarella, tomato, green pepper, red onion and Tabasco, with your choice of hot green, Roquito or jalapeño peppers. Available as Classic or Romana&lt;/p&gt;
-
-&lt;h3 id=&#34;羊肉味的奶油夾心三明治-2017-09-24-store-street-espresso-http-www-storestespresso-co-uk&#34;&gt;羊肉味的奶油夾心三明治 (2017-09-24 @&lt;a href=&#34;http://www.storestespresso.co.uk/&#34; target=&#34;_blank&#34;&gt;Store Street Espresso&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;我點菜之前還故意跟收銀員小妹搭訕，讓她推薦一下今天的特色三明治。
-她推薦的這個 Goat Cheese Sandwich。 當然我一開始聽到這名字的時候就有點猶豫。但是想說既然是推薦的應該至少不會有什麼怪味道。結果事實證明了，我的想法是多麼的幼稚。&lt;/p&gt;
-
-&lt;p&gt;看這剛出爐的香噴噴的三明治，我咬下第一口就差點吐了。羊羶味在我喉嚨和鼻腔中打轉。後悔也來不及了。另外我同同時還點了 Espresso。就是特濃咖啡。口味超重！不能喝濃咖啡的一定要慎點！！！！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1388034054.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;酸酸的不知道怎麼形容的麵包-日期忘了-估計是剛到的第二個早晨的早餐-ihdining-room&#34;&gt;酸酸的不知道怎麼形容的麵包 (日期忘了，估計是剛到的第二個早晨的早餐@IHdining room)&lt;/h3&gt;
-
-&lt;p&gt;這麵包吃起來鬆鬆的，然額，麵的味道有些酸，又不像是過期食品，而像是本來就應該是這樣的味道的酸麵包。讓人不想再嘗試第二次。。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/890249589.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;美味海鮮飯-2017-09-24-ciao-bella-http-ciaobellarestaurant-co-uk&#34;&gt;美味海鮮飯 (2017-09-24 @&lt;a href=&#34;http://ciaobellarestaurant.co.uk/&#34; target=&#34;_blank&#34;&gt;Ciao Bella&lt;/a&gt;)&lt;/h3&gt;
-
-&lt;p&gt;感謝&lt;a href=&#34;https://kclpure.kcl.ac.uk/portal/li.yan.html&#34; target=&#34;_blank&#34;&gt;顏師兄&lt;/a&gt;帶領，終於找到了一家可以吃到正常大米的飯店了！且海鮮量超足！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/737031981.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;看起來很奇怪的整魚炸薯條&#34;&gt;看起來很奇怪的整魚炸薯條&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/656438330.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;外觀其實讓人沒什麼食慾的烤魚&#34;&gt;外觀其實讓人沒什麼食慾的烤魚&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/1628745573.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;酸奶放在白煮雞胸肉上&#34;&gt;酸奶放在白煮雞胸肉上&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/img/IMG_0185.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
