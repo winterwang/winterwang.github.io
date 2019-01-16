@@ -400,7 +400,7 @@ ggplot(Salary, aes(x = X, y = Y)) +
     panel.background = element_rect(fill = &quot;gray98&quot;)) +
   scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:step1"></span>
-<img src="2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png" alt="橫軸爲 $X$，縱軸爲 $Y$ 的散點圖" width="80%" />
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png" alt="橫軸爲 $X$，縱軸爲 $Y$ 的散點圖" width="80%" />
 <p class="caption">
 Figure 1: 橫軸爲 <span class="math inline">\(X\)</span>，縱軸爲 <span class="math inline">\(Y\)</span> 的散點圖
 </p>
@@ -465,7 +465,7 @@ ggplot(new_df, aes(x = X, y = Y)) +
    geom_line(aes(y=lwr), color = &quot;red&quot;, linetype = &quot;dashed&quot;)+
     geom_line(aes(y=upr), color = &quot;red&quot;, linetype = &quot;dashed&quot;)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:step2"></span>
-<img src="2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png" alt="用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。" width="80%" />
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png" alt="用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。" width="80%" />
 <p class="caption">
 Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
 </p>
@@ -626,6 +626,21 @@ ggmcmc(ggs(fit, inc_warmup = TRUE, stan_include_auxiliar = TRUE), plot = &quot;t
 <img src="/img/traceplot-model4-5.png" alt="用ggmcmc函數製作而成的MCMC鏈式圖報告。" width="80%" />
 <p class="caption">
 Figure 3: 用ggmcmc函數製作而成的MCMC鏈式圖報告。
+</p>
+</div>
+<pre class="r"><code>library(bayesplot)
+
+color_scheme_set(&quot;mix-brightblue-gray&quot;)
+
+posterior2 &lt;- rstan::extract(fit, inc_warmup = TRUE, permuted = FALSE)
+
+p &lt;- mcmc_trace(posterior2, n_warmup = 0,
+                facet_args = list(nrow = 2, labeller = label_parsed))
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step41"></span>
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step41-1.png" alt="用 bayesplot包數繪製的MCMC鏈式圖。" width="80%" />
+<p class="caption">
+Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
 </p>
 </div>
 </div>

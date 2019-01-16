@@ -65,7 +65,7 @@ ggplot(Salary, aes(x = X, y = Y)) +
     panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) +
   scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 橫軸爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，縱軸爲 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的散點圖
 &lt;/p&gt;
@@ -130,7 +130,7 @@ ggplot(new_df, aes(x = X, y = Y)) +
    geom_line(aes(y=lwr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)+
     geom_line(aes(y=upr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step2&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
 &lt;/p&gt;
@@ -291,6 +291,21 @@ ggmcmc(ggs(fit, inc_warmup = TRUE, stan_include_auxiliar = TRUE), plot = &amp;qu
 &lt;img src=&#34;https://winterwang.github.io/img/traceplot-model4-5.png&#34; alt=&#34;用ggmcmc函數製作而成的MCMC鏈式圖報告。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: 用ggmcmc函數製作而成的MCMC鏈式圖報告。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
+
+color_scheme_set(&amp;quot;mix-brightblue-gray&amp;quot;)
+
+posterior2 &amp;lt;- rstan::extract(fit, inc_warmup = TRUE, permuted = FALSE)
+
+p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0,
+                facet_args = list(nrow = 2, labeller = label_parsed))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step41&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step41-1.png&#34; alt=&#34;用 bayesplot包數繪製的MCMC鏈式圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
