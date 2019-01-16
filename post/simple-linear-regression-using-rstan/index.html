@@ -491,6 +491,7 @@ model {
     }
 }</code></pre>
 <p>參數部分 <code>real&lt;lower=0&gt; sigma</code> 的代碼表示標準差不可採集負數作爲樣本。</p>
+<p>實際運行上面的Stan代碼：</p>
 <pre class="r"><code>library(rstan)
 data &lt;- list(N=nrow(Salary), X=Salary$X, Y = Salary$Y)
 fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
@@ -614,6 +615,14 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
+<ul>
+<li><p>輸出結果的前三行，是該次MCMC的設定條件，其中模型名稱是Rmarkdown文件中隨機產生的。</p></li>
+<li><p>第二行則說明的是該次MCMC進行了4條鏈的採樣，每條鏈2000次，其中前1000次被當作是 burn-in (或者叫 warmup)。可以看到一共獲得了4000個事後樣本。</p></li>
+<li>接下來的五行是參數的事後樣本的事後分析總結，一共有11列。
+<ul>
+<li>其中第1列是參數名稱，最後一個 <code>lp__</code></li>
+</ul></li>
+</ul>
 </div>
 <div id="step-4-stan" class="section level2">
 <h2>Step 4, 診斷Stan貝葉斯模型的收斂程度</h2>

@@ -156,6 +156,7 @@ model {
     }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;參數部分 &lt;code&gt;real&amp;lt;lower=0&amp;gt; sigma&lt;/code&gt; 的代碼表示標準差不可採集負數作爲樣本。&lt;/p&gt;
+&lt;p&gt;實際運行上面的Stan代碼：&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
 data &amp;lt;- list(N=nrow(Salary), X=Salary$X, Y = Salary$Y)
 fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
@@ -279,6 +280,14 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;輸出結果的前三行，是該次MCMC的設定條件，其中模型名稱是Rmarkdown文件中隨機產生的。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第二行則說明的是該次MCMC進行了4條鏈的採樣，每條鏈2000次，其中前1000次被當作是 burn-in (或者叫 warmup)。可以看到一共獲得了4000個事後樣本。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;接下來的五行是參數的事後樣本的事後分析總結，一共有11列。
+&lt;ul&gt;
+&lt;li&gt;其中第1列是參數名稱，最後一個 &lt;code&gt;lp__&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4-stan&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Step 4, 診斷Stan貝葉斯模型的收斂程度&lt;/h2&gt;
