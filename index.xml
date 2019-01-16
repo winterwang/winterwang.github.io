@@ -65,7 +65,7 @@ ggplot(Salary, aes(x = X, y = Y)) +
     panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) +
   scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 橫軸爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，縱軸爲 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的散點圖
 &lt;/p&gt;
@@ -130,7 +130,7 @@ ggplot(new_df, aes(x = X, y = Y)) +
    geom_line(aes(y=lwr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)+
     geom_line(aes(y=upr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step2&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
 &lt;/p&gt;
@@ -162,8 +162,8 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 7e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 1: Gradient evaluation took 8e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -180,9 +180,9 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.072541 seconds (Warm-up)
-## Chain 1:                0.042206 seconds (Sampling)
-## Chain 1:                0.114747 seconds (Total)
+## Chain 1:  Elapsed Time: 0.072597 seconds (Warm-up)
+## Chain 1:                0.041876 seconds (Sampling)
+## Chain 1:                0.114473 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 2).
@@ -205,9 +205,9 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.06427 seconds (Warm-up)
-## Chain 2:                0.043216 seconds (Sampling)
-## Chain 2:                0.107486 seconds (Total)
+## Chain 2:  Elapsed Time: 0.063757 seconds (Warm-up)
+## Chain 2:                0.043314 seconds (Sampling)
+## Chain 2:                0.107071 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 3).
@@ -230,9 +230,9 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.058196 seconds (Warm-up)
-## Chain 3:                0.039523 seconds (Sampling)
-## Chain 3:                0.097719 seconds (Total)
+## Chain 3:  Elapsed Time: 0.059298 seconds (Warm-up)
+## Chain 3:                0.039507 seconds (Sampling)
+## Chain 3:                0.098805 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 4).
@@ -255,9 +255,9 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.060299 seconds (Warm-up)
-## Chain 4:                0.046271 seconds (Sampling)
-## Chain 4:                0.10657 seconds (Total)
+## Chain 4:  Elapsed Time: 0.057139 seconds (Warm-up)
+## Chain 4:                0.043465 seconds (Sampling)
+## Chain 4:                0.100604 seconds (Total)
 ## Chain 4:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Inference for Stan model: 5b73686886069c0bad70513d4ea4141a.
@@ -275,7 +275,7 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ## sigma    1
 ## lp__     1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Jan 15 19:01:35 2019.
+## Samples were drawn using NUTS(diag_e) at Wed Jan 16 10:44:03 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
@@ -287,10 +287,10 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 ggmcmc(ggs(fit, inc_warmup = TRUE, stan_include_auxiliar = TRUE), plot = &amp;quot;traceplot&amp;quot;, dev_type_html = &amp;quot;png&amp;quot;, 
        file = &amp;quot;trace.html&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;上面的代碼，會自動生成四個模型參數的軌跡MCMC鏈式圖報告。&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;
-&lt;img src=&#34;https://winterwang.github.io/img/traceplot-model4-5.png&#34; alt=&#34;用ggmcmc函數製作而成的MCMC鏈式圖報告&#34; width=&#34;80%&#34; /&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step4&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/img/traceplot-model4-5.png&#34; alt=&#34;用ggmcmc函數製作而成的MCMC鏈式圖報告。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
-(#fig:trace4_5)用ggmcmc函數製作而成的MCMC鏈式圖報告
+Figure 3: 用ggmcmc函數製作而成的MCMC鏈式圖報告。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
