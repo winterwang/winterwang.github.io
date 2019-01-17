@@ -9,3 +9,14 @@ p
 
 p <- mcmc_acf_bar(posterior2)
 p
+
+p <- mcmc_hist(posterior2)
+p
+
+p <- mcmc_dens_overlay(posterior2, color_chains = T)
+p
+
+
+# use ggmcmc
+
+ggmcmc(ggs(fit), file = "fit-ggmcmc.pdf")
