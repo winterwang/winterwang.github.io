@@ -273,7 +273,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    12 min read
   </span>
   
 
@@ -658,9 +658,179 @@ p</code></pre>
 Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
 </p>
 </div>
+<pre class="r"><code>p &lt;- mcmc_acf_bar(posterior2)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step42"></span>
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step42-1.png" alt="用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。" width="80%" />
+<p class="caption">
+Figure 5: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。
+</p>
 </div>
-<div id="step-5" class="section level2">
-<h2>Step 5</h2>
+<pre class="r"><code>p &lt;- mcmc_dens_overlay(posterior2, color_chains = T)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step43"></span>
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step43-1.png" alt="用 bayesplot包數繪製的事後樣本密度分佈圖。" width="80%" />
+<p class="caption">
+Figure 6: 用 bayesplot包數繪製的事後樣本密度分佈圖。
+</p>
+</div>
+</div>
+<div id="step-5mcmc" class="section level2">
+<h2>Step 5，修改MCMC條件設定</h2>
+<p>進行貝葉斯模型擬合的過程中，常常需要不停地修改模型的條件，例如縮短warm-up等。下面的Rstan代碼可以實現簡便地頻繁修改MCMC條件設定：</p>
+<pre class="r"><code># library(rstan) uncomment if run for the first time
+data &lt;- list(N=nrow(Salary), X=Salary$X, Y = Salary$Y)
+fit2 &lt;- sampling(
+    model4_5, 
+    data = data, 
+    pars = c(&quot;b&quot;, &quot;sigma&quot;), 
+    init = function(){
+      list(a = runif(1, -10, 10), b = runif(1, 0, 10), sigma = 10)
+    },
+    seed = 123,
+    chains = 3, iter = 1000, warmup = 200, thin = 2
+) </code></pre>
+<pre><code>## 
+## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 9e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 1: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 201 / 1000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 300 / 1000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 400 / 1000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 500 / 1000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.033161 seconds (Warm-up)
+## Chain 1:                0.027735 seconds (Sampling)
+## Chain 1:                0.060896 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 3e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 2: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 201 / 1000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 300 / 1000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 400 / 1000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 500 / 1000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.043981 seconds (Warm-up)
+## Chain 2:                0.028208 seconds (Sampling)
+## Chain 2:                0.072189 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 3e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 3: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 3: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 3: Iteration: 201 / 1000 [ 20%]  (Sampling)
+## Chain 3: Iteration: 300 / 1000 [ 30%]  (Sampling)
+## Chain 3: Iteration: 400 / 1000 [ 40%]  (Sampling)
+## Chain 3: Iteration: 500 / 1000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.045161 seconds (Warm-up)
+## Chain 3:                0.029956 seconds (Sampling)
+## Chain 3:                0.075117 seconds (Total)
+## Chain 3:</code></pre>
+<pre class="r"><code>print(fit2)</code></pre>
+<pre><code>## Inference for Stan model: 5b73686886069c0bad70513d4ea4141a.
+## 3 chains, each with iter=1000; warmup=200; thin=2; 
+## post-warmup draws per chain=400, total post-warmup draws=1200.
+## 
+##         mean se_mean    sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
+## b      21.99    0.07  1.68  18.79  20.94  21.96  23.00  25.47   622 1.01
+## sigma  85.70    0.55 16.23  61.47  74.32  83.42  93.80 126.71   874 1.01
+## lp__  -93.72    0.06  1.40 -97.45 -94.40 -93.38 -92.64 -92.13   642 1.00
+## 
+## Samples were drawn using NUTS(diag_e) at Thu Jan 17 14:10:52 2019.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).</code></pre>
+<p>其中<code>fit</code>的最後一行是修改各種條件的示例：</p>
+<ul>
+<li><code>chains</code>至少要三條；</li>
+<li><code>iter</code>一開始可以設定在500~1000左右，確定模型可以收斂以後，再加大這個數值以獲得穩定的事後統計量，多多益善；</li>
+<li><code>warmup</code>，也就MCMC採樣開始後多少樣本可以丟棄。這個數值需要參考trace plot；</li>
+<li><code>thin</code>，通常只需要保持默認值 1。和WinBUGS, JAGS相比Stan算法採集的事後樣本自相關比較低。</li>
+</ul>
+</div>
+<div id="step-6-" class="section level2">
+<h2>Step 6, 並行（平行）計算的設定</h2>
+<p>如果你寫出來的貝葉斯模型需要很長時間的計算和收斂，可以充分利用你的計算機的多核計算，把每條MCMC鏈單獨進行計算加速這個過程：</p>
+<pre class="r"><code>parallel::detectCores() #我的桌上型電腦有8個核可以用於平行計算</code></pre>
+<pre><code>## [1] 8</code></pre>
+<p>但是平行計算時如果計算中出錯則由於每條鏈都是相互獨立地進行，報錯就減少了。所以如果要使用多核同時計算的話，建議先減少採樣數，確認不會報錯以後再用多核平行計算增加採樣量。</p>
+<pre class="r"><code>rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())</code></pre>
+</div>
+<div id="step-7-" class="section level2">
+<h2>Step 7, 計算貝葉斯可信區間和貝葉斯預測區間</h2>
+<p>這一步就又回到一開始提出的研究問題上來，我們來計算基本年收的貝葉斯可信區間和貝葉斯預測區間。</p>
+<pre class="r"><code>ms &lt;- rstan::extract(fit)
+
+quantile(ms$b, probs = c(0.025, 0.0975))</code></pre>
+<pre><code>##     2.5%    9.75% 
+## 18.71095 19.85099</code></pre>
+<pre class="r"><code>d_mcmc &lt;- data.frame(a = ms$a, b = ms$b, sigma = ms$sigma)
+
+head(d_mcmc)</code></pre>
+<pre><code>##            a        b    sigma
+## 1  -35.53766 20.67385 82.67516
+## 2 -163.53803 22.48624 62.91622
+## 3  -60.86149 20.44636 70.66507
+## 4 -134.79928 22.74275 63.11801
+## 5 -159.15523 22.39544 63.89505
+## 6 -196.94649 24.17285 72.84033</code></pre>
+<pre class="r"><code>p1 &lt;- ggplot(d_mcmc, aes(x = a, y = b)) + 
+ geom_point(shape = 1, size = 4)
+
+ggExtra::ggMarginal(
+  p = p1,
+  type = &#39;density&#39;,
+  margins = &#39;both&#39;,
+  size = 4,
+  colour = &#39;black&#39;,
+  fill = &#39;#2D077A&#39;
+)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step71"></span>
+<img src="/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step71-1.png" alt="MCMC樣本的。" width="80%" />
+<p class="caption">
+Figure 7: MCMC樣本的。
+</p>
+</div>
 </div>
 
       </div>
