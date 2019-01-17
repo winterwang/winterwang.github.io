@@ -491,11 +491,76 @@ ggExtra::ggMarginal(
   fill = &amp;#39;#2D077A&amp;#39;
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step71&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step71-1.png&#34; alt=&#34;MCMC樣本的。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step71-1.png&#34; alt=&#34;MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
-Figure 7: MCMC樣本的。
+Figure 7: MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;從圖&lt;a href=&#34;#fig:step71&#34;&gt;7&lt;/a&gt;中可觀察到該貝葉斯線性模型獲得的事後模型參數樣本中，截距&lt;code&gt;a&lt;/code&gt;，和斜率&lt;code&gt;b&lt;/code&gt;之間呈極強的負相關關係。也就是說，截距是工資的起點（年齡爲0歲時），這個起點的理論值越低，斜率越大（歲年齡增加工資上升的速度越大）。&lt;/p&gt;
+&lt;p&gt;根據上面分析的結果，下面的R代碼可以計算一名50歲的人被這家公司採用的時候，她/他的預期基本年收入的分佈（中獲得的MCMC樣本），和她/他的預期總年收的預測分佈（中獲得的MCMC樣本）。&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;N_mcmc &amp;lt;- length(ms$lp__)
+y50_base &amp;lt;- ms$a + ms$b*50
+y50 &amp;lt;- rnorm(n = N_mcmc, mean = y50_base, sd = ms$sigma)
+d_mcmc &amp;lt;- data.frame(a = ms$a, b = ms$b, sigma = ms$sigma, y50_base, y50)
+head(d_mcmc)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            a        b    sigma  y50_base       y50
+## 1  -35.53766 20.67385 82.67516  998.1549  985.4279
+## 2 -163.53803 22.48624 62.91622  960.7742 1033.5019
+## 3  -60.86149 20.44636 70.66507  961.4563  981.6609
+## 4 -134.79928 22.74275 63.11801 1002.3380 1003.7707
+## 5 -159.15523 22.39544 63.89505  960.6167  999.0094
+## 6 -196.94649 24.17285 72.84033 1011.6960 1110.6892&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# the following codes are also available from the author&amp;#39;s page:
+# https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap04/fig4-8.R
+# library(ggplot2)
+source(&amp;#39;commonRstan.R&amp;#39;)
+
+# load(&amp;#39;output/result-model4-5.RData&amp;#39;)
+ms &amp;lt;- rstan::extract(fit)
+
+X_new &amp;lt;- 23:60
+N_X &amp;lt;- length(X_new)
+N_mcmc &amp;lt;- length(ms$lp__)
+
+set.seed(1234)
+y_base_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+for (i in 1:N_X) {
+  y_base_mcmc[,i] &amp;lt;- ms$a + ms$b * X_new[i]
+  y_mcmc[,i] &amp;lt;- rnorm(n=N_mcmc, mean=y_base_mcmc[,i], sd=ms$sigma)
+}
+
+customize.ggplot.axis &amp;lt;- function(p) {
+  p &amp;lt;- p + labs(x=&amp;#39;X&amp;#39;, y=&amp;#39;Y&amp;#39;)
+  p &amp;lt;- p + scale_y_continuous(breaks=seq(from=200, to=1400, by=400))
+  p &amp;lt;- p + coord_cartesian(xlim=c(22, 61), ylim=c(200, 1400))
+  return(p)
+}
+
+d_est &amp;lt;- data.frame.quantile.mcmc(x=X_new, y_mcmc=y_base_mcmc)
+p &amp;lt;- ggplot.5quantile(data=d_est)
+p &amp;lt;- p + geom_point(data=Salary, aes(x=X, y=Y), shape=1, size=3)
+p &amp;lt;- customize.ggplot.axis(p)
+# ggsave(file=&amp;#39;output/fig4-8-left.png&amp;#39;, plot=p, dpi=300, w=4, h=3)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step72&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step72-1.png&#34; alt=&#34;MCMC樣本計算獲得的基本年收的貝葉斯可信區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 8: MCMC樣本計算獲得的基本年收的貝葉斯可信區間。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_est &amp;lt;- data.frame.quantile.mcmc(x=X_new, y_mcmc=y_mcmc)
+p &amp;lt;- ggplot.5quantile(data=d_est)
+p &amp;lt;- p + geom_point(data=Salary, aes(x=X, y=Y), shape=1, size=3)
+p &amp;lt;- customize.ggplot.axis(p)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step73&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step73-1.png&#34; alt=&#34;MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 9: MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ggsave(file=&amp;#39;output/fig4-8-right.png&amp;#39;, plot=p, dpi=300, w=4, h=3)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
