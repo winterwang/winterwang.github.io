@@ -285,7 +285,13 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;第二行則說明的是該次MCMC進行了4條鏈的採樣，每條鏈2000次，其中前1000次被當作是 burn-in (或者叫 warmup)。可以看到一共獲得了4000個事後樣本。&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;接下來的五行是參數的事後樣本的事後分析總結，一共有11列。
 &lt;ul&gt;
-&lt;li&gt;其中第1列是參數名稱，最後一個 &lt;code&gt;lp__&lt;/code&gt;是Stan特有的算法得到的產物，具體解釋爲對數事後概率 (log posterior)。&lt;/li&gt;
+&lt;li&gt;第1列是參數名稱，最後一個 &lt;code&gt;lp__&lt;/code&gt;是Stan特有的算法得到的產物，具體解釋爲對數事後概率 (log posterior)，當然它也需要得到收斂才行。&lt;/li&gt;
+&lt;li&gt;第2列是獲得的4000個參數的事後樣本的事後平均值(posterior mean)。例如&lt;code&gt;b&lt;/code&gt;（回歸直線的斜率）的事後平均值是21.96，也就是說年齡每增加一歲，基本年收入平均增加21.96萬日元。你可以和之前的概率論算法相比較(&lt;code&gt;b = 21.904&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;第3列&lt;code&gt;se_mean&lt;/code&gt;是事後平均值的標準誤(standard error of posterior mean)。說白了是MCMC事後樣本的方差除以第10列的有效樣本量&lt;code&gt;n_eff&lt;/code&gt;之後取根號獲得的值。&lt;/li&gt;
+&lt;li&gt;第4列&lt;code&gt;sd&lt;/code&gt;是MCMC事後樣本的標準差(standard deviation of posterior MCMC sample)。&lt;/li&gt;
+&lt;li&gt;第5-9列是MCMC事後樣本的四分位點。也就是貝葉斯統計算法獲得的事後可信區間。&lt;/li&gt;
+&lt;li&gt;第10列&lt;code&gt;n_eff&lt;/code&gt;是Stan在基於事後樣本自相關程度來判斷的有效事後樣本量大小。爲了有效地計算和繪製事後分佈的統計量，這個有效樣本量需要至少有100個以上吧（作者觀點）。如果報告給出的事後有效樣本量過小的話也是模型收斂不佳的表現之一。&lt;/li&gt;
+&lt;li&gt;第11列&lt;code&gt;Rhat&lt;/code&gt;&lt;span class=&#34;math inline&#34;&gt;\((\hat R)\)&lt;/span&gt;是主要用於判斷模型是否達到收斂的重要指標，每個參數都會被計算一個&lt;code&gt;Rhat&lt;/code&gt;值。當MCMC鏈條數在3以上，且同時所有的模型參數的 &lt;code&gt;Rhat &amp;lt; 1.1&lt;/code&gt;的話，可以認爲模型達到了良好的收斂。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -317,6 +323,9 @@ p&lt;/code&gt;&lt;/pre&gt;
 Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-5&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 5&lt;/h2&gt;
 &lt;/div&gt;
 </description>
     </item>
