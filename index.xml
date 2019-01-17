@@ -285,7 +285,7 @@ fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;第二行則說明的是該次MCMC進行了4條鏈的採樣，每條鏈2000次，其中前1000次被當作是 burn-in (或者叫 warmup)。可以看到一共獲得了4000個事後樣本。&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;接下來的五行是參數的事後樣本的事後分析總結，一共有11列。
 &lt;ul&gt;
-&lt;li&gt;其中第1列是參數名稱，最後一個 &lt;code&gt;lp__&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;其中第1列是參數名稱，最後一個 &lt;code&gt;lp__&lt;/code&gt;是Stan特有的算法得到的產物，具體解釋爲對數事後概率 (log posterior)。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
