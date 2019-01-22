@@ -7,10 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/categories/bayesian/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rstan Wonderful R-(3)</title>
+      <link>https://winterwang.github.io/post/rstan-wonderful-r3/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
+      <description>多重回歸 multiple regression 本章使用的數據，大學生出勤記錄也是架空的數據。
+有大學記錄了50名大學生的出勤狀況：
+A,Score,Y 0,69,0.286 1,145,0.196 0,125,0.261 1,86,0.109 1,158,0.23 0,133,0.35 0,111,0.33 1,147,0.194 0,146,0.413 0,145,0.36 1,141,0.225 0,137,0.423 1,118,0.186 0,111,0.287 ... 0,99,0.268 1,99,0.234 其中，
+ \(A\): 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工） \(Score\): 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習) \(Y\): 是該學生一年內的出勤率  在本次分析範例中，把\(Y\)出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。
+Step 1. 確認數據分佈 # The following figure codes come from the authors website: # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R library(ggplot2) library(GGally) set.seed(123) d &amp;lt;- read.csv(file=&amp;#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&amp;#39;, header = T) d$A &amp;lt;- as.factor(d$A) N_col &amp;lt;- ncol(d) ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;) for(i in 1:N_col) { x &amp;lt;- d[,i] p &amp;lt;- ggplot(data.</description>
+    </item>
+    
+    <item>
+      <title>Rstan Wonderful R-(3)</title>
+      <link>https://winterwang.github.io/post/rstan-wonderful-r3/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
+      <description>多重回歸 multiple regression 本章使用的數據，大學生出勤記錄也是架空的數據。
+有大學記錄了50名大學生的出勤狀況：
+A,Score,Y 0,69,0.286 1,145,0.196 0,125,0.261 1,86,0.109 1,158,0.23 0,133,0.35 0,111,0.33 1,147,0.194 0,146,0.413 0,145,0.36 1,141,0.225 0,137,0.423 1,118,0.186 0,111,0.287 ... 0,99,0.268 1,99,0.234 其中，
+ \(A\): 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工） \(Score\): 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習) \(Y\): 是該學生一年內的出勤率  在本次分析範例中，把\(Y\)出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。
+Step 1. 確認數據分佈 # The following figure codes come from the authors website: # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R library(ggplot2) library(GGally) set.seed(123) d &amp;lt;- read.csv(file=&amp;#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&amp;#39;, header = T) d$A &amp;lt;- as.factor(d$A) N_col &amp;lt;- ncol(d) ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;) for(i in 1:N_col) { x &amp;lt;- d[,i] p &amp;lt;- ggplot(data.</description>
+    </item>
     
     <item>
       <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>

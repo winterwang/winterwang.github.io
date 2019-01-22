@@ -11,7 +11,7 @@
   <meta name="description" content="Assistant Professor">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/2016-3-1/">
+  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/rstan-wonderful-r3/">
 
   
   
@@ -70,24 +70,24 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/2016-3-1/">
+  <link rel="canonical" href="https://winterwang.github.io/post/rstan-wonderful-r3/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/2016-3-1/">
-  <meta property="og:title" content="每逢佳节胖三斤 | Be ambitious">
-  <meta property="og:description" content="">
+  <meta property="og:url" content="https://winterwang.github.io/post/rstan-wonderful-r3/">
+  <meta property="og:title" content="Rstan Wonderful R-(3) | Be ambitious">
+  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2016-03-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-01-22T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2016-03-01T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2019-01-22T00:00:00&#43;00:00">
   
 
-  <title>每逢佳节胖三斤 | Be ambitious</title>
+  
+
+  <title>Rstan Wonderful R-(3) | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -248,11 +248,16 @@
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
+<div class="article-header">
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+</div>
+
 
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">每逢佳节胖三斤</h1>
+      <h1 itemprop="name">Rstan Wonderful R-(3)</h1>
 
       
 
@@ -260,8 +265,8 @@
 
   <span class="article-date">
     
-    <time datetime="2016-03-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Tue, Mar 1, 2016
+    <time datetime="2019-01-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Tue, Jan 22, 2019
     </time>
   </span>
 
@@ -275,7 +280,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/2016-3-1/#disqus_thread"></a>
+  <a href="https://winterwang.github.io/post/rstan-wonderful-r3/#disqus_thread"></a>
   
 
   
@@ -285,7 +290,13 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/dictation">dictation</a
+    <a href="/categories/bayesian">Bayesian</a
+    >, 
+    
+    <a href="/categories/r-techniques">R techniques</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
     >
     
   </span>
@@ -298,35 +309,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e6%af%8f%e9%80%a2%e4%bd%b3%e8%8a%82%e8%83%96%e4%b8%89%e6%96%a4&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-3-1%2f"
+         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R-%283%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-3-1%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-3-1%2f&amp;title=%e6%af%8f%e9%80%a2%e4%bd%b3%e8%8a%82%e8%83%96%e4%b8%89%e6%96%a4"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f&amp;title=Rstan%20Wonderful%20R-%283%29"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-3-1%2f&amp;title=%e6%af%8f%e9%80%a2%e4%bd%b3%e8%8a%82%e8%83%96%e4%b8%89%e6%96%a4"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f&amp;title=Rstan%20Wonderful%20R-%283%29"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e6%af%8f%e9%80%a2%e4%bd%b3%e8%8a%82%e8%83%96%e4%b8%89%e6%96%a4&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-3-1%2f">
+         href="mailto:?subject=Rstan%20Wonderful%20R-%283%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -342,57 +353,121 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p><strong><a href="http://www.scientificamerican.com/podcast/episode/super-bowl-sunday-s-food-needs-work/" target="_blank">Super Bowl Sunday&rsquo;s Food Needs Work</a></strong></p>
 
-<p><audio src="/mp3/160206SuperBowlSnax.mp3" controls="controls">
-Your browser does not support the audio element.
-你的瀏覽器不支持音頻播放。請使用chrome科學上網。
-</audio></p>
-
-<p>听写于：2016-3-1 | 正确率：88%</p>
-
-<!--我的听写开始-->
-
-<p>提示：<span class="diff_off">红色</span>：错误单词，<span class="diff_add">绿色</span>：补上正确单词，<span class="diff_alert">黄色</span>：纠正大小写与标点                       <p class="linetext">It&rsquo;s nearly game day <span class="diff_alert">,</span> and<span class="diff_alert">,</span> if <span class="diff_off">you</span> <span class="diff_off">are</span> <span class="diff_add">you&rsquo;re</span> a fan, you&rsquo;ve already set aside your <span class="diff_off">roomy</span> <span class="diff_off">sweat</span> <span class="diff_off">pants</span><span class="diff_alert">,</span> <span class="diff_add">roomiest</span> <span class="diff_add">sweatpants</span> and your own personal Family-size bag of Nacho Cheese Doritos. But if <span class="diff_off">you</span> <span class="diff_off">are</span> <span class="diff_add">you&rsquo;re</span> <span class="diff_add">at</span> all <span class="diff_off">concern</span> <span class="diff_add">concerned</span> about <span class="diff_off">over</span> <span class="diff_off">indulging</span><span class="diff_alert">,</span> <span class="diff_add">overindulging</span> <span class="diff_add">-</span> which<span class="diff_alert">,</span> if you live in America<span class="diff_alert">.</span> <span class="diff_alert">,</span> <span class="diff_alert" title="You ">you </span>probably should be <span class="diff_alert">.</span> <span class="diff_add">-</span> <span class="diff_alert" title="You ">you </span>might take a tip from a public health advocate <span class="diff_off">from</span> <span class="diff_add">at</span> the New York City Food Policy Center. <span class="diff_off">Charlse</span> <span class="diff_add">Charles</span> Platkin says that one way to avoid <span class="diff_off">over</span> <span class="diff_off">doing</span> <span class="diff_add">overdoing</span> it <span class="diff_alert">,</span> is to consider how much <span class="diff_off">you&rsquo;ve</span> <span class="diff_add">you&rsquo;d</span> <span class="diff_add">have</span> to exercise to work off what you consume. </p><p class="linetext">So <span class="diff_alert">,</span> to prepare for Super Bowl Sunday <span class="diff_alert">,</span> <span class="diff_add">-</span> the second biggest day for food consumption in the U. S. <span class="diff_add">-</span> Platkin crunched the numbers for some of our favorite <span class="diff_alert" title="couch side" >couch-side</span>  snacks. And <span class="diff_off">he</span> <span class="diff_off">has</span> <span class="diff_add">he&rsquo;s</span> helpfully converted them <span class="diff_off">to</span> <span class="diff_alert" title="football themed" >football-themed</span> <span class="diff_add">into</span>  exercise <span class="diff_off">equivalence</span><span class="diff_add">equivalents</span>. </p><p class="linetext">So, for example, two slices of Domino&rsquo;s ultimate pepperoni hand-tossed crust pizza would require running nearly 11,000 yards <span class="diff_alert">.</span> <span class="diff_add">-</span> <span class="diff_alert" title="That's ">that&rsquo;s </span>109 football fields <span class="diff_add">-</span> at a speed of <span class="diff_off">5</span> <span class="diff_add">five</span> miles per hour. </p><p class="linetext">Two KFC original <span class="diff_off">drum</span> <span class="diff_off">sticks</span><span class="diff_alert">,</span> <span class="diff_add">drumsticks</span><span class="diff_alert">?</span> <span class="diff_alert" title="just ">Just </span>do the wave <span class="diff_alert">,</span> <span class="diff_alert" title="1561 ">1,561 </span>times. </p><p class="linetext">To pay for a single potato chip loaded with French onion dip you&rsquo;d have to sing along with Coldplay and Beyonce for 30 minutes during <span class="diff_off">the</span> <span class="diff_off">half</span> <span class="diff_off">time</span><span class="diff_add">halftime</span>. </p><p class="linetext"><span class="diff_add">And</span> <span class="diff_alert" title="Even ">even </span>five pretzels <span class="diff_alert">,</span> <span class="diff_add">-</span> yes, five <span class="diff_off">pure</span> <span class="diff_add">puny</span> little pretzels out of <span class="diff_off">the</span> <span class="diff_add">a</span> bag <span class="diff_add">-</span> would take six-and-a-half minutes of jumping up and down whenever your team scores a <span class="diff_off">touch</span> <span class="diff_off">down</span><span class="diff_add">touchdown</span>. </p><p class="linetext">Which means that if you want to avoid post-bowl paunch, your team better bring it. Either that or just <span class="diff_off">a</span> <span class="diff_off">dip</span> <span class="diff_off">of</span> <span class="diff_add">stick</span> <span class="diff_add">with</span> <span class="diff_add">the</span> celery sticks. And pass on the dip, if you want to maintain the current size of your <span class="diff_off">N</span> <span class="diff_add">end</span> zone.</p>
-<!--我的听写结束--></p>
-
+<div id="-multiple-regression" class="section level1">
+<h1>多重回歸 multiple regression</h1>
+<p>本章使用的數據，大學生出勤記錄也是<a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt">架空的數據</a>。</p>
+<p>有大學記錄了50名大學生的出勤狀況：</p>
+<pre><code>A,Score,Y
+0,69,0.286
+1,145,0.196
+0,125,0.261
+1,86,0.109
+1,158,0.23
+0,133,0.35
+0,111,0.33
+1,147,0.194
+0,146,0.413
+0,145,0.36
+1,141,0.225
+0,137,0.423
+1,118,0.186
+0,111,0.287
+...
+0,99,0.268
+1,99,0.234</code></pre>
+<p>其中，</p>
 <ul>
-<li><em>Words</em> worth to be remembered:
-
-<ul>
-<li>roomy <code>adj. 广阔的，宽敞的，宽大的</code></li>
-<li>sweatpant <code>n. 【美】宽松长运动裤</code></li>
-<li>family-size <code>adj. 适合(足够)全家用的</code></li>
-<li>overindulge <code>v. [I] 溺爱，过分放任，过分沉溺（与in连用） [T] 过度沉溺，放纵，过分纵情（于）（与in连用）</code></li>
-<li>advocate <code>n. 拥护者，提倡者；辩护律师；谋利益者 v. 拥护，提倡</code></li>
-<li><strong>work off</strong> <code>phr. 宣泄，释放，排解</code></li>
-<li>drumstick <code>n. 下段鸡腿肉；鼓槌</code></li>
-<li>pretzel <code>椒盐脆饼干</code></li>
-<li>puny <code>adj. 微小的,弱小的,微不足道的</code></li>
-<li>touchdown <code>n. 触地,触地得分,着地,降落</code></li>
-</ul></li>
+<li><span class="math inline">\(A\)</span>: 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工）</li>
+<li><span class="math inline">\(Score\)</span>: 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習)</li>
+<li><span class="math inline">\(Y\)</span>: 是該學生一年內的出勤率</li>
 </ul>
+<p>在本次分析範例中，把<span class="math inline">\(Y\)</span>出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。</p>
+<div id="step-1.-" class="section level2">
+<h2>Step 1. 確認數據分佈</h2>
+<pre class="r"><code># The following figure codes come from the authors website: 
+# https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R
+library(ggplot2)
+library(GGally)
 
-<h2 id="譯文">譯文：</h2>
+set.seed(123)
+d &lt;- read.csv(file=&#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&#39;, header = T)
+d$A &lt;- as.factor(d$A)
 
-<ul>
-<li><em>“()”中的是我認爲正確的翻譯</em></li>
-<li><em><strong>黑體字</strong>是我認爲翻譯得好的部分</em></li>
-</ul>
+N_col &lt;- ncol(d)
+ggp &lt;- ggpairs(d, upper=&#39;blank&#39;, diag=&#39;blank&#39;, lower=&#39;blank&#39;)
 
-<p>这就算是个全民游戏日了,如果你是它的粉丝的话,恐怕已经准备好居家服和家庭装芝士玉米立体脆.但是,如果你还担心放纵过渡的话——如果你住在美国，你或许应该——应该从纽约城市食品政策研究中心的公众健康宣讲会上找点儿建议。Charles Platkin建议，有一种方法来避免过度饮食就是先考虑一下你吃这些东西后需要做多少运动来消耗掉所含的热量。</p>
+for(i in 1:N_col) {
+  x &lt;- d[,i]
+  p &lt;- ggplot(data.frame(x, A=d$A), aes(x))
+  p &lt;- p + theme_bw(base_size=14)
+  p &lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+  if (class(x) == &#39;factor&#39;) {
+    p &lt;- p + geom_bar(aes(fill=A), color=&#39;grey5&#39;)
+  } else {
+    bw &lt;- (max(x)-min(x))/10
+    p &lt;- p + geom_histogram(binwidth=bw, aes(fill=A), color=&#39;grey5&#39;) #繪製柱狀圖
+    p &lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&#39;density&#39;) #添加概率密度曲線
+  }
+  p &lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=colnames(d)[i]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  p &lt;- p + scale_fill_manual(values=alpha(c(&#39;white&#39;, &#39;grey40&#39;), 0.5))
+  ggp &lt;- putPlot(ggp, p, i, i)
+}
 
-<p>所以，为了准备周日的超级杯——美国食品消费第二大高峰日——Charles Platkin尝试了大量的人们喜爱的零食小吃。并且，他将其所含热量转换为足球运动背景下的一些等量的运动项目。</p>
+zcolat &lt;- seq(-1, 1, length=81)
+zcolre &lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
 
-<p>所以，比如，两角多米诺旗下的全手工意大利辣肠口味的皮萨所含热量大概需要跑11000吗——也就是大概109个足球场 ——速度需要保持每小时5英里。</p>
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &lt;- as.numeric(d[,i])
+    y &lt;- as.numeric(d[,j])
+    r &lt;- cor(x, y, method=&#39;spearman&#39;, use=&#39;pairwise.complete.obs&#39;)
+    zcol &lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &lt;- ifelse(abs(r) &lt; 0.4, &#39;grey20&#39;, &#39;white&#39;)
+    ell &lt;- ellipse::ellipse(r, level=0.95, type=&#39;l&#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &lt;- putPlot(ggp, p, i, j)
+  }
+}
 
-<p>那么两块肯德基原味鸡块呐? 就随机摆动1561次吧。</p>
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &lt;- d[,j]
+    y &lt;- d[,i]
+    p &lt;- ggplot(data.frame(x, y, gr=d$A), aes(x=x, y=y, fill=gr, shape=gr))
+    p &lt;- p + theme_bw(base_size=14)
+    p &lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+    if (class(x) == &#39;factor&#39;) {
+      p &lt;- p + geom_boxplot(aes(group=x), alpha=3/6, outlier.size=0, fill=&#39;white&#39;)
+      p &lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
+    } else {
+      p &lt;- p + geom_point(size=2)
+    }
+    p &lt;- p + scale_shape_manual(values=c(21, 24))
+    p &lt;- p + scale_fill_manual(values=alpha(c(&#39;white&#39;, &#39;grey40&#39;), 0.5))
+    ggp &lt;- putPlot(ggp, p, i, j)
+  }
+}
 
-<p>为了消耗一片沾有法式洋葱酱料的薯片，你必须要在中场休息的时候跟随酷玩乐队和比昂斯唱满30分钟。</p>
-
-<p>而且仅仅5片椒盐卷饼饼干——是的，一袋里就那么很小的饼干——也需要你蹦蹦跳跳6..5分钟，不管你支持的队伍是否得分晋级。</p>
-
-<p>也就是说吧，如果你想避免看过比赛之后胖三斤，你最好接受这些建议。或者就用芹菜棒代替那些零食好啦。而且如果你想保持当前的各种身体指数，那就必须还不能有任何酱料哦。</p>
+ggp</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step1"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step1-1.png" alt="三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。" width="80%" />
+<p class="caption">
+Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。
+</p>
+</div>
+<pre class="r"><code># png(file=&#39;output/fig5-1.png&#39;, w=1600, h=1600, res=300)
+# print(ggp, left=0.3, bottom=0.3)
+# dev.off()</code></pre>
+</div>
+</div>
 
       </div>
 
@@ -401,13 +476,9 @@ Your browser does not support the audio element.
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/dictation">dictation</a>
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/english-learning">English Learning</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/listening">Listening</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/60s-science">60s Science</a>
+  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
   
 </div>
 
@@ -425,15 +496,15 @@ Your browser does not support the audio element.
   <h3>Related</h3>
   <ul>
     
-    <li><a href="/post/2016-2-25/">甜菜汁的好处</a></li>
+    <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
     
-    <li><a href="/post/2016-2-22/">枪支自杀与公共健康</a></li>
+    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
     
-    <li><a href="/post/2016-2-18/">抗氧化物的实际功效还不明</a></li>
+    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
     
-    <li><a href="/post/2016-2-15/">調整飲食習慣永遠都不晚</a></li>
+    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
     
-    <li><a href="/post/2016-2-2/">咖啡机的隐患</a></li>
+    <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
     
   </ul>
 </div>
@@ -444,13 +515,10 @@ Your browser does not support the audio element.
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/2016-2-25/"><span
-      aria-hidden="true">&larr;</span> 甜菜汁的好处</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/rstan-wonderful-r3/"><span
+      aria-hidden="true">&larr;</span> Rstan Wonderful R-(3)</a></li>
     
 
-    
-    <li class="next"><a href="https://winterwang.github.io/post/2016-3-4/">磕药是种流行病 <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
