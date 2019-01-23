@@ -273,7 +273,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    14 min read
   </span>
   
 
@@ -469,8 +469,8 @@ Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的�
 </div>
 <div id="step-2.-" class="section level2">
 <h2>Step 2. 寫下數學模型</h2>
-<p>Model can be written as (Model5-1):
-<span class="math display">\[
+<p>Model can be written as (Model5-1):</p>
+<p><span class="math display">\[
 \begin{array}{l}
 Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;  n = 1,2,\dots,N \\
 \varepsilon[n] \sim \text{Normal}(0, \sigma) &amp; n = 1,2,\dots,N \\ 
@@ -483,10 +483,387 @@ Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;  n = 1,2,\dots,N
 <li><span class="math inline">\(b_2\)</span> 是<span class="math inline">\(Score\)</span>保持不變時，<span class="math inline">\(A\)</span>從<span class="math inline">\(0\rightarrow 1\)</span>時出勤率的變化(增加，或者減少)；</li>
 <li><span class="math inline">\(b_3\)</span> 是<span class="math inline">\(A\)</span>保持不變時，<span class="math inline">\(Score\)</span>增加一個單位時出勤率的變化(增加，或者減少)。</li>
 </ul>
-<p>Model can also be written as (Model5-2):
-<span class="math display">\[
+<p>Model can also be written as (Model5-2):</p>
+<p><span class="math display">\[
 \begin{array}{l}
 Y[n]       \sim \text{Normal}(b_1 + b_2A[n] + b_3Score[n], \sigma) &amp;  n = 1,2,\dots,N \\
+\end{array}
+\]</span></p>
+<p>如果認爲<span class="math inline">\(A\)</span>和<span class="math inline">\(Score\)</span>所能預測的出勤率有一個基礎的均值 <span class="math inline">\(\mu[n]\)</span>，剩下的每名學生的出勤率服從這個均值和標準差爲 <span class="math inline">\(\sigma\)</span> 的正態分佈，那麼模型又可以繼續改寫成爲下面的 Model 5-3:</p>
+<p><span class="math display">\[
+\begin{array}{l}
+\mu[n]        = b_1 + b_2A[n] + b_3Sore[n] &amp;  n = 1,2,\dots,N \\
+Y[n] \sim \text{Normal}(\mu[n], \sigma) &amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]</span></p>
+<p>下面的 Stan 模型是按照 Model 5-3 寫的，它的模型參數有四個，<span class="math inline">\(b_1, b_2, b_3, \sigma\)</span>，<span class="math inline">\(\mu[n]\)</span>通過 <code>transformed parameter</code> 計算獲得:</p>
+<pre><code>data {
+  int N; 
+  int&lt;lower=0, upper=1&gt; A[N];
+  real&lt;lower=0, upper=1&gt; Score[N];
+  real&lt;lower=0, upper=1&gt; Y[N];
+}
+
+parameters {
+  real b1; 
+  real b2;
+  real b3;
+  real&lt;lower=0&gt; sigma;
+}
+
+transformed parameters {
+  real mu[N];
+  for (n in 1:N) {
+    mu[n] = b1 + b2*A[n] + b3*Score[n];
+  }
+}
+
+model {
+  for (n in 1:N) {
+    Y[n] ~ normal(mu[n], sigma);
+  }
+}
+
+generated quantities {
+  real y_pred[N];
+  for (n in 1:N) {
+    y_pred[n] = normal_rng(mu[n], sigma);
+  }
+}
+</code></pre>
+<p>下面的 R 代碼用來實現對上面 Stan 模型的擬合:</p>
+<pre class="r"><code>library(rstan)
+d &lt;- read.csv(file=&#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&#39;, header = T)
+data &lt;- list(N=nrow(d), A=d$A, Score=d$Score/200, Y=d$Y)
+fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</code></pre>
+<pre><code>## 
+## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 3.7e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.37 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.134662 seconds (Warm-up)
+## Chain 1:                0.131457 seconds (Sampling)
+## Chain 1:                0.266119 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 7e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.140699 seconds (Warm-up)
+## Chain 2:                0.155449 seconds (Sampling)
+## Chain 2:                0.296148 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 7e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.133523 seconds (Warm-up)
+## Chain 3:                0.131937 seconds (Sampling)
+## Chain 3:                0.26546 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 7e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.127764 seconds (Warm-up)
+## Chain 4:                0.118133 seconds (Sampling)
+## Chain 4:                0.245897 seconds (Total)
+## Chain 4:</code></pre>
+<pre class="r"><code>fit</code></pre>
+<pre><code>## Inference for Stan model: model5-3.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##              mean se_mean   sd   2.5%    25%    50%    75%  97.5% n_eff
+## b1           0.12    0.00 0.03   0.06   0.10   0.12   0.15   0.19  1844
+## b2          -0.14    0.00 0.01  -0.17  -0.15  -0.14  -0.13  -0.11  2973
+## b3           0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.43  1880
+## sigma        0.05    0.00 0.01   0.04   0.05   0.05   0.05   0.06  2478
+## mu[1]        0.24    0.00 0.02   0.20   0.22   0.24   0.25   0.27  1996
+## mu[2]        0.22    0.00 0.01   0.19   0.21   0.22   0.22   0.24  2809
+## mu[3]        0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.34  3531
+## mu[4]        0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2784
+## mu[5]        0.24    0.00 0.01   0.21   0.23   0.24   0.25   0.27  2468
+## mu[6]        0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3463
+## mu[7]        0.30    0.00 0.01   0.29   0.30   0.30   0.31   0.32  3039
+## mu[8]        0.22    0.00 0.01   0.19   0.21   0.22   0.23   0.24  2747
+## mu[9]        0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  3046
+## mu[10]       0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  3080
+## mu[11]       0.21    0.00 0.01   0.18   0.20   0.21   0.22   0.23  2942
+## mu[12]       0.35    0.00 0.01   0.33   0.34   0.35   0.35   0.37  3351
+## mu[13]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  3511
+## mu[14]       0.30    0.00 0.01   0.29   0.30   0.30   0.31   0.32  3039
+## mu[15]       0.30    0.00 0.01   0.28   0.29   0.30   0.31   0.32  2943
+## mu[16]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  3138
+## mu[17]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  3183
+## mu[18]       0.26    0.00 0.01   0.23   0.25   0.26   0.27   0.28  2136
+## mu[19]       0.42    0.00 0.02   0.39   0.41   0.42   0.44   0.46  2308
+## mu[20]       0.23    0.00 0.01   0.20   0.22   0.23   0.24   0.26  2511
+## mu[21]       0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2784
+## mu[22]       0.16    0.00 0.01   0.13   0.15   0.15   0.16   0.18  3387
+## mu[23]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.18  3337
+## mu[24]       0.21    0.00 0.01   0.19   0.20   0.21   0.22   0.24  2874
+## mu[25]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  3508
+## mu[26]       0.19    0.00 0.01   0.16   0.18   0.19   0.20   0.21  3373
+## mu[27]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.33  3393
+## mu[28]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.33  3393
+## mu[29]       0.38    0.00 0.01   0.36   0.38   0.38   0.39   0.41  2639
+## mu[30]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  3135
+## mu[31]       0.25    0.00 0.02   0.22   0.24   0.25   0.26   0.28  2340
+## mu[32]       0.10    0.00 0.02   0.06   0.09   0.10   0.11   0.13  2546
+## mu[33]       0.20    0.00 0.01   0.18   0.20   0.20   0.21   0.23  3046
+## mu[34]       0.18    0.00 0.01   0.16   0.17   0.18   0.19   0.20  3463
+## mu[35]       0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.35  3538
+## mu[36]       0.34    0.00 0.01   0.32   0.33   0.34   0.34   0.35  3504
+## mu[37]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.17  3310
+## mu[38]       0.30    0.00 0.01   0.28   0.30   0.30   0.31   0.32  2991
+## mu[39]       0.27    0.00 0.01   0.24   0.26   0.27   0.28   0.29  2259
+## mu[40]       0.27    0.00 0.01   0.24   0.26   0.27   0.27   0.29  2239
+## mu[41]       0.33    0.00 0.01   0.31   0.33   0.33   0.34   0.35  3530
+## mu[42]       0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3463
+## mu[43]       0.32    0.00 0.01   0.30   0.31   0.32   0.33   0.34  3482
+## mu[44]       0.36    0.00 0.01   0.34   0.36   0.36   0.37   0.39  2981
+## mu[45]       0.42    0.00 0.02   0.38   0.41   0.42   0.43   0.46  2336
+## mu[46]       0.29    0.00 0.01   0.27   0.29   0.29   0.30   0.31  2760
+## mu[47]       0.21    0.00 0.02   0.17   0.19   0.21   0.22   0.24  1907
+## mu[48]       0.37    0.00 0.01   0.34   0.36   0.37   0.38   0.39  2919
+## mu[49]       0.28    0.00 0.01   0.26   0.28   0.28   0.29   0.30  2527
+## mu[50]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  3138
+## y_pred[1]    0.24    0.00 0.06   0.13   0.20   0.24   0.27   0.34  3503
+## y_pred[2]    0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3779
+## y_pred[3]    0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  3944
+## y_pred[4]    0.12    0.00 0.05   0.01   0.08   0.12   0.16   0.23  3762
+## y_pred[5]    0.24    0.00 0.05   0.13   0.20   0.24   0.27   0.34  4038
+## y_pred[6]    0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.44  3457
+## y_pred[7]    0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  4030
+## y_pred[8]    0.22    0.00 0.05   0.11   0.18   0.22   0.26   0.33  3217
+## y_pred[9]    0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  3869
+## y_pred[10]   0.36    0.00 0.05   0.26   0.32   0.36   0.39   0.46  3884
+## y_pred[11]   0.21    0.00 0.05   0.11   0.17   0.21   0.25   0.31  3871
+## y_pred[12]   0.34    0.00 0.05   0.24   0.31   0.34   0.38   0.45  3866
+## y_pred[13]   0.17    0.00 0.05   0.07   0.13   0.17   0.21   0.27  4064
+## y_pred[14]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3869
+## y_pred[15]   0.30    0.00 0.05   0.20   0.26   0.30   0.33   0.40  3929
+## y_pred[16]   0.14    0.00 0.05   0.03   0.11   0.14   0.18   0.25  3900
+## y_pred[17]   0.31    0.00 0.05   0.21   0.27   0.31   0.35   0.41  4048
+## y_pred[18]   0.26    0.00 0.05   0.15   0.22   0.26   0.29   0.36  3705
+## y_pred[19]   0.42    0.00 0.05   0.32   0.39   0.42   0.46   0.53  3474
+## y_pred[20]   0.23    0.00 0.05   0.13   0.20   0.23   0.27   0.34  3792
+## y_pred[21]   0.12    0.00 0.05   0.01   0.08   0.12   0.15   0.23  3581
+## y_pred[22]   0.16    0.00 0.05   0.05   0.12   0.16   0.19   0.26  4075
+## y_pred[23]   0.15    0.00 0.05   0.04   0.12   0.15   0.19   0.26  3975
+## y_pred[24]   0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3489
+## y_pred[25]   0.17    0.00 0.05   0.06   0.14   0.17   0.20   0.27  3938
+## y_pred[26]   0.19    0.00 0.05   0.08   0.15   0.19   0.22   0.29  3955
+## y_pred[27]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  4075
+## y_pred[28]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  4110
+## y_pred[29]   0.38    0.00 0.05   0.28   0.35   0.38   0.42   0.49  3631
+## y_pred[30]   0.31    0.00 0.05   0.20   0.27   0.31   0.34   0.41  3865
+## y_pred[31]   0.25    0.00 0.05   0.14   0.21   0.25   0.28   0.35  3818
+## y_pred[32]   0.10    0.00 0.05  -0.01   0.06   0.10   0.14   0.20  3857
+## y_pred[33]   0.20    0.00 0.05   0.10   0.17   0.20   0.24   0.31  3304
+## y_pred[34]   0.18    0.00 0.05   0.08   0.14   0.18   0.22   0.28  3946
+## y_pred[35]   0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  4182
+## y_pred[36]   0.34    0.00 0.05   0.23   0.30   0.34   0.37   0.44  4022
+## y_pred[37]   0.15    0.00 0.05   0.05   0.12   0.15   0.19   0.25  3719
+## y_pred[38]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3655
+## y_pred[39]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3522
+## y_pred[40]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3742
+## y_pred[41]   0.33    0.00 0.05   0.23   0.30   0.33   0.37   0.44  3979
+## y_pred[42]   0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.44  3914
+## y_pred[43]   0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.43  4005
+## y_pred[44]   0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  3818
+## y_pred[45]   0.42    0.00 0.05   0.31   0.38   0.42   0.45   0.53  3443
+## y_pred[46]   0.29    0.00 0.05   0.19   0.26   0.29   0.33   0.40  3839
+## y_pred[47]   0.21    0.00 0.06   0.09   0.17   0.21   0.24   0.31  3611
+## y_pred[48]   0.37    0.00 0.05   0.26   0.33   0.37   0.40   0.47  3784
+## y_pred[49]   0.28    0.00 0.05   0.18   0.25   0.28   0.32   0.39  3745
+## y_pred[50]   0.14    0.00 0.05   0.03   0.10   0.14   0.17   0.24  3701
+## lp__       120.94    0.04 1.39 117.48 120.23 121.24 121.96 122.70  1407
+##            Rhat
+## b1            1
+## b2            1
+## b3            1
+## sigma         1
+## mu[1]         1
+## mu[2]         1
+## mu[3]         1
+## mu[4]         1
+## mu[5]         1
+## mu[6]         1
+## mu[7]         1
+## mu[8]         1
+## mu[9]         1
+## mu[10]        1
+## mu[11]        1
+## mu[12]        1
+## mu[13]        1
+## mu[14]        1
+## mu[15]        1
+## mu[16]        1
+## mu[17]        1
+## mu[18]        1
+## mu[19]        1
+## mu[20]        1
+## mu[21]        1
+## mu[22]        1
+## mu[23]        1
+## mu[24]        1
+## mu[25]        1
+## mu[26]        1
+## mu[27]        1
+## mu[28]        1
+## mu[29]        1
+## mu[30]        1
+## mu[31]        1
+## mu[32]        1
+## mu[33]        1
+## mu[34]        1
+## mu[35]        1
+## mu[36]        1
+## mu[37]        1
+## mu[38]        1
+## mu[39]        1
+## mu[40]        1
+## mu[41]        1
+## mu[42]        1
+## mu[43]        1
+## mu[44]        1
+## mu[45]        1
+## mu[46]        1
+## mu[47]        1
+## mu[48]        1
+## mu[49]        1
+## mu[50]        1
+## y_pred[1]     1
+## y_pred[2]     1
+## y_pred[3]     1
+## y_pred[4]     1
+## y_pred[5]     1
+## y_pred[6]     1
+## y_pred[7]     1
+## y_pred[8]     1
+## y_pred[9]     1
+## y_pred[10]    1
+## y_pred[11]    1
+## y_pred[12]    1
+## y_pred[13]    1
+## y_pred[14]    1
+## y_pred[15]    1
+## y_pred[16]    1
+## y_pred[17]    1
+## y_pred[18]    1
+## y_pred[19]    1
+## y_pred[20]    1
+## y_pred[21]    1
+## y_pred[22]    1
+## y_pred[23]    1
+## y_pred[24]    1
+## y_pred[25]    1
+## y_pred[26]    1
+## y_pred[27]    1
+## y_pred[28]    1
+## y_pred[29]    1
+## y_pred[30]    1
+## y_pred[31]    1
+## y_pred[32]    1
+## y_pred[33]    1
+## y_pred[34]    1
+## y_pred[35]    1
+## y_pred[36]    1
+## y_pred[37]    1
+## y_pred[38]    1
+## y_pred[39]    1
+## y_pred[40]    1
+## y_pred[41]    1
+## y_pred[42]    1
+## y_pred[43]    1
+## y_pred[44]    1
+## y_pred[45]    1
+## y_pred[46]    1
+## y_pred[47]    1
+## y_pred[48]    1
+## y_pred[49]    1
+## y_pred[50]    1
+## lp__          1
+## 
+## Samples were drawn using NUTS(diag_e) at Thu Jan 24 00:02:26 2019.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).</code></pre>
+<p>上述代碼中值得注意的是我們對 <span class="math inline">\(Score\)</span> 進行了全部除以 <span class="math inline">\(200\)</span> 的數據縮放調整。這樣有助於我們的模型在進行 MCMC 計算時加速其達到收斂時所需要的時間。</p>
+<p>把計算獲得的事後模型參數平均值代入模型 Model 5-3:</p>
+<p><span class="math display">\[
+\begin{array}{l}
+\mu[n]        = 0.12 - 0.14A[n] + 0.32Sore[n] &amp;  n = 1,2,\dots,N \\
+Y[n] \sim \text{Normal}(\mu[n], 0.05) &amp; n = 1,2,\dots,N \\ 
 \end{array}
 \]</span></p>
 </div>
