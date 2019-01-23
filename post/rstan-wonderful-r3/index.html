@@ -469,13 +469,12 @@ Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的�
 </div>
 <div id="step-2.-" class="section level2">
 <h2>Step 2. 寫下數學模型</h2>
-<p>Model can be written as:
+<p>Model can be written as (Model5-1):
 <span class="math display">\[
 \begin{array}{l}
 Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;  n = 1,2,\dots,N \\
 \varepsilon[n] \sim \text{Normal}(0, \sigma) &amp; n = 1,2,\dots,N \\ 
 \end{array}
-(\#eq:Model5_1)
 \]</span></p>
 <p>其中，</p>
 <ul>
@@ -484,12 +483,11 @@ Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;  n = 1,2,\dots,N
 <li><span class="math inline">\(b_2\)</span> 是<span class="math inline">\(Score\)</span>保持不變時，<span class="math inline">\(A\)</span>從<span class="math inline">\(0\rightarrow 1\)</span>時出勤率的變化(增加，或者減少)；</li>
 <li><span class="math inline">\(b_3\)</span> 是<span class="math inline">\(A\)</span>保持不變時，<span class="math inline">\(Score\)</span>增加一個單位時出勤率的變化(增加，或者減少)。</li>
 </ul>
-<p>Model can also be written as:
+<p>Model can also be written as (Model5-2):
 <span class="math display">\[
 \begin{array}{l}
 Y[n]       \sim \text{Normal}(b_1 + b_2A[n] + b_3Score[n], \sigma) &amp;  n = 1,2,\dots,N \\
 \end{array}
-(\#eq:Model5_2)
 \]</span></p>
 </div>
 </div>

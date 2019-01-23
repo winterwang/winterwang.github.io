@@ -134,13 +134,12 @@ Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的�
 &lt;/div&gt;
 &lt;div id=&#34;step-2.-&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Step 2. 寫下數學模型&lt;/h2&gt;
-&lt;p&gt;Model can be written as:
+&lt;p&gt;Model can be written as (Model5-1):
 &lt;span class=&#34;math display&#34;&gt;\[
 \begin{array}{l}
 Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;amp;  n = 1,2,\dots,N \\
 \varepsilon[n] \sim \text{Normal}(0, \sigma) &amp;amp; n = 1,2,\dots,N \\ 
 \end{array}
-(\#eq:Model5_1)
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;其中，&lt;/p&gt;
 &lt;ul&gt;
@@ -149,12 +148,11 @@ Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;amp;  n = 1,2,\do
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(b_2\)&lt;/span&gt; 是&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;保持不變時，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;從&lt;span class=&#34;math inline&#34;&gt;\(0\rightarrow 1\)&lt;/span&gt;時出勤率的變化(增加，或者減少)；&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(b_3\)&lt;/span&gt; 是&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;保持不變時，&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;增加一個單位時出勤率的變化(增加，或者減少)。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Model can also be written as:
+&lt;p&gt;Model can also be written as (Model5-2):
 &lt;span class=&#34;math display&#34;&gt;\[
 \begin{array}{l}
 Y[n]       \sim \text{Normal}(b_1 + b_2A[n] + b_3Score[n], \sigma) &amp;amp;  n = 1,2,\dots,N \\
 \end{array}
-(\#eq:Model5_2)
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
