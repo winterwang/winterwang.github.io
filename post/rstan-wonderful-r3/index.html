@@ -858,7 +858,7 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
-<p>上述代碼中值得注意的是我們對 <span class="math inline">\(Score\)</span> 進行了全部除以 <span class="math inline">\(200\)</span> 的數據縮放調整。這樣有助於我們的模型在進行 MCMC 計算時加速其達到收斂時所需要的時間。</p>
+<p>上述代碼中值得注意的是我們對 <span class="math inline">\(Score\)</span> 進行了全部除以 <span class="math inline">\(200\)</span> 的數據縮放調整 (scaling)。這樣有助於我們的模型在進行 MCMC 計算時加速其達到收斂時所需要的時間。</p>
 <p>把計算獲得的事後模型參數平均值代入模型 Model 5-3:</p>
 <p><span class="math display">\[
 \begin{array}{l}
@@ -866,6 +866,22 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 Y[n] \sim \text{Normal}(\mu[n], 0.05) &amp; n = 1,2,\dots,N \\ 
 \end{array}
 \]</span></p>
+<p>從輸出的結果報告來看，所有的 <code>Rhat</code> 都小於1.1，可以認爲採樣已經達到收斂效果，再來確認一下軌跡圖：</p>
+<pre class="r"><code>library(bayesplot)
+
+color_scheme_set(&quot;mix-brightblue-gray&quot;)
+
+posterior2 &lt;- rstan::extract(fit, inc_warmup = TRUE, permuted = FALSE)
+
+p &lt;- mcmc_trace(posterior2, n_warmup = 0, pars = c(&quot;b1&quot;, &quot;b2&quot;, &quot;b3&quot;, &quot;sigma&quot;, &quot;lp__&quot;),
+                facet_args = list(nrow = 2, labeller = label_parsed))
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step53"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step53-1.png" alt="用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。" width="80%" />
+<p class="caption">
+Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
+</p>
+</div>
 </div>
 </div>
 
