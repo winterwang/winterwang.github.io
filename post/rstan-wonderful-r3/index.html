@@ -273,7 +273,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    15 min read
+    18 min read
   </span>
   
 
@@ -914,8 +914,8 @@ for (i in 1:N_X) {
 
 customize.ggplot.axis &lt;- function(p) {
   p &lt;- p + labs(x=&#39;Score&#39;, y=&#39;Y&#39;)
-  p &lt;- p + scale_y_continuous(breaks=seq(from=0, to=0.8, by=0.2))
-  p &lt;- p + coord_cartesian(xlim=c(50, 200), ylim=c(0, 0.6))
+  p &lt;- p + scale_y_continuous(breaks=seq(from=-0.2, to=0.8, by=0.2))
+  p &lt;- p + coord_cartesian(xlim=c(50, 200), ylim=c(-0.2, 0.6))
   return(p)
 }
 
@@ -948,6 +948,146 @@ Figure 3: 黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學
 </p>
 </div>
 <p>上述觀察預測值區間和實際觀測之間的關係的視覺化圖形，在多重線性回歸模型只有兩個預測變量的事後還較爲容易獲得，當模型中有三個或以上的預測變量時，可視化變得困難重重。</p>
+<p>此時我們推薦繪製“實際觀測值和預測值”，以及模型給出的每個預測值的隨機誤差<span class="math inline">\(\varepsilon\)</span>分佈範圍，相結合的圖形來判斷模型擬合程度。</p>
+<pre class="r"><code>d_qua &lt;- t(apply(ms$y_pred, 2, quantile, prob=c(0.1, 0.5, 0.9)))
+colnames(d_qua) &lt;- c(&#39;p10&#39;, &#39;p50&#39;, &#39;p90&#39;)
+d_qua &lt;- data.frame(d, d_qua)
+d_qua$A &lt;- as.factor(d_qua$A)
+
+p &lt;- ggplot(data=d_qua, aes(x=Y, y=p50, ymin=p10, ymax=p90, shape=A, fill=A))
+p &lt;- p + theme_bw(base_size=18) + theme(legend.key.height=grid::unit(2.5,&#39;line&#39;))
+p &lt;- p + coord_fixed(ratio=1, xlim=c(0, 0.5), ylim=c(0, 0.5))
+p &lt;- p + geom_pointrange(size=0.8, color=&#39;grey5&#39;)
+p &lt;- p + geom_abline(aes(slope=1, intercept=0), color=&#39;black&#39;, alpha=3/5, linetype=&#39;31&#39;)
+p &lt;- p + scale_shape_manual(values=c(21, 24))
+p &lt;- p + scale_fill_manual(values=c(&#39;white&#39;, &#39;grey70&#39;))
+p &lt;- p + labs(x=&#39;Observed&#39;, y=&#39;Predicted&#39;)
+p &lt;- p + scale_x_continuous(breaks=seq(from=0, to=0.5, by=0.1))
+p &lt;- p + scale_y_continuous(breaks=seq(from=0, to=0.5, by=0.1))
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig53"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig53-1.png" alt="觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。" width="80%" />
+<p class="caption">
+Figure 4: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。
+</p>
+</div>
+<p>從上圖中可以看出，大多數的觀測點和預測點以及預測的80%區間基本都在 <span class="math inline">\(y = x\)</span> 這條對角線上。大致可以認爲本次貝葉斯多重線性回歸擬合效果尚且能夠接受。</p>
+<p>隨機誤差 <span class="math inline">\(\varepsilon[n]\)</span> 被認爲服從 <span class="math inline">\(\text{Normal}(0, \sigma)\)</span> 的正態分佈。從模型中可以計算獲得每個學生出勤率的預測值和實際觀測值之間的差，這就是隨機誤差。貝葉斯框架之下，我們實際獲得的會是每名學生隨機誤差的分佈：</p>
+<pre class="r"><code>N_mcmc &lt;- length(ms$lp__)
+
+d_noise &lt;- data.frame(t(-t(ms$mu) + d$Y))
+colnames(d_noise) &lt;- paste0(&#39;noise&#39;, 1:nrow(d))
+d_est &lt;- data.frame(mcmc=1:N_mcmc, d_noise)
+d_melt &lt;- reshape2::melt(d_est, id=c(&#39;mcmc&#39;), variable.name=&#39;X&#39;)
+
+d_mode &lt;- data.frame(t(apply(d_noise, 2, function(x) {
+  dens &lt;- density(x)
+  mode_i &lt;- which.max(dens$y)
+  mode_x &lt;- dens$x[mode_i]
+  mode_y &lt;- dens$y[mode_i]
+  c(mode_x, mode_y)
+})))
+colnames(d_mode) &lt;- c(&#39;X&#39;, &#39;Y&#39;)
+
+p &lt;- ggplot()
+p &lt;- p + theme_bw(base_size=18)
+p &lt;- p + geom_line(data=d_melt, aes(x=value, group=X), stat=&#39;density&#39;, color=&#39;black&#39;, alpha=0.4)
+p &lt;- p + geom_segment(data=d_mode, aes(x=X, xend=X, y=Y, yend=0), color=&#39;black&#39;, linetype=&#39;dashed&#39;, alpha=0.4)
+p &lt;- p + geom_rug(data=d_mode, aes(x=X), sides=&#39;b&#39;)
+p &lt;- p + labs(x=&#39;value&#39;, y=&#39;density&#39;)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig54left"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54left-1.png" alt="每名學生的出勤率隨機誤差的分佈" width="80%" />
+<p class="caption">
+Figure 5: 每名學生的出勤率隨機誤差的分佈
+</p>
+</div>
+<p>實際上我們只需要選取每名學生模型計算獲得的事後隨機誤差的代表值，比如可以是平均值，中央值，或者是MAP值（事後確率最大推定値，maximum a posteriori estimate），來觀察就可以了：</p>
+<pre class="r"><code>s_dens &lt;- density(ms$s)
+s_MAP &lt;- s_dens$x[which.max(s_dens$y)]
+bw &lt;- 0.01
+p &lt;- ggplot(data=d_mode, aes(x=X))
+p &lt;- p + theme_bw(base_size=18)
+p &lt;- p + geom_histogram(binwidth=bw, color=&#39;black&#39;, fill=&#39;white&#39;)
+p &lt;- p + geom_density(eval(bquote(aes(y=..count..*.(bw)))), alpha=0.5, color=&#39;black&#39;, fill=&#39;gray20&#39;)
+p &lt;- p + stat_function(fun=function(x) nrow(d)*bw*dnorm(x, mean=0, sd=s_MAP), linetype=&#39;dashed&#39;)
+p &lt;- p + labs(x=&#39;value&#39;, y=&#39;count&#39;)
+p &lt;- p + xlim(range(density(d_mode$X)$x))
+p</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_bar).</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig54right"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54right-1.png" alt="每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。" width="80%" />
+<p class="caption">
+Figure 6: 每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。
+</p>
+</div>
+</div>
+<div id="step-4.-mcmc-" class="section level2">
+<h2>Step 4. MCMC 樣本的散點圖矩陣</h2>
+<pre class="r"><code>library(ggplot2)
+library(GGally)
+library(hexbin)
+
+
+d &lt;- data.frame(b1=ms$b1, b2=ms$b2, b3=ms$b3, sigma=ms$sigma, mu1=ms$mu[,1], mu50=ms$mu[,50], lp__=ms$lp__)
+N_col &lt;- ncol(d)
+ggp &lt;- ggpairs(d, upper=&#39;blank&#39;, diag=&#39;blank&#39;, lower=&#39;blank&#39;)
+
+label_list &lt;- list(b1=&#39;b1&#39;, b2=&#39;b2&#39;, b3=&#39;b3&#39;, sigma=&#39;sigma&#39;, mu1=&#39;mu[1]&#39;, mu50=&#39;mu[50]&#39;, lp__=&#39;lp__&#39;)
+for(i in 1:N_col) {
+  x &lt;- d[,i]
+  bw &lt;- (max(x)-min(x))/10
+  p &lt;- ggplot(data.frame(x), aes(x))
+  p &lt;- p + theme_bw(base_size=14)
+  p &lt;- p + theme(axis.text.x=element_text(angle=60, vjust=1, hjust=1))
+  p &lt;- p + geom_histogram(binwidth=bw, fill=&#39;white&#39;, color=&#39;grey5&#39;)
+  p &lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&#39;density&#39;)
+  p &lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=label_list[[colnames(d)[i]]]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  ggp &lt;- putPlot(ggp, p, i, i)
+}
+
+zcolat &lt;- seq(-1, 1, length=81)
+zcolre &lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
+
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &lt;- as.numeric(d[,i])
+    y &lt;- as.numeric(d[,j])
+    r &lt;- cor(x, y, method=&#39;spearman&#39;, use=&#39;pairwise.complete.obs&#39;)
+    zcol &lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &lt;- ifelse(abs(r) &lt; 0.4, &#39;grey20&#39;, &#39;white&#39;)
+    ell &lt;- ellipse::ellipse(r, level=0.95, type=&#39;l&#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &lt;- d[,j]
+    y &lt;- d[,i]
+    p &lt;- ggplot(data.frame(x, y), aes(x=x, y=y))
+    p &lt;- p + theme_bw(base_size=14)
+    p &lt;- p + theme(axis.text.x=element_text(angle=60, vjust=1, hjust=1))
+    p &lt;- p + geom_hex()
+    p &lt;- p + scale_fill_gradientn(colours=gray.colors(7, start=0.1, end=0.9))
+    ggp &lt;- putPlot(ggp, p, i, j)
+  }
+}
+ggp</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig55"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig55-1.png" alt="MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。" width="80%" />
+<p class="caption">
+Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。
+</p>
+</div>
 </div>
 </div>
 
