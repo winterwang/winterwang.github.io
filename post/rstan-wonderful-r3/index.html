@@ -273,7 +273,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    14 min read
+    15 min read
   </span>
   
 
@@ -882,6 +882,72 @@ p</code></pre>
 Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
 </p>
 </div>
+<p>收斂效果很不錯，下面來解釋回歸係數的事後均值的涵義：</p>
+<ul>
+<li><code>b3</code>的事後均值是<span class="math inline">\(0.32\)</span>，所以，<span class="math inline">\(Score=150\)</span>和<span class="math inline">\(Score=50\)</span>的兩名學生，當他們同時都是喜歡或者同時都不喜歡打工時，<span class="math inline">\(Score = 150\)</span>的學生的出勤率平均比 <span class="math inline">\(Score = 50\)</span> 的學生的出勤率高 <span class="math inline">\(0.32 \times (150-50)/200 = 0.16\)</span>。</li>
+<li><code>b2</code>的事後均值是<span class="math inline">\(-0.14\)</span>，所以，同樣地，<span class="math inline">\(Score\)</span>相同的兩名學生，喜歡打工的學生比不喜歡打工的學生出勤率平均要低 <span class="math inline">\(0.14\)</span>。</li>
+</ul>
+</div>
+<div id="step-3.-" class="section level2">
+<h2>Step 3. 看圖確認模型擬合狀況</h2>
+<p>下圖繪製了上面貝葉斯多重線性回歸模型計算獲得的事後貝葉斯預測區間，和觀測值<span class="math inline">\(Y\)</span>出勤率之間的直觀關係：</p>
+<pre class="r"><code>source(&quot;commonRstan.R&quot;)
+
+ms &lt;- rstan::extract(fit)
+
+Score_new &lt;- 50:200
+N_X &lt;- length(Score_new)
+N_mcmc &lt;- length(ms$lp__)
+
+set.seed(1234)
+y_base_mcmc &lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_base_a0_mcmc &lt;- as.data.frame(matrix(nrow = N_mcmc, ncol = N_X))
+y_mcmc &lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_a0_mcmc &lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+
+for (i in 1:N_X) {
+  y_base_mcmc[,i] &lt;- ms$b1 + ms$b2 + ms$b3 * Score_new[i]/200
+  y_base_a0_mcmc[] &lt;- ms$b1 + ms$b2*0 + ms$b3 * Score_new[i]/200
+  y_mcmc[,i] &lt;- rnorm(n=N_mcmc, mean=y_base_mcmc[,i], sd=ms$sigma)
+  y_a0_mcmc[,i] &lt;- rnorm(n=N_mcmc, mean=y_base_a0_mcmc[,i], sd=ms$sigma)
+}
+
+customize.ggplot.axis &lt;- function(p) {
+  p &lt;- p + labs(x=&#39;Score&#39;, y=&#39;Y&#39;)
+  p &lt;- p + scale_y_continuous(breaks=seq(from=0, to=0.8, by=0.2))
+  p &lt;- p + coord_cartesian(xlim=c(50, 200), ylim=c(0, 0.6))
+  return(p)
+}
+
+d_est &lt;- data.frame.quantile.mcmc(x=Score_new, y_mcmc=y_mcmc)
+d_esta0 &lt;- data.frame.quantile.mcmc(x=Score_new, y_mcmc=y_a0_mcmc)
+# p &lt;- ggplot.5quantile(data=d_est)
+# p2 &lt;- ggplot.5quantile(data = d_esta0)
+# p &lt;- p + geom_point(data=d[d$A==1, ], aes(x=Score, y=Y), shape=24, size=5)
+# p2 &lt;- p2 + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=1, size=5)
+# p &lt;- customize.ggplot.axis(p)
+# p2 &lt;- customize.ggplot.axis(p2)
+
+visuals = rbind(d_est,d_esta0)
+visuals$A=c(rep(1,151),rep(0,151)) # 151 points of each flavour
+
+qn &lt;- colnames(visuals)[-1]
+p &lt;- ggplot(data=visuals, aes(x=X, y=p50, group = A))
+p &lt;- p + my_theme()
+p &lt;- p + geom_ribbon(aes_string(ymin=qn[1], ymax=qn[5]), fill=&#39;black&#39;, alpha=1/6)
+p &lt;- p + geom_ribbon(aes_string(ymin=qn[2], ymax=qn[4]), fill=&#39;black&#39;, alpha=2/6)
+p &lt;- p + geom_line(size=1)
+p &lt;- p + geom_point(data=d[d$A==1, ], aes(x=Score, y=Y), shape=24, size=5)
+p &lt;- p + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=20, size=5)
+p &lt;- customize.ggplot.axis(p)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig52"></span>
+<img src="/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig52-1.png" alt="黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。" width="80%" />
+<p class="caption">
+Figure 3: 黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。
+</p>
+</div>
+<p>上述觀察預測值區間和實際觀測之間的關係的視覺化圖形，在多重線性回歸模型只有兩個預測變量的事後還較爲容易獲得，當模型中有三個或以上的預測變量時，可視化變得困難重重。</p>
 </div>
 </div>
 

@@ -547,6 +547,72 @@ p&lt;/code&gt;&lt;/pre&gt;
 Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;收斂效果很不錯，下面來解釋回歸係數的事後均值的涵義：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;b3&lt;/code&gt;的事後均值是&lt;span class=&#34;math inline&#34;&gt;\(0.32\)&lt;/span&gt;，所以，&lt;span class=&#34;math inline&#34;&gt;\(Score=150\)&lt;/span&gt;和&lt;span class=&#34;math inline&#34;&gt;\(Score=50\)&lt;/span&gt;的兩名學生，當他們同時都是喜歡或者同時都不喜歡打工時，&lt;span class=&#34;math inline&#34;&gt;\(Score = 150\)&lt;/span&gt;的學生的出勤率平均比 &lt;span class=&#34;math inline&#34;&gt;\(Score = 50\)&lt;/span&gt; 的學生的出勤率高 &lt;span class=&#34;math inline&#34;&gt;\(0.32 \times (150-50)/200 = 0.16\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;b2&lt;/code&gt;的事後均值是&lt;span class=&#34;math inline&#34;&gt;\(-0.14\)&lt;/span&gt;，所以，同樣地，&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;相同的兩名學生，喜歡打工的學生比不喜歡打工的學生出勤率平均要低 &lt;span class=&#34;math inline&#34;&gt;\(0.14\)&lt;/span&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3.-&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 3. 看圖確認模型擬合狀況&lt;/h2&gt;
+&lt;p&gt;下圖繪製了上面貝葉斯多重線性回歸模型計算獲得的事後貝葉斯預測區間，和觀測值&lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;出勤率之間的直觀關係：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;source(&amp;quot;commonRstan.R&amp;quot;)
+
+ms &amp;lt;- rstan::extract(fit)
+
+Score_new &amp;lt;- 50:200
+N_X &amp;lt;- length(Score_new)
+N_mcmc &amp;lt;- length(ms$lp__)
+
+set.seed(1234)
+y_base_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_base_a0_mcmc &amp;lt;- as.data.frame(matrix(nrow = N_mcmc, ncol = N_X))
+y_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_a0_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+
+for (i in 1:N_X) {
+  y_base_mcmc[,i] &amp;lt;- ms$b1 + ms$b2 + ms$b3 * Score_new[i]/200
+  y_base_a0_mcmc[] &amp;lt;- ms$b1 + ms$b2*0 + ms$b3 * Score_new[i]/200
+  y_mcmc[,i] &amp;lt;- rnorm(n=N_mcmc, mean=y_base_mcmc[,i], sd=ms$sigma)
+  y_a0_mcmc[,i] &amp;lt;- rnorm(n=N_mcmc, mean=y_base_a0_mcmc[,i], sd=ms$sigma)
+}
+
+customize.ggplot.axis &amp;lt;- function(p) {
+  p &amp;lt;- p + labs(x=&amp;#39;Score&amp;#39;, y=&amp;#39;Y&amp;#39;)
+  p &amp;lt;- p + scale_y_continuous(breaks=seq(from=0, to=0.8, by=0.2))
+  p &amp;lt;- p + coord_cartesian(xlim=c(50, 200), ylim=c(0, 0.6))
+  return(p)
+}
+
+d_est &amp;lt;- data.frame.quantile.mcmc(x=Score_new, y_mcmc=y_mcmc)
+d_esta0 &amp;lt;- data.frame.quantile.mcmc(x=Score_new, y_mcmc=y_a0_mcmc)
+# p &amp;lt;- ggplot.5quantile(data=d_est)
+# p2 &amp;lt;- ggplot.5quantile(data = d_esta0)
+# p &amp;lt;- p + geom_point(data=d[d$A==1, ], aes(x=Score, y=Y), shape=24, size=5)
+# p2 &amp;lt;- p2 + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=1, size=5)
+# p &amp;lt;- customize.ggplot.axis(p)
+# p2 &amp;lt;- customize.ggplot.axis(p2)
+
+visuals = rbind(d_est,d_esta0)
+visuals$A=c(rep(1,151),rep(0,151)) # 151 points of each flavour
+
+qn &amp;lt;- colnames(visuals)[-1]
+p &amp;lt;- ggplot(data=visuals, aes(x=X, y=p50, group = A))
+p &amp;lt;- p + my_theme()
+p &amp;lt;- p + geom_ribbon(aes_string(ymin=qn[1], ymax=qn[5]), fill=&amp;#39;black&amp;#39;, alpha=1/6)
+p &amp;lt;- p + geom_ribbon(aes_string(ymin=qn[2], ymax=qn[4]), fill=&amp;#39;black&amp;#39;, alpha=2/6)
+p &amp;lt;- p + geom_line(size=1)
+p &amp;lt;- p + geom_point(data=d[d$A==1, ], aes(x=Score, y=Y), shape=24, size=5)
+p &amp;lt;- p + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=20, size=5)
+p &amp;lt;- customize.ggplot.axis(p)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig52&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig52-1.png&#34; alt=&#34;黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: 黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;上述觀察預測值區間和實際觀測之間的關係的視覺化圖形，在多重線性回歸模型只有兩個預測變量的事後還較爲容易獲得，當模型中有三個或以上的預測變量時，可視化變得困難重重。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
