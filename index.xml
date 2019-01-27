@@ -11,6 +11,123 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Rstan Wonderful R-(4)</title>
+      <link>https://winterwang.github.io/post/logistic-rstan/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
+      <description>
+
+
+&lt;div id=&#34;-rstan-&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;邏輯回歸模型的 Rstan 貝葉斯實現&lt;/h1&gt;
+&lt;p&gt;本小節使用的&lt;a href=&#34;https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt&#34;&gt;數據&lt;/a&gt;，和前一節的出勤率數據很類似:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, 
+                     sep = &amp;quot;,&amp;quot;, header = T)
+head(d)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   PersonID A Score  M  Y
+## 1        1 0    69 43 38
+## 2        2 1   145 56 40
+## 3        3 0   125 32 24
+## 4        4 1    86 45 33
+## 5        5 1   158 33 23
+## 6        6 0   133 61 60&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PersonID&lt;/code&gt;: 是學生的編號；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A&lt;/code&gt;, &lt;code&gt;Score&lt;/code&gt;: 和之前一樣用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 &lt;code&gt;A&lt;/code&gt;，和表示對學習本身是否喜歡的評分 (滿分200)；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M&lt;/code&gt;: 過去三個月內，該名學生一共需要上課的總課時數；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;: 過去三個月內，該名學生實際上出勤的課時數。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level1&#34;&gt;
+&lt;h1&gt;確定分析目的&lt;/h1&gt;
+&lt;p&gt;需要回答的問題依然是，&lt;span class=&#34;math inline&#34;&gt;\(A, Score\)&lt;/span&gt; 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的多少信息？&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;section level1&#34;&gt;
+&lt;h1&gt;確認數據分佈&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(GGally)
+
+set.seed(1)
+d &amp;lt;- d[, -1]
+# d &amp;lt;- read.csv(file=&amp;#39;input/data-attendance-2.txt&amp;#39;)[,-1]
+d$A &amp;lt;- as.factor(d$A)
+d &amp;lt;- transform(d, ratio=Y/M)
+N_col &amp;lt;- ncol(d)
+ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;)
+
+for(i in 1:N_col) {
+  x &amp;lt;- d[,i]
+  p &amp;lt;- ggplot(data.frame(x, A=d$A), aes(x))
+  p &amp;lt;- p + theme_bw(base_size=14)
+  p &amp;lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+  if (class(x) == &amp;#39;factor&amp;#39;) {
+    p &amp;lt;- p + geom_bar(aes(fill=A), color=&amp;#39;grey20&amp;#39;)
+  } else {
+    bw &amp;lt;- (max(x)-min(x))/10
+    p &amp;lt;- p + geom_histogram(aes(fill=A), color=&amp;#39;grey20&amp;#39;, binwidth=bw)
+    p &amp;lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&amp;#39;density&amp;#39;)
+  }
+  p &amp;lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=colnames(d)[i]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  p &amp;lt;- p + scale_fill_manual(values=alpha(c(&amp;#39;white&amp;#39;, &amp;#39;grey40&amp;#39;), 0.5))
+  ggp &amp;lt;- putPlot(ggp, p, i, i)
+}
+
+zcolat &amp;lt;- seq(-1, 1, length=81)
+zcolre &amp;lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
+
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &amp;lt;- as.numeric(d[,i])
+    y &amp;lt;- as.numeric(d[,j])
+    r &amp;lt;- cor(x, y, method=&amp;#39;spearman&amp;#39;, use=&amp;#39;pairwise.complete.obs&amp;#39;)
+    zcol &amp;lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &amp;lt;- ifelse(abs(r) &amp;lt; 0.4, &amp;#39;grey20&amp;#39;, &amp;#39;white&amp;#39;)
+    ell &amp;lt;- ellipse::ellipse(r, level=0.95, type=&amp;#39;l&amp;#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &amp;lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &amp;lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &amp;lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &amp;lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &amp;lt;- d[,j]
+    y &amp;lt;- d[,i]
+    p &amp;lt;- ggplot(data.frame(x, y, gr=d$A), aes(x=x, y=y, fill=gr, shape=gr))
+    p &amp;lt;- p + theme_bw(base_size=14)
+    p &amp;lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+    if (class(x) == &amp;#39;factor&amp;#39;) {
+      p &amp;lt;- p + geom_boxplot(aes(group=x), alpha=3/6, outlier.size=0, fill=&amp;#39;white&amp;#39;)
+      p &amp;lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
+    } else {
+      p &amp;lt;- p + geom_point(size=2)
+    }
+    p &amp;lt;- p + scale_shape_manual(values=c(21, 24))
+    p &amp;lt;- p + scale_fill_manual(values=alpha(c(&amp;#39;white&amp;#39;, &amp;#39;grey40&amp;#39;), 0.5))
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+ggp&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-27-logistic-rstan_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，相比之前增加了 $ratio = Y/M$ 列。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 三個變量的分佈觀察圖，相比之前增加了 &lt;span class=&#34;math inline&#34;&gt;\(ratio = Y/M\)&lt;/span&gt; 列。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rstan Wonderful R-(3)</title>
       <link>https://winterwang.github.io/post/rstan-wonderful-r3/</link>
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
@@ -3354,30 +3471,6 @@ style=&#34;transform:rotate(90deg);&#34;/&gt;
 &lt;li&gt;[2018-05-20]&lt;/li&gt;
 &lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>你靜靜地睡在琥珀裏</title>
-      <link>https://winterwang.github.io/post/sleep/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/sleep/</guid>
-      <description>&lt;p&gt;媽在電話裏說，今年要是期末考試考不過，明年把妹妹(我女兒)背去倫敦再考。(T_T) 突然我就想起快離開廈門的前一天，帶着兒子去大榕樹底下玩。他興奮地要玩我新買的乒乓球和乒乓球拍。可我心裏舍不得新的球和球拍弄髒了，就故意拿小汽車和其他的東西分散他的注意力。回到家裏了才給了他一個乒乓球玩。其實那天本來還想帶他去買肉包給他吃，可是領了快遞以後我沒有手再拿東西，就直接帶兒子回家了。那天兒子女兒和妻還要坐火車回榕城外婆家，一路顛簸誰也沒想起來，兒子還沒吃早飯。火車上聽說他也一直沒吃東西，不知道他三歲的心裏在想什麼。到了外婆家裏也很晚了，男孩子興奮哭鬧總是比女孩子激烈。我一聽電話裏他哭的聲音，心裏就不由得難受極了。怎麼就舍不得把乒乓球給他一個呢，我真是個自私極了的爸爸。忘了兒子沒吃早飯，也舍不得把他想玩的乒乓球送給他。也許他早就不記得了，但是我總惦記着這一天發生的事。也許在我心裏，那段美好時光在琥珀中靜止在了廈門開往島外的那列送行的地鐵上。&lt;/p&gt;
-
-&lt;p&gt;我又想起在學習&lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/causal-languages-.html&#34; target=&#34;_blank&#34;&gt;因果推斷&lt;/a&gt;的時候，每次老師都要強調那三個永世不能忘記的推斷前提:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;無相互幹擾 no interference;&lt;/li&gt;
-&lt;li&gt;一致性 consistency;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;條件可置換性 conditional exchangeability;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;每當老師提問說，我們現在的前提是什麼？全班同學總能異口同聲地念出上面那三句咒語，場景仿佛間諜與間諜之間對暗號。又有點像黑幫入會時指天發誓的三句誓言。還有就是那個老師可愛的法文味道的英文，標準誤的英文是 standard error，她總是說 standard &amp;ldquo;唉河&amp;rdquo;。另一個教生存分析的法國人老師就更有趣了，每次舉例子都說，比方說我們拿&amp;ndash;法國做例子，隨機選一個國家嘛。。blablabla&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;今天，響子同學說要去阿根廷完成自己的碩士課題。我們下午坐在 SOAS 的草地上一邊從作業間隙中休息，一邊喝着咖啡，突然意識到，再過一陣子，新學生就又要來了呢。去年這時候我們都還在世界各地，響子在危地馬拉給 JICA 幹活，說着流利的西班牙語; 我在名古屋一邊給日本學生講課，一邊內心充滿了期待快出生的妹妹和快要出發來倫敦的復雜又忐忑的心情，如今我們竟然已經在討論彼此回程的機票訂了幾號，想起3月我們還在寒風中頂着大雪抱怨着留英這一年碰到數十年最嚴重的大學罷課，這一段時光，竟也這樣偷偷溜走，沒有琥珀可以給它定格。&lt;/p&gt;
-
-&lt;p&gt;直到兩天前，同班同學在因果推斷下課後，復習完了我們每次課上對完的暗號，突然有同學提議說，我們去學校門口拍一張集體照片吧，學校年度學生畫冊 (Yearbook) 的內容我們還沒人提交吶，至少要有一張咱們的集體照片吧！ 於是我們有了封面的那張照片。總算是用 LOMO 的隨手拍記錄下這年我們在 LSHTM 待過的證據。這年，我們這十幾個在 LSHTM 推倒公式，背誦&amp;rdquo;間諜暗號&amp;rdquo;，倒騰貝葉斯，糾結着那些回歸模型的殘差，還有那個永遠也搞不懂的似然。一瞬間留在相紙上，一轉眼可能就要各奔四方。傷感不由就從心中涌出，蔓延到大西洋。&lt;/p&gt;
 </description>
     </item>
     

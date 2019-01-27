@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rstan Wonderful R-(4)</title>
+      <link>https://winterwang.github.io/post/logistic-rstan/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
+      <description>邏輯回歸模型的 Rstan 貝葉斯實現 本小節使用的數據，和前一節的出勤率數據很類似:
+d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d) ## PersonID A Score M Y ## 1 1 0 69 43 38 ## 2 2 1 145 56 40 ## 3 3 0 125 32 24 ## 4 4 1 86 45 33 ## 5 5 1 158 33 23 ## 6 6 0 133 61 60 其中，
+ PersonID: 是學生的編號； A, Score: 和之前一樣用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 A，和表示對學習本身是否喜歡的評分 (滿分200)； M: 過去三個月內，該名學生一共需要上課的總課時數； Y: 過去三個月內，該名學生實際上出勤的課時數。   確定分析目的 需要回答的問題依然是，\(A, Score\) 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 \(Y\) 的多少信息？</description>
+    </item>
     
     <item>
       <title>Rstan Wonderful R-(3)</title>

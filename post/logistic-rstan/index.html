@@ -11,7 +11,7 @@
   <meta name="description" content="Assistant Professor">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/2016-2-25/">
+  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/logistic-rstan/">
 
   
   
@@ -70,24 +70,24 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/2016-2-25/">
+  <link rel="canonical" href="https://winterwang.github.io/post/logistic-rstan/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/2016-2-25/">
-  <meta property="og:title" content="甜菜汁的好处 | Be ambitious">
-  <meta property="og:description" content="">
+  <meta property="og:url" content="https://winterwang.github.io/post/logistic-rstan/">
+  <meta property="og:title" content="Rstan Wonderful R-(4) | Be ambitious">
+  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2016-02-25T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-01-27T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2016-02-25T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2019-01-27T00:00:00&#43;00:00">
   
 
-  <title>甜菜汁的好处 | Be ambitious</title>
+  
+
+  <title>Rstan Wonderful R-(4) | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -248,11 +248,16 @@
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
+<div class="article-header">
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+</div>
+
 
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">甜菜汁的好处</h1>
+      <h1 itemprop="name">Rstan Wonderful R-(4)</h1>
 
       
 
@@ -260,8 +265,8 @@
 
   <span class="article-date">
     
-    <time datetime="2016-02-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Thu, Feb 25, 2016
+    <time datetime="2019-01-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sun, Jan 27, 2019
     </time>
   </span>
 
@@ -275,7 +280,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/2016-2-25/#disqus_thread"></a>
+  <a href="https://winterwang.github.io/post/logistic-rstan/#disqus_thread"></a>
   
 
   
@@ -285,7 +290,13 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/dictation">dictation</a
+    <a href="/categories/bayesian">Bayesian</a
+    >, 
+    
+    <a href="/categories/r-techniques">R techniques</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
     >
     
   </span>
@@ -298,35 +309,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e7%94%9c%e8%8f%9c%e6%b1%81%e7%9a%84%e5%a5%bd%e5%a4%84&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-2-25%2f"
+         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R-%284%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-2-25%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-2-25%2f&amp;title=%e7%94%9c%e8%8f%9c%e6%b1%81%e7%9a%84%e5%a5%bd%e5%a4%84"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f&amp;title=Rstan%20Wonderful%20R-%284%29"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-2-25%2f&amp;title=%e7%94%9c%e8%8f%9c%e6%b1%81%e7%9a%84%e5%a5%bd%e5%a4%84"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f&amp;title=Rstan%20Wonderful%20R-%284%29"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e7%94%9c%e8%8f%9c%e6%b1%81%e7%9a%84%e5%a5%bd%e5%a4%84&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2f2016-2-25%2f">
+         href="mailto:?subject=Rstan%20Wonderful%20R-%284%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -342,48 +353,112 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p><strong><a href="http://www.scientificamerican.com/podcast/episode/beet-juice-could-help-body-beat-altitude/" target="_blank">Beet Juice Could Help Body Beat Altitude</a></strong></p>
 
-<p><audio src="/mp3/151021BeetJuiceAltitude.mp3" controls="controls">
-Your browser does not support the audio element.
-你的瀏覽器不支持音頻播放。請使用chrome科學上網。
-</audio></p>
-
-<p>听写于：2016-2-25 | 正确率：90%</p>
-
-<!--我的听写开始-->
-
-<p>提示：<span class="diff_off">红色</span>：错误单词，<span class="diff_add">绿色</span>：补上正确单词，<span class="diff_alert">黄色</span>：纠正大小写与标点                        <p class="linetext">At 14,505 feet, Mount Whitney towers over California&rsquo;s Sierra Nevada range. It&rsquo;s the tallest peak in the lower 48 <span class="diff_alert">,</span> <span class="diff_add">-</span> which means <span class="diff_off">that</span> it <span class="diff_off">tracks</span> <span class="diff_add">attracts</span> thousands of weekend warriors every year <span class="diff_alert">.</span> <span class="diff_add">-</span> <span class="diff_alert" title="Or ">or </span>make that <span class="diff_off">weekend</span> <span class="diff_add">weakened</span> warriors. You see them <span class="diff_off">stabbing</span> <span class="diff_add">staggering</span> along <span class="diff_off">in</span> <span class="diff_add">the</span> narrow<span class="diff_off">rocket</span> <span class="diff_alert">,</span> <span class="diff_add">rocky</span> trail<span class="diff_alert">,</span> huffing for air, dizzy and exhausted from the low oxygen levels at high elevation. And once <span class="diff_off">they</span> <span class="diff_off">are</span> <span class="diff_add">they&rsquo;re</span> sick<span class="diff_alert">.</span> <span class="diff_alert">?</span> </p><p class="linetext">The best medicine is to go down. That&rsquo;s <span class="diff_add">the</span> actually the only cure that works. Svein Gaustad, a physiologist at the Norwegian University of Science and Technology. He says previous studies <span class="diff_off">suggested</span> <span class="diff_off">that</span> <span class="diff_add">suggest</span> blood vessels <span class="diff_off">turned</span> <span class="diff_add">tend</span> to <span class="diff_off">contracted</span> <span class="diff_add">contract</span> at high altitudes. Possibly <span class="diff_add">because</span> they need oxygen to relax <span class="diff_alert">.</span> <span class="diff_add">-</span> <span class="diff_alert" title="Exactly ">exactly </span>what&rsquo;s in short supply on mountaintops. But there <span class="diff_off">might</span> <span class="diff_add">may</span> be a dietary way to get more oxygen to your blood vessels<span class="diff_alert">.</span> <span class="diff_add">:</span> <span class="diff_alert" title="In ">in </span>the form of beet juice. The juice contains nitrate, which the body converts to nitric oxide<span class="diff_alert">,</span> the compound that keeps arteries limber. </p><p class="linetext">Gaustad and his colleagues tested that theory during a trek in Nepal<span class="diff_alert">,</span> at 12,000 feet. <span class="diff_off">8</span> <span class="diff_add">Eight</span> volunteers alternately <span class="diff_off">drinks</span> <span class="diff_add">drank</span> shots of regular beet juice<span class="diff_alert">,</span> and another day<span class="diff_alert">,</span> beet juice with <span class="diff_off">a</span> <span class="diff_off">nitrate</span> <span class="diff_add">the</span> <span class="diff_add">nitrates</span> stripped out. A few hours later, the researchers measured blood flow and artery diameters with ultrasound. And they found that the regular beet juice did indeed restore blood vessels back to their <span class="diff_alert" title="low elevation" >low-elevation</span>  flexibility, whereas the <span class="diff_alert" title="nitrate stripped" >nitrate-stripped</span>  juice did not. The <span class="diff_off">result</span> <span class="diff_off">is</span> <span class="diff_add">results</span> <span class="diff_add">are</span> in the journal <span class="diff_off">of</span> Nitric Oxide. </p><p class="linetext">Gaustad says better vascular function has <span class="diff_add">the</span> potential to deliver more blood <span class="diff_alert">,</span> <span class="diff_add">-</span> and therefore more oxygen <span class="diff_add">-</span> to tired muscles. But they still don&rsquo;t know if that translates to better performance at altitude. And<span class="diff_alert">,</span> he says<span class="diff_off">that</span> <span class="diff_off">beet</span> <span class="diff_alert">,</span> <span class="diff_add">beets</span> won&rsquo;t hurt, but <span class="diff_off">there</span> <span class="diff_off">are</span> <span class="diff_add">they&rsquo;re</span> no substitute for proper acclimatization. If I had <span class="diff_off">buffalo</span> <span class="diff_add">a</span> <span class="diff_add">bottle</span> <span class="diff_add">of</span> beets around I <span class="diff_off">will</span> <span class="diff_add">would</span> take it for sure. But that won&rsquo;t <span class="diff_off">bringing</span> <span class="diff_add">bring</span> you to Mount Everest just <span class="diff_add">by</span> drinking beetroot.</p>
-<!--我的听写结束--></p>
-
+<div id="-rstan-" class="section level1">
+<h1>邏輯回歸模型的 Rstan 貝葉斯實現</h1>
+<p>本小節使用的<a href="https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt">數據</a>，和前一節的出勤率數據很類似:</p>
+<pre class="r"><code>d &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&quot;, 
+                     sep = &quot;,&quot;, header = T)
+head(d)</code></pre>
+<pre><code>##   PersonID A Score  M  Y
+## 1        1 0    69 43 38
+## 2        2 1   145 56 40
+## 3        3 0   125 32 24
+## 4        4 1    86 45 33
+## 5        5 1   158 33 23
+## 6        6 0   133 61 60</code></pre>
+<p>其中，</p>
 <ul>
-<li><em>Words</em> worth to be remembered:
-
-<ul>
-<li>stagger <code>adj. 蹒跚的；令人惊愕的；难以置信的</code></li>
-<li>huff <code>v. 深呼吸，气喘吁吁，上气不接下气</code></li>
-<li>contract <code>v. 收縮</code></li>
-<li>beet <code>n. 甜菜，甜菜根，糖萝卜</code></li>
-<li>nitrate <code>n. 硝酸盐;硝酸钾;硝酸钠</code></li>
-<li>acclimatization <code>n. 服水土,顺应,适应环境</code></li>
-<li>Mout Everest <code>n. 埃佛勒斯峰(喜马拉雅山主峰之一,中国称珠穆朗玛峰)</code></li>
-</ul></li>
+<li><code>PersonID</code>: 是學生的編號；</li>
+<li><code>A</code>, <code>Score</code>: 和之前一樣用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 <code>A</code>，和表示對學習本身是否喜歡的評分 (滿分200)；</li>
+<li><code>M</code>: 過去三個月內，該名學生一共需要上課的總課時數；</li>
+<li><code>Y</code>: 過去三個月內，該名學生實際上出勤的課時數。</li>
 </ul>
+</div>
+<div class="section level1">
+<h1>確定分析目的</h1>
+<p>需要回答的問題依然是，<span class="math inline">\(A, Score\)</span> 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 <span class="math inline">\(Y\)</span> 的多少信息？</p>
+</div>
+<div class="section level1">
+<h1>確認數據分佈</h1>
+<pre class="r"><code>library(ggplot2)
+library(GGally)
 
-<h2 id="譯文">譯文：</h2>
+set.seed(1)
+d &lt;- d[, -1]
+# d &lt;- read.csv(file=&#39;input/data-attendance-2.txt&#39;)[,-1]
+d$A &lt;- as.factor(d$A)
+d &lt;- transform(d, ratio=Y/M)
+N_col &lt;- ncol(d)
+ggp &lt;- ggpairs(d, upper=&#39;blank&#39;, diag=&#39;blank&#39;, lower=&#39;blank&#39;)
 
-<ul>
-<li><em>“()”中的是我認爲正確的翻譯</em></li>
-<li><em><strong>黑體字</strong>是我認爲翻譯得好的部分</em></li>
-</ul>
+for(i in 1:N_col) {
+  x &lt;- d[,i]
+  p &lt;- ggplot(data.frame(x, A=d$A), aes(x))
+  p &lt;- p + theme_bw(base_size=14)
+  p &lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+  if (class(x) == &#39;factor&#39;) {
+    p &lt;- p + geom_bar(aes(fill=A), color=&#39;grey20&#39;)
+  } else {
+    bw &lt;- (max(x)-min(x))/10
+    p &lt;- p + geom_histogram(aes(fill=A), color=&#39;grey20&#39;, binwidth=bw)
+    p &lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&#39;density&#39;)
+  }
+  p &lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=colnames(d)[i]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  p &lt;- p + scale_fill_manual(values=alpha(c(&#39;white&#39;, &#39;grey40&#39;), 0.5))
+  ggp &lt;- putPlot(ggp, p, i, i)
+}
 
-<p>高达14505英尺，Mount Whitney 高耸在加州内华达山脉中。它可是较低的48 座山峰中最高的一座——也就是说每天它能吸引到成百上千的周末勇士来攀登——或者把这些勇士给搞垮。你可以看到他们沿着狭窄的岩石小路上蹒跚而行，上气不接下气，头昏眼花的在高海拔地区的缺氧环境下精疲力尽的抗争着。而一旦他们生病了怎么办呐？</p>
+zcolat &lt;- seq(-1, 1, length=81)
+zcolre &lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
 
-<p>最好的办法就是撤下去啦。这真的是有效的治疗办法。Svein Gaustad是，挪威科技大学的一位生理学家。他说以前的研究表明血管在高海拔地区会趋于收缩。或许因为她们需要氧气来放松——这在山顶上实在是个短缺的物资呢。但或许可以靠膳食给你的血管补充氧气哦： 就就来一杯甜菜汁吧。这里面含有硝酸盐，我们的身体可以将之转化为一氧化氮，这种化合物能保持血管的柔软灵活性。</p>
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &lt;- as.numeric(d[,i])
+    y &lt;- as.numeric(d[,j])
+    r &lt;- cor(x, y, method=&#39;spearman&#39;, use=&#39;pairwise.complete.obs&#39;)
+    zcol &lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &lt;- ifelse(abs(r) &lt; 0.4, &#39;grey20&#39;, &#39;white&#39;)
+    ell &lt;- ellipse::ellipse(r, level=0.95, type=&#39;l&#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &lt;- putPlot(ggp, p, i, j)
+  }
+}
 
-<p>Gaustad 和他的同事们在尼泊尔的徒步旅行中测试了上述理论，该地区大概有12000英尺。八名志愿者或者饮用一杯普通压榨的甜菜汁，而另一天，甜菜汁是脱硝酸盐的。几小时后，研究人员们用超声波测量了他们的血液流速和动脉的直径。他们发现，饮用普通甜菜汁的人们确实恢复了在低海拔地区时候的血管弹性，而饮用脱硝酸盐的甜菜汁的人们的血管并没有恢复。改研究结果已经发表在《一氧化氮》杂志上。</p>
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &lt;- d[,j]
+    y &lt;- d[,i]
+    p &lt;- ggplot(data.frame(x, y, gr=d$A), aes(x=x, y=y, fill=gr, shape=gr))
+    p &lt;- p + theme_bw(base_size=14)
+    p &lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+    if (class(x) == &#39;factor&#39;) {
+      p &lt;- p + geom_boxplot(aes(group=x), alpha=3/6, outlier.size=0, fill=&#39;white&#39;)
+      p &lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
+    } else {
+      p &lt;- p + geom_point(size=2)
+    }
+    p &lt;- p + scale_shape_manual(values=c(21, 24))
+    p &lt;- p + scale_fill_manual(values=alpha(c(&#39;white&#39;, &#39;grey40&#39;), 0.5))
+    ggp &lt;- putPlot(ggp, p, i, j)
+  }
+}
 
-<p>Gaustad表示，较好地血管功能就有输送更多血液的潜力——并且因此你的身体会获得更多的氧气——到疲劳的肌肉组织。但是他们还不清楚这种转化作用会根据海拔表现的更好。而且，他说，甜菜也没什么害处，但是这些物质还是不能取代合适的环境适应能力。如果我有一瓶甜菜汁随身携带，我一定会食用的。但是光靠喝甜菜汁应该不会支撑你爬上喜马拉雅山的吧。</p>
+ggp</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step1"></span>
+<img src="/post/2019-01-27-logistic-rstan_files/figure-html/step1-1.png" alt="三個變量的分佈觀察圖，相比之前增加了 $ratio = Y/M$ 列。" width="80%" />
+<p class="caption">
+Figure 1: 三個變量的分佈觀察圖，相比之前增加了 <span class="math inline">\(ratio = Y/M\)</span> 列。
+</p>
+</div>
+</div>
 
       </div>
 
@@ -392,13 +467,9 @@ Your browser does not support the audio element.
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/dictation">dictation</a>
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/english-learning">English Learning</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/listening">Listening</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/60s-science">60s Science</a>
+  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
   
 </div>
 
@@ -416,15 +487,15 @@ Your browser does not support the audio element.
   <h3>Related</h3>
   <ul>
     
-    <li><a href="/post/2016-2-22/">枪支自杀与公共健康</a></li>
+    <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
     
-    <li><a href="/post/2016-2-18/">抗氧化物的实际功效还不明</a></li>
+    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
     
-    <li><a href="/post/2016-2-2/">咖啡机的隐患</a></li>
+    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
     
-    <li><a href="/post/2016-2-15/">調整飲食習慣永遠都不晚</a></li>
+    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
     
-    <li><a href="/post/2015-9-18/">暴饮暴食有原因</a></li>
+    <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
     
   </ul>
 </div>
@@ -435,13 +506,10 @@ Your browser does not support the audio element.
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/2016-2-22/"><span
-      aria-hidden="true">&larr;</span> 枪支自杀与公共健康</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/rstan-wonderful-r3/"><span
+      aria-hidden="true">&larr;</span> Rstan Wonderful R-(3)</a></li>
     
 
-    
-    <li class="next"><a href="https://winterwang.github.io/post/2016-3-1/">每逢佳节胖三斤 <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
