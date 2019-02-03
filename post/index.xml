@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Rstan Wonderful R-(5)</title>
+      <link>https://winterwang.github.io/post/logistic-rstan2/</link>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/logistic-rstan2/</guid>
+      <description>另一種形式的貝葉斯邏輯回歸 前面一節使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在前一節已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候原始數據中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。
+d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d, 10) ## PersonID A Score Weather Y ## 1 1 0 69 B 1 ## 2 1 0 69 A 1 ## 3 1 0 69 C 1 ## 4 1 0 69 A 1 ## 5 1 0 69 B 1 ## 6 1 0 69 B 1 ## 7 1 0 69 C 0 ## 8 1 0 69 B 1 ## 9 1 0 69 A 1 ## 10 1 0 69 A 1 其中，</description>
+    </item>
+    
+    <item>
       <title>Rstan Wonderful R-(4)</title>
       <link>https://winterwang.github.io/post/logistic-rstan/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>

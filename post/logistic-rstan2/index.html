@@ -11,7 +11,7 @@
   <meta name="description" content="Assistant Professor">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/normal-distribution/">
+  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/logistic-rstan2/">
 
   
   
@@ -70,24 +70,24 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/normal-distribution/">
+  <link rel="canonical" href="https://winterwang.github.io/post/logistic-rstan2/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/normal-distribution/">
-  <meta property="og:title" content="正態分佈 | Be ambitious">
-  <meta property="og:description" content="">
+  <meta property="og:url" content="https://winterwang.github.io/post/logistic-rstan2/">
+  <meta property="og:title" content="Rstan Wonderful R-(5) | Be ambitious">
+  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2017-10-11T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-02-03T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2017-10-11T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2019-02-03T00:00:00&#43;00:00">
   
 
-  <title>正態分佈 | Be ambitious</title>
+  
+
+  <title>Rstan Wonderful R-(5) | Be ambitious</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -248,11 +248,16 @@
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
+<div class="article-header">
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+</div>
+
 
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">正態分佈</h1>
+      <h1 itemprop="name">Rstan Wonderful R-(5)</h1>
 
       
 
@@ -260,22 +265,22 @@
 
   <span class="article-date">
     
-    <time datetime="2017-10-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Wed, Oct 11, 2017
+    <time datetime="2019-02-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sun, Feb 3, 2019
     </time>
   </span>
 
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
   
   
   <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/normal-distribution/#disqus_thread"></a>
+  <a href="https://winterwang.github.io/post/logistic-rstan2/#disqus_thread"></a>
   
 
   
@@ -285,10 +290,13 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/statistics">statistics</a
+    <a href="/categories/bayesian">Bayesian</a
     >, 
     
-    <a href="/categories/study-abroad">study abroad</a
+    <a href="/categories/r-techniques">R techniques</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
     >
     
   </span>
@@ -301,35 +309,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f"
+         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R-%285%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan2%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan2%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f&amp;title=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan2%2f&amp;title=Rstan%20Wonderful%20R-%285%29"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f&amp;title=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan2%2f&amp;title=Rstan%20Wonderful%20R-%285%29"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=%e6%ad%a3%e6%85%8b%e5%88%86%e4%bd%88&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fnormal-distribution%2f">
+         href="mailto:?subject=Rstan%20Wonderful%20R-%285%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan2%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -346,72 +354,69 @@
         
 
 
-<div id="-probability-density-function-pdf" class="section level3">
-<h3>概率密度曲線 probability density function， PDF</h3>
+<div class="section level1">
+<h1>另一種形式的貝葉斯邏輯回歸</h1>
+<p><a href="https://wangcc.me/post/logistic-rstan/">前面一節</a>使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在<a href="https://wangcc.me/post/logistic-rstan/">前一節</a>已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候<a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt">原始數據</a>中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。</p>
+<pre class="r"><code>d &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&quot;, 
+                     sep = &quot;,&quot;, header = T)
+head(d, 10)</code></pre>
+<pre><code>##    PersonID A Score Weather Y
+## 1         1 0    69       B 1
+## 2         1 0    69       A 1
+## 3         1 0    69       C 1
+## 4         1 0    69       A 1
+## 5         1 0    69       B 1
+## 6         1 0    69       B 1
+## 7         1 0    69       C 0
+## 8         1 0    69       B 1
+## 9         1 0    69       A 1
+## 10        1 0    69       A 1</code></pre>
+<p>其中，</p>
 <ul>
-<li><p>一個隨機連續型變量 <span class="math inline">\(X\)</span> 它的性質由一個對應的<strong>概率密度方程 (probability density function, PDF)</strong> 決定。</p></li>
-<li><p>在給定的範圍區間內，如 <span class="math inline">\(a\sim b, (a &lt; b)\)</span>，它的概率滿足:</p></li>
+<li><span class="math inline">\(Weather\)</span>，天氣數據 (<code>A</code> = 晴天，<code>B</code> = 多雲，<code>C</code> = 下雨)；</li>
+<li><span class="math inline">\(Y\)</span>，該次課時學生是否出勤 (<code>0</code> = 缺勤，<code>1</code> = 出勤)。</li>
 </ul>
-<p><span class="math display">\[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]</span></p>
-<ul>
-<li>這個相關的方程，在 <span class="math inline">\(a\sim b\)</span> 區間內的積分，就是這個連續變量在這個區間內取值的概率。</li>
-</ul>
-<pre class="r"><code># R codes for drawing a standard normal distribution by using ggplot2
-library(ggplot2)
-p &lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
-  stat_function(fun = dnorm)
-p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&quot;) +
-  theme(plot.subtitle = element_text(vjust = 1),
-        plot.caption = element_text(vjust = 1),
-        axis.text.x = element_text(size = 12),
-        axis.text.y = element_text(size = 12),
-        plot.title = element_text(size = 10, face = &quot;bold&quot;, hjust = 0.5),
-        panel.background = element_rect(fill = &quot;ivory&quot;)) +
-  labs(title = &quot;Probability density functions \n for standard normal distribution&quot;,
-       x = NULL, y = NULL) +
-  stat_function(fun = dnorm,
-                xlim = c(-1.3,0.4),
-                geom = &quot;area&quot;,fill=&quot;#00688B&quot;, alpha= 0.2)</code></pre>
-<p><img src="/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png" width="528" /></p>
-<p>注意：整個方程的曲線下面積等於 <span class="math inline">\(1\)</span>：
-<span class="math display">\[\int_{-\infty}^\infty f(x)dx=1\]</span></p>
-<ul>
-<li>期望 <span class="math inline">\(E(X)=\int_{-\infty}^\infty xf(x)dx\)</span></li>
-<li>方差 <span class="math inline">\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)</span></li>
-</ul>
+<p>其他的數據和前一節中使用的數據相同。</p>
 </div>
-<div class="section level3">
-<h3>正態分佈</h3>
-<p>如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）<span class="math inline">\(\mu\)</span>，和它的方差 <span class="math inline">\(\sigma^2\)</span>，來描述這組數據。記爲：</p>
-<p><span class="math display">\[X \sim N(\mu, \sigma^2)\]</span></p>
-<ul>
-<li>它的概率密度方程可以表述爲：</li>
-</ul>
-<p><span class="math display">\[f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></p>
-<ul>
-<li><span class="math inline">\(E(x) =\mu\)</span></li>
-<li><span class="math inline">\(Var(x)=\sigma^2\)</span></li>
-</ul>
+<div class="section level1">
+<h1>分析的目的</h1>
+<p>本次數據分析的目的依然是瞭解幾個預測變量，天氣，是否喜歡打工，是否熱愛學習，對學生出勤率的影響。</p>
 </div>
-<div class="section level3">
-<h3>標準正態分佈</h3>
-<p>標準正態分佈的期望（或者均值）爲 <span class="math inline">\(0\)</span>，方差爲 <span class="math inline">\(1\)</span></p>
-<ul>
-<li>記爲：<span class="math inline">\(Z \sim N(0,1)\)</span></li>
-<li>它的概率密度方程表述爲：</li>
-</ul>
-<p><span class="math display">\[\frac{1}{\sqrt{2\pi}}exp(-\frac{z^2}{2})\]</span></p>
-<ul>
-<li>它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 <span class="math inline">\(\Phi(z)\)</span></li>
-</ul>
-<p>再看一下標準正態分佈的概率密度方程曲線：</p>
-<p><img src="/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png" width="528" /></p>
-<ul>
-<li>95% 的曲線下面積在標準差 standard deviation <span class="math inline">\(-1.96\sim1.96\)</span> 之間的區域。</li>
-<li>而且，<span class="math inline">\(\phi(-x)=1-\phi(x)\)</span></li>
-<li>任何一個正態分佈都可以通過下面的公式，標準化成爲標準正態分佈：</li>
-</ul>
-<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span></p>
+<div class="section level1">
+<h1>確認數據分佈</h1>
+<p>你可以用先進的 <code>tidyverse</code> 進行簡單的數據彙總，看看天氣狀況不同時實際出勤率是否有差別:</p>
+<pre class="r"><code>library(tidyverse)
+d %&gt;% 
+  group_by(Weather, Y) %&gt;% 
+  summarise (n= n()) %&gt;%
+  mutate(rel.freq = paste0(round(100 * n/sum(n), 2), &quot;%&quot;))</code></pre>
+<pre><code>## # A tibble: 6 x 4
+## # Groups:   Weather [3]
+##   Weather     Y     n rel.freq
+##   &lt;fct&gt;   &lt;int&gt; &lt;int&gt; &lt;chr&gt;   
+## 1 A           0   306 24.31%  
+## 2 A           1   953 75.69%  
+## 3 B           0   230 31.51%  
+## 4 B           1   500 68.49%  
+## 5 C           0   138 33.91%  
+## 6 C           1   269 66.09%</code></pre>
+<p>如果你不想學習 <code>tidyverse</code>，也可以用下面的方法獲得類似的效果，</p>
+<pre class="r"><code>aggregate(Y ~ Weather, data = d, FUN = table)</code></pre>
+<pre><code>##   Weather Y.0 Y.1
+## 1       A 306 953
+## 2       B 230 500
+## 3       C 138 269</code></pre>
+<p>無論是哪種方法，我們都能大概猜出，天氣是晴天的時候 (<code>Weather = A</code>)，出勤率相對較高。</p>
+<p>在作者的原著中，<a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/run-model5-5.R">使用的是給分類型變量強制賦予連續值的方法</a>，這點確實有點噁心，爲了正常的模型，我們需要把天氣轉換成爲更加常見的啞變量 (dummy variable) 如下:</p>
+<pre class="r"><code>d &lt;- fastDummies::dummy_cols(d, select_columns = &quot;Weather&quot;)
+head(d)</code></pre>
+<pre><code>##   PersonID A Score Weather Y Weather_B Weather_A Weather_C
+## 1        1 0    69       B 1         1         0         0
+## 2        1 0    69       A 1         0         1         0
+## 3        1 0    69       C 1         0         0         1
+## 4        1 0    69       A 1         0         1         0
+## 5        1 0    69       B 1         1         0         0
+## 6        1 0    69       B 1         1         0         0</code></pre>
 </div>
 
       </div>
@@ -421,13 +426,9 @@ p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/basic-mathematics">basic mathematics</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/learning-notes">learning notes</a>
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
   
   <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/probability">probability</a>
   
 </div>
 
@@ -445,15 +446,15 @@ p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(
   <h3>Related</h3>
   <ul>
     
-    <li><a href="/post/probability3/">你買的彩票中獎概率到底有多少？</a></li>
+    <li><a href="/post/logistic-rstan/">Rstan Wonderful R-(4)</a></li>
     
-    <li><a href="/post/probability2-4/">概率論2</a></li>
+    <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
     
-    <li><a href="/post/probability-gambling-answers/">“你會用概率論來賭博嗎？”之解答</a></li>
+    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
     
-    <li><a href="/post/inverse-matrix/">「統計解析のための線形代数」復習筆記22</a></li>
+    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
     
-    <li><a href="/post/notes-of-basic-rules-in-maths/">Maths Revisions</a></li>
+    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
     
   </ul>
 </div>
@@ -464,13 +465,10 @@ p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://winterwang.github.io/post/probability2-4/"><span
-      aria-hidden="true">&larr;</span> 概率論2</a></li>
+    <li class="previous"><a href="https://winterwang.github.io/post/logistic-rstan/"><span
+      aria-hidden="true">&larr;</span> Rstan Wonderful R-(4)</a></li>
     
 
-    
-    <li class="next"><a href="https://winterwang.github.io/post/probability3/">你買的彩票中獎概率到底有多少？ <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
