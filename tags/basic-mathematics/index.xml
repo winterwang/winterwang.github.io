@@ -53,6 +53,7 @@
       <guid>https://winterwang.github.io/post/probability3/</guid>
       <description>二項分佈的概念 Binomial distribution 二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 \(n\) 次相互獨立的成功率爲 \(\pi\) 的伯努利實驗 (\(n\) independent Bernoulli trials) 中成功的次數。
 當 \(X\) 服從二項分佈，記爲 \(X \sim binomial(n, \pi)\) 或\(X \sim bin(n, \pi)\)。它的(第 \(x\) 次實驗的)概率被定義爲：
+\[\begin{align} P(X=x) &amp;amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\ &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\ &amp;amp; for\;\; x = 0,1,2,\dots,n \end{align}\]
 二項分佈的期望和方差  期望 \(E(X)\)  若 \(X \sim bin(n,\pi)\)，那麼 \(X\) 就是這一系列獨立伯努利實驗中成功的次數。 用 \(X_i, i =1,\dots, n\) 標記每個相互獨立的伯努利實驗。 那麼我們可以知道 \(X=\sum_{i=1}^nX_i\)。 \[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\ &amp;amp;= E(X_1+X_2+\cdots+X_n) \\ &amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\ &amp;amp;= \sum_{i=1}^nE(X_i)\\ &amp;amp;= \sum_{i=1}^n\pi \\ &amp;amp;= n\pi \end{align}\]  方差 \(Var(X)\) \[\begin{align} Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\ &amp;amp;= Var(X_i+X_2+\cdots+X_n) \\ &amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\ &amp;amp;= \sum_{i=1}^nVar(X_i) \\ &amp;amp;= n\pi(1-\pi) \\ \end{align}\]    超幾何分佈 hypergeometric distribution 假設我們從總人數爲 \(N\) 的人羣中，採集一個樣本 \(n\)。假如已知在總體人羣中(\(N\))有 \(M\) 人患有某種疾病。請問採集的樣本 \(X=n\) 中患有這種疾病的人，服從怎樣的分佈？</description>
     </item>
     
@@ -84,15 +85,11 @@
 可以得到貝葉斯理論公式：
 \[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]
 回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：
+\[\begin{align} P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\ &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\ &amp;amp;= 0.24 \end{align}\]
 所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(\(P(S|A)\))。
  期望 Expectation (或均值 or mean) 和 方差 Variance 期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 \(X\) (discrete random variables)，它的期望被定義爲：
 \[E(X)=\sum_x xP(X=x)\]
-所以就是將所有 \(X\) 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 \(\mu\) 來標記。
-方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：
-\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]
-實際上我們更加常用的是它的另外一個公式：
-\[Var(X)=E(X^2)-E(X)^2\]
-證明 上面兩個方差公式相等  方差的性質： \(Var(X+b)=Var(X)\) \(Var(aX)=a^2Var(X)\) \(Var(aX+b)=a^2Var(X)\)    伯努利分佈 Bernoulli distribution 伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 \(\pi\)。那麼我們可以計算這個分佈的期望值:</description>
+所以就是將所有 \(X\) 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 \(\mu\) 來標記。</description>
     </item>
     
     <item>
@@ -113,7 +110,7 @@
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
+      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
     </item>
     
     <item>
@@ -414,9 +411,10 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description> 函數的最大值最小值問題 沒有制約條件的情況 函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
+      <description>函數的最大值最小值問題 沒有制約條件的情況 函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
 1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
-求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]    </description>
+\[\begin{align} \frac{\partial F}{\partial a_1}&amp;amp;=-2\left\{y_1-(a_1+a_2x_1)\right\}-2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2\left\{y_n-(a_1+a_2x_n)\right\}\\ &amp;amp;= -2\sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0 \Leftrightarrow \sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0\\ \Leftrightarrow \sum_{i=1}^ny_i &amp;amp;= a_1\cdot n+a_2\sum_{i=1}^nx_i (1)\\ \\ \frac{\partial F}{\partial a_2}&amp;amp;=-2x_1\left\{y_1-(a_1+a_2x_1)\right\}-2x_2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2x_3\left\{y_n-(a_1+a_2x_n)\right\}\\ &amp;amp;= -2\sum_{i=1}^nx_i\left\{y_i-(a_1+a_2x_i)\right\}=0\\ \Leftrightarrow \sum_{i=1}^nx_iy_i &amp;amp;=a_1\sum_{i=1}^nx_i+a_2\sum_{i=1}^nx_i^2 (2)\\ &amp;amp;將(1)(2)連立方程求解即可。在回歸分析中，\\ &amp;amp;這個連立方程組被稱作正規方程組(Normal \;equation) \end{align}\]
+求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]  \[\begin{align} 解連立方程：\\ \frac{\partial F}{\partial a_1} &amp;amp; = 2a_1+a_2+a_3-6=0\\ \frac{\partial F}{\partial a_2} &amp;amp; = a_1+2a_2+a_3-3=0\\ \frac{\partial F}{\partial a_3} &amp;amp; = a_1+a_2+2a_3-7=0\\ 答：&amp;amp; a_1=2, a_2=-1,a_3=3 \end{align}\]</description>
     </item>
     
     <item>

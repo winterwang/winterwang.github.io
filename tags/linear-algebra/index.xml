@@ -18,7 +18,7 @@
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
+      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
     </item>
     
     <item>
@@ -305,9 +305,10 @@
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description> 函數的最大值最小值問題 沒有制約條件的情況 函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
+      <description>函數的最大值最小值問題 沒有制約條件的情況 函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
 1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
-求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]    </description>
+\[\begin{align} \frac{\partial F}{\partial a_1}&amp;amp;=-2\left\{y_1-(a_1+a_2x_1)\right\}-2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2\left\{y_n-(a_1+a_2x_n)\right\}\\ &amp;amp;= -2\sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0 \Leftrightarrow \sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0\\ \Leftrightarrow \sum_{i=1}^ny_i &amp;amp;= a_1\cdot n+a_2\sum_{i=1}^nx_i (1)\\ \\ \frac{\partial F}{\partial a_2}&amp;amp;=-2x_1\left\{y_1-(a_1+a_2x_1)\right\}-2x_2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2x_3\left\{y_n-(a_1+a_2x_n)\right\}\\ &amp;amp;= -2\sum_{i=1}^nx_i\left\{y_i-(a_1+a_2x_i)\right\}=0\\ \Leftrightarrow \sum_{i=1}^nx_iy_i &amp;amp;=a_1\sum_{i=1}^nx_i+a_2\sum_{i=1}^nx_i^2 (2)\\ &amp;amp;將(1)(2)連立方程求解即可。在回歸分析中，\\ &amp;amp;這個連立方程組被稱作正規方程組(Normal \;equation) \end{align}\]
+求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]  \[\begin{align} 解連立方程：\\ \frac{\partial F}{\partial a_1} &amp;amp; = 2a_1+a_2+a_3-6=0\\ \frac{\partial F}{\partial a_2} &amp;amp; = a_1+2a_2+a_3-3=0\\ \frac{\partial F}{\partial a_3} &amp;amp; = a_1+a_2+2a_3-7=0\\ 答：&amp;amp; a_1=2, a_2=-1,a_3=3 \end{align}\]</description>
     </item>
     
     <item>

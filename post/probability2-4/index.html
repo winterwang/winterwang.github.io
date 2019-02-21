@@ -366,10 +366,14 @@ P(A\cap S)=P(S|A)P(A)\]</span>
 <p><span class="math display">\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]</span></p>
 <p>回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：</p>
 <p><img src="/img/Selection_073.png" /></p>
-
+<p><span class="math display">\[\begin{align}
+P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
+        &amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
+        &amp;= 0.24
+\end{align}\]</span></p>
 <p>所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(<span class="math inline">\(P(S|A)\)</span>)。</p>
 </div>
-<div id="-expectation--or-mean---variance" class="section level3">
+<div id="expectation--or-mean---variance" class="section level3">
 <h3>期望 Expectation (或均值 or mean) 和 方差 Variance</h3>
 <p>期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。
 對於離散型隨機變量 <span class="math inline">\(X\)</span> (discrete random variables)，它的期望被定義爲：</p>
@@ -379,11 +383,18 @@ P(A\cap S)=P(S|A)P(A)\]</span>
 <p><span class="math display">\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]</span></p>
 <p>實際上我們更加常用的是它的另外一個公式：</p>
 <p><span class="math display">\[Var(X)=E(X^2)-E(X)^2\]</span></p>
-<div id="-" class="section level4">
+<div id="section" class="section level4">
 <h4>證明 上面兩個方差公式相等</h4>
-
+<p><span class="math display">\[\begin{align}
+Var(x)  &amp;= E((X-\mu)^2) \\
+        &amp;= E(X^2-2X\mu+\mu^2)\\
+        &amp;= E(X^2) - 2\mu E(X) + \mu^2\\
+        &amp;= E(X^2) - 2\mu^2 + \mu^2 \\
+        &amp;= E(X^2) - \mu^2 \\
+        &amp;= E(X^2) - E(X)^2
+\end{align}\]</span></p>
 </div>
-<div class="section level4">
+<div id="section-1" class="section level4">
 <h4>方差的性質：</h4>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(Var(X+b)=Var(X)\)</span></li>
@@ -392,12 +403,21 @@ P(A\cap S)=P(S|A)P(A)\]</span>
 </ol>
 </div>
 </div>
-<div id="-bernoulli-distribution" class="section level3">
+<div id="bernoulli-distribution" class="section level3">
 <h3>伯努利分佈 Bernoulli distribution</h3>
 <p>伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 <span class="math inline">\(\pi\)</span>。那麼我們可以計算這個分佈的期望值:</p>
-
+<p><span class="math display">\[\begin{align}
+E(X) &amp;=\sum_x xP(X=x) \\
+     &amp;=1\times\pi + 0\times(1-\pi)\\
+     &amp;=\pi
+\end{align}\]</span></p>
 <p>由於 <span class="math inline">\(x=x^2\)</span>，因爲 <span class="math inline">\(x=0,1\)</span>, 所以 <span class="math inline">\(E[X^2]=E[X]\)</span>，那麼方差爲：</p>
-
+<p><span class="math display">\[\begin{align}
+Var(X) &amp;=E[X^2]-E[X]^2 \\
+       &amp;=E[X]-E[X]^2 \\
+       &amp;=\pi - \pi^2 \\
+       &amp;=\pi(1-\pi)
+\end{align}\]</span></p>
 </div>
 <div id="xy--a-exyexey-b-varxyvarxvary" class="section level3">
 <h3>證明，<span class="math inline">\(X,Y\)</span> 爲互爲獨立的隨機離散變量時，<br>a) <span class="math inline">\(E(XY)=E(X)E(Y)\)</span> ; <br>b) <span class="math inline">\(Var(X+Y)=Var(X)+Var(Y)\)</span></h3>
@@ -406,7 +426,13 @@ P(A\cap S)=P(S|A)P(A)\]</span>
 <li><strong>證明</strong></li>
 </ol></li>
 </ul>
-
+<p><span class="math display">\[\begin{align}
+E(XY) &amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
+\because &amp;\; X,Y are\;independent\;to\;each\;other \\
+\therefore &amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
+      &amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
+      &amp;=E(X)E(Y)
+\end{align}\]</span></p>
 <ul>
 <li><ol start="2" style="list-style-type: lower-alpha">
 <li><strong>證明</strong>

@@ -180,7 +180,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
+      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
     </item>
     
     <item>
