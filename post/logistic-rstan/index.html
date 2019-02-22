@@ -354,7 +354,7 @@
         
 
 
-<div id="-rstan-" class="section level1">
+<div id="rstan-" class="section level1">
 <h1>邏輯回歸模型的 Rstan 貝葉斯實現</h1>
 <p>本小節使用的<a href="https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt">數據</a>，和前一節的出勤率數據很類似:</p>
 <pre class="r"><code>d &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&quot;, 
@@ -375,11 +375,11 @@ head(d)</code></pre>
 <li><code>Y</code>: 過去三個月內，該名學生實際上出勤的課時數。</li>
 </ul>
 </div>
-<div class="section level1">
+<div id="section" class="section level1">
 <h1>確定分析目的</h1>
 <p>需要回答的問題依然是，<span class="math inline">\(A, Score\)</span> 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 <span class="math inline">\(Y\)</span> 的多少信息？</p>
 </div>
-<div class="section level1">
+<div id="section-1" class="section level1">
 <h1>確認數據分佈</h1>
 <pre class="r"><code>library(ggplot2)
 library(GGally)
@@ -460,7 +460,7 @@ Figure 1: 三個變量的分佈觀察圖，相比之前增加了 <span class="ma
 </div>
 <p>從圖 <a href="#fig:step1">1</a> 還可以看出，由於總課時數越多，學生實際出勤的課時數也會越多所以 <span class="math inline">\(M, Y\)</span> 兩者之間理應有很強的正相關。另外可能可以推測的是 <span class="math inline">\(Ratio\)</span> 和是否愛學習的分數之間大概有可能有正相關，和是否喜歡打工之間大概可能有負相關。</p>
 </div>
-<div class="section level1">
+<div id="section-2" class="section level1">
 <h1>寫下數學模型表達式</h1>
 <p>在 Stan 的語法中，使用的是反邏輯函數 (inverse logit): <code>inv_logit</code> 來描述下面的邏輯回歸模型 5-4。</p>
 <p><span class="math display">\[
@@ -836,7 +836,9 @@ q[n] = \text{inv_logit}(0.09 - 0.62 A[n] + 1.90Score[n]) &amp; n = 1, 2, \dots, 
 Y[n] \sim \text{Binomial}(M[n], q[n])                 &amp; n = 1, 2, \dots, N \\
 \end{array}
 \]</span></p>
-<p>確認收斂效果:</p>
+</div>
+<div id="section-3" class="section level1">
+<h1>確認收斂效果</h1>
 <pre class="r"><code>library(bayesplot)
 
 color_scheme_set(&quot;mix-brightblue-gray&quot;)

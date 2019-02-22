@@ -273,7 +273,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    8 min read
   </span>
   
 
@@ -417,6 +417,9 @@ head(d)</code></pre>
 ## 4        1 0    69       A 1         0         1         0
 ## 5        1 0    69       B 1         1         0         0
 ## 6        1 0    69       B 1         1         0         0</code></pre>
+</div>
+<div id="section-3" class="section level1">
+<h1>思考數據模型</h1>
 <p>我們設想的數學模型應該是這樣子的:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -428,14 +431,11 @@ head(d)</code></pre>
 Y[i] &amp;\sim \text{Bernulli}(q[i])
 \end{aligned}
 \]</span></p>
+</div>
+<div id="stan-" class="section level1">
+<h1>寫下 Stan 模型代碼</h1>
 <p>下面是相應的 Stan 模型:</p>
-<pre><code>// Learn more about model development with Stan at:
-//
-//    http://mc-stan.org/users/interfaces/rstan.html
-//    https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started
-//
-
-data {
+<pre><code>data {
   int I;
   int&lt;lower=0, upper=1&gt; A[I];
   real&lt;lower=0, upper=1&gt; Score[I];
@@ -471,12 +471,12 @@ model {
 <pre class="r"><code>data &lt;- list(I=nrow(d), A=d$A, Score=d$Score/200, 
              W_A=d$Weather_A, W_B = d$Weather_B, W_C = d$Weather_C, 
              Y=d$Y)
-fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#39;), seed=1234)</code></pre>
+fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#39;, &quot;OR1&quot;, &quot;OR2&quot;, &quot;OR3&quot;, &quot;OR4&quot;), seed=1234)</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.001318 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 13.18 seconds.
+## Chain 1: Gradient evaluation took 0.000807 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 8.07 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -493,15 +493,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 14.1073 seconds (Warm-up)
-## Chain 1:                19.8476 seconds (Sampling)
-## Chain 1:                33.9549 seconds (Total)
+## Chain 1:  Elapsed Time: 11.0323 seconds (Warm-up)
+## Chain 1:                13.708 seconds (Sampling)
+## Chain 1:                24.7404 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 0.000697 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 6.97 seconds.
+## Chain 2: Gradient evaluation took 0.000509 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 5.09 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -518,15 +518,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 16.6386 seconds (Warm-up)
-## Chain 2:                17.3573 seconds (Sampling)
-## Chain 2:                33.9959 seconds (Total)
+## Chain 2:  Elapsed Time: 11.9797 seconds (Warm-up)
+## Chain 2:                12.941 seconds (Sampling)
+## Chain 2:                24.9207 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 0.000717 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 7.17 seconds.
+## Chain 3: Gradient evaluation took 0.00052 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 5.2 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -543,15 +543,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 16.5735 seconds (Warm-up)
-## Chain 3:                17.2824 seconds (Sampling)
-## Chain 3:                33.8559 seconds (Total)
+## Chain 3:  Elapsed Time: 12.3348 seconds (Warm-up)
+## Chain 3:                12.8694 seconds (Sampling)
+## Chain 3:                25.2041 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 0.000665 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 6.65 seconds.
+## Chain 4: Gradient evaluation took 0.000517 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 5.17 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -568,9 +568,9 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 17.4312 seconds (Warm-up)
-## Chain 4:                16.4482 seconds (Sampling)
-## Chain 4:                33.8794 seconds (Total)
+## Chain 4:  Elapsed Time: 12.7852 seconds (Warm-up)
+## Chain 4:                12.5772 seconds (Sampling)
+## Chain 4:                25.3624 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit1</code></pre>
 <pre><code>## Inference for Stan model: myex4.
@@ -583,6 +583,10 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## b[3]     1.97    0.01 0.36     1.26     1.73     1.97     2.21     2.68
 ## b[4]    -0.38    0.00 0.11    -0.59    -0.45    -0.38    -0.31    -0.18
 ## b[5]    -0.49    0.00 0.12    -0.73    -0.58    -0.49    -0.41    -0.26
+## OR1      0.54    0.00 0.05     0.44     0.50     0.53     0.57     0.64
+## OR2      7.64    0.06 2.86     3.54     5.61     7.17     9.14    14.56
+## OR3      0.69    0.00 0.07     0.56     0.64     0.68     0.73     0.84
+## OR4      0.61    0.00 0.08     0.48     0.56     0.61     0.66     0.77
 ## lp__ -1379.61    0.04 1.55 -1383.37 -1380.43 -1379.31 -1378.48 -1377.54
 ##      n_eff Rhat
 ## b[1]  2049    1
@@ -590,12 +594,50 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## b[3]  2308    1
 ## b[4]  3378    1
 ## b[5]  3194    1
+## OR1   3349    1
+## OR2   2372    1
+## OR3   3324    1
+## OR4   3152    1
 ## lp__  1886    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Fri Feb 22 08:36:11 2019.
+## Samples were drawn using NUTS(diag_e) at Fri Feb 22 23:16:48 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
+</div>
+<div id="section-4" class="section level1">
+<h1>檢查模型擬合情況</h1>
+<pre class="r"><code>library(bayesplot)
+
+color_scheme_set(&quot;mix-brightblue-gray&quot;)
+
+posterior5.5 &lt;- rstan::extract(fit1, inc_warmup = TRUE, permuted = FALSE)
+
+p &lt;- mcmc_trace(posterior5.5, n_warmup = 0, pars = c(&quot;b[1]&quot;, &quot;b[2]&quot;, &quot;b[3]&quot;,   &quot;lp__&quot;), facet_args = list(nrow = 2, labeller = label_parsed))
+
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:chapter5-5"></span>
+<img src="/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-1.png" alt="用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。" width="80%" />
+<p class="caption">
+Figure 1: 用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。
+</p>
+</div>
+<pre class="r"><code>p &lt;- mcmc_acf_bar(posterior5.5, pars = c(&quot;b[1]&quot;, &quot;b[2]&quot;, &quot;b[3]&quot;,   &quot;lp__&quot;))
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:chapter5-5-acf"></span>
+<img src="/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-acf-1.png" alt="用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。" width="80%" />
+<p class="caption">
+Figure 2: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。
+</p>
+</div>
+<pre class="r"><code>p &lt;- mcmc_dens_overlay(posterior5.5, pars = c(&quot;b[1]&quot;, &quot;b[2]&quot;, &quot;b[3]&quot;, &quot;OR1&quot;,  &quot;OR2&quot;, &quot;lp__&quot;), color_chains = T)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:step5-5-density"></span>
+<img src="/post/2019-01-27-logistic2-rstan_files/figure-html/step5-5-density-1.png" alt="用 bayesplot包數繪製的事後樣本密度分佈圖。" width="80%" />
+<p class="caption">
+Figure 3: 用 bayesplot包數繪製的事後樣本密度分佈圖。
+</p>
+</div>
 </div>
 
       </div>

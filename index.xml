@@ -115,6 +115,9 @@ head(d)&lt;/code&gt;&lt;/pre&gt;
 ## 4        1 0    69       A 1         0         1         0
 ## 5        1 0    69       B 1         1         0         0
 ## 6        1 0    69       B 1         1         0         0&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;思考數據模型&lt;/h1&gt;
 &lt;p&gt;我們設想的數學模型應該是這樣子的:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
@@ -126,14 +129,11 @@ head(d)&lt;/code&gt;&lt;/pre&gt;
 Y[i] &amp;amp;\sim \text{Bernulli}(q[i])
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stan-&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;寫下 Stan 模型代碼&lt;/h1&gt;
 &lt;p&gt;下面是相應的 Stan 模型:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// Learn more about model development with Stan at:
-//
-//    http://mc-stan.org/users/interfaces/rstan.html
-//    https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started
-//
-
-data {
+&lt;pre&gt;&lt;code&gt;data {
   int I;
   int&amp;lt;lower=0, upper=1&amp;gt; A[I];
   real&amp;lt;lower=0, upper=1&amp;gt; Score[I];
@@ -169,12 +169,12 @@ model {
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data &amp;lt;- list(I=nrow(d), A=d$A, Score=d$Score/200, 
              W_A=d$Weather_A, W_B = d$Weather_B, W_C = d$Weather_C, 
              Y=d$Y)
-fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars=c(&amp;#39;b&amp;#39;), seed=1234)&lt;/code&gt;&lt;/pre&gt;
+fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars=c(&amp;#39;b&amp;#39;, &amp;quot;OR1&amp;quot;, &amp;quot;OR2&amp;quot;, &amp;quot;OR3&amp;quot;, &amp;quot;OR4&amp;quot;), seed=1234)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.001318 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 13.18 seconds.
+## Chain 1: Gradient evaluation took 0.000807 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 8.07 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -191,15 +191,15 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 14.1073 seconds (Warm-up)
-## Chain 1:                19.8476 seconds (Sampling)
-## Chain 1:                33.9549 seconds (Total)
+## Chain 1:  Elapsed Time: 11.0323 seconds (Warm-up)
+## Chain 1:                13.708 seconds (Sampling)
+## Chain 1:                24.7404 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 0.000697 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 6.97 seconds.
+## Chain 2: Gradient evaluation took 0.000509 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 5.09 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -216,15 +216,15 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 16.6386 seconds (Warm-up)
-## Chain 2:                17.3573 seconds (Sampling)
-## Chain 2:                33.9959 seconds (Total)
+## Chain 2:  Elapsed Time: 11.9797 seconds (Warm-up)
+## Chain 2:                12.941 seconds (Sampling)
+## Chain 2:                24.9207 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 0.000717 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 7.17 seconds.
+## Chain 3: Gradient evaluation took 0.00052 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 5.2 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -241,15 +241,15 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 16.5735 seconds (Warm-up)
-## Chain 3:                17.2824 seconds (Sampling)
-## Chain 3:                33.8559 seconds (Total)
+## Chain 3:  Elapsed Time: 12.3348 seconds (Warm-up)
+## Chain 3:                12.8694 seconds (Sampling)
+## Chain 3:                25.2041 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 0.000665 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 6.65 seconds.
+## Chain 4: Gradient evaluation took 0.000517 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 5.17 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -266,9 +266,9 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 17.4312 seconds (Warm-up)
-## Chain 4:                16.4482 seconds (Sampling)
-## Chain 4:                33.8794 seconds (Total)
+## Chain 4:  Elapsed Time: 12.7852 seconds (Warm-up)
+## Chain 4:                12.5772 seconds (Sampling)
+## Chain 4:                25.3624 seconds (Total)
 ## Chain 4:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Inference for Stan model: myex4.
@@ -281,6 +281,10 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## b[3]     1.97    0.01 0.36     1.26     1.73     1.97     2.21     2.68
 ## b[4]    -0.38    0.00 0.11    -0.59    -0.45    -0.38    -0.31    -0.18
 ## b[5]    -0.49    0.00 0.12    -0.73    -0.58    -0.49    -0.41    -0.26
+## OR1      0.54    0.00 0.05     0.44     0.50     0.53     0.57     0.64
+## OR2      7.64    0.06 2.86     3.54     5.61     7.17     9.14    14.56
+## OR3      0.69    0.00 0.07     0.56     0.64     0.68     0.73     0.84
+## OR4      0.61    0.00 0.08     0.48     0.56     0.61     0.66     0.77
 ## lp__ -1379.61    0.04 1.55 -1383.37 -1380.43 -1379.31 -1378.48 -1377.54
 ##      n_eff Rhat
 ## b[1]  2049    1
@@ -288,12 +292,50 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## b[3]  2308    1
 ## b[4]  3378    1
 ## b[5]  3194    1
+## OR1   3349    1
+## OR2   2372    1
+## OR3   3324    1
+## OR4   3152    1
 ## lp__  1886    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Fri Feb 22 08:36:11 2019.
+## Samples were drawn using NUTS(diag_e) at Fri Feb 22 23:16:48 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-4&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;檢查模型擬合情況&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
+
+color_scheme_set(&amp;quot;mix-brightblue-gray&amp;quot;)
+
+posterior5.5 &amp;lt;- rstan::extract(fit1, inc_warmup = TRUE, permuted = FALSE)
+
+p &amp;lt;- mcmc_trace(posterior5.5, n_warmup = 0, pars = c(&amp;quot;b[1]&amp;quot;, &amp;quot;b[2]&amp;quot;, &amp;quot;b[3]&amp;quot;,   &amp;quot;lp__&amp;quot;), facet_args = list(nrow = 2, labeller = label_parsed))
+
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:chapter5-5&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_acf_bar(posterior5.5, pars = c(&amp;quot;b[1]&amp;quot;, &amp;quot;b[2]&amp;quot;, &amp;quot;b[3]&amp;quot;,   &amp;quot;lp__&amp;quot;))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:chapter5-5-acf&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-acf-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_dens_overlay(posterior5.5, pars = c(&amp;quot;b[1]&amp;quot;, &amp;quot;b[2]&amp;quot;, &amp;quot;b[3]&amp;quot;, &amp;quot;OR1&amp;quot;,  &amp;quot;OR2&amp;quot;, &amp;quot;lp__&amp;quot;), color_chains = T)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step5-5-density&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://winterwang.github.io/post/2019-01-27-logistic2-rstan_files/figure-html/step5-5-density-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本密度分佈圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: 用 bayesplot包數繪製的事後樣本密度分佈圖。
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -307,7 +349,7 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
       <description>
 
 
-&lt;div id=&#34;-rstan-&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;rstan-&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;邏輯回歸模型的 Rstan 貝葉斯實現&lt;/h1&gt;
 &lt;p&gt;本小節使用的&lt;a href=&#34;https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt&#34;&gt;數據&lt;/a&gt;，和前一節的出勤率數據很類似:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, 
@@ -328,11 +370,11 @@ head(d)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;code&gt;Y&lt;/code&gt;: 過去三個月內，該名學生實際上出勤的課時數。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;確定分析目的&lt;/h1&gt;
 &lt;p&gt;需要回答的問題依然是，&lt;span class=&#34;math inline&#34;&gt;\(A, Score\)&lt;/span&gt; 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的多少信息？&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;section-1&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;確認數據分佈&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 library(GGally)
@@ -413,7 +455,7 @@ Figure 1: 三個變量的分佈觀察圖，相比之前增加了 &lt;span class=
 &lt;/div&gt;
 &lt;p&gt;從圖 &lt;a href=&#34;#fig:step1&#34;&gt;1&lt;/a&gt; 還可以看出，由於總課時數越多，學生實際出勤的課時數也會越多所以 &lt;span class=&#34;math inline&#34;&gt;\(M, Y\)&lt;/span&gt; 兩者之間理應有很強的正相關。另外可能可以推測的是 &lt;span class=&#34;math inline&#34;&gt;\(Ratio\)&lt;/span&gt; 和是否愛學習的分數之間大概有可能有正相關，和是否喜歡打工之間大概可能有負相關。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;section-2&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;寫下數學模型表達式&lt;/h1&gt;
 &lt;p&gt;在 Stan 的語法中，使用的是反邏輯函數 (inverse logit): &lt;code&gt;inv_logit&lt;/code&gt; 來描述下面的邏輯回歸模型 5-4。&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
@@ -789,7 +831,9 @@ q[n] = \text{inv_logit}(0.09 - 0.62 A[n] + 1.90Score[n]) &amp;amp; n = 1, 2, \do
 Y[n] \sim \text{Binomial}(M[n], q[n])                 &amp;amp; n = 1, 2, \dots, N \\
 \end{array}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;確認收斂效果:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;確認收斂效果&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
 
 color_scheme_set(&amp;quot;mix-brightblue-gray&amp;quot;)

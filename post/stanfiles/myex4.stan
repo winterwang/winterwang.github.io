@@ -23,9 +23,25 @@ parameters {
   real b[5];
 }
 
+
+
 // The model to be estimated. 
 model {
    for (i in 1:I)
     Y[i] ~ bernoulli_logit(b[1] + b[2]*A[i] + b[3]*Score[i] + b[4]*W_B[i] + b[5]*W_C[i]);
 }
 
+// The parameters transformed to OR
+generated quantities {
+  real Odds_0;
+  real OR1; 
+  real OR2; 
+  real OR3; 
+  real OR4; 
+  
+  Odds_0 = exp(b[1]); 
+  OR1    = exp(b[2]);
+  OR2    = exp(b[3]);
+  OR3    = exp(b[4]); 
+  OR4    = exp(b[5]);
+}
