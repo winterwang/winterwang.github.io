@@ -26,10 +26,24 @@ parameters {
 
 
 // The model to be estimated. 
-model {
-   for (i in 1:I)
-    Y[i] ~ bernoulli_logit(b[1] + b[2]*A[i] + b[3]*Score[i] + b[4]*W_B[i] + b[5]*W_C[i]);
+// model {
+//    for (i in 1:I)
+//     Y[i] ~ bernoulli_logit(b[1] + b[2]*A[i] + b[3]*Score[i] + b[4]*W_B[i] + b[5]*W_C[i]);
+// }
+
+
+transformed parameters {
+  real q[I];
+  for (i in 1:I)
+    q[i] = inv_logit(b[1] + b[2]*A[i] + b[3]*Score[i] + b[4]*W_B[i] + b[5]*W_C[i]);
 }
+
+model {
+  for (i in 1:I)
+    Y[i] ~ bernoulli(q[i]);
+}
+
+
 
 // The parameters transformed to OR
 generated quantities {
