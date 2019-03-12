@@ -51,8 +51,19 @@
       <guid>https://winterwang.github.io/post/logistic-rstan2/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a&gt;另一種形式的貝葉斯邏輯回歸&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;分析的目的&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;思考數據模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#-stan-&#34;&gt;寫下 Stan 模型代碼&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;檢查模型參數的收斂情況&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;檢查模型的擬合情況&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;div id=&#34;section&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;另一種形式的貝葉斯邏輯回歸&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://wangcc.me/post/logistic-rstan/&#34;&gt;前面一節&lt;/a&gt;使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在&lt;a href=&#34;https://wangcc.me/post/logistic-rstan/&#34;&gt;前一節&lt;/a&gt;已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候&lt;a href=&#34;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&#34;&gt;原始數據&lt;/a&gt;中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&amp;quot;, 
@@ -76,11 +87,11 @@ head(d, 10)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;其他的數據和前一節中使用的數據相同。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-1&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;分析的目的&lt;/h1&gt;
 &lt;p&gt;本次數據分析的目的依然是瞭解幾個預測變量，天氣，是否喜歡打工，是否熱愛學習，對學生出勤率的影響。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-2&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;確認數據分佈&lt;/h1&gt;
 &lt;p&gt;你可以用先進的 &lt;code&gt;tidyverse&lt;/code&gt; 進行簡單的數據彙總，看看天氣狀況不同時實際出勤率是否有差別:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
@@ -116,7 +127,7 @@ head(d)&lt;/code&gt;&lt;/pre&gt;
 ## 5        1 0    69       B 1         1         0         0
 ## 6        1 0    69       B 1         1         0         0&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-3&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;思考數據模型&lt;/h1&gt;
 &lt;p&gt;我們設想的數學模型應該是這樣子的:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
@@ -130,7 +141,7 @@ Y[i] &amp;amp;\sim \text{Bernulli}(q[i])
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;stan-&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;-stan-&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;寫下 Stan 模型代碼&lt;/h1&gt;
 &lt;p&gt;下面是相應的 Stan 模型:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;data {
@@ -173,8 +184,8 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000984 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 9.84 seconds.
+## Chain 1: Gradient evaluation took 0.000699 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 6.99 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -191,15 +202,15 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 12.6766 seconds (Warm-up)
-## Chain 1:                16.8493 seconds (Sampling)
-## Chain 1:                29.5259 seconds (Total)
+## Chain 1:  Elapsed Time: 9.77734 seconds (Warm-up)
+## Chain 1:                12.5252 seconds (Sampling)
+## Chain 1:                22.3026 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 0.000644 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 6.44 seconds.
+## Chain 2: Gradient evaluation took 0.000476 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 4.76 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -216,15 +227,15 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 14.2149 seconds (Warm-up)
-## Chain 2:                15.1197 seconds (Sampling)
-## Chain 2:                29.3345 seconds (Total)
+## Chain 2:  Elapsed Time: 10.6448 seconds (Warm-up)
+## Chain 2:                11.1107 seconds (Sampling)
+## Chain 2:                21.7555 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 0.000637 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 6.37 seconds.
+## Chain 3: Gradient evaluation took 0.000453 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 4.53 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -241,15 +252,15 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 13.5268 seconds (Warm-up)
-## Chain 3:                14.3709 seconds (Sampling)
-## Chain 3:                27.8977 seconds (Total)
+## Chain 3:  Elapsed Time: 9.94784 seconds (Warm-up)
+## Chain 3:                10.8081 seconds (Sampling)
+## Chain 3:                20.7559 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;myex4&amp;#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 0.000586 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 5.86 seconds.
+## Chain 4: Gradient evaluation took 0.000421 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 4.21 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -266,9 +277,9 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 13.1762 seconds (Warm-up)
-## Chain 4:                13.5567 seconds (Sampling)
-## Chain 4:                26.7329 seconds (Total)
+## Chain 4:  Elapsed Time: 10.1935 seconds (Warm-up)
+## Chain 4:                10.1496 seconds (Sampling)
+## Chain 4:                20.3432 seconds (Total)
 ## Chain 4:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Inference for Stan model: myex4.
@@ -5090,12 +5101,12 @@ fit1 &amp;lt;- stan(file=&amp;#39;stanfiles/myex4.stan&amp;#39;, data=data, pars
 ## q[2396]  3616    1
 ## lp__     1722    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Feb 26 23:40:07 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Mar 12 13:40:17 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-4&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;檢查模型參數的收斂情況&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
 
@@ -5129,7 +5140,7 @@ Figure 3: 用 bayesplot包數繪製的事後樣本密度分佈圖。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-5&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;檢查模型的擬合情況&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ms &amp;lt;- rstan::extract(fit1)
 set.seed(123)
@@ -5197,8 +5208,17 @@ Figure 5: 把計算獲得的事後概率的中央值作爲每名學生是否出�
       <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#-rstan-&#34;&gt;邏輯回歸模型的 Rstan 貝葉斯實現&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;確定分析目的&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;寫下數學模型表達式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;確認收斂效果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;div id=&#34;rstan-&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;-rstan-&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;邏輯回歸模型的 Rstan 貝葉斯實現&lt;/h1&gt;
 &lt;p&gt;本小節使用的&lt;a href=&#34;https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt&#34;&gt;數據&lt;/a&gt;，和前一節的出勤率數據很類似:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, 
@@ -5219,11 +5239,11 @@ head(d)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;code&gt;Y&lt;/code&gt;: 過去三個月內，該名學生實際上出勤的課時數。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;確定分析目的&lt;/h1&gt;
 &lt;p&gt;需要回答的問題依然是，&lt;span class=&#34;math inline&#34;&gt;\(A, Score\)&lt;/span&gt; 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的多少信息？&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-1&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;確認數據分佈&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 library(GGally)
@@ -5304,7 +5324,7 @@ Figure 1: 三個變量的分佈觀察圖，相比之前增加了 &lt;span class=
 &lt;/div&gt;
 &lt;p&gt;從圖 &lt;a href=&#34;#fig:step1&#34;&gt;1&lt;/a&gt; 還可以看出，由於總課時數越多，學生實際出勤的課時數也會越多所以 &lt;span class=&#34;math inline&#34;&gt;\(M, Y\)&lt;/span&gt; 兩者之間理應有很強的正相關。另外可能可以推測的是 &lt;span class=&#34;math inline&#34;&gt;\(Ratio\)&lt;/span&gt; 和是否愛學習的分數之間大概有可能有正相關，和是否喜歡打工之間大概可能有負相關。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-2&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;寫下數學模型表達式&lt;/h1&gt;
 &lt;p&gt;在 Stan 的語法中，使用的是反邏輯函數 (inverse logit): &lt;code&gt;inv_logit&lt;/code&gt; 來描述下面的邏輯回歸模型 5-4。&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
@@ -5681,7 +5701,7 @@ Y[n] \sim \text{Binomial}(M[n], q[n])                 &amp;amp; n = 1, 2, \dots,
 \end{array}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section-3&#34; class=&#34;section level1&#34;&gt;
+&lt;div class=&#34;section level1&#34;&gt;
 &lt;h1&gt;確認收斂效果&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
 
@@ -5734,6 +5754,16 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
       <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#-multiple-regression&#34;&gt;多重回歸 multiple regression&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#step-1.-&#34;&gt;Step 1. 確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-2.-&#34;&gt;Step 2. 寫下數學模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-3.-&#34;&gt;Step 3. 看圖確認模型擬合狀況&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-4.-mcmc-&#34;&gt;Step 4. MCMC 樣本的散點圖矩陣&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
 &lt;div id=&#34;-multiple-regression&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;多重回歸 multiple regression&lt;/h1&gt;
@@ -6482,6 +6512,18 @@ Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的
       <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#step-1-&#34;&gt;Step 1, 確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-2-&#34;&gt;Step 2, 描述線性模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-3-stan&#34;&gt;Step 3, 寫下Stan模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-4-stan&#34;&gt;Step 4, 診斷Stan貝葉斯模型的收斂程度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-5mcmc&#34;&gt;Step 5，修改MCMC條件設定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-6-&#34;&gt;Step 6, 並行（平行）計算的設定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-7-&#34;&gt;Step 7, 計算貝葉斯可信區間和貝葉斯預測區間&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a&gt;練習題&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&#34;&gt;數據 data-salary.txt&lt;/a&gt;是架空的。&lt;/p&gt;
 &lt;p&gt;某公司社員的年齡 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;（歲），和年收入 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;（萬日元）的數據如下：&lt;/p&gt;
@@ -7129,15 +7171,15 @@ fit &amp;lt;- sampling(exe13, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.023962 seconds (Warm-up)
-## Chain 1:                0.018405 seconds (Sampling)
-## Chain 1:                0.042367 seconds (Total)
+## Chain 1:  Elapsed Time: 0.026494 seconds (Warm-up)
+## Chain 1:                0.022123 seconds (Sampling)
+## Chain 1:                0.048617 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 3e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -7154,9 +7196,9 @@ fit &amp;lt;- sampling(exe13, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.028301 seconds (Warm-up)
-## Chain 2:                0.058855 seconds (Sampling)
-## Chain 2:                0.087156 seconds (Total)
+## Chain 2:  Elapsed Time: 0.029214 seconds (Warm-up)
+## Chain 2:                0.059684 seconds (Sampling)
+## Chain 2:                0.088898 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 3).
@@ -7179,9 +7221,9 @@ fit &amp;lt;- sampling(exe13, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.022841 seconds (Warm-up)
-## Chain 3:                0.019193 seconds (Sampling)
-## Chain 3:                0.042034 seconds (Total)
+## Chain 3:  Elapsed Time: 0.026413 seconds (Warm-up)
+## Chain 3:                0.022079 seconds (Sampling)
+## Chain 3:                0.048492 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 4).
@@ -7204,9 +7246,9 @@ fit &amp;lt;- sampling(exe13, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.024474 seconds (Warm-up)
-## Chain 4:                0.019615 seconds (Sampling)
-## Chain 4:                0.044089 seconds (Total)
+## Chain 4:  Elapsed Time: 0.027496 seconds (Warm-up)
+## Chain 4:                0.021971 seconds (Sampling)
+## Chain 4:                0.049467 seconds (Total)
 ## Chain 4:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Inference for Stan model: ex3.
@@ -7219,7 +7261,7 @@ fit &amp;lt;- sampling(exe13, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## sigma   4.49    0.01 0.46    3.69   4.17   4.44   4.77   5.52  3499    1
 ## lp__  -97.74    0.03 1.27 -100.95 -98.33 -97.40 -96.83 -96.33  1896    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 24 10:19:17 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Mar 12 13:48:00 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
@@ -7268,8 +7310,8 @@ fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;ex5&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 8e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 1: Gradient evaluation took 9e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -7286,9 +7328,9 @@ fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.025593 seconds (Warm-up)
-## Chain 1:                0.02326 seconds (Sampling)
-## Chain 1:                0.048853 seconds (Total)
+## Chain 1:  Elapsed Time: 0.028205 seconds (Warm-up)
+## Chain 1:                0.025696 seconds (Sampling)
+## Chain 1:                0.053901 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;ex5&amp;#39; NOW (CHAIN 2).
@@ -7311,9 +7353,9 @@ fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.026419 seconds (Warm-up)
-## Chain 2:                0.038809 seconds (Sampling)
-## Chain 2:                0.065228 seconds (Total)
+## Chain 2:  Elapsed Time: 0.028963 seconds (Warm-up)
+## Chain 2:                0.044516 seconds (Sampling)
+## Chain 2:                0.073479 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;ex5&amp;#39; NOW (CHAIN 3).
@@ -7336,9 +7378,9 @@ fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.024538 seconds (Warm-up)
-## Chain 3:                0.021294 seconds (Sampling)
-## Chain 3:                0.045832 seconds (Total)
+## Chain 3:  Elapsed Time: 0.027581 seconds (Warm-up)
+## Chain 3:                0.023526 seconds (Sampling)
+## Chain 3:                0.051107 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &amp;#39;ex5&amp;#39; NOW (CHAIN 4).
@@ -7361,9 +7403,9 @@ fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.025239 seconds (Warm-up)
-## Chain 4:                0.020482 seconds (Sampling)
-## Chain 4:                0.045721 seconds (Total)
+## Chain 4:  Elapsed Time: 0.027962 seconds (Warm-up)
+## Chain 4:                0.023097 seconds (Sampling)
+## Chain 4:                0.051059 seconds (Total)
 ## Chain 4:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Inference for Stan model: ex5.
@@ -7377,7 +7419,7 @@ fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
 ## sigma2   3.63    0.01 0.65   2.63   3.16   3.54   3.99   5.15  3226    1
 ## lp__   -95.37    0.03 1.44 -98.86 -96.13 -95.04 -94.28 -93.52  1732    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 24 10:19:53 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Mar 12 13:48:37 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;

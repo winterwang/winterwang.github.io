@@ -353,6 +353,18 @@
       <div class="article-style" itemprop="articleBody">
         
 
+<div id="TOC">
+<ul>
+<li><a href="#step-1-">Step 1, 確認數據分佈</a></li>
+<li><a href="#step-2-">Step 2, 描述線性模型</a></li>
+<li><a href="#step-3-stan">Step 3, 寫下Stan模型</a></li>
+<li><a href="#step-4-stan">Step 4, 診斷Stan貝葉斯模型的收斂程度</a></li>
+<li><a href="#step-5mcmc">Step 5，修改MCMC條件設定</a></li>
+<li><a href="#step-6-">Step 6, 並行（平行）計算的設定</a></li>
+<li><a href="#step-7-">Step 7, 計算貝葉斯可信區間和貝葉斯預測區間</a></li>
+<li><a>練習題</a></li>
+</ul>
+</div>
 
 <p><a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt">數據 data-salary.txt</a>是架空的。</p>
 <p>某公司社員的年齡 <span class="math inline">\(X\)</span>（歲），和年收入 <span class="math inline">\(Y\)</span>（萬日元）的數據如下：</p>
@@ -1000,15 +1012,15 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.023962 seconds (Warm-up)
-## Chain 1:                0.018405 seconds (Sampling)
-## Chain 1:                0.042367 seconds (Total)
+## Chain 1:  Elapsed Time: 0.026494 seconds (Warm-up)
+## Chain 1:                0.022123 seconds (Sampling)
+## Chain 1:                0.048617 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 3e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1025,9 +1037,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.028301 seconds (Warm-up)
-## Chain 2:                0.058855 seconds (Sampling)
-## Chain 2:                0.087156 seconds (Total)
+## Chain 2:  Elapsed Time: 0.029214 seconds (Warm-up)
+## Chain 2:                0.059684 seconds (Sampling)
+## Chain 2:                0.088898 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 3).
@@ -1050,9 +1062,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.022841 seconds (Warm-up)
-## Chain 3:                0.019193 seconds (Sampling)
-## Chain 3:                0.042034 seconds (Total)
+## Chain 3:  Elapsed Time: 0.026413 seconds (Warm-up)
+## Chain 3:                0.022079 seconds (Sampling)
+## Chain 3:                0.048492 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 4).
@@ -1075,9 +1087,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.024474 seconds (Warm-up)
-## Chain 4:                0.019615 seconds (Sampling)
-## Chain 4:                0.044089 seconds (Total)
+## Chain 4:  Elapsed Time: 0.027496 seconds (Warm-up)
+## Chain 4:                0.021971 seconds (Sampling)
+## Chain 4:                0.049467 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: ex3.
@@ -1090,7 +1102,7 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## sigma   4.49    0.01 0.46    3.69   4.17   4.44   4.77   5.52  3499    1
 ## lp__  -97.74    0.03 1.27 -100.95 -98.33 -97.40 -96.83 -96.33  1896    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 24 10:19:17 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Mar 12 13:48:00 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -1139,8 +1151,8 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 8e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 1: Gradient evaluation took 9e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1157,9 +1169,9 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.025593 seconds (Warm-up)
-## Chain 1:                0.02326 seconds (Sampling)
-## Chain 1:                0.048853 seconds (Total)
+## Chain 1:  Elapsed Time: 0.028205 seconds (Warm-up)
+## Chain 1:                0.025696 seconds (Sampling)
+## Chain 1:                0.053901 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 2).
@@ -1182,9 +1194,9 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.026419 seconds (Warm-up)
-## Chain 2:                0.038809 seconds (Sampling)
-## Chain 2:                0.065228 seconds (Total)
+## Chain 2:  Elapsed Time: 0.028963 seconds (Warm-up)
+## Chain 2:                0.044516 seconds (Sampling)
+## Chain 2:                0.073479 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 3).
@@ -1207,9 +1219,9 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.024538 seconds (Warm-up)
-## Chain 3:                0.021294 seconds (Sampling)
-## Chain 3:                0.045832 seconds (Total)
+## Chain 3:  Elapsed Time: 0.027581 seconds (Warm-up)
+## Chain 3:                0.023526 seconds (Sampling)
+## Chain 3:                0.051107 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 4).
@@ -1232,9 +1244,9 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.025239 seconds (Warm-up)
-## Chain 4:                0.020482 seconds (Sampling)
-## Chain 4:                0.045721 seconds (Total)
+## Chain 4:  Elapsed Time: 0.027962 seconds (Warm-up)
+## Chain 4:                0.023097 seconds (Sampling)
+## Chain 4:                0.051059 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: ex5.
@@ -1248,7 +1260,7 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## sigma2   3.63    0.01 0.65   2.63   3.16   3.54   3.99   5.15  3226    1
 ## lp__   -95.37    0.03 1.44 -98.86 -96.13 -95.04 -94.28 -93.52  1732    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 24 10:19:53 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Mar 12 13:48:37 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>

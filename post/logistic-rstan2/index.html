@@ -353,8 +353,19 @@
       <div class="article-style" itemprop="articleBody">
         
 
+<div id="TOC">
+<ul>
+<li><a>另一種形式的貝葉斯邏輯回歸</a></li>
+<li><a>分析的目的</a></li>
+<li><a>確認數據分佈</a></li>
+<li><a>思考數據模型</a></li>
+<li><a href="#-stan-">寫下 Stan 模型代碼</a></li>
+<li><a>檢查模型參數的收斂情況</a></li>
+<li><a>檢查模型的擬合情況</a></li>
+</ul>
+</div>
 
-<div id="section" class="section level1">
+<div class="section level1">
 <h1>另一種形式的貝葉斯邏輯回歸</h1>
 <p><a href="https://wangcc.me/post/logistic-rstan/">前面一節</a>使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在<a href="https://wangcc.me/post/logistic-rstan/">前一節</a>已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候<a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt">原始數據</a>中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。</p>
 <pre class="r"><code>d &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&quot;, 
@@ -378,11 +389,11 @@ head(d, 10)</code></pre>
 </ul>
 <p>其他的數據和前一節中使用的數據相同。</p>
 </div>
-<div id="section-1" class="section level1">
+<div class="section level1">
 <h1>分析的目的</h1>
 <p>本次數據分析的目的依然是瞭解幾個預測變量，天氣，是否喜歡打工，是否熱愛學習，對學生出勤率的影響。</p>
 </div>
-<div id="section-2" class="section level1">
+<div class="section level1">
 <h1>確認數據分佈</h1>
 <p>你可以用先進的 <code>tidyverse</code> 進行簡單的數據彙總，看看天氣狀況不同時實際出勤率是否有差別:</p>
 <pre class="r"><code>library(tidyverse)
@@ -418,7 +429,7 @@ head(d)</code></pre>
 ## 5        1 0    69       B 1         1         0         0
 ## 6        1 0    69       B 1         1         0         0</code></pre>
 </div>
-<div id="section-3" class="section level1">
+<div class="section level1">
 <h1>思考數據模型</h1>
 <p>我們設想的數學模型應該是這樣子的:</p>
 <p><span class="math display">\[
@@ -432,7 +443,7 @@ Y[i] &amp;\sim \text{Bernulli}(q[i])
 \end{aligned}
 \]</span></p>
 </div>
-<div id="stan-" class="section level1">
+<div id="-stan-" class="section level1">
 <h1>寫下 Stan 模型代碼</h1>
 <p>下面是相應的 Stan 模型:</p>
 <pre><code>data {
@@ -475,8 +486,8 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000984 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 9.84 seconds.
+## Chain 1: Gradient evaluation took 0.000699 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 6.99 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -493,15 +504,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 12.6766 seconds (Warm-up)
-## Chain 1:                16.8493 seconds (Sampling)
-## Chain 1:                29.5259 seconds (Total)
+## Chain 1:  Elapsed Time: 9.77734 seconds (Warm-up)
+## Chain 1:                12.5252 seconds (Sampling)
+## Chain 1:                22.3026 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 0.000644 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 6.44 seconds.
+## Chain 2: Gradient evaluation took 0.000476 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 4.76 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -518,15 +529,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 14.2149 seconds (Warm-up)
-## Chain 2:                15.1197 seconds (Sampling)
-## Chain 2:                29.3345 seconds (Total)
+## Chain 2:  Elapsed Time: 10.6448 seconds (Warm-up)
+## Chain 2:                11.1107 seconds (Sampling)
+## Chain 2:                21.7555 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 0.000637 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 6.37 seconds.
+## Chain 3: Gradient evaluation took 0.000453 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 4.53 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -543,15 +554,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 13.5268 seconds (Warm-up)
-## Chain 3:                14.3709 seconds (Sampling)
-## Chain 3:                27.8977 seconds (Total)
+## Chain 3:  Elapsed Time: 9.94784 seconds (Warm-up)
+## Chain 3:                10.8081 seconds (Sampling)
+## Chain 3:                20.7559 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 0.000586 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 5.86 seconds.
+## Chain 4: Gradient evaluation took 0.000421 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 4.21 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -568,9 +579,9 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 13.1762 seconds (Warm-up)
-## Chain 4:                13.5567 seconds (Sampling)
-## Chain 4:                26.7329 seconds (Total)
+## Chain 4:  Elapsed Time: 10.1935 seconds (Warm-up)
+## Chain 4:                10.1496 seconds (Sampling)
+## Chain 4:                20.3432 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit1</code></pre>
 <pre><code>## Inference for Stan model: myex4.
@@ -5392,12 +5403,12 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## q[2396]  3616    1
 ## lp__     1722    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Feb 26 23:40:07 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Mar 12 13:40:17 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
 </div>
-<div id="section-4" class="section level1">
+<div class="section level1">
 <h1>檢查模型參數的收斂情況</h1>
 <pre class="r"><code>library(bayesplot)
 
@@ -5431,7 +5442,7 @@ Figure 3: 用 bayesplot包數繪製的事後樣本密度分佈圖。
 </p>
 </div>
 </div>
-<div id="section-5" class="section level1">
+<div class="section level1">
 <h1>檢查模型的擬合情況</h1>
 <pre class="r"><code>ms &lt;- rstan::extract(fit1)
 set.seed(123)

@@ -18,7 +18,7 @@
       <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/logistic-rstan2/</guid>
-      <description>另一種形式的貝葉斯邏輯回歸 前面一節使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在前一節已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候原始數據中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。
+      <description>另一種形式的貝葉斯邏輯回歸 分析的目的 確認數據分佈 思考數據模型 寫下 Stan 模型代碼 檢查模型參數的收斂情況 檢查模型的擬合情況   另一種形式的貝葉斯邏輯回歸 前面一節使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在前一節已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候原始數據中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。
 d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d, 10) ## PersonID A Score Weather Y ## 1 1 0 69 B 1 ## 2 1 0 69 A 1 ## 3 1 0 69 C 1 ## 4 1 0 69 A 1 ## 5 1 0 69 B 1 ## 6 1 0 69 B 1 ## 7 1 0 69 C 0 ## 8 1 0 69 B 1 ## 9 1 0 69 A 1 ## 10 1 0 69 A 1 其中，</description>
     </item>
     
@@ -28,9 +28,8 @@ d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RS
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
-      <description>邏輯回歸模型的 Rstan 貝葉斯實現 本小節使用的數據，和前一節的出勤率數據很類似:
-d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d) ## PersonID A Score M Y ## 1 1 0 69 43 38 ## 2 2 1 145 56 40 ## 3 3 0 125 32 24 ## 4 4 1 86 45 33 ## 5 5 1 158 33 23 ## 6 6 0 133 61 60 其中，
- PersonID: 是學生的編號； A, Score: 和之前一樣用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 A，和表示對學習本身是否喜歡的評分 (滿分200)； M: 過去三個月內，該名學生一共需要上課的總課時數； Y: 過去三個月內，該名學生實際上出勤的課時數。   確定分析目的 需要回答的問題依然是，\(A, Score\) 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 \(Y\) 的多少信息？</description>
+      <description>邏輯回歸模型的 Rstan 貝葉斯實現 確定分析目的 確認數據分佈 寫下數學模型表達式 確認收斂效果   邏輯回歸模型的 Rstan 貝葉斯實現 本小節使用的數據，和前一節的出勤率數據很類似:
+d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d) ## PersonID A Score M Y ## 1 1 0 69 43 38 ## 2 2 1 145 56 40 ## 3 3 0 125 32 24 ## 4 4 1 86 45 33 ## 5 5 1 158 33 23 ## 6 6 0 133 61 60 其中，</description>
     </item>
     
     <item>
@@ -39,11 +38,11 @@ d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RS
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
-      <description>多重回歸 multiple regression 本章使用的數據，大學生出勤記錄也是架空的數據。
+      <description>多重回歸 multiple regression Step 1. 確認數據分佈 Step 2. 寫下數學模型 Step 3. 看圖確認模型擬合狀況 Step 4. MCMC 樣本的散點圖矩陣    多重回歸 multiple regression 本章使用的數據，大學生出勤記錄也是架空的數據。
 有大學記錄了50名大學生的出勤狀況：
 A,Score,Y 0,69,0.286 1,145,0.196 0,125,0.261 1,86,0.109 1,158,0.23 0,133,0.35 0,111,0.33 1,147,0.194 0,146,0.413 0,145,0.36 1,141,0.225 0,137,0.423 1,118,0.186 0,111,0.287 ... 0,99,0.268 1,99,0.234 其中，
  \(A\): 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工） \(Score\): 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習) \(Y\): 是該學生一年內的出勤率  在本次分析範例中，把\(Y\)出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。
-Step 1. 確認數據分佈 # The following figure codes come from the authors website: # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R library(ggplot2) library(GGally) set.seed(123) d &amp;lt;- read.csv(file=&amp;#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&amp;#39;, header = T) d$A &amp;lt;- as.factor(d$A) N_col &amp;lt;- ncol(d) ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;) for(i in 1:N_col) { x &amp;lt;- d[,i] p &amp;lt;- ggplot(data.</description>
+Step 1. 確認數據分佈 # The following figure codes come from the authors website: # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R library(ggplot2) library(GGally) set.</description>
     </item>
     
     <item>
@@ -52,11 +51,11 @@ Step 1. 確認數據分佈 # The following figure codes come from the authors we
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
-      <description>數據 data-salary.txt是架空的。
+      <description>Step 1, 確認數據分佈 Step 2, 描述線性模型 Step 3, 寫下Stan模型 Step 4, 診斷Stan貝葉斯模型的收斂程度 Step 5，修改MCMC條件設定 Step 6, 並行（平行）計算的設定 Step 7, 計算貝葉斯可信區間和貝葉斯預測區間 練習題   數據 data-salary.txt是架空的。
 某公司社員的年齡 \(X\)（歲），和年收入 \(Y\)（萬日元）的數據如下：
 X,Y 24,472 24,403 26,454 32,575 33,546 35,781 38,750 40,601 40,814 43,792 43,745 44,837 48,868 52,988 56,1092 56,1007 57,1233 58,1202 59,1123 59,1314  年收入 \(Y\) 被認爲是由基本年收 \(y_{base}\) 和其他影響因素 \(\varepsilon\) 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 \(\varepsilon\) 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 \(\varepsilon\) 的均值被認爲是零。
 g分析目的：
- 借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。  Step 1, 確認數據分佈 Salary &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) library(ggplot2) ggplot(Salary, aes(x = X, y = Y)) + geom_point(shape = 1, size = 4) + theme(plot.</description>
+ 借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。  Step 1, 確認數據分佈 Salary &amp;lt;- read.</description>
     </item>
     
     <item>
@@ -94,14 +93,12 @@ data { 數據描述 } parameters { 想要進行MCMC事後樣本採集的參數�
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>什麼是假設檢驗 Hypothesis testing 一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
+      <description>什麼是假設檢驗 Hypothesis testing 錯誤概率和效能方程 如何選擇要檢驗的統計量 複合假設 composite hypotheses 如何獲得反對零假設的證據 how to quantify evidence against \(H_0\) 雙側替代假設情況下，雙側 \(p\) 值的定量方法   什麼是假設檢驗 Hypothesis testing 一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
 例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
 當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
 從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”） 從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）  注意：（這一段很繞）
-上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 \(H_0\)，複雜的 \(H_1\)。如此一來當零假設 \(H_0\) 不被拒絕時，我們並不一定就接受之。因爲無證據證明 \(H_1\) 不等於有證據證明 \(H_0\)。(Absence of evidence is not evidence of absence). 換句話說，無證據讓我們拒絕 \(H_0\) 本身並不成爲支持 \(H_0\) 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。
-在樣本空間 sample space 中，決定了零假設 \(H_0\) 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 \(\mathfrak{R}\) 來標記。
- 錯誤概率和效能方程 這一部分可以參考之前臨牀試驗樣本量計算的部分。
- Table 1: Definition of Type I and Type II error     SAMPLE       \(\underline{x} \notin \mathfrak{R}\) Accept \(H_0\)  \(\underline{x} \in \mathfrak{R}\) Reject \(H_0\)      TRUTH  \(H_0\) is true  \(\checkmark\)  \(\alpha\) Type I error    \(H_1\) is true  \(\beta\) Type II error  \(\checkmark\)     假如一個假設檢驗是關於總體參數 \(\theta\) 的：</description>
+上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 \(H_0\)，複雜的 \(H_1\)。如此一來當零假設 \(H_0\) 不被拒絕時，我們並不一定就接受之。因爲無證據證明 \(H_1\) 不等於有證據證明 \(H_0\)。_(Absence of evidence is not evidence of absence)._ 換句話說，無證據讓我們拒絕 \(H_0\) 本身並不成爲支持 \(H_0\) 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。
+在樣本空間 sample space 中，決定了零假設 \(H_0\) 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 \(\mathfrak{R}\) 來標記。</description>
     </item>
     
     <item>
@@ -110,7 +107,7 @@ data { 數據描述 } parameters { 想要進行MCMC事後樣本採集的參數�
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
-      <description>爲什麼要用二次方程近似對數似然比方程？
+      <description>正態近似法求對數似然 Normal approximation to the log-likelihood 參數轉化 parameter transformations Exercise   爲什麼要用二次方程近似對數似然比方程？
 上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (binomial example)。 我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。 所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。  正態近似法求對數似然 Normal approximation to the log-likelihood 根據前一節，如果樣本均數的分佈符合正態分佈：\(\bar{X}\sim N(\mu, \sigma^2/n)\)。那麼樣本均數的對數似然比爲：
 \[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]
 其中， \(\bar{x}\) 是正態分佈總體均數 \(\mu\) 的極大似然估計 (maximum likelihood estimator, MLE)。如果已知總體的方差參數，那麼 \(\sigma/\sqrt{n}\) 是 \(\bar{x}\) 的標準誤 (standard error)。
@@ -118,8 +115,7 @@ data { 數據描述 } parameters { 想要進行MCMC事後樣本採集的參數�
 \[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]
 上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， \(M\) 的標準誤爲 \(S\)。如果我們正確地選用 \(M\) 和 \(S\)，那我們就可以用這樣的方程來近似求真實觀察數據的似然 \(\ell(\theta|data)\)。
 通過近似正態對數似然比，\(M\) 應當選用使方程取最大值時，參數 \(\theta\) 的極大似然估計 \(M=\hat{\Theta}\)。
-但是在選用標準誤 \(S\) 上必須滿足下列條件：
-\(S\) 是極大似然估計 \(\hat{\Theta}\) 的標準誤。 被選擇的 \(S\) 必須儘可能的使該二次方程形成一個十分接近真實的對數似然比方程。特別是在最大值的部分必須與之無限接近或者一致。所以二者在 MLE 的位置應當有相同的曲率（二階導數）。  由於，一個方程的曲率是該方程的二階導數（斜線斜率變化的速度）。所以對數似然比方程在 MLE 取最大值時的曲率（二階導數）爲：</description>
+但是在選用標準誤 \(S\) 上必須滿足下列條件：</description>
     </item>
     
     <item>
@@ -143,16 +139,11 @@ par(mfrow=c(1,2)) x &amp;lt;- seq(0,1,by=0.001) y &amp;lt;- (x^4)*((1-x)^6)/(0.4
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/likelihood/</guid>
-      <description>概率 vs. 推斷/Probability vs. Inference 在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
+      <description>概率 vs. 推斷/Probability vs. Inference 似然和極大似然估計 似然方程的一般化定義 對數似然方程 log-likelihood 極大似然估計 (maximum likelihood estimator, MLE) 的性質： 率的似然估計 Likelihood for a rate 有 \(n\) 個獨立觀察時的似然方程和對數似然方程   概率 vs. 推斷/Probability vs. Inference 在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
 \[ \binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205 \]
 dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10)*(0.5^10)/(factorial(4)*(factorial(6))) ## [1] 0.2050781 在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 \(Prob(coin\;landing\;heads)\) 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，似然法 (likelihood) 就是我們進行參數估計的最佳手段。
  似然和極大似然估計 此處用二項分佈的例子來理解似然法的概念：假設我們觀察到10個對象中有4個患病，我們假定這個患病的概率爲 \(\pi\)。於是我們就有了下面的模型：
-模型： 我們假定患病與否是一個服從二項分佈的隨機變量，\(X\sim Bin(10,\pi)\)。同時也默認每個人之間是否患病是相互獨立的。
-數據： 觀察到的數據是，10人中有4人患病。於是 \(x=4\)。
-現在按照觀察到的數據，參數 \(\pi\) 變成了未知數：
-\[Prob(X=4|\pi)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\]
-此時我們會很自然的考慮，當 \(\pi\) 是未知數的時候，它取值爲多大的時候才能讓這個事件（即：10人中4人患病）發生的概率最大？ 所以我們可以將不同的數值代入 \(\pi\) 來計算該事件在不同概率的情況下發生的可能性到底是多少：
- Table 1: The probability of observing \(X=4\)    \(\pi\)  事件 \(X=4\) 發生的概率      0.</description>
+模型： 我們假定患病與否是一個服從二項分佈的隨機變量，\(X\sim Bin(10,\pi)\)。同時也默認每個人之間是否患病是相互獨立的。</description>
     </item>
     
     <item>

@@ -345,6 +345,16 @@
       <div class="article-style" itemprop="articleBody">
         
 
+<div id="TOC">
+<ul>
+<li><a href="#-hypothesis-testing">什麼是假設檢驗 Hypothesis testing</a></li>
+<li><a>錯誤概率和效能方程</a></li>
+<li><a>如何選擇要檢驗的統計量</a></li>
+<li><a href="#-composite-hypotheses">複合假設 composite hypotheses</a></li>
+<li><a href="#-how-to-quantify-evidence-against-h_0">如何獲得反對零假設的證據 how to quantify evidence against <span class="math inline">\(H_0\)</span></a></li>
+<li><a href="#-p-">雙側替代假設情況下，雙側 <span class="math inline">\(p\)</span> 值的定量方法</a></li>
+</ul>
+</div>
 
 <div id="-hypothesis-testing" class="section level3">
 <h3>什麼是假設檢驗 Hypothesis testing</h3>
@@ -356,7 +366,7 @@
 <li>從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）</li>
 </ol>
 <p>注意：（這一段很繞）</p>
-<p>上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 <span class="math inline">\(H_0\)</span>，複雜的 <span class="math inline">\(H_1\)</span>。如此一來當零假設 <span class="math inline">\(H_0\)</span> 不被拒絕時，我們並不一定就接受之。因爲無證據證明 <span class="math inline">\(H_1\)</span> 不等於有證據證明 <span class="math inline">\(H_0\)</span>。<em><strong>(Absence of evidence is not evidence of absence).</strong></em> 換句話說，無證據讓我們拒絕 <span class="math inline">\(H_0\)</span> 本身並不成爲支持 <span class="math inline">\(H_0\)</span> 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。</p>
+<p>上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 <span class="math inline">\(H_0\)</span>，複雜的 <span class="math inline">\(H_1\)</span>。如此一來當零假設 <span class="math inline">\(H_0\)</span> 不被拒絕時，我們並不一定就接受之。因爲無證據證明 <span class="math inline">\(H_1\)</span> 不等於有證據證明 <span class="math inline">\(H_0\)</span>。_<strong>(Absence of evidence is not evidence of absence).</strong>_ 換句話說，無證據讓我們拒絕 <span class="math inline">\(H_0\)</span> 本身並不成爲支持 <span class="math inline">\(H_0\)</span> 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。</p>
 <p>在樣本空間 sample space 中，決定了零假設 <span class="math inline">\(H_0\)</span> 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 <span class="math inline">\(\mathfrak{R}\)</span> 來標記。</p>
 </div>
 <div class="section level3">
@@ -581,7 +591,7 @@ dbinom(3,5,0.5)+dbinom(4,5,0.5)+dbinom(5,5,0.5)</code></pre>
     
     <li><a href="/post/chi-square-distribution/">卡方分佈 chi square distribution</a></li>
     
-    <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
+    <li><a href="/post/frequentist-statistical-inference02/">估計和精確度的概念</a></li>
     
   </ul>
 </div>
