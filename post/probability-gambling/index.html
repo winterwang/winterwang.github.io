@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -352,7 +352,7 @@
 <p><img src="/img/Selection_070.png" /></p>
 <p>上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。</p>
 <p>下面想介紹一下上週學習的概率的基礎問題。</p>
-<div id="section" class="section level3">
+<div class="section level3">
 <h3>首先是最基礎的<strong>三個概率的公理</strong>：</h3>
 <ol style="list-style-type: decimal">
 <li>對於任意事件 <span class="math inline">\(A\)</span>，它發生的概率 <span class="math inline">\(P(A)\)</span> 滿足這樣的不等式： <span class="math inline">\(0 \leqslant P(A) \leqslant 1\)</span></li>
@@ -364,7 +364,7 @@
 <p>然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：</p>
 <p><span class="math inline">\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)</span></p>
 <p><img src="/img/venngram.png" /></p>
-<div id="section-1" class="section level4">
+<div class="section level4">
 <h4>證明：</h4>
 <p>先考慮 <span class="math inline">\(A_1 \cup A_2\)</span> 是什麼（拆分成三個互斥事件）</p>
 <p><span class="math inline">\(A_1 \cup A_2 = (A_1\cap \bar{A_2})\cup(\bar{A_1}\cap A_2)\cup(A_1\cap A_2)\)</span></p>
@@ -378,14 +378,14 @@
 <p><span class="math inline">\(P(A_1 \cup A_2) =P(A_1)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_2)-P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+P(A_1\cap A_2)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;=P(A_1) + P(A_2) - P(A_1 \cap A_2)\)</span></p>
 </div>
 </div>
-<div id="conditional-probability" class="section level3">
+<div id="-conditional-probability" class="section level3">
 <h3>條件概率 Conditional probability</h3>
 <ul>
 <li><span class="math inline">\(P(A|S)=\frac{P(A\cap S)}{P(S)}\)</span></li>
 <li><span class="math inline">\(P(A\cap S) = P(A|S)P(S)\)</span></li>
 </ul>
 </div>
-<div id="independence-" class="section level3">
+<div id="-independence-" class="section level3">
 <h3>獨立 (independence) 的定義</h3>
 <ul>
 <li>兩個事件定義爲互爲獨立時 (<span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are said to be independent <strong>if and only if</strong>)
@@ -393,7 +393,7 @@
 <li>因爲從條件概率的概念我們已知<br> <span class="math inline">\(P(A\cap B) = P(A|B)P(B)\)</span> <br>所以<span class="math inline">\(P(A|B)=P(A)\)</span> 即：事件 <span class="math inline">\(B\)</span> 無法提供事件 <span class="math inline">\(A\)</span> 的任何有效訊息 (<strong><span class="math inline">\(A, B\)</span> 互相獨立</strong>)</li>
 </ul>
 </div>
-<div id="section-2" class="section level2">
+<div class="section level2">
 <h2>賭博問題</h2>
 <p>終於來到本次話題的重點了。我要扣題了哦。語文老師快在此加分。</p>
 <p><img src="/img/Selection_071.png" /></p>

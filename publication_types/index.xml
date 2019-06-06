@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>1</title>
-      <link>https://winterwang.github.io/publication_types/1/</link>
-      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication_types/1/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>2</title>
@@ -27,6 +18,15 @@
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/publication_types/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>8</title>
+      <link>https://winterwang.github.io/publication_types/8/</link>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/publication_types/8/</guid>
       <description></description>
     </item>
     
@@ -40,11 +40,11 @@
     </item>
     
     <item>
-      <title>8</title>
-      <link>https://winterwang.github.io/publication_types/8/</link>
-      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <title>1</title>
+      <link>https://winterwang.github.io/publication_types/1/</link>
+      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/publication_types/8/</guid>
+      <guid>https://winterwang.github.io/publication_types/1/</guid>
       <description></description>
     </item>
     

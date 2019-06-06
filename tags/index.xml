@@ -7,53 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://winterwang.github.io/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <title>偶爾感慨</title>
+      <link>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/tags/academic/</guid>
-      <description>Here is a list of all the content that has been tagged as academic.</description>
-    </item>
-    
-    <item>
-      <title>60s Science</title>
-      <link>https://winterwang.github.io/tags/60s-science/</link>
-      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/60s-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>60s science</title>
-      <link>https://winterwang.github.io/tags/60s-science/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/60s-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aichi</title>
-      <link>https://winterwang.github.io/tags/aichi/</link>
-      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/aichi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BBC</title>
-      <link>https://winterwang.github.io/tags/bbc/</link>
-      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/bbc/</guid>
+      <guid>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
     </item>
     
@@ -67,6 +31,96 @@
     </item>
     
     <item>
+      <title>Medical Statistics</title>
+      <link>https://winterwang.github.io/tags/medical-statistics/</link>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/medical-statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>To do</title>
+      <link>https://winterwang.github.io/tags/to-do/</link>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/to-do/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sorrow</title>
+      <link>https://winterwang.github.io/tags/sorrow/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/sorrow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LSHTM</title>
+      <link>https://winterwang.github.io/tags/lshtm/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/lshtm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://winterwang.github.io/tags/r/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning notes</title>
+      <link>https://winterwang.github.io/tags/learning-notes/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/learning-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scotland</title>
+      <link>https://winterwang.github.io/tags/scotland/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/scotland/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experience</title>
+      <link>https://winterwang.github.io/tags/experience/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>London</title>
+      <link>https://winterwang.github.io/tags/london/</link>
+      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/london/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inference</title>
+      <link>https://winterwang.github.io/tags/inference/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Clinical Trial</title>
       <link>https://winterwang.github.io/tags/clinical-trial/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
@@ -76,20 +130,29 @@
     </item>
     
     <item>
-      <title>English Learning</title>
-      <link>https://winterwang.github.io/tags/english-learning/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      <title>basic mathematics</title>
+      <link>https://winterwang.github.io/tags/basic-mathematics/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/tags/english-learning/</guid>
+      <guid>https://winterwang.github.io/tags/basic-mathematics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>GCOP</title>
-      <link>https://winterwang.github.io/tags/gcop/</link>
-      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      <title>probability</title>
+      <link>https://winterwang.github.io/tags/probability/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/tags/gcop/</guid>
+      <guid>https://winterwang.github.io/tags/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linear algebra</title>
+      <link>https://winterwang.github.io/tags/linear-algebra/</link>
+      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/linear-algebra/</guid>
       <description></description>
     </item>
     
@@ -103,11 +166,128 @@
     </item>
     
     <item>
+      <title>Presentation</title>
+      <link>https://winterwang.github.io/tags/presentation/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/presentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Saitama</title>
+      <link>https://winterwang.github.io/tags/saitama/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/saitama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conference</title>
+      <link>https://winterwang.github.io/tags/conference/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>60s Science</title>
+      <link>https://winterwang.github.io/tags/60s-science/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/60s-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>English Learning</title>
+      <link>https://winterwang.github.io/tags/english-learning/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/english-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Listening</title>
+      <link>https://winterwang.github.io/tags/listening/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/listening/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictation</title>
+      <link>https://winterwang.github.io/tags/dictation/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/dictation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BBC</title>
+      <link>https://winterwang.github.io/tags/bbc/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/bbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>IELTs test</title>
       <link>https://winterwang.github.io/tags/ielts-test/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/ielts-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reading</title>
+      <link>https://winterwang.github.io/tags/reading/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speaking</title>
+      <link>https://winterwang.github.io/tags/speaking/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/speaking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
+      <link>https://winterwang.github.io/tags/writing/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aichi</title>
+      <link>https://winterwang.github.io/tags/aichi/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/aichi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GCOP</title>
+      <link>https://winterwang.github.io/tags/gcop/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/gcop/</guid>
       <description></description>
     </item>
     
@@ -130,138 +310,12 @@
     </item>
     
     <item>
-      <title>LSHTM</title>
-      <link>https://winterwang.github.io/tags/lshtm/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>https://winterwang.github.io/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/tags/lshtm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Listening</title>
-      <link>https://winterwang.github.io/tags/listening/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/listening/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>London</title>
-      <link>https://winterwang.github.io/tags/london/</link>
-      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/london/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Medical Statistics</title>
-      <link>https://winterwang.github.io/tags/medical-statistics/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/medical-statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Medical-Statistics</title>
-      <link>https://winterwang.github.io/tags/medical-statistics/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/medical-statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Presentation</title>
-      <link>https://winterwang.github.io/tags/presentation/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/presentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://winterwang.github.io/tags/r/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Saitama</title>
-      <link>https://winterwang.github.io/tags/saitama/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/saitama/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scotland</title>
-      <link>https://winterwang.github.io/tags/scotland/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/scotland/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>To do</title>
-      <link>https://winterwang.github.io/tags/to-do/</link>
-      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/to-do/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>basic mathematics</title>
-      <link>https://winterwang.github.io/tags/basic-mathematics/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/basic-mathematics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>conference</title>
-      <link>https://winterwang.github.io/tags/conference/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dictation</title>
-      <link>https://winterwang.github.io/tags/dictation/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/dictation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>experience</title>
-      <link>https://winterwang.github.io/tags/experience/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/experience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>inference</title>
-      <link>https://winterwang.github.io/tags/inference/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/inference/</guid>
-      <description></description>
+      <guid>https://winterwang.github.io/tags/academic/</guid>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
     </item>
     
     <item>
@@ -283,20 +337,11 @@
     </item>
     
     <item>
-      <title>learning notes</title>
-      <link>https://winterwang.github.io/tags/learning-notes/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <title>rMaps</title>
+      <link>https://winterwang.github.io/tags/rmaps/</link>
+      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/tags/learning-notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linear algebra</title>
-      <link>https://winterwang.github.io/tags/linear-algebra/</link>
-      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/linear-algebra/</guid>
+      <guid>https://winterwang.github.io/tags/rmaps/</guid>
       <description></description>
     </item>
     
@@ -310,74 +355,11 @@
     </item>
     
     <item>
-      <title>probability</title>
-      <link>https://winterwang.github.io/tags/probability/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/probability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rMaps</title>
-      <link>https://winterwang.github.io/tags/rmaps/</link>
-      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/rmaps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reading</title>
-      <link>https://winterwang.github.io/tags/reading/</link>
-      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/reading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sorrow</title>
-      <link>https://winterwang.github.io/tags/sorrow/</link>
-      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/sorrow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>speaking</title>
-      <link>https://winterwang.github.io/tags/speaking/</link>
-      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/speaking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>test</title>
       <link>https://winterwang.github.io/tags/test/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>writing</title>
-      <link>https://winterwang.github.io/tags/writing/</link>
-      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/writing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>偶爾感慨</title>
-      <link>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
-      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
     </item>
     

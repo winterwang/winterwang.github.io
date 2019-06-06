@@ -18,8 +18,7 @@
       <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/logistic-rstan2/</guid>
-      <description>另一種形式的貝葉斯邏輯回歸 分析的目的 確認數據分佈 思考數據模型 寫下 Stan 模型代碼 檢查模型參數的收斂情況 檢查模型的擬合情況   另一種形式的貝葉斯邏輯回歸 前面一節使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在前一節已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候原始數據中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。
-d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d, 10) ## PersonID A Score Weather Y ## 1 1 0 69 B 1 ## 2 1 0 69 A 1 ## 3 1 0 69 C 1 ## 4 1 0 69 A 1 ## 5 1 0 69 B 1 ## 6 1 0 69 B 1 ## 7 1 0 69 C 0 ## 8 1 0 69 B 1 ## 9 1 0 69 A 1 ## 10 1 0 69 A 1 其中，</description>
+      <description>Rstan 學習筆記 Chapter 5.3</description>
     </item>
     
     <item>
@@ -28,8 +27,7 @@ d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RS
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
-      <description>邏輯回歸模型的 Rstan 貝葉斯實現 確定分析目的 確認數據分佈 寫下數學模型表達式 確認收斂效果   邏輯回歸模型的 Rstan 貝葉斯實現 本小節使用的數據，和前一節的出勤率數據很類似:
-d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d) ## PersonID A Score M Y ## 1 1 0 69 43 38 ## 2 2 1 145 56 40 ## 3 3 0 125 32 24 ## 4 4 1 86 45 33 ## 5 5 1 158 33 23 ## 6 6 0 133 61 60 其中，</description>
+      <description>Rstan 學習筆記 Chapter 5.2</description>
     </item>
     
     <item>
@@ -38,11 +36,7 @@ d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RS
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
-      <description>多重回歸 multiple regression Step 1. 確認數據分佈 Step 2. 寫下數學模型 Step 3. 看圖確認模型擬合狀況 Step 4. MCMC 樣本的散點圖矩陣    多重回歸 multiple regression 本章使用的數據，大學生出勤記錄也是架空的數據。
-有大學記錄了50名大學生的出勤狀況：
-A,Score,Y 0,69,0.286 1,145,0.196 0,125,0.261 1,86,0.109 1,158,0.23 0,133,0.35 0,111,0.33 1,147,0.194 0,146,0.413 0,145,0.36 1,141,0.225 0,137,0.423 1,118,0.186 0,111,0.287 ... 0,99,0.268 1,99,0.234 其中，
- \(A\): 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工） \(Score\): 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習) \(Y\): 是該學生一年內的出勤率  在本次分析範例中，把\(Y\)出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。
-Step 1. 確認數據分佈 # The following figure codes come from the authors website: # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R library(ggplot2) library(GGally) set.</description>
+      <description>Rstan 學習筆記 Chapter 5.1</description>
     </item>
     
     <item>
@@ -51,11 +45,7 @@ Step 1. 確認數據分佈 # The following figure codes come from the authors we
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
-      <description>Step 1, 確認數據分佈 Step 2, 描述線性模型 Step 3, 寫下Stan模型 Step 4, 診斷Stan貝葉斯模型的收斂程度 Step 5，修改MCMC條件設定 Step 6, 並行（平行）計算的設定 Step 7, 計算貝葉斯可信區間和貝葉斯預測區間 練習題   數據 data-salary.txt是架空的。
-某公司社員的年齡 \(X\)（歲），和年收入 \(Y\)（萬日元）的數據如下：
-X,Y 24,472 24,403 26,454 32,575 33,546 35,781 38,750 40,601 40,814 43,792 43,745 44,837 48,868 52,988 56,1092 56,1007 57,1233 58,1202 59,1123 59,1314  年收入 \(Y\) 被認爲是由基本年收 \(y_{base}\) 和其他影響因素 \(\varepsilon\) 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 \(\varepsilon\) 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 \(\varepsilon\) 的均值被認爲是零。
-g分析目的：
- 借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。  Step 1, 確認數據分佈 Salary &amp;lt;- read.</description>
+      <description>Rstan 學習筆記 Chapter 4.4</description>
     </item>
     
   </channel>

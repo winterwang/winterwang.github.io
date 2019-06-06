@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -343,7 +343,7 @@
         
 
 
-<div id="section" class="section level2">
+<div id="-" class="section level2">
 <h2>正定，半正定 (正值，半正值)</h2>
 <p>對於任意的非零向量 <span class="math inline">\(\underline{x}(\neq\underline{0})\)</span> ，如果2次型 <span class="math inline">\(\underline{x}^tA\underline{x}\)</span> 始終滿足 <span class="math inline">\(\underline{x}^tA\underline{x} &gt; 0\)</span> <strong>注意此處無等號</strong>。我們稱這個2次型爲<strong>正定(positive definite)</strong>，<span class="math inline">\(A\)</span>爲<strong>正定矩陣(positive definite matrix)</strong>。另外，如果任意非零向量 <span class="math inline">\(\underline{x}(\neq\underline{0})\)</span> 始終滿足2次型 <span class="math inline">\(\underline{x}^tA\underline{x} \geqslant 0\)</span>， 這個2次型被叫做<strong>半正定(positive semi-definite)</strong>，<span class="math inline">\(A\)</span>爲<strong>半正定矩陣(positive semi-definite matrix)</strong>。</p>
 <ol style="list-style-type: decimal">
@@ -362,7 +362,7 @@
 <span class="math inline">\(SS=\sum\limits_{i=1}^n(x_i-\bar{x})^2\\ \;\;\;\;\:=\sum\limits_{i=1}^n(x_i^2-2x_i\bar{x}+\bar{x}^2)\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2\bar{x}\sum\limits_{i=1}^nx_i+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-2n\bar{x}^2+n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-n\bar{x}^2\\ \;\;\;\;\:=\sum\limits_{i=1}^nx_i^2-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^tE_n\underline{x}-\underline{x}^tU\underline{x}\\ \;\;\;\;\:=\underline{x}^t(E_n-U)\underline{x}\\ \because when \underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_n \end{array} \right)=\left( \begin{array}{c} \bar{x}\\ \bar{x}\\ \vdots\\ \bar{x} \end{array} \right), \&amp; (\bar{x}\neq0), SS=0\\ \therefore \underline{x}^t(E_n-U)\underline{x}\;是半正定2次型。\)</span></p></li>
 </ol>
 </div>
-<div id="section-1" class="section level2">
+<div class="section level2">
 <h2>雙一次型</h2>
 <p>對於 <span class="math inline">\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ \vdots\\ x_m \end{array} \right), A=\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\)</span> 來說，<span class="math inline">\(\underline{x}^tA\underline{y}=\sum\limits_{i=1}^m\sum\limits_{j=1}^na_{ij}x_iy_j\)</span> 既是 <span class="math inline">\(\underline{x}\)</span> 的1次型，也是 <span class="math inline">\(\underline{y}\)</span> 的1次型，所以又叫做 <span class="math inline">\(\underline{x}\underline{y}\)</span> 的<strong>雙1次型(bilinear form)</strong>。雙1次型是一個標量(scalar)。</p>
 <ol style="list-style-type: decimal">

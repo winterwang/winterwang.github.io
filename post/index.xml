@@ -13,17 +13,21 @@
     
     
     <item>
+      <title>君與長江|傍晚穿過廣場</title>
+      <link>https://winterwang.github.io/post/2019-06-04/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2019-06-04/</guid>
+      <description>Victim-the great forgotten</description>
+    </item>
+    
+    <item>
       <title>Berksonian Bias</title>
       <link>https://winterwang.github.io/post/berksonian-bias/</link>
       <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/berksonian-bias/</guid>
-      <description>在幫別人做論文質量評價的時候，也是個自我學習的過程。在下不才，目前無償爲幾個雜誌做審稿的工作。
-今天發來的稿件是某財大氣粗，曾經因爲篡改患者治療數據而臭名昭著的製藥公司員工寫的文章。那文章讀起來不長，卻實在是狗屎一堆。他們對歐洲高血壓患者中，直腸息肉的發生和直腸癌的發病率進行了數據庫分析。其中作者提到它們爲了避免伯克森偏倚(Berksonian Bias)，還對未執行直腸指檢篩查的高血壓患者的數據進行了分析。聽說高血壓患者中，直腸癌發病率也高（不知是真是假）。該文章在背景中大言不慚說別人的研究都搞不定到底是因爲治療高血壓的藥物導致了直腸癌，還是高血壓本身導致了直腸癌。我讀到這裏不禁已經覺得此文下半身應該已經涼涼。忍住不笑看完它們華麗麗地對每個risk factor單獨進行了一個回歸模型之後我的下巴已經掉了一半。心中暗想，他家就這水平還生產全世界最著名的高血壓藥物真的沒關係嗎？怪不得要去篡改患者的數據了。
-在鄙人的觀察下，該論文估計是沒戲了，但是這個偏倚的類型卻是我這個流行病學博士僧未曾聽說過的。算是這篇屎一樣的論文中唯一的發光點。
-原來這種偏倚最常見於樣本均採集自醫院樣本的病例對照研究。
-如果我們使用均來自於醫院的樣本作爲病例對照研究的對象，那麼我們需要假設，我們研究A疾病患者被收治到醫院內的概率，不會被該疾病可能的 risk factor 影響。但是，這種前提很多時候是無法被滿足的。特別是當A疾病的 risk factor 本身是另一種疾病的時候。理由很簡單，一名同時患有兩種疾病的患者去醫院報道的概率，顯然是要高於只有一種疾病的患者的。
-When we take the sample we have to assume that the chance of admission to hospital for the disease is not affected by the presence or absence of the risk factor for that disease. This may not be the case, especially if the risk factor is another disease. This is because people are more likely to be hospitalized if they have two diseases, rather than only one.</description>
+      <description>伯克森住院偏倚</description>
     </item>
     
     <item>
@@ -32,8 +36,7 @@ When we take the sample we have to assume that the chance of admission to hospit
       <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/logistic-rstan2/</guid>
-      <description>另一種形式的貝葉斯邏輯回歸 分析的目的 確認數據分佈 思考數據模型 寫下 Stan 模型代碼 檢查模型參數的收斂情況 檢查模型的擬合情況   另一種形式的貝葉斯邏輯回歸 前面一節使用的數據是以學生爲單位，將每名學生的實際課時數和實際出勤數進行了彙總之後的總結性數據，本章我們來看看相同數據的另一種形式。由於分析中有人建議說，天氣狀況對出勤率也是有較大的影響的，所以希望在前一節已有的邏輯回歸模型中增加對天氣狀況的調整。那麼這時候需要使用的就是彙總之前的數據，也就是要是用實際記錄了每名學生每一次課時的出勤與否的原始數據。值得注意的是，這時候原始數據中每名學生的記錄有許多行，因爲每行記錄的是該名學生每次上課時的天氣狀況和他/她是否出勤(0,1)的結果。
-d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-3.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d, 10) ## PersonID A Score Weather Y ## 1 1 0 69 B 1 ## 2 1 0 69 A 1 ## 3 1 0 69 C 1 ## 4 1 0 69 A 1 ## 5 1 0 69 B 1 ## 6 1 0 69 B 1 ## 7 1 0 69 C 0 ## 8 1 0 69 B 1 ## 9 1 0 69 A 1 ## 10 1 0 69 A 1 其中，</description>
+      <description>Rstan 學習筆記 Chapter 5.3</description>
     </item>
     
     <item>
@@ -42,8 +45,7 @@ d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RS
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
-      <description>邏輯回歸模型的 Rstan 貝葉斯實現 確定分析目的 確認數據分佈 寫下數學模型表達式 確認收斂效果   邏輯回歸模型的 Rstan 貝葉斯實現 本小節使用的數據，和前一節的出勤率數據很類似:
-d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T) head(d) ## PersonID A Score M Y ## 1 1 0 69 43 38 ## 2 2 1 145 56 40 ## 3 3 0 125 32 24 ## 4 4 1 86 45 33 ## 5 5 1 158 33 23 ## 6 6 0 133 61 60 其中，</description>
+      <description>Rstan 學習筆記 Chapter 5.2</description>
     </item>
     
     <item>
@@ -52,11 +54,7 @@ d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RS
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
-      <description>多重回歸 multiple regression Step 1. 確認數據分佈 Step 2. 寫下數學模型 Step 3. 看圖確認模型擬合狀況 Step 4. MCMC 樣本的散點圖矩陣    多重回歸 multiple regression 本章使用的數據，大學生出勤記錄也是架空的數據。
-有大學記錄了50名大學生的出勤狀況：
-A,Score,Y 0,69,0.286 1,145,0.196 0,125,0.261 1,86,0.109 1,158,0.23 0,133,0.35 0,111,0.33 1,147,0.194 0,146,0.413 0,145,0.36 1,141,0.225 0,137,0.423 1,118,0.186 0,111,0.287 ... 0,99,0.268 1,99,0.234 其中，
- \(A\): 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工） \(Score\): 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習) \(Y\): 是該學生一年內的出勤率  在本次分析範例中，把\(Y\)出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。
-Step 1. 確認數據分佈 # The following figure codes come from the authors website: # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R library(ggplot2) library(GGally) set.</description>
+      <description>Rstan 學習筆記 Chapter 5.1</description>
     </item>
     
     <item>
@@ -65,11 +63,7 @@ Step 1. 確認數據分佈 # The following figure codes come from the authors we
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
-      <description>Step 1, 確認數據分佈 Step 2, 描述線性模型 Step 3, 寫下Stan模型 Step 4, 診斷Stan貝葉斯模型的收斂程度 Step 5，修改MCMC條件設定 Step 6, 並行（平行）計算的設定 Step 7, 計算貝葉斯可信區間和貝葉斯預測區間 練習題   數據 data-salary.txt是架空的。
-某公司社員的年齡 \(X\)（歲），和年收入 \(Y\)（萬日元）的數據如下：
-X,Y 24,472 24,403 26,454 32,575 33,546 35,781 38,750 40,601 40,814 43,792 43,745 44,837 48,868 52,988 56,1092 56,1007 57,1233 58,1202 59,1123 59,1314  年收入 \(Y\) 被認爲是由基本年收 \(y_{base}\) 和其他影響因素 \(\varepsilon\) 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 \(\varepsilon\) 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 \(\varepsilon\) 的均值被認爲是零。
-g分析目的：
- 借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。  Step 1, 確認數據分佈 Salary &amp;lt;- read.</description>
+      <description>Rstan 學習筆記 Chapter 4.4</description>
     </item>
     
     <item>
@@ -78,7 +72,7 @@ g分析目的：
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2018-12-todo/</guid>
-      <description>2018-12-03 Learn Emacs; day 1 done Return the email from LP; learn reversible R markdown /MS word documents package; Pay the you-know-what ticket; Read Evidence and Evolution 1%  2018-12-04 Prepare the manuscript for AJCN 10% left; FINALLY!!!!! Learn Emacs; day 2&amp;amp;3 done;  2018-12-05 Read the victim book, and keep memo to P151; Learn Emacs; day 4&amp;amp;5 done;  2018-12-06 Move all todo to Org-mode page   </description>
+      <description>todo list</description>
     </item>
     
     <item>
@@ -87,18 +81,7 @@ g分析目的：
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/rstan-wonderful-r/</guid>
-      <description>P16
-事後分布 \(p(\theta | Y)\)の値が最大になる点\(\theta^*\)を事後確率最大推定値 (maximum a posteriori estimate)と呼ぶ．略してMAP推定値 (MAP estimate)．
-我們把能夠將事後概率分布取極大值的參數點 \(\theta^*\) 稱爲事後概率的最大似然估計值 (maximum a posteriori estimate)，簡稱 MAP估計值 (MAP estimate)。
-P19
-統計建模的一般順序
- 確定分析目的 確定數據分布 想象數據產生本身的機制：思考數據與數據之間可能的關系 寫下你所認爲的數據模型的數學表達式 用 R 模擬(simulation)並確認前一步寫下的數學模型的性質，特點 用 Stan 實際進行模型參數的推斷 獲得推斷結果，解釋其事後概率分布的意義，繪制易於理解的模型示意圖 繪制成功之後的模型示意圖和最先使用的模型之間進行比對，重新查缺補漏  P23
-ただいたずらにモデルを複雑化させるのは解釈のしにくさを招く．
-P30
-最初にmodel ブロックの尤度の部分（と事前分布の部分）を書く．その尤度の部分に登場した変数のうち，データの変数をdataブロックに，残りの変数をparametersブロックに書いていく．
-Stan的基本文法構成
-data { 數據描述 } parameters { 想要進行MCMC事後樣本採集的參數描述 } model { p(Y|theta) 似然的描述 先驗概率分布 p(theta) 的描述 } 把下面的模型
-\[ \begin{aligned} Y[n] &amp;amp; \sim \text{Normal}(\mu, 1) \;\; n = 1, \dots, N \\ \mu &amp;amp; \sim \text{Normal}(0, 100) \end{aligned} \]</description>
+      <description>Rstan 學習筆記</description>
     </item>
     
     <item>
@@ -107,40 +90,7 @@ data { 數據描述 } parameters { 想要進行MCMC事後樣本採集的參數�
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/notes/</guid>
-      <description>P18: 所謂“無法顯示”，完全是謊言。這個網站一直存在並且運作良好。當然，說謊的並不是電腦。
-盡管不是出乎意料，我仍然感到震驚。受難者們已經死亡三十多年。當年他們死亡的時候，大多數人的骨灰都沒有保留，更談不上安葬。三十年後，在電腦網絡的虛擬空間裏，都不容許有他們的安息之地，是爲了什麼？是誰，做了決定禁止受難者的名字在網上？
-P21: 流落人間者，泰山一毫芒
-P23: 中國是一個最講尊師重道的古老文明古國，而且尊師的傳統從未斷絕過。
-P26: 對於一個患了嚴重失憶症的民族，王友琴博士這部文革受難者真是一劑及時良藥。
-P28: 毛首先罷黜了那些試圖約束青年的同僚，以此掃清了道路，致使很多地方陷入霍布斯式的自然狀態（即相互爭鬥，人人自危的野蠻狀態），中學生和大學生實施暴力和恐怖整整兩年，最先鬥老師，然後鬥黨內幹部，最後自己互相鬥。。。。　但是真正的研究可能形成對整個一代人的指控－－那些參與者和觀看者。他們正在掌握國家的領導權。
-P29: 她是受難者的一個活資料庫。她一個人抗拒着數億人的遺忘。
-P40: 其實，看看事實，就知道這不但不是什麼向權勢者“造反”，而且從開始就是極權勢力的一次直接擴張。
-P46: 作爲一個中學校長，她從來沒有也幾乎不可能在上級指示之外做什麼標新立異之事，也沒有違抗過他們的命令。高層領導人的孩子，都在她主管的學校上學。然而，當革命需要打擊目標的時候，上級們就可以翻臉不認人，把一個個活人當做靶子拋出來，批判鬥爭，處分懲罰。他們根本不把他們的下級當人來看待，而只是一些數字和百分比，一些可以服務於革命目標的工具甚至靶子。冷酷是文革的一個重要特徵。文革不但嚴厲打擊反對革命的人，而且嚴厲打擊未曾反對革命的人。
-P48: 我們永遠無法知道，在卞仲耘死前的幾個小時裡，當她遭到這樣殘酷的毆打和折磨的時候，她想了些什麼。雖然她一直被人群包圍，她死在絕對的孤獨之中。當她被打的時候，沒有一個人出來制止暴行。當她快要死去的時候，沒有一個人在身邊表示同情。她從來沒有與這些打死她的人為敵，但是這些人不但打死了她，而且，在打她的時候毫不猶豫，在她被打死後也沒有覺得任何後悔或者羞愧。她孤立無援地死在紅衛兵學生的亂棒之下，甚至沒有可能作一點但反抗來保護自己。從一個活人的世界上，她被無情無義地背叛了，被拋棄了被犧牲了。
-P51: 1966年的夏天，全中國的學校變成了刑訊室，監獄，甚至殺人場。大批老師被迫害致死。
-P52: 1966年10月召開的“中共中央工作會議”發放了一個題為《把舊世界打個落花流水》的文章，其中被列為紅衛兵功績之一的，是1968年8月20日到9月底北京有1772人被打死。有理由認為實際死亡數據大於此數。但是，此數已經是極其巨大的數字。卞仲耘的死尚不在此數之中。1966年8月5日發生的卞仲耘之死，是8月殺戮的開端，經過三個星期的發展，在8月底前後達到每日被害人數的最高峰。由最高權力者號召鼓動，用中學生紅衛兵為打手，打死手無寸鐵的教育工作者如卞仲耘，以及大批沒有防衛能力的和平居民，還視為偉大功績，這實在是二十世紀統治者所作的最為殘忍和無恥的行為之一。
-P62: 卞仲耘，一個教育工作者的死，標誌了這個血腥時代的開始。讓我們記住這個名字和這個日期，記住在文明的進程中可能發生什麼樣的逆轉和災難。
-P63: 1993年，筆者到校中攝下一張宿舍樓的照片。卞仲耘被打死在這座宿舍樓門口的台階上。四個住在樓裡的高中三年級的學生問我：“20多年前有人在這兒被打死，這是真的嗎？我們什麼都沒聽說過。”
-P101: 文革前，清華大學有108名教授，曾經被人開玩笑說好像《水滸傳》裏有“108將”。陳祖東就是這“108將”之一。陳祖東的家人聽說，到1978年，這108人只死剩下40多人了。
-P104: 我在文革後考進北京大學中文系讀書，從來沒有聽到人提起程賢策的名字和他在文革中自殺的事情。雖然這個大學剛剛發生過文革這樣的重大歷史事件，文革歷史還未得到記錄和分析，但是，有着著名文科科系的北京大學，卻不教學生去認識和分析這些發生在自己學校的重要歷史事實，這顯然不恰當也相當具有諷刺性。不過，這也是普遍現象。其中主要的原因，是最高權力當局的嚴格禁止。
-P110: 1968年，北京大學建立了一所校園監獄，命名爲&amp;rdquo;黑幫監改大院&amp;rdquo;，把二百多名教職員工關在裏面。那年6月18日，關在&amp;rdquo;監改大院&amp;rdquo;裏的人被拉出來&amp;rdquo;鬥爭&amp;rdquo;，當他們排隊穿過校園的時候，甬道兩側站滿了學生，手持棍棒皮鞭，爭相痛打他們。然後，他們被拉到各系，施以種種酷刑。那一天，北大校園裏充滿了狂熱的殘忍於惡毒。
-P110: 北京大學建立於1898年的維新運動中。大學本該是中國現代化，科學和文明的代表。但是在文革中，北京大學卻變成最野蠻殘酷的行爲發生的地方。暴力性的&amp;rdquo;鬥爭會&amp;rdquo;，包括毆打侮辱掛黑牌戴高帽子等等，校園&amp;rdquo;勞改隊&amp;rdquo;，校園監獄，都在北京大學領先開始，更不要說道德方面的墮落如誣陷，謊言，讒佞等等普遍發生。北京大學發生的這種巨大變化，是文革真正劇烈改變社會傳統以及行爲規範最&amp;rdquo;成功&amp;rdquo;的例子。這種成功，令人震驚，也令人思考。
-P112: 一批一批的人成爲&amp;rdquo;敵人&amp;rdquo;，一旦被指控，就被無情地清洗出去，既不能自我辯護，也逃脫不了殘酷的處罰。革命的巨爪不但在農村，也在這所中國最早建立的現代大學裏面，把人一把一把抓起來，糟蹋丟棄。
-P112: 在1966年，程賢策從&amp;rdquo;革命者&amp;rdquo;變成爲&amp;rdquo;革命&amp;rdquo;打擊的對象。看起來，文革好像是非邏輯的。但是實際上這一切有其內在的邏輯。檢視往事，現在可以看出，一批人在參與迫害的同時，也鋪就了迫害他們自己的道路。因爲他們參與的迫害，不只是對一些個人的否定，而且是對法治，對程序正義，對一個公民應該具有的公民權利的根本否定。
-P139: 在1991年範長江的名字被用來命名“新聞獎”，但是，他本人爲什麼從1952年就不能再做新聞工作，爲什麼他在1970年悲慘地死於井中，這些卻沒有報道和分析。
-P139: 樊西曼，女，1915年生，鐵道部中共黨校黨委副書記，1966年8月25日被兒子的同學，北京師範大學附屬第二中學紅衛兵綁架到學校，在學校內一個磚砌的乒乓球臺子上被打死。兒子曹濱海從此精神失常。同一天在校中被打死的，還有這個中學的語文老師斳正宇和學校負責人姜培良。
-P142: 從此，鬥打，亂殺事件日益嚴重，由開始打鬥個別“表現不好”的“四類分子”（地主，富農，反革命分子，壞分子），發展到打鬥一般的四類分子；由一個大隊消滅一兩個，兩三個四類分子，發展到亂殺家屬子女和有一般問題的人，最後發展到全家被滅絕。子8月27日至9月1日，該縣的13個公社，48個大隊，先後殺害“四類分子”及其家屬供325人。最大的80歲，最小的僅38天，有22戶被殺絕。
-P147: 傅雷，男，1908年生，上海居民，翻譯家，翻譯大量法語作品，在1957年被劃成“右派分子”，1966年8月下旬被抄家和“鬥爭”，9月3日在寓所中和妻子朱梅馥一起留下遺書自殺身亡。傅雷時年53歲。文革後傅雷得到“平反”。《傅雷家書》出版後，成爲受歡迎的暢銷書。“家書”是他和兒子的通信。他有兩個兒子，一名“聰”，一名“敏”，都出生與1930年代。1966年時，傅敏是北京第一女子中學的英文教員。1966年8月北京的中學教員和校長們遭到紅衛兵學生的野蠻攻擊，傅敏在學校附近投水自殺，幸而未死。他的哥哥是鋼琴家傅聰，1958年在公派波蘭學習畢業的時候，不回中國，去了英國，當時被稱作“叛國分子”。
-P150: 乒乓球和政治和思想觀念沒有直接的關聯。然而，文革不但整死作家，教員和演員，還把這些乒乓球運動員整死，這是怎樣的殘酷和瘋狂？在毛澤東之前和之後，還沒有一個暴君做過這樣的事情。
-P151: 高斌，男，湖北人，1940年代留學英國，曾任北京外國語學院俄國文學教授，調陝西師範大學後，在“反右運動”中被定位“右派分子”，送農場“勞動改造”，“摘帽”後恢復授課，但降薪降級。1966年遭到“批鬥”後自縊身亡。
-P158: 夜裏，龔維泰就躺在“一教”的地板上，靜悄悄地殺死了自己。很難想象，什麼樣的絕望會讓人這樣結束自己的生命！他自殺，沒有抗議，沒有抱怨，甚至在流血中漸漸死去的過程中沒有呻吟，沒有響動，以至躺在他身邊的人們都不知道發生了什麼。 。。。 龔維泰的事情聽起來確實很“奇怪”。龔維泰參加共產黨組織的“民青”反對國民黨政府，他被逮捕以後並沒有治他的罪。沒有證據說明他被捕後爲國民黨政府做過任何傷害共產黨的事情，他卻在20年後的“清理階級隊伍運動”中，爲此被捕事件遭到嚴酷的審查，最後這樣可怕的死去。實際上，從法律的角度看，除非是殺了人，不管龔維泰在那時候做了什麼，都已經過了法律的追溯期限，不能再作追究。但是“革命”壓倒一切的時候，法律是紙上空文。非常諷刺的是，文革後有人控告文革中的殺人兇手，北京的檢察院卻以“法律追溯時限已過”拒絕。
-P169: “中華人民共和國憲法”上冠冕堂皇地寫着中國公民享有“言論自由”，甚至在文革中修改過的新憲法中，雖然去掉了“遷徙自由”，卻依然留有“言論自由”。然而，在實際上，言論竟被當作判處死刑的根據。 &amp;hellip; 顧文選的第二條罪狀是逃離中國，在材料上被稱爲“叛國投敵”。在共產黨宣傳中，人民是“國家的主人”，但是在1950，1960，1970年代，普通人民根本不被允許得到護照出國。如果他們想要離開中國，只有祕密離開。祕密離開中國是十分危險的事情。他們可能在中途被打死。如果被抓住，竟然可以成爲判處死刑的根據。
-在歷史上，從來沒有過這樣殘酷的執法。在德國有過“柏林牆”。在1989年柏林牆被推倒以前，試圖偷越“柏林牆”的人，有一百多人被哨兵打死，這是非常兇殘的事情，因此在柏林牆被推倒之後，下令開槍射擊的東德領導人被法庭起訴。
-P170: 在文革後很多年，仍然有很人認爲文革是一個“大民主”。這種看法的“根據”是，普通人可以對各級領導幹部“造反”。且不說當時的“鬥爭會”等形式是多麼野蠻和違法的手段，也不說可以“造反”的內容僅僅是那些人“反對毛澤東思想”，這樣的看法無視顧文選這樣的人被殘酷殺害的事實，無視聞佳這樣的人被判重型的事實，創造了一個遠離事實的文革神話。
-P172: 至今一些人還在肯定文革“反對官僚制度”的正面貢獻，因爲毛澤東說了要“精兵簡政”以及“打破重疊的行政機構”（1968年3月）。然而文革中實際上工作了的，是取消了公安局，檢察院，法院三家分開並且獨立這樣的社會組織形式，取消了定罪和審判的法律程序，在製造對人的迫害方面大大提高了效率。這是一種多麼可怕的提高效率啊。 &amp;hellip;
-文革中掌管北京的“公檢法”長達十年的，是原爲南京軍區某部軍委副政委的劉傳新。1976年毛澤東死去以及“四人幫”隨之被逮捕。在文革中被劉傳新關押迫害過的一批老幹部重新回到權力位置上。1977年1月27日，劉傳新被免去北京市公安局長的職務。他被“隔離”在東交民巷他居住的院落裏受“審查”。1977年5月18日，他接到了北京市公安局第二天要開“聲討劉傳新大會”的通知。半夜，他在一棵樹上上吊自殺。
-劉傳新自殺，當然是因爲他的失勢，也可能是由於懼怕他用於別人身上的殘酷做法會被用到他自己身上。但是他懼怕的人中間，不會有顧文選。這不但因爲顧文選已經被殺死，也因爲顧文選本來也只是一個沒有權力的普通人。
-P186: 把社會中的一個很大的人羣，劃出來進行“審查”，隔離審訊，再從中劃出一部分作爲受到永久性處罰的“敵人”，這樣的做法幾十年來不斷實行，以致有的中國人已經把這樣的做法視爲像颳風下雨一樣的常態，從不從根本上去質疑和反對。</description>
+      <description>Victim</description>
     </item>
     
     <item>
@@ -149,7 +99,7 @@ P186: 把社會中的一個很大的人羣，劃出來進行“審查”，隔�
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2018-11-todo/</guid>
-      <description>2018-11-05 Paper comments to Lin; Cancel the tsumitate; Ask about the insurance; Submit nenmatsu; Modify the poster (adding logo), etc;  2018-11-06 Bayesian statistics practical 6 done; Prepare AJCN template (Rmd) file; Prepare AJCN draft (.docx) file; MLCA analyses done stratified by men and women;  2018-11-07 fix the racket before Wed. Bayesian statistics Chapter 7 done 20%; Check the problem of the gh-page on github.  2018-11-08~11 Search for guideline of eradication among adolescents of H.</description>
+      <description>todo list</description>
     </item>
     
     <item>
@@ -158,7 +108,7 @@ P186: 把社會中的一個很大的人羣，劃出來進行“審查”，隔�
       <pubDate>Tue, 02 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2018-10-todo/</guid>
-      <description>2018-10-02 ~ 2018-10-17 Prepare the proposal to JSPS.  2018-10-02 Background, key questions objective, importance  2018-10-09 Bayesian statistics Chapter 1 done;  2018-10-10 Bayesian statistics Chapter 2 done;  2018-10-11~12 Bayesian statistics Chapter 3 done;  2018-10-13 Review of the paper about HIV;  2018-10-15 Wait for the comments from LP, SA;  2018-10-16 Modification of the proposal; Submission of the proposal; Learn how to apply for the data usage of Japan National Nutrional Survey;  2018-10-17~19 Bayesian statistics Chapter 4 done;  2018-10-23 Bayesian statistics Chapter 5 done;  2018-10-24 Learn how to use Stan (just a beginning);  2018-10-25 Some preliminary analysis using vague prior to do MabeRCT; Bayesian statistics Chapter 6 done; Talk with LP AS, the next steps of writing the carb paper;  2018-10-26~31 Prepare poster for conference.</description>
+      <description>todo list</description>
     </item>
     
     <item>
@@ -167,7 +117,7 @@ P186: 把社會中的一個很大的人羣，劃出來進行“審查”，隔�
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
-      <description>Words Expressions Sentences terry2017discontinuous lanza2007proc collins2010latent    Words  discernable [di’sə:nəbl, -’zə:-]  ===== 辞典翻译: discernable ====== adj. 可辨别的；可认识的 ============ 网络释义 ============ -------- discernable --------- 可辨别的 方向 分辨 -- discernable recognizable -- 可辨别的 --- discernable visible ---- 可辨别的  abstinence [’æbstinəns]  ====== 辞典翻译: abstinence ====== n. 节制；节欲；戒酒；禁食 ============ 网络释义 ============ --------- abstinence --------- 节制 禁欲 禁戒 ----- alcohol abstinence ----- 酒戒断 ----- Abstinence theory ------ 节欲论 弃权 忍欲说  exhaustive [iɡ’zɔ:stiv]  ====== 辞典翻译: exhaustive ====== adj.</description>
+      <description>The words and memo useful for the writing of my project</description>
     </item>
     
     <item>
@@ -176,7 +126,7 @@ P186: 把社會中的一個很大的人羣，劃出來進行“審查”，隔�
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/summer-project-schedule/</guid>
-      <description>Data analysis finish by 2018-07-2431 Paper structure confirm by 2018-08-01 Paper draft complete by 2018-08-16 2018-06-24 Read and try to repeat Rll&amp;rsquo;s method in R and familarize the dataset ASAP Two papers applying Repeated Measures LCA  2018-06-25 Meeting with supervisor and Susanna Confirm the cutoff of carborhydrate consumption Talk with Rll ask about the methodology and dataset  2018-06-26 Send the summarised memo of meeting to Supervisor and etc. Read the first part fundamentals of LCA.</description>
+      <description>todo list for summer project</description>
     </item>
     
     <item>
@@ -185,20 +135,7 @@ P186: 把社會中的一個很大的人羣，劃出來進行“審查”，隔�
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/scotland-highland-road-trip/</guid>
-      <description>本次高地旅行（2018-06-13～2018-06-20）值得紀念，我們一行三人，在蘇格蘭自駕開了一個圈。沿路看過的高山流水，懸崖峭壁，狂風暴雨，和那些雨過天晴，都讓人久久難以忘懷。我們還經歷了頭一天輪胎爆胎，最後一天在愛丁堡城堡被偷錢包等各種奇葩的經歷。深感有必要在此簡單記錄下這段旅程，為了將來還記得這一年在英國的腳印。
-Your browser does not support the video tag.  Your browser does not support the video tag.  2018-06-13 倫敦出發 出發之前，秀一下我們訂的20英鎊的機票（比機場市區往返的火車還便宜&amp;hellip;&amp;hellip;）：
-當天無事，我們降落愛丁堡時蘇格蘭展示了北方的大風夾着冰涼的雨水，警告我們即使是夏季的夜晚也是那麼的寒冷。順利在機場取了車（其實花了一個半小時，牆裂不推薦蘇格蘭當地的租車公司 Greenmotion，效率低下而且合同上陷阱不少，最後我們實在是覺得很煩，直接上了最高等級的整車安心保險&amp;ndash;後來的事實證明我們當初的選擇是那麼的正確），我們終於踏上了蘇格蘭之行的第一步。先在愛丁堡大學附近和多年未見的好友見面聊天吃吃吃了之後，我們找到了本次旅途中的第一家 Airbnb 房東在海邊的家。當晚其實下了一夜的狂風驟雨，透過閣樓的房間房頂上的玻璃，我們可以直接看到外面不停被風吹亂猙獰的樹枝。第二天一早風依然很大，但是我們無法克制想立刻看到大海的慾望，頂着狂風步行到了沙灘，看到那令人窒息的海邊的愛丁堡：
-這是我們租來的寶獅（标致）3008 SUV，7天保險全包，每天差不多63英鎊（約10000日元/560軟妹幣）：
-這輛車表面上看起來瀟洒，其實個人感覺不太耐用，華而不實。
-白天離開房東家以後我們車停在愛丁堡車站南的一個立體停車場，之後趁着天氣晴朗（但是大風四起，把許多路人吹得很凌亂），我們參觀了愛丁堡大學神學院：
-天氣雖然好，大風讓愛丁堡城堡關閉了遊客參觀，但是並不妨礙我們感受這座古老城市的藝術氣息：
-麥克尤恩大禮堂(McEwan Hall, The University of Edinburgh) 聖基爾斯大教堂(St Giles&amp;rsquo; Cathedral) 斯科特紀念塔(Scott Monument) 路邊的行為藝術： 登上卡爾頓山 (Calton Hill)俯瞰這座蘇格蘭的首府，安靜而令人嚮往。 2018-06-14 爱丁堡到格拉斯哥 傍晚離開了愛丁堡，我們向西驅車開往另一座老城，格拉斯哥。
-這一晚我們預定的 Airbnb 在格拉斯哥的郊區，是一排連排別墅中的一棟。這天入住的時候，由於沒有仔細閱讀房東在 Airbnb 上留下的入住須知，導致用鑰匙打開門之後警報聲大作，直至隔壁鄰居實在是受不了了跑來幫忙關掉警鈴整個世界才安靜。在此友情提醒諸位使用 Airbnb 時注意閱讀房東留下的入住須知。房東當日不在家，所以我們沒有浪費他們家的廚房設施，從超市採購了一大桶雞腿嘗試了白斬雞的做法（味道好極了！多謝 Linda）。
-
-
-這一日主要停留在愛丁堡，晚上我們也很早休息，為了第二天的長途跋涉。
-2018-06-15 從格拉斯哥離開，飛馳在高地去往天空島 一早從格拉斯哥離開後要先經過洛蒙德湖泊 (Loch Lomond)，沿着A82號公路，一路上一會兒下雨，一會兒天晴。在湖邊一個叫做路斯 (Luss) 的小鎮，我們在雨中下來看了看湖邊雲霧繚繞的碼頭，水很清澈，水鴨子們也悠閑地在游泳：
-Your browser does not support the video tag.</description>
+      <description>Wild Scotland</description>
     </item>
     
     <item>
@@ -207,7 +144,7 @@ Your browser does not support the video tag.</description>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/todo-2018-june/</guid>
-      <description>大塚敏美財団メールを返信する PCA analysis learning Cluster analysis learning 建立一個論文日程表格 日程計劃包括每周進度 分析進度 論文寫作進度  學習 Latent Class Analysis 方法; 熟悉 NDNS 數據框架結構，思考分析方法; Comment and response to AACE Test on Ubuntu 18.04 尝试从Ubuntu, 日本語を試す 更新 LSHTM 統計學學習筆記 生存分析章節-Cox-models; 更新 LSHTM 統計學學習筆記，GLM Multinomial logistic regression model; 更新 LSHTM 統計學學習筆記，GLM Oridinal logisitic regression model; 更新 LSHTM 統計學學習筆記，貝葉斯進階章節; 更新 LSHTM 統計學學習筆記，用 STATA 或者 R 分析 SME 流行病學數據的實踐部分; 更新生存分析，更多具體細節及練習[Cox]; 更新生存分析，更多具體細節及練習[AFT]; 辦理法國簽證所需的材料; 法國行程取消(2018-06-20) 大學學生在校證明; 銀行三個月存款證明 歐洲之星(7月)訂票; 巴黎青年旅館訂房 (聯繫下正好在法國的 なっちゃん家?</description>
+      <description>todo list</description>
     </item>
     
     <item>
@@ -216,8 +153,7 @@ Your browser does not support the video tag.</description>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/todotest/</guid>
-      <description>試試看用 Blogdown 來管理自己的待辦事項:
-Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical discrete data modeling Lecture 1-4;  [2018-05-08 23:45 done]  學習去年的 Generalised linear mixed effect modelling lecture 5-6;  [2018-05-12 16:00 done]  完成 ASM Edmund 作業;  [2018-05-18 03:20 done]  寫一篇日志回顧最近 LSHTM 的生活;  [2018-05-06 done]  複習 Probablity;(2018-05-16 to 17) 複習 Inference;(2018-05-17 to 18) 複習 Clinical Trial;(2018-05-19 to 20) 複習 Basic Epi; (2018-05-20 to 21) 複習 Analytical Technique;(2018-05-22 to 24) 複習 Regression; (2018-05-24 to 25) 複習 Robust statistics; (2018-05-27) 複習 GLM (2018-05-28 to 29) 複習 Survival Analysis (2018-05-39 to 31) 反省自己爲什麼效率這麼低。。。。。  解決辦法就是把自己的 to do 放在網頁上，刺激自己。(2018-05-06 done)  2008年 LSHTM 試題 Paper 2-2 (survival question);  [done 2018-05-29 17:01]  2009 年 LSHTM 試題 Paper 2-3 (survival question);  [done 2018-05-29 18:19]  2011年 LSHTM 試題 Paper 1-2;  [done 2018-05-24 17:01 40 min used]  2011年 LSHTM 試題 Paper 1-5;  [2018-05-18 12:21 done] [2018-06-03 12:51 done again 80% 17 min]  2011年 LSHTM 試題 Paper 1-6;  [done 2018-05-27 11:15]  2011年 LSHTM 試題 Paper 1-8;  [2018-05-19 22:50 done]  2012年 LSHTM 試題 Paper 1-2;  [2018-05-19 23:43 done] [2018-06-03 16:30 Wald test, MLE, compare the inverse of mean]  2012年 LSHTM 試題 Paper 1-5;  [2018-05-25 21:32 done 35 min]  2012年 LSHTM 試題 Paper 1-6;  [2018-05-27 13:39 done 15 min]  2012年 LSHTM 試題 Paper 1-8;  [2018-05-18 22:00 done] [2018-06-04 11:27 done again, when use transformation for MLE, we need to substitute it back to the loglikelihood function to find the standard error of the newly transformed variable]  2012年 LSHTM 試題 Paper 2-7;  [done 2018-05-25 35 min but brutally beaten] [done 2018-06-04 20:00 Mock test 90%]  2013年 LSHTM 試題 Paper 1-2;  [done 2018-04-30, challenged again 2018-05-25 quadratic term interpration is needed]  2013年 LSHTM 試題 Paper 1-3;  [done 2018-05-20 01:00 done] [done again on 2018-06-04 12:22 score test and comparison with lrt, hard way of doing lrt with binomial data, time consuming, about 80% got]  2013年 LSHTM 試題 Paper 1-4;  [done 2018-04-30]  2013年 LSHTM 試題 Paper 1-5;  [done 2018-05-22 23:38]  2013年 LSHTM 試題 Paper 1-6;  [done 2018-04-30] [done again 2018-06-03 15 min 80%]  2013年 LSHTM 試題 Paper 1-7;  [done 2018-05-27 14:09 18 min used]  2013年 LSHTM 試題 Paper 1-8;  [done 2018-05-22 23:38]  2013年 LSHTM 試題 Paper 2-1  [done 2018-05-07 1800]  2013年 LSHTM 試題 Paper 2-2  [done 2018-05-07 1900]  2013年 LSHTM 試題 Paper 2-3  [done 2018-05-07 2230; challenged again 2018-05-25 20:58 35 min used]  2013年 LSHTM 試題 Paper 2-5;  [done 2018-05-28 extreeeeeeeemely^99^ difficult GLM]  2013年 LSHTM 試題 Paper 2-6;  [done 2018-05-30 21:21 in 37 min]  2013年 LSHTM 試題 Paper 2-7;  [done 2018-05-28 巨難無比，條件邏輯回歸的推導和證明]  2013年 LSHTM 試題 Paper 2-8;  [done 2018-05-22 23:38]  2014年 LSHTM 試題 Paper 1-1;  [done 2018-04-23]  2014年 LSHTM 試題 Paper 1-2;  [done 2018-05-25 27 min but only get about 60% poor and brutal&amp;hellip;&amp;hellip; what should I do&amp;hellip;]  2014年 LSHTM 試題 Paper 1-3;  [done 2018-04-23]</description>
+      <description>todo list</description>
     </item>
     
     <item>
@@ -226,12 +162,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
       <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/sleep/</guid>
-      <description>媽在電話裏說，今年要是期末考試考不過，明年把妹妹(我女兒)背去倫敦再考。(T_T) 突然我就想起快離開廈門的前一天，帶着兒子去大榕樹底下玩。他興奮地要玩我新買的乒乓球和乒乓球拍。可我心裏舍不得新的球和球拍弄髒了，就故意拿小汽車和其他的東西分散他的注意力。回到家裏了才給了他一個乒乓球玩。其實那天本來還想帶他去買肉包給他吃，可是領了快遞以後我沒有手再拿東西，就直接帶兒子回家了。那天兒子女兒和妻還要坐火車回榕城外婆家，一路顛簸誰也沒想起來，兒子還沒吃早飯。火車上聽說他也一直沒吃東西，不知道他三歲的心裏在想什麼。到了外婆家裏也很晚了，男孩子興奮哭鬧總是比女孩子激烈。我一聽電話裏他哭的聲音，心裏就不由得難受極了。怎麼就舍不得把乒乓球給他一個呢，我真是個自私極了的爸爸。忘了兒子沒吃早飯，也舍不得把他想玩的乒乓球送給他。也許他早就不記得了，但是我總惦記着這一天發生的事。也許在我心裏，那段美好時光在琥珀中靜止在了廈門開往島外的那列送行的地鐵上。
-我又想起在學習因果推斷的時候，每次老師都要強調那三個永世不能忘記的推斷前提:
- 無相互幹擾 no interference; 一致性 consistency;
- 條件可置換性 conditional exchangeability;  每當老師提問說，我們現在的前提是什麼？全班同學總能異口同聲地念出上面那三句咒語，場景仿佛間諜與間諜之間對暗號。又有點像黑幫入會時指天發誓的三句誓言。還有就是那個老師可愛的法文味道的英文，標準誤的英文是 standard error，她總是說 standard &amp;ldquo;唉河&amp;rdquo;。另一個教生存分析的法國人老師就更有趣了，每次舉例子都說，比方說我們拿&amp;ndash;法國做例子，隨機選一個國家嘛。。blablabla&amp;hellip;
-今天，響子同學說要去阿根廷完成自己的碩士課題。我們下午坐在 SOAS 的草地上一邊從作業間隙中休息，一邊喝着咖啡，突然意識到，再過一陣子，新學生就又要來了呢。去年這時候我們都還在世界各地，響子在危地馬拉給 JICA 幹活，說着流利的西班牙語; 我在名古屋一邊給日本學生講課，一邊內心充滿了期待快出生的妹妹和快要出發來倫敦的復雜又忐忑的心情，如今我們竟然已經在討論彼此回程的機票訂了幾號，想起3月我們還在寒風中頂着大雪抱怨着留英這一年碰到數十年最嚴重的大學罷課，這一段時光，竟也這樣偷偷溜走，沒有琥珀可以給它定格。
-直到兩天前，同班同學在因果推斷下課後，復習完了我們每次課上對完的暗號，突然有同學提議說，我們去學校門口拍一張集體照片吧，學校年度學生畫冊 (Yearbook) 的內容我們還沒人提交吶，至少要有一張咱們的集體照片吧！ 於是我們有了封面的那張照片。總算是用 LOMO 的隨手拍記錄下這年我們在 LSHTM 待過的證據。這年，我們這十幾個在 LSHTM 推倒公式，背誦&amp;rdquo;間諜暗號&amp;rdquo;，倒騰貝葉斯，糾結着那些回歸模型的殘差，還有那個永遠也搞不懂的似然。一瞬間留在相紙上，一轉眼可能就要各奔四方。傷感不由就從心中涌出，蔓延到大西洋。</description>
+      <description>時光在琥珀中靜止</description>
     </item>
     
     <item>
@@ -240,14 +171,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
       <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/luan/</guid>
-      <description>倫敦的生活已經過去四個月，每天和統計學公式打交道的我，今天不想在這裏寫任何公式。說說這四個月想更新一直偷懶沒更新的那些在倫敦衛生與熱帶醫學院度過的平凡的日子。
-寒假時去了普利茅斯，和康沃爾。康沃爾是個很有意思的名字 Cornwall。字面意思是玉米牆。我是去自己本來計劃聖誕節想去的 Homestay。HOST UK 本來負責我的人告訴我聖誕節可能有點困難，聖誕節前的週末可以的話就去康沃爾的一對退休的老人家裏去做客吧。於是週五一早踏上了一個多月前就從網上訂好的倫敦的帕丁頓去往卡爾斯托克 (Calstock) 的西大不列顛列車。說來諷刺的是，大英帝國建立了世界上第一條火車，如今我一個老外來到這個國家卻在嫌棄這裏的火車慢如老牛拉車。
-和我一起享受英國農村四天三晚的 Homestay 的還有另一個來自毛里求斯的印度人學生。我們一路同行從倫敦出發。整列火車從離開倫敦時的滿員，乘客隨着車窗外樓房的減少而逐漸減少。腦海裏推算了一下，這絕對是有意義的正相關。 到了普利茅斯只剩下包括我倆在內，絕對只有個位數的人。
-我也沒打算把整個四天三晚都去了哪裏在這裏記流水帳，印象深刻的是我們和老爺爺老太太每晚每晚的長談。還好來自毛里求斯的印度人英文流利，我一個人跟這些老人肯定是無法聊到深夜的。他們聊他們的老當益壯，用腳丈量非洲大陸的那些經歷和記憶，我們侃我們的年輕氣盛和那些無處發泄的憂國憂民。走時，老爺爺把自己收藏了多年的一個據說來自唐朝中國的佛像給了我，說，我希望你帶它回到它來自的地方。我想起我們都站在康沃爾的大西洋沿岸峭壁懸崖，放眼望着法國的方向，腳下全是泥巴。
-我在老人家的留言本上寫下了我在中國和日本的地址電話，中日英三語，生怕他們真的會在中國或者日本迷路。隔天回到了倫敦的房間，我收到老爺爺發來的郵件，淡然如水，卻彷若那些夜晚我們促膝長談時說的話：“你豐富了我們的人生，在你我的道路重新交集前，保重。You have enriched our lives. Until our paths cross again, take care.”
-英國冬季的日照時間短得可憐。白天離開宿舍去大學時天黑着，下午下課離開大學時，天依然是黑着的。加上我們統計系的課許多都在地下的教室裏，我跟其他人打趣說，我現在的生活像一隻土撥鼠。我在地下，推導着讓我內心無比踏實的那些數學公式。
-有時候，我會十分的想念日本的生活。有時候，我又會無比的思念廈門的日子。這些落腳過的地方，只有上海的感覺越來越模糊。不知道我懷念的是名古屋乾淨的街道，是廈門的沙茶面的味道，還是那些夜晚打完工以後路邊的便利店門口騎着腳踏車路過的那時的我，也許還有那個在白城沙灘上可以悠閒地聽海浪拍岸聲的那個無腦少年。不清楚緣由地，只有上海的記憶在大腦中逐漸變得不那麼色彩斑斕。我也很好奇多年以後我會怎樣回憶倫敦？ 也許只剩下記憶裏土撥鼠一樣的無聊日子，還有貴死你不償命的宿舍房租。
-跨年那晚我和幾個同學走在滿目瘡痍的倫敦街頭，焰火散去，人去城空，2018年就已經被我們踩在了腳下。眼看着這新的一年在凌亂中開始，但願過程也不要太過殘酷。這一年唯一的目標是順利完成這沒日沒夜 (說好聽是朝思暮想) 的醫學統計學碩士。還有的話就是希望家人孩子平安，待我回到你們身邊，我們再也不要用小的可憐的手機屏幕來看彼此，我要帶你們去看整個世界。</description>
+      <description>我像一隻土撥鼠，在LSHTM地下的教室裏推導公式</description>
     </item>
     
     <item>
@@ -256,7 +180,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/black-meal/</guid>
-      <description>康沃爾的牛肉餡餅！ 贊！ (2017-12-16 @The Shop in the Square) 看起來美味但是甜到牙痛的聖誕蛋糕 (2017-12-17 @Calstock Homestay) 香腸美味！烤雞美味！洋蔥有點糊但是還是很美味！ (2017-12-16 @Jane&amp;amp;Ian&amp;rsquo;s Homestay) 在中國城買到最贊的國貨！廈門鐵觀音 (2017-12-09 @London China Town) 貴到無法下手的三文魚壽司 (2017-12-06 @Waitrose) 和日本一風堂味道一樣但是貴一倍的豚骨拉麵 (2017-12-02 @London Ippudo) 學校附近和同學一起去喝過最棒的拿鐵，缺點是杯子太小 (2017-12-01 @Tap Caffee) Brunch 在長頸鹿餐廳可以打8折 (2017-11-29 @Giraffe) 約克郡的傳統午餐，美味牛肉 (2017-11-26 @The Judge&amp;rsquo;s Lodging) 謝菲爾德的聖誕街市賣的烤香腸 (2017-11-25 @Sheffield) 日本同學從日本帶來的速食味增湯，美味至極 (2017-11-23 @International Hall) 國王十字車站對面的新加坡華人餐廳，海南雞飯不錯 (2017-11-01 @Chop Chop Noodle Bar) 同學宿舍裏的自制小炒 (2017-10-21 @The Garden Hall) 大英博物館前的中餐館的水煮魚 (2017-10-20 @Chang&amp;rsquo;s Noodle) 大英博物館前的都可茶飲買到的原味珍珠奶茶 £3.5 有學生優惠 (2017-10-20 @Coco) 雞腿不錯但是旁邊的配菜有點像中藥味的壓縮餅乾 (2017-10-08 @IHdining room) 哈利波特特約飲料 Butterbeer （奶油啤酒）(2017-10-07 @Warner Bros.</description>
+      <description>記錄一下來倫敦以後吃過見過的黑暗料理 or 美食 (不定時更新)</description>
     </item>
     
     <item>
@@ -265,12 +189,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>什麼是假設檢驗 Hypothesis testing 錯誤概率和效能方程 如何選擇要檢驗的統計量 複合假設 composite hypotheses 如何獲得反對零假設的證據 how to quantify evidence against \(H_0\) 雙側替代假設情況下，雙側 \(p\) 值的定量方法   什麼是假設檢驗 Hypothesis testing 一般來說，我們的假設（或者叫假說）是對與我們實驗觀察數據來自的總體（或人羣）的概率分佈的描述。在參數檢驗的背景下，就是要檢驗描述這個總體（或人羣）的概率分佈的參數 (parameters)。最典型的情況是，我們提出兩個互補的假設，一個叫作零假設（或者叫原假設），null hypothesis (\(H_0\))；另一個是與之對應的（互補的）替代假設，althernative hypothesis (\(H_1/H_A\))。
-例如，若 \(X\) 是一個服從二項分佈的隨機離散變量 \(X\sim Bin(5, \theta)\)。可以考慮如下的零假設和替代假設：\(H_0: \theta=\frac{1}{2}; H_1: \theta=\frac{2}{3}\)。
-當建立了零假設和替代假設以後，假設檢驗就是要建立如下的規則以確定：
-從樣本中計算所得的參數估計值爲多少時，拒絕零假設。（接受替代假設爲“真”） 從樣本中計算所得的參數估計值爲多少時，零假設不被拒絕。（接受零假設爲“真”）  注意：（這一段很繞）
-上面的例子是零假設和替代假設均爲簡單假設的情況，實際操作中常常會設計更加複雜的（不對稱的）假設：即簡單的 \(H_0\)，複雜的 \(H_1\)。如此一來當零假設 \(H_0\) 不被拒絕時，我們並不一定就接受之。因爲無證據證明 \(H_1\) 不等於有證據證明 \(H_0\)。_(Absence of evidence is not evidence of absence)._ 換句話說，無證據讓我們拒絕 \(H_0\) 本身並不成爲支持 \(H_0\) 爲“真”的證據。因爲在實際操作中，當我們設定的簡單的零假設沒有被拒絕，可能還存在其他符合樣本數據的零假設；相反地，當樣本數據的計算結果拒絕了零假設，我們只能接受替代假設。所以，反對零假設的證據，同時就是支持替代假設的證據。
-在樣本空間 sample space 中，決定了零假設 \(H_0\) 會被拒絕的子集 subset，被命名爲拒絕域 rejection region 或者 判別區域 critical region，用 \(\mathfrak{R}\) 來標記。</description>
+      <description>假設檢驗的構建</description>
     </item>
     
     <item>
@@ -279,15 +198,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
       <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
-      <description>正態近似法求對數似然 Normal approximation to the log-likelihood 參數轉化 parameter transformations Exercise   爲什麼要用二次方程近似對數似然比方程？
-上節也看到，我們會碰上難以用代數學計算獲得對數似然比信賴區間的情況 (binomial example)。 我們同時知道，對數似然比方程會隨着樣本量增加而越來越漸進於二次方程，且左右對稱。 所以，我們考慮當樣本量足夠大時，用二次方程來近似對數似然比方程從而獲得參數估計的信賴區間。  正態近似法求對數似然 Normal approximation to the log-likelihood 根據前一節，如果樣本均數的分佈符合正態分佈：\(\bar{X}\sim N(\mu, \sigma^2/n)\)。那麼樣本均數的對數似然比爲：
-\[llr(\mu|\bar{X})=\ell(\mu|\bar{X})=-\frac{1}{2}(\frac{\bar{x}-\mu}{\sigma/\sqrt{n}})^2\]
-其中， \(\bar{x}\) 是正態分佈總體均數 \(\mu\) 的極大似然估計 (maximum likelihood estimator, MLE)。如果已知總體的方差參數，那麼 \(\sigma/\sqrt{n}\) 是 \(\bar{x}\) 的標準誤 (standard error)。
-因此，假設 \(\theta\) 是我們想尋找的總體參數。有些人提議可以使用下面的關於 \(\theta\) 的二次方程來做近似：
-\[f(\theta|data)=-\frac{1}{2}(\frac{\theta-M}{S})^2\]
-上述方程具有一個正態二次對數似然 (比) 的形式，而且該方程的極大似然估計(MLE)， \(M\) 的標準誤爲 \(S\)。如果我們正確地選用 \(M\) 和 \(S\)，那我們就可以用這樣的方程來近似求真實觀察數據的似然 \(\ell(\theta|data)\)。
-通過近似正態對數似然比，\(M\) 應當選用使方程取最大值時，參數 \(\theta\) 的極大似然估計 \(M=\hat{\Theta}\)。
-但是在選用標準誤 \(S\) 上必須滿足下列條件：</description>
+      <description>近似法求對數似然比</description>
     </item>
     
     <item>
@@ -296,13 +207,7 @@ Causal inference 作業  [done 2018-05-18 12:00]  學習去年的 Hierarchical d
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
-      <description>對數似然比 Log-likelihood ratio 對數似然比的想法來自於將對數似然方程圖形的 \(y\) 軸重新調節 (rescale) 使之最大值爲零。這可以通過計算該分佈方程的對數似然比 (log-likelihood ratio) 來獲得：
-\[llr(\theta)=\ell(\theta|data)-\ell(\hat{\theta}|data)\]
-由於 \(\ell(\theta)\) 的最大值在 \(\hat{\theta}\) 時， 所以，\(llr(\theta)\) 就是個當 \(\theta=\hat{\theta}\) 時取最大值，且最大值爲零的方程。很容易理解我們叫這個方程爲對數似然比，因爲這個方程就是將似然比 \(LR(\theta)=\frac{L(\theta)}{L(\hat{\theta})}\) 取對數而已。
-之前我們也確證了，不包含我們感興趣的參數的方程部分可以忽略掉。還是用上一節 10人中4人患病的例子：
-\[L(\pi|X=4)=\binom{10}{4}\pi^4(1-\pi)^{10-4}\\ \Rightarrow \ell(\pi)=log[\pi^4(1-\pi)^{10-4}]\\ \Rightarrow llr(\pi)=\ell(\pi)-\ell(\hat{\pi})=log\frac{\pi^4(1-\pi)^{10-4}}{0.4^4(1-0.4)^{10-4}}\]
-其實由上也可以看出 \(llr(\theta)\) 只是將對應的似然方程的 \(y\) 軸重新調節了一下而已。形狀是沒有改變的：
-par(mfrow=c(1,2)) x &amp;lt;- seq(0,1,by=0.001) y &amp;lt;- (x^4)*((1-x)^6)/(0.4^4*0.6^6) z &amp;lt;- log((x^4)*((1-x)^6))-log(0.4^4*0.6^6) plot(x, y, type = &amp;quot;l&amp;quot;, ylim = c(0,1.1),yaxt=&amp;quot;n&amp;quot;, frame.plot = FALSE, ylab = &amp;quot;LR(\U03C0)&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;) axis(2, at=seq(0,1, 0.2), las=2) title(main = &amp;quot;Binomial likelihood ratio&amp;quot;) abline(h=1.</description>
+      <description>對數似然比，和信賴區間的計算</description>
     </item>
     
     <item>
@@ -311,11 +216,7 @@ par(mfrow=c(1,2)) x &amp;lt;- seq(0,1,by=0.001) y &amp;lt;- (x^4)*((1-x)^6)/(0.4
       <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/likelihood/</guid>
-      <description>概率 vs. 推斷/Probability vs. Inference 似然和極大似然估計 似然方程的一般化定義 對數似然方程 log-likelihood 極大似然估計 (maximum likelihood estimator, MLE) 的性質： 率的似然估計 Likelihood for a rate 有 \(n\) 個獨立觀察時的似然方程和對數似然方程   概率 vs. 推斷/Probability vs. Inference 在概率論的環境下，我們常常被告知的前提是：某某事件發生的概率是多少。例如： 一枚硬幣正面朝上的概率是 \(0.5\; Prob(coin\;landing\;heads)=0.5\)。然後在這個前提下，我們又繼續去計算複雜的事件發生的概率（例如，10次投擲硬幣以後4次正面朝上的概率是多少？）。
-\[ \binom{10}{4}\times(0.5^4)\times(0.5^{10-4}) = 0.205 \]
-dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10)*(0.5^10)/(factorial(4)*(factorial(6))) ## [1] 0.2050781 在統計推斷的理論中，我們考慮實際的情況，這樣的實際情況就是，我們通過觀察獲得數據，然而我們並不知道某事件發生的概率到底是多少（神如果存在話，只有神知道）。故這個 \(Prob(coin\;landing\;heads)\) 的概率大小對於“人類”來說是未知的。我們可能觀察到投擲了10次硬幣，其中有4次是正面朝上的。那麼我們從這一次觀察實驗中，需要計算的是能夠符合觀察結果的“最佳”概率估計 (best estimate)。在這種情況下，似然法 (likelihood) 就是我們進行參數估計的最佳手段。
- 似然和極大似然估計 此處用二項分佈的例子來理解似然法的概念：假設我們觀察到10個對象中有4個患病，我們假定這個患病的概率爲 \(\pi\)。於是我們就有了下面的模型：
-模型： 我們假定患病與否是一個服從二項分佈的隨機變量，\(X\sim Bin(10,\pi)\)。同時也默認每個人之間是否患病是相互獨立的。</description>
+      <description>似然，似然方程的概念</description>
     </item>
     
     <item>
@@ -324,11 +225,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
-      <description>背景 計劃臨牀實驗的時候，爲了避免偏倚和帶有偏見的結論，應當將注意力放在
-如何將實驗對象隨機分配 (randomisation) 設計對照組 (control group) 合適（且必須）的貫徹盲法 (blinding)  另外一個同樣重要的問題是–“我到底需要多少樣本?”
-一項臨牀實驗，應該提供足夠的證據來證明新藥物（新治療方法）是否有效，是否安全。影響一個實驗設計的樣本量的因素可能有如下幾種：
-統計學方案。 從統計學上可以推算出，需要多少樣本來獲得一個堅實可信的證據來證明藥物的實際有效性。 經濟上的因素。 然而實際上可能還有經濟上，時間上，人力物力資源上的現實因素，會制約到底一個實驗能夠收集到多少樣本量。 倫理道德上的因素。 許多臨牀實驗還必須受制於醫學倫理因素。在倫理上一個實驗到底可以維持多久。或者說，要考慮當實驗中一些受試者的結果不理想，或者是有副作用的時候，我們何時該及時停止該實驗？ 實驗本身的可信度。 如果一個臨牀實驗的規模在設計上就很小，可能它本身的可信度就很低。  這裏我們只考慮沒有其他任何因素的影響下，1. 統計學方案上該如何計算準確的所需樣本量的大小。
-比較下列兩個同樣比較了溶栓酶和安慰劑在預防心肌梗塞患者死亡的臨牀實驗：  Table 1: Results from the 1st Australian and ISIS-2 trials for reducing mortality from post-MI    治療組  溶栓酶  安慰劑  p.values      1st Australian  n=264  n=253     死亡人數  26 (9.</description>
+      <description>臨牀實驗的樣本量計算問題</description>
     </item>
     
     <item>
@@ -337,16 +234,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
-      <description>卡方分佈的期望和方差的證明： 當 \(X\sim N(0,1)\) 時， \(X^2\sim \mathcal{X}_1^2\)
-如果 \(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)， 那麼 \(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)
-其中： \(\mathcal{X}_n^2\) 表示自由度爲 \(n\) 的卡方分佈。
-且 \(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)
-卡方分佈的期望： \[E(X_1^2)=Var(X)+[E(X)]^2=1+0=1\]
-\[\Rightarrow E(X_n^2)=n\]
- 卡方分佈的方差： \[ \begin{aligned} Var(X_1^2) &amp;amp;= E(X_1^{2^2}) - E(X_1^2)^2 \\ &amp;amp;= E(X_1^4)-1 \end{aligned} \]
-下面來求 \(E(X_1^4)\) \[ \begin{aligned} \because E(X_1) &amp;amp;= \int_{-\infty}^{+\infty} xf(x)dx \\ \therefore E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx \end{aligned}\]
-已知： \(f(x)=\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}\) 代入上式：
-\[ \begin{aligned} E(X_1^4) &amp;amp;= \int_{-\infty}^{+\infty} x^4f(x)dx \\ &amp;amp;= \int_{-\infty}^{+\infty} x^4\frac{1}{\sqrt{2\pi}}e^{(-\frac{x^2}{2})}dx\\ &amp;amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^4e^{(-\frac{x^2}{2})}dx\\ &amp;amp;=\frac{-1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x^3(-x)e^{(-\frac{x^2}{2})}dx \end{aligned} \]</description>
+      <description>關於卡方分佈的知識和推導，我竟然花了一天時間</description>
     </item>
     
     <item>
@@ -355,12 +243,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
-      <description>估計量和他們的樣本分佈 例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 \(n\) 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。
-模型假設： 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 \(Y_i\) 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 \(\mu\)，總體方差爲 \(\sigma^2\)。那麼這個模型可以簡單的被寫成：
-\[Y_i \stackrel{i.i.d}{\sim} N(\mu, \sigma^2), i=1,2,\dots,n\]
-總體均值 \(\mu\) 的估計量： 顯然算術平均值: \(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\) 是我們用於估計總體均值的估計量。
-估計量的樣本分佈： \[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]
-證明 \[ \begin{aligned} E(\bar{Y}) &amp;amp;= E(\frac{1}{n}\sum Y_i) \\ &amp;amp;= \frac{1}{n}E(\sum Y_i) \\ &amp;amp;= \frac{1}{n}\sum E(Y_i) \\ &amp;amp;= \frac{1}{n}n\mu = \mu \\ Var(\bar{Y}) &amp;amp;= Var(\frac{1}{n}\sum Y_i) \\ \because Y_i \;are &amp;amp;\; independent \\ &amp;amp;= \frac{1}{n^2}\sum Var(Y_i) \\ &amp;amp;= \frac{1}{n^2} n Var(Y_i) \\ &amp;amp;= \frac{\sigma^2}{n} \end{aligned} \]</description>
+      <description>估計和精確度 Estimation and Precision， 自由度 degree of freedom</description>
     </item>
     
     <item>
@@ -369,11 +252,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
-      <description>人羣與樣本 (population and sample) 討論樣本時，需考慮下面幾個問題：
-樣本是否具有代表性？ 人羣被準確定義了嗎？ 我們感興趣的“人羣”是否可以是無限大（多）的？ 我們研究的樣本，是僅僅用來觀察，亦或是計劃對之進行某種干預呢？ 我們從所有可能的人羣中抽樣了嗎？   樣本和統計量 (sample and statistic) 通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的統計量 (statistics)。我們用已知樣本去推斷未知總體的過程就叫做估計 (estimate)。這個想要被推斷的總體或人羣的值，被叫做參數 (parameter)，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做估計量 (estimator)。
-所有的統計量，都有樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)。推斷的過程歸納如下：
-從總體或人羣中抽樣 (樣本量 \(n\)) 計算這個樣本的合適統計量，從而用於估計它在整體或人羣中的值。 我們還需要決定計算獲得的統計量的樣本分佈（假定會抽樣無數次）。 一旦可以精確地確認樣本分佈，我們就可以定量地計算出使用步驟2中獲得的統計量估計總體或人羣的參數時的準確度。   估計 Estimation 從樣本的均值，推斷總體或人羣的均值是一種估計。我們的目的是，從已知樣本中計算一個儘可能接近那個未知的總體或人羣參數的值。一個估計量有兩個與生俱來的性質 (properties)：1) 偏倚 (bias); 2) 精確度 (precision)。這兩個性質都可以從樣本分佈和估計量獲得。
-偏倚： 偏倚簡單說就是樣本分佈的均值，也就是我們從樣本中計算獲得的估計量，和我們想要拿它來估計的總體或人羣的參數之間的差距。(The bias is the difference between the mean of the sampling distribution – the expected or average value of the estimator – and the population parameter being estimated.</description>
+      <description>統計推斷的概念</description>
     </item>
     
     <item>
@@ -382,10 +261,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>二項分佈的正態分佈近似  假設我們有大量(\(n\rightarrow\infty\))的二項分佈實驗 \(X\sim Bin(n, \pi)\) 根據二項分佈的概率公式，計算將會變得很繁瑣複雜。 解決辦法：應用中心極限定理。 中心極限定理告訴我們，當樣本量足夠大時: \[X\sim N（n\pi, n\pi(1-\pi))\]
- 問題在於，多大的 \(n\) 才能算大樣本呢？  當且僅當 (only and if only) \(n&amp;gt;20\) AND \(n\pi&amp;gt;5\) AND \(n(1-\pi)&amp;gt;5\)    泊松分佈的正態分佈近似  假設時間 \(t\) 內某事件的發生次數服從泊松分佈 \(X\sim Po(\mu)\)。 考慮將這段時間 \(t\) 等分成 \(n\) 個時間段。那麼第 \(i\) 時間段內事件發生次數依舊服從泊松分佈 \(X_i\sim Po(\frac{\mu}{n})\)。且 \(E(X_i)=\mu/n, Var(X_i)=\mu/n\)。 那麼原先的 \(X\) 可以被視爲是將這無數的小時間段的 \(X_i\) 相加。應用中心極限定理： \[X=\sum_{i=1}^nX_i\sim N(\frac{n\mu}{n}, \frac{n\mu}{n})\]
- 需要注意的是，這段時間 (\(t\)) 內發生的事件次數 (\(\lambda\)) : \(\lambda t =\mu&amp;gt;10\) ，這樣的正態分佈模擬才能成立。
-   正態分佈模擬的校正：continuity corrections  如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。 例如：我們如果用正態分佈模擬來計算 \(P(X=15)\)，那麼實際上我們應該計算的是 \(P(14.</description>
+      <description>中心極限定理的廣泛應用</description>
     </item>
     
     <item>
@@ -394,19 +270,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
-      <description>最近明顯可以感覺到課程的步驟開始加速。看我的課表：
-手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。
-這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。
-今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。
-協方差 Covariance 之前我們定義過，兩個獨立連續隨機變量 \(X,Y\) 之和的方差 Variance ：
-\[Var(X+Y)=Var(X)+Var(Y)\]
-然而如果他們並不相互獨立的話：
-\[\begin{aligned} Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\ &amp;amp;= E[(X+Y)-(E(X)+E(Y))^2] \\ &amp;amp;= E[(X-E(X)) - (Y-E(Y))^2] \\ &amp;amp;= E[(X-E(X))^2+(Y-E(Y))^2 \\ &amp;amp; \;\;\; +2(X-E(X))(Y-E(Y))] \\ &amp;amp;= Var(X)+Var(Y)+2E[(X-E(X))(Y-E(Y))] \end{aligned}\] 可以發現在兩者和的方差公式展開之後多了一部分 \(E[(X-E(X))(Y-E(Y))]\)。 這個多出來的一部分就說明了二者 \((X, Y)\) 之間的關係。它被定義爲協方差 (Covariance): \[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]
-所以：
-\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]
-要記住，協方差只能用於評價(X,Y)之間的線性關係 (Linear Association)。
- 以下是協方差 (Covariance) 的一些特殊性質：
-\(Cov(X,X)=Var(X)\) \(Cov(X,Y)=Cov(Y,X)\) \(Cov(aX,bY)=ab\:Cov(X,Y)\) \(Cov(aR+bS,cX+dY)=ac\:Cov(R,X)+ad\:Cov(R,Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+bc\:Cov(S,X)+bd\:Cov(S,Y)\) \(Cov(aX+bY,cX+dY)=ac\:Var(X)+ad\:Var(Y)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+(ad+bc)Cov(X,Y)\) \(Cov(X+Y,X-Y)=Var(X)-Var(Y)\) If \(X, Y\) are independent.</description>
+      <description>協方差，相關，和中心極限定理</description>
     </item>
     
     <item>
@@ -415,10 +279,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/probability3/</guid>
-      <description>二項分佈的概念 Binomial distribution 二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 \(n\) 次相互獨立的成功率爲 \(\pi\) 的伯努利實驗 (\(n\) independent Bernoulli trials) 中成功的次數。
-當 \(X\) 服從二項分佈，記爲 \(X \sim binomial(n, \pi)\) 或\(X \sim bin(n, \pi)\)。它的(第 \(x\) 次實驗的)概率被定義爲：
-\[\begin{align} P(X=x) &amp;amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\ &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\ &amp;amp; for\;\; x = 0,1,2,\dots,n \end{align}\]
-二項分佈的期望和方差  期望 \(E(X)\)  若 \(X \sim bin(n,\pi)\)，那麼 \(X\) 就是這一系列獨立伯努利實驗中成功的次數。 用 \(X_i, i =1,\dots, n\) 標記每個相互獨立的伯努利實驗。 那麼我們可以知道 \(X=\sum_{i=1}^nX_i\)。 \[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\ &amp;amp;= E(X_1+X_2+\cdots+X_n) \\ &amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\ &amp;amp;= \sum_{i=1}^nE(X_i)\\ &amp;amp;= \sum_{i=1}^n\pi \\ &amp;amp;= n\pi \end{align}\]  方差 \(Var(X)\) \[\begin{align} Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\ &amp;amp;= Var(X_i+X_2+\cdots+X_n) \\ &amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\ &amp;amp;= \sum_{i=1}^nVar(X_i) \\ &amp;amp;= n\pi(1-\pi) \\ \end{align}\]    超幾何分佈 hypergeometric distribution 假設我們從總人數爲 \(N\) 的人羣中，採集一個樣本 \(n\)。假如已知在總體人羣中(\(N\))有 \(M\) 人患有某種疾病。請問採集的樣本 \(X=n\) 中患有這種疾病的人，服從怎樣的分佈？</description>
+      <description>簡單的離散分佈：二項分佈，泊松分佈</description>
     </item>
     
     <item>
@@ -427,10 +288,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/normal-distribution/</guid>
-      <description>概率密度曲線 probability density function， PDF  一個隨機連續型變量 \(X\) 它的性質由一個對應的概率密度方程 (probability density function, PDF) 決定。
- 在給定的範圍區間內，如 \(a\sim b, (a &amp;lt; b)\)，它的概率滿足:
-  \[P(a\leqslant X \leqslant b) = \int_a^bf(x)dx\]
- 這個相關的方程，在 \(a\sim b\) 區間內的積分，就是這個連續變量在這個區間內取值的概率。  # R codes for drawing a standard normal distribution by using ggplot2 library(ggplot2) p &amp;lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) + stat_function(fun = dnorm) p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&amp;quot;) + theme(plot.subtitle = element_text(vjust = 1), plot.</description>
+      <description>正態分佈</description>
     </item>
     
     <item>
@@ -439,21 +297,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/probability2-4/</guid>
-      <description>Bayes 理論的概念 許多時候，我們需要將概率中的條件相互對調。 例如： 在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 \(P(S|A)\)
-這裏先引入貝葉斯的概念：
-我們可以將 \(P(A\cap S)\) 寫成： \[P(A\cap S)=P(A|S)P(S)\\or\\ P(A\cap S)=P(S|A)P(A)\] 這兩個等式是完全等價的。我們將他們連起來：
-\[P(S|A)P(A)=P(A|S)P(S)\\ \Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]
-是不是看起來又像是寫了一堆廢話？ 沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。
-再繼續，我們可以利用另外一個廢話：\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)
-用上面的公式替換掉 \(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)
-可以得到貝葉斯理論公式：
-\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]
-回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：
-\[\begin{align} P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\ &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\ &amp;amp;= 0.24 \end{align}\]
-所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(\(P(S)\))，吸菸的人有9%的概率有哮喘(\(P(A|S)\))，不吸菸的人有7%的概率有哮喘(\(P(A|\bar{S})\))的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(\(P(S|A)\))。
- 期望 Expectation (或均值 or mean) 和 方差 Variance 期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。 對於離散型隨機變量 \(X\) (discrete random variables)，它的期望被定義爲：
-\[E(X)=\sum_x xP(X=x)\]
-所以就是將所有 \(X\) 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 \(\mu\) 來標記。</description>
+      <description>Bayes 概念; 伯努利分佈 Bernoulli distribution ; 期望值; 方差</description>
     </item>
     
     <item>
@@ -462,14 +306,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
-      <description>前情提要：
-假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是(味道奇特的)山羊。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？
-答案是：必須改變主意才能提高中獎概率。
-上述情況下，最簡單的是用概率樹 (probability tree) 來做決定：
-解說一下：
- 假定保時捷在1號門後，你第一次選擇了1號門，那麼此時主持人可以任意打開2號或者三號門（因爲他們後面都沒有保時捷）。 假定保時捷在1號門後，你第一次選了2號門，那麼此時主持人只能打開3號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。 假定保時捷在1號門後，你第一次選了3號門，那麼此時主持人只能打開2號門（因爲一號門後是保時捷，按照遊戲規則主持人不能打開）。  所以按照圖中給出的計算概率樹的過程可以得到:
-\[P[改變主意以後贏得保時捷的概率]\\=\frac{1}{3}+\frac{1}{3}=\frac{2}{3}\\ P[不改主意，贏得保時捷的概率]\\=\frac{1}{6}+\frac{1}{6}=\frac{1}{3}\]
-你是否選擇了改變主意了呢？</description>
+      <description>解答昨天的問題</description>
     </item>
     
     <item>
@@ -478,14 +315,7 @@ dbinom(4, 10, 0.5) ## [1] 0.2050781 # or you can calculate by hand: factorial(10
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/probability-gambling/</guid>
-      <description>轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，更多的情況下還會把真相給掩蓋住了。
-我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：
-Quick Calculus: Short Manual of Self-instruction
-上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。
-下面想介紹一下上週學習的概率的基礎問題。
-首先是最基礎的三個概率的公理： 對於任意事件 \(A\)，它發生的概率 \(P(A)\) 滿足這樣的不等式： \(0 \leqslant P(A) \leqslant 1\) \(P(\Omega)=1\) , \(\Omega\) 是全樣本空間 (total sample space) 對於互斥（相互獨立）的事件 \(A_1, A_2, \dots, A_n\) 有如下的等式關係： \(P(A_1\cup A_2 \cup \cdots \cup A_n)=P(A_1)+P(A_2)+\cdots+P(A_n)\)  你是不是覺得上面三條公理都是廢話。 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)
-然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：
-\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)</description>
+      <description>回顧一下最近學習的情況</description>
     </item>
     
     <item>
@@ -494,10 +324,7 @@ Quick Calculus: Short Manual of Self-instruction
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</guid>
-      <description>Function, Calculus Exponential Rules \[a^m \times a^n = a^{m+n} ;\;\;\;\;\;\; a^{-m} = \frac{1}{a^m}\\ \frac{a^m}{a^n} = a^{m-n} ;\;\;\;\;\;\; (a^m)^n = a^{mn} \\ (ab)^m=a^mb^m ;\;\;\;\;\;\; a^0=1\]
- Rules for Logarithms \[ log(ab)=log(a)+log(b) ;\;\;\;\;\;\; log(\frac{a}{b})= log(a)-log(b) \\ log(a^n)=n\times log(a) ;\;\;\;\;\;\; log_aa=1 \\ log_a1=0 \]
- Rules for the summation and product fuctions \[\prod_{i=1}^n x_i=(x_1\cdot x_2\cdot x_3 \dots x_n) \\ \prod_{i=1}^nax_i = a^n\prod_{i=1}^nx_i \\ \sum_{i=1}^nx_i=(x_1+x_2+x_3+\dots+x_n) \\ \sum_{i=1}^nax_i=a\sum_{i=1}^nx_i \\ \sum_{i=1}^na=na \]
- Some Rules for Defferentiation \[\frac{d}{dx}a=0 ;\;\;\;\;\;\; \frac{d}{dx}ax=a \\ \frac{d}{dx}x^n=nx^{n-1} ;\;\;\;\;\;\; \frac{d}{dx}log_e(x)=\frac{1}{x}\\ \frac{d}{dx}e^x=e^x ;\;\;\;\;\;\; \frac{d}{dx}e^{F(x)}=\frac{dF(x)}{dx}e^{F(x)}=F^\prime(x)e^{F(x)}\\\frac{d}{dx}(F(x)+L(x))=F&amp;#39;(x)+L&amp;#39;(x)\\ \frac{d}{dx}(F(x)\cdot L(x))=L(x)F&amp;#39;(x)+F(x)L&amp;#39;(x)\\ \frac{d}{dx}(\frac{F(x)}{L(x)})=\frac{F&amp;#39;(x)}{L(x)}-\frac{F(x)\cdot L&amp;#39;(x)}{[L(x)]^2}=\frac{F&amp;#39;(x)L(x)-L&amp;#39;(x)F(x)}{[L(x)]^2}\]</description>
+      <description>統計學中常用的簡單數學規則 (1)</description>
     </item>
     
     <item>
@@ -506,7 +333,7 @@ Quick Calculus: Short Manual of Self-instruction
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>Basic Definition and notations: An \(m\times n\) matrix \(A\) is a rectangular array of numbers with \(m\) rows and \(n\) columns. The elements of a matrix \(A_{m\times n}\) are \(a_{ij}\) The order of a matrix is the number of rows by the number of columns, i.e. \(m\times n\) A column vector with \(m\) elements, \(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\), is a matrix with only one column i.</description>
+      <description>統計學中常用的簡單數學規則 (2)</description>
     </item>
     
     <item>
@@ -515,22 +342,7 @@ Quick Calculus: Short Manual of Self-instruction
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/first-impression-of-london2/</guid>
-      <description>我們學科 (Medical Statistics) 是爲數不多的在 Orientation 周就有一半以上的時間在上課的學科。別的學科像 Epidemiology 這周還集體去劍橋大學見學啥的。幾乎都是第二周，也就是10月2日週一開始的時候才有大量的必修和選修課。所以不見得再有太多時間寫見聞和體驗。（也沒有時間出去玩了&amp;hellip;..）不過學習的內容還是會來更新一下，給各位有個印象，也讓大家都來判斷以下，這裏的碩士課程的內容和質量到底如何。
-9月22日 ISW &amp;amp; UCL &amp;amp; 福爾摩斯博物館（的紀念品商店） 忘了交代，9月21日和22日都是 Internatioanal Student Welcome (留學生歡迎會, ISW) 的日子。充滿對這一年的期待，和但是是否自己能最終倖存下來的不安，坐在這樣壓力巨大的梯形教室裏，我和這麼多來自世界各地的年輕人成爲了同學： 這個教室就是大名鼎鼎的 John Snow Lecture Theatre。我就知道你以爲是這個人： 其實歷史上的 Snow 同學可是奠定了近代流行病學基礎的巨人。比這個 bastard 強$^{9999999}$ 多了好麼，快去維基百科自學去。
-這個大名鼎鼎的水泵就是他拆的！ 閒話少敘，註冊參加時，排隊的樣子： 領到自己的卡，寫上自己的名，和課程名稱 (原諒我的粗鄙的筆跡)： 看這梯形教室有多陡峭：（據說梯形教室陡峭的程度和學習壓力成正比）
-學校還請來了倫敦警察（可愛壞）薯熟來跟大家講我以前感覺只有在中國才會有的防盜防火防學長的故事：
-22日中午結束以後我就步行在大學附近閒逛，UCL就在我們大學 Keppel Street 往北一點點。連3分鐘都不到。看這大學，真有大學的感覺：
-爲數不多的晴天在這一週已經碰到兩天了。是不是應該買張彩票試試看？（笑） UCL是以前高中同班同學待過（一個已經回廈門），和正在待的地方（一個正在博士後/Research Assistant?）。
-大學對面是UCL的醫學院：
-有那麼一點點霍格沃茨的感覺。我在校內略逛了以下，起身前去貝克街。如果你聽說過貝克街，那你一定聽說過221號B。因爲這是小說裏福爾摩斯和華生的住址。來之前我就查過了，距離倫敦大學步行半個小時左右，中途還會經過杜莎夫人蠟像館（聽起來就令人覺得索然無味的地方）。
-當我來到貝克街的時候，路邊有個福爾摩斯的雕像，許多人駐足和心目中世界上最聰明的男人合影留念：
-旁邊還有一個貝克街的公共汽車站證明了這可是真實存在的地址哦：
-但是其實這裏只是貝克街的起點。走到 Baker Street 221 B 之後我被門口排的長隊驚呆了：
-於是我趕緊跟在隊的最後面排隊，大概五分鐘過後有個老頭過來問說，你買了門票了嗎？ 我說我還以爲這裏就是排隊買門票呢。他說這些人都是排隊進福爾摩斯紀念館的。旁邊的小房間現在是紀念品商店，可以在那裏買到門票。所以我就轉身進入了紀念品商店。
-商店裏還真是應有盡有。你能想到的關於福爾摩斯的任何東西。而且大多數價格都不便宜：
-這個杯子賣八鎊，低下寫着英國製造。
-這頂帽子，全羊毛手工製作，也寫着英國製造，49鎊一頂：
-這兩個東西正好也是我現在需要的。所以我就買了下來。但是進入紀念館的門票竟然要16英鎊。我想還是等我有學生優惠了以後再來問問看吧。說不定可以便宜一些。打道回府的路上又經過UCL，在這棟標誌性的建築物門口的長椅上坐了許久，休息，沉思。側面的角度還是很有感覺的呢。</description>
+      <description>倫敦 Day34567</description>
     </item>
     
     <item>
@@ -539,30 +351,7 @@ Quick Calculus: Short Manual of Self-instruction
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/first-impression-of-london/</guid>
-      <description>在倫敦生活過完了第一周，似乎快要步入正軌了。因為許許多多的前輩告誡說，第一周是唯一可以輕鬆度過的時間，一定要珍惜好好利用。多看看倫敦，多四處走走。
-於是我很聽話的每天都四處走走。接下來打算把這幾天去過的地方盡量根據回憶都列舉一下：
-9月19日 大英博物館初體驗 國王十字車站附近的郵局 → 大英博物館
-從宿舍往北步行十五分鐘左右，就是大英圖書館，圖書館的旁邊就能看到國王十字車站 (King&amp;rsquo;s Cross Station)。所有剛到英國的留學生（簽證在6個月以上的吧？），都要去自己申請簽證時登記的郵局領取BRP卡。BRP卡就相當於日本的在留卡，也就是登記一下外國人的個人信息，住址和在留期限。我當時登記的是這個最近的郵局，叫做國王十字車站郵局 (Kings Cross Post Office)。
-去郵局的路上看到了兩個騎著高頭大馬的帥氣警察。不敢從正面拍，所以走到了後面才趕緊拍了一張： 然後你也會看到一個非常有巴洛克風的建築物： 這個叫做 St. Pancras Renaissance Hotel London，中文名應該是聖潘克拉斯萬麗酒店。如果你玩過刺客信條梟雄。一定會對這樣的建築印象深刻。
-郵局內部真的是破爛不堪，連中國三線城市的郵政儲蓄營業廳都不如，櫃檯工作的好多是黑人和印度人，口音很重，態度蠻橫。要做好心理準備。而且標識十分不明，你必須問周圍的人我現在排的隊是幹什麼的。
-領完我的BRP卡之後，又往回走，到宿舍以南步行也是10分鐘左右，進入大英博物館。從正門走時，因為每個進入大英博物館的人如果有帶包都要打開給警備員查看。所以入口處隊伍非常的長。後來聽說從後門走的話人就少很多。不過這天不是週末，所以我得以很快的通過安檢進入博物館。
-最重要的是，大英博物館是免費的！
- 大英博物館外觀：
-進入大英博物館的玄關以後，視野一下子就開闊起來:
-果然從世界各地搶來的東西展覽起來就是有底氣！ 呵呵！
-當然英國人對世界人類瑰寶的保存還是花了不少力氣。我花了一個小時左右看了古埃及部分，一點點古希臘，還有一個專門展覽人類各種貨幣的展廳。牆裂推薦！
-9月20日 暴走倫敦城 谷歌事無鉅細記錄了我一天的行程。早晨我起床吃了早飯就離開宿舍前往天空花園 (Sky Garden)。
-出發來倫敦之前，通過閱讀學校給的關於倫敦的簡單介紹，知道了這個地方。應該是類似新加坡 Sky Park。的空中花園。天氣晴朗的時候可以俯瞰全城的地標性建築物。 不同的是倫敦的天空花園是免費，且要預約的。如果你打開上面天空花園的網頁鏈接，就能看見預約的方法。我提前預約了週三早晨10點半進入參觀的門票。如果我沒有記錯的話，新加坡的空中花園不用預約，但是需要在門口乘電梯的地方購買門票，一個人應該是15新幣的樣子。
-Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。不過畢竟登高望遠，泰晤士河兩岸，倫敦塔橋等建築物還是能看得見：
-霧濛濛的是不是感覺比北京天氣還糟糕？！ 這麼說有點不公平，因為我沒在北京生活過。客觀點說倫敦空氣質量還不錯，天氣很不好。據說到了冬天抑鬱症的人就會增加。
-雖然預約的是10點半到11點半一個小時，不過整個花園不大，天氣不好所以也沒什麼看頭，十五分鐘我就下來了。看著地圖又繼續往泰晤士河邊走。中途路過倫敦大火紀念碑：
-經過倫敦橋(你以為倫敦橋有多壯觀？看了你會失望)以後你會發現這種橋在黃浦江上可能還根本算不上是一座橋。也就跟我們村里小河邊看櫻花的那個橋差不太多。。。
-可能倫敦“城裡人”會不同意我的話哈哈，請多見諒，您是城里人嘛。
-到了泰晤士河南岸，往西走，去塔橋 (Tower Bridge) 的路上會看見一艘軍艦停靠在港口：
-估計和停靠在珍珠港的軍艦一樣曾經在戰爭中服役。只不過從外觀規模上來看這艘軍艦顯然小很多。門票有點小貴，所以我也沒有花錢進去。經過軍艦以後是個不大不小的廣場。讓我想起了廈門輪渡碼頭。不過，再往前就是壯觀的塔橋了 (Tower Bridge)：
-塔橋在大船要進入泰晤士河的時候是可以從中間舉起，讓船通過然後再放下的。之前都只在風景明信片裡面看過的建築物，我終於有幸在上面留下我的足跡。走上塔橋意味著就離開南岸，又回到北岸了。
-回宿舍的路上，我注意觀察了路邊的ATM機器。絕大部分都是只在牆壁上挖了一個洞，放個機器。讓人超級沒有安全感的。密碼被周圍的人看了咋辦？ 取了多少錢都被周圍的人看見了，有人見財起意咋辦？ 英國人都不在乎這些嗎？ 好像銀行的建築物裡面的ATM機器可能可以多少讓人有點安全感吧。
-機器上方的字的意思是取錢不收手續費。這非常的好。於是我在一個車站的較為隱蔽的角落裡的 ATM 嘗試著用 manepartners 的卡著取了些現金。後來手機一查，還是扣了我 1.5 鎊的手續費。估計多半是 manepartners 扣去了的。</description>
+      <description>倫敦 Day1 &amp;amp; Day2</description>
     </item>
     
     <item>
@@ -571,19 +360,7 @@ Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。�
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/london-life-started/</guid>
-      <description>離開 飛機翱翔在俄羅斯上空。我在機艙內拿出手機，再一次看老友記第四季的最後一集。講的是 Ross 和 Emily 在倫敦的婚禮。 熟悉的歡樂劇情，不熟悉的城市。如果你對老友記像我一樣熟悉，快來跟我做朋友吧！
-十三個小時的飛行，我一直無法休息。我在憧憬這一年如痴如醉的傲遊知識海洋嗎？我離開家，離開愛妻，離開親愛的孩子們，是多麼的捨不得。我才剛踏上旅程，思念就如同潮水在心中湧起。在中部機場和妻告別時，她拿出一個小小的粉紅色信封。依依不捨的告訴我說上了飛機再看。想來和妻在一起這幾年，這是她第一次這樣細膩又柔軟的感情表達。可是我卻把整個家留在了身後，全部交給了她。這一年，要辛苦你了。
-就在離開日本的前一日，名古屋還在18號颱風的正面襲擊之下。夜晚狂風驟雨，摧枯拉朽地吹散整個城市的思念。早晨醒來，天空還是陰沉沉的，颱風仍然沒有完全過去。全家人擔心著飛機的起飛是否被影響。我們還是毅然決然地開著心愛的小西沖向了機場。在日航的櫃檯等待行李寄存時，抬頭看見大屏幕上的航班信息，名古屋-沖繩 取消， 名古屋-札幌 取消，名古屋-成田（東京） 取消。。。。 一整個屏幕都是航班取消的紅色信號。可是最後，名古屋-羽田（東京）的航班竟然顯示的是 &amp;lsquo;計劃&amp;rsquo;。拿到機票進入候機大樓以後才看見，這時天空的烏雲已經開始逐漸散去。原來，我的航班真的可以按時離開了。
-抵達 同行的本田是一個日本人小兒科醫生。她跟我很早就通過 Facebook 聯絡，並且發現我們恰好訂了同一天的航班，宿舍距離也不遠。於是順理成章地，我們到了希思羅機場以後準備一起乘 Uber 去我們各自的宿舍。希思羅機場乘 Uber 時要先去出發的航站樓的停車場，才能順利上車。推著行李過去停車場的一路上我們是真切的感受到了9月倫敦的氣溫是多麼的冷。我趕快拿出放在包裏的羽絨服披上才算沒有被凍到。
-不過奇怪的是我的 uber 賬號本來在美國西雅圖，新加坡等地方都用的好好的，在倫敦卻一直提示我支付用的信用卡信息有誤。就算我立刻更新了信用卡信息，或者是從 mastercard 換成 visa 均不能成功。真是尷尬死了。正在此時，旁邊另一個留學生模樣的女生湊過來說，“我可以借一下你的 wifi 熱點嗎？”。原來此人來自香港，在 LSE （倫敦政經學院）做交換留學生一年。真是巧了。宿舍也離我們的不太遠。所以果斷把我租的小米全球上網分享給她：
-三個剛剛踏上留學生活的陌生人，就這樣乘了同一輛車進入這個陌生的大城市。倫敦，I am coming。
-順利抵達我的宿舍 International Hall，領了房間卡之後，住進了我此生租過的最貴的每週200鎊的單身無廁所無浴室學習房間 (Study Room) :
-大學附贈了一套被褥床單和浴巾。房間的暖氣片暫時還不能使用。夜裡的溫度已經降到10度以下了呢！！！衣櫃裡的鏡子已經碎了，不過我很喜歡這個特別長的書桌，上面的書櫃，還有牆壁上的這塊掛墊：(我的兩個小寶貝的照片被我第一時間貼了上去。)
-宿舍附近就有 Tesco，是個24小時開門的小超市。類似在日本的7/11。也是應有盡有，甚至還能買到新鮮果蔬：
-我的宿舍之所以這麼貴，是有原因的！因為住在這裡，旁邊就是大英博物館：
-進去走馬觀花看了一個半小時，又在附近逛了逛，和一個正在 LSHTM 讀博士學位的日本人見面送了東西，然後又和闊別多年的高中同學吃了午餐。
-壽司果然在這裡價格不菲： 當然更不能錯過美好的天氣，還有我將要奉獻一年時間的夢想中的大學： 倫敦衛生學與熱帶醫學學院 (London School of Hygiene and Tropical Medicine)
-初來乍到的幾天，時差還根本轉不過來，晚上8點多就困的不省人事，現在半夜三點又精神抖擻。希望能快點適應這裡的生活。</description>
+      <description>我的倫敦生活從此開始了。</description>
     </item>
     
     <item>
@@ -592,15 +369,7 @@ Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。�
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/uk-visa-succeed/</guid>
-      <description>我在近一個月前去了大阪的英國簽證中心申請了去英國的簽證。
-當時大英帝國的簽證申請就給我留下極差的印象。結果後來我的等待才是最漫長的。
-理一下時間線：
- 7月31日 提交簽證材料 8月16日 收到郵件提示，護照抵達馬尼拉 8月23日 打電話給大英帝國高貴的移民局(UK Visas and Immigration) (下面詳述) 8月23日 收到郵件提示，護照抵達日本大阪簽證申請中心 8月24日 下午查詢郵局訂單號發現已經到了我所在的城市，晚上，配送完畢，簽證到手:  當時提交簽證材料時，告訴我的是，提交之日起15個工作日，所以我的預計是8月中旬能入手簽證。結果，實際上8月中旬才剛剛寄到馬尼拉。也許是因爲這個時期有許多學生簽證申請，比較擁擠。我又不樂意去花錢買他們所謂的加急服務。因爲付錢等於我承認了這樣的做法是合理的。反而會助長這種依靠金錢來獲取方便的惡習。（當然我相信他們也不缺我一個人） 申請的順序，爲什麼不是按照申請的時間順序來呢？有人晚來了，付了錢加急就可以排到我前面去，這哪裏公平了？這在日本根本無法想象。最可恨的是，23日那天我實在是等不及了，早晨給移民局打電話去詢問簽證狀態，電話接通以後是機器聲音，提示先輸入有效的信用卡或者借記卡號碼，方便他們收取諮詢費用(1.37 £/min)。
-這一趟簽證申請體驗下來，只能令人感嘆大英帝國真的是沒落了。做事情效率之低下，每一個環節透露出來的全部都是赤裸裸的金錢至上主義。
-回想起當日在大阪簽證中心提交材料時，電視屏幕上循環播放着大英帝國的宣傳片。介紹着英國的方方面面，從工業革命，到互聯網的發明，以及優越先進的醫療和社會制度，無處沒有英國在其中起到的關鍵或者領導式的作用。這不是讓人覺得極爲諷刺嗎？過去的強盛，給他們留下的只有傲慢嗎？
-可能上面的體驗只是我還沒出發之前，體會到的十分侷限的部份，但願接下來一年英國風調雨順。
-大概我除了讀書一無是處，所以畢業應該（希望）是沒有問題！
-還有一個月不到就要出發了，倫敦，我來也！</description>
+      <description>算一算英國簽證花了多久時間</description>
     </item>
     
     <item>
@@ -609,22 +378,7 @@ Sky Garden 的外觀： 週三天氣很不好，看不清楚太遠的地方。�
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/iea-in-saitama/</guid>
-      <description>ACC@Tokyo 8月18日-8月22日期間，我先是去了東京參加學習了 ACC (Asia Cohort Consortium)，內容主要是亞洲地區進行過的，以及正在進行的隊列研究的大集合。當然還有很多隊列由於各種原因不能加入這個大家庭。 這之後又離開東京去了琦玉的大宮，參加那裏舉辦的第21屆國際流行病學會。
-在東京的ACC其實挺豐富的，最近的課題彙報，還有就是來自亞洲各地的老師們暢所欲言，提供分析或者論文討論的建議。印象深刻的如：
-(1) 臺灣Biobank的近況介紹 (2) 來自范德堡大學 (Vanderbilt University) 的Wei Zheng教授的課題內容更新: 照片的老師是來自新加坡國立大學的Chia Kee Seng教授。
-大名鼎鼎的BMI和總死亡的關係的論文： (3) 當然不能錯過我們研究室林老師的發表啦： (4) 休息時間還不忘來一個日本拉麵的報告（笑）： 結束了ACC以後，晚上去往宴會的路上我們還能看見之前築地市場火災發生後的痕跡：
-發生火災的店鋪是個拉麵店，之前我和西山來癌症中心的時候有路過，當時還有不少人排隊吃麵，我們也曾猶豫過，不過後來還是吃了壽司。當然沒有人想到幾周之後就在同一個地方起火燒掉了許多老店鋪。
-IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大宮市。
-原本我應該乘坐的電車時間和線路是這樣的:
-可是等到11點半我發現外面越來越荒涼，好像不太對勁，因爲我一邊在電車裏，一邊聽着有的沒的廣播和播客，所以很有可能聽漏了報站。打開地圖一看我已經超過好多站了，於是決定等到下一個停靠站就下來坐車再往回走。於是摘掉了耳機認真聽廣播報的站名，聽到報下一站站名的時候一時被愣住了，一時沒緩過神來：
-下一站是，桶川。
-這個站名太熟悉了，瞬間想起之前剛看過的一些列文章。講的就是發生在這裏的故事吧。
-到站下車以後隨手拍了一下站牌：
-跑步去了對面站臺，上了回頭車後，不到15分鍾回到了大宮站：
-午飯在車站裏的餐廳解決，美味的鹿肉漢堡：
-飽餐以後找到了我租的Airbnb（距離車站有點遠，推着行李箱步行過去差點被曬成狗），放了行李，我便來到會場，Sonic City。也許是來得太早了。完全沒有國際會議的感覺，會場十分空曠：
-等到下午正式開會，會長中村好一致辭時，也未見增加多少參會者：
-第一日成功和曾經在倫敦衛校留學的潘師兄見面。遙想三年前在阿拉斯加，真是時光如梭，當時我還不知自己今日會有機會去倫敦留學。如今潘師兄已經是孩子爸了，也如願以償在同濟醫學院做了老師。所以我來之前就決定，一定要抓住這次機會跟潘老師多了解了解在倫敦的生活。</description>
+      <description>國際流行病學會，琦玉縣，大宮市，感想 &amp;amp; 這幾天的體驗</description>
     </item>
     
     <item>
@@ -633,10 +387,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>行向量乘以矩陣，乘以列向量可得標量 \(\underset{1\times m}{\underline{x}^t}\underset{m\times m}{M}\underset{m\times1}{\underline{x}}\) 或者 \(\underset{1\times m}{\underline{x}^t}\underset{m\times n}{N}\underset{n\times1}{\underline{y}}\) 的形式其實質上均爲 \(1\times1\)的標量，即最早我們接觸到的加法算式。
-這樣的乘法計算通過矩陣（包括向量）的積的定義很容易進行。然而，反過來的話，（即從乘法算式反寫變形成爲行向量，矩陣，列向量相乘的形式），如果沒有練習的話，常常讓人覺得很困難。
-在這裏，我們將多元變量分析中常常遭遇的加法算式拿出來舉例，練習變形成爲矩陣的積的形式。當然，爲了簡便起見，我們用三個元素的向量來練習： \[\underline{x}=\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right)\]
-\(a_1x_1^2+a_2x_2^2+a_3x_3^3\\ =x_1\times a_1x_1+x_2\times a_2x_2+x_3\times a_3x_3\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1x_1 \\ a_2x_2 \\ a_3x_3 \end{array}\right)\\ =(x_1,x_2,x_3)\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\left( \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\\ =\underline{x}^tD\underline{x}\) 其中 \[D=\left( \begin{array}{c} a_1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; a_2 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; a_3 \end{array}\right)\]</description>
+      <description>第5章　行列式 determinant P97-99 加法算式與矩陣的積</description>
     </item>
     
     <item>
@@ -645,10 +396,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
-      <description>\[X=\left( \begin{array}{c} x_{1} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n}\\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \end{array} \right), \underline{0}=\left( \begin{array}{c} \underline{0}\\ \underline{0}\\ \vdots\\ \underline{0}\\ \end{array} \right)\]
-用上述來表達的同次連立一次方程式 (system of homogeneouse linear equations)：
-\[X\underline{a}=\underline{0}\]
-即： \[\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = 0\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = 0\\ \cdots\\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = 0\\ \end{array} \right.</description>
+      <description>第5章　行列式 determinant P94-96 同次連立一次方程式</description>
     </item>
     
     <item>
@@ -657,9 +405,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>擴大係數矩陣 \((X \underline{y})\) 通過行的基本變形，轉化成爲 \((E \underline{y}^*)\) 的時候，寫在右側的 \(\underline{y}^*\) 就是所求的 \(\underline{a}\)。
-練習 解下列連立一次方程式 \[\begin{align} \left\{ \begin{array}{ll} a_1+2a_2+a_3 = 2\\ 2a_1+a_2+a_3 = 3\\ a_1+a_2+2a_3 = 3 \end{array} \right. \end{align}\]
- 解 此連立方程組的擴大係數矩陣爲： \[(X \underline{y})=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 1 &amp;amp; 2\\ 2 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3\\ 1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 \end{array} \right)\] 下面開始行變形： \[\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 2\\ 2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 3\\ 1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 3\\ \end{array}\right) \begin{align} \left\{ \begin{array}{rr} (1)\\ (2)\\ (3) \end{array} \right.</description>
+      <description>第5章　行列式 determinant P92-93 行變形法解連立方程式</description>
     </item>
     
     <item>
@@ -668,11 +414,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>克萊姆法則 Cramer’s Formula 當 \(X\) 爲正則矩陣（\(|X|\neq0\)）時 連立一次方程式：\(X\underline{a}=\underline{y}\) 的解可以寫作：
-\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]
-其中： \(|X_j|\) 爲矩陣 \(X\) 的第 \(j\) 列替換爲 \(\underline{y}\) 以後的矩陣的行列式。
-練習 解下列連立一次方程式 \[\begin{align} \left\{ \begin{array}{ll} a_1+2a_2+a_3 = 2\\ 2a_1+a_2+a_3 = 3\\ a_1+a_2+2a_3 = 3 \end{array} \right. \end{align}\]
- 解 \[X=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 1 \\ 2 &amp;amp; 1 &amp;amp; 1 \\ 1 &amp;amp; 1 &amp;amp; 2 \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ a_3 \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} 2 \\ 3 \\ 3 \\ \end{array} \right)\]</description>
+      <description>第5章　行列式 determinant P91-92 克萊姆法則法解連立方程式</description>
     </item>
     
     <item>
@@ -681,9 +423,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
-      <description>逆矩陣法解連立一次方程式 \(X\) 為正則矩陣時(\(|X|\neq0\))，給 \(X\underline{a}=\underline{y}\) 等式兩邊同時乘以 \(X^{-1}\)，可以得到 \(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)。由此方法可以得到 \(\underline{a}=X^{-1}\underline{y}\)。
-練習 解下列連立一次方程式 \[\begin{align} \left\{ \begin{array}{ll} a_1+2a_2+a_3 = 2\\ 2a_1+a_2+a_3 = 3\\ a_1+a_2+2a_3 = 3 \end{array} \right. \end{align}\]
- 解 元連立方程式可以寫作\(X\underline{a}=\underline{y}\)，其中 \[X=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 1 \\ 2 &amp;amp; 1 &amp;amp; 1 \\ 1 &amp;amp; 1 &amp;amp; 2 \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ a_3 \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} 2 \\ 3 \\ 3 \\ \end{array} \right)\] 之前我們已經用行的基本變形法和逆矩陣法分別計算過了 \(X^{-1}\) ： \[X^{-1}=\left(\begin{array}{c} -1/4 &amp;amp; 3/4 &amp;amp; -1/4\\ 3/4 &amp;amp; -1/4 &amp;amp; -1/4\\ -1/4 &amp;amp; -1/4 &amp;amp; -3/4\\ \end{array}\right)\]</description>
+      <description>第5章　行列式 determinant P90-91 逆矩陣法解連立一次方程式</description>
     </item>
     
     <item>
@@ -692,9 +432,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>連立一次方程式： \(\begin{align} \left\{ \begin{array}{ll} x_{11}a_1+x_{12}a_2+\cdots+x_{1n}a_n = y_1\\ x_{21}a_1+x_{22}a_2+\cdots+x_{2n}a_n = y_2\\ \cdots \\ x_{n1}a_1+x_{n2}a_2+\cdots+x_{nn}a_n = y_n \end{array} \right. \end{align}\)
-可以看成是利用：
-\(X=\left( \begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; \cdots &amp;amp; x_{1n} \\ x_{21} &amp;amp; x_{22} &amp;amp; \cdots &amp;amp; x_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \cdots &amp;amp; \vdots \\ x_{n1} &amp;amp; x_{n2} &amp;amp; \cdots &amp;amp; x_{nn} \end{array} \right), \underline{a}=\left( \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n \\ \end{array} \right), \underline{y}=\left( \begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \\ \end{array} \right)\)</description>
+      <description>第5章　行列式 determinant P89-90 連立一次方程式</description>
     </item>
     
     <item>
@@ -703,12 +441,7 @@ IEA@Omiya Day 1 第二天離開了東京以後乘上電車去往埼玉縣，大�
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
-      <description>正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)： $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$
-$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$
-其中:
- $adj(A)$ 爲餘因子矩陣 $A_{ij}$ 爲餘因子 $D_{ij}$ 爲小行列式  (1) 之前舉過的例子再拿來試試看：
-$$X=\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 1 \newline 2 &amp;amp; 1 &amp;amp; 1 \newline 1 &amp;amp; 1 &amp;amp; 2 \end{array} \right)=\left(\begin{array}{c} x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline x_{31} &amp;amp; x_{32} &amp;amp; x_{33} \end{array}\right)$$ 元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：
-$$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 \end{array}\right|=1$$</description>
+      <description>第5章　行列式 determinant P87-89 逆矩陣的公式</description>
     </item>
     
     <item>
@@ -717,17 +450,7 @@ $$X_{11}=(-1)^{1+1}\left| \begin{array}{c} 1 &amp;amp; 1 \newline 1 &amp;amp; 2 
       <pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/visa-application/</guid>
-      <description>來說說7月31日去大阪交簽證材料的事情。
-那叫一個鬱悶。 總之，我在日本還是第一次遇見如此糟糕的接待。另外，大阪的簽證辦理中心，非常不好找，建議第一次去的人挑一個不那麼熱的日子去。這樣也不會像我一樣在馬路上被曬成狗。
-   
-
-當然我才不會告訴你我早上起晚了差點趕不上我訂的火車票（9：00）。而且近鐵列車的城市快線 (urban liner) 開得不是很平穩，我半路感覺暈車不適還跑去洗手間把早飯吐了以後才能舒服一點得繼續坐到大阪難波車站。從難波車站再換乘御堂筋線到心斎橋，之後就出車站步行差不多10個被暴曬的街區到VFS簽證代理處。不過並非領事館或者大使館，所以我想應該不會像美國領事館那樣戒備森嚴。結果上到10樓VFS辦公室的地方，有提示語告訴我先按門鈴讓保安檢查攜帶行李。按了門鈴，出來一個身材矮小的保安問我預約的時間和簽證申請種類。我把我的預約郵件在手機上打開給他看確認以後才肯帶我進門。
-進去之後就能看到一個還沒有我辦公室大的房間被隔板隔開成幾個部分。保安同學說不能用手機拍照，攜帶的筆記本拿出來給他確認關機。然後材料拿出來先交給保安。他又煞有介事地讓我把揹包每一層都打開給他看確認我沒帶炸彈。這些都搞定了以後又像機場安檢一樣全身掃描一遍確認我身上沒有綁着炸彈。。。
-此時已經比我預約的時間晚了10分鐘。當然我不怪他。他只是認真完成任務。之後讓我在等待區域等待。不久之後來了一個接待員用機器人一樣的語調和口吻告訴我說：“把所有的材料按照不同類別分好類，一定要使用牆壁上掛着的那些分類用的不同顏色的紙張。” 我擡頭一看牆壁上掛着的文件架子上有紅色藍色黃色等不同顏色的A4紙。她又接着機械地說：“如果你發現自己不知道怎麼歸類整理這些文檔的話，我也可以幫你，但是要收取1920日元的服務費。” 我艹，連看文件整理都要收費，我心想。接待員小姐估計聽見我的心裏話了，漫不經心地又說，“你當然可以自己整理，不過責任自負喲。”
-你這是在威脅我嗎？我心裏又想。後來才在他們的網站上看到這樣的收費提示：
- Application and Document Checks
-The Application and Document Checks service is for applicants who have already applied and have printed out their application form to check that an application is complete before sending it to the UK Visas and Immigration in Manila.
-The service will be charged an additional fee of JPY 1,920 per applicant.</description>
+      <description>大阪申請 Tier 4 (general) student 簽證</description>
     </item>
     
     <item>
@@ -736,14 +459,7 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/unconditional/</guid>
-      <description>言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。
-本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。
-結果6月8日那天收到郵件催促我快點滿足 offer 條件：
-可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。
-因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：
- For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School
- 我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：
- Your documents didn’t meet the requirements because: 1. The salary expectancy is not admissible 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days.</description>
+      <description>驚心動魄，坐過山車一般的一周。</description>
     </item>
     
     <item>
@@ -752,9 +468,7 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-07-07/</guid>
-      <description>行的基本變形 Theorem 1 (行的基本變形) 對矩陣進行下列操作的過程，被稱爲是行的基本變形（行的基本操作, elementary row operations）。
-給任意一行乘以/除以一個非零的數。 給任意一行加上/減去另外任意行的倍數。 將任意兩行的對應元素互換。   練習基本變形： 用行的基本變形求矩陣 \(X=\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1\\ 2&amp;amp; 1&amp;amp; 1\\ 1&amp;amp; 1&amp;amp; 2\\ \end{array}\right)\) 的逆矩陣 \(X^{-1}\) 首先，將矩陣 \(X\) 和同次單位矩陣 \(E_3\) 的元素寫成如下的左右並列的形式（用點隔開）\((X, E)\)。數字 (1) (2) (3) 表示行數：
-\[\left(\begin{array}{c} 1&amp;amp; 2&amp;amp; 1 &amp;amp; \vdots &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\ 2&amp;amp; 1&amp;amp; 1 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 1 &amp;amp; 0\\ 1&amp;amp; 1&amp;amp; 2 &amp;amp; \vdots &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\ \end{array}\right) \begin{align} \left\{ \begin{array}{rr} (1)\\ (2)\\ (3) \end{array} \right.</description>
+      <description>第5章　行列式 determinant P85-87 行的基本變形</description>
     </item>
     
     <item>
@@ -763,14 +477,7 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-07-06/</guid>
-      <description>逆矩陣 逆矩陣定義 Theorem 1 如果對於正方形矩陣 \(A\)，存在一個正方形矩陣 \(X\) 滿足 \(AX=XA=E\) (\(E\) 爲單位矩陣) 時，這個正方形矩陣 \(X\) 被叫做 \(A\) 的逆矩陣，寫作 \(A^{-1}\)。
-存在逆矩陣 \((A^{-1})\) 的 \(A\) ，被叫做正則矩陣 (regular matrix, nonsingular matrix)。
-不存在逆矩陣的 \(A\)，被叫做奇異矩陣 (singular matrix)。
-滿足 \(|A|\neq 0\) 的矩陣 \(A\) 被叫做正則矩陣。滿足 \(|A|=0\) 的矩陣 \(A\) 被叫做奇異矩陣。
-\(A\) 爲正則矩陣時，滿足：\(A^{-1}A=AA^{-1}=E\) 。
-顯然，單位矩陣的逆矩陣也是一個單位矩陣: \[E^{-1}E=EE^{-1}=E, E^{-1}=E\]   逆矩陣的性質 對於正則矩陣 \(A, B\) 有以下性質：
-\((AB)^{-1}=B^{-1}A^{-1}\)
-注意此處矩陣 \(A，B\) 的順序對調了。 \((A^{-1})^{-1}=A\) \((A^{t})^{-1}=(A^{-1})^t\) \((\lambda A)^{-1}=\frac{1}{\lambda}A^{-1} (\lambda \ne 0)\) 對角矩陣 \(D_n=diag(a_{11},a_{22},\dotsm,a_{nn})\) 的逆矩陣寫作： \(D_n^{-1}=diag(1/a_{11}, 1/a_{22},\dotsm,1/a_{nn})\)；</description>
+      <description>第5章　行列式 determinant P84-85 逆矩陣</description>
     </item>
     
     <item>
@@ -779,8 +486,7 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-06-12/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2017-6-12 16:6 用时：23:04 正确率：93% 错词：19个 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 You may have noticed your summertime electricity bills, when you are you&amp;rsquo;re cranking the A-C. A–C, they are more pricey than your wintertime payments. That&amp;rsquo;s because air-conditioning is an electricity hog. And when a whole city or your region turns down the thermostat, utilities have to meet that increased demand somehow. This is often when we turn on the oldest power plants or the dirtier power plants.</description>
+      <description>&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/pollution-peaks-when-temperatures-top-out/&#34; target=&#34;_blank&#34;&gt;As temperatures rise, energy demands peak, with a corresponding increase in air pollutants.&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -789,13 +495,7 @@ The service will be charged an additional fee of JPY 1,920 per applicant.</descr
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-05-31/</guid>
-      <description>昨日說到BBC新聞聽寫在滬江外語學習之死。於是去跟他們客服詢問了一下。得到如下答覆： 好吧，內容優化，就是潔淨咱們的大天朝局域網唄，正準備學習外語的小朋友們怎麼能看到BBC，VOA上面對偉大祖國的描述嘛。曾經一直認爲，學習外語是爲了增進與他國的交流，互通有無，如今卻深刻體會到學習外語的真實作用是瞭解真實的中國，瞭解那個我來自的地方。
-最近新聞酸菜館也變成了只賣酸菜的館，内容優化那叫一個好！
-今天的聽寫講的是刊登在進化心理學雜誌上的一篇論文。說有伴的男人更受歡迎。科學家認爲女生更青睞有伴的男人，特別是伴侶如果美豔如花魅力四射，即使他們本身長相一般。也許是因爲這些男人如果不能用外表吸引人，那一定是富有內涵，或者是富可敵國的。總之一句話，男人被另一個女人證明了自己的價值，那女性便可省去自己去試錯的時間和精力成本。
-听写于：2017-5-31 11:24 用时：19:27 正确率：93% 错词：14个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-It turns out the best-looking thing on a man , maybe may be a good-looking woman. Researchers report that women find a man they see with an attractive woman more desirable than unattached men. That&#39;s according to a study in the journal Evolutionary Psychology. Researchers had two groups of female college students rate photos of men .</description>
+      <description>&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/partnered-up-men-more-attractive-to-women/&#34; target=&#34;_blank&#34;&gt;Women rate a man they see with an attractive woman as more desirable than an unattached man. Erika Beras reports.&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -804,13 +504,7 @@ It turns out the best-looking thing on a man , maybe may be a good-looking woman
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-05-30/</guid>
-      <description>今日要祭奠BBC新聞聽寫在滬江外語學習之死。 幾周未見，今日登錄滬江準備聽聽久違的BBC。結果發現節目已經被下架： 然後我點擊其他訂閱的節目，結果一大半都“被下架”。細看過去全是外語新聞類，政治類的節目。現在連外語學習也已經進入了莫談國是的狀態了嗎？ 可憐的孩子們今後還有什麼資源可以學習英語呢？
-悲哀。
-連馬里蘭的空氣新鮮不新鮮都已經被上升到乳滑不乳滑了。我等草民還是閉嘴爲上策。親愛的朋友們，你們今天都健身了嗎？一切都只是剛剛開始。
-听写于：2017-5-30 11:34 用时：19:08 正确率：93% 错词：10个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-You can thank your parents for your DNA. Because humans share genes through sexual reproduction, passing DNA from parent to child. It&amp;rsquo;s known as the &amp;ldquo; &amp;lsquo;vertical transfer&amp;ldquo; &amp;lsquo; of DNA. Now imagine if you could share just 1 one or 2 two bits of your DNA with an unrelated stranger, through a handshake, or other incidental contact .</description>
+      <description>&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/insects-donate-dna-to-unrelated-bugs/&#34; target=&#34;_blank&#34;&gt;Bacteria swap DNA among themselves&lt;/a&gt;. And that process may be more common in multicellular organisms than previously believed. Christopher Intagliata reports.</description>
     </item>
     
     <item>
@@ -819,10 +513,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>行列式的性質 具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。
-轉置矩陣的行列式，與轉置前的行列式一致。即：\(|A^t|=|A|\)。 \(|A|=\begin{vmatrix} 1 &amp;amp; 2 &amp;amp; 3 \\ 4 &amp;amp; 5 &amp;amp; 6 \\ 7 &amp;amp; 8 &amp;amp; 9 \\ \end{vmatrix}\) 任意一列（或者任意一行）若乘以 \(\lambda\) 倍，那麼這個矩陣的行列式結果也將是乘以 \(\lambda\) 倍。
-\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ \lambda a_{21} &amp;amp;\lambda a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\)
-\(|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \lambda a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; \lambda a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33}\\ \end{vmatrix}\) 任意一列（或者任意一行）的各成分乘以 \(\lambda\) 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。</description>
+      <description>第5章　行列式 determinant P80-83</description>
     </item>
     
     <item>
@@ -831,9 +522,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-16/</guid>
-      <description>尋找並確定合適自己的大學，合適的課程  英國，還是美國？ 這是一個問題  我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。 上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。 加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。 另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇文章1 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：
-我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。             Theory
-(偏重理論) Cambridge Mathematical Statistics   $\downdownarrows$ Sheffield Statistics   $\downdownarrows$ University College London Applied Stochastic Systems   $\downdownarrows$ Oxford Applied Statistics   $\downdownarrows$ Kent Statistics   $\downdownarrows$ Reading Biometry   $\downdownarrows$ Southampton Statistics with Application in Medicine   $\downdownarrows$ Leicester Medical Statistics &amp;amp; Information Technology   Applications (偏重實踐) London School of Hygiene &amp;amp; Tropical Medicine Medical Statitics    確認申請時間，申請要點（雅思成績要求，是否有面試，推薦信） 決定了申請 LSHTM 以後，便要開始準備材料，確定截止時間，以及雅思成績的要求等。</description>
+      <description>英國留學申請-準備-面試-合格！(to-be-updated)</description>
     </item>
     
     <item>
@@ -842,8 +531,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-15/</guid>
-      <description>行列式的定義與計算 Theorem 1 (determinant) \(n\) 次正方形矩陣 \(A= (a_{ij})=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\) 的行列式(determinant)被定義爲是，\(A\) 的全部成分 \(a_{11},a_{12},\cdots,a_{nn}\) 的函數，這個函數是一個標量(scalar)。  \(n\)次正方形矩陣 \(A\) 的行列式(\(n\)次行列式)，被記作：
-\(|A|, |a_{ij}|, \det(A), \det(a_{ij})， \begin{vmatrix} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \notag \end{vmatrix}\)</description>
+      <description>第5章　行列式 determinant P73-79</description>
     </item>
     
     <item>
@@ -852,9 +540,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/dictation2017-03-13/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2017-3-13 18:20 用时：24:46 正确率：94% 错词：14个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 In the early part of the last century, speculation about ilfe life on Mars was more florid, particularly by the American astronaut astronomer Percival Lowell. Through his telescope in Arizona, Lowell convinced himself he saw swaths sways of vegetation come and go with the seasons. Of course, he didn&amp;rsquo;t. What he really saw was shifted were shifting areas of sand dunes.</description>
+      <description>Life speculation on Mars</description>
     </item>
     
     <item>
@@ -863,10 +549,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-13/</guid>
-      <description>正定，半正定 (正值，半正值) 對於任意的非零向量 \(\underline{x}(\neq\underline{0})\) ，如果2次型 \(\underline{x}^tA\underline{x}\) 始終滿足 \(\underline{x}^tA\underline{x} &amp;gt; 0\) 注意此處無等號。我們稱這個2次型爲正定(positive definite)，\(A\)爲正定矩陣(positive definite matrix)。另外，如果任意非零向量 \(\underline{x}(\neq\underline{0})\) 始終滿足2次型 \(\underline{x}^tA\underline{x} \geqslant 0\)， 這個2次型被叫做半正定(positive semi-definite)，\(A\)爲半正定矩陣(positive semi-definite matrix)。
-\(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; 2 &amp;amp; 4\\ 2 &amp;amp; 2 &amp;amp; 3\\ 4 &amp;amp; 3 &amp;amp; 25 \end{array} \right)\)，2次型 \(\underline{x}^tA\underline{x}\) 是正定。因爲：
-\(\underline{x}^tA\underline{x}=5x_1^2+2x_2^2+25x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+4x_1x_2+8x_1x_3+6x_2x_3\\\;\;\;\;\;\;\;\;\;\:=(2x_1+x_2)^2+(x_2+3x_3)^2+(x_1+4x_3)^2\\ \because \underline{x}\neq\underline{0}=\left( \begin{array}{} 0\\ 0\\ 0 \end{array} \right)\\ \therefore \underline{x}^tA\underline{x}&amp;gt;0\)
- \(x=\left( \begin{array}{} x_1\\ x_2\\ x_3 \end{array} \right), \ A=\left( \begin{array}{} 5 &amp;amp; -6 &amp;amp; 3\\ -6 &amp;amp; 25 &amp;amp; 32\\ 3 &amp;amp; 32 &amp;amp; 73 \end{array} \right)\)，2次型 \(\underline{x}^tA\underline{x}\) 是半正定。因爲：</description>
+      <description>第4章　矩陣 matrix P70-72</description>
     </item>
     
     <item>
@@ -875,10 +558,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-11/</guid>
-      <description>二次型(形式) 對於 \(\underline{x}=\left( \begin{array}{c} x_{1}\\ x_{2}\\ \vdots\\ x_{n} \end{array} \right), A=\left( \begin{array}{c} a_{11}&amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21}&amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots&amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots\\ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\) 那麼：
-\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^n\sum\limits_{j=1}^na_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i \neq j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\:\:=\sum\limits_{i=1}^na_{ii}x_i^2+\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}(a_{ij}+a_{ji})x_ix_j\)
-被稱爲 \(\underline{x}\) 的同次2次式。又被叫做關於 \(x_1,x_2,\cdots,x_n\) 的2次型(quadratic form)。特別的，當 \(A\) 爲對稱矩陣時的2次型：\(\underline{x}^tA\underline{x}=\sum\limits_{i=1}^na_{ii}x_i^2+2\mathop{\sum\limits^n\sum\limits^n}_{i\ &amp;lt;\ j}a_{ij}x_ix_j\) 在多元變量分析中十分重要。
-\(x=\left( \begin{array}{} x_1\\ x_2 \end{array} \right),\ A=\left( \begin{array}{} a_{11} &amp;amp; a_{12}\\ a_{12} &amp;amp; a_{22} \end{array} \right)\), 那麼： \(\underline{x}^tA\underline{x}=a_{11}x_1^2+a_{22}x_2^2+2a_{12}x_1x_2\)</description>
+      <description>第4章　矩陣 matrix P68-69</description>
     </item>
     
     <item>
@@ -887,7 +567,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-08/</guid>
-      <description>單位矩陣 對角成分全部都是 \(1\) (此時我們假定有 \(n\) 個)，的對角矩陣被叫做單位矩陣(identity matrix, unit matrix)。寫作： \(\left( \begin{array}{c} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; \vdots \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \ddots &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0 &amp;amp; 1 \end{array} \right)=E_n=I_n\) 下標 \(n\) 常被省略。一般的，將 \(E_n\) 從左往右乘以 \(n\) 次正方形矩陣 \(A\)，的結果和從右往左相乘的結果是相等的： \(E_nA=AE_n=A\)。</description>
+      <description>第4章　矩陣 matrix P63-68</description>
     </item>
     
     <item>
@@ -896,7 +576,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-03-01/</guid>
-      <description>updated: 2017-03-07  對稱矩陣 Theorem 1 (symmetric matrix) 矩陣 \(A\) 如果完全和它的轉置矩陣 \(A^t\) 相同，即：\(A=A^t\) 成立時，這樣的正方形矩陣被稱爲對稱矩陣(symmetric matrix)。對稱矩陣的成分是以主對角線(main diagonal)對稱的。  \(A=\left( \begin{array}{c} 4 &amp;amp; 3 &amp;amp; 2 &amp;amp; 1 \\ 3 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 \\ 2 &amp;amp; 6 &amp;amp; 8 &amp;amp; 9 \\ 1 &amp;amp; 7 &amp;amp; 9 &amp;amp; 0 \end{array} \right)\) 是典型的4次對稱矩陣。     數學 物理 化學    數學 \(1\) \(0.72\) \(0.62\)  物理 \(0.</description>
+      <description>第4章　矩陣 matrix P60</description>
     </item>
     
     <item>
@@ -905,10 +585,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-28/</guid>
-      <description>連立一次方程式與矩陣向量的積 連立一次方程式可以改寫爲矩陣與向量的積形成的向量的形式。特別的，以連立方程式的系數作成分的矩陣被叫做系數矩陣(coefficient matrix)。當我們看到連立方程式，應該能立刻條件反射地聯想到其對應的矩陣和向量的積。
-\(\begin{align} \left\{ \begin{array}{rr} a_1+2a_2+3a_3 = 3\\ 2a_1+4a_2+5a_3 = 5\\ 3a_1+5a_2+6a_3 = 7 \end{array} \right. \end{align}\) 可以改寫成 \(\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 3 \\ 2 &amp;amp; 4 &amp;amp; 5 \\ 3 &amp;amp; 5 &amp;amp; 6 \end{array} \right)\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)=\left( \begin{array}{c} 3\\ 5\\ 7 \end{array} \right)\) 的形式。
-如果把等號右邊的列向量寫到系數矩陣的右側，形成的矩陣被叫做擴大系數矩陣(augmented coefficient)：
-\(\left( \begin{array}{c} 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 3 \\ 2 &amp;amp; 4 &amp;amp; 5 &amp;amp; 5 \\ 3 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 \end{array} \right)\)</description>
+      <description>第4章　矩陣 matrix P57-59</description>
     </item>
     
     <item>
@@ -917,8 +594,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-22/</guid>
-      <description>矩陣乘法運算 矩陣乘法定義 Theorem 1 (matrix multiplication) 兩個矩陣 \(A, B\) ，只有 \(A\) 的列數和 \(B\) 的行數相等(這種特徵又被稱爲：矩陣 \(A,B\) 可整合的，conformable)時，才有定義：\(AB\)。\(AB\) 則爲新的矩陣，類型爲 \(A\) 的行數， \(B\)的列數。即：\(A_{k\times l}, \; B_{m\times n}\) 且 \(l=m\) 時才能計算乘積: \(AB_{k\times n}\)。  \(A_{2\times3}=\left( \begin{array}{c} 4 &amp;amp; 6 &amp;amp; 8\\ 2 &amp;amp; 1 &amp;amp; 3\\ \end{array} \right),\; B_{3\times2}=\left( \begin{array}{c} 0 &amp;amp; 8\\ 2 &amp;amp; -1\\ 9 &amp;amp; 4 \\ \end{array} \right)\) 時，
-“\(A\)的列數” \(=\) “\(B\) 的行數” \(= 3\)，因此積 \(AB\) 被定義，類型是 \((2,2)\) “\(B\)的列數” \(=\) “\(A\) 的行數” \(= 2\)，因此積 \(BA\) 被定義，類型是 \((3,3)\)</description>
+      <description>第4章　矩陣 matrix P53-56</description>
     </item>
     
     <item>
@@ -927,8 +603,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-21/</guid>
-      <description>矩陣的定義 Theorem 1 (matrix) 將\(m\times n\) 個數 \(a_{ij} (i=1,2,\cdots,m; j=1,2,\cdots,n)\), 寫成縱 \(m\) 行， 橫 \(n\) 列的長方形或者正方形，左右用圓括號或者方括號包含在內。我們稱之爲 \(m\times n\) 矩陣(matrix)，或者 \((m, n)\) 矩陣。 \(m\times n\) 或者 \((m,n)\) 被稱爲是這個矩陣的類型。我們常用大寫字母來標記一個矩陣，如下面的矩陣我們標記爲 \(A\)。 如果要特別明示矩陣的類型，可以寫作 \(\mathop{A}_{m\times n}, \mathop{A}_{(m, n)}, \; A(m\times n)\)。兩個矩陣如果行數相等，列數也相等，我們稱他們爲類型相同的矩陣。構成矩陣的一個個數 \(a_{11},a_{12},\cdots,a_{mn}\) 被叫做矩陣的成分(component, element, entry)。
-第\(i\)行，第\(j\)列交叉的地方的成分，\(a_{ij}\) 被叫做 \((i,j)\) 成分。矩陣有時候也會寫成 \(A=(a_{ij})\)  \(\left( \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1j} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2j} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{i1} &amp;amp; a_{i2} &amp;amp; \cdots &amp;amp; a_{ij} &amp;amp; \cdots &amp;amp; a_{in}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mj} &amp;amp; \cdots &amp;amp; a_{mn}\\ \end{array} \right), \\ \left[ \begin{array}{c} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1j} &amp;amp; \cdots &amp;amp; a_{1n}\\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2j} &amp;amp; \cdots &amp;amp; a_{2n}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{i1} &amp;amp; a_{i2} &amp;amp; \cdots &amp;amp; a_{ij} &amp;amp; \cdots &amp;amp; a_{in}\\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mj} &amp;amp; \cdots &amp;amp; a_{mn}\\ \end{array} \right]\)</description>
+      <description>第4章　矩陣 matrix P46-52</description>
     </item>
     
     <item>
@@ -937,11 +612,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-19/</guid>
-      <description>向量的內積 (inner product) Theorem 1 (vectors inner product) 向量的內積運算，僅限定於維度相同的兩個向量之間。一個向量爲橫向量寫在左側，一個向量爲列向量寫在右側，兩個向量的相對應成分一一相乘，然後將各成分乘積相加的過程，我們稱之爲內積(inner product, scalar product)運算。內積運算結果通常不會是向量，而是標量(scalar)，或正或負，或爲零。向量 \(\underline{a}\) 與向量 \(\underline{b}\) 的內積寫作：\(\underline{a}^t\underline{b}, \underline{b}^t\underline{a}\) 或者寫作： \(\underline{a}\cdot\underline{b}, (\underline{a},\underline{b}), &amp;lt;\underline{a},\underline{b}&amp;gt;\)。內積爲 \(0\) 的向量我們稱他們爲正交向量(orthogonal)，寫作：\(\underline{a}\perp\underline{b}\)。 內積，與和記號: \(\sum\) 有緊密聯系。我們常常會把 \(\sum\) 式子/量寫成向量的內積形式。  練習 列向量 \(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right), \underline{b}=\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)\) 的內積：
-\(\underline{a}^t\underline{b}=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}^t\underline{a}\)
- 橫向量 \(\underline{a}=(a_1,a_2,a_3), \underline{b}=(b_1,b_2,b_3)\) 的內積：
-\(\underline{a}\underline{b}^t=(a_1,a_2,a_3)\left( \begin{array}{c} b_1\\ b_2\\ b_3 \end{array} \right)=a_1b_1+a_2b_2+a_3b_3\\=\sum\limits_{i=1}^3a_ib_i=\sum\limits_{i=1}^3b_ia_i=\underline{b}\underline{a}^t\)
- 完全相同的兩個列向量 \(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right),\;\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right)\) 的內積：</description>
+      <description>第3章　向量 vector P39-45</description>
     </item>
     
     <item>
@@ -950,9 +621,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-18/</guid>
-      <description>特殊向量 零向量 (zero vector, null vector) 全部的成分均爲\(0\)的向量，我們稱之爲零向量(zero vector, null vector), 寫作： \(\underline{0}\) 注意與標量(scalar) \(0\) 相區分。 如果想要加注零向量的維度，我們可以在右下角加上 \(n\)：\(\underline{0}_n\) ，意爲 \(n\) 維度的零向量。 不是零向量的向量又被叫做，非零向量(non-zero vector, non-null vector)。  例如： 列向量：\(\underline{0}_3=\left( \begin{array}{c} 0\\ 0\\ 0\\ \end{array} \right)\)， 行向量：\(\underline{0}_3^t=(0,0,0)\)
- \(1\) 向量 (vector with all elements 1) 當一個向量的全部成分都是數字 \(1\)，我們稱這個向量爲 \(1\) 向量。 \(\underline{1}\) 這裏也需要注意與標量 \(1\) 相區分。 如果想要加注\(1\)向量的維度，我們可以在右下角加上 \(n\)：\(\underline{1}_n\) ，意爲 \(n\) 維度的\(1\)向量。  例如：列向量：\(\underline{1}_4=\left( \begin{array}{c} 1\\ 1\\ 1\\ 1 \end{array} \right)\)， 行向量：\(\underline{1}_4^t=(1,1,1,1)\)
- 第 \(i\) 基本向量 Theorem 1 (fundamental vector) \(n\) 維度的向量，假如它的第 \(i\) 個成分是自然數 \(1\)，其他的成分全部都是 \(0\)， 我們稱這樣的向量爲第 \(\textbf{i}\) 基本向量 (fundamental vector)。寫作 \(\underline{\smash{e}}_i\)。   平時我們較少用到一個單獨的基本向量。大多情況下我們用的是由 \(n\) 個單獨向量組成的一組向量。這個類型的向量與坐標軸的關系緊密。  例如：維度爲4的第 \(1\sim4\) 基本向量：\(\underline{e}_1=\left( \begin{array}{c} 1\\ 0\\ 0\\ 0 \end{array} \right), \; \underline{e}_2=\left( \begin{array}{c} 0\\ 1\\ 0\\ 0 \end{array} \right), \; \underline{e}_3=\left( \begin{array}{c} 0\\ 0\\ 1\\ 0 \end{array} \right), \; \underline{e}_4=\left( \begin{array}{c} 0\\ 0\\ 0\\ 1 \end{array} \right)\)</description>
+      <description>第3章　向量 vector P34-38</description>
     </item>
     
     <item>
@@ -961,14 +630,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-17/</guid>
-      <description>向量 vector 列向量 column vector 在等號的右側，將數字寫成一列，左右用圓括號或者方括號包含在內的形式，被叫做列向量(column vector)：
-\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right), \;\; \textbf{a}=\left[ \begin{array}{c} a_1\\ a_2\\ \vdots\\ a_i\\ \vdots\\ a_n \end{array} \right]\)
- 我們接下來將會繼續定義，向量的加減法，標量乘法(scalar multiplication)。把上述的向量用一個文字表示的時候，通常會記爲下劃線 \(\underline{a}\)，或者是加粗的小寫字母： \(\bf{a}\)。
- 構成向量的各個數字，被命名爲成分(component, element, entry)，從上往下第 \(i\) 個成分稱爲第 \(i\) 成分。
- 成分的個數爲 \(n\)，就被稱爲這個向量具有 \(n\) 個維度(次元，dimension)，或者說這個向量的維度爲 \(n\)。成分可以是數字，也可以是函數，或者式子。如果兩個列向量的維度一致，我們稱這兩個列向量的型(size, order),或者 類型(type) 一致。
- 成分只有一個的向量，被特別稱爲標量(scalar)，原則上不加括號。
- 將向量成分全部羅列出來，寫成上面的形式的過程，被稱爲成分表示。在多元變量分析中，我們說到向量，多默認指的就是列向量。
-  \(\underline{b}=\left( \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right)=\left[ \begin{array}{c} 16\\ 59\\ 80\\ \end{array} \right]=\textbf{b}\)</description>
+      <description>第3章　向量 vector P31-34</description>
     </item>
     
     <item>
@@ -977,13 +639,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-16/</guid>
-      <description>分解平方和 1 樣本量均爲 \(n\) 的兩變量 \(z, \hat{z}\) 如下表，已知這兩個變量滿足條件：
-\(\bar{z}=\frac{1}{n}\sum\limits_{i=1}^nz_i=\frac{1}{n}\sum\limits_{i=1}^n\hat{z}_i=\bar{\hat{z}},\) \(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)
-  個体の番号 変量 \(z\) 変量 \(\hat{z}\)    \(1\) \(z_1\) \(\hat{z}_1\)  \(2\) \(z_2\) \(\hat{z}_2\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(i\) \(z_i\) \(\hat{z}_i\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(n\) \(z_n\) \(\hat{z}_n\)    此時我們有：
- 全平方和(全変動，總平方和，總變動， Total sum of Squares)：
-\(S_T=(z_i-\bar{z})^2+(z_2-\bar{z})^2+\cdots+(z_n-\bar{z})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\bar{z})^2\) 回歸平方和(回歸變動，Regression sum of Squares)
-\(S_R=(\hat{z_1}-\bar{\hat{z}})^2+(\hat{z_2}-\bar{\hat{z}})^2+\cdots+(\hat{z_n}-\bar{\hat{z}})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(\hat{z_i}-\bar{\hat{z}})^2=\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2\) 殘差平方和(誤差平方和，殘差變動，誤差變動，residual sum of Squares)
-\(S_e=(z_1-\hat{z_1})^2+(z_2-\hat{z_2})^2+\cdots+(z_n-\hat{z_n})^2\\ \;\;\;\;=\sum\limits_{i=1}^n(z_i-\hat{z_i})^2\) 上面三個平方和之間，有如下的關系： \[\begin{equation} S_T=S_R+S_e \tag{1} \end{equation}\] 既：全平方和等於殘差平方和與回歸平方和之和。(1)式被稱爲平方和的分解(decomposition of sum of squares)  證明(1)式  解： \[ \begin{equation} \begin{split} S_T &amp;amp; = \sum\limits_{i=1}^n(z_i-\bar{z})^2 \\ &amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})+(\hat{z_i}-\bar{z})\right\}^2\\ &amp;amp; = \sum\limits_{i=1}^n\left\{(z_i-\hat{z_i})^2+(\hat{z_i}-\bar{z})^2+2(z_i-\hat{z_i})(\hat{z_i}-\bar{z})\right\}\\ &amp;amp; = \sum\limits_{i=1}^n(z_i-\hat{z_i})^2+\sum\limits_{i=1}^n(\hat{z_i}-\bar{z})^2 + 0\\ &amp;amp; = S_e + S_R \end{split} \end{equation} \] 最後一步等式，利用了一開始給出的條件 \(\sum\limits_{i=1}^n(z_i-\hat{z_i})(\hat{z_i}-\bar{z})=0\)</description>
+      <description>第2章　統計の基礎 P26-30</description>
     </item>
     
     <item>
@@ -992,8 +648,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-15/</guid>
-      <description>數據的變換 平均值附近的偏差:  各個數值 \(x_i\) 與樣本平均值 \(\bar{x}\) 的差 \[x_i^\prime=x_i-\bar{x} (i = 1,2,\cdots,n)\] 稱爲數據 \(x_i\) 在它的平均值 \(\bar{x}\) 附近的偏差(deviation)。通常我們說求偏差，指的是，對數據 \(x_i\) 進行偏差轉換。這個過程又被稱作是中心變換(centering) 關於偏差，我們列舉如下兩個有特徵的的概括統計：  樣本平均值： \[\begin{equation} \bar{x}^\prime=\frac{1}{n}\sum_{i=1}^nx_i^\prime=0 \tag{1} \end{equation}\] 樣本偏差平方和： \[\begin{equation} SS^\prime=\sum_{i=1}^n(x^\prime)^2=SS \tag{2} \end{equation}\]    練習：證明(1)  解： 證明(1): \[\bar{x}^\prime=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})}{n}\\ \;\;\;=\frac{\sum\limits_{i=1}^nx_i-n\bar{x}}{n}\\ \;\;\;=\frac{\sum\limits_{i=1}^nx_i}{n}-\bar{x}\\ \;\;\;=\bar{x}-\bar{x}=0\]
-數據的標準化：  將數據 \(x_i\) 的平均值 \(\bar{x}\) 附近的偏差除以樣本標準偏差 \(s\) 從而獲得下面式子所表示的數據 \(z_i\) 的過程，被叫做數據的標準化 (standardization)： \[\begin{equation} z_i=\frac{x_i-\bar{x}}{s} \tag{3} \end{equation}\] 標準化後的數據 \(z_i\) 的概括統計有下列特徵：  樣本平均值： \[\begin{equation} \bar{z}=\frac{1}{n}\sum_{i=1}^nz_i=0 \tag{4} \end{equation}\] 樣本方差: \[\begin{equation} s_{z}^2=\frac{1}{n}\sum_{i=1}^nz_i^2=1 \tag{5} \end{equation}\]  由於標準化數據具有上述兩個非常顯著的特徵，均值爲 \(0\)，方差爲 \(1\)，因此我們實際分析數據過程中常常對數據進行標準化。標準化以後的數據，單位消失，變成了一組無名數 \(\divideontimes\) 數據的標準化，有時你會看到被定義爲: \[\begin{equation} z_i=\frac{x_i-\bar{x}}{u} \tag{6} \end{equation}\] 此時的不偏樣本方差爲： \[\begin{equation} u_z^2=\frac{1}{n-1}\sum_{i=1}{n}z_i^2=1 \tag{7} \end{equation}\]     2變量數據的概括統計： 樣本量同爲 \(n\) 的 \(2\) 變量 \(x_1,x_2\) 的數據，表示爲如下表格：   個体の番号 変量 \(x_1\) 変量 \(x_2\)    \(1\) \(x_{11}\) \(x_{12}\)  \(2\) \(x_{21}\) \(x_{22}\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(i\) \(x_{i1}\) \(x_{i2}\)  \(\vdots\) \(\vdots\) \(\vdots\)  \(n\) \(x_{n1}\) \(x_{n2}\)     按照變量 \(x_1,x_2\) 各自的定義：  樣本平均值：\(\bar{x_1}=\frac{1}{n}\sum\limits_{i=1}^nx_{i1}, \; \bar{x_2}=\frac{1}{n}\sum\limits_{i=1}^nx_{i2}\) 樣本偏差平方和: \(SS_1=\sum\limits_{i=1}^n(x_{i1}-\bar{x_1})^2, \; SS_2=\sum\limits_{i=1}^n(x_{i2}-\bar{x_2})^2\) 樣本方差： \(s_1^2=\frac{SS_1}{n}, \; s_2^2=\frac{SS_2}{n}\) 樣本標準偏差： \(s_1=\sqrt{s_1^2}, \; s_2=\sqrt{s_2^2}\) 不偏樣本方差： \(u_1^2=\frac{SS}{n-1}, \; u_2^2=\frac{SS_2}{n-1}\) 不偏樣本方差平方根: \(u_1=\sqrt{u_1^2}, \; u_2=\sqrt{u_2^2}\)   對於這樣一對變量 \(x_1,x_2\) 來說，我們又可以追加如下的概括統計：  樣本總體平均值： \(\bar{x}=\frac{1}{n+n}(\sum\limits_{i-1}^nx_{i1}+\sum\limits_{i-1}^nx_{i2})\) 樣本方差積和(cross-product)： \[\begin{equation} \begin{split} S_{12} &amp;amp; = \sum_{i=1}^n(x_{i1}-\bar{x_1})\cdot(x_{i2}-\bar{x_2})\\ &amp;amp; = \sum_{i=1}^n(x_{i1}x_{i2}-\bar{x_1}x_{i2}-x_{i1}\bar{x_2}+\bar{x_1}\bar{x_2})\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\sum_{i=1}^nx_{i2}-{\sum_{i=1}^nx_{i1}}\bar{x_2}+n\bar{x_1}\bar{x_2}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\bar{x_1}\cdot n\bar{x_2}-n\bar{x_1}\cdot\bar{x_2}+n\bar{x_1}\bar{x_2}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\bar{x_1}\cdot\bar{x_2}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-n\cdot\frac{\sum\limits_{i=1}^nx_{i1}}{n}\cdot\frac{\sum\limits_{i=1}^nx_{i2}}{n}\\ &amp;amp; = \sum_{i=1}^nx_{i1}x_{i2}-\frac{1}{n}(\sum_{i=1}^nx_{i1})(\sum_{i=1}^nx_{i2}) = S_{21} \end{split} \tag{8} \end{equation}\]</description>
+      <description>第2章　統計の基礎 P22-25</description>
     </item>
     
     <item>
@@ -1002,7 +657,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-13/</guid>
-      <description>2017-02-15 updated.  數據的種類和尺度   表1. 20歳の若者9名のデータ      性別   健康状態   体温   身長      男  女   極良  良好  普通  不良  極悪   °C   cm      1   1  0   1  0  0  0  0   36.</description>
+      <description>第2章　統計の基礎 P19-22</description>
     </item>
     
     <item>
@@ -1011,9 +666,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-12-t/</guid>
-      <description>連立方程式 (simultaneous equations) 連立方程式，將與第六章談的特徵值問題(固有値問題)有緊密聯系，此處我們一起觀察幾種不同的組合：
-解同次連立1次方程式 \(\left\{ \begin{array}{ll} (1)\;a_1+2a_2+3a_3 = 0 \\ (2)\;2a_1+4a_2+5a_3 = 0 \;\\ (3)\;3a_1+5a_2+6a_3 = 0 \\ \end{array} \right.\) 由 \(2\times(1)-(2)\) 可得 \(a_3=0\) 。 代入 \((1),(2),(3)\) 式後，\((3)-(2)\) 可得 \(a_1=-a_2\) 。 代入 \((1)\) 式可得 \(a_2=0\) 。 再代入 \((4)\) 式可知 \(a_1=0\) 。最終可得 \(a_1=a_2=a_3=0\) 其實上述問題不解自明 (trivial solution)。 那麼同次1次連立方程式 (homogeneous system) 除了自明解之外，還有別的解嗎? 我們再看下面一例。
- 解 \(\left\{ \begin{array}{ll} (1)\;4a_1+3a_2+6a_3 = 0 \\ (2)\;2a_1+a_2+4a_3 = 0 \;\\ (3)\;a_1+a_2+a_3 = 0 \\ \end{array} \right.\) 上述方程表面上看有三個式子，實際上由於 \((3)=\left\{(1)-(2)\right\}\div2\) 只有2個有意義的方程式。如此這般，有3個未知數，卻只有兩個連立方程組，是無法求解的。如果將三個未知數中的一個例如 \(a_3\) 視爲常數(定数) (寫作：\(s\) ) 即： \((4)\;a_3=s\) 整理方程組得到新的連立方程 \(\left\{ \begin{array}{ll} (1^\prime)\;4a_1+3a_2 = -6s \\ (2^\prime)\;2a_1+a_2 = -4s \;\\ \end{array} \right.</description>
+      <description>第1章　数学の基礎 P15-17</description>
     </item>
     
     <item>
@@ -1022,10 +675,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description>函數的最大值最小值問題 沒有制約條件的情況 函數 \(F(a_1,a_2,\dots,a_i,\dots,a_n)\) 取最大值或者最小值時，以下的連立方程 \[\frac{\partial F}{\partial a_1}=0,\frac{\partial F}{\partial a_2}=0，\frac{\partial F}{\partial a_3}=0, \dots,\frac{\partial F}{\partial a_i}=0, \dots, \frac{\partial F}{\partial a_n}=0\] 要成立(必要條件)。
-1.已知下列方程有最小值，求當該方程取最小值時\(a_1,a_2\)的值 \[F(a_1,a_2)=\left\{y_1-(a_1+a_2x_1)\right\}^2+\left\{y_2-(a_1+a_2x_2)\right\}^2+\cdots+\left\{y_n-(a_1+a_2x_n)\right\}^2\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}^2\\\]
-\[\begin{align} \frac{\partial F}{\partial a_1}&amp;amp;=-2\left\{y_1-(a_1+a_2x_1)\right\}-2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2\left\{y_n-(a_1+a_2x_n)\right\}\\ &amp;amp;= -2\sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0 \Leftrightarrow \sum_{i=1}^n\left\{y_i-(a_1+a_2x_i)\right\}=0\\ \Leftrightarrow \sum_{i=1}^ny_i &amp;amp;= a_1\cdot n+a_2\sum_{i=1}^nx_i (1)\\ \\ \frac{\partial F}{\partial a_2}&amp;amp;=-2x_1\left\{y_1-(a_1+a_2x_1)\right\}-2x_2\left\{y_2-(a_1+a_2x_2)\right\}-\cdots-2x_3\left\{y_n-(a_1+a_2x_n)\right\}\\ &amp;amp;= -2\sum_{i=1}^nx_i\left\{y_i-(a_1+a_2x_i)\right\}=0\\ \Leftrightarrow \sum_{i=1}^nx_iy_i &amp;amp;=a_1\sum_{i=1}^nx_i+a_2\sum_{i=1}^nx_i^2 (2)\\ &amp;amp;將(1)(2)連立方程求解即可。在回歸分析中，\\ &amp;amp;這個連立方程組被稱作正規方程組(Normal \;equation) \end{align}\]
-求下列方程取最大或者最小值時的\(a_1,a_2,a_3\)的大小： \[F(a_1,a_2,a_3)=a_1^2+a_1a_2+a_1a_3+a_2^2+a_2a_3+a_3^2-6a_1-3a_2-7a_3\]  \[\begin{align} 解連立方程：\\ \frac{\partial F}{\partial a_1} &amp;amp; = 2a_1+a_2+a_3-6=0\\ \frac{\partial F}{\partial a_2} &amp;amp; = a_1+2a_2+a_3-3=0\\ \frac{\partial F}{\partial a_3} &amp;amp; = a_1+a_2+2a_3-7=0\\ 答：&amp;amp; a_1=2, a_2=-1,a_3=3 \end{align}\]</description>
+      <description>第1章　数学の基礎 P11-14</description>
     </item>
     
     <item>
@@ -1034,9 +684,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-08/</guid>
-      <description>偏微分 1個變量的函數的微分 公式： 函數 \(f(a)\) 關於變量 \(a\) 的微分，被定義爲： \(\lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}\) , 寫作 \(\frac{df}{da}\), 具有下列性質：  \(f(a) = a^n\) 時， \(\frac{df}{da} = na^{n-1}\) 重要 \(\frac{d}{da}\left\{kf(a)+lg(a)\right\}=k\frac{df}{da}+l\frac{dg}{da}\) (\(k,l\) 是常數) \(\frac{d}{da}\left\{f(a) \cdot g(a)\right\}=\frac{df}{da}g(a)+f{a}\frac{dg}{da}\) \(\frac{d}{da}\left\{\frac{f(a)}{g(a)}\right\}=\frac{\frac{df}{da}g(a)-f(a)\frac{dg}{da}}{\left\{g(a)\right\}^2}\), 特別的有，\(\frac{d}{da}\left\{\frac{1}{g(a)}\right\}=-\frac{\frac{dg}{da}}{\left\{g(a)\right\}^2}\) \(y=f(b), b=g(a)\) 時， \(\frac{dy}{da}=\frac{dy}{db}\frac{db}{da}\)  2次（2階）微分 【二階導數】:
-\(f(a)\) 關於常數 \(a\) 的微分 \(\frac{df}{da}\) 的二次微分表示爲： \(\frac{d^2f}{da^2}\)
-    多個變量的函數的微分 偏微分 包含了 \(n\) 個獨立變量 \(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n\)的函數，即多變量函數 \(F(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n)\) 關於 \(a_i (i=1,2,\cdots,n)\) 的偏微分 (partial differentiation) 的定義是，把 \(a_i\) 以外的獨立變量當做常數（定数），將函數 \(F\) 對變量 \(a_i\) 求微分，寫作： \(\frac{\partial F}{\partial a_i}\)。</description>
+      <description>第1章　数学の基礎 P6-10</description>
     </item>
     
     <item>
@@ -1045,7 +693,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-02-06/</guid>
-      <description>和記號\(\sum\)  \(\sum\) 的性質 (1) 下標(添字) \(x_1 + x_2 + x_3 + \dots + x_n\) 記作如下:\[\sum_{i=1}^{n}x_i\]  \(\sum_{i=1}^{n}x_i\) 中的\(i\) 稱爲dummy index 可以簡略寫爲：\(\sum x\) 或者 \(\sum_1 x_i\), \(\sum x_i\)  \(\sum\) 的性質 (2)  \[\begin{equation} \sum_{i=1}^{n}(ax_i + by_i)= a\sum_{i=1}^{n}x_i + b\sum_{i=1}^{n}y_i \tag{1} \end{equation}\] \(\sum_{i=1}^{n}ax_i = a\sum_{i=1}^{n}x_i\) 常數(定数)可以提前 \(\sum_{i=1}^{n}a = na\) \(\sum_{i=1}^{n}1 = n\) \(\sum_{i=1}^{n}(ax_i+b) = a\sum_{i=1}^{n}x_i + nb\) 公式(1)的應用: \[ \begin{aligned} \sum_{i=1}^{n}(ax_i -by_i)^2 &amp;amp;= \sum_{i=1}^{n}(a^2x_i^2 - 2abx_iy_i + b^2y_i^2) \\ &amp;amp;= \sum_{i=1}^{n}a^2x_i^2 -\sum_{i=1}^{n}2abx_iy_i + \sum_{i=1}^{n}b^2y_i^2 \\ &amp;amp;= a^2\sum_{i=1}^{n}x_i^2 - 2ab\sum_{i=1}^{n}x_iy_i + b^2\sum_{i=1}^{n}y_i^2 \end{aligned} \] 但是，乘法或平方有如下性質，計算方差(分散)或者相關系數時需要注意：\[\sum_{i=1}^{n}x_i^2 \neq (\sum_{i=1}^{n}x_i)^2\] 以及 \[\sum_{i=1}^{n}x_iy_i \neq (\sum_{i=1}^{n}x_i)(\sum_{i=1}^{n}y_i)\] 自然數的冪運算之和(冪[べき]乗の和)的公式: \[ \begin{aligned} 1+2+3+\dots+n &amp;amp;= \sum_{t=1}^{n}t = \frac{n(n+1)}{2}\\ 1^2+2^2+3^2+\dots+n^2 &amp;amp;= \sum_{t=1}^{n}t^2 = \frac{n(n+1)(2n+1)}{6} \\ 1^3+2^3+3^3+\dots+n^3 &amp;amp;= \sum_{t=1}^{n}t^3 = {\frac{n(n+1)}{2}}^2 \\ 1^4+2^4+3^4+\dots+n^4 &amp;amp;= \sum_{t=1}^{n}t^4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30} \end{aligned} \] 上面的公式將會應用在時間序列分析，斯皮尔曼等级相关系数(スピアマンの順位相関係数)的定義公式的推導。</description>
+      <description>第1章　数学の基礎 P1-5</description>
     </item>
     
     <item>
@@ -1054,12 +702,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-01-07-ielts-test/</guid>
-      <description>今年1月7日周六，我在日本名古屋市參加了人生第一次，但願是唯一一次的雅思考試。 就是如下圖的這個叫做TKP名古屋駅前カンファレンスセンター，這建築物名字翻譯成人話其實就是“名古屋車站前TKP會議中心”，之前接待臺灣友人時被問道：“爲什麼日本人有時候用漢字，有時候又用片假名或者平假名。”答曰：“任性。”
-回到雅思考試話題上來。爲什麼一把年紀了還要考雅思？其實說實話，我肯定不是那日考雅思中最老的，看到一個大叔估計50+，我也才快30而已。不老不老。回想當年剛畢業時好多人吭哧吭哧考雅思或者託福，我也跟風（裸）考了一次託福（好像不到80分，iBT，慘不忍睹），當然我自己精心準備的考試是日本語能力測試的2級與1級。如今已經在日本獲得博士學位，留校工作快2年了，爲啥又要去靠雅思捏？答案很簡單，又想出國了。記得之前有一次有點小尷尬的經歷，好像是去愛知縣政府的時候，坐八谷老師的車，一邊聊天，他問道：“哎呀，小王，你沒有考慮以後留學去嗎？” 我楞了一下，過了十幾秒，他好似也意識到了什麼，又說道：“對哦，現在已經在留學了。” 此事後來常被我拿來在酒桌上開玩笑，看我的日語還是很地道的嘛，老師都忘記我是留學生了。
-所以上文我說又想出國，出的是日本國，有點終於要“衝出亞洲，走向世界”的豪情萬丈了。其實我這次追求的是，從一個島國，去另一個島國。試問東瀛到英吉利的距離有多遠？答曰：相隔一次雅思考試的時間，需要一份個人陳述的鋪墊，還要有兩封推薦信的含情脈脈，最終也還不一定能夠買到這張出發的船票。所以我的第一件事就是，花1個月的時間，從早到晚幾乎每日10個小時以上的精力投入，1小時菲律賓外教的口語模考課，3篇劍橋閱讀，1次真題聽力，大小作文每周各練習2-3篇，然後重頭戲我覺得是堅持每天一片聽寫，目標是雅思成績overall大於等於7。終於等到1月7日這天，檢驗我的魔鬼訓練成果的日子。
-日本的雅思考點很少，聽說大陸光上海就6個考點，而且今年的考試費用是1980RMB，真是那啥人傻錢多劍橋速來，考點每年一個的增加，費用也是每年100的上漲。我在的名古屋考點，把名古屋周圍地區的考生都包括了（愛知縣，三重縣，岐阜縣，靜岡縣，說不定還有其他縣市的趕過來），我考試那天也才80個人左右，我還看到有人拖着行李箱從外地趕來考試。全日本考點不知道有沒有超過10個。考試全程感覺周圍的人都好牛逼，不知道是他們提前放棄了還是真的寫的比我還快啊。早晨考完聽力閱讀作文以後是12點半，其實1點開始就有考口語的，只是考官人數有限，口語考試我被安排在了最後一個，輪到我時已經是晚上6點。
-我還記得考完作文的時候長舒一口氣，因爲尿憋了好久了，結果接下來的5個小時漫長等待才是最摧殘人的。考完口語之後我把被問的話題回憶了一下:
- Part 1  Work or study ? Why the work ? Future work you like to do ? Describe a celebrity you know in your country. Do you like to read about celebrities? Do you like to take photos ? What do you do with the photos?  Part 2: Describe a very busy time. Part 3:  Do you think children in your country, I mean China, are under great stress?</description>
+      <description>寫在考完雅思（IELTS）一個月以後</description>
     </item>
     
     <item>
@@ -1068,10 +711,7 @@ You can thank your parents for your DNA. Because humans share genes through sexu
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-1-5/</guid>
-      <description>听写于：2017-1-5 9:35 用时：26:08 正确率：88% 错词：26个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-But we start with a literary star , - Paul Beatty, the first American ever to win the coveted Man Booker Prize, which is worth of £50,000 and a place on the best-seller list. The Sellout is a comic novel which is also unusual for a Man Booker winner . - I laughed out loud reading it .</description>
+      <description>Man Booker Prize</description>
     </item>
     
     <item>
@@ -1080,10 +720,7 @@ But we start with a literary star , - Paul Beatty, the first American ever to wi
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-1-4/</guid>
-      <description>听写于：2017-1-4 10:8 用时：19:19 正确率：91% 错词：17个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-Open any company&amp;rsquo;s annual report and chances are , there will there&amp;rsquo;ll be something about corporate social responsibility. Because we don&amp;rsquo;t just expect the company companies we buy from to be profitable; we expect them to be good corporate citizens, too. , which might explains explain recent news reports that Amazon has quietly appointed a new director of social responsibility.</description>
+      <description>corporate social responsibility</description>
     </item>
     
     <item>
@@ -1092,10 +729,7 @@ Open any company&amp;rsquo;s annual report and chances are , there will there&am
       <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-1-3/</guid>
-      <description>听写于：2017-1-3 11:52 用时：16:56 正确率：94% 错词：12个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-The rate of Chinese urbanization urbanisation over the last few decades has been astonishing. In 1990, a quarter of China&amp;rsquo;s population lived in urban areas. By last year, over half lived in cities . and the rate isn&amp;rsquo;t slowing. The governments government&amp;rsquo;s building cities across the country, hoping to turn farmers into workers and consumers to drive economic growth.</description>
+      <description>the urbanisation in China</description>
     </item>
     
     <item>
@@ -1104,10 +738,7 @@ The rate of Chinese urbanization urbanisation over the last few decades has been
       <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-1-2/</guid>
-      <description>听写于：2017-1-2 10:01 用时：21:24 正确率：93% 错词：14个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-For many people, the Christmas season is the a time for merriment, for eating, for drinking, and for doing everything to excess. If you were you&amp;rsquo;re religious, it might seem to go against what this time of year is all about. , and certainly , there is there&amp;rsquo;s no shortage of church leaders who rail against the commercialization commercialisation of Christmas.</description>
+      <description>Religious Food</description>
     </item>
     
     <item>
@@ -1116,11 +747,7 @@ For many people, the Christmas season is the a time for merriment, for eating, f
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2017-1-1/</guid>
-      <description>听写于：2017-1-1 10:23 用时：14:03 正确率：93% 错词：16个
-概述：许多父母都对自己的孩子寄予厚望，愿意把宝宝的小动作解读为过人的天赋，但是有多少望子女成龙凤的父母能如愿以偿呢？也要有点“舍得孩子才能套着狼”的精神吧。新年BBC第一弹，祝大家元气满满！
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-In 1996, Dominique Moceanu made headlines as the youngest-ever member of the US Women&amp;rsquo;s gymnastic Gymnastics team to win a gold medal at the Olympic Games. Her parents were from Romania and inspired by the popular Romanian gymnast Nadia Comăneci, they had high ambition ambitions for their daughter. My parents had it in their hearts that when they had their first child, I would be a gymnast.</description>
+      <description>许多父母都对自己的孩子寄予厚望，愿意把宝宝的小动作解读为过人的天赋，但是有多少望子女成龙凤的父母能如愿以偿呢？也要有点“舍得孩子才能套着狼”的精神吧。新年BBC第一弹，祝大家元气满满！</description>
     </item>
     
     <item>
@@ -1129,12 +756,7 @@ In 1996, Dominique Moceanu made headlines as the youngest-ever member of the US 
       <pubDate>Sat, 31 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-31/</guid>
-      <description>Documentary follows autistic boy obsessed with Disney
-听写于：2016-12-31 10:44 用时：19:00 正确率：95% 错词：12个
-概括：《蓬勃的生活》根据Ron Suskind同名小说改编，是一部穿插动画与真实影像的纪录片，体现了自闭症儿童的家庭在照顾特殊孩子上所遭遇的困难。Suskind的儿子Owen三岁时不再说话，Suskind夫妇和Owen两岁的弟弟一直在与自闭症作斗争，想要维系他们与Owen的感情，而此时Owen唯一的爱好就是迪士尼动画电影。
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-The documentary , Life, Animated illustrates the story not just with clips from the films, but also its own animation. And it travels from Owen&amp;rsquo;s childhood through adolescence into adulthood, and even moving from home. Director , Roger Ross Williams had already begun to film with the family before Ron&amp;rsquo;s book, which is also called Life, Animated, was published.</description>
+      <description>Documentary follows autistic boy obsessed with Disney</description>
     </item>
     
     <item>
@@ -1143,10 +765,7 @@ The documentary , Life, Animated illustrates the story not just with clips from 
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-30/</guid>
-      <description>听写于：2016-12-30 16:37 用时：21:04 正确率：95% 错词：13个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-Really briefly, Khalida, what is Diabulimia? A Diabulimia is an umbrella term , where people with Type 1 Diabetes deliberately reduce or admit omit the insulin that they need to be taking relative to the sugars, the blood sugars that they have and to the carbohydrates that they are eating with the aim of keeping their weight down or losing weight.</description>
+      <description>what is Diabulimia?</description>
     </item>
     
     <item>
@@ -1155,11 +774,7 @@ Really briefly, Khalida, what is Diabulimia? A Diabulimia is an umbrella term , 
       <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-29/</guid>
-      <description>听写于：2016-12-29 10:51 用时：24:29 正确率：90% 错词：22个
-影片《后裔》以度假胜地夏威夷为背景，讲述中年男子处理突如其来的家庭危机，乔治克鲁尼凭借该片获得第69届金球奖最佳男主角。
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-Hello, . As family drama , the Descendants collects at the box office. , Director Alexander Payne describes the power of putting George Clooney in a Hawaiian shirt. The Gotham city for zombies and batman White batmen, why Glasgows smiles better. ? A cult film in more than one sense, Martha Marcy May Marlene, Director/Writer Sean Durkin, on his drewlim-like dream-like study of a girl on the run from the a controlling sect.</description>
+      <description>影片《后裔》以度假胜地夏威夷为背景，讲述中年男子处理突如其来的家庭危机，乔治克鲁尼凭借该片获得第69届金球奖最佳男主角。</description>
     </item>
     
     <item>
@@ -1168,11 +783,7 @@ Hello, . As family drama , the Descendants collects at the box office. , Directo
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-28/</guid>
-      <description>听写于：2016-12-28 11:45 用时：22:35 正确率：88% 错词：31个
-概述：跟踪与骚扰的区别，前者对受害人的精神伤害更大
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-Stalking steals lives. It stops people from having the normal life sort lifestyle that you and I would&amp;rsquo;ve expected. You can would expect, we could go to work, take your kids to school, go about back your, sort of, daily business. It&amp;rsquo;s usually a campaign by somebody who&amp;rsquo;s fix stated fixated and obsessive.</description>
+      <description>跟踪与骚扰的区别，前者对受害人的精神伤害更大</description>
     </item>
     
     <item>
@@ -1181,10 +792,7 @@ Stalking steals lives. It stops people from having the normal life sort lifestyl
       <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-27/</guid>
-      <description>听写于：2016-12-27 22:40 用时：17:55 正确率：92% 错词：20个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-But why did Mayor Bloomberg say &amp;ldquo; even numbers and zero&amp;ldquo; ? Was it necessary to single zero out? It seemed a little odd to us. So we talked to Dr James Grime of the Millennium Maths Project at Cambridge University in the UK. And he says that the a similar issue came up in France in the 1970s.</description>
+      <description>Is zero even or odd?</description>
     </item>
     
     <item>
@@ -1193,10 +801,7 @@ But why did Mayor Bloomberg say &amp;ldquo; even numbers and zero&amp;ldquo; ? W
       <pubDate>Mon, 26 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-26/</guid>
-      <description>听写于：2016-12-26 11:48 用时：20:02 正确率：91% 错词：16个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-My guest today, Russell Foster, has the grand title of Professor of Circadian Neuroscience at Oxford University, which is the science speak way of saying he is he&amp;rsquo;s obsessed with clocks . - not the ticking type, but rather our biological clocks and the rhythm rhythms of life. More specifically, he studies the way light controls our internal clocks and circadian rhythms , and works to understand how light and dark affect our well-being.</description>
+      <description>Biological Clock</description>
     </item>
     
     <item>
@@ -1205,10 +810,7 @@ My guest today, Russell Foster, has the grand title of Professor of Circadian Ne
       <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-25/</guid>
-      <description>听写于：2016-12-25 13:1 用时：24:53 正确率：88% 错词：23个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-We&amp;rsquo;ve undertaken this trip to interrogate the phenomenon of ostalgie, a nostalgia for the old GDR , which gripped grips some in modern Germany as well as my traveling travelling companion. We are We&amp;rsquo;re on a the train now, heading pretty much directly to Zwickau. The poor little Trabbi&amp;rsquo;s finally died at its death.</description>
+      <description>ostalgie</description>
     </item>
     
     <item>
@@ -1217,10 +819,7 @@ We&amp;rsquo;ve undertaken this trip to interrogate the phenomenon of ostalgie, 
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-22/</guid>
-      <description>听写于：2016-12-22 11:40 用时：19:38 正确率：91% 错词：17个
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-A film from China now, A Touch Of Sin, subvert subverts expectations. Firstly , it&amp;rsquo;s largely set outside the big cities in bleak rural towns and villages, sometimes dominated by a vast industrial complex. Then the its subject is sudden acts of violence, sometimes of serial surreal almost Tarantino intensity . on the part of ordinary systems citizens variously horrified, tracked trapped or exploited in China&amp;rsquo;s relentless drive to economy economic success.</description>
+      <description>A touch of sin</description>
     </item>
     
     <item>
@@ -1229,9 +828,7 @@ A film from China now, A Touch Of Sin, subvert subverts expectations. Firstly , 
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-21/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-21 11:56 用时：18:57 正确率：92% 错词：17个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 But first, how did it used use to be ? and how did we end up here? In 1973, journalist Hunter Davies was allowed into the inner sanctum of Tottenham Hotspur. Davies spent the a whole season with the team, training with them, visiting the players&amp;rsquo; homes , and witnessing the dressing room confrontations.</description>
+      <description>球员过去的收入是怎么样的?我们是如何结束这种观念的呢?</description>
     </item>
     
     <item>
@@ -1240,9 +837,7 @@ A film from China now, A Touch Of Sin, subvert subverts expectations. Firstly , 
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-20/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-20 11:55 用时：19:49 正确率：94% 错词：8个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Well , it&amp;rsquo;s been another tough week on global stock market. It&amp;rsquo;s markets - big falls again on Thursday, concerns of a over central bank policy in the US. , but also , as ever , the state of China&amp;rsquo;s economy. One question is being asked: &amp;ldquo; how stable is China&amp;rsquo;s currency nowadays? &amp;ldquo; For months, the challenges China&amp;rsquo;s been facing had have been a talking point, growth down, stock markets sliding.</description>
+      <description>你覺得人民幣可靠嗎？</description>
     </item>
     
     <item>
@@ -1251,9 +846,7 @@ A film from China now, A Touch Of Sin, subvert subverts expectations. Firstly , 
       <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-19/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-19 12:00 用时：19:55 正确率：91% 错词：17个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 How is Donald Trump going to avoid damaging conflict conflicts of interest once he takes up his position as America&amp;rsquo;s next president? A planned press conference was scheduled for this week on the matteris . It&amp;rsquo;s now being canceledcancelled. Mr . Trump would only say via his tweeter Twitter feed that no new deal will deals would be done while he was he&amp;rsquo;s in the White House.</description>
+      <description>当唐纳德·特朗普真正宣誓就职美国下任总统时，他如何避免利益冲突带来的损害？</description>
     </item>
     
     <item>
@@ -1262,11 +855,7 @@ A film from China now, A Touch Of Sin, subvert subverts expectations. Firstly , 
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-18/</guid>
-      <description>概述：从小我们就被教育要拾金不昧，但是现实生活中有便宜可占的时候，你会怎么做呢？澳大利亚有位“lucky dog”，把银行当钱包，自称“年轻无知，糊里糊涂”透支了2百万澳元。。。做人还是要诚实啊
-Australian man spent $1.5m over two years due to bank glitch and somehow got away with it
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-18 16:17 用时：20:03 正确率：91% 错词：25个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Now , what would you do , if you realized realise that you could keep withdrawing money from the bank way beyond what you&amp;rsquo;ve actually naturally paid into your account? A young Australian , Luke Moore found himself in that position.</description>
+      <description>Australian man spent $1.5m over two years due to bank glitch and somehow got away with it</description>
     </item>
     
     <item>
@@ -1275,10 +864,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-17/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-17 12:07 用时：22:37 正确率：91% 错词：15个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-The senior Taliban are surprisingly mild-mannered, . They don&amp;rsquo;t seem to get angry or happy. They believe absolutely that what they are they&amp;rsquo;re doing is right. , but they are they&amp;rsquo;re often naive when it comes to the media. In some ways, Afghanistan is an easy patch. There are no spin doctors here. Afghan men themselves are extremely courteous.</description>
+      <description>Taliban</description>
     </item>
     
     <item>
@@ -1287,9 +873,7 @@ The senior Taliban are surprisingly mild-mannered, . They don&amp;rsquo;t seem t
       <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-16/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-16 12:31 用时：28:24 正确率：90% 错词：23个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 For Buddhists, god&amp;rsquo;s waiting room is a stepping stone to another life. And to learn more about that, I&amp;rsquo;ve come here to the Amaravati Monastery in its peaceful rural setting , near the town of Berkhamsted , north of London. And I gain I&amp;rsquo;m going to meet the abbot , Ajahn Amaro. &amp;ldquo; Well, from the Buddhist perspective, the things thing that causes the most trouble for us, while we&amp;rsquo;ar we&amp;rsquo;re alive, or we&amp;rsquo;re dying , is a the habit that of what we all will call clinging or grasping attachment.</description>
+      <description>Buddism</description>
     </item>
     
     <item>
@@ -1298,10 +882,7 @@ The senior Taliban are surprisingly mild-mannered, . They don&amp;rsquo;t seem t
       <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-15/</guid>
-      <description>摩洛哥刑法规定强奸犯与受害者结婚可免除刑责，16岁少女自杀一石激起千层浪. Morocco protest against rape-marriage law
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-15 12:8 用时：22:26 正确率：92% 错词：20个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Women&amp;rsquo;s right campaign is rights campaigners in Morocco , it have been demonstrated demonstrating in the capital Rabat against the country&amp;rsquo;s rape law laws which allows allow the rapist to marry his victim in order to avoid prosecution. The protesters have been outraged by the suicide of 16-year-old Amina Filali last week after she was severely beaten when she was forced to marry her rapist.</description>
+      <description>摩洛哥刑法规定强奸犯与受害者结婚可免除刑责，16岁少女自杀一石激起千层浪. Morocco protest against rape-marriage law</description>
     </item>
     
     <item>
@@ -1310,10 +891,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-14/</guid>
-      <description>Yemen Starving
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-14 14:14 用时：16:00 正确率：92% 错词：16个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 But first , the UN has issued a stock stark warning that an increasing number of children in Yemen face death from hunger because of a the lack of international help. The Wolrd World Health Organisation says more than half of the country&amp;rsquo;s hospital hospitals are not functioning , due to the conflict that&amp;rsquo;s lasted more than 20 months.</description>
+      <description>Yemen Starving</description>
     </item>
     
     <item>
@@ -1322,10 +900,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-13/</guid>
-      <description>Ukraine&amp;rsquo;s Tiny &amp;lsquo;Troublemaker&amp;rsquo;
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-13 12:04 用时：23:33 正确率：92% 错词：16个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 We&amp;rsquo;ve been hearing from controversial campaigners who&amp;rsquo;ve been making waves across Europe. Today , we go to Ukraine and to Kiev , where clashes between government forces and opposition groups have been the at their most violence violent since the unrest began in November last year. 34-year-old Tetiana Chornovol is an anti-government activist who divides opinion across in the country.</description>
+      <description>Ukraine&amp;rsquo;s Tiny &amp;lsquo;Troublemaker&amp;rsquo;</description>
     </item>
     
     <item>
@@ -1334,10 +909,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-12/</guid>
-      <description>How soldiers deal with the job of killing
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-12 14:24 用时：20:19 正确率：89% 错词：22个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Ben says he wanted to kill, . But there are others who are very reluctant. In the Second World War, one of the combatants , S. L. A. Marshall observed that many didn&amp;rsquo;t shoot. He wrote a study , called Men Against Fire , in which he concluded that there was a reluctance to kill.</description>
+      <description>How soldiers deal with the job of killing</description>
     </item>
     
     <item>
@@ -1346,10 +918,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sun, 11 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-11/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-11 17:20 用时：22:26 正确率：94% 错词：14个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-Today, a fascinating insight into what it&amp;rsquo;s is like to live in Turkey at a time of political repression. The country is in turmoil at the moment. There&amp;rsquo;s been a state of emergency for nearly 6 six months since the attempted coup. According to official figures from the Ministry of Justice. , at least 93,000 people are under investigation for their elegy alleged links to the coup plotters and around 34,000 are facing charges.</description>
+      <description>The country Turkey is in turmoil at the moment.</description>
     </item>
     
     <item>
@@ -1358,10 +927,7 @@ Today, a fascinating insight into what it&amp;rsquo;s is like to live in Turkey 
       <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-10/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-10 用时：21:39 正确率：94% 错词：5个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-This week in London, the cinema event of the year - if not the century - has been a five and a half-hour five-and-a-half-hour screening of a film made almost 90 years ago. It is It&amp;rsquo;s Abel Gance&amp;rsquo;s Napoleon, . Digitally restored, once neglected. , it was shown last Sunday with a live performance by the Philharmonia Orchestra conducted by the composer , Carl Davis, who&amp;rsquo;s just turned 80 , and who paid for the restoration.</description>
+      <description>Napoleon Bonaparte in the French Revolution</description>
     </item>
     
     <item>
@@ -1370,10 +936,7 @@ This week in London, the cinema event of the year - if not the century - has bee
       <pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-9/</guid>
-      <description>Speech Writer to the President
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-9 12:29 用时：21:01 正确率：91% 错词：30个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 I think that speech writing is one of those professions where not everyone knows that it exists. So , could you please explain to us, Sarada, what the role of a speech writer is? Sure, . And I would I&amp;rsquo;d be interested to hear how it might be different for Tina and Kosovo.</description>
+      <description>Speech Writer to the President</description>
     </item>
     
     <item>
@@ -1382,10 +945,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-8/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-8 11:32 用时：14:48 正确率：95% 错词：8个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-We start today with the unlikely story of how an American woman came to be working with truckers to combat human trafficking. Kendis Paris lives in Denver, Colorado with her Anglican priest husband and her their two children. She used to spend her days making bread and cheese, home with her the kids. But now she travels the country, training drivers to recognize recognise and report human trafficking.</description>
+      <description>an American woman came to be working with truckers to combat human trafficking.</description>
     </item>
     
     <item>
@@ -1394,10 +954,7 @@ We start today with the unlikely story of how an American woman came to be worki
       <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-7/</guid>
-      <description>概述：对朋友撒了一个谎，需要用更多的谎言来圆它。所以，朋友之间还是坦诚一点比较好。
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-7 10:33 用时：28:09 正确率：89% 错词：33个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 In 1976, my friend Glen decided to give up advertising to spend a year teaching English in the Sudan. On his returnreturning, he was supposed to be staying with his brother, but they had a rower row at Heathrow airport a few minutes after their his plane had landed. , and so Glen phoned and asked if he and his new New Zealander girlfriend, Virginia, could stop for a short while in our spare room in the council tower block where we lived.</description>
+      <description>概述：对朋友撒了一个谎，需要用更多的谎言来圆它。所以，朋友之间还是坦诚一点比较好。</description>
     </item>
     
     <item>
@@ -1406,9 +963,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 06 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-6/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-6 12:9 用时：20:40 正确率：94% 错词：7个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Several senior moments have featured in the news of over recent months. At the beginning of February, Ed Balls forgot the name of Bill Thomas, his business ally. A few weeks later, Green party leader Natalie Bennett had a terrible time remembering her party&amp;rsquo;s policies when she was interviewed by Nick Ferrari on LBC.</description>
+      <description>Dementia?</description>
     </item>
     
     <item>
@@ -1417,9 +972,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-5/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-5 11:56 用时：18:03 正确率：87% 错词：27个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 The Trans-Pacific Partnership is dead, so says president elected President-elect Donald Trump. He is going to He&amp;rsquo;s gonna kill it off, he says, on his very first day in the White House in January. So is this the first step towards what Trump watches watchers fear , it&amp;rsquo;s is going to be a more protectionist America under his presidency?</description>
+      <description>Trans-Pacific Partnership is dead</description>
     </item>
     
     <item>
@@ -1428,10 +981,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-4/</guid>
-      <description>HOW A TEAM OF &amp;lsquo;UNCLEAN CLEANERS&amp;rsquo; FOUGHT CASTE WITH CRICKET
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-4 17:29 用时：23:16 正确率：92% 错词：21个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Today&amp;rsquo;s story is from India. There, even though discriminating against people on grounds of their caste has been illegal for years. , people can still find themselves severely disadvantaged. Vimal Kumar is from one of the lowest class castes - the Chuhras. They are sometimes called &amp;ldquo; the untouchables&amp;ldquo; .</description>
+      <description>HOW A TEAM OF &amp;lsquo;UNCLEAN CLEANERS&amp;rsquo; FOUGHT CASTE WITH CRICKET</description>
     </item>
     
     <item>
@@ -1440,9 +990,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-3/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-3 11:49 用时：23:21 正确率：91% 错词：21个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Let&amp;rsquo;s begin, though, with a break in the voice, just holding back the sobs . because this is a week when crying at the cinema is positively encouraged. Why? A new film, The Light Between Oceans is - it&amp;rsquo;s an adaptation of M. L. Stedman&amp;rsquo;s novel about a couple played by Michael Fassbender and Alicia Vikander.</description>
+      <description>the Light Between Oceans</description>
     </item>
     
     <item>
@@ -1451,9 +999,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-2/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-2 12:37 用时：26:21 正确率：91% 错词：24个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 I&amp;rsquo;ve always felt that there has to be some method of controlling the boar. I&amp;rsquo;ve got the ability here to inject boar from where when we were worm them and things like that , from about 6 six feet away. But then when I had, heard that there was a firm, who could actually dart the boar, I was interested.</description>
+      <description>Boar controlling</description>
     </item>
     
     <item>
@@ -1462,9 +1008,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-12-1/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-12-1 17:9 用时：21:30 正确率：90% 错词：23个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 &amp;rdquo; Time present and time past / Are both perhaps present in time future . / And time future contained in time past. / If all time is eternally present , / All time is unredeemable. &amp;ldquo; The opening lines of TS Eliot&amp;rsquo;s Burnt Norton, the first of his Four Quartets, were written in the 1930s.</description>
+      <description>Time present and time past</description>
     </item>
     
     <item>
@@ -1473,10 +1017,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-30/</guid>
-      <description>Trevor McDonald on Redemption
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-30 11:49 用时：18:14 正确率：91% 错词：27个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 There are many views about the concept of redemption. It&amp;rsquo;s generally defined as the action of saving or being saved from sin, error , or evil. We take this to mean that someone has committed an act which is sinfull sinful or evil. My guest today did nothing of the thoughtsort.</description>
+      <description>Trevor McDonald on Redemption</description>
     </item>
     
     <item>
@@ -1485,10 +1026,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-29/</guid>
-      <description>Crisis in Syria
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-29 11:36 用时：20:43 正确率：92% 错词：15个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 In the past six months alone, the number of people living under siege in Syria has doubled to almost a million. In the a briefing to the Security Council, the UN head of aid , Stephen O&amp;rsquo;Brien also warned that conditions in eastern Aleppo have had gone from terrible to terrifying.</description>
+      <description>Crisis in Syria</description>
     </item>
     
     <item>
@@ -1497,9 +1035,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-28/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-28 12:3 用时：24:42 正确率：89% 错词：26个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Washington has again voiced concern about Beijing&amp;rsquo;s activities in the South China Sea. China is building airbases on the harbors and harbours on reclaimed land there . and has occupied areas which other nations in the region regard as theirs. This week, America&amp;rsquo;s top navy commanders naval commander in the Pacific warns warned that it could all lead to a dangerous arms race.</description>
+      <description>Vietnam war</description>
     </item>
     
     <item>
@@ -1508,10 +1044,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-27/</guid>
-      <description>The Secret Fraudster in my Family
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-27 13:58 用时：25:37 正确率：88% 错词：33个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Today , we have we&amp;rsquo;ve an intriguing tale from Illinois in the US about a stolen identity, missing money , and the a most unlikely for allfraudster. Identity theft is increasingly common these dayssince . It&amp;rsquo;s when someone gets hold of your name and personal information , and uses them to take out a loan or a credit card and so on.</description>
+      <description>The Secret Fraudster in my Family</description>
     </item>
     
     <item>
@@ -1520,10 +1053,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-25/</guid>
-      <description>Cultural Inclusion and Exclusion
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-25 16:1 用时：29:16 正确率：91% 错词：23个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Now, Pokémon Go, . In case you haven&amp;rsquo;t heard of it, it&amp;rsquo;s it is a worldly wildly popular augmented reality game just take that&amp;rsquo;s taken the world by storm since it&amp;rsquo;s launched. I&amp;rsquo;ve persisted resisted playing so farand . I&amp;rsquo;m worried I might get hooked and ended end up spending hours of my life trying to chase after Pikachu or a Jigglypuff.</description>
+      <description>Cultural Inclusion and Exclusion</description>
     </item>
     
     <item>
@@ -1532,10 +1062,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-24/</guid>
-      <description>Sir Edward Burnett Tylor
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-24 11:44 用时：28:56 正确率：90% 错词：22个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Like many English men Englishmen who suffered from tuberculosis in the 19th century, Sir Edward Burnett Tylor went abroad on medical advice, seeking the dryer drier air of warmer regions. Tylor came from a prosperous Quaker business family. , so he had the resources for a long trip. In 1855 , in his early 20s, he left for the New World .</description>
+      <description>Sir Edward Burnett Tylor</description>
     </item>
     
     <item>
@@ -1544,10 +1071,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Wed, 23 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-23/</guid>
-      <description>雙胞胎一起講話有點瘮人&amp;hellip;..
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-23 11:53 用时：18:50 正确率：89% 错词：27个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Paula and Bridgette Powers are identical twins from eastern Australia who do the most extraordinary thing. They choose to speak at the same time. The pair has have spent almost every day of their lives together. They are in their 40s now . and they share a passion for seabirds. They set up the Twinnies Pelican and Seabird Rescue refuge off the Sunshine Coast .</description>
+      <description>雙胞胎一起講話有點瘮人&amp;hellip;..</description>
     </item>
     
     <item>
@@ -1556,9 +1080,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-22/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-22 22:16 用时：26:49 正确率：95% 错词：12个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Last month, Global Trade Talks took place in Geneva. AlrightAll right, before you reach for your radio, please do not switch us off, . This is important. Governments were debating, yet again, whether it was time to cut the subsidies that some of them give to their farmers. It&amp;rsquo;s an old saw. Many, especially in the poor world, have been arguing against , since practiced this practice for years.</description>
+      <description>全球贸易谈判在争论否要削减发给农民的补贴。</description>
     </item>
     
     <item>
@@ -1567,10 +1089,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-21/</guid>
-      <description>(俄國人的口音真難懂(⊙o⊙))
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-21 11:56 用时：24:03 正确率：87% 错词：27个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Today, an extraordinary insight into how things have been changing in Russia for gay and transgender people. At the end of the Soviet era in the 1980s, Tapir could wear high heels in the army and no one minded. These days he is he&amp;rsquo;s afraid for his life. Tapir identifies as gender quierqueer, somewhere between male and female.</description>
+      <description>俄國人的口音真難懂(⊙o⊙)</description>
     </item>
     
     <item>
@@ -1579,9 +1098,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-19/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-用时：24:13 正确：93% 奖励： 4 日期：2016-11-19
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 It&amp;rsquo;s that time of a year again. The Tuesday after the August bank holiday, summer holidays are almost over. Very soon, it would will be back to school. For those of us without children, the first clue is all the advertises for adverts of school uniforms. Getting kitted out for a new term is a lesson in life.</description>
+      <description>It&amp;rsquo;s that time of a year again.</description>
     </item>
     
     <item>
@@ -1590,10 +1107,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 18 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-18/</guid>
-      <description>Italy&amp;rsquo;s devastating earthquake
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-18 13:15 用时：28:52 正确率：94% 错词：15个
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 I mean, it is that unfolding. It&amp;rsquo;s very unfamiliar to me. But you think these are all connected somehow. Well, first, earthquakes in Italy turn tend to occur more in groups or sequences than a lot of other places in the world. This is somewhat unique to Italy. It&amp;rsquo;s not a striking difference, but it&amp;rsquo;s a noticeable one.</description>
+      <description>Italy&amp;rsquo;s devastating earthquake</description>
     </item>
     
     <item>
@@ -1602,10 +1116,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-17/</guid>
-      <description>Fight for life by Sofia Zambuto
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-17 11:29 用时：21:51 正确率：94% 错词：18个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 The silence was terrible. I knew it would hit us at any moment. When it came, the wave was colossal and came crashing crushing down on us. Two of my little ones clung to me. They saw their father go under. He disappeared. We didn&amp;rsquo;t see him resurface.</description>
+      <description>Fight for life by Sofia Zambuto</description>
     </item>
     
     <item>
@@ -1614,10 +1125,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-16/</guid>
-      <description>The Book that Changed Me Episode 5 of 5
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-16 14:46 用时：25:06 正确率：92% 错词：15个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 The People&amp;rsquo;s War is a book of social history by Angus Calder. It was published in 1969 . and I bought it at Singapore airport when I was travelingtravelling, I suppose now I&amp;rsquo;d call it backpacking, in South East Southeast Asia. As I traveled travelled through Vietnam, where the American president said presence sat on the country like Goya Goya&amp;rsquo;s Colossus of Chaos.</description>
+      <description>The Book that Changed Me Episode 5 of 5</description>
     </item>
     
     <item>
@@ -1626,10 +1134,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-15/</guid>
-      <description>&amp;lsquo;Miracle Girl&amp;rsquo;: Aircrash Sole Survivor
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-15 11:9 用时：24:33 正确率：94% 错词：16个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 We are We&amp;rsquo;re starting with a remarkable survival story from the Indian Ocean. In June, 2009, a plane traveling travelling from Yemen to the Comoro Islands plunged into the water just a few miles from its destinationa reported crashed from . A report into the crash suggested that human error may have been one factor.</description>
+      <description>&amp;lsquo;Miracle Girl&amp;rsquo;: Aircrash Sole Survivor</description>
     </item>
     
     <item>
@@ -1638,10 +1143,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-14/</guid>
-      <description>Beijing&amp;rsquo;s Property Problem
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-14 13:50 用时：20:04 正确率：88% 错词：22个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 The streets of Beijing are busy and bustling. China has undergone an economic miracle over the past quarter-century . and it&amp;rsquo;s in urbanization seen urbanisation on an unprecedented scale. More than half of the Chinese population now live in cities. The capital is home to 21 million people. That unofficial figure is almost double all the number who lived here of at the tenth turn of Milleniumthe millennium.</description>
+      <description>Beijing&amp;rsquo;s Property Problem</description>
     </item>
     
     <item>
@@ -1650,11 +1152,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-12/</guid>
-      <description>Jacqueline Bisset
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-
-听写于：2016-11-12 10:47 用时：27:26 正确率：88% 错词：25个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 We are We&amp;rsquo;re beginning with one of the most popular and affections infectious examples of the Jone genre from 1963. 1973, because it&amp;rsquo;s there&amp;rsquo;s a new Blu-ray release of Francois Truffaut&amp;rsquo;s Day For Night, which takes it&amp;rsquo;s its title from the blue filter used to make daylight look nocturnal .</description>
+      <description>Jacqueline Bisset</description>
     </item>
     
     <item>
@@ -1663,10 +1161,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-11/</guid>
-      <description>Canada and EU sign free trade deal
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-11 16:48 用时：20:05 正确率：90% 错词：19个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 After 7 seven years of negotiation and 7 seven days of at the bulging Belgian region of Wallonia digging that hills their heels in over approving the deal. , the European Union and Canada have finally signed that their landmark free trade agreement. After a short, but possibly in the circumstances, appropriate delay.</description>
+      <description>Canada and EU sign free trade deal</description>
     </item>
     
     <item>
@@ -1675,11 +1170,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-11-10/</guid>
-      <description>爲了準備IELTS雅思英語考試, 此篇文章之後的聽寫計劃盡量加入BBC英音的音頻資料.
-Aleppo&amp;rsquo;s underground orphanage
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-11-10 15:38 用时：21:18 正确率：96% 错词：13个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 The rebel-held part of the city of Aleppo is currently under siege from Russian and Syrian government forces . and, according to the UN Special Envoy, faces total ruined ruin within the next two months. Before the war, Asmar Halabi ran two furniture shops in the city with his father, .</description>
+      <description>Aleppo&amp;rsquo;s underground orphanage</description>
     </item>
     
     <item>
@@ -1688,10 +1179,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-10-13/</guid>
-      <description>Farmed Trout Bred to Fatten Up Fast
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-10-7 18:36 用时：20:18正确率：91% 错词：24个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Half of all fish people eat worldwide now come from fish farms. So farms need to do more to keep up with demand. And If we look to the future, at today&amp;rsquo;s per capital capita fish intake around the world . we will would need to double aquaculture production.</description>
+      <description>Some Malaria Mosquitoes May Prefer Cows to Us</description>
     </item>
     
     <item>
@@ -1700,10 +1188,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-10-7/</guid>
-      <description>Farmed Trout Bred to Fatten Up Fast
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-10-7 18:36 用时：20:18正确率：91% 错词：24个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Half of all fish people eat worldwide now come from fish farms. So farms need to do more to keep up with demand. And If we look to the future, at today&amp;rsquo;s per capital capita fish intake around the world . we will would need to double aquaculture production.</description>
+      <description>Farmed Trout Bred to Fatten Up Fast</description>
     </item>
     
     <item>
@@ -1712,10 +1197,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-10-6/</guid>
-      <description>Silk Road Transported Goods&amp;ndash;and Disease
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-10-6 12:2 用时：68:10 正确率：91% 错词：43个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 For thousand thousands of years, what&amp;rsquo;s called the Silk Road was a group of lands land and sea trade routes that connected the Far East with South Asia, Africa, the Middle East , and southern Europe. Of course, when humans travel , they carry their pathogens with them.</description>
+      <description>Silk Road Transported Goods&amp;ndash;and Disease</description>
     </item>
     
     <item>
@@ -1724,9 +1206,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-08-11/</guid>
-      <description>Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-Inbred Songbirds Croon out of Tune
-提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Just like humans have to learn to talk. Some birds , songbirds aren&amp;rsquo;t born singing . - they have to learn to carry a tune. From So in the beginning , they just bubblebabble. Raissa de Boer, a behavior behavioral ecologist at the Unversity University of Antwerp in Belgium. And they learn from a tweetertutor, so they need an example song in order to learn it.</description>
+      <description>Inbred Songbirds Croon out of Tune</description>
     </item>
     
     <item>
@@ -1735,10 +1215,7 @@ Inbred Songbirds Croon out of Tune
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-8-10/</guid>
-      <description>Married Couples Pack On More Pounds
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-8-10 12:47 用时：25:23 正确率：95% 错词：13个
-  提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Bridget Jonesand , in print ant and on screen, called them the &#34; Smug Marrieds&#34; . - the happy couples that seem seemed to have it all. But maybe the fictional Jones should have called them the &#34; Plump Marrieds&#34; . &#34; Because along with our friend offering couples unbright unbridled bliss.</description>
+      <description>Married Couples Pack On More Pounds</description>
     </item>
     
     <item>
@@ -1747,11 +1224,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 05 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-8-5/</guid>
-      <description>Evolution Ed Defenders Make Rapids Progress in Grand Canyon
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-8-5 15:29 用时：23:29 正确率：89% 错词：23个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点
-So what is does rafting down the Grand Canyon have to do with science education? Ann Reid, the former researcher research biologist and current executive director of the National Center for Science Education. She spoke to me July 7th at the Fern Glen Canyon campsite .</description>
+      <description>Evolution Ed Defenders Make Rapids Progress in Grand Canyon</description>
     </item>
     
     <item>
@@ -1760,10 +1233,7 @@ So what is does rafting down the Grand Canyon have to do with science education?
       <pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-8-4-powerball/</guid>
-      <description>Powerball Lottery Winning Made Inevitable (If Not Easy)
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-8-4 13:10 用时：44:49 正确率：90% 错词：43个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 There is There&amp;rsquo;s a story in the book. , a story about people who took advantage of the law of inevitability to win the lottery. That&amp;rsquo;s mathematician David Hand, talking about his 2014 book , The Improbability Principle: Why Coincidences, Miracles and Rare Events Happen Every Day.</description>
+      <description>Powerball Lottery Winning Made Inevitable (If Not Easy)</description>
     </item>
     
     <item>
@@ -1772,10 +1242,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Wed, 03 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-08-03-gutbacteria/</guid>
-      <description>Fat Gets Gut Bacteria Working against the Waistline
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-8-3 13:55 用时：26:08 正确率：93% 错词：20个
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Think it&amp;rsquo;s your inability to resist cheesecake that&amp;rsquo;s making it tough to fit into your skinny genesjeans? Well, your bacteria may share some of the blame. Because a new study in mice shows that the responsive response of intestinal microbes to a high-fat diet ends up triggering the release of a hormone that makes mammals feel hungry, causing them to eat even more.</description>
+      <description>Fat Gets Gut Bacteria Working against the Waistline</description>
     </item>
     
     <item>
@@ -1784,10 +1251,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-08-02-honey/</guid>
-      <description>正確率：87%
-Your browser does not support the audio element. 
-Bees Rank Pollen by Taste
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Walk through Time Times Square , - you&amp;rsquo;re bumbled bombarded with advertising. And it turns out, a bumblebee , might have a similar feeling, buzzing through a field of flowers. So these flowers , are these build balls of billboards, they&amp;rsquo;re advertising are good. It&amp;rsquo;s a good, this delicious nectar to the worldreward, and bees are very picky shoppers.</description>
+      <description>Bees Rank Pollen by Taste</description>
     </item>
     
     <item>
@@ -1796,9 +1260,7 @@ Bees Rank Pollen by Taste
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-05-31-rmaps/</guid>
-      <description>今日仰視slidify作者Ramnath Vaidyanathan的github頁面發現超酷的rMaps包，抄過來在自己電腦上實驗一下。
-下載  require(devtools) install_github(&#39;ramnathv/rCharts@dev&#39;) install_github(&#39;ramnathv/rMaps&#39;)  繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010  利用以下的R編碼在Rstudio裏實現上圖效果
- library(rMaps) map &amp;lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010)) map map$publish(&amp;quot;Crime Rates (per 100, 000) by State across Years&amp;quot;) # &amp;lt;- 引號中的將會是生成的動態地圖的網頁名稱 ## Loading required package: httr ## Please enter your github username: ***** # &amp;lt;- 在此處輸入你自己的github用戶名 ## Please enter your github password: ***** # &amp;lt;- 在此輸入你自己的github用戶密碼 ## Your gist has been published ## View chart at http://rcharts.</description>
+      <description>想知道別人家都是怎麼畫出絢麗可互動的地圖的嗎？</description>
     </item>
     
     <item>
@@ -1807,7 +1269,7 @@ Bees Rank Pollen by Taste
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-05-27-hello-world/</guid>
-      <description> Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke Dairy Consumption and Risk of Stroke  list 1\(^2\) list 2       </description>
+      <description>test page</description>
     </item>
     
     <item>
@@ -1816,10 +1278,7 @@ Bees Rank Pollen by Taste
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-3-8/</guid>
-      <description>Gut Microbes Lessen Mice Malarial Malaise
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-3-8 | 正确率：89%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 A malaria infection begins when the a mosquito injects the Plasmodium parasite into the blood. But getting sick is not a certain outcome. The vast majority of people really only develop either mild malaria or even a symptomatic asymptomatic infections. Nathan Schmidt, a cellular immunologist at the University of Louisville.</description>
+      <description>Gut Microbes Lessen Mice Malarial Malaise</description>
     </item>
     
     <item>
@@ -1828,10 +1287,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 04 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-3-4/</guid>
-      <description>Opioid Epidemic Gets Treatment Prescription
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-3-4 | 正确率：90%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 We&amp;rsquo;ve been dealing with an epidemic in the United States related to opioids. Wilson Compton, deputy director of the National Institute on Drug Abuse of the National Institutes of Health. He spoke February 12th at the annual meeting of the American Association for the Advancement of Science in Washington, D.</description>
+      <description>Opioid Epidemic Gets Treatment Prescription</description>
     </item>
     
     <item>
@@ -1840,10 +1296,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-3-1/</guid>
-      <description>Super Bowl Sunday&amp;rsquo;s Food Needs Work
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-3-1 | 正确率：88%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 It&amp;rsquo;s nearly game day , and, if you are you&amp;rsquo;re a fan, you&amp;rsquo;ve already set aside your roomy sweat pants, roomiest sweatpants and your own personal Family-size bag of Nacho Cheese Doritos. But if you are you&amp;rsquo;re at all concern concerned about over indulging, overindulging - which, if you live in America.</description>
+      <description>Super Bowl Sunday&amp;rsquo;s Food Needs Work</description>
     </item>
     
     <item>
@@ -1852,10 +1305,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-2-25/</guid>
-      <description>Beet Juice Could Help Body Beat Altitude
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-2-25 | 正确率：90%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 At 14,505 feet, Mount Whitney towers over California&amp;rsquo;s Sierra Nevada range. It&amp;rsquo;s the tallest peak in the lower 48 , - which means that it tracks attracts thousands of weekend warriors every year . - or make that weekend weakened warriors. You see them stabbing staggering along in the narrowrocket , rocky trail, huffing for air, dizzy and exhausted from the low oxygen levels at high elevation.</description>
+      <description>Beet Juice Could Help Body Beat Altitude</description>
     </item>
     
     <item>
@@ -1864,10 +1314,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-2-22/</guid>
-      <description>Suicide Differences by Region Related to Gun Availability
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-2-22 | 正确率：91%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 One of the things we know for sure , in the United States , is that a gun in a the home increases the likelihood that someone in the home will die , in a violent death , - from gun accidents, from a women woman being murdered by a man or in an intimated intimate partner violent violence situation , and particularly , by suicide.</description>
+      <description>Suicide Differences by Region Related to Gun Availability</description>
     </item>
     
     <item>
@@ -1876,10 +1323,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-2-18/</guid>
-      <description>Antioxidant Use Still Small Mixed Bag
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-2-18 | 正确率：89%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Are you gobbling up antioxidants as part of your diet and nutrition regimentregimen? The benefits seems maybemay be, well. It seems surprising, but even after several decades , we don&amp;rsquo;t have a clear answer. There is , there&amp;rsquo;s not, if there is were really cross the wall across-the-board powerful benefits we would&amp;rsquo;ve would have seen it.</description>
+      <description>Antioxidant Use Still Small Mixed Bag</description>
     </item>
     
     <item>
@@ -1888,10 +1332,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-2-2/</guid>
-      <description>Espresso Machines Brew a Microbiome of Their Own
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-2-2 | 正确率：91%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 What&amp;rsquo;s the lively as liveliest part of your kitchen, in terms of harboring bacteria? Is it the cutting board, ? The dish bunch, sponge? Or maybe your coffee maker. coffeemaker? Because even though caffeine has antibacterial effects, it turns out that espresso machines can harbor a whole menagerie of bacteria , - including some pathogenic species , more commonly associated with the toilet.</description>
+      <description>Espresso Machines Brew a Microbiome of Their Own</description>
     </item>
     
     <item>
@@ -1900,10 +1341,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-2-15/</guid>
-      <description>Healthful Diet Switch Helps Even Late in Life
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2016-2-15 | 正确率：90%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Let&amp;rsquo;s say your diet , hasn&amp;rsquo;t been so great. Maybe too much read red meat, especially processed meat. Maybe , too many sugary soft drinks. And maybe , you&amp;rsquo;ve been eating like that for decades. So , what&amp;rsquo;s the point of trying to make some helpful healthful changes now, after the damage has been presumably been done?</description>
+      <description>Healthful Diet Switch Helps Even Late in Life</description>
     </item>
     
     <item>
@@ -1912,10 +1350,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2015-9-18/</guid>
-      <description>Overeating Due to Stress?
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2015-9-18 | 正确率：96%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Stress can make some people (me included) lose our appetite. And other folks find comfort in food. But such behaviors may actually even out in the long term, . Because researchers find that people who change eating patterns when stressed out may actually make up for those not-so-healthy impulses during easier times.</description>
+      <description>Overeating Due to Stress?</description>
     </item>
     
     <item>
@@ -1924,10 +1359,7 @@ Your browser does not support the audio element. 你的瀏覽器不支持音頻�
       <pubDate>Wed, 16 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2015-9-16/</guid>
-      <description>Cosmetic Ads&amp;rsquo; Science Claims Lack Foundation
-Your browser does not support the audio element. 你的瀏覽器不支持音頻播放。請使用chrome科學上網。 
-听写于：2015-9-16 | 正确率：84%
- 提示：红色：错误单词，绿色：补上正确单词，黄色：纠正大小写与标点 Clinically Proven. Break through Breakthrough Technology. Ten Years of Genetic Research. These are phrases you might expect to find in the pages of Scientific American. But these descriptions also show on up in commercials and print ads for cause medicscosmetics. Now one a study found finds that some or - well, make that &amp;ldquo; a lot &amp;ldquo; - of those science-sounding claims are simply not true.</description>
+      <description>Cosmetic Ads&amp;rsquo; Science Claims Lack Foundation</description>
     </item>
     
     <item>

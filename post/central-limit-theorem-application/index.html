@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -346,7 +346,7 @@
         
 
 
-<div id="section" class="section level2">
+<div class="section level2">
 <h2>二項分佈的正態分佈近似</h2>
 <ul>
 <li>假設我們有大量(<span class="math inline">\(n\rightarrow\infty\)</span>)的二項分佈實驗 <span class="math inline">\(X\sim Bin(n, \pi)\)</span></li>
@@ -360,7 +360,7 @@
 </ul></li>
 </ul>
 </div>
-<div id="section-1" class="section level2">
+<div class="section level2">
 <h2>泊松分佈的正態分佈近似</h2>
 <ul>
 <li>假設時間 <span class="math inline">\(t\)</span> 內某事件的發生次數服從泊松分佈 <span class="math inline">\(X\sim Po(\mu)\)</span>。</li>
@@ -376,12 +376,12 @@
 <li>如果我們使用正態分佈來模擬離散變量的分佈，常常需要用到正態分佈模擬的矯正。</li>
 <li>例如：我們如果用正態分佈模擬來計算 <span class="math inline">\(P(X=15)\)</span>，那麼實際上我們應該計算的是 <span class="math inline">\(P(14.5&lt;X&lt;15.5)\)</span>。</li>
 </ul>
-<div id="section-2" class="section level3">
+<div class="section level3">
 <h3>例題</h3>
 <ol style="list-style-type: decimal">
 <li>已知 <span class="math inline">\(X\sim Bin(100,0.5)\)</span>，求 <span class="math inline">\(P(X&gt;60)\)</span></li>
 </ol>
-<div id="section-3" class="section level4">
+<div class="section level4">
 <h4>解</h4>
 <p><span class="math display">\[\begin{aligned}
 \because X&amp;\sim Bin(100, 0.5) \\ \therefore E(X) &amp;=n\pi=50 \\
@@ -403,7 +403,7 @@ P(X&gt;60)  &amp;= 1-P(X\leqslant60) \\
 <li>已知 <span class="math inline">\(X\sim Bin(48, 0.75)\)</span>, 求 <span class="math inline">\(P(30&lt;X&lt;39)\)</span></li>
 </ol>
 </div>
-<div id="section-4" class="section level4">
+<div id="-1" class="section level4">
 <h4>解</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -433,7 +433,7 @@ pnorm((38.5-36)/sqrt(9)) - pnorm((30.5-36)/sqrt(9))</code></pre>
 <li>已知 <span class="math inline">\(X \sim Poisson(30)\)</span> 求 <span class="math inline">\(P(X\leqslant20)\)</span>。</li>
 </ol>
 </div>
-<div id="section-5" class="section level4">
+<div id="-2" class="section level4">
 <h4>解</h4>
 <p><span class="math display">\[\because E(X)=\mu=30, \;Var(X)=\mu=30=(\sqrt{30})^2 \\
  \begin{aligned}
@@ -455,7 +455,7 @@ pnorm((20.5-30)/sqrt(30))</code></pre>
 <li>已知 <span class="math inline">\(X_1, X_2 \stackrel{i.i.d}{\sim} Poi(30)\)</span> 求 <span class="math inline">\(P(X_1+X_2\leqslant40)\)</span>。</li>
 </ol>
 </div>
-<div id="section-6" class="section level4">
+<div id="-3" class="section level4">
 <h4>解</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -479,7 +479,7 @@ pnorm((40.5-60)/sqrt(60))</code></pre>
 </div>
 </div>
 </div>
-<div id="section-7" class="section level2">
+<div class="section level2">
 <h2>兩個連續隨機變量</h2>
 <ul>
 <li><p>假定 <span class="math inline">\(X_1, X_2\)</span> 是兩個連續隨機變量：
@@ -509,7 +509,7 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 \right)\]</span></p></li>
 </ul>
 </div>
-<div id="section-8" class="section level2">
+<div id="-" class="section level2">
 <h2>兩個連續隨機變量 例子：</h2>
 <p>假如要看收縮期血壓 (<span class="math inline">\(SBP\)</span>) 和舒張期血壓 (<span class="math inline">\(DBP\)</span>) 之間的關係：</p>
 <p>下列爲已知條件：</p>
@@ -532,7 +532,7 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 \end{array}
 \right)\]</span></p>
 </div>
-<div id="section-9" class="section level2">
+<div class="section level2">
 <h2>條件分佈和邊緣分佈的概念</h2>
 <ul>
 <li>如果 <span class="math inline">\(\textbf{X}=(X_1, X_2)^T\)</span> 的兩個變量都服從正態分佈；</li>
@@ -544,7 +544,7 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 <li><p>反之亦然。</p></li>
 </ul>
 </div>
-<div id="section-10" class="section level2">
+<div class="section level2">
 <h2>條件分佈和邊緣分佈的例子</h2>
 <p>上面的概念過於抽象，用血壓的例子：</p>
 <p>收縮期血壓和舒張期血壓各自服從正態分佈。那麼可以用上面的概念來寫出已知舒張期血壓時，收縮期血壓的分佈。</p>
@@ -558,7 +558,7 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 <span class="math display">\[Var(SBP|DBP)=15^2(1-0.75^2)=98.4\approx9.92^2&lt;15^2\]</span></p></li>
 <li><p>所以當我們知道了這個人的一部分信息以後，推測他的另一個相關連的變量變得更加準確(<strong>方差變小</strong>)了。</p></li>
 </ul>
-<div id="section-11" class="section level3">
+<div id="-1" class="section level3">
 <h3>例題</h3>
 <p>有 (閒) 人記錄了 <span class="math inline">\(1494\)</span> 名兒童在 <span class="math inline">\(2, 4, 6\)</span> 歲時的腿長度。已知在記錄的這三個年齡時的平均腿長度分別爲 <span class="math inline">\(85 cm, 103cm, 114cm\)</span>。協方差矩陣如下:</p>
 <p><span class="math display">\[\left(
@@ -572,14 +572,14 @@ Var(\textbf{X})=\mathbf{\Sigma}=\left(
 <ol style="list-style-type: decimal">
 <li>求 <span class="math inline">\(2\)</span> 歲時這些兒童的腿長度的邊緣分佈 (marginal distribution)</li>
 </ol>
-<div id="section-12" class="section level4">
+<div id="-4" class="section level4">
 <h4>解</h4>
 <p><span class="math display">\[X_{age=2} \sim N(85, \sigma_{age=2}^2=22.2)\]</span></p>
 <ol start="2" style="list-style-type: decimal">
 <li>求他們 <span class="math inline">\(6\)</span> 歲時腿長度的 <span class="math inline">\(2\)</span> 歲時的條件分佈。(Find the distribution of leg length age 6 conditional on leg length at age 2.)</li>
 </ol>
 </div>
-<div id="section-13" class="section level4">
+<div id="-5" class="section level4">
 <h4>解</h4>
 <p><span class="math inline">\(6\)</span> 歲時和 <span class="math inline">\(2\)</span> 歲時腿長的相關係數 (correlation, <span class="math inline">\(\rho_{6,2}\)</span>) 爲：
 <span class="math display">\[

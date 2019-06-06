@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -346,7 +346,7 @@
         
 
 
-<div id="binomial-distribution" class="section level3">
+<div id="-binomial-distribution" class="section level3">
 <h3>二項分佈的概念 Binomial distribution</h3>
 <p>二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 <span class="math inline">\(n\)</span> 次相互獨立的<a href="https://winterwang.github.io/post/probability2-4/">成功率爲 <span class="math inline">\(\pi\)</span> 的伯努利實驗</a> (<span class="math inline">\(n\)</span> independent Bernoulli trials) 中成功的次數。</p>
 <p>當 <span class="math inline">\(X\)</span> 服從二項分佈，記爲 <span class="math inline">\(X \sim binomial(n, \pi)\)</span> 或<span class="math inline">\(X \sim bin(n, \pi)\)</span>。它的(第 <span class="math inline">\(x\)</span> 次實驗的)概率被定義爲：</p>
@@ -355,7 +355,7 @@ P(X=x) &amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\
        &amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
        &amp; for\;\; x = 0,1,2,\dots,n
 \end{align}\]</span></p>
-<div id="section" class="section level4">
+<div class="section level4">
 <h4>二項分佈的期望和方差</h4>
 <ul>
 <li>期望 <span class="math inline">\(E(X)\)</span>
@@ -382,7 +382,7 @@ Var(X) &amp;= Var(\sum_{i=1}^nX_i) \\
 </ul>
 </div>
 </div>
-<div id="hypergeometric-distribution" class="section level3">
+<div id="-hypergeometric-distribution" class="section level3">
 <h3>超幾何分佈 hypergeometric distribution</h3>
 <p>假設我們從總人數爲 <span class="math inline">\(N\)</span> 的人羣中，採集一個樣本 <span class="math inline">\(n\)</span>。假如已知在總體人羣中(<span class="math inline">\(N\)</span>)有 <span class="math inline">\(M\)</span> 人患有某種疾病。請問採集的樣本 <span class="math inline">\(X=n\)</span> 中患有這種疾病的人，服從怎樣的分佈？</p>
 <ul>
@@ -393,7 +393,7 @@ Var(X) &amp;= Var(\sum_{i=1}^nX_i) \\
 </ul>
 <p><span class="math display">\[P(X=x)=\frac{\binom{M}{x}\binom{N-M}{n-x}}{\binom{N}{n}}\]</span></p>
 </div>
-<div id="section-1" class="section level3">
+<div class="section level3">
 <h3>樂透中獎概率問題：</h3>
 <ul>
 <li>從數字 <span class="math inline">\(1\sim59\)</span> 中選取 <span class="math inline">\(6\)</span> 個任意號碼</li>
@@ -403,7 +403,7 @@ Var(X) &amp;= Var(\sum_{i=1}^nX_i) \\
 <p>從 <span class="math inline">\(59\)</span> 個號碼中隨機取出任意 <span class="math inline">\(6\)</span> 個號碼的方法有 <span class="math inline">\(^{59}C_6\)</span> 種。
 <span class="math display">\[^{59}C_6=\frac{59!}{6!(59-6)!}=45,057,474\]</span></p>
 <p>每次選取六個號碼做爲一組的可能性相同，所以，你買了一組樂透號碼，能中獎的概率就是 <span class="math inline">\(1/45,057,474 = 0.00000002219\)</span>。你還會再去買彩票麼？</p>
-<div id="section-2" class="section level4">
+<div id="-3-" class="section level4">
 <h4>如果我只想中其中的 <span class="math inline">\(3\)</span> 個號碼，概率有多大？</h4>
 <p>用超幾何分佈的概率公式：</p>
 <p><span class="math display">\[\begin{align}
@@ -413,7 +413,7 @@ P(X=3) &amp;= \frac{^6C_3\times ^{53}C_3}{^{59}C_6} \\
 <p>你有 <span class="math inline">\(1\%\)</span> 的可能中獎。換句話說，如果中三個以上的數字算中獎的話，你買的彩票中獎的概率低於 <span class="math inline">\(1\%\)</span>。是不是覺得下次送錢給博彩公司的時候還不如跟我一起喝一杯咖啡划算？</p>
 </div>
 </div>
-<div id="poisson-distribution" class="section level3">
+<div id="-poisson-distribution" class="section level3">
 <h3>泊松分佈 Poisson Distribution</h3>
 <ul>
 <li>當一個事件，在一段時間 (<span class="math inline">\(T\)</span>) 中可能發生的次數是 <span class="math inline">\(\lambda\)</span> 。那麼我們可以認爲，經過時間 <span class="math inline">\(T\)</span>，該時間發生的期望次數是 <span class="math inline">\(E(X)=\lambda T\)</span>。</li>
@@ -444,7 +444,7 @@ P(X=x) &amp;\rightarrow \frac{\mu^x}{x!}e^{-\mu}
 </ul>
 <p>當數據服從泊松分佈時，記爲 <span class="math inline">\(X\sim Poisson(\mu=\lambda T)\;\; or\;\; X\sim Poi(\mu)\)</span></p>
 </div>
-<div id="section-3" class="section level3">
+<div class="section level3">
 <h3>證明泊松分佈的參數特徵：</h3>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(E(X)=\mu\)</span></li>

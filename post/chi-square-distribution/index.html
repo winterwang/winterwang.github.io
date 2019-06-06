@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -346,19 +346,19 @@
         
 
 
-<div id="section" class="section level3">
+<div class="section level3">
 <h3>卡方分佈的期望和方差的證明：</h3>
 <p>當 <span class="math inline">\(X\sim N(0,1)\)</span> 時， <span class="math inline">\(X^2\sim \mathcal{X}_1^2\)</span></p>
 <p>如果 <span class="math inline">\(X_1, \dots, X_n\stackrel{i.i.d}{\sim} N(0,1)\)</span>，
 那麼 <span class="math inline">\(\sum_{i=1}^nX_i^2\sim\mathcal{X}_n^2\)</span></p>
 <p>其中： <span class="math inline">\(\mathcal{X}_n^2\)</span> 表示自由度爲 <span class="math inline">\(n\)</span> 的卡方分佈。</p>
 <p>且 <span class="math inline">\(X_m^2+X_n^2=\mathcal{X}_{m+n}^2\)</span></p>
-<div id="section-1" class="section level4">
+<div class="section level4">
 <h4>卡方分佈的期望：</h4>
 <p><span class="math display">\[E(X_1^2)=Var(X)+[E(X)]^2=1+0=1\]</span></p>
 <p><span class="math display">\[\Rightarrow E(X_n^2)=n\]</span></p>
 </div>
-<div id="section-2" class="section level4">
+<div class="section level4">
 <h4>卡方分佈的方差：</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -366,7 +366,7 @@ Var(X_1^2) &amp;= E(X_1^{2^2}) - E(X_1^2)^2 \\
            &amp;= E(X_1^4)-1
 \end{aligned}
 \]</span></p>
-<div id="ex_14" class="section level5">
+<div id="-ex_14" class="section level5">
 <h5>下面來求 <span class="math inline">\(E(X_1^4)\)</span></h5>
 <p><span class="math display">\[
 \begin{aligned}
@@ -497,9 +497,9 @@ E(X_1^4) &amp;= \frac{3}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}e^{(-\frac{x^2}{2})
   <h3>Related</h3>
   <ul>
     
-    <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
-    
     <li><a href="/post/frequentist-statistical-inference02/">估計和精確度的概念</a></li>
+    
+    <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
     
     <li><a href="/post/central-limit-theory/">偉大的中心極限定理</a></li>
     

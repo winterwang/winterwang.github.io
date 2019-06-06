@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -346,7 +346,7 @@
         
 
 
-<div id="probability-density-function-pdf" class="section level3">
+<div id="-probability-density-function-pdf" class="section level3">
 <h3>概率密度曲線 probability density function， PDF</h3>
 <ul>
 <li><p>一個隨機連續型變量 <span class="math inline">\(X\)</span> 它的性質由一個對應的<strong>概率密度方程 (probability density function, PDF)</strong> 決定。</p></li>
@@ -357,8 +357,13 @@
 <li>這個相關的方程，在 <span class="math inline">\(a\sim b\)</span> 區間內的積分，就是這個連續變量在這個區間內取值的概率。</li>
 </ul>
 <pre class="r"><code># R codes for drawing a standard normal distribution by using ggplot2
-library(ggplot2)
-p &lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
+library(ggplot2)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>p &lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
   stat_function(fun = dnorm)
 p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&quot;) +
   theme(plot.subtitle = element_text(vjust = 1),
@@ -380,7 +385,7 @@ p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(
 <li>方差 <span class="math inline">\(Var(X)=\int_{-\infty}^\infty (x-\mu)^2f(x)dx\)</span></li>
 </ul>
 </div>
-<div id="section" class="section level3">
+<div class="section level3">
 <h3>正態分佈</h3>
 <p>如果一組數據服從正態分佈，我們通常用它的期望（或者叫平均值）<span class="math inline">\(\mu\)</span>，和它的方差 <span class="math inline">\(\sigma^2\)</span>，來描述這組數據。記爲：</p>
 <p><span class="math display">\[X \sim N(\mu, \sigma^2)\]</span></p>
@@ -393,7 +398,7 @@ p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(
 <li><span class="math inline">\(Var(x)=\sigma^2\)</span></li>
 </ul>
 </div>
-<div id="section-1" class="section level3">
+<div class="section level3">
 <h3>標準正態分佈</h3>
 <p>標準正態分佈的期望（或者均值）爲 <span class="math inline">\(0\)</span>，方差爲 <span class="math inline">\(1\)</span></p>
 <ul>

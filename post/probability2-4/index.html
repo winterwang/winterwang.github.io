@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -373,7 +373,7 @@ P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
 \end{align}\]</span></p>
 <p>所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(<span class="math inline">\(P(S)\)</span>)，吸菸的人有9%的概率有哮喘(<span class="math inline">\(P(A|S)\)</span>)，不吸菸的人有7%的概率有哮喘(<span class="math inline">\(P(A|\bar{S})\)</span>)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(<span class="math inline">\(P(S|A)\)</span>)。</p>
 </div>
-<div id="expectation--or-mean---variance" class="section level3">
+<div id="-expectation--or-mean---variance" class="section level3">
 <h3>期望 Expectation (或均值 or mean) 和 方差 Variance</h3>
 <p>期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。
 對於離散型隨機變量 <span class="math inline">\(X\)</span> (discrete random variables)，它的期望被定義爲：</p>
@@ -383,7 +383,7 @@ P(S|A) &amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
 <p><span class="math display">\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]</span></p>
 <p>實際上我們更加常用的是它的另外一個公式：</p>
 <p><span class="math display">\[Var(X)=E(X^2)-E(X)^2\]</span></p>
-<div id="section" class="section level4">
+<div id="-" class="section level4">
 <h4>證明 上面兩個方差公式相等</h4>
 <p><span class="math display">\[\begin{align}
 Var(x)  &amp;= E((X-\mu)^2) \\
@@ -394,7 +394,7 @@ Var(x)  &amp;= E((X-\mu)^2) \\
         &amp;= E(X^2) - E(X)^2
 \end{align}\]</span></p>
 </div>
-<div id="section-1" class="section level4">
+<div class="section level4">
 <h4>方差的性質：</h4>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(Var(X+b)=Var(X)\)</span></li>
@@ -403,7 +403,7 @@ Var(x)  &amp;= E((X-\mu)^2) \\
 </ol>
 </div>
 </div>
-<div id="bernoulli-distribution" class="section level3">
+<div id="-bernoulli-distribution" class="section level3">
 <h3>伯努利分佈 Bernoulli distribution</h3>
 <p>伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 <span class="math inline">\(\pi\)</span>。那麼我們可以計算這個分佈的期望值:</p>
 <p><span class="math display">\[\begin{align}

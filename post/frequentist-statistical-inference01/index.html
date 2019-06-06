@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -346,7 +346,7 @@
         
 
 
-<div id="population-and-sample" class="section level3">
+<div id="-population-and-sample" class="section level3">
 <h3>人羣與樣本 (population and sample)</h3>
 <p>討論樣本時，需考慮下面幾個問題：</p>
 <ol style="list-style-type: decimal">
@@ -357,7 +357,7 @@
 <li>我們從所有可能的人羣中抽樣了嗎？</li>
 </ol>
 </div>
-<div id="sample-and-statistic" class="section level3">
+<div id="-sample-and-statistic" class="section level3">
 <h3>樣本和統計量 (sample and statistic)</h3>
 <p>通常我們在進行實驗或觀察時只是獲得了樣本的數據。而希望從樣本數據去推斷 (inference) 總體（或人羣）的一些特徵。我們也許只是想用樣本的平均值來估計整體人羣的某個特徵的平均值。不管是何種估計和推斷，都是基於對樣本數據的計算，從樣本中獲得想要推斷總體的<strong>統計量 (statistics)</strong>。我們用已知樣本去推斷未知總體的過程就叫做<strong>估計 (estimate)</strong>。這個想要被推斷的總體或人羣的值，被叫做<strong>參數 (parameter)</strong>，常常使用希臘字母來標記。用來估計總體或人羣的，從樣本數據計算得來的統計量，叫做<strong>估計量 (estimator)</strong>。</p>
 <p>所有的統計量，都有<strong>樣本分佈 (sampling distributions，意爲重複無限次取樣後獲得的無限次統計量的分佈)</strong>。推斷的過程歸納如下：</p>
@@ -368,7 +368,7 @@
 <li>一旦可以精確地確認樣本分佈，我們就可以定量地計算出使用步驟2中獲得的統計量估計總體或人羣的參數時的準確度。</li>
 </ol>
 </div>
-<div id="estimation" class="section level3">
+<div id="-estimation" class="section level3">
 <h3>估計 Estimation</h3>
 <p>從樣本的均值，推斷總體或人羣的均值是一種估計。我們的目的是，從已知樣本中計算一個儘可能接近那個未知的總體或人羣參數的值。一個估計量有兩個與生俱來的性質 (properties)：1) 偏倚 (bias); 2) 精確度 (precision)。這兩個性質都可以從樣本分佈和估計量獲得。</p>
 <ol style="list-style-type: decimal">
@@ -378,7 +378,7 @@
 </ol>
 <p>在一些簡單的情況下，通常估計值的選用不言自明（例如均值，或者百分比）。但是在複雜的情況下，我們可能可以有多個不同類型的估計量可以選擇，他們也常常各有利弊，需要我們做出取捨。</p>
 </div>
-<div id="confidence-intervals" class="section level3">
+<div id="-confidence-intervals" class="section level3">
 <h3>信賴區間 confidence intervals</h3>
 <p>從樣本中計算估計量獲得的一個估計值，只是一個<strong>點估計 (point estimate)</strong>。對比之下，信賴區間就是一個對這個點估計的精確度的體現。信賴區間越窄，說明我們對於總體或人羣的參數的可能取值的範圍估計越精確。</p>
 <p>信賴區間通常是成對成對的出現的，即有上限和下限。這樣的一對從樣本數據中計算得來的統計量，同樣也是有樣本分佈的。<strong>每次我們重新從總體或人羣中抽樣，計算獲得的信賴區間都不同，這些信賴區間就組成了信賴區間的樣本分佈。總體和人羣的參數落在這些信賴區間範圍內的概率，就是我們常說的信賴區間的水平（<span class="math inline">\(95\%\)</span>）。</strong> 常用的這個概率值就是 <span class="math inline">\(95\%, 90\%, 99\%\)</span>。</p>

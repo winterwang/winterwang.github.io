@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.53" />
+  <meta name="generator" content="Hugo 0.55.6" />
   <meta name="author" content="王 超辰 (Chaochen Wang)">
   <meta name="description" content="Assistant Professor">
 
@@ -351,7 +351,7 @@
 <p>手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。</p>
 <p>這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。</p>
 <p>今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。</p>
-<div id="covariance" class="section level2">
+<div id="-covariance" class="section level2">
 <h2>協方差 Covariance</h2>
 <p><a href="https://winterwang.github.io/post/probability2-4/">之前我們定義過</a>，兩個獨立連續隨機變量 <span class="math inline">\(X,Y\)</span> 之和的方差 Variance ：</p>
 <p><span class="math display">\[Var(X+Y)=Var(X)+Var(Y)\]</span></p>
@@ -368,11 +368,12 @@ Var(X+Y) &amp;= E[((X+Y)-E(X+Y))^2] \\
 <span class="math display">\[Cov(X,Y) = E[(X-E(X))(Y-E(Y))]\]</span></p>
 <p>所以：</p>
 <p><span class="math display">\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]</span></p>
-<div class="alert alert-note">
-  <p>要記住，協方差只能用於評價<span class="math inline">(X,Y)</span>之間的線性關係 (Linear Association)。</p>
+<p><div class="alert alert-note">
+  
+要記住，協方差只能用於評價<span class="math inline">\(X,Y\)</span>之間的線性關係 (Linear Association)。
 
 </div>
-
+</p>
 <p>以下是協方差 (Covariance) 的一些特殊性質：</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(Cov(X,X)=Var(X)\)</span></li>
@@ -384,7 +385,7 @@ Var(X+Y) &amp;= E[((X+Y)-E(X+Y))^2] \\
 <li>If <span class="math inline">\(X, Y\)</span> are independent. <span class="math inline">\(Cov(X,Y)=0\)</span> <span class="diff_alert">But not vise-versa !</span></li>
 </ol>
 </div>
-<div id="correlation" class="section level2">
+<div id="-correlation" class="section level2">
 <h2>相關 Correlation</h2>
 <ul>
 <li>協方差雖然<span class="math inline">\(Cov(X,Y)\)</span> 的大小很大程度上會被他們各自的單位和波動大小左右。</li>
@@ -392,7 +393,7 @@ Var(X+Y) &amp;= E[((X+Y)-E(X+Y))^2] \\
 <span class="math display">\[Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)SD(Y)}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\]</span></li>
 </ul>
 </div>
-<div id="the-central-limit-theory" class="section level2">
+<div id="-the-central-limit-theory" class="section level2">
 <h2>中心極限定理 the Central Limit Theory</h2>
 <p><span class="diff_add"><strong>如果從人羣中多次選出樣本量爲 <span class="math inline">\(n\)</span> 的樣本，並計算樣本均值, <span class="math inline">\(\bar{X}_n\)</span>。那麼這個樣本均值 <span class="math inline">\(\bar{X}_n\)</span> 的分佈，會隨着樣本量增加 <span class="math inline">\(n\rightarrow\infty\)</span>，而接近正態分佈。</strong></span></p>
 <p>偉大的中心極限定理告訴我們：</p>

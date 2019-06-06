@@ -18,7 +18,7 @@
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
-      <description>Words Expressions Sentences terry2017discontinuous lanza2007proc collins2010latent    Words  discernable [di’sə:nəbl, -’zə:-]  ===== 辞典翻译: discernable ====== adj. 可辨别的；可认识的 ============ 网络释义 ============ -------- discernable --------- 可辨别的 方向 分辨 -- discernable recognizable -- 可辨别的 --- discernable visible ---- 可辨别的  abstinence [’æbstinəns]  ====== 辞典翻译: abstinence ====== n. 节制；节欲；戒酒；禁食 ============ 网络释义 ============ --------- abstinence --------- 节制 禁欲 禁戒 ----- alcohol abstinence ----- 酒戒断 ----- Abstinence theory ------ 节欲论 弃权 忍欲说  exhaustive [iɡ’zɔ:stiv]  ====== 辞典翻译: exhaustive ====== adj.</description>
+      <description>The words and memo useful for the writing of my project</description>
     </item>
     
     <item>
@@ -27,9 +27,7 @@
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/post/2016-05-31-rmaps/</guid>
-      <description>今日仰視slidify作者Ramnath Vaidyanathan的github頁面發現超酷的rMaps包，抄過來在自己電腦上實驗一下。
-下載  require(devtools) install_github(&#39;ramnathv/rCharts@dev&#39;) install_github(&#39;ramnathv/rMaps&#39;)  繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010  利用以下的R編碼在Rstudio裏實現上圖效果
- library(rMaps) map &amp;lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010)) map map$publish(&amp;quot;Crime Rates (per 100, 000) by State across Years&amp;quot;) # &amp;lt;- 引號中的將會是生成的動態地圖的網頁名稱 ## Loading required package: httr ## Please enter your github username: ***** # &amp;lt;- 在此處輸入你自己的github用戶名 ## Please enter your github password: ***** # &amp;lt;- 在此輸入你自己的github用戶密碼 ## Your gist has been published ## View chart at http://rcharts.</description>
+      <description>想知道別人家都是怎麼畫出絢麗可互動的地圖的嗎？</description>
     </item>
     
   </channel>
