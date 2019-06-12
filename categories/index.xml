@@ -7,26 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>thoughts</title>
-      <link>https://winterwang.github.io/categories/thoughts/</link>
-      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <title>diary</title>
+      <link>https://winterwang.github.io/categories/diary/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/thoughts/</guid>
+      <guid>https://winterwang.github.io/categories/diary/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>diary</title>
-      <link>https://winterwang.github.io/categories/diary/</link>
-      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      <title>sorrow</title>
+      <link>https://winterwang.github.io/categories/sorrow/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://winterwang.github.io/categories/diary/</guid>
+      <guid>https://winterwang.github.io/categories/sorrow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thoughts</title>
+      <link>https://winterwang.github.io/categories/thoughts/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/thoughts/</guid>
       <description></description>
     </item>
     
@@ -63,15 +72,6 @@
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/categories/to-do/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sorrow</title>
-      <link>https://winterwang.github.io/categories/sorrow/</link>
-      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/sorrow/</guid>
       <description></description>
     </item>
     
