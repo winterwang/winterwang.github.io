@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 24 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/experience/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>菜鳥的Mac筆記本折騰之路</title>
+      <link>https://winterwang.github.io/post/2019-06-28-macbook/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/2019-06-28-macbook/</guid>
+      <description>Mac筆記本折騰之路</description>
+    </item>
     
     <item>
       <title>蘇格蘭高地7日公路之旅</title>
