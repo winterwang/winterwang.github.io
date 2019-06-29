@@ -5,7 +5,17 @@
     <url>
     
       <loc>https://winterwang.github.io/</loc>
-      <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/categories/</loc>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -15,7 +25,17 @@
     <url>
     
       <loc>https://winterwang.github.io/tags/</loc>
-      <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/categories/diary/</loc>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -25,7 +45,17 @@
     <url>
     
       <loc>https://winterwang.github.io/tags/experience/</loc>
-      <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/categories/thoughts/</loc>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -35,8 +65,17 @@
     <url>
     
       <loc>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
-      <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/post/jichinsai/</loc>
+      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -53,37 +92,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/</loc>
-      <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/diary/</loc>
-      <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://winterwang.github.io/categories/sorrow/</loc>
-      <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/thoughts/</loc>
       <lastmod>2019-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -120,7 +129,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/tags/bayesian/</loc>
+      <loc>https://winterwang.github.io/categories/bayesian/</loc>
       <lastmod>2019-02-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -130,7 +139,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/bayesian/</loc>
+      <loc>https://winterwang.github.io/tags/bayesian/</loc>
       <lastmod>2019-02-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -215,7 +224,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/tags/to-do/</loc>
+      <loc>https://winterwang.github.io/categories/to-do/</loc>
       <lastmod>2018-12-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -225,7 +234,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/to-do/</loc>
+      <loc>https://winterwang.github.io/tags/to-do/</loc>
       <lastmod>2018-12-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -319,7 +328,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/tags/lshtm/</loc>
+      <loc>https://winterwang.github.io/categories/lshtm/</loc>
       <lastmod>2018-07-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -329,7 +338,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/lshtm/</loc>
+      <loc>https://winterwang.github.io/tags/lshtm/</loc>
       <lastmod>2018-07-03T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -767,7 +776,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/tags/conference/</loc>
+      <loc>https://winterwang.github.io/categories/conference/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -777,7 +786,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/conference/</loc>
+      <loc>https://winterwang.github.io/tags/conference/</loc>
       <lastmod>2017-08-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -916,7 +925,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/tags/dictation/</loc>
+      <loc>https://winterwang.github.io/categories/dictation/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -926,7 +935,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/dictation/</loc>
+      <loc>https://winterwang.github.io/tags/dictation/</loc>
       <lastmod>2017-06-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -2012,7 +2021,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/tags/test/</loc>
+      <loc>https://winterwang.github.io/categories/test/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -2022,7 +2031,7 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/test/</loc>
+      <loc>https://winterwang.github.io/tags/test/</loc>
       <lastmod>2016-05-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>

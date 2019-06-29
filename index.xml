@@ -6,8 +6,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>地鎮祭</title>
+      <link>https://winterwang.github.io/post/jichinsai/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/jichinsai/</guid>
+      <description>&lt;p&gt;今日在即將開工建房的土地上，建築公司請來神社的神職人，花了大約一個小時的時間，幫助我們完成了
+地鎮祭的儀式。&lt;/p&gt;
+
+&lt;p&gt;地鎮祭儀式主要是為了祈福接下來的建築過程以及主人家人居住之後的平安與幸福的祈禱儀式。聽說中國農村如果自己土地上蓋房子，也會有相似的儀式來祈求神靈守護。&lt;/p&gt;
+
+&lt;p&gt;本來儀式本身我們並不擔心會有什麼意外的事情發生。是這一週的天氣預報總是雷雨和陰雨不斷。於是家人都很擔心週六的地鎮祭儀式時的天氣，從週一開始每天都在手機查閱天氣情況。還好到了地鎮祭舉行的週六這天，天公作美在早上11點儀式開始前雨停下。我們抵達土地時，神職人也為了以防萬一搭好了臨時擋風遮雨的帳篷。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2019-06-30-jichinsai_files/IMG_20190629_104451.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到神職人已經為我們準備好了供奉的水果蔬菜，清酒，驅邪的食鹽和潔淨的大米：
+&lt;img src=&#34;https://winterwang.github.io/post/2019-06-30-jichinsai_files/IMG_20190629_104416.jpg&#34; alt=&#34;準備就緒&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;之後儀式順利舉行，神職人帶著我們在土地建房的東南西北各個方向上把祭拜後的食鹽和淨米，還有清酒灑在地面上。&lt;/p&gt;
+
+&lt;p&gt;兒子也很聽話地參與了祭拜和祈禱的整個過程：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2019-06-30-jichinsai_files/mmexport1561797204704.jpg&#34; alt=&#34;兒子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2019-06-30-jichinsai_files/mmexport1561797168564.jpg&#34; alt=&#34;還是兒子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;全家一起在未開工的新家地址上第一張合照產生啦：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://winterwang.github.io/post/2019-06-30-jichinsai_files/mmexport1561797153590.jpg&#34; alt=&#34;合照&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;感謝上蒼，我們順利在無風無雨中結束儀式，建築現場負責的工人安排說明了接下來直至我們能夠搬新家之前的流程之後，天又一下子陰沈下來，轉眼又大雨傾盆。&lt;/p&gt;
+
+&lt;p&gt;祝願我們的新家可以平安無事地建成，建成後，也保佑我們會幸福美滿地在這裏繼續我們的生活。封面是從神職人手裏領受的守護。聽說會被一直埋在地基下面，從今天起，保佑這片土地。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>菜鳥的Mac筆記本折騰之路</title>
@@ -8168,21 +8204,6 @@ model {
 &lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;LCA analyses done stratified by men and women;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Prediction model for pancreatic cancer risk in the general Japanese population</title>
-      <link>https://winterwang.github.io/publication/predictionpancreaticgwas/</link>
-      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/predictionpancreaticgwas/</guid>
-      <description>
-
-&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-
-&lt;p&gt;Genome-wide association studies (GWASs) have identified many single nucleotide polymorphisms (SNPs) that are significantly associated with pancreatic cancer susceptibility. We sought to replicate the associations of 61 GWAS-identified SNPs at 42 loci with pancreatic
-cancer in Japanese and to develop a risk model for the identification of individuals at high risk for pancreatic cancer development in the general Japanese population. The model was based on data including directly determined or imputed SNP genotypes for 664 pancreatic cancer case and 664 age- and sex-matched control subjects. Stepwise logistic regression uncovered five GWAS-identified SNPs at five loci that also showed significant associations in our case-control cohort. These five SNPs were included in the risk model and also applied to calculation of the polygenic risk score (PRS). The area under the curve determined with the leave-one-out cross-validation method was 0.63 (95% confidence interval, 0.60–0.66) or 0.61 (0.58–0.64) for versions of the model that did or did not include cigarette smoking and family history of pancreatic cancer in addition to the five SNPs, respectively. Individuals in the lowest and highest quintiles for the PRS had odds ratios of 0.62 (0.42–0.91) and 1.98 (1.42–2.76), respectively, for pancreatic cancer development compared with those in the middle quintile. We have thus developed a risk model for pancreatic cancer that showed moderately good discriminatory ability with regard to differentiation of pancreatic cancer patients from control individuals. Our findings suggest the potential utility of a risk model that incorporates replicated GWAS-identified SNPs and established demographic or environmental factors for the identification of individuals at increased risk for pancreatic cancer development.&lt;/p&gt;
 </description>
     </item>
     
