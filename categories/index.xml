@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sun, 07 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian</title>
+      <link>https://winterwang.github.io/categories/bayesian/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R techniques</title>
+      <link>https://winterwang.github.io/categories/r-techniques/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/r-techniques/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://winterwang.github.io/categories/statistics/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/categories/statistics/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>diary</title>
@@ -36,33 +63,6 @@
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/categories/sorrow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bayesian</title>
-      <link>https://winterwang.github.io/categories/bayesian/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R techniques</title>
-      <link>https://winterwang.github.io/categories/r-techniques/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/r-techniques/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>statistics</title>
-      <link>https://winterwang.github.io/categories/statistics/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/statistics/</guid>
       <description></description>
     </item>
     

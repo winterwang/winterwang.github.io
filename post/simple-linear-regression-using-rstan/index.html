@@ -978,9 +978,9 @@ model {
 </code></pre>
 <p>R代碼如下：</p>
 <pre class="r"><code>library(rstan)</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
 <pre><code>## Loading required package: StanHeaders</code></pre>
-<pre><code>## rstan (Version 2.18.2, GitRev: 2e1f913d3ca3)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## rstan (Version 2.19.2, GitRev: 2e1f913d3ca3)</code></pre>
 <pre><code>## For execution on a local, multicore CPU with excess RAM we recommend calling
 ## options(mc.cores = parallel::detectCores()).
 ## To avoid recompilation of unchanged Stan programs, we recommend calling
@@ -991,8 +991,8 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 1e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.1 seconds.
+## Chain 1: Gradient evaluation took 1.2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.12 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1009,9 +1009,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.030568 seconds (Warm-up)
-## Chain 1:                0.023971 seconds (Sampling)
-## Chain 1:                0.054539 seconds (Total)
+## Chain 1:  Elapsed Time: 0.028607 seconds (Warm-up)
+## Chain 1:                0.054547 seconds (Sampling)
+## Chain 1:                0.083154 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 2).
@@ -1034,15 +1034,15 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.030368 seconds (Warm-up)
-## Chain 2:                0.079919 seconds (Sampling)
-## Chain 2:                0.110287 seconds (Total)
+## Chain 2:  Elapsed Time: 0.031224 seconds (Warm-up)
+## Chain 2:                0.028645 seconds (Sampling)
+## Chain 2:                0.059869 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 8e-06 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 3: Gradient evaluation took 3e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1059,9 +1059,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.04719 seconds (Warm-up)
-## Chain 3:                0.02995 seconds (Sampling)
-## Chain 3:                0.07714 seconds (Total)
+## Chain 3:  Elapsed Time: 0.029029 seconds (Warm-up)
+## Chain 3:                0.022823 seconds (Sampling)
+## Chain 3:                0.051852 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 4).
@@ -1084,9 +1084,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.02759 seconds (Warm-up)
-## Chain 4:                0.024686 seconds (Sampling)
-## Chain 4:                0.052276 seconds (Total)
+## Chain 4:  Elapsed Time: 0.028439 seconds (Warm-up)
+## Chain 4:                0.023076 seconds (Sampling)
+## Chain 4:                0.051515 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: ex3.
@@ -1094,12 +1094,12 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##         mean se_mean   sd    2.5%    25%    50%    75%  97.5% n_eff Rhat
-## mu1    -0.24    0.01 0.83   -1.90  -0.79  -0.23   0.32   1.36  3550    1
-## mu2     1.62    0.02 1.00   -0.29   0.93   1.62   2.28   3.62  3606    1
-## sigma   4.49    0.01 0.46    3.69   4.17   4.44   4.77   5.52  3499    1
-## lp__  -97.74    0.03 1.27 -100.95 -98.33 -97.40 -96.83 -96.33  1896    1
+## mu1    -0.24    0.01 0.80   -1.83  -0.77  -0.23   0.29   1.34  3539    1
+## mu2     1.62    0.02 1.02   -0.38   0.95   1.63   2.28   3.61  3707    1
+## sigma   4.48    0.01 0.47    3.67   4.16   4.45   4.76   5.53  3401    1
+## lp__  -97.75    0.03 1.26 -101.02 -98.31 -97.41 -96.82 -96.32  1744    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jun  6 14:23:50 2019.
+## Samples were drawn using NUTS(diag_e) at Fri Jul 12 00:33:36 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -1109,7 +1109,7 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 <pre class="r"><code>ms &lt;- extract(fit)
 prob &lt;- mean(ms$mu1 &lt; ms$mu2)  #=&gt; 0.932
 prob</code></pre>
-<pre><code>## [1] 0.932</code></pre>
+<pre><code>## [1] 0.92425</code></pre>
 <p>所以可以認爲地一組均值，小於第二組均值的事後概率是93.2%</p>
 <ol start="5" style="list-style-type: decimal">
 <li>如果不能認爲兩組的方差相等的話，模型又該改成什麼樣子？</li>
@@ -1148,8 +1148,8 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 7e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 1: Gradient evaluation took 1.4e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.14 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1166,15 +1166,15 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.028188 seconds (Warm-up)
-## Chain 1:                0.025709 seconds (Sampling)
-## Chain 1:                0.053897 seconds (Total)
+## Chain 1:  Elapsed Time: 0.033263 seconds (Warm-up)
+## Chain 1:                0.028866 seconds (Sampling)
+## Chain 1:                0.062129 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 4e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Gradient evaluation took 5e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1191,15 +1191,15 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.029274 seconds (Warm-up)
-## Chain 2:                0.05258 seconds (Sampling)
-## Chain 2:                0.081854 seconds (Total)
+## Chain 2:  Elapsed Time: 0.036074 seconds (Warm-up)
+## Chain 2:                0.105409 seconds (Sampling)
+## Chain 2:                0.141483 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 8e-06 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 3: Gradient evaluation took 5e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1216,15 +1216,15 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.037706 seconds (Warm-up)
-## Chain 3:                0.02522 seconds (Sampling)
-## Chain 3:                0.062926 seconds (Total)
+## Chain 3:  Elapsed Time: 0.034937 seconds (Warm-up)
+## Chain 3:                0.03105 seconds (Sampling)
+## Chain 3:                0.065987 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 4e-06 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 4: Gradient evaluation took 5e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1241,9 +1241,9 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.029103 seconds (Warm-up)
-## Chain 4:                0.023529 seconds (Sampling)
-## Chain 4:                0.052632 seconds (Total)
+## Chain 4:  Elapsed Time: 0.037299 seconds (Warm-up)
+## Chain 4:                0.033115 seconds (Sampling)
+## Chain 4:                0.070414 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: ex5.
@@ -1251,20 +1251,20 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##          mean se_mean   sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
-## mu1     -0.24    0.02 0.93  -2.07  -0.87  -0.23   0.39   1.62  3671    1
-## mu2      1.64    0.01 0.85  -0.06   1.09   1.63   2.19   3.33  3657    1
-## sigma1   5.12    0.01 0.69   3.98   4.63   5.04   5.53   6.68  3808    1
-## sigma2   3.63    0.01 0.65   2.63   3.16   3.54   3.99   5.15  3226    1
-## lp__   -95.37    0.03 1.44 -98.86 -96.13 -95.04 -94.28 -93.52  1732    1
+## mu1     -0.25    0.02 0.97  -2.15  -0.89  -0.24   0.39   1.71  3914    1
+## mu2      1.64    0.01 0.80   0.11   1.12   1.64   2.18   3.25  4249    1
+## sigma1   5.12    0.01 0.69   3.99   4.64   5.03   5.54   6.70  3525    1
+## sigma2   3.64    0.01 0.65   2.66   3.18   3.54   3.98   5.16  3837    1
+## lp__   -95.32    0.04 1.47 -98.99 -96.03 -94.97 -94.25 -93.51  1603    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jun  6 14:24:28 2019.
+## Samples were drawn using NUTS(diag_e) at Fri Jul 12 00:34:12 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
 <pre class="r"><code>ms &lt;- extract(fit)
 prob &lt;- mean(ms$mu1 &lt; ms$mu2)  #=&gt; 0.93725
 prob</code></pre>
-<pre><code>## [1] 0.93725</code></pre>
+<pre><code>## [1] 0.9365</code></pre>
 </div>
 
       </div>

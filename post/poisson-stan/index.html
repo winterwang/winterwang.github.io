@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="author" content="王 超辰 (Chaochen Wang)">
+  <meta name="description" content="Assistant Professor">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/poisson-stan/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-21867861-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://winterwang.github.io/post/poisson-stan/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Be ambitious">
+  <meta property="og:url" content="https://winterwang.github.io/post/poisson-stan/">
+  <meta property="og:title" content="泊松回歸模型的貝葉斯Stan實現 | Be ambitious">
+  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-07-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-07-11T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>泊松回歸模型的貝葉斯Stan實現 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  <span class="article-header-caption">Thomas Bayes</span>
+</div>
+
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">泊松回歸模型的貝葉斯Stan實現</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2019-07-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Jul 11, 2019
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="https://winterwang.github.io/post/poisson-stan/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/bayesian">Bayesian</a
+    >, 
+    
+    <a href="/categories/r-techniques">R techniques</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e6%b3%8a%e6%9d%be%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%e8%b2%9d%e8%91%89%e6%96%afStan%e5%af%a6%e7%8f%be&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fpoisson-stan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fpoisson-stan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fpoisson-stan%2f&amp;title=%e6%b3%8a%e6%9d%be%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%e8%b2%9d%e8%91%89%e6%96%afStan%e5%af%a6%e7%8f%be"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fpoisson-stan%2f&amp;title=%e6%b3%8a%e6%9d%be%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%e8%b2%9d%e8%91%89%e6%96%afStan%e5%af%a6%e7%8f%be"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e6%b3%8a%e6%9d%be%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%e8%b2%9d%e8%91%89%e6%96%afStan%e5%af%a6%e7%8f%be&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fpoisson-stan%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<div id="TOC">
+<ul>
+<li><a href="#-poisson-">分析目的，數據，和選擇 Poisson 回歸模型的原因</a><ul>
+<li><a>想象模型機制</a></li>
+<li><a>寫下數學模型表達式</a></li>
+<li><a href="#-stan-">把數學模型翻譯成 Stan 模型代碼</a></li>
+<li><a>運行結果的解釋</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="-poisson-" class="section level1">
+<h1>分析目的，數據，和選擇 Poisson 回歸模型的原因</h1>
+<p>我們這裏使用<a href="https://wangcc.me/post/logistic-rstan/">之前擬合貝葉斯邏輯回歸模型</a>時使用的相同的數據來展示如何跑貝葉斯泊松回歸模型。</p>
+<pre class="r"><code>d &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&quot;, sep = &quot;,&quot;, header = T)
+head(d)</code></pre>
+<pre><code>##   PersonID A Score  M  Y
+## 1        1 0    69 43 38
+## 2        2 1   145 56 40
+## 3        3 0   125 32 24
+## 4        4 1    86 45 33
+## 5        5 1   158 33 23
+## 6        6 0   133 61 60</code></pre>
+<p>其中，</p>
+<ul>
+<li><code>PersonID</code>: 是學生的編號；</li>
+<li><code>A</code>, <code>Score</code>: 用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 <code>A</code>，和表示對學習本身是否喜歡的評分 (滿分200)；</li>
+<li><code>M</code>: 過去三個月內，該名學生一共需要上課的總課時數；</li>
+<li><code>Y</code>: 過去三個月內，該名學生實際上出勤的課時數。</li>
+</ul>
+<p>這一次我們希望通過分析泊松回歸來回答「<code>A</code> 和 <code>Score</code> 對總課時數 <code>M</code> 具體有多大的影響？」這個問題。<a href="https://wangcc.me/post/logistic-rstan/">之前擬合貝葉斯邏輯回歸模型</a>時，使用的結果變量是 <code>Y</code>，也就是實際出勤課時數。但是本小節我們用 <code>M</code> 作爲結果變量。因爲總課時數是學生自己選課時的結果，也就是說學生本身的態度（是否喜歡打工，是否熱愛學習），可能本身左右了他/她到底會選多少課。背景知識假設是：喜歡多去打工的學生，選課可能態度消極，總課時數從開始可能就選的少。那麼像總選課時數這樣的非負（計數型）離散變量作爲結果變量的時候，<strong>泊松回歸模型是我們的第一選擇。</strong></p>
+<div class="section level2">
+<h2>想象模型機制</h2>
+<p>如果使用<a href="https://wangcc.me/post/rstan-wonderful-r3/">上上節介紹的多重線性回歸模型</a>，那麼模型的預測變量的分佈便可能取到負數，這樣就不符合實際情況下“總選課時數”是非負（計數型）離散變量這一事實。這就需要把預測變量 <code>A</code> 和 <code>Score</code> 相加的線性模型 <span class="math inline">\((b_1 + b_2A + b_3Score)\)</span>，通過數學轉換限制在非負數範圍。假設平均總課時數是 <span class="math inline">\(\lambda\)</span>，我們認爲它服從均值是 <span class="math inline">\(\lambda\)</span> 的泊松分佈。關於泊松分佈的詳細知識，期望值和方差的推導可以參考<a href="https://wangcc.me/LSHTMlearningnote/poisson.html">學習筆記</a>。另外，非貝葉斯版本的一般性傳統泊松回歸模型可以參照學習筆記的<a href="https://wangcc.me/LSHTMlearningnote/poisson-regression.html">廣義線性回歸的泊松回歸模型章節</a>。</p>
+<p>對泊松回歸模型略有瞭解的話應該很自然地想到，把結果變量限制在非負數範圍的標準鏈接方程是 <span class="math inline">\(\log(\lambda)\)</span>，或者在 Stan 模型中，我們更自然地把線性模型部分寫在指數模型中: <span class="math inline">\(\exp(b_1 + b_2A + b_3Score)\)</span>。</p>
+</div>
+<div class="section level2">
+<h2>寫下數學模型表達式</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda[n] &amp; = \exp(b_1 + b_2A[n] + b_3Score[n]) &amp; n = 1, \dots, N \\
+M[n]       &amp; \sim \text{Poisson}(\lambda[n])     &amp; n = 1, \dots, N
+\end{aligned}
+\]</span></p>
+<p>其中，</p>
+<ul>
+<li><span class="math inline">\(N\)</span>，是該數據中學生的人數；</li>
+<li><span class="math inline">\(n\)</span>，是每名學生的標籤/編號（下標）；</li>
+<li><span class="math inline">\(b_1, b_2, b_3\)</span> 是我們感興趣的參數。</li>
+</ul>
+</div>
+<div id="-stan-" class="section level2">
+<h2>把數學模型翻譯成 Stan 模型代碼</h2>
+<pre><code>data {
+  int N; 
+  int&lt;lower=0, upper=1&gt; A[N]; 
+  real&lt;lower=0, upper=1&gt; Score[N]; 
+  int&lt;lower=0&gt; M[N];
+}
+
+parameters {
+  real b[3]; 
+}
+
+transformed parameters {
+  real lambda[N];
+  for (n in 1:N) {
+    lambda[n] = exp(b[1] + b[2]*A[n] + b[3]*Score[n]);
+  }
+}
+
+model {
+  for (n in 1:N) {
+    M[n] ~ poisson(lambda[n]); 
+  }
+}
+
+generated quantities {
+  int m_pred[N]; 
+  for (n in 1:N) {
+    m_pred[n] = poisson_rng(M[n], q[n]);
+  }
+}</code></pre>
+<p>值得一提的是，在 Stan 中，提供了 <code>poisson_log(x)</code> 分佈函數，其實它等價於使用 <code>poisson(exp(x))</code>。除了更加接近我們熟悉的泊松回歸模型的數學表達式，避免了 <code>exp</code> 指數運算，計算結果穩定。於是我們還可以把上面的模型修改成：</p>
+<pre><code>data {
+  int N; 
+  int&lt;lower=0, upper=1&gt; A[N]; 
+  real&lt;lower=0, upper=1&gt; Score[N]; 
+  int&lt;lower=0&gt; M[N];
+}
+
+parameters {
+  real b[3]; 
+}
+
+transformed parameters {
+  real lambda[N];
+  for (n in 1:N) {
+    lambda[n] = b[1] + b[2]*A[n] + b[3]*Score[n]；
+  }
+}
+
+model {
+  for (n in 1:N) {
+    M[n] ~ poisson_log(lambda[n]); 
+  }
+}
+
+generated quantities {
+  int m_pred[N]; 
+  for (n in 1:N) {
+    m_pred[n] = poisson_log_rng(M[n], q[n]);
+  }
+}</code></pre>
+<p>運行它的代碼如下：</p>
+<pre class="r"><code>library(rstan)</code></pre>
+<pre><code>## Loading required package: StanHeaders</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## rstan (Version 2.19.2, GitRev: 2e1f913d3ca3)</code></pre>
+<pre><code>## For execution on a local, multicore CPU with excess RAM we recommend calling
+## options(mc.cores = parallel::detectCores()).
+## To avoid recompilation of unchanged Stan programs, we recommend calling
+## rstan_options(auto_write = TRUE)</code></pre>
+<pre class="r"><code>data &lt;- list(N=nrow(d), A=d$A, Score=d$Score/200, M=d$M)
+# fit &lt;- stan(file=&#39;model/model5-6.stan&#39;, data=data, seed=1234)
+fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pars = c(&quot;b&quot;, &quot;lambda&quot;))</code></pre>
+<pre><code>## 
+## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 4.3e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.43 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.128123 seconds (Warm-up)
+## Chain 1:                0.123794 seconds (Sampling)
+## Chain 1:                0.251917 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 8e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.121585 seconds (Warm-up)
+## Chain 2:                0.130576 seconds (Sampling)
+## Chain 2:                0.252161 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 7e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.117803 seconds (Warm-up)
+## Chain 3:                0.123413 seconds (Sampling)
+## Chain 3:                0.241216 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 7e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.112146 seconds (Warm-up)
+## Chain 4:                0.136731 seconds (Sampling)
+## Chain 4:                0.248877 seconds (Total)
+## Chain 4:</code></pre>
+<pre class="r"><code>fit</code></pre>
+<pre><code>## Inference for Stan model: model5-6b.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##               mean se_mean   sd    2.5%     25%     50%     75%   97.5%
+## b[1]          3.58    0.00 0.09    3.38    3.51    3.58    3.64    3.76
+## b[2]          0.26    0.00 0.04    0.18    0.24    0.26    0.29    0.35
+## b[3]          0.29    0.00 0.15    0.00    0.20    0.29    0.39    0.59
+## lambda[1]     3.68    0.00 0.05    3.58    3.65    3.68    3.71    3.77
+## lambda[2]     4.05    0.00 0.03    3.98    4.03    4.05    4.08    4.12
+## lambda[3]     3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81
+## lambda[4]     3.97    0.00 0.04    3.88    3.94    3.97    3.99    4.04
+## lambda[5]     4.07    0.00 0.04    3.99    4.04    4.07    4.10    4.15
+## lambda[6]     3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83
+## lambda[7]     3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80
+## lambda[8]     4.05    0.00 0.04    3.99    4.03    4.05    4.08    4.13
+## lambda[9]     3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.86
+## lambda[10]    3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85
+## lambda[11]    4.05    0.00 0.03    3.98    4.02    4.05    4.07    4.11
+## lambda[12]    3.78    0.00 0.03    3.72    3.76    3.78    3.80    3.84
+## lambda[13]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07
+## lambda[14]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80
+## lambda[15]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79
+## lambda[16]    3.98    0.00 0.04    3.91    3.96    3.98    4.01    4.05
+## lambda[17]    3.74    0.00 0.03    3.69    3.72    3.74    3.76    3.80
+## lambda[18]    3.70    0.00 0.04    3.61    3.67    3.70    3.72    3.78
+## lambda[19]    3.85    0.00 0.05    3.74    3.81    3.85    3.88    3.96
+## lambda[20]    4.07    0.00 0.04    3.99    4.04    4.07    4.09    4.15
+## lambda[21]    3.97    0.00 0.04    3.88    3.94    3.97    3.99    4.04
+## lambda[22]    4.00    0.00 0.03    3.93    3.97    4.00    4.02    4.06
+## lambda[23]    3.99    0.00 0.03    3.93    3.97    4.00    4.02    4.06
+## lambda[24]    4.05    0.00 0.03    3.98    4.03    4.05    4.07    4.12
+## lambda[25]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07
+## lambda[26]    4.03    0.00 0.03    3.96    4.01    4.03    4.05    4.09
+## lambda[27]    3.75    0.00 0.03    3.70    3.73    3.75    3.77    3.81
+## lambda[28]    3.75    0.00 0.03    3.70    3.73    3.75    3.77    3.81
+## lambda[29]    3.81    0.00 0.04    3.73    3.78    3.81    3.84    3.89
+## lambda[30]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80
+## lambda[31]    4.08    0.00 0.04    4.00    4.05    4.08    4.11    4.17
+## lambda[32]    3.95    0.00 0.05    3.85    3.91    3.95    3.98    4.04
+## lambda[33]    4.04    0.00 0.03    3.98    4.02    4.04    4.06    4.11
+## lambda[34]    4.02    0.00 0.03    3.96    4.00    4.02    4.04    4.08
+## lambda[35]    3.76    0.00 0.03    3.71    3.74    3.76    3.78    3.82
+## lambda[36]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83
+## lambda[37]    3.99    0.00 0.03    3.93    3.97    3.99    4.02    4.06
+## lambda[38]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79
+## lambda[39]    3.71    0.00 0.04    3.63    3.68    3.71    3.73    3.78
+## lambda[40]    3.71    0.00 0.04    3.63    3.68    3.71    3.73    3.78
+## lambda[41]    3.77    0.00 0.03    3.71    3.75    3.77    3.78    3.82
+## lambda[42]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83
+## lambda[43]    3.75    0.00 0.03    3.70    3.74    3.76    3.77    3.81
+## lambda[44]    3.79    0.00 0.03    3.73    3.77    3.79    3.82    3.86
+## lambda[45]    3.84    0.00 0.05    3.74    3.81    3.84    3.88    3.95
+## lambda[46]    3.73    0.00 0.03    3.67    3.71    3.73    3.75    3.79
+## lambda[47]    3.65    0.00 0.06    3.53    3.61    3.65    3.69    3.77
+## lambda[48]    3.80    0.00 0.04    3.73    3.77    3.80    3.82    3.87
+## lambda[49]    3.72    0.00 0.03    3.66    3.70    3.72    3.74    3.79
+## lambda[50]    3.98    0.00 0.04    3.91    3.96    3.98    4.01    4.05
+## lp__       6896.52    0.04 1.25 6893.33 6895.94 6896.86 6897.45 6897.95
+##            n_eff Rhat
+## b[1]        1373    1
+## b[2]        1797    1
+## b[3]        1422    1
+## lambda[1]   1510    1
+## lambda[2]   2086    1
+## lambda[3]   2476    1
+## lambda[4]   1902    1
+## lambda[5]   1848    1
+## lambda[6]   2477    1
+## lambda[7]   2191    1
+## lambda[8]   2044    1
+## lambda[9]   2274    1
+## lambda[10]  2293    1
+## lambda[11]  2175    1
+## lambda[12]  2431    1
+## lambda[13]  2452    1
+## lambda[14]  2191    1
+## lambda[15]  2139    1
+## lambda[16]  2111    1
+## lambda[17]  2268    1
+## lambda[18]  1632    1
+## lambda[19]  1792    1
+## lambda[20]  1882    1
+## lambda[21]  1902    1
+## lambda[22]  2291    1
+## lambda[23]  2251    1
+## lambda[24]  2130    1
+## lambda[25]  2441    1
+## lambda[26]  2436    1
+## lambda[27]  2385    1
+## lambda[28]  2385    1
+## lambda[29]  2022    1
+## lambda[30]  2243    1
+## lambda[31]  1747    1
+## lambda[32]  1775    1
+## lambda[33]  2245    1
+## lambda[34]  2469    1
+## lambda[35]  2484    1
+## lambda[36]  2490    1
+## lambda[37]  2230    1
+## lambda[38]  2165    1
+## lambda[39]  1739    1
+## lambda[40]  1722    1
+## lambda[41]  2494    1
+## lambda[42]  2477    1
+## lambda[43]  2439    1
+## lambda[44]  2236    1
+## lambda[45]  1811    1
+## lambda[46]  2040    1
+## lambda[47]  1431    1
+## lambda[48]  2199    1
+## lambda[49]  1910    1
+## lambda[50]  2111    1
+## lp__        1212    1
+## 
+## Samples were drawn using NUTS(diag_e) at Fri Jul 12 00:36:58 2019.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).</code></pre>
+</div>
+<div class="section level2">
+<h2>運行結果的解釋</h2>
+<pre><code>...{省略}...
+              mean se_mean   sd    2.5%     25%     50%     75%   97.5% n_eff Rhat
+b[1]          3.58    0.00 0.09    3.38    3.51    3.58    3.64    3.76  1373    1
+b[2]          0.26    0.00 0.04    0.18    0.24    0.26    0.29    0.35  1797    1
+b[3]          0.29    0.00 0.15    0.00    0.20    0.29    0.39    0.59  1422    1
+lambda[1]     3.68    0.00 0.05    3.58    3.65    3.68    3.71    3.77  1510    1
+...{省略}...</code></pre>
+<p>我們把計算獲得的事後概率分佈均值放入前面寫下的數學表達式:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda[n] &amp; = \exp(3.58 + 0.26A[n] + 0.29Score[n]/200) &amp; n = 1, \dots, N \\
+M[n]       &amp; \sim \text{Poisson}(\lambda[n])     &amp; n = 1, \dots, N
+\end{aligned}
+\]</span></p>
+<p>例如說，<code>Score = 150</code> 和 <code>Score = 50</code> 的兩名學生，如果對打工喜好態度相同的話，他們之間選課的總課時數之比爲：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{M_\text{Score = 150}}{M_\text{Score = 50}} &amp; = \frac{\exp(3.58 + 0.26A + 0.29\times\frac{150}{200})}{\exp(3.58 + 0.26A + 0.29\times\frac{50}{200})} \\ 
+&amp; = \exp(0.29\times\frac{150-50}{200}) \approx 1.16
+\end{aligned}
+\]</span></p>
+<p>也就是熱愛學習分數 <code>Score</code> 達到150的人和只有50的人相比，選課總課時數平均多 16%。相似地，喜歡打工 <code>A = 1</code> 的學生和不喜歡打工 <code>A = 0</code> 的學生選課總課時數之比爲 <span class="math inline">\(\exp(0.26)\approx1.30\)</span>。</p>
+</div>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/logistic-rstan2/">Rstan Wonderful R-(5)</a></li>
+    
+    <li><a href="/post/logistic-rstan/">Rstan Wonderful R-(4)</a></li>
+    
+    <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
+    
+    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
+    
+    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://winterwang.github.io/post/construction/"><span
+      aria-hidden="true">&larr;</span> 地基貌似已經完成</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//ccwang.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

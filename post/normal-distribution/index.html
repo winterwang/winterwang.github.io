@@ -354,13 +354,8 @@
 <li>這個相關的方程，在 <span class="math inline">\(a\sim b\)</span> 區間內的積分，就是這個連續變量在這個區間內取值的概率。</li>
 </ul>
 <pre class="r"><code># R codes for drawing a standard normal distribution by using ggplot2
-library(ggplot2)</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang</code></pre>
-<pre class="r"><code>p &lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
+library(ggplot2)
+p &lt;- ggplot(data.frame(x=c(-3,3)), aes(x=x)) +
   stat_function(fun = dnorm)
 p + annotate(&quot;text&quot;, x=2, y=0.3, parse=TRUE, label=&quot;frac(1, sqrt(2*pi)) * e ^(-z^2/2)&quot;) +
   theme(plot.subtitle = element_text(vjust = 1),
