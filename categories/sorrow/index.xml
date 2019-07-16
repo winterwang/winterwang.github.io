@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/categories/sorrow/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>受難者列傳筆記</title>
+      <link>https://winterwang.github.io/post/notes/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/notes/</guid>
+      <description>Victim</description>
+    </item>
     
     <item>
       <title>誰還未覺醒 | Do you hear people sing</title>
@@ -39,15 +48,6 @@
 有責任有自由決定遠景
  這是一個值得銘記的日子。這是一個需要我們所有人都認識到自己所處的世代，要面臨劇變的時刻。
 在那個廣場上，你要麼是王維林，要麼就是那臺坦克。</description>
-    </item>
-    
-    <item>
-      <title>Notes from reading</title>
-      <link>https://winterwang.github.io/post/notes/</link>
-      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/notes/</guid>
-      <description>Victim</description>
     </item>
     
   </channel>

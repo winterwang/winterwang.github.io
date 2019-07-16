@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>受難者列傳筆記</title>
+      <link>https://winterwang.github.io/post/notes/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/notes/</guid>
+      <description>Victim</description>
+    </item>
+    
+    <item>
       <title>泊松回歸模型的貝葉斯Stan實現</title>
       <link>https://winterwang.github.io/post/poisson-stan/</link>
       <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
@@ -147,15 +156,6 @@
       
       <guid>https://winterwang.github.io/post/rstan-wonderful-r/</guid>
       <description>Rstan 學習筆記</description>
-    </item>
-    
-    <item>
-      <title>Notes from reading</title>
-      <link>https://winterwang.github.io/post/notes/</link>
-      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/notes/</guid>
-      <description>Victim</description>
     </item>
     
     <item>
