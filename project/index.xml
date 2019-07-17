@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Understand the time when you eat-chrononutrition</title>
+      <link>https://winterwang.github.io/project/chronon/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/project/chronon/</guid>
+      <description>We applied unsupervised learning technique on the NDNS RP dataset.</description>
+    </item>
     
     <item>
       <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>

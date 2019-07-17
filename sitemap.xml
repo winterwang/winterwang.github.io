@@ -5,7 +5,7 @@
     <url>
     
       <loc>https://winterwang.github.io/</loc>
-      <lastmod>2019-07-16T00:00:00+00:00</lastmod>
+      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -14,8 +14,8 @@
     
     <url>
     
-      <loc>https://winterwang.github.io/categories/</loc>
-      <lastmod>2019-07-16T00:00:00+00:00</lastmod>
+      <loc>https://winterwang.github.io/project/</loc>
+      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -25,6 +25,35 @@
     <url>
     
       <loc>https://winterwang.github.io/tags/</loc>
+      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/project/chronon/</loc>
+      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/tags/chrononutrition/</loc>
+      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://winterwang.github.io/categories/</loc>
       <lastmod>2019-07-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -499,16 +528,6 @@
     
       <loc>https://winterwang.github.io/project/lshtmlearningnote/</loc>
       <lastmod>2017-11-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/project/</loc>
-      <lastmod>2017-11-14T00:00:00+00:00</lastmod>
-      <priority>0</priority>
     </url>
     
   
