@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Japan on Be ambitious</title>
+    <link>https://winterwang.github.io/tags/japan/</link>
+    <description>Recent content in Japan on Be ambitious</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
+    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://winterwang.github.io/tags/japan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>沖繩旅行小記</title>
+      <link>https://winterwang.github.io/post/okinawa-trip/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/post/okinawa-trip/</guid>
+      <description>來日本第8個年頭，一次也未去過沖繩實在是有些說不過去</description>
+    </item>
+    
+  </channel>
+</rss>

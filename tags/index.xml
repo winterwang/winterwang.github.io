@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Japan</title>
+      <link>https://winterwang.github.io/tags/japan/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/japan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experience</title>
+      <link>https://winterwang.github.io/tags/experience/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>偶爾感慨</title>
+      <link>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>chrononutrition</title>
@@ -27,24 +54,6 @@
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/sorrow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>experience</title>
-      <link>https://winterwang.github.io/tags/experience/</link>
-      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/experience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>偶爾感慨</title>
-      <link>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
-      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
     </item>
     
