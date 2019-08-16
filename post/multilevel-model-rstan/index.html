@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="author" content="王 超辰 (Chaochen Wang)">
+  <meta name="description" content="Assistant Professor">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/multilevel-model-rstan/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-21867861-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://winterwang.github.io/post/multilevel-model-rstan/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Be ambitious">
+  <meta property="og:url" content="https://winterwang.github.io/post/multilevel-model-rstan/">
+  <meta property="og:title" content="等級線性回歸模型的 Rstan 貝葉斯實現 | Be ambitious">
+  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-08-16T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-08-16T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>等級線性回歸模型的 Rstan 貝葉斯實現 | Be ambitious</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Be ambitious</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#slides">
+            
+            <span>Presentations/slides</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  <span class="article-header-caption">Thomas Bayes</span>
+</div>
+
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">等級線性回歸模型的 Rstan 貝葉斯實現</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2019-08-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Fri, Aug 16, 2019
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="https://winterwang.github.io/post/multilevel-model-rstan/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/bayesian">Bayesian</a
+    >, 
+    
+    <a href="/categories/r-techniques">R techniques</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e7%ad%89%e7%b4%9a%e7%b7%9a%e6%80%a7%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%20Rstan%20%e8%b2%9d%e8%91%89%e6%96%af%e5%af%a6%e7%8f%be&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmultilevel-model-rstan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fmultilevel-model-rstan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmultilevel-model-rstan%2f&amp;title=%e7%ad%89%e7%b4%9a%e7%b7%9a%e6%80%a7%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%20Rstan%20%e8%b2%9d%e8%91%89%e6%96%af%e5%af%a6%e7%8f%be"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fmultilevel-model-rstan%2f&amp;title=%e7%ad%89%e7%b4%9a%e7%b7%9a%e6%80%a7%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%20Rstan%20%e8%b2%9d%e8%91%89%e6%96%af%e5%af%a6%e7%8f%be"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e7%ad%89%e7%b4%9a%e7%b7%9a%e6%80%a7%e5%9b%9e%e6%ad%b8%e6%a8%a1%e5%9e%8b%e7%9a%84%20Rstan%20%e8%b2%9d%e8%91%89%e6%96%af%e5%af%a6%e7%8f%be&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fmultilevel-model-rstan%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<div id="TOC">
+<ul>
+<li><a href="#-multilevelmixed-effect-regression-model">多層(等級)線性回歸模型/混合效應模型 multilevel/mixed effect regression model</a><ul>
+<li><a>適用於等級線性回歸模型的數據</a></li>
+<li><a>確認數據分佈</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="-multilevelmixed-effect-regression-model" class="section level2">
+<h2>多層(等級)線性回歸模型/混合效應模型 multilevel/mixed effect regression model</h2>
+<p>關於等級線性回歸的基本知識和概念，請參考<a href="https://wangcc.me/LSHTMlearningnote/Hierarchical.html">讀書筆記58-60章節</a>。簡單來說，等級線性回歸通過給數據內部可能存在或者已知存在的結構或者層級增加隨機截距或者隨機斜率的方式來輔助解釋組間差異和組內的差異。</p>
+<div class="section level3">
+<h3>適用於等級線性回歸模型的數據</h3>
+<p>本章節使用的數據是四家大公司40名社員的年齡和年收入數據：</p>
+<pre class="r"><code>d &lt;- read.csv(file=&#39;../../static/files/data-salary-2.txt&#39;)
+d</code></pre>
+<pre><code>##     X   Y KID
+## 1   7 457   1
+## 2  10 482   1
+## 3  16 518   1
+## 4  25 535   1
+## 5   5 427   1
+## 6  25 603   1
+## 7  26 610   1
+## 8  18 484   1
+## 9  17 508   1
+## 10  1 380   1
+## 11  5 453   1
+## 12  4 391   1
+## 13 19 559   1
+## 14 10 453   1
+## 15 21 517   1
+## 16 12 553   2
+## 17 17 653   2
+## 18 22 763   2
+## 19  9 538   2
+## 20 18 708   2
+## 21 21 740   2
+## 22  6 437   2
+## 23 15 646   2
+## 24  4 422   2
+## 25  7 444   2
+## 26 10 504   2
+## 27  2 376   2
+## 28 15 522   3
+## 29 27 623   3
+## 30 14 515   3
+## 31 18 542   3
+## 32 20 529   3
+## 33 18 540   3
+## 34 11 411   3
+## 35 26 666   3
+## 36 22 641   3
+## 37 25 592   3
+## 38 28 722   4
+## 39 24 726   4
+## 40 22 728   4</code></pre>
+<ul>
+<li><code>X</code>: 社員年齡減去23獲得的數據（23歲是大部分人大學畢業入職時的年齡）</li>
+<li><code>Y</code>: 年收入（萬日元）</li>
+<li><code>KID</code>: 公司編號</li>
+</ul>
+<p>我們認爲，年收入 <code>Y</code>，是基本平均年收入和隨機誤差（服從均值爲零，方差是 <span class="math inline">\(\sigma^2\)</span> 的正態分佈）之和。且基本平均年收入和年齡成正比（年功序列型企業）。但是呢，因爲不同的公司入職時的基本收入可能不同，且可能隨着年齡增加而增長薪水的速度可能也不一樣。那麼由於不同公司所造成的差異，可以被認爲是組間差異。</p>
+</div>
+<div class="section level3">
+<h3>確認數據分佈</h3>
+<p>這次分析的目的是要瞭解「每個公司<code>KID</code>內隨着年齡的增加而增長的薪水幅度是多少」，那麼我們要在結果報告中體現的就是每家公司的基本年收入，新入職時的年收入，以及隨着年齡增長而上升的薪水的事後分佈。</p>
+<p>我們先來看把四家公司職員放在一起時的整體圖形：</p>
+<pre class="r"><code>library(ggplot2)
+
+d$KID &lt;- as.factor(d$KID)
+res_lm &lt;- lm(Y ~ X, data=d)
+coef &lt;- as.numeric(res_lm$coefficients)
+
+p &lt;- ggplot(d, aes(X, Y, shape=KID))
+p &lt;- p + theme_bw(base_size=18)
+p &lt;- p + geom_abline(intercept=coef[1], slope=coef[2], size=2, alpha=0.3)
+p &lt;- p + geom_point(size=2)
+p &lt;- p + scale_shape_manual(values=c(16, 2, 4, 9))
+p &lt;- p + labs(x=&#39;X (age-23)&#39;, y=&#39;Y (10,000 Yen/year)&#39;)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig8-1"></span>
+<img src="/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-1-1.png" alt="年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。" width="80%" />
+<p class="caption">
+Figure 1: 年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。
+</p>
+</div>
+<p>從總體的散點圖 <a href="#fig:fig8-1">1</a> 來看，似乎年收入確實是隨着年齡增長而呈現直線增加的趨勢。但是公司編號 <code>KID = 4</code> 的三名社員薪水似乎是在同一水平的並無明顯變化。這一點可以把四家公司社員的數據分開來看更加清晰:</p>
+<pre class="r"><code>p &lt;- ggplot(d, aes(X, Y, shape=KID))
+p &lt;- p + theme_bw(base_size=20)
+p &lt;- p + geom_abline(intercept=coef[1], slope=coef[2], size=2, alpha=0.3)
+p &lt;- p + facet_wrap(~KID)
+p &lt;- p + geom_line(stat=&#39;smooth&#39;, method=&#39;lm&#39;, se=FALSE, size=1, color=&#39;black&#39;, linetype=&#39;31&#39;, alpha=0.8)
+p &lt;- p + geom_point(size=3)
+p &lt;- p + scale_shape_manual(values=c(16, 2, 4, 9))
+p &lt;- p + labs(x=&#39;X (age-23)&#39;, y=&#39;Y (10,000 Yen/year)&#39;)
+p</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:fig8-2"></span>
+<img src="/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-2-1.png" alt="年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。" width="80%" />
+<p class="caption">
+Figure 2: 年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。
+</p>
+</div>
+</div>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/poisson-stan/">泊松回歸模型的貝葉斯Stan實現</a></li>
+    
+    <li><a href="/post/logistic-rstan2/">Rstan Wonderful R-(5)</a></li>
+    
+    <li><a href="/post/logistic-rstan/">Rstan Wonderful R-(4)</a></li>
+    
+    <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
+    
+    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://winterwang.github.io/post/entrance-done/"><span
+      aria-hidden="true">&larr;</span> 房子還是只有地基</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//ccwang.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

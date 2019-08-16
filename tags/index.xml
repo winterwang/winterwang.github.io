@@ -7,15 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://winterwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Bayesian</title>
+      <link>https://winterwang.github.io/tags/bayesian/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Medical Statistics</title>
+      <link>https://winterwang.github.io/tags/medical-statistics/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://winterwang.github.io/tags/medical-statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Japan</title>
       <link>https://winterwang.github.io/tags/japan/</link>
-      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/japan/</guid>
       <description></description>
@@ -24,7 +42,7 @@
     <item>
       <title>experience</title>
       <link>https://winterwang.github.io/tags/experience/</link>
-      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/experience/</guid>
       <description></description>
@@ -33,7 +51,7 @@
     <item>
       <title>偶爾感慨</title>
       <link>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
-      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
@@ -54,24 +72,6 @@
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://winterwang.github.io/tags/sorrow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bayesian</title>
-      <link>https://winterwang.github.io/tags/bayesian/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Medical Statistics</title>
-      <link>https://winterwang.github.io/tags/medical-statistics/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/tags/medical-statistics/</guid>
       <description></description>
     </item>
     
@@ -211,7 +211,7 @@
     </item>
     
     <item>
-      <title>60s science</title>
+      <title>60s Science</title>
       <link>https://winterwang.github.io/tags/60s-science/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
       
