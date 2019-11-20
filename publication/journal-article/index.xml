@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Be Ambitious</title>
+    <link>https://wangcc.me/publication/journal-article/</link>
+      <atom:link href="https://wangcc.me/publication/journal-article/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Publications</title>
+      <link>https://wangcc.me/publication/journal-article/</link>
+    </image>
+    
+    <item>
+      <title>Day-Time Patterns of Carbohydrate Intake in Adults by Non-Parametric Multi-Level Latent Class Analysis—Results from the UK National Diet and Nutrition Survey (2008/09–2015/16)</title>
+      <link>https://wangcc.me/publication/journal-article/ch_ndnsrp/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/ch_ndnsrp/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;This study aims at combining time and quantity of carbohydrate (CH) intake in the definition of eating patterns in UK adults and investigating the association of the derived patterns with type 2 diabetes (T2D). The National Diet and Nutrition Survey (NDNS) Rolling Program included 6155 adults in the UK. Time of the day was categorized into 7 pre-defined time slots: 6–9 am, 9–12 noon, 12–2 pm, 2–5 pm, 5–8 pm, 8–10 pm, and 10 pm–6 am. Responses for CH intake were categorized into: no energy intake, CH &amp;lt;50% or ≥50% of total energy. Non-parametric multilevel latent class analysis (MLCA) was applied to identify eating patterns of CH consumption across day-time, as a novel method accounting for the repeated measurements of intake over 3–4 days nested within individuals. Survey-designed multivariable regression was used to assess the associations of CH eating patterns with T2D. Three CH eating day patterns (low, high CH percentage and regular meal CH intake day) emerged from 24,483 observation days; based on which three classes of CH eaters were identified and characterized as: low (28.1%), moderate (28.8%) and high (43.1%) CH eaters. On average, low-CH eaters consumed the highest amount of total energy intake (7985.8 kJ) and had higher percentages of energy contributed by fat and alcohol, especially after 8 pm. Moderate-CH eaters consumed the lowest amount of total energy (7341.8 kJ) while they tended to have their meals later in the day. High-CH eaters consumed most of their carbohydrates and energy earlier in the day and within the time slots of 6–9 am, 12–2 pm and 5–8 pm, which correspond to traditional mealtimes. The high-CH eaters profile had the highest daily intake of CH and fiber and the lowest intake of protein and fat. Low-CH eaters had greater odds than high-CH eaters of having T2D in self-reported but not in previously undiagnosed diabetics. Further research using prospective longitudinal studies is warranted to ascertain the direction of causality in the association of CH patterns with type 2 diabetes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Figure3colored.png&#34; alt=&#34;&#34; /&gt;
+The compositions (%) and absolute (kJ) energy consumption within each time slot by individual level carbohydrate eating classes: A, low carbohydrate eaters (LCE); B, moderate carbohydrate eaters (MCE); C, high carbohydrate eaters (HCE).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prediction model for pancreatic cancer risk in the general Japanese population</title>
+      <link>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Genome-wide association studies (GWASs) have identified many single nucleotide polymorphisms (SNPs) that are significantly associated with pancreatic cancer susceptibility. We sought to replicate the associations of 61 GWAS-identified SNPs at 42 loci with pancreatic
+cancer in Japanese and to develop a risk model for the identification of individuals at high risk for pancreatic cancer development in the general Japanese population. The model was based on data including directly determined or imputed SNP genotypes for 664 pancreatic cancer case and 664 age- and sex-matched control subjects. Stepwise logistic regression uncovered five GWAS-identified SNPs at five loci that also showed significant associations in our case-control cohort. These five SNPs were included in the risk model and also applied to calculation of the polygenic risk score (PRS). The area under the curve determined with the leave-one-out cross-validation method was 0.63 (95% confidence interval, 0.60–0.66) or 0.61 (0.58–0.64) for versions of the model that did or did not include cigarette smoking and family history of pancreatic cancer in addition to the five SNPs, respectively. Individuals in the lowest and highest quintiles for the PRS had odds ratios of 0.62 (0.42–0.91) and 1.98 (1.42–2.76), respectively, for pancreatic cancer development compared with those in the middle quintile. We have thus developed a risk model for pancreatic cancer that showed moderately good discriminatory ability with regard to differentiation of pancreatic cancer patients from control individuals. Our findings suggest the potential utility of a risk model that incorporates replicated GWAS-identified SNPs and established demographic or environmental factors for the identification of individuals at increased risk for pancreatic cancer development.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
+      <link>https://wangcc.me/publication/journal-article/hpylorimeta/</link>
+      <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/hpylorimeta/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Changing trends in the prevalence of H. pylori infection in the general population over time are thought to be the main driving force behind the declining gastric cancer mortality in Japan. However, whether the prevalence of H. pylori infection itself shows a birth-cohort pattern needs to be corroborated. We performed a systematic review of studies that reported the prevalence of H. pylori infection among Japanese individuals. Meta-regression was conducted in the framework of a generalized additive mixed model (GAMM) to account for heterogeneity in the prevalence of H. pylori infection as a function of birth year. The prevalence of H. pylori infection confirmed a clear birth cohort pattern: the predicted prevalence (%, 95% CI) was 60.9 (56.3-65.4), 65.9 (63.9-67.9), 67.4 (66.0-68.7), 64.1 (63.1-65.1), 59.1 (58.2-60.0), 49.1 (49.0-49.2), 34.9 (34.0-35.8), 24.6 (23.5-25.8), 15.6 (14.0-17.3), and 6.6 (4.8-8.9) among those who were born in the year 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, and 2000, respectively. The present study demonstrated a clear birth-cohort pattern of H. pylori infection in the Japanese population. The decreased prevalence of H. pylori infection in successive generations should be weighed in future gastric cancer control programs.&lt;/p&gt;
+
+&lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;table-of-risk-of-bias-diagnosis-click-to-see-the-table-http-rpubs-com-winterwang-riskofbias&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/riskofbias&#34; target=&#34;_blank&#34;&gt;Table of risk of bias diagnosis. (click to see the table)&lt;/a&gt;&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
+      <link>https://wangcc.me/publication/journal-article/okuda/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/okuda/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Helicobacter pylori infection is associated with gastric cancer; thus, early diagnosis and treatment are crucial. Since &lt;em&gt;H. pylori&lt;/em&gt; infection in adolescents or young adults shows few symptoms, screening tests are necessary for this population. In this study, the accuracy of the rapid urine-&lt;em&gt;H. pylori&lt;/em&gt; antibody (u-HpAb) test was evaluated and compared to that of urine and serum &lt;em&gt;H. pylori&lt;/em&gt; enzyme-linked immunosorbent assays (u-HpELISA and s-HpELISA, respectively) in junior high school students.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;All 1,225 students attending the junior high schools in Sasayama city were invited to participate in this study. Urine and blood samples were assayed for anti-&lt;em&gt;H. pylori&lt;/em&gt; immunoglobulin G antibodies, and rapid u-HpAb was performed by three investigators independently. When the judgment of all investigators was in accordance, a positive or negative result was defined. Discrepant judgment was defined as an undetermined result.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In total, 187 students participated in this study and provided both urine and blood samples. Three students showed undetermined results with rapid u-HpAb. Excluding these results, the positivity rate of rapid u-HpAb was 3.3% (&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;184&lt;/sub&gt;), whereas that for u-HpELISA and s-HpELISA was 4.8% (&lt;sup&gt;10&lt;/sup&gt;&amp;frasl;&lt;sub&gt;187&lt;/sub&gt;) and 5.9% (&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;187&lt;/sub&gt;), respectively. Using s-HpELISA and u-HpELISA as the standards, the sensitivity, specificity, positive predictive value, and negative predictive value of rapid u-HpAb were 85.7%, 100%, 100%, and 99.4%, respectively when excluding the undetermined results of rapid u-HpAb.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The rapid urine-HpAb test had excellent specificity but relatively low sensitivity.
+This article is protected by copyright. All rights reserved.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
+      <link>https://wangcc.me/publication/journal-article/palau/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/palau/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
+      <link>https://wangcc.me/publication/journal-article/jaccmatsunaga/</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/jaccmatsunaga/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Background and aims&lt;/strong&gt; Coronary heart disease (CHD) and stroke have common risk factors, but some of these differ in the magnitude or direction of associations between CHD and stroke. We assessed whether the impact of each risk factor differed between CHD and stroke mortality in Asians.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt; In total, 104,910 subjects aged 40–79 years without histories of cancer, CHD and stroke at baseline were followed between 1988 and 2009. Competing-risks analysis was used to test for differences in the associations of each risk factor with two endpoints (CHD and stroke). Population attributable fractions (PAFs) were also calculated for these endpoints to estimate the population impact of each risk factor.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt; During a median 19.1-year follow-up, 1554 died from CHD and 3163 from stroke. The association of hypertension with CHD was similar to that with stroke in terms of the magnitude and direction (multivariable-adjusted hazard ratio for CHD: 1.63 vs. stroke: 1.73 in men and 1.70 vs. 1.66 in women). Conversely, the magnitude of these associations differed for smoking (CHD: 1.95 vs. stroke: 1.23 in men and 2.45 vs. 1.35 in women) and diabetes (1.49 vs. 1.09 in men and 2.08 vs. 1.39 in women). The highest PAF for CHD was caused by smoking in men and by hypertension in women. That for stroke was caused by hypertension in both sexes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusions&lt;/strong&gt; Hypertension associations and PAFs were consistent between CHD and stroke, but not for other risk factors. These findings may be useful for optimizing public health intervention strategies.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
+      <link>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</link>
+      <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Colorectal cancer is the third most common cancer worldwide, and many risk factors for colorectal cancer have been established. However, it remains uncertain whether psychological stress contributes to the onset of colorectal cancer. Therefore, we conducted a large-scale prospective cohort study to confirm the association between perceived stress and colorectal cancer incidence. We identified 680 cases of colon cancer and 330 cases of rectal cancer during a maximum of 21-year follow-up of 61,563 Japanese men and women. Cox regression analysis adjusted for potential confounders revealed a significant association of perceived stress with rectal cancer incidence but not with colon cancer incidence. This finding is partly consistent with that from only one previous study that addressed an association between perceived stress and the risk of colorectal cancer. However, studies on this topic are sparse and warrant further exploration.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
+      <link>https://wangcc.me/publication/journal-article/steppalau/</link>
+      <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/steppalau/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;We aimed to investigate the prevalence and predictors of diabetes and prediabetes among adults in Palau. We used data of 1915 adults, aged 25 to 64 years, who participated in the World Health Organization’s (WHO) STEPwise Approach to Risk Factor Surveillance (STEPS) study in Palau. Information on behavioral risk factors of NCDs and physical and biochemical measurements were obtained using standard methods of the WHO. The diagnosis of diabetes and prediabetes was based on the recent American Diabetes Association criteria. Predictors of the prevalence of diabetes and prediabetes were identified using multinomial logistic regression analysis. The overall age-standardized prevalence of prediabetes and diabetes were 40.4% (43.6% for men, 37.4% for women) and 17.7% (18.6% for men, 17% for women), respectively. Old age, overall obesity (high BMI), central obesity (large waist circumference or waist-hip ratio), hypertension and hypertriglyceridemia were significant predictors of prediabetes and/or diabetes. Diabetes occurred at a younger age in “obese” individuals than that of their “non-obese” counterparts. We confirmed that prediabetes and diabetes are highly prevalent in Palau affecting 40% and 18% adults, respectively. Introducing public health interventions to reduce and prevent obesity as early as possible could prove useful to curb the problem.&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
+      <link>https://wangcc.me/publication/journal-article/esophageal/</link>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/esophageal/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;h3 id=&#34;purpose&#34;&gt;PURPOSE:&lt;/h3&gt;
+
+&lt;p&gt;The extremely high incidence of esophageal cancer in certain rural areas of China has prompted significant intellectual curiosity and research efforts both in China and abroad.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;METHODS:&lt;/h3&gt;
+
+&lt;p&gt;We summarize the research progress over the past several decades in high-risk areas (Linxian, Cixian, Shexian, and Yanting) based on literature research and our field trip (2012-2013).&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;RESULTS:&lt;/h3&gt;
+
+&lt;p&gt;Considerable progress in clarifying the environmental risk factors and pathogenesis of esophageal cancer in high-risk areas has been achieved over the past several decades. Epidemiologic evidence suggests that carcinogen exposure and nutritional deficiency, rather than smoking and drinking, may be the major risk factors for esophageal cancer in the Taihang Mountains region, where the incidence of esophageal cancer is among the highest in the world. Two genome-wide association studies have identified variants in PLCE1 at 10q23 that are significantly associated with esophageal cancer risk. Recent whole-exome studies have revealed a comprehensive mutation pattern, in which the C&amp;gt;T transition is the predominant mutation type.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusions&#34;&gt;CONCLUSIONS:&lt;/h3&gt;
+
+&lt;p&gt;Despite extensive research, the main causative factors that contribute to esophageal cancer in high-risk areas have not yet been elucidated. Challenges in this research area include determining the causative role of nitrosamine, identifying other potential carcinogens, and conducting fruitful international collaborative studies based on a multidisciplinary approach. Increased international collaboration will contribute to a better understanding of the etiology of esophageal cancer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
+      <link>https://wangcc.me/publication/journal-article/jaccbreast/</link>
+      <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/jaccbreast/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Breast cancer is the most common cancer in women. However, it remains unproven whether psychological factors have an influence on breast cancer incidence. In our earlier study, subjects possessing two personality traits, decisiveness and “ikigai” (a Japanese word meaning something that makes one’s life worth living), showed a significantly lower risk of developing breast cancer, although no psychological factors have been convincingly demonstrated to have an influence on breast cancer development in other studies. Therefore, we conducted this follow-up analysis to confirm the association between breast cancer incidence and psychological traits, using the final dataset of a large-scale prospective cohort study in Japan. We identified 209 cases of incident breast cancer out of a maximum 21-year follow-up of 29,098 Japanese women. Cox proportional hazard regression analysis, adjusted for the same potential confounders used in our previous study, did not reveal any significant relationships between breast cancer incidence and four psychological traits: having “ikigai”, decisiveness, ease of anger arousal, and perceived stress. Our finding is consistent with previous studies, and suggests that the psychological traits are unlikely to be an important risk factor for breast cancer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
+      <link>https://wangcc.me/publication/journal-article/jaccseaweed/</link>
+      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/jaccseaweed/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Excess intake of iodine is a suspected risk factor for thyroid cancer. Previous epidemiological research from Japan reported that daily intake of seaweed was associated with a four-fold higher risk in postmenopausal women, whereas others reported a null association. A major source of iodine intake in Japan is from edible seaweeds, and it is reported to be among the highest in the world. We examined the association between seaweed intake frequency and the risk of thyroid cancer in women in the Japan Collaborative Cohort Study followed from 1988 to 2009. Seaweed intake, together with other lifestyle-related information was collected using a self-administered questionnaire at baseline. Seaweed intake frequency was categorized as follows: 1–2 times/week or less, 3–4 times/week, and almost daily. Hazard ratios and the 95% confidence intervals of thyroid cancer incidence according to seaweed intake frequency were estimated using Cox proportional hazards regression. During 447 876 person-years of follow-up (n=35 687), 94 new cases of thyroid cancer were identified. The crude incidence rate was 20.9 per 100 000 person-years. The hazard ratio of thyroid cancer in women who consumed seaweed daily compared with women who ate it 1–2 times/week or less was 1.15 (95% confidence interval: 0.69–1.90, P for trend=0.59). Further analyses did not indicate any association between seaweed intake and the risk of thyroid cancer on statistically adjusting for potential confounding variables as well as on stratification by menopausal status. The present study did not find an association between seaweed intake and thyroid cancer incidence in premenopausal or in postmenopausal women.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
+      <link>https://wangcc.me/publication/journal-article/fhdm2/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/fhdm2/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
+
+&lt;p&gt;To investigate differences in the association of parental history of diabetes with the risk of type 2 diabetes mellitus (T2DM) in the offspring according to the sex of the parent and the offspring&amp;rsquo;s body weight.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods:&lt;/h3&gt;
+
+&lt;p&gt;A prospective cohort study of 4446 middle-aged non-diabetic Japanese men and women were followed in Aichi Prefecture, central Japan, from 2002 to 2011. Subjects were categorized by their self-reported parental history of diabetes (&amp;ldquo;no parental history,&amp;rdquo; &amp;ldquo;father only,&amp;rdquo; &amp;ldquo;mother only,&amp;rdquo; and &amp;ldquo;both&amp;rdquo;). The association of parental history of diabetes and incidence in the offspring was examined according to overweight status adjusted for age, sex, birth weight, smoking, alcohol consumption, physical activity, total energy intake, body mass index, and number of metabolic syndrome components.&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results:&lt;/h3&gt;
+
+&lt;p&gt;During follow-up (median 8.9 years), 277 subjects developed T2DM. Parental history of diabetes was positively associated with T2DM incidence. However, stratified analysis by overweight status revealed that only maternal history was associated with increased T2DM incidence in non-overweight subjects (hazard ratio=2.35, 95% confidence interval: 1.41-3.91). While in overweight subjects, paternal history was significantly associated with higher T2DM incidence (hazard ratio=1.98, 95% confidence interval: 1.19-3.28).&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions:&lt;/h3&gt;
+
+&lt;p&gt;Our results suggest that parental history of diabetes mellitus is associated with the incidence of T2DM in offspring differently according to the sex of the affected parent and the offspring&amp;rsquo;s body weight.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
+      <link>https://wangcc.me/publication/journal-article/bfskip/</link>
+      <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/bfskip/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
+
+&lt;p&gt;Skipping breakfast has been suspected as a risk factor for type 2 diabetes (T2DM), but the associations are not entirely consistent across ethnicities or sexes, and the issue has not been adequately addressed in the Japanese population.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods:&lt;/h3&gt;
+
+&lt;p&gt;We followed 4631 participants (3600 men and 1031 women) in a work-site cohort of participants aged 35–66 years in 2002 through 2011 for T2DM development. Frequency of eating breakfast was self-reported and was subsequently dichotomized to breakfast skippers, who eat breakfast 3–5 times/week or less, and to eaters. Cox proportional hazards models were used to adjust for potential confounding factors, including dietary factors, smoking and other lifestyles, body mass index (BMI), and fasting blood glucose (FBG) at baseline.&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results:&lt;/h3&gt;
+
+&lt;p&gt;During 8.9 years of follow-up, 285 T2DM cases (231 men and 54 women) developed. Compared to participants who reported eating breakfast every day, maximally-adjusted hazard ratios and 95% confidence intervals (CI) of those with the frequency of almost every day and 3–5, 1–2, and 0 days/week were: 1.06 (95% CI, 0.73–1.53), 2.07 (95% CI, 1.20–3.56), 1.37 (95% CI, 0.82–2.29), and 2.12 (95% CI, 1.19–3.76), respectively. In a dichotomized analysis, breakfast skipping was positively associated with T2DM incidence (maximally-adjusted hazard ratio 1.73; 95% CI, 1.24–2.42). The positive associations were found in both men and women, current and non-current smokers, normal weight and overweight (BMI ≥25 kg/m&lt;sup&gt;2&lt;/sup&gt;), and normal glycemic status and impaired fasting glycemic status (FBG 110 to &lt;126 mg/dL) individuals at baseline (Ps for interaction all &gt;0.05).&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions:&lt;/h3&gt;
+
+&lt;p&gt;The present study in middle-aged Japanese men and women suggests that skipping breakfast may increase the risk of T2DM independent of lifestyles and baseline levels of BMI and FBG.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Smoking and Diabetes: Is the Association Mediated by Adiponectin, Leptin, or C-reactive Protein?</title>
+      <link>https://wangcc.me/publication/journal-article/smmd/</link>
+      <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/smmd/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; Although the association between cigarette smoking and risk of type 2 diabetes is well established, its mechanisms are yet to be clarified. This study examined the possible mediating effects of adiponectin, leptin, and C-reactive protein (CRP) concentrations on the smoking-diabetes association.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt; Between 2002 and 2011, we followed 3338 Japanese workers, aged 35–66 years, who were enrolled in the second Aichi workers’ cohort study. We used multivariable-adjusted Cox regression models to determine the hazard ratios and respective 95% confidence intervals (CIs) of the association between smoking status and risk of diabetes. A multiple mediation model with bootstrapping was used to estimate the magnitude and the respective bias-corrected (BC) 95% CIs of the indirect effects of smoking on diabetes through the three biomarkers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt; Relative to never smokers, the risk of diabetes was significantly elevated in current (hazard ratio 1.75, 95% CI 1.25–2.46) and ex-smokers (hazard ratio 1.54, 95% CI 1.07–2.22). The indirect effects of smoking on diabetes through adiponectin levels were statistically significant among light (point estimate 0.033, BC 95% CI 0.005–0.082), moderate (point estimate 0.044, BC 95% CI 0.010–0.094), and heavy smokers (point estimate 0.054, BC 95% CI 0.013–0.113). In contrast, neither the indirect effects of smoking on diabetes through leptin nor CRP levels were significant, as the corresponding BC 95% CIs included zero.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusions:&lt;/strong&gt; In our analysis, adiponectin concentration appeared to partially mediate the effect of smoking on diabetes, while leptin and CRP levels did not.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Milk drinking and mortality: findings from the Japan Collaborative Cohort Study</title>
+      <link>https://wangcc.me/publication/journal-article/milk/</link>
+      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/milk/</guid>
+      <description>
+
+&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
+
+&lt;h4 id=&#34;background&#34;&gt;BACKGROUND:&lt;/h4&gt;
+
+&lt;p&gt;Findings regarding the association between milk consumption and all-cause mortality reported by studies carried out in Western populations have been inconsistent. However, no studies have been conducted in Japan on this issue. The present study aimed to investigate the association of milk drinking with all-cause, cardiovascular, and cancer mortality in Japan.&lt;/p&gt;
+
+&lt;h4 id=&#34;methods&#34;&gt;METHODS:&lt;/h4&gt;
+
+&lt;p&gt;The data were obtained from the Japan Collaborative Cohort (JACC) study. A total of 94 980 Japanese adults aged 40-79 years who had no history of cancer, stroke, or chronic cardiovascular diseases were followed between 1988 and 2009. Multivariable-adjusted hazard ratios (HRs) and 95% confidence intervals (CIs) of mortalities were assessed using a Cox proportional hazard regression model and taking the lowest milk consumption group as the reference.&lt;/p&gt;
+
+&lt;h4 id=&#34;results&#34;&gt;RESULTS:&lt;/h4&gt;
+
+&lt;p&gt;During a median of 19 years of follow-up, there were 21 775 deaths (28.8% and 35.3% from cardiovascular diseases and cancer, respectively). Drinking milk 1-2 times a month was associated with lower all-cause mortality in men compared to those who never drank milk (multivariable-adjusted HR 0.92; 95% CI, 0.85-0.99). In women, those who drank 3-4 times a week also had a lower mortality risk compared with those who never drank milk (HR 0.91; 95% CI 0.85-0.98). Inverse associations between drinking milk and mortality from cardiovascular diseases and cancer were found only in men.&lt;/p&gt;
+
+&lt;h4 id=&#34;conclusions&#34;&gt;CONCLUSIONS:&lt;/h4&gt;
+
+&lt;p&gt;Drinking milk at least 1-2 times a month was associated with lower all-cause mortality in men compared to never drinking milk. An inverse association was also found between drinking milk and mortality from both cardiovascular diseases and cancer. However, lower all-cause mortality in women was found only in those who drank milk 3-4 times/week.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
+      <link>https://wangcc.me/publication/journal-article/globalobesity/</link>
+      <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/globalobesity/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Although the global prevalence of both the overweight and obese is on the rise, there are variations among regions or countries, and sexes. Approximately half or more than half of the population are overweight/obese defined as body mass index $\geqslant$ 25 $kg/m^2$in the Americas (61.1%), Europe (54.8%), and Eastern Mediterranean (46.0%) according to the World Health Organization, while a much lower prevalence is observed in Africa (26.9%), South-East Asia (13.7%), and the Western Pacific (25.4%). Females are more likely to be overweight/obese in the Eastern Mediterranean, Africa, South-East Asia and the majority of countries in the Americas and Western Pacific but not in the most of the countries in Europe. These region-sex-ethnicity differences in prevalence may be a clue to the causes of the obesity epidemic. Epidemiological studies done in the USA, Europe, and Asia found that higher BMI was significantly associated with increased incidence of coronary artery disease (CAD) and ischemic stroke, but the association with hemorrhagic stroke incidence was not always consistent. The association of BMI with CAD and ischemic stroke was generally independent of known mediators, which would indicate the importance of controlling or preventing overweight/obesity for the prevention of cardiovascular disease.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Independent association of liver fat accumulation with insulin resistance.</title>
+      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+
+&lt;p&gt;To examine the association of intrahepatic fat with homeostasis model assessment-insulin resistance (HOMA-IR), a marker of insulin resistance, in Japanese adults, and whether intrahepatic fat is associated with insulin resistance independent of waist circumference and other measures of obesity.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+
+&lt;p&gt;Fifty-three individuals aged 37–69 were studied. Spectrum obtained using a 3-T magnetic resonance imager was analysed with LCModel to quantify intrahepatic fat. Blood levels of insulin, glucose and other biochemical markers were obtained after 8 h or more fasting. Percent body fat was estimated by a bioelectrical impedance analyzer. HOMA-IR and intrahepatic fat content were log-transformed in the analysis.&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;We found a positive correlation between intrahepatic fat and HOMA-IR, which was independent of the anthropometric measures of obesity. In contrast, significant and positive correlations of body mass index, percent body fat, and waist circumference with HOMA-IR were largely explained by their associations with intrahepatic fat. Intrahepatic fat was positively associated with alanine transaminase and triglycerides even after adjustment for HOMA-IR.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Intrahepatic fat was associated with insulin resistance independent of age, sex, and measures of obesity in Japanese adults. Hypertriglyceridemia and liver injury may directly occur subsequent to intrahepatic fat accumulation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers.</title>
+      <link>https://wangcc.me/publication/journal-article/uemuradietary/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/uemuradietary/</guid>
+      <description>
+
+&lt;h2 id=&#34;要-約&#34;&gt;要 約&lt;/h2&gt;
+
+&lt;h3 id=&#34;目的&#34;&gt;目的:&lt;/h3&gt;
+
+&lt;p&gt;アメリカ心臓協会(AHA)は、心血管疾患による死亡率を 10 年間で 20%減少させることを目標として、心血管健康度(AHA 指標)を 2010 年に定めた。本研究の目的は、日本人の一集団において、AHA 指標の中の食事・栄養素摂取に関する 5 項目と健診成績との関連を調べることである。&lt;/p&gt;
+
+&lt;h3 id=&#34;方法および結果&#34;&gt;方法および結果:&lt;/h3&gt;
+
+&lt;p&gt;2002 年に 35-66 歳の愛知県内自治体職員 3,446 人に、簡易型自記式食事歴法質問票を用いて食事調査を実施した。AHA 指標の中で食事・栄養素摂取に関して定められた野菜・果物、魚介類、食物繊維の豊富な全粒穀物、食塩、清涼飲料水の 5 項目の各摂取量に基づいて対象者を三群に分けた。野菜・果物、魚介類は摂取量の最も多い第 3 三分位、食塩、清涼飲料水は最も少ない第 1 三分位を「良好な摂取状況」とみなした。食物繊維の豊富な全粒穀物は玄米・胚芽米・麦・雑穀を「いつも食べる」を「良好な摂取状況」とみなした。これら 5 項目について「良好な摂取状況」の達成項目数別の人数(割合)は、0 項目が 537 人(15.6%)、1 項目が1,453 人(42.2%)、2 項目が 1,029 人(29.9%)、3 項目が 365 人(10.6%)、4 項目以上が 62 人(1.8%)であった。この 5 項目の三分位による摂取量と健診成績との関連性を、性、年齢、喫煙歴、1 週間の運動日数、肉体労働の有無、アルコール摂取量、食事・栄養素摂取項目を調整して検討した。その結果、野菜・果物摂取量は body mass index(BMI)と負の関連、魚介類摂取量は中性脂肪(TG)と負の関連、HDL コレステロール(HDLC)、血糖(PG)と正の関連、食塩摂取量は TG と有意な正の関連、清涼飲料水摂取量は BMI、拡張期血圧(DBP)、総コレステロール(TC)、LDL コレステロール、TG、PG と有意な正の関連を示した。しかし、BMI を調整すると、魚介類と TG、HDLC、PG 以外の上記関連は統計学的有意性が消失した。食物繊維の豊富な全粒穀物と検査値との間には有意な関連は認められなかった。食事・栄養素摂取に関する指標の達成項目数と検査値との関連については、達成項目数が多い群ほど、BMI、TG が有意に低く、HDLCが有意に高くなる量・反応関係が認められたが、TG や HDLC との関連は BMI で調整すると有意性が消失した。&lt;/p&gt;
+
+&lt;h3 id=&#34;結論&#34;&gt;結論:&lt;/h3&gt;
+
+&lt;p&gt;本研究は一勤労者集団を対象としたものであるが、我が国においても、食事・栄養素摂取に関する AHA
+指標と血圧及び脂質代謝異常との間に有意な関連がみられた。特に魚介類と清涼飲料水の摂取は複数の検査項目の異常と有意な関連を認めたが、そのうち清涼飲料水の摂取との関連は肥満を介することが示唆された。今後、我が国の生活習慣病予防対策を立案する際には、魚介類の摂取不足および清涼飲料水の摂取過多に関連する病態にも着目する必要があると考えられた。&lt;/p&gt;
+
+&lt;h4 id=&#34;キーワード-アメリカ心臓協会-心血管疾患-食事-健診-清涼飲料水-魚介類&#34;&gt;キーワード:アメリカ心臓協会,心血管疾患,食事,健診,清涼飲料水,魚介類&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Positive association between high‐sensitivity C‐reactive protein and incidence of type 2 diabetes mellitus in Japanese workers: 6‐year follow‐up</title>
+      <link>https://wangcc.me/publication/journal-article/crpdm2/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/crpdm2/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
+
+&lt;p&gt;Elevated high-sensitivity C-reactive protein (hs-CRP), a marker of low-grade systemic inflammation, may be involved in the etiology of type 2 diabetes mellitus (T2DM). However, whether inflammation precedes development of T2DM independent of cigarette smoking and obesity remains to be confirmed.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods:&lt;/h3&gt;
+
+&lt;p&gt;We studied 4213 civil servants in a local government in Japan aged 35-66 years at baseline in 2002, who donated blood samples and were followed 6 years. Hazard ratios (HR) of T2DM according to the hs-CRP quartiles [range Q1: 0.02-0.18 (reference), Q2: 0.18-0.33, Q3: 0.33-0.67 and Q4: 0.67-9.62 mg/L) were estimated by Cox proportional hazards model adjusted for gender, age, body mass index, alcohol intake, smoking status (current, past and never), number of cigarettes per day, physical activity, family history of diabetes (Model 1) and variables in Model 1 + glucose (Model 2).&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results:&lt;/h3&gt;
+
+&lt;p&gt;The geometric mean [95% confidence interval (CI)] of hs-CRP was 0.36 mg/L (0.34-0.37). During the follow-up, 156 new T2DM cases were confirmed. In total sample, Model 2 HRs (95% CIs) for hs-CRP quartiles Q2-Q4 compared with Q1 were 0.69 (0.36-1.26), 1.47 (0.91-2.39) and 1.78 (1.10-2.88), respectively (p for linear trend = 0.014). Stratified analysis revealed that a statistically significant association was observed only in normal weight non-current smokers with Model 2 HRs (CIs) being 0.79 (0.29-2.17), 2.63 (1.25-5.56) and 3.19 (1.49-6.86) for Q2-Q4 compared with Q1, respectively (p for linear trend = 0.0006). The relationship did not change materially after further adjusting for log-homeostasis model assessment or exclusion of past smokers.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
+
+&lt;p&gt;These findings imply that higher hs-CRP itself or existence of chronic systemic inflammation precedes onset of T2DM independent of obesity and smoking.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
+      <link>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</link>
+      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
+
+&lt;p&gt;We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods:&lt;/h3&gt;
+
+&lt;p&gt;Middle-aged male subjects who drank less than 46 g/day alcohol (n=40) were studied. H1 magnetic resonance spectroscopy was used to quantify liver fat content, (3T, Siemens MR, TE=30 ms). Volume of interest was selected in the right liver lobe with a size of 4×4×4 cm. The spectrogram was analyzed by LCModel.&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results:&lt;/h3&gt;
+
+&lt;p&gt;Mean age and body mass index were 62.5 years and 24.5 kg/m&lt;sup&gt;2&lt;/sup&gt; . The geometric mean and 95% confidence interval of C3 (mg/dl) in the lowest, medium, and highest liver fat tertile were 96.5 (92.8, 100.5), 111.1 (104.6, 115.6), 112.2 (106.7, 117.9), respectively after adjustment for age, body mass index, smoking status, alcohol intake and blood FFA level (one-way ANCOVA p=0.008, linear p=0.010).&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
+
+&lt;p&gt;We found a linear and positive relationship between C3 and liver fat content. Present findings may implicate hepatocyte injury already present with accumulation of triacylglycerol.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

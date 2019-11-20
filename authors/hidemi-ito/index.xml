@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hidemi Ito | Be Ambitious</title>
+    <link>https://wangcc.me/authors/hidemi-ito/</link>
+      <atom:link href="https://wangcc.me/authors/hidemi-ito/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hidemi Ito</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Hidemi Ito</title>
+      <link>https://wangcc.me/authors/hidemi-ito/</link>
+    </image>
+    
+    <item>
+      <title>Prediction model for pancreatic cancer risk in the general Japanese population</title>
+      <link>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Genome-wide association studies (GWASs) have identified many single nucleotide polymorphisms (SNPs) that are significantly associated with pancreatic cancer susceptibility. We sought to replicate the associations of 61 GWAS-identified SNPs at 42 loci with pancreatic
+cancer in Japanese and to develop a risk model for the identification of individuals at high risk for pancreatic cancer development in the general Japanese population. The model was based on data including directly determined or imputed SNP genotypes for 664 pancreatic cancer case and 664 age- and sex-matched control subjects. Stepwise logistic regression uncovered five GWAS-identified SNPs at five loci that also showed significant associations in our case-control cohort. These five SNPs were included in the risk model and also applied to calculation of the polygenic risk score (PRS). The area under the curve determined with the leave-one-out cross-validation method was 0.63 (95% confidence interval, 0.60–0.66) or 0.61 (0.58–0.64) for versions of the model that did or did not include cigarette smoking and family history of pancreatic cancer in addition to the five SNPs, respectively. Individuals in the lowest and highest quintiles for the PRS had odds ratios of 0.62 (0.42–0.91) and 1.98 (1.42–2.76), respectively, for pancreatic cancer development compared with those in the middle quintile. We have thus developed a risk model for pancreatic cancer that showed moderately good discriminatory ability with regard to differentiation of pancreatic cancer patients from control individuals. Our findings suggest the potential utility of a risk model that incorporates replicated GWAS-identified SNPs and established demographic or environmental factors for the identification of individuals at increased risk for pancreatic cancer development.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

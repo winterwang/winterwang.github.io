@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kazumasa Yamagishi | Be Ambitious</title>
+    <link>https://wangcc.me/authors/kazumasa-yamagishi/</link>
+      <atom:link href="https://wangcc.me/authors/kazumasa-yamagishi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kazumasa Yamagishi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 06 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Kazumasa Yamagishi</title>
+      <link>https://wangcc.me/authors/kazumasa-yamagishi/</link>
+    </image>
+    
+    <item>
+      <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
+      <link>https://wangcc.me/publication/journal-article/jaccmatsunaga/</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/jaccmatsunaga/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Background and aims&lt;/strong&gt; Coronary heart disease (CHD) and stroke have common risk factors, but some of these differ in the magnitude or direction of associations between CHD and stroke. We assessed whether the impact of each risk factor differed between CHD and stroke mortality in Asians.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt; In total, 104,910 subjects aged 40–79 years without histories of cancer, CHD and stroke at baseline were followed between 1988 and 2009. Competing-risks analysis was used to test for differences in the associations of each risk factor with two endpoints (CHD and stroke). Population attributable fractions (PAFs) were also calculated for these endpoints to estimate the population impact of each risk factor.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt; During a median 19.1-year follow-up, 1554 died from CHD and 3163 from stroke. The association of hypertension with CHD was similar to that with stroke in terms of the magnitude and direction (multivariable-adjusted hazard ratio for CHD: 1.63 vs. stroke: 1.73 in men and 1.70 vs. 1.66 in women). Conversely, the magnitude of these associations differed for smoking (CHD: 1.95 vs. stroke: 1.23 in men and 2.45 vs. 1.35 in women) and diabetes (1.49 vs. 1.09 in men and 2.08 vs. 1.39 in women). The highest PAF for CHD was caused by smoking in men and by hypertension in women. That for stroke was caused by hypertension in both sexes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusions&lt;/strong&gt; Hypertension associations and PAFs were consistent between CHD and stroke, but not for other risk factors. These findings may be useful for optimizing public health intervention strategies.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiroshi Fukatsu | Be Ambitious</title>
+    <link>https://wangcc.me/authors/hiroshi-fukatsu/</link>
+      <atom:link href="https://wangcc.me/authors/hiroshi-fukatsu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hiroshi Fukatsu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Hiroshi Fukatsu</title>
+      <link>https://wangcc.me/authors/hiroshi-fukatsu/</link>
+    </image>
+    
+    <item>
+      <title>Independent association of liver fat accumulation with insulin resistance.</title>
+      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
+
+&lt;p&gt;To examine the association of intrahepatic fat with homeostasis model assessment-insulin resistance (HOMA-IR), a marker of insulin resistance, in Japanese adults, and whether intrahepatic fat is associated with insulin resistance independent of waist circumference and other measures of obesity.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+
+&lt;p&gt;Fifty-three individuals aged 37–69 were studied. Spectrum obtained using a 3-T magnetic resonance imager was analysed with LCModel to quantify intrahepatic fat. Blood levels of insulin, glucose and other biochemical markers were obtained after 8 h or more fasting. Percent body fat was estimated by a bioelectrical impedance analyzer. HOMA-IR and intrahepatic fat content were log-transformed in the analysis.&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;We found a positive correlation between intrahepatic fat and HOMA-IR, which was independent of the anthropometric measures of obesity. In contrast, significant and positive correlations of body mass index, percent body fat, and waist circumference with HOMA-IR were largely explained by their associations with intrahepatic fat. Intrahepatic fat was positively associated with alanine transaminase and triglycerides even after adjustment for HOMA-IR.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Intrahepatic fat was associated with insulin resistance independent of age, sex, and measures of obesity in Japanese adults. Hypertriglyceridemia and liver injury may directly occur subsequent to intrahepatic fat accumulation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
+      <link>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</link>
+      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
+
+&lt;p&gt;We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods:&lt;/h3&gt;
+
+&lt;p&gt;Middle-aged male subjects who drank less than 46 g/day alcohol (n=40) were studied. H1 magnetic resonance spectroscopy was used to quantify liver fat content, (3T, Siemens MR, TE=30 ms). Volume of interest was selected in the right liver lobe with a size of 4×4×4 cm. The spectrogram was analyzed by LCModel.&lt;/p&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results:&lt;/h3&gt;
+
+&lt;p&gt;Mean age and body mass index were 62.5 years and 24.5 kg/m&lt;sup&gt;2&lt;/sup&gt; . The geometric mean and 95% confidence interval of C3 (mg/dl) in the lowest, medium, and highest liver fat tertile were 96.5 (92.8, 100.5), 111.1 (104.6, 115.6), 112.2 (106.7, 117.9), respectively after adjustment for age, body mass index, smoking status, alcohol intake and blood FFA level (one-way ANCOVA p=0.008, linear p=0.010).&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
+
+&lt;p&gt;We found a linear and positive relationship between C3 and liver fat content. Present findings may implicate hepatocyte injury already present with accumulation of triacylglycerol.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
