@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aichi on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/aichi/</link>
-    <description>Recent content in Aichi on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/aichi/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Aichi | Be Ambitious</title>
+    <link>https://wangcc.me/tags/aichi/</link>
+      <atom:link href="https://wangcc.me/tags/aichi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Aichi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Aichi</title>
+      <link>https://wangcc.me/tags/aichi/</link>
+    </image>
     
     <item>
-      <title>Aichi Workers&#39; Cohort Study | 愛知職域コホート研究</title>
-      <link>https://winterwang.github.io/project/aichi/</link>
+      <title>Aichi Workers&#39; Cohort Study</title>
+      <link>https://wangcc.me/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/project/aichi/</guid>
-      <description>A cohort study of cardiovascular disease in a worksite in Japan</description>
+      <guid>https://wangcc.me/project/aichi/</guid>
+      <description></description>
     </item>
     
   </channel>

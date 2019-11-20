@@ -303,12 +303,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/conference/</loc>
+    <loc>https://wangcc.me/tags/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/conference/</loc>
+    <loc>https://wangcc.me/categories/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -425,6 +425,16 @@
   <url>
     <loc>https://wangcc.me/tags/writing/</loc>
     <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/aichi/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/project/aichi/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
