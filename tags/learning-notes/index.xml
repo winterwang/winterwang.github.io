@@ -1,339 +1,210 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>learning notes on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/learning-notes/</link>
-    <description>Recent content in learning notes on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/learning-notes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Words, notes, and sentences that may be useful </title>
-      <link>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
-      <description>The words and memo useful for the writing of my project</description>
-    </item>
+    <title>learning notes | Be Ambitious</title>
+    <link>https://wangcc.me/tags/learning-notes/</link>
+      <atom:link href="https://wangcc.me/tags/learning-notes/index.xml" rel="self" type="application/rss+xml" />
+    <description>learning notes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>learning notes</title>
+      <link>https://wangcc.me/tags/learning-notes/</link>
+    </image>
     
     <item>
-      <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>假設檢驗的構建</description>
-    </item>
-    
-    <item>
-      <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
-      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
-      <description>近似法求對數似然比</description>
-    </item>
-    
-    <item>
-      <title>對數似然比 Log-likelihood ratio</title>
-      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
-      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
-      <description>對數似然比，和信賴區間的計算</description>
-    </item>
-    
-    <item>
-      <title>似然非然 Likelihood</title>
-      <link>https://winterwang.github.io/post/likelihood/</link>
-      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/likelihood/</guid>
-      <description>似然，似然方程的概念</description>
-    </item>
-    
-    <item>
-      <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
-      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
-      <description>臨牀實驗的樣本量計算問題</description>
-    </item>
-    
-    <item>
-      <title>卡方分佈 chi square distribution</title>
-      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
-      <description>關於卡方分佈的知識和推導，我竟然花了一天時間</description>
-    </item>
-    
-    <item>
-      <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
-      <description>估計和精確度 Estimation and Precision， 自由度 degree of freedom</description>
-    </item>
-    
-    <item>
-      <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
-      <description>統計推斷的概念</description>
-    </item>
-    
-    <item>
-      <title>偉大的中心極限定理</title>
-      <link>https://winterwang.github.io/post/central-limit-theory/</link>
-      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
-      <description>協方差，相關，和中心極限定理</description>
-    </item>
-    
-    <item>
-      <title>你買的彩票中獎概率到底有多少？</title>
-      <link>https://winterwang.github.io/post/probability3/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability3/</guid>
-      <description>簡單的離散分佈：二項分佈，泊松分佈</description>
-    </item>
-    
-    <item>
-      <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
-      <description>正態分佈</description>
-    </item>
-    
-    <item>
-      <title>概率論2</title>
-      <link>https://winterwang.github.io/post/probability2-4/</link>
-      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability2-4/</guid>
-      <description>Bayes 概念; 伯努利分佈 Bernoulli distribution ; 期望值; 方差</description>
-    </item>
-    
-    <item>
-      <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
-      <description>解答昨天的問題</description>
+      <title>Medical Statistics@LSHTM</title>
+      <link>https://wangcc.me/project/lshtmlearningnote/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/lshtmlearningnote/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <link>https://wangcc.me/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
-      <description>第5章　行列式 determinant P87-89 逆矩陣的公式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>https://winterwang.github.io/post/2017-07-07/</link>
-      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
-      <description>第5章　行列式 determinant P85-87 行的基本變形</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記20</title>
-      <link>https://winterwang.github.io/post/2017-07-06/</link>
-      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
-      <description>第5章　行列式 determinant P84-85 逆矩陣</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://winterwang.github.io/post/2017-04-02/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>第5章　行列式 determinant P80-83</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>https://winterwang.github.io/post/2017-03-15/</link>
-      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-15/</guid>
-      <description>第5章　行列式 determinant P73-79</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>https://winterwang.github.io/post/2017-03-13/</link>
-      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-13/</guid>
-      <description>第4章　矩陣 matrix P70-72</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記16</title>
-      <link>https://winterwang.github.io/post/2017-03-11/</link>
-      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-11/</guid>
-      <description>第4章　矩陣 matrix P68-69</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記15</title>
-      <link>https://winterwang.github.io/post/2017-03-08/</link>
-      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-08/</guid>
-      <description>第4章　矩陣 matrix P63-68</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>https://winterwang.github.io/post/2017-03-01/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-01/</guid>
-      <description>第4章　矩陣 matrix P60</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記13</title>
-      <link>https://winterwang.github.io/post/2017-02-28/</link>
-      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-28/</guid>
-      <description>第4章　矩陣 matrix P57-59</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記12</title>
-      <link>https://winterwang.github.io/post/2017-02-22/</link>
-      <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-22/</guid>
-      <description>第4章　矩陣 matrix P53-56</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記11</title>
-      <link>https://winterwang.github.io/post/2017-02-21/</link>
-      <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-21/</guid>
-      <description>第4章　矩陣 matrix P46-52</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記10</title>
-      <link>https://winterwang.github.io/post/2017-02-19/</link>
-      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-19/</guid>
-      <description>第3章　向量 vector P39-45</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記9</title>
-      <link>https://winterwang.github.io/post/2017-02-18/</link>
-      <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-18/</guid>
-      <description>第3章　向量 vector P34-38</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記8</title>
-      <link>https://winterwang.github.io/post/2017-02-17/</link>
-      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-17/</guid>
-      <description>第3章　向量 vector P31-34</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記7</title>
-      <link>https://winterwang.github.io/post/2017-02-16/</link>
-      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-16/</guid>
-      <description>第2章　統計の基礎 P26-30</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記6</title>
-      <link>https://winterwang.github.io/post/2017-02-15/</link>
-      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-15/</guid>
-      <description>第2章　統計の基礎 P22-25</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記5</title>
-      <link>https://winterwang.github.io/post/2017-02-13/</link>
-      <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-13/</guid>
-      <description>第2章　統計の基礎 P19-22</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記4</title>
-      <link>https://winterwang.github.io/post/2017-02-12-t/</link>
-      <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-12-t/</guid>
-      <description>第1章　数学の基礎 P15-17</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記3</title>
-      <link>https://winterwang.github.io/post/2017-02-10/</link>
-      <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description>第1章　数学の基礎 P11-14</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記2</title>
-      <link>https://winterwang.github.io/post/2017-02-08/</link>
-      <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-08/</guid>
-      <description>第1章　数学の基礎 P6-10</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記1</title>
-      <link>https://winterwang.github.io/post/2017-02-06/</link>
-      <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-06/</guid>
-      <description>第1章　数学の基礎 P1-5</description>
+      <guid>https://wangcc.me/post/inverse-matrix/</guid>
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
+
+&lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
+
+&lt;p&gt;其中:&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$adj(A)$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子矩陣&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$A_{ij}$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$D_{ij}$ &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;爲小行列式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(1) 之前舉過的例子再拿來試試看：&lt;/p&gt;
+
+&lt;p&gt;$$X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right)=\left(\begin{array}{c}
+x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline
+x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline
+x_{31} &amp;amp; x_{32} &amp;amp; x_{33}
+\end{array}\right)$$
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：&lt;/p&gt;
+
+&lt;p&gt;$$X_{11}=(-1)^{1+1}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{12}=(-1)^{1+2}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{13}=(-1)^{1+3}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{21}=(-1)^{2+1}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{22}=(-1)^{2+2}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{23}=(-1)^{2+3}\left|
+\begin{array}{c}
+1 &amp;amp; 2 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{31}=(-1)^{3+1}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{32}=(-1)^{3+2}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+2 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{33}=(-1)^{3+3}\left|
+\begin{array}{c}
+1 &amp;amp; 2 \newline
+2 &amp;amp; 1
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;因此餘因子矩陣爲：$adj(X)=\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)$&lt;/p&gt;
+
+&lt;p&gt;我們看見這個餘因子矩陣是一個對稱矩陣，這是由於原矩陣 $X$ 本身就是一個對稱矩陣。另外，行列式爲：&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}|X|&amp;amp;=1\times X_{11}+2\times X_{12}+1\times X_{13}\newline&amp;amp;=1\times1+2\times(-3)+1\times1\newline&amp;amp;=-4\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;因此所求的逆矩陣爲：&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}X^{-1}&amp;amp;=\frac{1}{|X|}adj(X)\newline
+&amp;amp;=\frac{1}{-4}\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)\newline
+&amp;amp;=\left(
+\begin{array}{c}
+-\frac{1}{4} &amp;amp; \frac{3}{4} &amp;amp; -\frac{1}{4} \newline
+\frac{3}{4} &amp;amp; -\frac{1}{4} &amp;amp; -\frac{1}{4} \newline
+-\frac{1}{4} &amp;amp; -\frac{1}{4} &amp;amp; \frac{3}{4}
+\end{array}
+\right)\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;(2) 試求矩陣 $A=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 3 &amp;amp; 1 \newline
+1 &amp;amp; 2 &amp;amp; 2
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11} &amp;amp; a_{12}  &amp;amp; a_{13} \newline
+a_{21} &amp;amp; a_{22}  &amp;amp; a_{23} \newline
+a_{31} &amp;amp; a_{32}  &amp;amp; a_{33}
+\end{array}
+\right)$ 的逆矩陣 $A^{-1}$:&lt;/p&gt;
+
+&lt;p&gt;$$\begin{array}
+=A_{11}=6-2=4, &amp;amp; A_{12}=-(4-1)=-3, &amp;amp; A_{13}=4-3=1 \newline
+A_{21}=-(4-2)=-2, &amp;amp; A_{22}=2-1=1, &amp;amp; A_{23}=-(2-2)=0 \newline
+A_{31}=2-3=-1, &amp;amp; A_{32}=-(1-2)=1, &amp;amp; A_{33}=3-4=-1
+\end{array}$$&lt;/p&gt;
+
+&lt;p&gt;$$adj(A)=\left(
+\begin{array}{c}
+4 &amp;amp; -3 &amp;amp; 1 \newline
+-2 &amp;amp; 1 &amp;amp; 0 \newline
+-1 &amp;amp; 1 &amp;amp; -1
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+4 &amp;amp; -2 &amp;amp; -1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; -1
+\end{array}
+\right)$$&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}
+|A| &amp;amp;=1\times A_{11}+2\times A_{12}+1\times A_{13} \newline
+    &amp;amp;=1\times4+2\times(-3)+1\times1 \newline
+    &amp;amp;=4-6+1 \newline
+    &amp;amp;=-1
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\therefore
+\begin{align}
+A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
+\begin{array}{c}
+4 &amp;amp; -2 &amp;amp; -1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; -1
+\end{array}
+\right) \newline
+&amp;amp;=\left(
+\begin{array}{c}
+-4 &amp;amp; 2 &amp;amp; 1 \newline
+3 &amp;amp; -1 &amp;amp; -1 \newline
+-1 &amp;amp; 0 &amp;amp; 1
+\end{array}
+\right)
+\end{align}$$&lt;/p&gt;
+</description>
     </item>
     
   </channel>

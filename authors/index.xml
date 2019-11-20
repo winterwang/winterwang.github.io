@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Be Ambitious</title>
+    <link>https://wangcc.me/authors/</link>
+      <atom:link href="https://wangcc.me/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>https://wangcc.me/authors/</link>
+    </image>
+    
+    <item>
+      <title>Chaochen Wang</title>
+      <link>https://wangcc.me/authors/chaochen-wang/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/chaochen-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luigi Palla</title>
+      <link>https://wangcc.me/authors/luigi-palla/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/luigi-palla/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suzana Almoosawi</title>
+      <link>https://wangcc.me/authors/suzana-almoosawi/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/suzana-almoosawi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wangcc.me/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/admin/</guid>
+      <description>&lt;p&gt;I am now working as an assistant professor in &lt;a href=&#34;http://www.aichi-med-u.ac.jp/&#34; target=&#34;_blank&#34;&gt;Aichi Medical University&lt;/a&gt;. Here is the &lt;a href=&#34;http://dph-amu.umin.jp&#34; target=&#34;_blank&#34;&gt;home page&lt;/a&gt; of our department. I finished my MSc of &lt;a href=&#34;https://www.lshtm.ac.uk/study/masters/medical-statistics&#34; target=&#34;_blank&#34;&gt;Medical Statistics&lt;/a&gt; from the &lt;a href=&#34;https://www.lshtm.ac.uk/&#34; target=&#34;_blank&#34;&gt;London School of Hygiene &amp;amp; Tropical Medicine&lt;/a&gt; in 2018 and PhD in Epidemiology from the Department of Public Health, Graduate School of Medicine, Nagoya University in 2016. &lt;br&gt; You can find my cv &lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. I am capable of doing statistical analyses/computer programming using a variety of softwares including Python, MATLAB, STATA, SAS. However,I am a big fan of &lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; as well as the open-source integrated development environment (IDE) &lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Rstudio&lt;/a&gt; and of course many other open-source softwares, which might suggest that my daily life looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;gif/working.gif&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;em&gt;&lt;strong&gt;But I am only a fan, not an expert&lt;/strong&gt;&lt;/em&gt;. Our lab is now mainly working on &lt;strong&gt;Epidemiology of Gastroenterological Cancer&lt;/strong&gt;. My personal interests are statistical methodology, nutritional epidemiology. This site you are visiting is the place to hold the materials I personally used or going to use for lectures/conference presentations, and a place to keep my memories.&lt;/p&gt;
+
+&lt;p&gt;這裏是王超辰的個人網站。2016年3月底我終於取得日本&lt;a href=&#34;http://www.med.nagoya-u.ac.jp/medical/&#34; target=&#34;_blank&#34;&gt;名古屋大学&lt;/a&gt;的醫學博士學位，我的研究方向是慢性疾病的流行病學研究, &lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;這&lt;/a&gt;是我的個人簡歷。我目前在&lt;a href=&#34;http://dph-amu.umin.jp&#34; target=&#34;_blank&#34;&gt;日本愛知医科大学医学部公衆衛生学教室&lt;/a&gt;做助教。如果你不能打開左邊的鏈接，說明你生活在東土大唐GFW淪陷區內，請學會(肉身)翻牆訪問我們研究室的主頁。我支持開源軟件，工作，生活和學習中主要在&lt;a href=&#34;https://www.ubuntu.com/&#34; target=&#34;_blank&#34;&gt;Ubuntu&lt;/a&gt;，及&lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Rstudio&lt;/a&gt;環境下進行，堅持一邊學習，一邊使用&lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt;分析數據。平时業餘愛好是折騰折騰电脑，讀讀&lt;a href=&#34;http://www.economist.com/&#34; target=&#34;_blank&#34;&gt;經濟學人/the Economist&lt;/a&gt;,智商平庸，痛恨GFW，每次回中國大陸超过一周時間就會出現渾身不適，惡心嘔吐等被牆症狀，每日19点症狀最爲嚴重。2017年9月我踏上留英一年之路，於2018年9月完成醫學統計學的碩士學位。我留學的地方是&lt;strong&gt;&lt;a href=&#34;https://www.lshtm.ac.uk/&#34; target=&#34;_blank&#34;&gt;倫敦衛生與熱帶醫學院 LSHTM&lt;/a&gt;&lt;/strong&gt;，如果你對公共衛生學，流行病學，或者是傳染病學防控，國際醫療保健，或者是對我所學的醫學統計學有興趣，牆裂推薦來 LSHTM 學習。這裡的教學和學習生活一定不會讓你失望。也歡迎參考我留下的&lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;留學學習筆記&lt;/a&gt;。這本小書只是我學習中的部分筆記，大量的知識無法及時，也很難用中文詳細解釋。不過我相信對於想入門數據科學，或者是想從事醫學研究的人來說，能起到一定的參考作用。也許世界上認為統計學最難的人，就是我們學習統計學的人了。書山有路勤為徑，學海無涯苦作舟。沒有紮實的功底，論文發表得再多，&lt;a href=&#34;https://www.researchgate.net/post/What_is_the_difference_between_meanSD_and_meanSE&#34; target=&#34;_blank&#34;&gt;也會問出標準差和標準誤有什麼差別這樣的問題&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;這是我第二次嘗試利用github+hugo託管個人網站，感謝開源社區的人們，你們才是人類進步的階梯。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We are drowning in information and starving for knowledge.&lt;/p&gt;
+
+&lt;p&gt;&amp;mdash; Rutherford D. Roger&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,167 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 on Be ambitious</title>
-    <link>https://winterwang.github.io/publication_types/2/</link>
-    <description>Recent content in 2 on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>2 | Be Ambitious</title>
+    <link>https://wangcc.me/publication_types/2/</link>
+      <atom:link href="https://wangcc.me/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>2</title>
+      <link>https://wangcc.me/publication_types/2/</link>
+    </image>
     
     <item>
       <title>Day-Time Patterns of Carbohydrate Intake in Adults by Non-Parametric Multi-Level Latent Class Analysis—Results from the UK National Diet and Nutrition Survey (2008/09–2015/16)</title>
-      <link>https://winterwang.github.io/publication/ch_ndnsrp/</link>
+      <link>https://wangcc.me/publication/journal-article/ch_ndnsrp/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/ch_ndnsrp/</guid>
-      <description>Abstract This study aims at combining time and quantity of carbohydrate (CH) intake in the definition of eating patterns in UK adults and investigating the association of the derived patterns with type 2 diabetes (T2D). The National Diet and Nutrition Survey (NDNS) Rolling Program included 6155 adults in the UK. Time of the day was categorized into 7 pre-defined time slots: 6–9 am, 9–12 noon, 12–2 pm, 2–5 pm, 5–8 pm, 8–10 pm, and 10 pm–6 am.</description>
-    </item>
-    
-    <item>
-      <title>Prediction model for pancreatic cancer risk in the general Japanese population</title>
-      <link>https://winterwang.github.io/publication/predictionpancreaticgwas/</link>
-      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/predictionpancreaticgwas/</guid>
-      <description>Abstract Genome-wide association studies (GWASs) have identified many single nucleotide polymorphisms (SNPs) that are significantly associated with pancreatic cancer susceptibility. We sought to replicate the associations of 61 GWAS-identified SNPs at 42 loci with pancreatic cancer in Japanese and to develop a risk model for the identification of individuals at high risk for pancreatic cancer development in the general Japanese population. The model was based on data including directly determined or imputed SNP genotypes for 664 pancreatic cancer case and 664 age- and sex-matched control subjects.</description>
-    </item>
-    
-    <item>
-      <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
-      <link>https://winterwang.github.io/publication/hpylorimeta/</link>
-      <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/hpylorimeta/</guid>
-      <description>Abstract Changing trends in the prevalence of H. pylori infection in the general population over time are thought to be the main driving force behind the declining gastric cancer mortality in Japan. However, whether the prevalence of H. pylori infection itself shows a birth-cohort pattern needs to be corroborated. We performed a systematic review of studies that reported the prevalence of H. pylori infection among Japanese individuals. Meta-regression was conducted in the framework of a generalized additive mixed model (GAMM) to account for heterogeneity in the prevalence of H.</description>
-    </item>
-    
-    <item>
-      <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
-      <link>https://winterwang.github.io/publication/okuda/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/okuda/</guid>
-      <description>Background
-Helicobacter pylori infection is associated with gastric cancer; thus, early diagnosis and treatment are crucial. Since H. pylori infection in adolescents or young adults shows few symptoms, screening tests are necessary for this population. In this study, the accuracy of the rapid urine-H. pylori antibody (u-HpAb) test was evaluated and compared to that of urine and serum H. pylori enzyme-linked immunosorbent assays (u-HpELISA and s-HpELISA, respectively) in junior high school students.</description>
-    </item>
-    
-    <item>
-      <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://winterwang.github.io/publication/palau/</link>
-      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/palau/</guid>
-      <description>Abstract The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.</description>
-    </item>
-    
-    <item>
-      <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
-      <link>https://winterwang.github.io/publication/jaccmatsunaga/</link>
-      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/jaccmatsunaga/</guid>
-      <description>Abstract Background and aims Coronary heart disease (CHD) and stroke have common risk factors, but some of these differ in the magnitude or direction of associations between CHD and stroke. We assessed whether the impact of each risk factor differed between CHD and stroke mortality in Asians.
-Methods In total, 104,910 subjects aged 40–79 years without histories of cancer, CHD and stroke at baseline were followed between 1988 and 2009.</description>
-    </item>
-    
-    <item>
-      <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
-      <link>https://winterwang.github.io/publication/jaccstress_colorectal/</link>
-      <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/jaccstress_colorectal/</guid>
-      <description>Abstract Colorectal cancer is the third most common cancer worldwide, and many risk factors for colorectal cancer have been established. However, it remains uncertain whether psychological stress contributes to the onset of colorectal cancer. Therefore, we conducted a large-scale prospective cohort study to confirm the association between perceived stress and colorectal cancer incidence. We identified 680 cases of colon cancer and 330 cases of rectal cancer during a maximum of 21-year follow-up of 61,563 Japanese men and women.</description>
-    </item>
-    
-    <item>
-      <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>https://winterwang.github.io/publication/steppalau/</link>
-      <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/steppalau/</guid>
-      <description>Abstract We aimed to investigate the prevalence and predictors of diabetes and prediabetes among adults in Palau. We used data of 1915 adults, aged 25 to 64 years, who participated in the World Health Organization’s (WHO) STEPwise Approach to Risk Factor Surveillance (STEPS) study in Palau. Information on behavioral risk factors of NCDs and physical and biochemical measurements were obtained using standard methods of the WHO. The diagnosis of diabetes and prediabetes was based on the recent American Diabetes Association criteria.</description>
-    </item>
-    
-    <item>
-      <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
-      <link>https://winterwang.github.io/publication/jaccbreast/</link>
-      <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/jaccbreast/</guid>
-      <description>Abstract Breast cancer is the most common cancer in women. However, it remains unproven whether psychological factors have an influence on breast cancer incidence. In our earlier study, subjects possessing two personality traits, decisiveness and “ikigai” (a Japanese word meaning something that makes one’s life worth living), showed a significantly lower risk of developing breast cancer, although no psychological factors have been convincingly demonstrated to have an influence on breast cancer development in other studies.</description>
-    </item>
-    
-    <item>
-      <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>https://winterwang.github.io/publication/jaccseaweed/</link>
-      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/jaccseaweed/</guid>
-      <description>Abstract Excess intake of iodine is a suspected risk factor for thyroid cancer. Previous epidemiological research from Japan reported that daily intake of seaweed was associated with a four-fold higher risk in postmenopausal women, whereas others reported a null association. A major source of iodine intake in Japan is from edible seaweeds, and it is reported to be among the highest in the world. We examined the association between seaweed intake frequency and the risk of thyroid cancer in women in the Japan Collaborative Cohort Study followed from 1988 to 2009.</description>
-    </item>
-    
-    <item>
-      <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>https://winterwang.github.io/publication/fhdm2/</link>
-      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/fhdm2/</guid>
-      <description>Abstract Objective: To investigate differences in the association of parental history of diabetes with the risk of type 2 diabetes mellitus (T2DM) in the offspring according to the sex of the parent and the offspring&amp;rsquo;s body weight.
-Methods: A prospective cohort study of 4446 middle-aged non-diabetic Japanese men and women were followed in Aichi Prefecture, central Japan, from 2002 to 2011. Subjects were categorized by their self-reported parental history of diabetes (&amp;ldquo;no parental history,&amp;rdquo; &amp;ldquo;father only,&amp;rdquo; &amp;ldquo;mother only,&amp;rdquo; and &amp;ldquo;both&amp;rdquo;).</description>
-    </item>
-    
-    <item>
-      <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
-      <link>https://winterwang.github.io/publication/bfskip/</link>
-      <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/bfskip/</guid>
-      <description>Abstract Background: Skipping breakfast has been suspected as a risk factor for type 2 diabetes (T2DM), but the associations are not entirely consistent across ethnicities or sexes, and the issue has not been adequately addressed in the Japanese population.
-Methods: We followed 4631 participants (3600 men and 1031 women) in a work-site cohort of participants aged 35–66 years in 2002 through 2011 for T2DM development. Frequency of eating breakfast was self-reported and was subsequently dichotomized to breakfast skippers, who eat breakfast 3–5 times/week or less, and to eaters.</description>
-    </item>
-    
-    <item>
-      <title>Smoking and Diabetes: Is the Association Mediated by Adiponectin, Leptin, or C-reactive Protein?</title>
-      <link>https://winterwang.github.io/publication/smmd/</link>
-      <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/smmd/</guid>
-      <description>Abstract Background: Although the association between cigarette smoking and risk of type 2 diabetes is well established, its mechanisms are yet to be clarified. This study examined the possible mediating effects of adiponectin, leptin, and C-reactive protein (CRP) concentrations on the smoking-diabetes association.
-Methods: Between 2002 and 2011, we followed 3338 Japanese workers, aged 35–66 years, who were enrolled in the second Aichi workers’ cohort study. We used multivariable-adjusted Cox regression models to determine the hazard ratios and respective 95% confidence intervals (CIs) of the association between smoking status and risk of diabetes.</description>
-    </item>
-    
-    <item>
-      <title>Milk drinking and mortality: findings from the Japan Collaborative Cohort Study</title>
-      <link>https://winterwang.github.io/publication/milk/</link>
-      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/milk/</guid>
-      <description>Abstract BACKGROUND: Findings regarding the association between milk consumption and all-cause mortality reported by studies carried out in Western populations have been inconsistent. However, no studies have been conducted in Japan on this issue. The present study aimed to investigate the association of milk drinking with all-cause, cardiovascular, and cancer mortality in Japan.
-METHODS: The data were obtained from the Japan Collaborative Cohort (JACC) study. A total of 94 980 Japanese adults aged 40-79 years who had no history of cancer, stroke, or chronic cardiovascular diseases were followed between 1988 and 2009.</description>
-    </item>
-    
-    <item>
-      <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://winterwang.github.io/publication/liverfat/</link>
-      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/liverfat/</guid>
-      <description>Summary Background To examine the association of intrahepatic fat with homeostasis model assessment-insulin resistance (HOMA-IR), a marker of insulin resistance, in Japanese adults, and whether intrahepatic fat is associated with insulin resistance independent of waist circumference and other measures of obesity.
-Methods Fifty-three individuals aged 37–69 were studied. Spectrum obtained using a 3-T magnetic resonance imager was analysed with LCModel to quantify intrahepatic fat. Blood levels of insulin, glucose and other biochemical markers were obtained after 8 h or more fasting.</description>
-    </item>
-    
-    <item>
-      <title>Positive association between high‐sensitivity C‐reactive protein and incidence of type 2 diabetes mellitus in Japanese workers: 6‐year follow‐up</title>
-      <link>https://winterwang.github.io/publication/crpdm2/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/publication/crpdm2/</guid>
-      <description>Abstract Background: Elevated high-sensitivity C-reactive protein (hs-CRP), a marker of low-grade systemic inflammation, may be involved in the etiology of type 2 diabetes mellitus (T2DM). However, whether inflammation precedes development of T2DM independent of cigarette smoking and obesity remains to be confirmed.
-Methods: We studied 4213 civil servants in a local government in Japan aged 35-66 years at baseline in 2002, who donated blood samples and were followed 6 years.</description>
+      <guid>https://wangcc.me/publication/journal-article/ch_ndnsrp/</guid>
+      <description>
+
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;This study aims at combining time and quantity of carbohydrate (CH) intake in the definition of eating patterns in UK adults and investigating the association of the derived patterns with type 2 diabetes (T2D). The National Diet and Nutrition Survey (NDNS) Rolling Program included 6155 adults in the UK. Time of the day was categorized into 7 pre-defined time slots: 6–9 am, 9–12 noon, 12–2 pm, 2–5 pm, 5–8 pm, 8–10 pm, and 10 pm–6 am. Responses for CH intake were categorized into: no energy intake, CH &amp;lt;50% or ≥50% of total energy. Non-parametric multilevel latent class analysis (MLCA) was applied to identify eating patterns of CH consumption across day-time, as a novel method accounting for the repeated measurements of intake over 3–4 days nested within individuals. Survey-designed multivariable regression was used to assess the associations of CH eating patterns with T2D. Three CH eating day patterns (low, high CH percentage and regular meal CH intake day) emerged from 24,483 observation days; based on which three classes of CH eaters were identified and characterized as: low (28.1%), moderate (28.8%) and high (43.1%) CH eaters. On average, low-CH eaters consumed the highest amount of total energy intake (7985.8 kJ) and had higher percentages of energy contributed by fat and alcohol, especially after 8 pm. Moderate-CH eaters consumed the lowest amount of total energy (7341.8 kJ) while they tended to have their meals later in the day. High-CH eaters consumed most of their carbohydrates and energy earlier in the day and within the time slots of 6–9 am, 12–2 pm and 5–8 pm, which correspond to traditional mealtimes. The high-CH eaters profile had the highest daily intake of CH and fiber and the lowest intake of protein and fat. Low-CH eaters had greater odds than high-CH eaters of having T2D in self-reported but not in previously undiagnosed diabetics. Further research using prospective longitudinal studies is warranted to ascertain the direction of causality in the association of CH patterns with type 2 diabetes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Figure3colored.png&#34; alt=&#34;&#34; /&gt;
+The compositions (%) and absolute (kJ) energy consumption within each time slot by individual level carbohydrate eating classes: A, low carbohydrate eaters (LCE); B, moderate carbohydrate eaters (MCE); C, high carbohydrate eaters (HCE).&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics | Be Ambitious</title>
+    <link>https://wangcc.me/tags/statistics/</link>
+      <atom:link href="https://wangcc.me/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Statistics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Statistics</title>
+      <link>https://wangcc.me/tags/statistics/</link>
+    </image>
+    
+    <item>
+      <title>Medical Statistics@LSHTM</title>
+      <link>https://wangcc.me/project/lshtmlearningnote/</link>
+      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/lshtmlearningnote/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

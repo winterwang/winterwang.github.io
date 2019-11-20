@@ -1,330 +1,568 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Medical Statistics on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/medical-statistics/</link>
-    <description>Recent content in Medical Statistics on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Fri, 16 Aug 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>等級線性回歸模型的 Rstan 貝葉斯實現</title>
-      <link>https://winterwang.github.io/post/multilevel-model-rstan/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/multilevel-model-rstan/</guid>
-      <description>Rstan 學習筆記 Chapter 8</description>
-    </item>
-    
-    <item>
-      <title>泊松回歸模型的貝葉斯Stan實現</title>
-      <link>https://winterwang.github.io/post/poisson-stan/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/poisson-stan/</guid>
-      <description>Rstan 學習筆記 Chapter 5.4</description>
-    </item>
-    
-    <item>
-      <title>Rstan Wonderful R-(5)</title>
-      <link>https://winterwang.github.io/post/logistic-rstan2/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/logistic-rstan2/</guid>
-      <description>Rstan 學習筆記 Chapter 5.3</description>
-    </item>
-    
-    <item>
-      <title>Rstan Wonderful R-(4)</title>
-      <link>https://winterwang.github.io/post/logistic-rstan/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/logistic-rstan/</guid>
-      <description>Rstan 學習筆記 Chapter 5.2</description>
-    </item>
-    
-    <item>
-      <title>Rstan Wonderful R-(3)</title>
-      <link>https://winterwang.github.io/post/rstan-wonderful-r3/</link>
-      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/rstan-wonderful-r3/</guid>
-      <description>Rstan 學習筆記 Chapter 5.1</description>
-    </item>
-    
-    <item>
-      <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>
-      <link>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</guid>
-      <description>Rstan 學習筆記 Chapter 4.4</description>
-    </item>
-    
-    <item>
-      <title>Rstan Wonderful R-(1)</title>
-      <link>https://winterwang.github.io/post/rstan-wonderful-r/</link>
-      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/rstan-wonderful-r/</guid>
-      <description>Rstan 學習筆記</description>
-    </item>
-    
-    <item>
-      <title>Words, notes, and sentences that may be useful </title>
-      <link>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</guid>
-      <description>The words and memo useful for the writing of my project</description>
-    </item>
+    <title>Medical Statistics | Be Ambitious</title>
+    <link>https://wangcc.me/tags/medical-statistics/</link>
+      <atom:link href="https://wangcc.me/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Medical Statistics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 24 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Medical Statistics</title>
+      <link>https://wangcc.me/tags/medical-statistics/</link>
+    </image>
     
     <item>
       <title>Summer Project Schedule</title>
-      <link>https://winterwang.github.io/post/summer-project-schedule/</link>
+      <link>https://wangcc.me/post/summer-project-schedule/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/summer-project-schedule/</guid>
-      <description>todo list for summer project</description>
-    </item>
-    
-    <item>
-      <title>Learning Notes in London School of Hygiene &amp; Tropical Medicine</title>
-      <link>https://winterwang.github.io/project/lshtmlearningnote/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/project/lshtmlearningnote/</guid>
-      <description>Medical Statistics@LSHTM</description>
-    </item>
-    
-    <item>
-      <title>徒手打造一個假設檢驗</title>
-      <link>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</guid>
-      <description>假設檢驗的構建</description>
-    </item>
-    
-    <item>
-      <title>二次方程近似法求對數似然比 approximate log-likelihood ratios</title>
-      <link>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</link>
-      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</guid>
-      <description>近似法求對數似然比</description>
-    </item>
-    
-    <item>
-      <title>對數似然比 Log-likelihood ratio</title>
-      <link>https://winterwang.github.io/post/log-likelihood-ratio/</link>
-      <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/log-likelihood-ratio/</guid>
-      <description>對數似然比，和信賴區間的計算</description>
-    </item>
-    
-    <item>
-      <title>似然非然 Likelihood</title>
-      <link>https://winterwang.github.io/post/likelihood/</link>
-      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/likelihood/</guid>
-      <description>似然，似然方程的概念</description>
-    </item>
-    
-    <item>
-      <title>臨牀實驗的樣本量計算問題 Sample Size in Clinical Trial</title>
-      <link>https://winterwang.github.io/post/sample-size-in-clinical-trial/</link>
-      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/sample-size-in-clinical-trial/</guid>
-      <description>臨牀實驗的樣本量計算問題</description>
-    </item>
-    
-    <item>
-      <title>卡方分佈 chi square distribution</title>
-      <link>https://winterwang.github.io/post/chi-square-distribution/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/chi-square-distribution/</guid>
-      <description>關於卡方分佈的知識和推導，我竟然花了一天時間</description>
-    </item>
-    
-    <item>
-      <title>估計和精確度的概念</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference02/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference02/</guid>
-      <description>估計和精確度 Estimation and Precision， 自由度 degree of freedom</description>
-    </item>
-    
-    <item>
-      <title>概率論者統計推斷入門之-被門夾住</title>
-      <link>https://winterwang.github.io/post/frequentist-statistical-inference01/</link>
-      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/frequentist-statistical-inference01/</guid>
-      <description>統計推斷的概念</description>
-    </item>
-    
-    <item>
-      <title>中心極限定理的應用</title>
-      <link>https://winterwang.github.io/post/central-limit-theorem-application/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/central-limit-theorem-application/</guid>
-      <description>中心極限定理的廣泛應用</description>
-    </item>
-    
-    <item>
-      <title>偉大的中心極限定理</title>
-      <link>https://winterwang.github.io/post/central-limit-theory/</link>
-      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/central-limit-theory/</guid>
-      <description>協方差，相關，和中心極限定理</description>
-    </item>
-    
-    <item>
-      <title>你買的彩票中獎概率到底有多少？</title>
-      <link>https://winterwang.github.io/post/probability3/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability3/</guid>
-      <description>簡單的離散分佈：二項分佈，泊松分佈</description>
-    </item>
-    
-    <item>
-      <title>正態分佈</title>
-      <link>https://winterwang.github.io/post/normal-distribution/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/normal-distribution/</guid>
-      <description>正態分佈</description>
-    </item>
-    
-    <item>
-      <title>概率論2</title>
-      <link>https://winterwang.github.io/post/probability2-4/</link>
-      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability2-4/</guid>
-      <description>Bayes 概念; 伯努利分佈 Bernoulli distribution ; 期望值; 方差</description>
-    </item>
-    
-    <item>
-      <title>“你會用概率論來賭博嗎？”之解答</title>
-      <link>https://winterwang.github.io/post/probability-gambling-answers/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/probability-gambling-answers/</guid>
-      <description>解答昨天的問題</description>
-    </item>
-    
-    <item>
-      <title>Maths Revisions</title>
-      <link>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</link>
-      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</guid>
-      <description>統計學中常用的簡單數學規則 (1)</description>
-    </item>
-    
-    <item>
-      <title>Matrix Revisions</title>
-      <link>https://winterwang.github.io/post/matrix-revision/</link>
-      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>統計學中常用的簡單數學規則 (2)</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>第5章　行列式 determinant P97-99 加法算式與矩陣的積</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 27</title>
-      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
-      <description>第5章　行列式 determinant P94-96 同次連立一次方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 26</title>
-      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
-      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>第5章　行列式 determinant P92-93 行變形法解連立方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
-      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>第5章　行列式 determinant P91-92 克萊姆法則法解連立方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>https://winterwang.github.io/post/inverse-matrix-method/</link>
-      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
-      <description>第5章　行列式 determinant P90-91 逆矩陣法解連立一次方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>第5章　行列式 determinant P89-90 連立一次方程式</description>
+      <guid>https://wangcc.me/post/summer-project-schedule/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Data analysis finish by 2018-07-&lt;/del&gt;24&lt;del&gt;31&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Paper structure confirm by 2018-08-01&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Paper draft complete by 2018-08-16&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-24
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read and try to repeat Rll&amp;rsquo;s method in R and familarize the dataset ASAP&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Two papers applying Repeated Measures LCA&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-25
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Meeting with supervisor and Susanna&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Confirm the cutoff of carborhydrate consumption&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Talk with Rll ask about the methodology and dataset&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-26
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Send the summarised memo of meeting to Supervisor and etc.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the first part fundamentals of LCA.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-27
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.londonr.org/&#34; target=&#34;_blank&#34;&gt;London R in UCL&lt;/a&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Germany lost their game against South Korea, UNBELIEVEABLE&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-28&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the book collins2010latent - Latent Class and Latent Transition Analysis: With Applications in the Social, Behavioral, and Health Sciences (Done until 4.2)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-29
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the book collins2010latent - Latent Class and Latent Transition Analysis: With Applications in the Social, Behavioral, and Health Sciences (Done until 4.3)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Data management for NDNS 8 years data (70%)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Start to analysis the data according to the discussion on 25th(30%)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Day1 data analysis results summary&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-01
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Relax and do nothing&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Buy some drink to enjoy the night with classmates(HB)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-02/03
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Send some preliminary results to co-authors&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;http://www.the-afc.com/competitions/fifa-world-cup/latest/news/japan-fa-president-proud-of-blue-samurai&#34; target=&#34;_blank&#34;&gt;Japan lost the game to Belgium, but they are the glory of Asia&amp;ndash;heartbreaking&lt;/a&gt;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-04&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&amp;ldquo;consider separating weekdays from weekends if we are not averaging the four days?&amp;rdquo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-05
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Test and confirm the availability of LCA in SAS&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA in SAS with NDNS data&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-06&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA with random effects in SAS&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Find whether there is any possibility of conducting the same method in R or STATA (no there is no way)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-07~09
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&amp;ldquo;Maybe we should try with the threshold at 25% only as per the existing guidelines (although those are per meal)?&amp;rdquo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-10
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; ~~Meet with tutor;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Start writing about the methodology;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Try to start writing about the introduction;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-11&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Try to summarise the meeting memo yesterday;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Re-analyse the data with new cut-off values (25, 50, 75);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Re-analyse the data with new cut-off values (50);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-12~22
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Use latent class growth analysis;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Use multilevel latent class analysis;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Think about the mathmatical theory behind the mixed LCA, write to PROC LCA group if necessary;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-23~25
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn about the survey package in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish writing about the methodology;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Write some introduction;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-26&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Let&amp;rsquo;s finish analysis of the classes and health outcomes.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read about the carbo-fibre ratio references.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-08-15
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;PM review&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish most of the discussion outlines and 2 pages of them.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-08-31
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish revising the report according to comments from LP and SAM;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read RT&amp;rsquo;s report and send the comments;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Confirm the deadline for funding applications;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the abstract for conferences (UK and JP);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Start preparing the paper for submit (MLCA part alone);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Think about the schedules and plans after leaving London;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish the post of Scotland trip.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://winterwang.github.io/post/inverse-matrix/</link>
+      <link>https://wangcc.me/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix/</guid>
-      <description>第5章　行列式 determinant P87-89 逆矩陣的公式</description>
+      <guid>https://wangcc.me/post/inverse-matrix/</guid>
+      <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
+$$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
+
+&lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
+
+&lt;p&gt;其中:&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$adj(A)$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子矩陣&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$A_{ij}$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;餘因子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$D_{ij}$ &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34; target=&#34;_blank&#34;&gt;爲小行列式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(1) 之前舉過的例子再拿來試試看：&lt;/p&gt;
+
+&lt;p&gt;$$X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right)=\left(\begin{array}{c}
+x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline
+x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline
+x_{31} &amp;amp; x_{32} &amp;amp; x_{33}
+\end{array}\right)$$
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：&lt;/p&gt;
+
+&lt;p&gt;$$X_{11}=(-1)^{1+1}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{12}=(-1)^{1+2}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{13}=(-1)^{1+3}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{21}=(-1)^{2+1}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{22}=(-1)^{2+2}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+1 &amp;amp; 2
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{23}=(-1)^{2+3}\left|
+\begin{array}{c}
+1 &amp;amp; 2 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{31}=(-1)^{3+1}\left|
+\begin{array}{c}
+2 &amp;amp; 1 \newline
+1 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{32}=(-1)^{3+2}\left|
+\begin{array}{c}
+1 &amp;amp; 1 \newline
+2 &amp;amp; 1
+\end{array}\right|=1$$&lt;/p&gt;
+
+&lt;p&gt;$$X_{33}=(-1)^{3+3}\left|
+\begin{array}{c}
+1 &amp;amp; 2 \newline
+2 &amp;amp; 1
+\end{array}\right|=-3$$&lt;/p&gt;
+
+&lt;p&gt;因此餘因子矩陣爲：$adj(X)=\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)$&lt;/p&gt;
+
+&lt;p&gt;我們看見這個餘因子矩陣是一個對稱矩陣，這是由於原矩陣 $X$ 本身就是一個對稱矩陣。另外，行列式爲：&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}|X|&amp;amp;=1\times X_{11}+2\times X_{12}+1\times X_{13}\newline&amp;amp;=1\times1+2\times(-3)+1\times1\newline&amp;amp;=-4\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;因此所求的逆矩陣爲：&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}X^{-1}&amp;amp;=\frac{1}{|X|}adj(X)\newline
+&amp;amp;=\frac{1}{-4}\left(
+\begin{array}{c}
+1 &amp;amp; -3 &amp;amp; 1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; -3
+\end{array}
+\right)\newline
+&amp;amp;=\left(
+\begin{array}{c}
+-\frac{1}{4} &amp;amp; \frac{3}{4} &amp;amp; -\frac{1}{4} \newline
+\frac{3}{4} &amp;amp; -\frac{1}{4} &amp;amp; -\frac{1}{4} \newline
+-\frac{1}{4} &amp;amp; -\frac{1}{4} &amp;amp; \frac{3}{4}
+\end{array}
+\right)\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;(2) 試求矩陣 $A=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \newline
+2 &amp;amp; 3 &amp;amp; 1 \newline
+1 &amp;amp; 2 &amp;amp; 2
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11} &amp;amp; a_{12}  &amp;amp; a_{13} \newline
+a_{21} &amp;amp; a_{22}  &amp;amp; a_{23} \newline
+a_{31} &amp;amp; a_{32}  &amp;amp; a_{33}
+\end{array}
+\right)$ 的逆矩陣 $A^{-1}$:&lt;/p&gt;
+
+&lt;p&gt;$$\begin{array}
+=A_{11}=6-2=4, &amp;amp; A_{12}=-(4-1)=-3, &amp;amp; A_{13}=4-3=1 \newline
+A_{21}=-(4-2)=-2, &amp;amp; A_{22}=2-1=1, &amp;amp; A_{23}=-(2-2)=0 \newline
+A_{31}=2-3=-1, &amp;amp; A_{32}=-(1-2)=1, &amp;amp; A_{33}=3-4=-1
+\end{array}$$&lt;/p&gt;
+
+&lt;p&gt;$$adj(A)=\left(
+\begin{array}{c}
+4 &amp;amp; -3 &amp;amp; 1 \newline
+-2 &amp;amp; 1 &amp;amp; 0 \newline
+-1 &amp;amp; 1 &amp;amp; -1
+\end{array}
+\right)^t=\left(
+\begin{array}{c}
+4 &amp;amp; -2 &amp;amp; -1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; -1
+\end{array}
+\right)$$&lt;/p&gt;
+
+&lt;p&gt;$$\begin{align}
+|A| &amp;amp;=1\times A_{11}+2\times A_{12}+1\times A_{13} \newline
+    &amp;amp;=1\times4+2\times(-3)+1\times1 \newline
+    &amp;amp;=4-6+1 \newline
+    &amp;amp;=-1
+\end{align}$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\therefore
+\begin{align}
+A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
+\begin{array}{c}
+4 &amp;amp; -2 &amp;amp; -1 \newline
+-3 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; -1
+\end{array}
+\right) \newline
+&amp;amp;=\left(
+\begin{array}{c}
+-4 &amp;amp; 2 &amp;amp; 1 \newline
+3 &amp;amp; -1 &amp;amp; -1 \newline
+-1 &amp;amp; 0 &amp;amp; 1
+\end{array}
+\right)
+\end{align}$$&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
-      <link>https://winterwang.github.io/post/unconditional/</link>
+      <link>https://wangcc.me/post/unconditional/</link>
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/unconditional/</guid>
-      <description>驚心動魄，坐過山車一般的一周。</description>
+      <guid>https://wangcc.me/post/unconditional/</guid>
+      <description>&lt;p&gt;言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。&lt;/p&gt;
+
+&lt;p&gt;本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。&lt;/p&gt;
+
+&lt;p&gt;結果6月8日那天收到郵件催促我快點滿足 offer 條件：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/meetingcondition.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。&lt;/p&gt;
+
+&lt;p&gt;因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For visa purposes, an Official Financial Sponsor is only one of the following: Her Majesty’s Government, your home government, the British Council or any international organisation, international company, university or an Independent School&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Your documents didn’t meet the requirements because: &lt;br&gt;
+ 1.  The salary expectancy is not admissible &lt;br&gt;
+ 2. The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. &lt;br&gt;
+ 3.  The bank statements did not include the bank name and logo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!&lt;/p&gt;
+
+&lt;p&gt;這些都好說。可是日本的銀行，&lt;strong&gt;沒有&lt;/strong&gt;這種類型的證明書（我也是第一次知道日本銀行不給開這樣子的證明）。所以許多人的解決辦法是讓銀行開一個月的流水賬單，要命的是這個證明不能開英文的，然後再去找翻譯公司翻譯流水。當然我也可以這麽辦。衹是，當我知道我的三個證明書都不能作爲有效的資金證明的時候，我離7月31日祗剩下不到2周時間了。在此奉勸后來者，一定要先準備好自己的資金證明書。最好能按照下面的樣本，讓銀行開具類似的證明書：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/bankstatement.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我在接到證明書不滿足條件的郵件的第二天，立刻去了銀行，接待我的銀行經理先是打報告給總部請示。毫無意外被擋回來。說如果是客人自己要求的樣式的證明書，無法給加銀行logo，也不能蓋章，衹能簽字。在我一個多小時的軟磨硬泡以後，經理鬆動了。竟然主動想辦法，她提議說，可以辦理bank statement，不過我看了他們給的bank statement樣本也是一個時間點的賬戶存款而已，無法滿足28天的資金維持證明。看我面有難色，日本人經理還是挺善解人意的，說，我可以把日期改成，從xx月xx日-xx月xx日（28天）的最低資金證明。這樣就能解決問題了。而且bank statement本身自帶銀行logo。謝天謝地，一項死板不能變通的日本人讓我從此刮目相看。解決了我的燃眉之急。也不必再去找翻譯公司翻譯賬戶流水了。有驚無險。第二天我拿到開好的證明，立刻掃描PDF郵件發給LSHTM，期待他們能馬上給開來 CAS (Confirmation of Acceptance of Studies)。等了一周，還是左等不來右等不來，距離7月31日還剩下不到10天了。終於無法忍耐等待的我，打電話去倫敦詢問我的情況。對方接電話的是個年輕女聲，優雅的倫敦音告訴我，不要着急，先無視學校的提醒滿足條件的郵件吧。我們會儘快看你的檔案。無奈我衹好作罷，挂了電話繼續等待。&lt;/p&gt;
+
+&lt;p&gt;結果第二天晚上就收到了確認函，說你的CAS很快就能發給你了。oh yeah！半夜裏我就收到了發來的新鮮剛出爐的CAS號碼以及新的無條件錄取證明：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/uncon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我很早以前就在&lt;a href=&#34;https://www.visa4uk.fco.gov.uk/home/welcome&#34; target=&#34;_blank&#34;&gt;visa4uk&lt;/a&gt;上註冊好了全部的信息，就等着學校發來 CAS 的文件了。於是我再花了半個小時把 CAS 上的內容填寫到簽證申請的網站上去。在申請的網站上，會中途跳出來讓你支付一年醫療保險的頁面（£150），付完保險費以後會收到自己的保險號碼。估計以後在英國如果需要看病的話報自己的保險號碼就OK了。於是乎我以迅雷不及掩耳之勢立刻預約了7月31日去大阪的簽證申請中心遞交簽證材料。&lt;/p&gt;
+
+&lt;p&gt;等待去辦簽證的過程中，又收到好消息，宿舍抽籤中了。於是我就成了倫敦準市民之一拉。哈哈哈哈。今兒真高興阿，今兒真高興。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/gif/shuang.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我抽中的是&lt;a href=&#34;http://halls.london.ac.uk/international-hall&#34; target=&#34;_blank&#34;&gt;International Hall&lt;/a&gt;的單人間。仔細閱讀了條款後發現，每週2百鎊的房租確實有點小貴，但是呢，確是包了早餐晚餐和週末的四餐的。我想這將會大大減輕時間和金錢的成本。畢竟只有一年的留學時間。將就將就吧，每天都是炸魚和薯條估計吃一週就會讓人瘋了誒。。。先做好心理準備。對伙食不應有太高期待。&lt;/p&gt;
+
+&lt;p&gt;萬事具備，&lt;del&gt;只差簽證了。&lt;/del&gt; 於是就到了預約機票的時候，查了半天各種中介的網站，結果都是什麼中轉三四次的，要不就是繞地球一大圈的，才能有價格比較便宜的。索性打電話去日本航空詢問有沒有給留學生準備的往返一年，時間靈活的機票。果然不問不知道，一問嚇一跳阿，電話接線員小哥樂呵呵:-)說，哎呀你這電話打的太是時候了，我們日本航空正好最近上線了歐洲航線的特價機票，而且專門針對你這樣要待三個月以上的客戶。一問價格，我的媽呀，出發行程已定，歸程未定的叫做半靈活機票 (semi-flexi)，日本航空的這個折扣價爲12萬日元。比全日空便宜了一半，比其他的可疑航空減少了飛行時間，還有什麼好說的，果斷就訂了。結果呢，準備付錢了小哥告訴我說，您現在先別付定金，我這裏已經幫你把機票預留好了，您等8月1日以後再上網站上打開訂單支付，因爲8月1日後的燃油稅機場時用費等雜費由於匯率等變化會再便宜一萬日元左右。&lt;strong&gt;W!T!F!&lt;/strong&gt; 感動得熱淚盈眶有沒有，簡直就想穿過電話線去擁抱這位小哥了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/jal.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>留學筆記</title>
-      <link>https://winterwang.github.io/post/2017-03-16/</link>
+      <link>https://wangcc.me/post/2017-03-16/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-16/</guid>
-      <description>英國留學申請-準備-面試-合格！(to-be-updated)</description>
+      <guid>https://wangcc.me/post/2017-03-16/</guid>
+      <description>
+
+&lt;h2 id=&#34;尋找並確定合適自己的大學-合適的課程&#34;&gt;尋找並確定合適自己的大學，合適的課程&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;英國，還是美國？ 這是一個問題
+
+&lt;ul&gt;
+&lt;li&gt;我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。&lt;/li&gt;
+&lt;li&gt;上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。&lt;/li&gt;
+&lt;li&gt;加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。&lt;/li&gt;
+&lt;li&gt;另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/7754267&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:Pocock-S-J-Life&#34;&gt;&lt;a href=&#34;#fn:Pocock-S-J-Life&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：&lt;br&gt;我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Theory&lt;br&gt; (偏重理論)&lt;/td&gt;
+&lt;td&gt;Cambridge&lt;/td&gt;
+&lt;td&gt;Mathematical Statistics&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;Sheffield&lt;/td&gt;
+&lt;td&gt;Statistics&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;University College London&lt;/td&gt;
+&lt;td&gt;Applied Stochastic Systems&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;Oxford&lt;/td&gt;
+&lt;td&gt;Applied Statistics&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;Kent&lt;/td&gt;
+&lt;td&gt;Statistics&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;Reading&lt;/td&gt;
+&lt;td&gt;Biometry&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;Southampton&lt;/td&gt;
+&lt;td&gt;Statistics with Application in Medicine&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;$\downdownarrows$&lt;/td&gt;
+&lt;td&gt;Leicester&lt;/td&gt;
+&lt;td&gt;Medical Statistics &amp;amp; Information Technology&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Applications (偏重實踐)&lt;/td&gt;
+&lt;td&gt;London School of Hygiene &amp;amp; Tropical Medicine&lt;/td&gt;
+&lt;td&gt;Medical Statitics&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;確認申請時間-申請要點-雅思成績要求-是否有面試-推薦信&#34;&gt;確認申請時間，申請要點（雅思成績要求，是否有面試，推薦信）&lt;/h2&gt;
+
+&lt;p&gt;決定了申請 LSHTM 以後，便要開始準備材料，確定截止時間，以及雅思成績的要求等。&lt;/p&gt;
+
+&lt;p&gt;我之前並無申請歐美大學的經驗，許多都是這次申請過程中自己摸索的。總結一下就是，留學申請這種事，自己來就可以搞定了。經過仔細鑽研LSHTM的醫學統計碩士課程&lt;a href=&#34;http://www.lshtm.ac.uk/study/masters/msms.html&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;，確認雅思成績要求總分不低於7，聽說讀單項最低不低於5.5，寫作不低於6.5以後，便着手開始集中複習英語的計劃。&lt;/p&gt;
+
+&lt;p&gt;至於申請截止時間，&lt;a href=&#34;http://www.lshtm.ac.uk/study/applications/index.html&#34; target=&#34;_blank&#34;&gt;網站&lt;/a&gt;說的8月1日，沃天。。。9月底開學8月還能申請。不過，6月1日以後的申請要交£100的過遲申請費用。不管怎麼說，越早越好。我是2016年10月開始計劃申請的，那時候自己給自己定下目標，1月7日雅思成績如果達標，1月份之內就完成所有申請步驟。&lt;/p&gt;
+
+&lt;p&gt;面試的情況後面會再多說一些，其他課程不太瞭解，醫學統計學的碩士課程是對有可能成爲學生的人進行面試的 (potential students will be invited to join an interview)。所以估計材料交了以後很久都沒有面試的通知的話，那就可以安心在家當作自己沒有申請過，該幹嘛幹嘛了。儘量保持低調嘛。我還跟他們負責招生的人發郵件確認了，材料遞交6周左右會給面試通知。估計不錄取也是在這個時間點給通知的。&lt;/p&gt;
+
+&lt;p&gt;最後一個就是最重要的推薦人的選擇了。我邀請之前博士階段的導師，以及現在的同事。聽說美國大學要三個推薦人。英國是只要兩人的。關於如何選擇推薦人，LSHTM的網站上說的是，如果申請人正在就學，那就需要兩個都是對你的學業/學術十分瞭解的人。如果申請人已經就業，那就填最高學歷時期的導師一名，及現在的同事一名或者老闆/上司。當然，在把自己要寫的推薦人姓名信息等填入申請表格之前，要跟他們打個招呼才是。&lt;/p&gt;
+
+&lt;p&gt;至於推薦信的內容。我的博士導師收到我的邀請郵件以後欣然同意，然而那之後我並沒有收到他給我的個人評價或者推薦信內容/稿件。我想，大概(有些)認真的日本人認爲這個推薦信對申請人本人來說也應該保密的。不過我對我的導師有充分的信任，不至於在推薦信裏寫我不愛讀書行爲不端之類害我的話。他一直都是實事求是認真做事的人。另外一封推薦信來自我的同事，他對自己英文不太有自信，而且他每天就坐在我隔壁，寫了稿子就讓我看，我又請native speaker幫忙校對了以後提交的。所以我對這個第二封推薦信的內容是掌握的。&lt;/p&gt;
+
+&lt;h2 id=&#34;3個月突擊-雅思8分&#34;&gt;3個月突擊，雅思8分&lt;/h2&gt;
+
+&lt;p&gt;我以前考過兩次託福。都是裸考。一次是大學期間跟風考的，大夥兒都忙忙碌碌，準備考研啦，準備託福GRE出國拉，所以我也想說考一個，看看這些英語考試都考什麼內容。如果您來我這裏想瞭解託福雅思考試的祕籍，抱歉出門左轉去&lt;a href=&#34;https://www.hujiang.com/&#34; target=&#34;_blank&#34;&gt;滬江外語&lt;/a&gt;吧。我每日也都是用的他家的APP和資源（主要是聽寫BBC新聞）。另外推薦一個背單詞的軟件：&lt;a href=&#34;https://www.baicizhan.com/&#34; target=&#34;_blank&#34;&gt;百詞斬&lt;/a&gt;。&lt;a href=&#34;https://www.shanbay.com/&#34; target=&#34;_blank&#34;&gt;扇貝單詞&lt;/a&gt;也不錯。不過個人還是對百詞斬比較偏愛。也許是先入爲主吧。第一次打開時，設置自己的背誦單詞表（雅思詞彙）然後設定好時間，和背詞計劃。我是設定了每日100個單詞。每天堅持一百個，直到考試前一天。百詞斬的app會再每天第一次打開app的時候提醒，並且複習昨天或者最近背誦過的生詞。感覺他們應該是用了一些算法的，大約是根據個人背誦單詞的記錄（傳說中的記憶曲線？），以及錯誤次數來選出每天複習的詞彙的，這一點百詞斬很厲害。&lt;/p&gt;
+
+&lt;p&gt;除了背單詞，就是尋找合適的老師練習寫作和口語了。在此我就不去給某寶作廣告了。我找了兩個雅思作文老師練習，每天都有寫作的作業，一天 task 1 第二天 task 2 這樣。有的老師只提供作文修改和點評，有的還會給你上課，當然費用就比前一種稍微貴一些。能提供授課服務的老師基本上就是具有新東方，環球雅思等授課經驗的作文老師。作文老師推薦的教材可以在此介紹一下:
+&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/ieltswriting.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;至於口語，某寶上的口語外教中介等類似商品就更多了。基本上應該都是菲律賓的口語老師。一開始我也抱着忐忑的心情預約試聽了以下，擔心菲律賓的口語老師可能會有類似印度人的難懂口音。後來的事實證明自己完全是多慮了。至少在我聽課的那幾位菲律賓的外教的口音都較爲純正。況且每個人的口音（應該）都是天生的/後天跟父母學的，不必擔心自己上了幾天口語可就變成怪怪的阿三口音。另外記得以前看過文章說英語母語者能辨別很多不同的口音，所以關鍵不是口音影響一個人的表達，而是你到底真的會不會表達。而且如果你的有點異國口音的英語常常還會被認爲很有趣，很性感，或者很有特點。個人認爲典型的中國人的口音其實多數情況下不太性感，但是你也可以變得像下面這個人一樣風趣幽默（點擊圖片可以看到他講的中式腔調的英語笑話，老外一樣被逗得一樂一樂的）:
+&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/joewong.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+於是我的口語課就固定爲每天早晨9點鐘開始一個小時，和老師練習過去口語考過的題目。各種常見/不常見話題的切磋和準備。許多話題是根本想不到的。比如，“請描述一次你參加過的婚禮”，或者“請用英語講一個中國歷史上的有趣的故事”這樣的題目，讓我用中文來講述我還要愣上個1分鐘，更不要說在分秒必爭的口語考試中被問道這樣的題目，基本就等於告訴你回去準備再交錢考試了。&lt;/p&gt;
+
+&lt;p&gt;備考雅思是一段辛苦的過程。堅持每日練習才能保持良好的考試/競技狀態，口語和作文是中國人的短板。聽力和寫作常常有不少人（包括我）可以拿到接近滿分。我一開始備考時也是覺得要把過去劍橋雅思的4-11套&lt;a href=&#34;https://book.douban.com/subject/1479127/&#34; target=&#34;_blank&#34;&gt;全真練習題&lt;/a&gt;全部過一邊，題海戰術嘛。後來被寫作的老師敲了警鐘。他說：「聽力和閱讀如果每天都花過多的時間去做的話，對於你來說提高很有限，因爲你都只有錯很少的題目，只是自己刷高分滿足自己的虛榮心而已。到頭來短板的作文和口語都沒有時間練習的話，總分還是上不去。」於是我聽從了寫作老師的話，改爲三四天做一套聽力和閱讀。當然每次都是用考試時的標準來。所以其實一直到了考前，我也沒有把4-11的所有過去試題都練習完。只是挑着做了一些。關於考場的真實感受和我的考分。可以看我之前的&lt;a href=&#34;https://winterwang.github.io/post/2017-01-07-ielts-test/&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;1個月集中-文件準備&#34;&gt;1個月集中，文件準備&lt;/h2&gt;
+
+&lt;p&gt;考完雅思考試以後等待考試成績公佈的這段時間，我便開始着手準備申請所需要的各種文件。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;最近的大學院（就是我的博士課程）成績單，英文版。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;博士學位證書，和名古屋大學的畢業證書的英文版。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1和2由於是要開英文版的，聯繫名古屋大學的留學生辦公室，申請郵寄辦理（無手續費），然後附上回信的信封和郵票就可以了。&lt;/li&gt;
+&lt;li&gt;另外，爲了以防萬一，我又拜託之前本科階段上海交大的指導老師幫忙開具了本科階段的學位證書，畢業證書的英文版，以及當年的成績單。（看了當時的成績單，不禁回想當年在上海求學的日子。曾經有段時間，在中國訪問facebook是不需要任何技巧的。那個時候，我們還有google reader，還有google.cn。。。）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;個人簡歷&lt;a href=&#34;https://github.com/winterwang/markdown_cv/raw/master/Rmarkdown/rap-2pg-cv.pdf&#34; target=&#34;_blank&#34;&gt;cv&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;查找了許多模板，后来选择了(&lt;a href=&#34;http://svmiller.com/blog/2016/03/svm-r-markdown-cv/&#34; target=&#34;_blank&#34;&gt;这一款&lt;/a&gt;)。&lt;code&gt;Fork&lt;/code&gt;过来以后打开&lt;code&gt;Rmd&lt;/code&gt;文件，写上自己的内容，&lt;code&gt;knit&lt;/code&gt;，pdf就生成了。生活从未如此简单与快乐。告别Micro$oft，你会更轻松。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;個人陳述(Personal Statement)寫作，修改，寫作，修改。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;格式依然是用&lt;a href=&#34;https://github.com/rohanarora/SoP&#34; target=&#34;_blank&#34;&gt;模板&lt;/a&gt;，然后内容的写作和修改，确实费了一番脑筋和功夫。先是寫了初稿，然後給了曾經上过LSHTM醫學統計課程的日本人前輩看，然後修改，又給寫推薦信的兩位導師看，然後再修改，之後再給曾經在UCL留學的高中同學，以及他認識的 native speaker 看，之後再修改。此後又给目前在UCL任教的曾經的高中同學看。最后又花錢送去潤色和校對一遍，才決定最後作爲申請文書遞交給LSHTM。六個不同的人給的意見自然會有不同，最終還是要自己作決斷和取捨的。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;跟以前的導師，現在的上司請求推薦信&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;上面提到個人陳述的時候也說到把稿子給了兩位寫推薦信的導師看。我覺得這一點十分重要。畢竟寫推薦信的導師，他要知道你自己在個人陳述中自我推薦了什麼，才能再在推薦信裏加以強調。深以爲然。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;備齊材料-終於可以申請了&#34;&gt;備齊材料，終於可以申請了！&lt;/h2&gt;
+
+&lt;p&gt;上面的各種文件備齊了以後，就是直接在線填寫申請表格了。表格中仍有部分內容需要自己填寫的。在此不再贅述。 按下申請按鈕之後，LSHTM發來確認信。估計是系統自動發送的。之後便是等待兩位推薦人在線遞交推薦信了。兩位推薦人交齊了推薦信，已經是我申請提交之後一個月左右的事了。之後該是進入和文書審查階段。&lt;/p&gt;
+
+&lt;h2 id=&#34;面試來了-面試真的來了&#34;&gt;面試來了！面試真的來了！&lt;/h2&gt;
+
+&lt;p&gt;過了兩到三週。課程的聯絡人(Admissions Administrator)發來郵件說安排一下Skype面試的時間。&lt;/p&gt;
+
+&lt;h2 id=&#34;我被錄取了&#34;&gt;我被錄取了！&lt;/h2&gt;
+
+&lt;h2 id=&#34;補交畢業證書的原件&#34;&gt;補交畢業證書的原件&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:Pocock-S-J-Life&#34;&gt;Pocock, S. J. Life as an academic medical statistician and how to survive it. Statist. Med. 14, 209–222 (1995). &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:Pocock-S-J-Life&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

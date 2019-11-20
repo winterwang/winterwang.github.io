@@ -1,2331 +1,828 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/japan/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/experience/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/life/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/thoughts/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/home-before-completion/</loc>
-      <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication_types/2/</loc>
-      <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/ch_ndnsrp/</loc>
-      <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication_types/</loc>
-      <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/talk/fens2019/</loc>
-      <lastmod>2019-09-02T00:00:00+09:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/bayesian/</loc>
-      <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/bayesian/</loc>
-      <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/medical-statistics/</loc>
-      <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/r-techniques/</loc>
-      <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/statistics/</loc>
-      <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/multilevel-model-rstan/</loc>
-      <lastmod>2019-08-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/entrance-done/</loc>
-      <lastmod>2019-08-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/okinawa-trip/</loc>
-      <lastmod>2019-07-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/project/</loc>
-      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/project/chronon/</loc>
-      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/chrononutrition/</loc>
-      <lastmod>2019-07-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/sorrow/</loc>
-      <lastmod>2019-07-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/sorrow/</loc>
-      <lastmod>2019-07-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/notes/</loc>
-      <lastmod>2019-07-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/base-of-the-house-done/</loc>
-      <lastmod>2019-07-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/poisson-stan/</loc>
-      <lastmod>2019-07-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/diary/</loc>
-      <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/construction/</loc>
-      <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/jichinsai/</loc>
-      <lastmod>2019-06-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2019-06-28-macbook/</loc>
-      <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/do-you-hear-people-sing/</loc>
-      <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2019-06-04/</loc>
-      <lastmod>2019-06-04T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/berksonian-bias/</loc>
-      <lastmod>2019-02-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/logistic-rstan2/</loc>
-      <lastmod>2019-02-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/logistic-rstan/</loc>
-      <lastmod>2019-01-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/rstan-wonderful-r3/</loc>
-      <lastmod>2019-01-22T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/simple-linear-regression-using-rstan/</loc>
-      <lastmod>2019-01-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2018-12-todo/</loc>
-      <lastmod>2018-12-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/to-do/</loc>
-      <lastmod>2018-12-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/to-do/</loc>
-      <lastmod>2018-12-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/rstan-wonderful-r/</loc>
-      <lastmod>2018-11-22T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2018-11-todo/</loc>
-      <lastmod>2018-11-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/talk/ndns-talk-london/</loc>
-      <lastmod>2018-11-04T00:00:00+09:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2018-10-todo/</loc>
-      <lastmod>2018-10-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/predictionpancreaticgwas/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/lshtm/</loc>
-      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/lshtm/</loc>
-      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/r/</loc>
-      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/words-notes-and-sentences-that-may-be-useful/</loc>
-      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/learning-notes/</loc>
-      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/study-abroad/</loc>
-      <lastmod>2018-07-03T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/scotland/</loc>
-      <lastmod>2018-06-24T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/summer-project-schedule/</loc>
-      <lastmod>2018-06-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/scotland-highland-road-trip/</loc>
-      <lastmod>2018-06-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/todo-2018-june/</loc>
-      <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/todotest/</loc>
-      <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/sleep/</loc>
-      <lastmod>2018-05-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/london/</loc>
-      <lastmod>2018-01-14T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/luan/</loc>
-      <lastmod>2018-01-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/black-meal/</loc>
-      <lastmod>2017-12-19T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/project/lshtmlearningnote/</loc>
-      <lastmod>2017-11-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/inference/</loc>
-      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/construction-of-a-hypothesis-test/</loc>
-      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/approximate-log-likelihood-ratios/</loc>
-      <lastmod>2017-11-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/log-likelihood-ratio/</loc>
-      <lastmod>2017-11-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/likelihood/</loc>
-      <lastmod>2017-11-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/clinical-trial/</loc>
-      <lastmod>2017-10-29T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/sample-size-in-clinical-trial/</loc>
-      <lastmod>2017-10-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/hpylorimeta/</loc>
-      <lastmod>2017-10-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/chi-square-distribution/</loc>
-      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/frequentist-statistical-inference02/</loc>
-      <lastmod>2017-10-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/frequentist-statistical-inference01/</loc>
-      <lastmod>2017-10-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/basic-mathematics/</loc>
-      <lastmod>2017-10-21T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/probability/</loc>
-      <lastmod>2017-10-21T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/central-limit-theorem-application/</loc>
-      <lastmod>2017-10-21T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/central-limit-theory/</loc>
-      <lastmod>2017-10-19T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/probability3/</loc>
-      <lastmod>2017-10-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/normal-distribution/</loc>
-      <lastmod>2017-10-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/probability2-4/</loc>
-      <lastmod>2017-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/probability-gambling-answers/</loc>
-      <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/probability-gambling/</loc>
-      <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/notes-of-basic-rules-in-maths/</loc>
-      <lastmod>2017-09-30T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/matrix-revision/</loc>
-      <lastmod>2017-09-30T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/linear-algebra/</loc>
-      <lastmod>2017-09-30T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/first-impression-of-london2/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/first-impression-of-london/</loc>
-      <lastmod>2017-09-26T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/london-life-started/</loc>
-      <lastmod>2017-09-20T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/uk-visa-succeed/</loc>
-      <lastmod>2017-08-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/iea-in-saitama/</loc>
-      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/iea/</loc>
-      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/presentation/</loc>
-      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/saitama/</loc>
-      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/conference/</loc>
-      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/conference/</loc>
-      <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</loc>
-      <lastmod>2017-08-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/homogeneouse-linear-equations/</loc>
-      <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/elementary-row-operations/</loc>
-      <lastmod>2017-08-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/cramers-formula/</loc>
-      <lastmod>2017-08-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/inverse-matrix-method/</loc>
-      <lastmod>2017-08-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/linear-simultaneous-equation/</loc>
-      <lastmod>2017-08-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/inverse-matrix/</loc>
-      <lastmod>2017-08-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/visa-application/</loc>
-      <lastmod>2017-08-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/unconditional/</loc>
-      <lastmod>2017-07-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-07-07/</loc>
-      <lastmod>2017-07-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-07-06/</loc>
-      <lastmod>2017-07-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/60s-science/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/english-learning/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/listening/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/dictation/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/dictation/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-06-12/</loc>
-      <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-05-31/</loc>
-      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-05-30/</loc>
-      <lastmod>2017-05-30T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/okuda/</loc>
-      <lastmod>2017-04-26T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/palau/</loc>
-      <lastmod>2017-04-18T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-04-02/</loc>
-      <lastmod>2017-04-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-03-16/</loc>
-      <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-03-15/</loc>
-      <lastmod>2017-03-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/bbc/</loc>
-      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/dictation2017-03-13/</loc>
-      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-03-13/</loc>
-      <lastmod>2017-03-13T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-03-11/</loc>
-      <lastmod>2017-03-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-03-08/</loc>
-      <lastmod>2017-03-08T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/jaccmatsunaga/</loc>
-      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-03-01/</loc>
-      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-28/</loc>
-      <lastmod>2017-02-28T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-22/</loc>
-      <lastmod>2017-02-22T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-21/</loc>
-      <lastmod>2017-02-21T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-19/</loc>
-      <lastmod>2017-02-20T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-18/</loc>
-      <lastmod>2017-02-18T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-17/</loc>
-      <lastmod>2017-02-17T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-16/</loc>
-      <lastmod>2017-02-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-15/</loc>
-      <lastmod>2017-02-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-13/</loc>
-      <lastmod>2017-02-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-12-t/</loc>
-      <lastmod>2017-02-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-10/</loc>
-      <lastmod>2017-02-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-08/</loc>
-      <lastmod>2017-02-08T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-02-06/</loc>
-      <lastmod>2017-02-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/ielts-test/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-01-07-ielts-test/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/reading/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/speaking/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/writing/</loc>
-      <lastmod>2017-02-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/aichi/</loc>
-      <lastmod>2017-02-02T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/project/aichi/</loc>
-      <lastmod>2017-02-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/jacc/</loc>
-      <lastmod>2017-02-02T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/project/jacc/</loc>
-      <lastmod>2017-02-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/jaccstress_colorectal/</loc>
-      <lastmod>2017-01-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/steppalau/</loc>
-      <lastmod>2017-01-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-1-5/</loc>
-      <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-1-4/</loc>
-      <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-1-3/</loc>
-      <lastmod>2017-01-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-1-2/</loc>
-      <lastmod>2017-01-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/academic/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/slides/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2017-1-1/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/</loc>
-      <lastmod>2017-01-01T00:00:00+09:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-31/</loc>
-      <lastmod>2016-12-31T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-30/</loc>
-      <lastmod>2016-12-30T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-29/</loc>
-      <lastmod>2016-12-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-28/</loc>
-      <lastmod>2016-12-28T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-27/</loc>
-      <lastmod>2016-12-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-26/</loc>
-      <lastmod>2016-12-26T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-25/</loc>
-      <lastmod>2016-12-25T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-22/</loc>
-      <lastmod>2016-12-22T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-21/</loc>
-      <lastmod>2016-12-21T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-20/</loc>
-      <lastmod>2016-12-20T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-19/</loc>
-      <lastmod>2016-12-19T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-18/</loc>
-      <lastmod>2016-12-18T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-17/</loc>
-      <lastmod>2016-12-17T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-16/</loc>
-      <lastmod>2016-12-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-15/</loc>
-      <lastmod>2016-12-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-14/</loc>
-      <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-13/</loc>
-      <lastmod>2016-12-13T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-12/</loc>
-      <lastmod>2016-12-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-11/</loc>
-      <lastmod>2016-12-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-10/</loc>
-      <lastmod>2016-12-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-9/</loc>
-      <lastmod>2016-12-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-8/</loc>
-      <lastmod>2016-12-08T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-7/</loc>
-      <lastmod>2016-12-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-6/</loc>
-      <lastmod>2016-12-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-5/</loc>
-      <lastmod>2016-12-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-4/</loc>
-      <lastmod>2016-12-04T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-3/</loc>
-      <lastmod>2016-12-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-2/</loc>
-      <lastmod>2016-12-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-12-1/</loc>
-      <lastmod>2016-12-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-30/</loc>
-      <lastmod>2016-11-30T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-29/</loc>
-      <lastmod>2016-11-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-28/</loc>
-      <lastmod>2016-11-28T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-27/</loc>
-      <lastmod>2016-11-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication_types/8/</loc>
-      <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/esophageal/</loc>
-      <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-25/</loc>
-      <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-24/</loc>
-      <lastmod>2016-11-24T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-23/</loc>
-      <lastmod>2016-11-23T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-22/</loc>
-      <lastmod>2016-11-22T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-21/</loc>
-      <lastmod>2016-11-21T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-19/</loc>
-      <lastmod>2016-11-19T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-18/</loc>
-      <lastmod>2016-11-18T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-17/</loc>
-      <lastmod>2016-11-17T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-16/</loc>
-      <lastmod>2016-11-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-15/</loc>
-      <lastmod>2016-11-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-14/</loc>
-      <lastmod>2016-11-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-12/</loc>
-      <lastmod>2016-11-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-11/</loc>
-      <lastmod>2016-11-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-11-10/</loc>
-      <lastmod>2016-11-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-10-13/</loc>
-      <lastmod>2016-10-13T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-10-7/</loc>
-      <lastmod>2016-10-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-10-6/</loc>
-      <lastmod>2016-10-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/jaccbreast/</loc>
-      <lastmod>2016-09-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-08-11/</loc>
-      <lastmod>2016-08-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-8-10/</loc>
-      <lastmod>2016-08-10T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-8-5/</loc>
-      <lastmod>2016-08-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-8-4-powerball/</loc>
-      <lastmod>2016-08-04T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-08-03-gutbacteria/</loc>
-      <lastmod>2016-08-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-08-02-honey/</loc>
-      <lastmod>2016-08-02T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/interactive/</loc>
-      <lastmod>2016-05-31T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/leaflet/</loc>
-      <lastmod>2016-05-31T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/rmaps/</loc>
-      <lastmod>2016-05-31T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-05-31-rmaps/</loc>
-      <lastmod>2016-05-31T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-05-27-hello-world/</loc>
-      <lastmod>2016-05-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/mathjax/</loc>
-      <lastmod>2016-05-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/categories/test/</loc>
-      <lastmod>2016-05-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/tags/test/</loc>
-      <lastmod>2016-05-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/jaccseaweed/</loc>
-      <lastmod>2016-05-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-3-8/</loc>
-      <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-3-4/</loc>
-      <lastmod>2016-03-04T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-3-1/</loc>
-      <lastmod>2016-03-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-2-25/</loc>
-      <lastmod>2016-02-25T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-2-22/</loc>
-      <lastmod>2016-02-22T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-2-18/</loc>
-      <lastmod>2016-02-18T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-2-2/</loc>
-      <lastmod>2016-02-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2016-2-15/</loc>
-      <lastmod>2016-02-15T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/fhdm2/</loc>
-      <lastmod>2015-12-31T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2015-9-18/</loc>
-      <lastmod>2015-09-18T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/2015-9-16/</loc>
-      <lastmod>2015-09-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/bfskip/</loc>
-      <lastmod>2015-05-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/smmd/</loc>
-      <lastmod>2015-02-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/milk/</loc>
-      <lastmod>2015-01-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/globalobesity/</loc>
-      <lastmod>2014-11-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/liverfat/</loc>
-      <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication_types/7/</loc>
-      <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/uemuradietary/</loc>
-      <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/crpdm2/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication_types/1/</loc>
-      <lastmod>2011-05-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/publication/blood-c3_liverfat/</loc>
-      <lastmod>2011-05-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://winterwang.github.io/post/trace/</loc>
-      <priority>0</priority>
-    </url>
-    
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://wangcc.me/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/experience/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/japan/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/life/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/thoughts/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/home-before-completion/</loc>
+    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication_types/2/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication/journal-article/ch_ndnsrp/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/luigi-palla/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication_types/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/suzana-almoosawi/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/entrance-done/</loc>
+    <lastmod>2019-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/okinawa-trip/</loc>
+    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/sorrow/</loc>
+    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/sorrow/</loc>
+    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/notes/</loc>
+    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/base-of-the-house-done/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/diary/</loc>
+    <lastmod>2019-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/construction/</loc>
+    <lastmod>2019-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/jichinsai/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2019-06-28-macbook/</loc>
+    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/do-you-hear-people-sing/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2019-06-04/</loc>
+    <lastmod>2019-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/berksonian-bias/</loc>
+    <lastmod>2019-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2018-12-todo/</loc>
+    <lastmod>2018-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/to-do/</loc>
+    <lastmod>2018-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/to-do/</loc>
+    <lastmod>2018-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2018-11-todo/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2018-10-todo/</loc>
+    <lastmod>2018-10-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/lshtm/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/medical-statistics/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/scotland/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/statistics/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/study-abroad/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/summer-project-schedule/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/scotland-highland-road-trip/</loc>
+    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/todo-2018-june/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/todotest/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/sleep/</loc>
+    <lastmod>2018-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/london/</loc>
+    <lastmod>2018-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/luan/</loc>
+    <lastmod>2018-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/black-meal/</loc>
+    <lastmod>2017-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/learning-notes/</loc>
+    <lastmod>2017-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/project/lshtmlearningnote/</loc>
+    <lastmod>2017-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/project/</loc>
+    <lastmod>2017-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/statistics/</loc>
+    <lastmod>2017-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/first-impression-of-london2/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/first-impression-of-london/</loc>
+    <lastmod>2017-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/london-life-started/</loc>
+    <lastmod>2017-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/uk-visa-succeed/</loc>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/iea-in-saitama/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/conference/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/conference/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/iea/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/presentation/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/saitama/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/basic-mathematics/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/inverse-matrix/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/visa-application/</loc>
+    <lastmod>2017-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/unconditional/</loc>
+    <lastmod>2017-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/60s-science/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/dictation/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/dictation/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/english-learning/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/listening/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-06-12/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-05-31/</loc>
+    <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-05-30/</loc>
+    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-03-16/</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/bbc/</loc>
+    <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/dictation2017-03-13/</loc>
+    <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/ielts-test/</loc>
+    <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-01-07-ielts-test/</loc>
+    <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/reading/</loc>
+    <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/speaking/</loc>
+    <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/writing/</loc>
+    <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/jacc/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/project/jacc/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-1-5/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-1-4/</loc>
+    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-1-3/</loc>
+    <lastmod>2017-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-1-2/</loc>
+    <lastmod>2017-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-1-1/</loc>
+    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-31/</loc>
+    <lastmod>2016-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-30/</loc>
+    <lastmod>2016-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-29/</loc>
+    <lastmod>2016-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-28/</loc>
+    <lastmod>2016-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-27/</loc>
+    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-26/</loc>
+    <lastmod>2016-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-25/</loc>
+    <lastmod>2016-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-22/</loc>
+    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-21/</loc>
+    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-20/</loc>
+    <lastmod>2016-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-19/</loc>
+    <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-18/</loc>
+    <lastmod>2016-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-17/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-16/</loc>
+    <lastmod>2016-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-15/</loc>
+    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-14/</loc>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-13/</loc>
+    <lastmod>2016-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-12/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-11/</loc>
+    <lastmod>2016-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-10/</loc>
+    <lastmod>2016-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-9/</loc>
+    <lastmod>2016-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-8/</loc>
+    <lastmod>2016-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-7/</loc>
+    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-6/</loc>
+    <lastmod>2016-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-5/</loc>
+    <lastmod>2016-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-4/</loc>
+    <lastmod>2016-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-3/</loc>
+    <lastmod>2016-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-2/</loc>
+    <lastmod>2016-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-12-1/</loc>
+    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-30/</loc>
+    <lastmod>2016-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-29/</loc>
+    <lastmod>2016-11-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-28/</loc>
+    <lastmod>2016-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-27/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-25/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-24/</loc>
+    <lastmod>2016-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-23/</loc>
+    <lastmod>2016-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-22/</loc>
+    <lastmod>2016-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-21/</loc>
+    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-19/</loc>
+    <lastmod>2016-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-18/</loc>
+    <lastmod>2016-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-17/</loc>
+    <lastmod>2016-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-16/</loc>
+    <lastmod>2016-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-15/</loc>
+    <lastmod>2016-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-14/</loc>
+    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-12/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-11/</loc>
+    <lastmod>2016-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-11-10/</loc>
+    <lastmod>2016-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-10-13/</loc>
+    <lastmod>2016-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-10-7/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-10-6/</loc>
+    <lastmod>2016-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-08-11/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-8-10/</loc>
+    <lastmod>2016-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-8-5/</loc>
+    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-8-4-powerball/</loc>
+    <lastmod>2016-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-08-03-gutbacteria/</loc>
+    <lastmod>2016-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-08-02-honey/</loc>
+    <lastmod>2016-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/interactive/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/leaflet/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/r/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/r-techniques/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/rmaps/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-05-31-rmaps/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-3-8/</loc>
+    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-3-4/</loc>
+    <lastmod>2016-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-3-1/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-2-25/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-2-22/</loc>
+    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-2-18/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-2-2/</loc>
+    <lastmod>2016-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2016-2-15/</loc>
+    <lastmod>2016-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2015-9-18/</loc>
+    <lastmod>2015-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2015-9-16/</loc>
+    <lastmod>2015-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/trace/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/talk/</loc>
+  </url>
   
 </urlset>

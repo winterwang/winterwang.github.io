@@ -1,69 +1,976 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>To do on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/to-do/</link>
-    <description>Recent content in To do on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/to-do/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>To do | Be Ambitious</title>
+    <link>https://wangcc.me/tags/to-do/</link>
+      <atom:link href="https://wangcc.me/tags/to-do/index.xml" rel="self" type="application/rss+xml" />
+    <description>To do</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>To do</title>
+      <link>https://wangcc.me/tags/to-do/</link>
+    </image>
     
     <item>
       <title>2018-12 todo</title>
-      <link>https://winterwang.github.io/post/2018-12-todo/</link>
+      <link>https://wangcc.me/post/2018-12-todo/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2018-12-todo/</guid>
-      <description>todo list</description>
+      <guid>https://wangcc.me/post/2018-12-todo/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;2018-12-03
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=16Rd46SE-20&amp;amp;list=PL7F907999BA1994A1&#34; target=&#34;_blank&#34;&gt;Learn Emacs;&lt;/a&gt; day 1 done&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Return the email from LP;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;learn &lt;a href=&#34;https://github.com/noamross/redoc&#34; target=&#34;_blank&#34;&gt;reversible R markdown /MS word documents package&lt;/a&gt;;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Pay the you-know-what ticket;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read &lt;a href=&#34;https://www.amazon.com/Evidence-Evolution-Logic-Behind-Science-ebook/dp/B00KILLNIO/ref=mt_kindle?_encoding=UTF8&amp;amp;me=&amp;amp;qid=1543812059&#34; target=&#34;_blank&#34;&gt;Evidence and Evolution&lt;/a&gt; 1%&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-12-04
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN 10% left; FINALLY!!!!!&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=16Rd46SE-20&amp;amp;list=PL7F907999BA1994A1&#34; target=&#34;_blank&#34;&gt;Learn Emacs;&lt;/a&gt; day 2&amp;amp;3 done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-12-05
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the victim book, and keep memo to P151;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=16Rd46SE-20&amp;amp;list=PL7F907999BA1994A1&#34; target=&#34;_blank&#34;&gt;Learn Emacs;&lt;/a&gt; day 4&amp;amp;5 done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-12-06
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Move all todo to &lt;a href=&#34;https://wangcc.me/Emacsnotes/TODO.html&#34; target=&#34;_blank&#34;&gt;Org-mode page&lt;/a&gt;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>2018-11 todo</title>
-      <link>https://winterwang.github.io/post/2018-11-todo/</link>
+      <link>https://wangcc.me/post/2018-11-todo/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2018-11-todo/</guid>
-      <description>todo list</description>
+      <guid>https://wangcc.me/post/2018-11-todo/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;2018-11-05
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Paper comments to Lin;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Cancel the tsumitate;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Ask about the insurance;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Submit nenmatsu;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Modify the poster (adding logo), etc;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-06
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html#practical-bayesian-statistics-06&#34; target=&#34;_blank&#34;&gt;Bayesian statistics practical 6&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare AJCN template (Rmd) file;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare AJCN draft (.docx) file;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;MLCA analyses done stratified by men and women;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-07
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;fix the racket before Wed.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 7&lt;/a&gt; done 20%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Check the problem of the gh-page on github.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-08~11
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Search for guideline of eradication among adolescents of H. &lt;em&gt;pylori&lt;/em&gt; in the world;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Protocol comments to TMS;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the victim book, and keep memo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN 10%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Modify the Presentation Slides&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-12
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 7&lt;/a&gt; done 80%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the victim book, and keep memo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Comment the Presentation Slides from LP;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Labeling the learning note bookdown book.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-13
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 7&lt;/a&gt; done 100%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN 25%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Comment the manuscript from Lin;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Domestic travel paper work&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-14
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the victim book, and keep memo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN 40%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-15~16
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html#practical-bayesian-statistics-07&#34; target=&#34;_blank&#34;&gt;Bayesian statistics practical 7&lt;/a&gt; done 100%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN the tables, figures done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-19
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the manuscript for AJCN 80%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Confirm the feedback of the project;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-20
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Comment KS application form (2018-11-21).&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Perform the analyses using sex as an interaction, combine three tables. done 20%&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the victim book, and keep memo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 8&lt;/a&gt; 20% done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-21
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn Stan for Bayesian stats 1%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Perform the analyses using sex as an interaction, combine three tables. done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 8&lt;/a&gt; 30% done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-22
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn Stan for Bayesian stats 5%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-86.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 8&lt;/a&gt; 35% done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Manuscript to AMU about the overseas study&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-24
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn Stan for Bayesian stats 6%;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Review the JAT meta-ana paper (deadline: 2018-11-28);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-11-25~12-02 (annual leave)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>2018_10 todo</title>
-      <link>https://winterwang.github.io/post/2018-10-todo/</link>
+      <link>https://wangcc.me/post/2018-10-todo/</link>
       <pubDate>Tue, 02 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2018-10-todo/</guid>
-      <description>todo list</description>
+      <guid>https://wangcc.me/post/2018-10-todo/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;2018-10-02 ~ 2018-10-17
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the proposal to JSPS.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-02
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Background, key questions&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;objective, importance&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-09
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-80.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 1&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-10
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/MC-estimation.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 2&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-11~12
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/-conjugate-priors.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 3&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-13
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Review of the paper about HIV;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-15
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Wait for the comments from LP, SA;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-16
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Modification of the proposal;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Submission of the proposal;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to apply for the data usage of Japan National Nutrional Survey;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-17~19
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/mcmcbugs.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 4&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-23
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-84.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 5&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-24
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to use Stan (just a beginning);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-25
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://github.com/winterwang/PAC_PAM&#34; target=&#34;_blank&#34;&gt;Some preliminary analysis&lt;/a&gt; using vague prior to do &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S1341321X18300783&#34; target=&#34;_blank&#34;&gt;MabeRCT&lt;/a&gt;;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/section-85.html&#34; target=&#34;_blank&#34;&gt;Bayesian statistics Chapter 6&lt;/a&gt; done;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Talk with LP AS, the next steps of writing the carb paper;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-10-26~31
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare poster for &lt;a href=&#34;https://www.bna.org.uk/mediacentre/events/chrononutrition-from-epidemiology-to-molecular-mechanism-symposium-london/&#34; target=&#34;_blank&#34;&gt;conference&lt;/a&gt;.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;LCA analyses done stratified by men and women;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Summer Project Schedule</title>
-      <link>https://winterwang.github.io/post/summer-project-schedule/</link>
+      <link>https://wangcc.me/post/summer-project-schedule/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/summer-project-schedule/</guid>
-      <description>todo list for summer project</description>
+      <guid>https://wangcc.me/post/summer-project-schedule/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Data analysis finish by 2018-07-&lt;/del&gt;24&lt;del&gt;31&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Paper structure confirm by 2018-08-01&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Paper draft complete by 2018-08-16&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-24
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read and try to repeat Rll&amp;rsquo;s method in R and familarize the dataset ASAP&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Two papers applying Repeated Measures LCA&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-25
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Meeting with supervisor and Susanna&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Confirm the cutoff of carborhydrate consumption&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Talk with Rll ask about the methodology and dataset&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-26
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Send the summarised memo of meeting to Supervisor and etc.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the first part fundamentals of LCA.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-27
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;a href=&#34;https://www.londonr.org/&#34; target=&#34;_blank&#34;&gt;London R in UCL&lt;/a&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Germany lost their game against South Korea, UNBELIEVEABLE&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-28&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the book collins2010latent - Latent Class and Latent Transition Analysis: With Applications in the Social, Behavioral, and Health Sciences (Done until 4.2)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-06-29
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read the book collins2010latent - Latent Class and Latent Transition Analysis: With Applications in the Social, Behavioral, and Health Sciences (Done until 4.3)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Data management for NDNS 8 years data (70%)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Start to analysis the data according to the discussion on 25th(30%)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Day1 data analysis results summary&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-01
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Relax and do nothing&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Buy some drink to enjoy the night with classmates(HB)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-02/03
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Send some preliminary results to co-authors&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&lt;a href=&#34;http://www.the-afc.com/competitions/fifa-world-cup/latest/news/japan-fa-president-proud-of-blue-samurai&#34; target=&#34;_blank&#34;&gt;Japan lost the game to Belgium, but they are the glory of Asia&amp;ndash;heartbreaking&lt;/a&gt;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-04&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&amp;ldquo;consider separating weekdays from weekends if we are not averaging the four days?&amp;rdquo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-05
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Test and confirm the availability of LCA in SAS&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA in SAS with NDNS data&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-06&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn how to do LCA with random effects in SAS&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Find whether there is any possibility of conducting the same method in R or STATA (no there is no way)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-07~09
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;&amp;ldquo;Maybe we should try with the threshold at 25% only as per the existing guidelines (although those are per meal)?&amp;rdquo;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-10
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; ~~Meet with tutor;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Start writing about the methodology;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Try to start writing about the introduction;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-11&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Try to summarise the meeting memo yesterday;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Re-analyse the data with new cut-off values (25, 50, 75);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Re-analyse the data with new cut-off values (50);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-12~22
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Use latent class growth analysis;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Use multilevel latent class analysis;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Think about the mathmatical theory behind the mixed LCA, write to PROC LCA group if necessary;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-23~25
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Learn about the survey package in R&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish writing about the methodology;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Write some introduction;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-07-26&lt;br /&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Let&amp;rsquo;s finish analysis of the classes and health outcomes.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read about the carbo-fibre ratio references.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-08-15
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;PM review&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish most of the discussion outlines and 2 pages of them.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2018-08-31
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish revising the report according to comments from LP and SAM;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Read RT&amp;rsquo;s report and send the comments;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Confirm the deadline for funding applications;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Prepare the abstract for conferences (UK and JP);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Start preparing the paper for submit (MLCA part alone);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Think about the schedules and plans after leaving London;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Finish the post of Scotland trip.&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Todo 2018 June-September</title>
-      <link>https://winterwang.github.io/post/todo-2018-june/</link>
+      <link>https://wangcc.me/post/todo-2018-june/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/todo-2018-june/</guid>
-      <description>todo list</description>
+      <guid>https://wangcc.me/post/todo-2018-june/</guid>
+      <description>&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 大塚敏美財団メールを返信する&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;PCA analysis learning&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Cluster analysis learning&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;建立一個論文日程表格&lt;/del&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;日程計劃包括每周進度&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;分析進度&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;論文寫作進度&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習 Latent Class Analysis 方法;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;熟悉 NDNS 數據框架結構，思考分析方法;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Comment and response to AACE&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Test on Ubuntu 18.04&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;尝试从Ubuntu, 日本語を試す&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;更新 &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/&#34; target=&#34;_blank&#34;&gt;LSHTM 統計學學習筆記&lt;/a&gt; &lt;a href=&#34;http://wangcc.me/LSHTMlearningnote/cox-.html&#34; target=&#34;_blank&#34;&gt;生存分析章節-Cox-models&lt;/a&gt;;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Multinomial logistic regression model;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，GLM Oridinal logisitic regression model;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，貝葉斯進階章節;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新 LSHTM 統計學學習筆記，用 STATA 或者 R 分析 SME 流行病學數據的實踐部分;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新生存分析，更多具體細節及練習[Cox];&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 更新生存分析，更多具體細節及練習[AFT];&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;辦理法國簽證所需的材料; 法國行程取消(2018-06-20)&lt;/del&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;大學學生在校證明;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;銀行三個月存款證明&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;歐洲之星(7月)訂票;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;巴黎青年旅館訂房 (聯繫下正好在法國的 なっちゃん家?);&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;旅行保險;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;BRP 複印;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;護照複印;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;[xa] &lt;del&gt;簽證申請書;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;近三个月内的证件照，尺寸3.5cm x 4.5cm，白底&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; 把 &lt;a href=&#34;https://github.com/winterwang/overleaf-thesis-template&#34; target=&#34;_blank&#34;&gt;LaTeX 模板&lt;/a&gt; 調整到 &lt;a href=&#34;https://github.com/pzhaonet/bookdownplus&#34; target=&#34;_blank&#34;&gt;Bookdownplus 的模板之一&lt;/a&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Bayesian&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-1;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-3&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-7;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-03 17:00, mean and variance for data transformation]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-03 17:30 linear regression, really need to pay attention in reading the question]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-03 22:30 Binomial exact test]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, coefficient and rho, 75% about]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-2;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-3;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, too much to write as a survival question, about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, too much to write about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-6;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test done, GLM about 90%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-1;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-4;&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>To do list 2018 May</title>
-      <link>https://winterwang.github.io/post/todotest/</link>
+      <link>https://wangcc.me/post/todotest/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/todotest/</guid>
-      <description>todo list</description>
+      <guid>https://wangcc.me/post/todotest/</guid>
+      <description>&lt;p&gt;試試看用 &lt;a href=&#34;https://shrektan.com/post/2018/04/02/blogdown-todo/&#34; target=&#34;_blank&#34;&gt;Blogdown 來管理自己的待辦事項&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;Causal inference 作業&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-18 12:00]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Hierarchical discrete data modeling Lecture 1-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-08 23:45 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;學習去年的 Generalised linear mixed effect modelling lecture 5-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-12 16:00 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;完成 ASM Edmund 作業;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-18 03:20 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;寫一篇日志回顧最近 LSHTM 的生活;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-06 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Probablity;(2018-05-16 to 17)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Inference;(2018-05-17 to 18)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Clinical Trial;(2018-05-19 to 20)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Basic Epi; (2018-05-20 to 21)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Analytical Technique;(2018-05-22 to 24)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Regression; (2018-05-24 to 25)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Robust statistics; (2018-05-27)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 GLM (2018-05-28 to 29)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;複習 Survival Analysis (2018-05-39 to 31)&lt;/del&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;反省自己爲什麼效率這麼低。。。。。&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;解決辦法就是把自己的 to do 放在網頁上，刺激自己。(2018-05-06 done)&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2008年 LSHTM 試題 Paper 2-2 (survival question);&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-29 17:01]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2009 年 LSHTM 試題 Paper 2-3 (survival question);&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-29 18:19]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-24 17:01 40 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-18 12:21 done]&lt;/li&gt;
+&lt;li&gt;[2018-06-03 12:51 done again 80% 17 min]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 11:15]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2011年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-19 22:50 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-19 23:43 done]&lt;/li&gt;
+&lt;li&gt;[2018-06-03 16:30 Wald test, MLE, compare the inverse of mean]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-25 21:32 done 35 min]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-27 13:39 done 15 min]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2012年 LSHTM 試題 Paper 1-8;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-18 22:00 done]&lt;/li&gt;
+&lt;li&gt;[2018-06-04 11:27 done again, when use transformation for MLE, we need to substitute it back to the loglikelihood function to find the standard error of the newly transformed variable]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2012年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-25 35 min but brutally beaten]&lt;/li&gt;
+&lt;li&gt;[done 2018-06-04 20:00 Mock test 90%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-04-30, challenged again 2018-05-25 quadratic term interpration is needed]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-20 01:00 done]&lt;/li&gt;
+&lt;li&gt;[done again on 2018-06-04 12:22 score test and comparison with lrt, hard way of doing lrt with binomial data, time consuming, about 80% got]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-04-30]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 23:38]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-04-30]&lt;/li&gt;
+&lt;li&gt;[done again 2018-06-03 15 min 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 14:09 18 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 23:38]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-1&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-07 1800]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-2&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-07 1900]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-3&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-07 2230; challenged again 2018-05-25 20:58 35 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-28 extreeeeeeeemely^99^ difficult GLM]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 21:21 in 37 min]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-28 巨難無比，條件邏輯回歸的推導和證明]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2013年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 23:38]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-04-23]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-25 27 min but only get about 60% poor and brutal&amp;hellip;&amp;hellip; what should I do&amp;hellip;]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-04-23]&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;[done 2018-06-04 done in 29 min 90% got]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-20 22:56]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 18:33]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-19 13:43]&lt;/li&gt;
+&lt;li&gt;[done agian 2018-06-03 11:18 17 min 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 15:07,278 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-21 14:50]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-24 15:01]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-04-23]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-14 23:18; twice challenge 2018-05-25 17:20 better now]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-15 01:30; challenged again 2018-05-28 15:47 much better now]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-15 11:30]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-28 16:50 got 19 points out of 20 I like this one]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2014年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 18:38 36 min used, survival questions]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-19 14:53]&lt;/li&gt;
+&lt;li&gt;[done again 2018-06-03 00:05 17 min 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-20 13:46 20 min used]&lt;/li&gt;
+&lt;li&gt;[done 2018-06-04 14:08 12 min used well done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-20 22:15 20 min used but only get 50%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-23 21:00]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-25 12:16]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 12:06 25 min used but only get 60%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-27 16:57  28 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 12:44]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-24 13:56]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 16:14 29 min used, somewhat easy I can have about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-25 13:58]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-28 12:42]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-28 14:15 done within 25 min, Poisson regression model is within my range of ability]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-30 17:07 done. 40 min used. Quite difficult Weibull model with AFT feature.]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2015年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-22 00:58]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-02]&lt;/li&gt;
+&lt;li&gt;[done again 2018-06-03 00:04 30 min 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-2;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-02]&lt;/li&gt;
+&lt;li&gt;[done again 2018-06-04 14:40 20 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-3;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-02]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-4;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-02]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-5;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-02 and 2018-05-24 22:58 33 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-6;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-03]&lt;/li&gt;
+&lt;li&gt;[done 2018-06-02 17:41 about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-7;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-03]&lt;/li&gt;
+&lt;li&gt;[done 2018-06-02 17:41 about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 1-8;&lt;/del&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-03]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-23 18:00]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 01:03 very difficult competing risk(subdistribution) model]&lt;/li&gt;
+&lt;li&gt;[done again 2018-06-01 11:59, more than 80% get, answers improved]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-25 01:38 40 min used]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;[done 2018-05-27 23:58 45 min used]&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2018-05-31 15:22 challenged again 32 min used, answers improved.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;[done 2018-05-28 11:55 matched case-control study]&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; 2018-05-31 16:04 challenged again 27 min used, answers improved.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-30 13:09 Weibull model with connection to AFT model]&lt;/li&gt;
+&lt;li&gt;[done again 2018-06-01 12:00 more than 80% got, answers improved]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2016年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[done 2018-05-21 13:00]&lt;/li&gt;
+&lt;li&gt;[done 2018-06-02 17:40 again, about 80%]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-19 20:02 done]&lt;/li&gt;
+&lt;li&gt;[2018-06-03 00:03 17 min done 80% got]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-2;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-20 16:07 史上最難]&lt;/li&gt;
+&lt;li&gt;[2018-06-04 20 min 90% got, MSE = Variance + (Bias)^2]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-20 18:30]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-4;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-23 01:45 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-24 21:57 done]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-21 02:35 被虐慘了]&lt;/li&gt;
+&lt;li&gt;[2018-06-02 14:49 largely improved]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-21 11:09 答案可能有錯的 AT?]&lt;/li&gt;
+&lt;li&gt;[2018-06-02 14:48 done again, Good]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 1-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-27 12:34 done, 28 min used, but only had 60%. &lt;strong&gt;Read your question carefully!!!&lt;/strong&gt;]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-1;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-21 12:49 done 17]&lt;/li&gt;
+&lt;li&gt;[2018-06-02 14:48 done again, largely improved]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-2;&lt;/del&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;[done 2018-05-27 23:09 extremely difficult GLM]&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; challenged again 2018-05-31 21 min done with quick smash&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-3;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-27 20:00 very difficult combined with ordinal logistic regression]&lt;/li&gt;
+&lt;li&gt;[2018-05-31 14:35 challenged again, 40 min, still very difficult but improved]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-5;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-29 20:11 done, not very difficult survival question, but you only got about 50%]&lt;/li&gt;
+&lt;li&gt;[2018-06-01 13:52 challenged again, answers improved, some time-dependent variable in survival analysis is quite interesting]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-6;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-29 22:47 done, not very difficult, but less than 50% obtained]&lt;/li&gt;
+&lt;li&gt;[2018-06-01 13:55 done again, answers improved.]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-7;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-24 18:43 done 45 min used. too much time wasted!!!]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; &lt;del&gt;2017年 LSHTM 試題 Paper 2-8;&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[2018-05-20]&lt;/li&gt;
+&lt;/ul&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JACC on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/jacc/</link>
-    <description>Recent content in JACC on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/jacc/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>JACC | Be Ambitious</title>
+    <link>https://wangcc.me/tags/jacc/</link>
+      <atom:link href="https://wangcc.me/tags/jacc/index.xml" rel="self" type="application/rss+xml" />
+    <description>JACC</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>JACC</title>
+      <link>https://wangcc.me/tags/jacc/</link>
+    </image>
     
     <item>
-      <title>the Japan Collaborative Cohort (JACC) Study | 大規模コホート研究</title>
-      <link>https://winterwang.github.io/project/jacc/</link>
+      <title>the JACC Study</title>
+      <link>https://wangcc.me/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/project/jacc/</guid>
-      <description>JACC Studyは日本人の生活習慣ががんとどのように関連しているかを明らかにすることを目的としています</description>
+      <guid>https://wangcc.me/project/jacc/</guid>
+      <description></description>
     </item>
     
   </channel>

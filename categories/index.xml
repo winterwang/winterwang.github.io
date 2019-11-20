@@ -1,131 +1,94 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Be ambitious</title>
-    <link>https://winterwang.github.io/categories/</link>
-    <description>Recent content in Categories on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Categories | Be Ambitious</title>
+    <link>https://wangcc.me/categories/</link>
+      <atom:link href="https://wangcc.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Categories</title>
+      <link>https://wangcc.me/categories/</link>
+    </image>
     
     <item>
       <title>life</title>
-      <link>https://winterwang.github.io/categories/life/</link>
+      <link>https://wangcc.me/categories/life/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/life/</guid>
+      <guid>https://wangcc.me/categories/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>thoughts</title>
-      <link>https://winterwang.github.io/categories/thoughts/</link>
+      <link>https://wangcc.me/categories/thoughts/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/thoughts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bayesian</title>
-      <link>https://winterwang.github.io/categories/bayesian/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R techniques</title>
-      <link>https://winterwang.github.io/categories/r-techniques/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/r-techniques/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>statistics</title>
-      <link>https://winterwang.github.io/categories/statistics/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/statistics/</guid>
+      <guid>https://wangcc.me/categories/thoughts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sorrow</title>
-      <link>https://winterwang.github.io/categories/sorrow/</link>
+      <link>https://wangcc.me/categories/sorrow/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/sorrow/</guid>
+      <guid>https://wangcc.me/categories/sorrow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>diary</title>
-      <link>https://winterwang.github.io/categories/diary/</link>
+      <link>https://wangcc.me/categories/diary/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/diary/</guid>
+      <guid>https://wangcc.me/categories/diary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>To do</title>
-      <link>https://winterwang.github.io/categories/to-do/</link>
+      <link>https://wangcc.me/categories/to-do/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/to-do/</guid>
+      <guid>https://wangcc.me/categories/to-do/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>LSHTM</title>
-      <link>https://winterwang.github.io/categories/lshtm/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/lshtm/</guid>
+      <title>statistics</title>
+      <link>https://wangcc.me/categories/statistics/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/categories/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>study abroad</title>
-      <link>https://winterwang.github.io/categories/study-abroad/</link>
-      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/study-abroad/</guid>
+      <link>https://wangcc.me/categories/study-abroad/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/categories/study-abroad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conference</title>
-      <link>https://winterwang.github.io/categories/conference/</link>
+      <link>https://wangcc.me/categories/conference/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/conference/</guid>
+      <guid>https://wangcc.me/categories/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dictation</title>
-      <link>https://winterwang.github.io/categories/dictation/</link>
+      <link>https://wangcc.me/categories/dictation/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/dictation/</guid>
+      <guid>https://wangcc.me/categories/dictation/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>test</title>
-      <link>https://winterwang.github.io/categories/test/</link>
-      <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/categories/test/</guid>
+      <title>R techniques</title>
+      <link>https://wangcc.me/categories/r-techniques/</link>
+      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/categories/r-techniques/</guid>
       <description></description>
     </item>
     
