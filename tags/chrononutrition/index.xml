@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>chrononutrition on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/chrononutrition/</link>
-    <description>Recent content in chrononutrition on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/chrononutrition/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>chrononutrition | Be Ambitious</title>
+    <link>https://wangcc.me/tags/chrononutrition/</link>
+      <atom:link href="https://wangcc.me/tags/chrononutrition/index.xml" rel="self" type="application/rss+xml" />
+    <description>chrononutrition</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>chrononutrition</title>
+      <link>https://wangcc.me/tags/chrononutrition/</link>
+    </image>
     
     <item>
-      <title>Understand the time when you eat-chrononutrition</title>
-      <link>https://winterwang.github.io/project/chronon/</link>
+      <title>Chrononutrition</title>
+      <link>https://wangcc.me/project/chronon/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/project/chronon/</guid>
-      <description>We applied unsupervised learning technique on the NDNS RP dataset.</description>
+      <guid>https://wangcc.me/project/chronon/</guid>
+      <description>&lt;p&gt;We applied unsupervised learning technique on the NDNS RP dataset.
+More details will be released asap.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/compo.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

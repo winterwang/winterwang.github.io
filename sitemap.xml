@@ -103,6 +103,21 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/project/chronon/</loc>
+    <lastmod>2019-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/chrononutrition/</loc>
+    <lastmod>2019-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/project/</loc>
+    <lastmod>2019-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/categories/sorrow/</loc>
     <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
@@ -163,12 +178,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/to-do/</loc>
+    <loc>https://wangcc.me/categories/to-do/</loc>
     <lastmod>2018-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/to-do/</loc>
+    <loc>https://wangcc.me/tags/to-do/</loc>
     <lastmod>2018-12-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -254,11 +269,6 @@
   
   <url>
     <loc>https://wangcc.me/project/lshtmlearningnote/</loc>
-    <lastmod>2017-11-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/project/</loc>
     <lastmod>2017-11-14T00:00:00+00:00</lastmod>
   </url>
   

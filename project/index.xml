@@ -5,12 +5,24 @@
     <link>https://wangcc.me/project/</link>
       <atom:link href="https://wangcc.me/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 14 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Projects</title>
       <link>https://wangcc.me/project/</link>
     </image>
+    
+    <item>
+      <title>Chrononutrition</title>
+      <link>https://wangcc.me/project/chronon/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/chronon/</guid>
+      <description>&lt;p&gt;We applied unsupervised learning technique on the NDNS RP dataset.
+More details will be released asap.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/compo.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Medical Statistics@LSHTM</title>
