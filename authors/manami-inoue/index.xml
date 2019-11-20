@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Manami Inoue | Be Ambitious</title>
-    <link>https://wangcc.me/authors/manami-inoue/</link>
-      <atom:link href="https://wangcc.me/authors/manami-inoue/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/manami-inoue/</link>
+      <atom:link href="/authors/manami-inoue/index.xml" rel="self" type="application/rss+xml" />
     <description>Manami Inoue</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 27 Oct 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Manami Inoue</title>
-      <link>https://wangcc.me/authors/manami-inoue/</link>
+      <link>/authors/manami-inoue/</link>
     </image>
     
     <item>
       <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
-      <link>https://wangcc.me/publication/journal-article/hpylorimeta/</link>
+      <link>/publication/journal-article/hpylorimeta/</link>
       <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/hpylorimeta/</guid>
+      <guid>/publication/journal-article/hpylorimeta/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -25,7 +25,7 @@
 
 &lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
 
@@ -35,9 +35,9 @@
     
     <item>
       <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
-      <link>https://wangcc.me/publication/journal-article/esophageal/</link>
+      <link>/publication/journal-article/esophageal/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/esophageal/</guid>
+      <guid>/publication/journal-article/esophageal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;

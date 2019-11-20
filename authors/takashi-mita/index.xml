@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Takashi Mita | Be Ambitious</title>
-    <link>https://wangcc.me/authors/takashi-mita/</link>
-      <atom:link href="https://wangcc.me/authors/takashi-mita/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/takashi-mita/</link>
+      <atom:link href="/authors/takashi-mita/index.xml" rel="self" type="application/rss+xml" />
     <description>Takashi Mita</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Takashi Mita</title>
-      <link>https://wangcc.me/authors/takashi-mita/</link>
+      <link>/authors/takashi-mita/</link>
     </image>
     
     <item>
       <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://wangcc.me/publication/journal-article/palau/</link>
+      <link>/publication/journal-article/palau/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/palau/</guid>
+      <guid>/publication/journal-article/palau/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 
 &lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>https://wangcc.me/publication/journal-article/steppalau/</link>
+      <link>/publication/journal-article/steppalau/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/steppalau/</guid>
+      <guid>/publication/journal-article/steppalau/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Takeshi Nishiyama | Be Ambitious</title>
-    <link>https://wangcc.me/authors/takeshi-nishiyama/</link>
-      <atom:link href="https://wangcc.me/authors/takeshi-nishiyama/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/takeshi-nishiyama/</link>
+      <atom:link href="/authors/takeshi-nishiyama/index.xml" rel="self" type="application/rss+xml" />
     <description>Takeshi Nishiyama</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Takeshi Nishiyama</title>
-      <link>https://wangcc.me/authors/takeshi-nishiyama/</link>
+      <link>/authors/takeshi-nishiyama/</link>
     </image>
     
     <item>
       <title>Prediction model for pancreatic cancer risk in the general Japanese population</title>
-      <link>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</link>
+      <link>/publication/journal-article/predictionpancreaticgwas/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</guid>
+      <guid>/publication/journal-article/predictionpancreaticgwas/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -28,9 +28,9 @@ cancer in Japanese and to develop a risk model for the identification of individ
     
     <item>
       <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
-      <link>https://wangcc.me/publication/journal-article/hpylorimeta/</link>
+      <link>/publication/journal-article/hpylorimeta/</link>
       <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/hpylorimeta/</guid>
+      <guid>/publication/journal-article/hpylorimeta/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -39,7 +39,7 @@ cancer in Japanese and to develop a risk model for the identification of individ
 
 &lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
 
@@ -49,9 +49,9 @@ cancer in Japanese and to develop a risk model for the identification of individ
     
     <item>
       <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</link>
+      <link>/publication/journal-article/jaccstress_colorectal/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</guid>
+      <guid>/publication/journal-article/jaccstress_colorectal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -62,9 +62,9 @@ cancer in Japanese and to develop a risk model for the identification of individ
     
     <item>
       <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
-      <link>https://wangcc.me/publication/journal-article/jaccbreast/</link>
+      <link>/publication/journal-article/jaccbreast/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccbreast/</guid>
+      <guid>/publication/journal-article/jaccbreast/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;

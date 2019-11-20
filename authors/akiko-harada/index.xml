@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Akiko Harada | Be Ambitious</title>
-    <link>https://wangcc.me/authors/akiko-harada/</link>
-      <atom:link href="https://wangcc.me/authors/akiko-harada/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/akiko-harada/</link>
+      <atom:link href="/authors/akiko-harada/index.xml" rel="self" type="application/rss+xml" />
     <description>Akiko Harada</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Akiko Harada</title>
-      <link>https://wangcc.me/authors/akiko-harada/</link>
+      <link>/authors/akiko-harada/</link>
     </image>
     
     <item>
       <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <link>/publication/journal-article/liverfat/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <guid>/publication/journal-article/liverfat/</guid>
       <description>
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;

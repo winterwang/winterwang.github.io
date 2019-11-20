@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sorrow | Be Ambitious</title>
-    <link>https://wangcc.me/categories/sorrow/</link>
-      <atom:link href="https://wangcc.me/categories/sorrow/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/sorrow/</link>
+      <atom:link href="/categories/sorrow/index.xml" rel="self" type="application/rss+xml" />
     <description>sorrow</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>sorrow</title>
-      <link>https://wangcc.me/categories/sorrow/</link>
+      <link>/categories/sorrow/</link>
     </image>
     
     <item>
       <title>受難者列傳筆記</title>
-      <link>https://wangcc.me/post/notes/</link>
+      <link>/post/notes/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/notes/</guid>
+      <guid>/post/notes/</guid>
       <description>&lt;p&gt;如果你想看這本書，可以在&lt;a href=&#34;http://ywang.uchicago.edu/history/&#34; target=&#34;_blank&#34;&gt;王友琴教授&lt;/a&gt;的網站上&lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=26&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwjL1piUo7jjAhWCad4KHY3CAIc4FBAWMAV6BAgCEAI&amp;amp;url=http%3A%2F%2Fywang.uchicago.edu%2Fhistory%2Fvictim_ebook_070505.pdf&amp;amp;usg=AOvVaw1IdtbLLjoZIBJdxY5qsiO4&#34; target=&#34;_blank&#34;&gt;下載&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;P18:
@@ -176,11 +176,11 @@
     
     <item>
       <title>誰還未覺醒 | Do you hear people sing</title>
-      <link>https://wangcc.me/post/do-you-hear-people-sing/</link>
+      <link>/post/do-you-hear-people-sing/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/do-you-hear-people-sing/</guid>
+      <guid>/post/do-you-hear-people-sing/</guid>
       <description>&lt;video width=auto height=auto controls allowfullscreen&gt;
-  &lt;source src=&#34;https://wangcc.me/post/2019-06-12-do-you-hear-people-sing_files/peoplesing.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;/post/2019-06-12-do-you-hear-people-sing_files/peoplesing.mp4&#34; type=&#34;video/mp4&#34;&gt;
   &lt;source src=&#34;movie.ogg&#34; type=&#34;video/ogg&#34;&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;
@@ -213,7 +213,7 @@
 
 &lt;p&gt;在那個廣場上，你要麼是王維林，要麼就是那臺坦克。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2019-06-12-do-you-hear-people-sing_files/IMG_20190609_180641.jpg&#34; alt=&#34;lie&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-12-do-you-hear-people-sing_files/IMG_20190609_180641.jpg&#34; alt=&#34;lie&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

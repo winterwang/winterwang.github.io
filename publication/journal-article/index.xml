@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Be Ambitious</title>
-    <link>https://wangcc.me/publication/journal-article/</link>
-      <atom:link href="https://wangcc.me/publication/journal-article/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication/journal-article/</link>
+      <atom:link href="/publication/journal-article/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Publications</title>
-      <link>https://wangcc.me/publication/journal-article/</link>
+      <link>/publication/journal-article/</link>
     </image>
     
     <item>
       <title>Day-Time Patterns of Carbohydrate Intake in Adults by Non-Parametric Multi-Level Latent Class Analysis—Results from the UK National Diet and Nutrition Survey (2008/09–2015/16)</title>
-      <link>https://wangcc.me/publication/journal-article/ch_ndnsrp/</link>
+      <link>/publication/journal-article/ch_ndnsrp/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/ch_ndnsrp/</guid>
+      <guid>/publication/journal-article/ch_ndnsrp/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 
 &lt;p&gt;This study aims at combining time and quantity of carbohydrate (CH) intake in the definition of eating patterns in UK adults and investigating the association of the derived patterns with type 2 diabetes (T2D). The National Diet and Nutrition Survey (NDNS) Rolling Program included 6155 adults in the UK. Time of the day was categorized into 7 pre-defined time slots: 6–9 am, 9–12 noon, 12–2 pm, 2–5 pm, 5–8 pm, 8–10 pm, and 10 pm–6 am. Responses for CH intake were categorized into: no energy intake, CH &amp;lt;50% or ≥50% of total energy. Non-parametric multilevel latent class analysis (MLCA) was applied to identify eating patterns of CH consumption across day-time, as a novel method accounting for the repeated measurements of intake over 3–4 days nested within individuals. Survey-designed multivariable regression was used to assess the associations of CH eating patterns with T2D. Three CH eating day patterns (low, high CH percentage and regular meal CH intake day) emerged from 24,483 observation days; based on which three classes of CH eaters were identified and characterized as: low (28.1%), moderate (28.8%) and high (43.1%) CH eaters. On average, low-CH eaters consumed the highest amount of total energy intake (7985.8 kJ) and had higher percentages of energy contributed by fat and alcohol, especially after 8 pm. Moderate-CH eaters consumed the lowest amount of total energy (7341.8 kJ) while they tended to have their meals later in the day. High-CH eaters consumed most of their carbohydrates and energy earlier in the day and within the time slots of 6–9 am, 12–2 pm and 5–8 pm, which correspond to traditional mealtimes. The high-CH eaters profile had the highest daily intake of CH and fiber and the lowest intake of protein and fat. Low-CH eaters had greater odds than high-CH eaters of having T2D in self-reported but not in previously undiagnosed diabetics. Further research using prospective longitudinal studies is warranted to ascertain the direction of causality in the association of CH patterns with type 2 diabetes.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Figure3colored.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Figure3colored.png&#34; alt=&#34;&#34; /&gt;
 The compositions (%) and absolute (kJ) energy consumption within each time slot by individual level carbohydrate eating classes: A, low carbohydrate eaters (LCE); B, moderate carbohydrate eaters (MCE); C, high carbohydrate eaters (HCE).&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Prediction model for pancreatic cancer risk in the general Japanese population</title>
-      <link>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</link>
+      <link>/publication/journal-article/predictionpancreaticgwas/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/predictionpancreaticgwas/</guid>
+      <guid>/publication/journal-article/predictionpancreaticgwas/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -44,9 +44,9 @@ cancer in Japanese and to develop a risk model for the identification of individ
     
     <item>
       <title>Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals</title>
-      <link>https://wangcc.me/publication/journal-article/hpylorimeta/</link>
+      <link>/publication/journal-article/hpylorimeta/</link>
       <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/hpylorimeta/</guid>
+      <guid>/publication/journal-article/hpylorimeta/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -55,7 +55,7 @@ cancer in Japanese and to develop a risk model for the identification of individ
 
 &lt;h4 id=&#34;click-the-graph-to-see-the-interactive-version&#34;&gt;Click the graph to see the interactive version&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://rpubs.com/winterwang/bubbleplot&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/Hpylori.png&#34; alt=&#34;Click for interactive version&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;summary-statistics-from-fitting-meta-regression-in-the-best-model-click-to-see-the-table-http-rpubs-com-winterwang-table3&#34;&gt;&lt;a href=&#34;http://rpubs.com/winterwang/table3&#34; target=&#34;_blank&#34;&gt;Summary statistics from fitting meta-regression in the best model.(click to see the table)&lt;/a&gt;&lt;/h4&gt;
 
@@ -65,9 +65,9 @@ cancer in Japanese and to develop a risk model for the identification of individ
     
     <item>
       <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
-      <link>https://wangcc.me/publication/journal-article/okuda/</link>
+      <link>/publication/journal-article/okuda/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/okuda/</guid>
+      <guid>/publication/journal-article/okuda/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Helicobacter pylori infection is associated with gastric cancer; thus, early diagnosis and treatment are crucial. Since &lt;em&gt;H. pylori&lt;/em&gt; infection in adolescents or young adults shows few symptoms, screening tests are necessary for this population. In this study, the accuracy of the rapid urine-&lt;em&gt;H. pylori&lt;/em&gt; antibody (u-HpAb) test was evaluated and compared to that of urine and serum &lt;em&gt;H. pylori&lt;/em&gt; enzyme-linked immunosorbent assays (u-HpELISA and s-HpELISA, respectively) in junior high school students.&lt;/p&gt;
@@ -89,24 +89,24 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://wangcc.me/publication/journal-article/palau/</link>
+      <link>/publication/journal-article/palau/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/palau/</guid>
+      <guid>/publication/journal-article/palau/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 
 &lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Palaustudy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccmatsunaga/</link>
+      <link>/publication/journal-article/jaccmatsunaga/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccmatsunaga/</guid>
+      <guid>/publication/journal-article/jaccmatsunaga/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -123,9 +123,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</link>
+      <link>/publication/journal-article/jaccstress_colorectal/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</guid>
+      <guid>/publication/journal-article/jaccstress_colorectal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -136,9 +136,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>https://wangcc.me/publication/journal-article/steppalau/</link>
+      <link>/publication/journal-article/steppalau/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/steppalau/</guid>
+      <guid>/publication/journal-article/steppalau/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -149,9 +149,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
-      <link>https://wangcc.me/publication/journal-article/esophageal/</link>
+      <link>/publication/journal-article/esophageal/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/esophageal/</guid>
+      <guid>/publication/journal-article/esophageal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -176,9 +176,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
-      <link>https://wangcc.me/publication/journal-article/jaccbreast/</link>
+      <link>/publication/journal-article/jaccbreast/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccbreast/</guid>
+      <guid>/publication/journal-article/jaccbreast/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -189,9 +189,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>https://wangcc.me/publication/journal-article/jaccseaweed/</link>
+      <link>/publication/journal-article/jaccseaweed/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccseaweed/</guid>
+      <guid>/publication/journal-article/jaccseaweed/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -202,9 +202,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>https://wangcc.me/publication/journal-article/fhdm2/</link>
+      <link>/publication/journal-article/fhdm2/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/fhdm2/</guid>
+      <guid>/publication/journal-article/fhdm2/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -229,9 +229,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/bfskip/</link>
+      <link>/publication/journal-article/bfskip/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/bfskip/</guid>
+      <guid>/publication/journal-article/bfskip/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -256,9 +256,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Smoking and Diabetes: Is the Association Mediated by Adiponectin, Leptin, or C-reactive Protein?</title>
-      <link>https://wangcc.me/publication/journal-article/smmd/</link>
+      <link>/publication/journal-article/smmd/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/smmd/</guid>
+      <guid>/publication/journal-article/smmd/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -275,9 +275,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Milk drinking and mortality: findings from the Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/milk/</link>
+      <link>/publication/journal-article/milk/</link>
       <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/milk/</guid>
+      <guid>/publication/journal-article/milk/</guid>
       <description>
 
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
@@ -302,9 +302,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
-      <link>https://wangcc.me/publication/journal-article/globalobesity/</link>
+      <link>/publication/journal-article/globalobesity/</link>
       <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/globalobesity/</guid>
+      <guid>/publication/journal-article/globalobesity/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -315,9 +315,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <link>/publication/journal-article/liverfat/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <guid>/publication/journal-article/liverfat/</guid>
       <description>
 
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -342,9 +342,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers.</title>
-      <link>https://wangcc.me/publication/journal-article/uemuradietary/</link>
+      <link>/publication/journal-article/uemuradietary/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/uemuradietary/</guid>
+      <guid>/publication/journal-article/uemuradietary/</guid>
       <description>
 
 &lt;h2 id=&#34;要-約&#34;&gt;要 約&lt;/h2&gt;
@@ -368,9 +368,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Positive association between high‐sensitivity C‐reactive protein and incidence of type 2 diabetes mellitus in Japanese workers: 6‐year follow‐up</title>
-      <link>https://wangcc.me/publication/journal-article/crpdm2/</link>
+      <link>/publication/journal-article/crpdm2/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/crpdm2/</guid>
+      <guid>/publication/journal-article/crpdm2/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -395,9 +395,9 @@ This article is protected by copyright. All rights reserved.&lt;/p&gt;
     
     <item>
       <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
-      <link>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</link>
+      <link>/publication/journal-article/blood-c3_liverfat/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</guid>
+      <guid>/publication/journal-article/blood-c3_liverfat/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;

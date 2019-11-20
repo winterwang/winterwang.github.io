@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>basic mathematics | Be Ambitious</title>
-    <link>https://wangcc.me/tags/basic-mathematics/</link>
-      <atom:link href="https://wangcc.me/tags/basic-mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/basic-mathematics/</link>
+      <atom:link href="/tags/basic-mathematics/index.xml" rel="self" type="application/rss+xml" />
     <description>basic mathematics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 03 Aug 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>basic mathematics</title>
-      <link>https://wangcc.me/tags/basic-mathematics/</link>
+      <link>/tags/basic-mathematics/</link>
     </image>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://wangcc.me/post/inverse-matrix/</link>
+      <link>/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/inverse-matrix/</guid>
+      <guid>/post/inverse-matrix/</guid>
       <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
 $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
 

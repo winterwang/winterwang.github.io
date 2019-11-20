@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Be Ambitious</title>
-    <link>https://wangcc.me/authors/admin/</link>
-      <atom:link href="https://wangcc.me/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/admin/</link>
+      <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Be Ambitious</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Be Ambitious</title>
-      <link>https://wangcc.me/authors/admin/</link>
+      <link>/authors/admin/</link>
     </image>
     
   </channel>

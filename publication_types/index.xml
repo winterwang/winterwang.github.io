@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types | Be Ambitious</title>
-    <link>https://wangcc.me/publication_types/</link>
-      <atom:link href="https://wangcc.me/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/</link>
+      <atom:link href="/publication_types/index.xml" rel="self" type="application/rss+xml" />
     <description>Publication_types</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Publication_types</title>
-      <link>https://wangcc.me/publication_types/</link>
+      <link>/publication_types/</link>
     </image>
     
     <item>
       <title>2</title>
-      <link>https://wangcc.me/publication_types/2/</link>
+      <link>/publication_types/2/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication_types/2/</guid>
+      <guid>/publication_types/2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>8</title>
-      <link>https://wangcc.me/publication_types/8/</link>
+      <link>/publication_types/8/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication_types/8/</guid>
+      <guid>/publication_types/8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>7</title>
-      <link>https://wangcc.me/publication_types/7/</link>
+      <link>/publication_types/7/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication_types/7/</guid>
+      <guid>/publication_types/7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>1</title>
-      <link>https://wangcc.me/publication_types/1/</link>
+      <link>/publication_types/1/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication_types/1/</guid>
+      <guid>/publication_types/1/</guid>
       <description></description>
     </item>
     

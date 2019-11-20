@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Be Ambitious</title>
-    <link>https://wangcc.me/categories/</link>
-      <atom:link href="https://wangcc.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/</link>
+      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Categories</title>
-      <link>https://wangcc.me/categories/</link>
+      <link>/categories/</link>
     </image>
     
     <item>
       <title>life</title>
-      <link>https://wangcc.me/categories/life/</link>
+      <link>/categories/life/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/life/</guid>
+      <guid>/categories/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>thoughts</title>
-      <link>https://wangcc.me/categories/thoughts/</link>
+      <link>/categories/thoughts/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/thoughts/</guid>
+      <guid>/categories/thoughts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sorrow</title>
-      <link>https://wangcc.me/categories/sorrow/</link>
+      <link>/categories/sorrow/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/sorrow/</guid>
+      <guid>/categories/sorrow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>diary</title>
-      <link>https://wangcc.me/categories/diary/</link>
+      <link>/categories/diary/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/diary/</guid>
+      <guid>/categories/diary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>To do</title>
-      <link>https://wangcc.me/categories/to-do/</link>
+      <link>/categories/to-do/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/to-do/</guid>
+      <guid>/categories/to-do/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>https://wangcc.me/categories/statistics/</link>
+      <link>/categories/statistics/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/statistics/</guid>
+      <guid>/categories/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>study abroad</title>
-      <link>https://wangcc.me/categories/study-abroad/</link>
+      <link>/categories/study-abroad/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/study-abroad/</guid>
+      <guid>/categories/study-abroad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conference</title>
-      <link>https://wangcc.me/categories/conference/</link>
+      <link>/categories/conference/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/conference/</guid>
+      <guid>/categories/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dictation</title>
-      <link>https://wangcc.me/categories/dictation/</link>
+      <link>/categories/dictation/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/dictation/</guid>
+      <guid>/categories/dictation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R techniques</title>
-      <link>https://wangcc.me/categories/r-techniques/</link>
+      <link>/categories/r-techniques/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/r-techniques/</guid>
+      <guid>/categories/r-techniques/</guid>
       <description></description>
     </item>
     

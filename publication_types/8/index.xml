@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>8 | Be Ambitious</title>
-    <link>https://wangcc.me/publication_types/8/</link>
-      <atom:link href="https://wangcc.me/publication_types/8/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/8/</link>
+      <atom:link href="/publication_types/8/index.xml" rel="self" type="application/rss+xml" />
     <description>8</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 25 Nov 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>8</title>
-      <link>https://wangcc.me/publication_types/8/</link>
+      <link>/publication_types/8/</link>
     </image>
     
     <item>
       <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
-      <link>https://wangcc.me/publication/journal-article/esophageal/</link>
+      <link>/publication/journal-article/esophageal/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/esophageal/</guid>
+      <guid>/publication/journal-article/esophageal/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -41,9 +41,9 @@
     
     <item>
       <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
-      <link>https://wangcc.me/publication/journal-article/globalobesity/</link>
+      <link>/publication/journal-article/globalobesity/</link>
       <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/globalobesity/</guid>
+      <guid>/publication/journal-article/globalobesity/</guid>
       <description>
 
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;

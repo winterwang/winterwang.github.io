@@ -2,269 +2,269 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Be Ambitious</title>
-    <link>https://wangcc.me/tags/</link>
-      <atom:link href="https://wangcc.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/</link>
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Tags</title>
-      <link>https://wangcc.me/tags/</link>
+      <link>/tags/</link>
     </image>
     
     <item>
       <title>experience</title>
-      <link>https://wangcc.me/tags/experience/</link>
+      <link>/tags/experience/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/experience/</guid>
+      <guid>/tags/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Japan</title>
-      <link>https://wangcc.me/tags/japan/</link>
+      <link>/tags/japan/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/japan/</guid>
+      <guid>/tags/japan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>偶爾感慨</title>
-      <link>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
+      <link>/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
+      <guid>/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>chrononutrition</title>
-      <link>https://wangcc.me/tags/chrononutrition/</link>
+      <link>/tags/chrononutrition/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/chrononutrition/</guid>
+      <guid>/tags/chrononutrition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sorrow</title>
-      <link>https://wangcc.me/tags/sorrow/</link>
+      <link>/tags/sorrow/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/sorrow/</guid>
+      <guid>/tags/sorrow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>To do</title>
-      <link>https://wangcc.me/tags/to-do/</link>
+      <link>/tags/to-do/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/to-do/</guid>
+      <guid>/tags/to-do/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LSHTM</title>
-      <link>https://wangcc.me/tags/lshtm/</link>
+      <link>/tags/lshtm/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/lshtm/</guid>
+      <guid>/tags/lshtm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Medical Statistics</title>
-      <link>https://wangcc.me/tags/medical-statistics/</link>
+      <link>/tags/medical-statistics/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/medical-statistics/</guid>
+      <guid>/tags/medical-statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scotland</title>
-      <link>https://wangcc.me/tags/scotland/</link>
+      <link>/tags/scotland/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/scotland/</guid>
+      <guid>/tags/scotland/</guid>
       <description></description>
     </item>
     
     <item>
       <title>London</title>
-      <link>https://wangcc.me/tags/london/</link>
+      <link>/tags/london/</link>
       <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/london/</guid>
+      <guid>/tags/london/</guid>
       <description></description>
     </item>
     
     <item>
       <title>learning notes</title>
-      <link>https://wangcc.me/tags/learning-notes/</link>
+      <link>/tags/learning-notes/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/learning-notes/</guid>
+      <guid>/tags/learning-notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>https://wangcc.me/tags/statistics/</link>
+      <link>/tags/statistics/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/statistics/</guid>
+      <guid>/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conference</title>
-      <link>https://wangcc.me/tags/conference/</link>
+      <link>/tags/conference/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/conference/</guid>
+      <guid>/tags/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IEA</title>
-      <link>https://wangcc.me/tags/iea/</link>
+      <link>/tags/iea/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/iea/</guid>
+      <guid>/tags/iea/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Presentation</title>
-      <link>https://wangcc.me/tags/presentation/</link>
+      <link>/tags/presentation/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/presentation/</guid>
+      <guid>/tags/presentation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Saitama</title>
-      <link>https://wangcc.me/tags/saitama/</link>
+      <link>/tags/saitama/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/saitama/</guid>
+      <guid>/tags/saitama/</guid>
       <description></description>
     </item>
     
     <item>
       <title>basic mathematics</title>
-      <link>https://wangcc.me/tags/basic-mathematics/</link>
+      <link>/tags/basic-mathematics/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/basic-mathematics/</guid>
+      <guid>/tags/basic-mathematics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>60s Science</title>
-      <link>https://wangcc.me/tags/60s-science/</link>
+      <link>/tags/60s-science/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/60s-science/</guid>
+      <guid>/tags/60s-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dictation</title>
-      <link>https://wangcc.me/tags/dictation/</link>
+      <link>/tags/dictation/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/dictation/</guid>
+      <guid>/tags/dictation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>English Learning</title>
-      <link>https://wangcc.me/tags/english-learning/</link>
+      <link>/tags/english-learning/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/english-learning/</guid>
+      <guid>/tags/english-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Listening</title>
-      <link>https://wangcc.me/tags/listening/</link>
+      <link>/tags/listening/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/listening/</guid>
+      <guid>/tags/listening/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BBC</title>
-      <link>https://wangcc.me/tags/bbc/</link>
+      <link>/tags/bbc/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/bbc/</guid>
+      <guid>/tags/bbc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IELTs test</title>
-      <link>https://wangcc.me/tags/ielts-test/</link>
+      <link>/tags/ielts-test/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/ielts-test/</guid>
+      <guid>/tags/ielts-test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>reading</title>
-      <link>https://wangcc.me/tags/reading/</link>
+      <link>/tags/reading/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/reading/</guid>
+      <guid>/tags/reading/</guid>
       <description></description>
     </item>
     
     <item>
       <title>speaking</title>
-      <link>https://wangcc.me/tags/speaking/</link>
+      <link>/tags/speaking/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/speaking/</guid>
+      <guid>/tags/speaking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>writing</title>
-      <link>https://wangcc.me/tags/writing/</link>
+      <link>/tags/writing/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/writing/</guid>
+      <guid>/tags/writing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aichi</title>
-      <link>https://wangcc.me/tags/aichi/</link>
+      <link>/tags/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/aichi/</guid>
+      <guid>/tags/aichi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JACC</title>
-      <link>https://wangcc.me/tags/jacc/</link>
+      <link>/tags/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/jacc/</guid>
+      <guid>/tags/jacc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>interactive</title>
-      <link>https://wangcc.me/tags/interactive/</link>
+      <link>/tags/interactive/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/interactive/</guid>
+      <guid>/tags/interactive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>leaflet</title>
-      <link>https://wangcc.me/tags/leaflet/</link>
+      <link>/tags/leaflet/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/leaflet/</guid>
+      <guid>/tags/leaflet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://wangcc.me/tags/r/</link>
+      <link>/tags/r/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/r/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rMaps</title>
-      <link>https://wangcc.me/tags/rmaps/</link>
+      <link>/tags/rmaps/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/rmaps/</guid>
+      <guid>/tags/rmaps/</guid>
       <description></description>
     </item>
     
