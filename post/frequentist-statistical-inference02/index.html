@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.55.6" />
-  <meta name="author" content="王 超辰 (Chaochen Wang)">
-  <meta name="description" content="Assistant Professor">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/frequentist-statistical-inference02/">
 
   
   
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Chaochen Wang 王　超辰">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="估計和精確度 Estimation and Precision， 自由度 degree of freedom">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://wangcc.me/post/frequentist-statistical-inference02/">
+
+  
 
 
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
   
 
   
@@ -24,108 +47,263 @@
   
   
     
-  
-  
-    
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
-  
-  
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-  <link rel="stylesheet" href="/styles.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-21867861-1', 'auto');
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
     
-  
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
 
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21867861-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-21867861-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/frequentist-statistical-inference02/">
-
-  <meta property="twitter:card" content="summary_large_image">
-  
-  <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/frequentist-statistical-inference02/">
-  <meta property="og:title" content="估計和精確度的概念 | Be ambitious">
-  <meta property="og:description" content="">
-  <meta property="og:locale" content="en-us">
-  
-  <meta property="article:published_time" content="2017-10-24T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2017-10-24T00:00:00&#43;00:00">
-  
+  <link rel="canonical" href="https://wangcc.me/post/frequentist-statistical-inference02/">
 
   
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Be Ambitious">
+  <meta property="og:url" content="https://wangcc.me/post/frequentist-statistical-inference02/">
+  <meta property="og:title" content="估計和精確度的概念 | Be Ambitious">
+  <meta property="og:description" content="估計和精確度 Estimation and Precision， 自由度 degree of freedom"><meta property="og:image" content="https://wangcc.me/img/icon-192.png">
+  <meta property="twitter:image" content="https://wangcc.me/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2017-10-24T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2017-10-24T00:00:00&#43;00:00">
+  
 
-  <title>估計和精確度的概念 | Be ambitious</title>
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wangcc.me/post/frequentist-statistical-inference02/"
+  },
+  "headline": "估計和精確度的概念",
+  
+  "datePublished": "2017-10-24T00:00:00Z",
+  "dateModified": "2017-10-24T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Chaochen Wang 王　超辰"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Be Ambitious",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wangcc.me/img/icon-512.png"
+    }
+  },
+  "description": "估計和精確度 Estimation and Precision， 自由度 degree of freedom"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>估計和精確度的概念 | Be Ambitious</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
 
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Be Ambitious</a>
       
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
       </button>
       
-      <a class="navbar-brand" href="/">Be ambitious</a>
-    </div>
 
     
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
 
       
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav ml-auto">
         
 
         
 
+        
+        
         
           
         
 
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
         <li class="nav-item">
-          <a href="/#about">
-            
-            <span>Home</span>
-            
-          </a>
+          <a class="nav-link " href="/#about"><span>Home</span></a>
         </li>
 
         
@@ -134,15 +312,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
         </li>
 
         
@@ -151,15 +341,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#posts">
-            
-            <span>Posts</span>
-            
-          </a>
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
         
@@ -168,15 +370,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#projects">
-            
-            <span>Projects</span>
-            
-          </a>
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
         
@@ -185,15 +399,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#teaching">
-            
-            <span>Teaching</span>
-            
-          </a>
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
         </li>
 
         
@@ -202,15 +428,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#slides">
-            
-            <span>Presentations/slides</span>
-            
-          </a>
+          <a class="nav-link " href="/#slides"><span>Slides</span></a>
         </li>
 
         
@@ -219,22 +457,50 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#contact">
-            
-            <span>Contact</span>
-            
-          </a>
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
         </li>
 
         
         
+
       
 
-      
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
       </ul>
 
     </div>
@@ -242,108 +508,102 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+  <article class="article">
 
   
 
 
-  <div class="article-container">
-    <div class="article-inner">
-      <h1 itemprop="name">估計和精確度的概念</h1>
 
-      
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>估計和精確度的概念</h1>
+
+  
+
+  
+    
+
 
 <div class="article-metadata">
 
+  
+  
+
+  
   <span class="article-date">
     
-    <time datetime="2017-10-24 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Tue, Oct 24, 2017
-    </time>
+    
+      
+    
+    2017-10-24
   </span>
+  
+
+  
 
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    6 min read
   </span>
   
 
   
   
+  
   <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/frequentist-statistical-inference02/#disqus_thread"></a>
+  <a href="/post/frequentist-statistical-inference02/#disqus_thread"></a>
   
 
-  
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/statistics">statistics</a
-    >, 
-    
-    <a href="/categories/study-abroad">study abroad</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f&amp;title=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f&amp;title=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5"
-         target="_blank" rel="noopener">
-        <i class="fa fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2ffrequentist-statistical-inference02%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
+    <i class="fas fa-folder mr-1"></i><a href="/categories/statistics/">statistics</a>, <a href="/categories/study-abroad/">study abroad</a></span>
   
 
 </div>
 
-
-      <div class="article-style" itemprop="articleBody">
-        
+    
 
 
-<div class="section level3">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<div id="估計量和他們的樣本分佈" class="section level3">
 <h3>估計量和他們的樣本分佈</h3>
 <p>例子： 最大呼氣量 (Forced Expoiratory Volume in one second, FEV1) 用於測量一個人的肺功能，它的測量值是連續的。我們從前來門診的人中隨機抽取 <span class="math inline">\(n\)</span> 人作爲樣本，用這個樣本的 FEV1 平均值來估計這個診所的患者的平均肺功能。</p>
 <p><strong>模型假設：</strong> 在這個例子中，我們的假設有如下：每個隨機抽取的 FEV1 測量值都是從同一個總體（人羣）中抽取，每一個觀察值 <span class="math inline">\(Y_i\)</span> 都互相獨立互不影響。我們用縮寫 iid 表示這些隨機抽取的樣本是服從獨立同分佈 (independent and identically distributed)。另外，總體的分佈也假定爲正態分佈，且總體均值爲 <span class="math inline">\(\mu\)</span>，總體方差爲 <span class="math inline">\(\sigma^2\)</span>。那麼這個模型可以簡單的被寫成：</p>
@@ -351,7 +611,7 @@
 <p><strong>總體均值 <span class="math inline">\(\mu\)</span> 的估計量：</strong> 顯然算術平均值: <span class="math inline">\(\bar{Y}=\frac{1}{n}\sum_{i=1}^ny_i\)</span> 是我們用於估計總體均值的估計量。</p>
 <p><strong>估計量的樣本分佈：</strong>
 <span class="math display">\[\bar{Y}\stackrel{i.i.d}{\sim}N(\mu, \frac{\sigma^2}{n})\]</span></p>
-<div class="section level4">
+<div id="證明" class="section level4">
 <h4>證明</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -367,7 +627,7 @@ Var(\bar{Y}) &amp;= Var(\frac{1}{n}\sum Y_i) \\
 \end{aligned}
 \]</span></p>
 </div>
-<div id="-zfracbary-musqrtvarbary--zsim-n01" class="section level4">
+<div id="證明當-zfracbary-musqrtvarbary-時-zsim-n01" class="section level4">
 <h4>證明當 <span class="math inline">\(Z=\frac{\bar{Y}-\mu}{\sqrt{Var(\bar{Y})}}\)</span> 時， <span class="math inline">\(Z\sim N(0,1)\)</span>:</h4>
 <p>由式子可知， <span class="math inline">\(Z\)</span> 只是由一組服從正態分佈的數據 <span class="math inline">\(\bar{Y}\)</span> 線性轉換 (linear transformation) 而來，所以 <span class="math inline">\(Z\)</span> 本身也服從正態分佈
 <span class="math display">\[
@@ -408,7 +668,7 @@ Prob(\bar{Y}&gt;\mu+c)=Prob(\bar{Y}-\mu&gt;c) \;&amp;= 0.025 \\
 <hr />
 </div>
 </div>
-<div class="section level3">
+<div id="估計量的特質" class="section level3">
 <h3>估計量的特質</h3>
 <p>考慮以下的問題：</p>
 <ol style="list-style-type: decimal">
@@ -416,7 +676,7 @@ Prob(\bar{Y}&gt;\mu+c)=Prob(\bar{Y}-\mu&gt;c) \;&amp;= 0.025 \\
 <li>如果有其他的可選擇估計量，該如何取捨呢？</li>
 <li>當情況複雜的時候，我們該如何尋找合適的估計量？</li>
 </ol>
-<div class="section level4">
+<div id="偏倚" class="section level4">
 <h4>偏倚</h4>
 <p>假設 <span class="math inline">\(T\)</span> 是我們估計總體參數 <span class="math inline">\(\theta\)</span> 的一個估計量。一般來說我們希望估計量的樣本分佈可以在 <code>“正確的位置”</code> 左右均勻分佈。換句話說我們希望：</p>
 <p><span class="math display">\[E(T)=\theta\]</span></p>
@@ -426,12 +686,12 @@ Prob(\bar{Y}&gt;\mu+c)=Prob(\bar{Y}-\mu&gt;c) \;&amp;= 0.025 \\
 <p><span class="math display">\[T\;is\;an\;\textbf{unbiased}\;estimator\;for\;\theta\;if\;\\E(T)=\theta\\
 T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{n\rightarrow\infty}E(T)=\theta\]</span></p>
 </div>
-<div id="-efficiency" class="section level4">
+<div id="估計量的效能-efficiency" class="section level4">
 <h4>估計量的效能 Efficiency</h4>
 <p>通常，我們希望一個估計量 (estimator) 的偏倚要小，同時，它的樣本分佈也希望能儘可能的不要波動太大。換句話說，我們還希望估計量的方差越小越好。</p>
 <p>如果說，兩個估計量有相同的偏倚，均可以選擇來推斷總體，我們說，其中樣本分佈的方差小的那個（波動幅度小）的那個估計量是相對更好的。因爲樣本分佈方差越小，說明可以<strong>更加精確的</strong>估計總體參數。這兩個估計量的方差之比：<span class="math inline">\(Var(S)/Var(T)\)</span> 被叫做這兩個估計量的<strong>相對效能 (relative efficiency)</strong>。所以我們用估計量去推斷總體時，需要選用效能最高，精確度最好的估計量 <strong>(the minimum variance unbiased estimator/an efficient estimator)</strong>。</p>
 </div>
-<div class="section level4">
+<div id="均值和中位數的相對效能" class="section level4">
 <h4>均值和中位數的相對效能</h4>
 <p>在一個服從 <span class="math inline">\(N(\mu,\sigma^2)\)</span> 正態分佈的數據中，中位數和均值是一樣的，也都同時等於總體均值參數 <span class="math inline">\(\mu\)</span>。而且，樣本均數 <span class="math inline">\(\bar{Y}\)</span> 和樣本中位數 <span class="math inline">\(\dot{Y}\)</span> 都是對總體均值的無偏估計量。那麼應該選用中位數還是平均值呢？</p>
 <p>之前證明過當 <span class="math inline">\(Y_i \sim N(\mu,\sigma^2)\)</span> 時， <span class="math inline">\(Var(\bar{Y}=\sigma^2/n)\)</span>。然而，當 <span class="math inline">\(n\)</span> 較大的時候，可以證明的是：</p>
@@ -441,7 +701,7 @@ T\;is\;an\;\textbf{asymptotically unbiased}\;estimator\;for\;\theta\;if\;\\lim_{
 <p>所以總體是正態分佈時，平均值就是較中位數更適合用來估計總體的估計量。</p>
 </div>
 </div>
-<div id="-mean-square-error-mse" class="section level3">
+<div id="均方差-mean-square-error-mse" class="section level3">
 <h3>均方差 mean square error (MSE)</h3>
 <p>兩個估計量的偏倚不同時，可以比較他們和總體參數之間的差距，這被叫做均方差, Mean Square Error (MSE)。</p>
 <p><span class="math display">\[MSE(T)=E[(T-\theta)^2]\]</span></p>
@@ -457,11 +717,11 @@ MSE(T) &amp;= E[(T-\theta)^2] \\
 \end{aligned}
 \]</span></p>
 </div>
-<div class="section level3">
+<div id="總體方差的估計自由度" class="section level3">
 <h3>總體方差的估計，自由度</h3>
 <p>如果 <span class="math inline">\(Y_i \sim (\mu, \sigma^2)\)</span>，並不需要默認或者假定它服從正態分佈或者任何分佈。那麼它的方差我們會用：</p>
 <p><span class="math display">\[V_{\mu}=\frac{1}{n}\sum_{i=1}^n(Y_i-\mu)\]</span></p>
-<div id="-v_mu--sigma2-" class="section level4">
+<div id="證明-v_mu-是-sigma2-的無偏估計" class="section level4">
 <h4>證明 <span class="math inline">\(V_{\mu}\)</span> 是 <span class="math inline">\(\sigma^2\)</span> 的無偏估計：</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -481,7 +741,7 @@ V_{\mu} &amp;= \frac{1}{n}\sum_{i=1}^n(Y_i-\mu) \\
 <p>所以，加入了自由度的討論，我們可以相信，用樣本估計總體的方差時，使用下面的公式將會是總體方差的無偏估計：</p>
 <p><span class="math display">\[V_{n-1}=\frac{1}{n-1}\sum_{i=1}^n(Y_i-\bar{Y})=\frac{n}{n-1}V_n\]</span></p>
 </div>
-<div id="-1" class="section level4">
+<div id="證明-1" class="section level4">
 <h4>證明</h4>
 <p>利用上面也用到過的證明方法 – 把樣本和總體均值之間的差分成兩部分：</p>
 <p><span class="math display">\[
@@ -509,12 +769,12 @@ E[\frac{n}{n-1}V_n]     &amp;= \frac{n}{n-1}E[V_n] =\sigma^2 \\
 \]</span></p>
 </div>
 </div>
-<div class="section level3">
+<div id="樣本方差的樣本分佈" class="section level3">
 <h3>樣本方差的樣本分佈</h3>
 <p><span class="math inline">\(S^2\)</span> 常用來標記樣本方差，取代上面我們用到的 <span class="math inline">\(V_{n-1}\)</span>：</p>
 <p><span class="math display">\[S^2=\frac{1}{n-1}\sum_{i=1}^n(Y_i-\bar{Y})^2\]</span></p>
 <p>而且上面也證明了，<span class="math inline">\(E(S^2)=\sigma^2\)</span> 是總體方差的無偏估計。然而，要注意的是，樣本標準差 <span class="math inline">\(\sqrt{S^2}\)</span> 卻不是總體標準差 <span class="math inline">\(\sigma\)</span> 的無偏估計（因爲並不是線性變換，而是開了根號）。</p>
-<div id="-s--sigma-" class="section level4">
+<div id="證明樣本標準差-s-不是總體標準差-sigma-的無偏估計" class="section level4">
 <h4>證明樣本標準差 <span class="math inline">\(S\)</span> 不是總體標準差 <span class="math inline">\(\sigma\)</span> 的無偏估計</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -532,139 +792,443 @@ Var(S^2)=\frac{2\sigma^4}{n-1}\]</span></p>
 </div>
 </div>
 
-      </div>
+    </div>
 
-      
+    
+
+
+
 
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/inference">inference</a>
+  <a class="badge badge-light" href="/tags/inference/">inference</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/learning-notes">learning notes</a>
+  <a class="badge badge-light" href="/tags/learning-notes/">learning notes</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/lshtm">LSHTM</a>
+  <a class="badge badge-light" href="/tags/lshtm/">LSHTM</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/london">London</a>
+  <a class="badge badge-light" href="/tags/london/">London</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  <a class="badge badge-light" href="/tags/medical-statistics/">Medical Statistics</a>
   
 </div>
 
 
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://wangcc.me/post/frequentist-statistical-inference02/&amp;text=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://wangcc.me/post/frequentist-statistical-inference02/&amp;t=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5&amp;body=https://wangcc.me/post/frequentist-statistical-inference02/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://wangcc.me/post/frequentist-statistical-inference02/&amp;title=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5%20https://wangcc.me/post/frequentist-statistical-inference02/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://wangcc.me/post/frequentist-statistical-inference02/&amp;title=%e4%bc%b0%e8%a8%88%e5%92%8c%e7%b2%be%e7%a2%ba%e5%ba%a6%e7%9a%84%e6%a6%82%e5%bf%b5" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <img class="portrait mr-3" src="https://s.gravatar.com/avatar/eca3c74b8c4ce437424800c7bc74b67d?s=200')" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://wangcc.me/">Chaochen Wang 王　超辰</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">All models are wrong, but some are useful.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/outyousin" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.jp/citations?user=0J-5evgAAAAJ&amp;hl=ja" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/winterwang" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
 
     </div>
   </div>
 
-</article>
 
 
 
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
-    
-    <li><a href="/post/central-limit-theory/">偉大的中心極限定理</a></li>
-    
-    <li><a href="/post/central-limit-theorem-application/">中心極限定理的應用</a></li>
-    
-    <li><a href="/post/probability3/">你買的彩票中獎概率到底有多少？</a></li>
-    
-    <li><a href="/post/probability2-4/">概率論2</a></li>
-    
-  </ul>
-</div>
-
-
-
-<div class="container article-widget">
-  <nav>
-  <ul class="pager">
-    
-    <li class="previous"><a href="https://winterwang.github.io/post/frequentist-statistical-inference01/"><span
-      aria-hidden="true">&larr;</span> 概率論者統計推斷入門之-被門夾住</a></li>
-    
-
-    
-    <li class="next"><a href="https://winterwang.github.io/post/chi-square-distribution/">卡方分佈 chi square distribution <span
-      aria-hidden="true">&rarr;</span></a></li>
-    
-  </ul>
-</nav>
-
-</div>
-
-
-<div class="article-container">
-  
 <section id="comments">
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
     
     
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "ccwang" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
 </section>
 
 
-</div>
 
-<footer class="site-footer">
-  <div class="container">
-    <p class="powered-by">
 
-      &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
 
-      Powered by the
-      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
-      <span class="pull-right" aria-hidden="true">
-        <a href="#" id="back_to_top">
-          <span class="button_icon">
-            <i class="fa fa-chevron-up fa-2x"></i>
-          </span>
-        </a>
-      </span>
-
-    </p>
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/frequentist-statistical-inference01/">概率論者統計推斷入門之-被門夾住</a></li>
+      
+      <li><a href="/post/central-limit-theory/">偉大的中心極限定理</a></li>
+      
+      <li><a href="/post/central-limit-theorem-application/">中心極限定理的應用</a></li>
+      
+      <li><a href="/post/probability3/">你買的彩票中獎概率到底有多少？</a></li>
+      
+      <li><a href="/post/probability2-4/">概率論2</a></li>
+      
+    </ul>
   </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://ccwang.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
 </footer>
 
+  </div>
+  
 
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cite</h4>
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div>
-        <pre><code class="modal-body tex"></code></pre>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
-          <i class="fa fa-copy"></i> Copy
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
         </a>
-        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
-          <i class="fa fa-download"></i> Download
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
         </a>
         <div id="modal-error"></div>
       </div>
@@ -672,51 +1236,5 @@ Var(S^2)=\frac{2\sigma^4}{n-1}\]</span></p>
   </div>
 </div>
 
-    
-
-    
-    
-    <script id="dsq-count-scr" src="//ccwang.disqus.com/count.js" async></script>
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/hugo-academic.js"></script>
-    
-
-    
-    
-      
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-      
-
-      
-
-      
-
-      <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
-    
-    
-
-  </body>
+</body>
 </html>
-

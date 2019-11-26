@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.55.6" />
-  <meta name="author" content="王 超辰 (Chaochen Wang)">
-  <meta name="description" content="Assistant Professor">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/logistic-rstan/">
 
   
   
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Chaochen Wang 王　超辰">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Rstan 學習筆記 Chapter 5.2">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://wangcc.me/post/logistic-rstan/">
+
+  
 
 
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
   
 
   
@@ -24,108 +47,262 @@
   
   
     
-  
-  
-    
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
-  
-  
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-  <link rel="stylesheet" href="/styles.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-21867861-1', 'auto');
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
     
-  
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
 
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21867861-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-21867861-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/logistic-rstan/">
+  <link rel="canonical" href="https://wangcc.me/post/logistic-rstan/">
 
+  
+  
+  
+  
+    
+  
+  
   <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/logistic-rstan/">
-  <meta property="og:title" content="Rstan Wonderful R-(4) | Be ambitious">
-  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
-  <meta property="og:locale" content="en-us">
+  <meta property="og:site_name" content="Be Ambitious">
+  <meta property="og:url" content="https://wangcc.me/post/logistic-rstan/">
+  <meta property="og:title" content="Rstan Wonderful R-(4) | Be Ambitious">
+  <meta property="og:description" content="Rstan 學習筆記 Chapter 5.2"><meta property="og:image" content="https://wangcc.me/img/052816_bayesian-opener_free.jpg">
+  <meta property="twitter:image" content="https://wangcc.me/img/052816_bayesian-opener_free.jpg"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-01-27T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2019-01-27T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-01-27T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-01-27T00:00:00&#43;00:00">
   
 
   
 
-  <title>Rstan Wonderful R-(4) | Be ambitious</title>
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wangcc.me/post/logistic-rstan/"
+  },
+  "headline": "Rstan Wonderful R-(4)",
+  
+  "datePublished": "2019-01-27T00:00:00Z",
+  "dateModified": "2019-01-27T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Chaochen Wang 王　超辰"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Be Ambitious",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wangcc.me/img/icon-512.png"
+    }
+  },
+  "description": "Rstan 學習筆記 Chapter 5.2"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Rstan Wonderful R-(4) | Be Ambitious</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
 
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Be Ambitious</a>
       
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
       </button>
       
-      <a class="navbar-brand" href="/">Be ambitious</a>
-    </div>
 
     
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
 
       
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav ml-auto">
         
 
         
 
+        
+        
         
           
         
 
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
         <li class="nav-item">
-          <a href="/#about">
-            
-            <span>Home</span>
-            
-          </a>
+          <a class="nav-link " href="/#about"><span>Home</span></a>
         </li>
 
         
@@ -134,15 +311,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
         </li>
 
         
@@ -151,15 +340,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#posts">
-            
-            <span>Posts</span>
-            
-          </a>
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
         
@@ -168,15 +369,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#projects">
-            
-            <span>Projects</span>
-            
-          </a>
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
         
@@ -185,15 +398,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#teaching">
-            
-            <span>Teaching</span>
-            
-          </a>
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
         </li>
 
         
@@ -202,15 +427,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#slides">
-            
-            <span>Presentations/slides</span>
-            
-          </a>
+          <a class="nav-link " href="/#slides"><span>Slides</span></a>
         </li>
 
         
@@ -219,22 +456,50 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#contact">
-            
-            <span>Contact</span>
-            
-          </a>
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
         </li>
 
         
         
+
       
 
-      
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
       </ul>
 
     </div>
@@ -242,125 +507,120 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+  <article class="article">
 
   
+
+
+
+
+
+
+
+
+
 <div class="article-header">
-  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+  
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" alt="">
+  
+
+  
+</div>
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Rstan Wonderful R-(4)</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2019-01-27
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/logistic-rstan/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/bayesian/">Bayesian</a>, <a href="/categories/r-techniques/">R techniques</a>, <a href="/categories/statistics/">statistics</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </div>
 
 
 
   <div class="article-container">
-    <div class="article-inner">
-      <h1 itemprop="name">Rstan Wonderful R-(4)</h1>
 
+    <div class="article-style">
       
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2019-01-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Sun, Jan 27, 2019
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    15 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/logistic-rstan/#disqus_thread"></a>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/bayesian">Bayesian</a
-    >, 
-    
-    <a href="/categories/r-techniques">R techniques</a
-    >, 
-    
-    <a href="/categories/statistics">statistics</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R-%284%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f&amp;title=Rstan%20Wonderful%20R-%284%29"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f&amp;title=Rstan%20Wonderful%20R-%284%29"
-         target="_blank" rel="noopener">
-        <i class="fa fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Rstan%20Wonderful%20R-%284%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2flogistic-rstan%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  
-
-</div>
-
-
-      <div class="article-style" itemprop="articleBody">
-        
 
 <div id="TOC">
 <ul>
-<li><a href="#-rstan-">邏輯回歸模型的 Rstan 貝葉斯實現</a></li>
-<li><a>確定分析目的</a></li>
-<li><a>確認數據分佈</a></li>
-<li><a>寫下數學模型表達式</a></li>
-<li><a>確認收斂效果</a></li>
+<li><a href="#邏輯回歸模型的-rstan-貝葉斯實現">邏輯回歸模型的 Rstan 貝葉斯實現</a></li>
+<li><a href="#確定分析目的">確定分析目的</a></li>
+<li><a href="#確認數據分佈">確認數據分佈</a></li>
+<li><a href="#寫下數學模型表達式">寫下數學模型表達式</a></li>
+<li><a href="#確認收斂效果">確認收斂效果</a></li>
 </ul>
 </div>
 
-<div id="-rstan-" class="section level1">
+<div id="邏輯回歸模型的-rstan-貝葉斯實現" class="section level1">
 <h1>邏輯回歸模型的 Rstan 貝葉斯實現</h1>
 <p>本小節使用的<a href="https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt">數據</a>，和前一節的出勤率數據很類似:</p>
 <pre class="r"><code>d &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&quot;, 
@@ -381,11 +641,11 @@ head(d)</code></pre>
 <li><code>Y</code>: 過去三個月內，該名學生實際上出勤的課時數。</li>
 </ul>
 </div>
-<div class="section level1">
+<div id="確定分析目的" class="section level1">
 <h1>確定分析目的</h1>
 <p>需要回答的問題依然是，<span class="math inline">\(A, Score\)</span> 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 <span class="math inline">\(Y\)</span> 的多少信息？</p>
 </div>
-<div class="section level1">
+<div id="確認數據分佈" class="section level1">
 <h1>確認數據分佈</h1>
 <pre class="r"><code>library(ggplot2)
 library(GGally)
@@ -466,7 +726,7 @@ Figure 1: 三個變量的分佈觀察圖，相比之前增加了 <span class="ma
 </div>
 <p>從圖 <a href="#fig:step1">1</a> 還可以看出，由於總課時數越多，學生實際出勤的課時數也會越多所以 <span class="math inline">\(M, Y\)</span> 兩者之間理應有很強的正相關。另外可能可以推測的是 <span class="math inline">\(Ratio\)</span> 和是否愛學習的分數之間大概有可能有正相關，和是否喜歡打工之間大概可能有負相關。</p>
 </div>
-<div class="section level1">
+<div id="寫下數學模型表達式" class="section level1">
 <h1>寫下數學模型表達式</h1>
 <p>在 Stan 的語法中，使用的是反邏輯函數 (inverse logit): <code>inv_logit</code> 來描述下面的邏輯回歸模型 5-4。</p>
 <p><span class="math display">\[
@@ -518,8 +778,8 @@ fit &lt;- stan(file=&#39;stanfiles/model5-4.stan&#39;, data=data, seed=1234)</co
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;model5-4&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 2.6e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.26 seconds.
+## Chain 1: Gradient evaluation took 1.6e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.16 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -536,15 +796,15 @@ fit &lt;- stan(file=&#39;stanfiles/model5-4.stan&#39;, data=data, seed=1234)</co
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.418554 seconds (Warm-up)
-## Chain 1:                0.393323 seconds (Sampling)
-## Chain 1:                0.811877 seconds (Total)
+## Chain 1:  Elapsed Time: 0.131543 seconds (Warm-up)
+## Chain 1:                0.139239 seconds (Sampling)
+## Chain 1:                0.270782 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-4&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 2.1e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.21 seconds.
+## Chain 2: Gradient evaluation took 8e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -561,15 +821,15 @@ fit &lt;- stan(file=&#39;stanfiles/model5-4.stan&#39;, data=data, seed=1234)</co
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.435721 seconds (Warm-up)
-## Chain 2:                0.431322 seconds (Sampling)
-## Chain 2:                0.867043 seconds (Total)
+## Chain 2:  Elapsed Time: 0.134734 seconds (Warm-up)
+## Chain 2:                0.137725 seconds (Sampling)
+## Chain 2:                0.272459 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-4&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 2.3e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.23 seconds.
+## Chain 3: Gradient evaluation took 8e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -586,15 +846,15 @@ fit &lt;- stan(file=&#39;stanfiles/model5-4.stan&#39;, data=data, seed=1234)</co
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.385254 seconds (Warm-up)
-## Chain 3:                0.366883 seconds (Sampling)
-## Chain 3:                0.752137 seconds (Total)
+## Chain 3:  Elapsed Time: 0.131595 seconds (Warm-up)
+## Chain 3:                0.135589 seconds (Sampling)
+## Chain 3:                0.267184 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-4&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 1.5e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.15 seconds.
+## Chain 4: Gradient evaluation took 8e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -611,227 +871,227 @@ fit &lt;- stan(file=&#39;stanfiles/model5-4.stan&#39;, data=data, seed=1234)</co
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.415028 seconds (Warm-up)
-## Chain 4:                0.409585 seconds (Sampling)
-## Chain 4:                0.824613 seconds (Total)
+## Chain 4:  Elapsed Time: 0.13241 seconds (Warm-up)
+## Chain 4:                0.146656 seconds (Sampling)
+## Chain 4:                0.279066 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: model5-4.
 ## 4 chains, each with iter=2000; warmup=1000; thin=1; 
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
-##                mean se_mean   sd     2.5%      25%      50%      75%
-## b1             0.09    0.01 0.22    -0.35    -0.06     0.09     0.24
-## b2            -0.62    0.00 0.10    -0.81    -0.68    -0.62    -0.55
-## b3             1.90    0.01 0.36     1.17     1.66     1.91     2.15
-## q[1]           0.68    0.00 0.02     0.63     0.66     0.68     0.70
-## q[2]           0.70    0.00 0.02     0.67     0.69     0.70     0.71
-## q[3]           0.78    0.00 0.01     0.76     0.78     0.78     0.79
-## q[4]           0.57    0.00 0.02     0.53     0.56     0.57     0.59
-## q[5]           0.73    0.00 0.02     0.69     0.71     0.73     0.74
-## q[6]           0.80    0.00 0.01     0.77     0.79     0.80     0.80
-## q[7]           0.76    0.00 0.01     0.73     0.75     0.76     0.77
-## q[8]           0.70    0.00 0.02     0.67     0.69     0.70     0.72
-## q[9]           0.81    0.00 0.01     0.79     0.81     0.81     0.82
-## q[10]          0.81    0.00 0.01     0.79     0.80     0.81     0.82
-## q[11]          0.69    0.00 0.02     0.66     0.68     0.69     0.70
-## q[12]          0.80    0.00 0.01     0.78     0.79     0.80     0.81
-## q[13]          0.64    0.00 0.02     0.61     0.63     0.64     0.65
-## q[14]          0.76    0.00 0.01     0.73     0.75     0.76     0.77
-## q[15]          0.76    0.00 0.01     0.73     0.75     0.76     0.76
-## q[16]          0.60    0.00 0.02     0.57     0.59     0.60     0.61
-## q[17]          0.76    0.00 0.01     0.74     0.76     0.76     0.77
-## q[18]          0.70    0.00 0.02     0.67     0.69     0.71     0.72
-## q[19]          0.86    0.00 0.02     0.83     0.85     0.86     0.88
-## q[20]          0.72    0.00 0.02     0.69     0.71     0.72     0.73
-## q[21]          0.57    0.00 0.02     0.53     0.56     0.57     0.59
-## q[22]          0.62    0.00 0.02     0.59     0.61     0.62     0.63
-## q[23]          0.62    0.00 0.02     0.58     0.61     0.62     0.63
-## q[24]          0.70    0.00 0.02     0.67     0.69     0.70     0.71
-## q[25]          0.64    0.00 0.02     0.61     0.63     0.64     0.65
-## q[26]          0.67    0.00 0.01     0.64     0.66     0.67     0.68
-## q[27]          0.77    0.00 0.01     0.75     0.76     0.77     0.78
-## q[28]          0.77    0.00 0.01     0.75     0.76     0.77     0.78
-## q[29]          0.83    0.00 0.01     0.81     0.83     0.84     0.84
-## q[30]          0.76    0.00 0.01     0.74     0.75     0.76     0.77
-## q[31]          0.74    0.00 0.02     0.70     0.73     0.74     0.75
-## q[32]          0.54    0.00 0.03     0.49     0.52     0.54     0.56
-## q[33]          0.69    0.00 0.02     0.66     0.68     0.69     0.70
-## q[34]          0.66    0.00 0.01     0.63     0.65     0.66     0.67
-## q[35]          0.78    0.00 0.01     0.76     0.78     0.78     0.79
-## q[36]          0.79    0.00 0.01     0.77     0.78     0.79     0.80
-## q[37]          0.62    0.00 0.02     0.58     0.60     0.62     0.63
-## q[38]          0.76    0.00 0.01     0.73     0.75     0.76     0.77
-## q[39]          0.72    0.00 0.02     0.68     0.71     0.72     0.73
-## q[40]          0.72    0.00 0.02     0.68     0.71     0.72     0.73
-## q[41]          0.79    0.00 0.01     0.77     0.78     0.79     0.80
-## q[42]          0.80    0.00 0.01     0.77     0.79     0.80     0.80
-## q[43]          0.78    0.00 0.01     0.75     0.77     0.78     0.79
-## q[44]          0.82    0.00 0.01     0.79     0.81     0.82     0.83
-## q[45]          0.86    0.00 0.02     0.83     0.85     0.86     0.87
-## q[46]          0.75    0.00 0.01     0.72     0.74     0.75     0.76
-## q[47]          0.64    0.00 0.03     0.57     0.62     0.64     0.66
-## q[48]          0.82    0.00 0.01     0.79     0.81     0.82     0.83
-## q[49]          0.74    0.00 0.01     0.71     0.73     0.74     0.75
-## q[50]          0.60    0.00 0.02     0.57     0.59     0.60     0.61
-## y_pred[1]     29.25    0.06 3.29    23.00    27.00    29.00    32.00
-## y_pred[2]     39.25    0.06 3.59    32.00    37.00    39.00    42.00
-## y_pred[3]     25.04    0.04 2.39    20.00    24.00    25.00    27.00
-## y_pred[4]     25.73    0.06 3.47    19.00    23.00    26.00    28.00
-## y_pred[5]     23.93    0.04 2.66    18.00    22.00    24.00    26.00
-## y_pred[6]     48.53    0.05 3.21    42.00    46.00    49.00    51.00
-## y_pred[7]     37.30    0.05 3.03    31.00    35.00    37.00    39.00
-## y_pred[8]     53.56    0.07 4.21    45.00    51.00    54.00    56.00
-## y_pred[9]     63.56    0.06 3.58    56.00    61.00    64.00    66.00
-## y_pred[10]    52.05    0.05 3.25    45.00    50.00    52.00    54.00
-## y_pred[11]    23.49    0.04 2.75    18.00    22.00    24.00    25.00
-## y_pred[12]    35.20    0.05 2.79    29.00    33.00    35.00    37.00
-## y_pred[13]    34.28    0.06 3.60    27.00    32.00    34.00    37.00
-## y_pred[14]    30.38    0.04 2.73    25.00    29.00    30.00    32.00
-## y_pred[15]    42.31    0.05 3.30    35.00    40.00    42.00    45.00
-## y_pred[16]    35.41    0.06 3.85    28.00    33.00    35.00    38.00
-## y_pred[17]    29.07    0.04 2.60    24.00    27.00    29.00    31.00
-## y_pred[18]    31.68    0.05 3.18    25.00    30.00    32.00    34.00
-## y_pred[19]    38.89    0.04 2.40    34.00    37.00    39.00    41.00
-## y_pred[20]    55.55    0.07 4.10    47.00    53.00    56.00    58.00
-## y_pred[21]    40.02    0.08 4.45    31.00    37.00    40.00    43.00
-## y_pred[22]    47.90    0.07 4.46    39.00    45.00    48.00    51.00
-## y_pred[23]    38.81    0.07 4.06    31.00    36.00    39.00    42.00
-## y_pred[24]    47.39    0.06 3.96    39.00    45.00    47.00    50.00
-## y_pred[25]    32.03    0.06 3.46    25.00    30.00    32.00    34.00
-## y_pred[26]    34.06    0.06 3.45    27.00    32.00    34.00    36.00
-## y_pred[27]    22.40    0.04 2.32    17.00    21.00    23.00    24.00
-## y_pred[28]    28.63    0.04 2.53    23.00    27.00    29.00    30.00
-## y_pred[29]    15.02    0.03 1.57    12.00    14.00    15.00    16.00
-## y_pred[30]    37.35    0.05 3.11    31.00    35.00    37.00    40.00
-## y_pred[31]    55.46    0.07 4.06    47.00    53.00    56.00    58.00
-## y_pred[32]     6.48    0.03 1.73     3.00     5.00     6.00     8.00
-## y_pred[33]    15.78    0.04 2.21    11.00    14.00    16.00    17.00
-## y_pred[34]    24.29    0.05 2.90    19.00    22.00    24.00    26.00
-## y_pred[35]    46.33    0.05 3.26    40.00    44.00    46.00    49.00
-## y_pred[36]    43.56    0.05 3.03    37.00    42.00    44.00    46.00
-## y_pred[37]    54.14    0.08 4.77    45.00    51.00    54.00    57.00
-## y_pred[38]    35.61    0.05 3.03    30.00    34.00    36.00    38.00
-## y_pred[39]    15.82    0.03 2.14    11.00    14.00    16.00    17.00
-## y_pred[40]    29.32    0.05 2.98    23.00    27.00    29.00    31.00
-## y_pred[41]    44.99    0.05 3.20    38.00    43.00    45.00    47.00
-## y_pred[42]    25.45    0.04 2.32    21.00    24.00    26.00    27.00
-## y_pred[43]    41.19    0.05 3.14    35.00    39.00    41.00    43.00
-## y_pred[44]    25.35    0.03 2.20    21.00    24.00    25.00    27.00
-## y_pred[45]    19.77    0.03 1.72    16.00    19.00    20.00    21.00
-## y_pred[46]    38.21    0.05 3.19    32.00    36.00    38.00    40.00
-## y_pred[47]    14.09    0.04 2.31     9.00    13.00    14.00    16.00
-## y_pred[48]    31.14    0.04 2.40    26.00    30.00    31.00    33.00
-## y_pred[49]    16.97    0.04 2.21    12.00    16.00    17.00    19.00
-## y_pred[50]    40.35    0.07 4.13    32.00    38.00    40.00    43.00
-## lp__       -1389.38    0.03 1.22 -1392.66 -1389.96 -1389.06 -1388.47
-##               97.5% n_eff Rhat
-## b1             0.54  1340    1
-## b2            -0.44  1593    1
-## b3             2.60  1251    1
-## q[1]           0.72  1502    1
-## q[2]           0.73  2134    1
-## q[3]           0.80  2200    1
-## q[4]           0.62  1656    1
-## q[5]           0.76  1835    1
-## q[6]           0.82  2090    1
-## q[7]           0.78  2122    1
-## q[8]           0.74  2077    1
-## q[9]           0.84  1849    1
-## q[10]          0.84  1868    1
-## q[11]          0.72  2255    1
-## q[12]          0.82  2019    1
-## q[13]          0.67  2548    1
-## q[14]          0.78  2122    1
-## q[15]          0.78  2078    1
-## q[16]          0.64  1964    1
-## q[17]          0.79  2178    1
-## q[18]          0.74  1612    1
-## q[19]          0.89  1457    1
-## q[20]          0.76  1871    1
-## q[21]          0.62  1656    1
-## q[22]          0.65  2287    1
-## q[23]          0.65  2209    1
-## q[24]          0.73  2193    1
-## q[25]          0.67  2528    1
-## q[26]          0.69  2586    1
-## q[27]          0.80  2218    1
-## q[28]          0.80  2218    1
-## q[29]          0.86  1627    1
-## q[30]          0.79  2158    1
-## q[31]          0.78  1731    1
-## q[32]          0.60  1487    1
-## q[33]          0.72  2351    1
-## q[34]          0.69  2607    1
-## q[35]          0.81  2190    1
-## q[36]          0.81  2123    1
-## q[37]          0.65  2164    1
-## q[38]          0.78  2101    1
-## q[39]          0.75  1702    1
-## q[40]          0.75  1687    1
-## q[41]          0.81  2153    1
-## q[42]          0.82  2090    1
-## q[43]          0.80  2218    1
-## q[44]          0.84  1812    1
-## q[45]          0.89  1470    1
-## q[46]          0.77  1996    1
-## q[47]          0.70  1423    1
-## q[48]          0.84  1778    1
-## q[49]          0.77  1871    1
-## q[50]          0.64  1964    1
-## y_pred[1]     35.00  3492    1
-## y_pred[2]     46.00  3681    1
-## y_pred[3]     29.00  3860    1
-## y_pred[4]     32.00  3179    1
-## y_pred[5]     29.00  3841    1
-## y_pred[6]     54.00  3965    1
-## y_pred[7]     43.00  3935    1
-## y_pred[8]     62.00  3527    1
-## y_pred[9]     70.00  3465    1
-## y_pred[10]    58.00  3590    1
-## y_pred[11]    29.00  3806    1
-## y_pred[12]    40.00  3503    1
-## y_pred[13]    41.00  3954    1
-## y_pred[14]    36.00  3874    1
-## y_pred[15]    48.00  3874    1
-## y_pred[16]    43.00  3583    1
-## y_pred[17]    34.00  3850    1
-## y_pred[18]    38.00  3684    1
-## y_pred[19]    43.00  3086    1
-## y_pred[20]    63.00  3161    1
-## y_pred[21]    49.00  3455    1
-## y_pred[22]    56.00  3998    1
-## y_pred[23]    46.00  3761    1
-## y_pred[24]    55.00  3822    1
-## y_pred[25]    39.00  3767    1
-## y_pred[26]    41.00  3890    1
-## y_pred[27]    27.00  4104    1
-## y_pred[28]    33.00  3965    1
-## y_pred[29]    18.00  3819    1
-## y_pred[30]    43.00  3948    1
-## y_pred[31]    63.00  3164    1
-## y_pred[32]    10.00  3446    1
-## y_pred[33]    20.00  3789    1
-## y_pred[34]    30.00  3379    1
-## y_pred[35]    52.00  3549    1
-## y_pred[36]    49.00  4180    1
-## y_pred[37]    64.00  3795    1
-## y_pred[38]    41.00  3934    1
-## y_pred[39]    20.00  3770    1
-## y_pred[40]    35.00  3784    1
-## y_pred[41]    51.00  3895    1
-## y_pred[42]    30.00  4015    1
-## y_pred[43]    47.00  3828    1
-## y_pred[44]    29.00  4082    1
-## y_pred[45]    23.00  3556    1
-## y_pred[46]    44.00  3796    1
-## y_pred[47]    18.00  3669    1
-## y_pred[48]    35.00  3792    1
-## y_pred[49]    21.00  3580    1
-## y_pred[50]    48.00  3800    1
-## lp__       -1387.98  1351    1
+##                mean se_mean   sd     2.5%      25%      50%      75%    97.5%
+## b1             0.09    0.01 0.22    -0.37    -0.05     0.09     0.24     0.53
+## b2            -0.62    0.00 0.09    -0.80    -0.68    -0.62    -0.56    -0.44
+## b3             1.90    0.01 0.36     1.19     1.67     1.90     2.13     2.64
+## q[1]           0.68    0.00 0.02     0.63     0.66     0.68     0.69     0.72
+## q[2]           0.70    0.00 0.02     0.67     0.69     0.70     0.71     0.73
+## q[3]           0.78    0.00 0.01     0.76     0.77     0.78     0.79     0.80
+## q[4]           0.57    0.00 0.02     0.53     0.56     0.57     0.59     0.62
+## q[5]           0.73    0.00 0.02     0.69     0.71     0.73     0.74     0.76
+## q[6]           0.79    0.00 0.01     0.77     0.79     0.80     0.80     0.82
+## q[7]           0.76    0.00 0.01     0.73     0.75     0.76     0.77     0.78
+## q[8]           0.70    0.00 0.02     0.67     0.69     0.70     0.72     0.74
+## q[9]           0.81    0.00 0.01     0.79     0.81     0.81     0.82     0.84
+## q[10]          0.81    0.00 0.01     0.79     0.80     0.81     0.82     0.84
+## q[11]          0.69    0.00 0.02     0.66     0.68     0.69     0.70     0.72
+## q[12]          0.80    0.00 0.01     0.78     0.79     0.80     0.81     0.82
+## q[13]          0.64    0.00 0.01     0.62     0.63     0.64     0.65     0.67
+## q[14]          0.76    0.00 0.01     0.73     0.75     0.76     0.77     0.78
+## q[15]          0.76    0.00 0.01     0.73     0.75     0.76     0.76     0.78
+## q[16]          0.60    0.00 0.02     0.57     0.59     0.60     0.61     0.64
+## q[17]          0.76    0.00 0.01     0.74     0.76     0.76     0.77     0.79
+## q[18]          0.70    0.00 0.02     0.66     0.69     0.71     0.72     0.74
+## q[19]          0.86    0.00 0.02     0.83     0.85     0.86     0.87     0.89
+## q[20]          0.72    0.00 0.02     0.69     0.71     0.72     0.73     0.76
+## q[21]          0.57    0.00 0.02     0.53     0.56     0.57     0.59     0.62
+## q[22]          0.62    0.00 0.02     0.59     0.61     0.62     0.63     0.65
+## q[23]          0.62    0.00 0.02     0.59     0.61     0.62     0.63     0.65
+## q[24]          0.70    0.00 0.02     0.67     0.69     0.70     0.71     0.73
+## q[25]          0.64    0.00 0.01     0.61     0.63     0.64     0.65     0.67
+## q[26]          0.67    0.00 0.01     0.64     0.66     0.67     0.68     0.69
+## q[27]          0.77    0.00 0.01     0.75     0.76     0.77     0.78     0.79
+## q[28]          0.77    0.00 0.01     0.75     0.76     0.77     0.78     0.79
+## q[29]          0.83    0.00 0.01     0.81     0.83     0.84     0.84     0.86
+## q[30]          0.76    0.00 0.01     0.74     0.75     0.76     0.77     0.79
+## q[31]          0.74    0.00 0.02     0.70     0.73     0.74     0.75     0.78
+## q[32]          0.54    0.00 0.03     0.49     0.53     0.54     0.56     0.60
+## q[33]          0.69    0.00 0.01     0.66     0.68     0.69     0.70     0.72
+## q[34]          0.66    0.00 0.01     0.63     0.65     0.66     0.67     0.69
+## q[35]          0.78    0.00 0.01     0.76     0.78     0.78     0.79     0.81
+## q[36]          0.79    0.00 0.01     0.77     0.78     0.79     0.80     0.81
+## q[37]          0.62    0.00 0.02     0.58     0.60     0.62     0.63     0.65
+## q[38]          0.76    0.00 0.01     0.73     0.75     0.76     0.77     0.78
+## q[39]          0.72    0.00 0.02     0.68     0.71     0.72     0.73     0.75
+## q[40]          0.72    0.00 0.02     0.68     0.70     0.72     0.73     0.75
+## q[41]          0.79    0.00 0.01     0.76     0.78     0.79     0.80     0.81
+## q[42]          0.79    0.00 0.01     0.77     0.79     0.80     0.80     0.82
+## q[43]          0.78    0.00 0.01     0.75     0.77     0.78     0.79     0.80
+## q[44]          0.82    0.00 0.01     0.79     0.81     0.82     0.83     0.84
+## q[45]          0.86    0.00 0.02     0.83     0.85     0.86     0.87     0.89
+## q[46]          0.75    0.00 0.01     0.72     0.74     0.75     0.76     0.77
+## q[47]          0.64    0.00 0.03     0.57     0.62     0.64     0.66     0.70
+## q[48]          0.82    0.00 0.01     0.79     0.81     0.82     0.83     0.84
+## q[49]          0.74    0.00 0.01     0.71     0.73     0.74     0.75     0.76
+## q[50]          0.60    0.00 0.02     0.57     0.59     0.60     0.61     0.64
+## y_pred[1]     29.19    0.05 3.21    23.00    27.00    29.00    31.00    35.00
+## y_pred[2]     39.25    0.06 3.56    32.00    37.00    39.00    42.00    46.00
+## y_pred[3]     25.07    0.04 2.38    20.00    24.00    25.00    27.00    29.00
+## y_pred[4]     25.76    0.06 3.43    19.00    23.00    26.00    28.00    32.00
+## y_pred[5]     23.89    0.04 2.62    19.00    22.00    24.00    26.00    29.00
+## y_pred[6]     48.46    0.05 3.24    42.00    46.00    49.00    51.00    54.00
+## y_pred[7]     37.21    0.05 3.10    31.00    35.00    37.00    39.00    43.00
+## y_pred[8]     53.44    0.07 4.12    45.00    51.00    54.00    56.00    61.00
+## y_pred[9]     63.52    0.06 3.54    56.00    61.00    64.00    66.00    70.00
+## y_pred[10]    51.98    0.05 3.21    45.00    50.00    52.00    54.00    58.00
+## y_pred[11]    23.50    0.05 2.73    18.00    22.00    24.00    25.00    29.00
+## y_pred[12]    35.26    0.04 2.68    30.00    33.00    35.00    37.00    40.00
+## y_pred[13]    34.17    0.06 3.53    27.00    32.00    34.00    37.00    41.00
+## y_pred[14]    30.39    0.04 2.73    25.00    29.00    30.00    32.00    35.00
+## y_pred[15]    42.23    0.05 3.23    36.00    40.00    42.00    44.00    48.00
+## y_pred[16]    35.48    0.06 3.88    28.00    33.00    36.00    38.00    43.00
+## y_pred[17]    28.97    0.04 2.69    23.00    27.00    29.00    31.00    34.00
+## y_pred[18]    31.67    0.05 3.12    25.00    30.00    32.00    34.00    38.00
+## y_pred[19]    38.81    0.04 2.39    34.00    37.00    39.00    40.00    43.00
+## y_pred[20]    55.48    0.07 4.26    47.00    53.00    56.00    58.00    63.00
+## y_pred[21]    40.16    0.07 4.39    32.00    37.00    40.00    43.00    49.00
+## y_pred[22]    47.97    0.08 4.48    39.00    45.00    48.00    51.00    56.03
+## y_pred[23]    38.94    0.06 3.89    32.00    36.00    39.00    42.00    46.00
+## y_pred[24]    47.35    0.06 3.87    40.00    45.00    47.00    50.00    55.00
+## y_pred[25]    32.10    0.06 3.42    25.00    30.00    32.00    34.00    39.00
+## y_pred[26]    34.02    0.05 3.38    27.00    32.00    34.00    36.00    40.00
+## y_pred[27]    22.42    0.04 2.29    18.00    21.00    23.00    24.00    27.00
+## y_pred[28]    28.59    0.04 2.57    23.00    27.00    29.00    30.00    33.00
+## y_pred[29]    15.08    0.02 1.59    12.00    14.00    15.00    16.00    18.00
+## y_pred[30]    37.37    0.05 3.02    31.00    35.00    37.00    39.00    43.00
+## y_pred[31]    55.42    0.07 4.05    47.00    53.00    56.00    58.00    63.00
+## y_pred[32]     6.50    0.03 1.75     3.00     5.00     7.00     8.00    10.00
+## y_pred[33]    15.82    0.04 2.24    11.00    14.00    16.00    17.00    20.00
+## y_pred[34]    24.33    0.05 2.88    19.00    22.00    24.00    26.00    30.00
+## y_pred[35]    46.26    0.05 3.27    39.00    44.00    46.00    49.00    52.00
+## y_pred[36]    43.51    0.05 3.06    37.00    41.75    44.00    46.00    49.00
+## y_pred[37]    54.28    0.08 4.82    45.00    51.00    54.00    58.00    63.00
+## y_pred[38]    35.60    0.05 3.04    29.00    34.00    36.00    38.00    41.00
+## y_pred[39]    15.84    0.04 2.19    11.00    14.00    16.00    17.00    20.00
+## y_pred[40]    29.39    0.05 2.98    23.00    27.00    29.00    31.00    35.00
+## y_pred[41]    45.05    0.05 3.14    39.00    43.00    45.00    47.00    51.00
+## y_pred[42]    25.43    0.04 2.34    21.00    24.00    26.00    27.00    30.00
+## y_pred[43]    41.18    0.05 3.07    35.00    39.00    41.00    43.00    47.00
+## y_pred[44]    25.37    0.03 2.16    21.00    24.00    25.00    27.00    29.00
+## y_pred[45]    19.76    0.03 1.74    16.00    19.00    20.00    21.00    23.00
+## y_pred[46]    38.21    0.05 3.19    32.00    36.00    38.00    40.00    44.00
+## y_pred[47]    14.09    0.04 2.37     9.00    12.00    14.00    16.00    18.00
+## y_pred[48]    31.20    0.04 2.41    26.00    30.00    31.00    33.00    36.00
+## y_pred[49]    16.90    0.03 2.12    12.00    16.00    17.00    18.00    21.00
+## y_pred[50]    40.34    0.07 4.25    32.00    37.00    40.00    43.00    48.00
+## lp__       -1389.32    0.03 1.20 -1392.42 -1389.91 -1389.01 -1388.42 -1387.95
+##            n_eff Rhat
+## b1          1443    1
+## b2          2052    1
+## b3          1519    1
+## q[1]        1523    1
+## q[2]        2412    1
+## q[3]        2751    1
+## q[4]        2023    1
+## q[5]        2065    1
+## q[6]        2718    1
+## q[7]        2352    1
+## q[8]        2345    1
+## q[9]        2443    1
+## q[10]       2467    1
+## q[11]       2561    1
+## q[12]       2648    1
+## q[13]       3089    1
+## q[14]       2352    1
+## q[15]       2267    1
+## q[16]       2372    1
+## q[17]       2483    1
+## q[18]       1617    1
+## q[19]       1891    1
+## q[20]       2106    1
+## q[21]       2023    1
+## q[22]       2727    1
+## q[23]       2642    1
+## q[24]       2484    1
+## q[25]       3065    1
+## q[26]       3059    1
+## q[27]       2648    1
+## q[28]       2648    1
+## q[29]       2149    1
+## q[30]       2439    1
+## q[31]       1948    1
+## q[32]       1839    1
+## q[33]       2682    1
+## q[34]       3131    1
+## q[35]       2757    1
+## q[36]       2743    1
+## q[37]       2600    1
+## q[38]       2309    1
+## q[39]       1707    1
+## q[40]       1691    1
+## q[41]       2757    1
+## q[42]       2718    1
+## q[43]       2713    1
+## q[44]       2398    1
+## q[45]       1913    1
+## q[46]       2111    1
+## q[47]       1470    1
+## q[48]       2354    1
+## q[49]       1919    1
+## q[50]       2372    1
+## y_pred[1]   3738    1
+## y_pred[2]   3669    1
+## y_pred[3]   3582    1
+## y_pred[4]   3362    1
+## y_pred[5]   3706    1
+## y_pred[6]   3914    1
+## y_pred[7]   3706    1
+## y_pred[8]   3447    1
+## y_pred[9]   3934    1
+## y_pred[10]  3907    1
+## y_pred[11]  3488    1
+## y_pred[12]  4354    1
+## y_pred[13]  3685    1
+## y_pred[14]  3854    1
+## y_pred[15]  3715    1
+## y_pred[16]  3841    1
+## y_pred[17]  3972    1
+## y_pred[18]  3780    1
+## y_pred[19]  3683    1
+## y_pred[20]  3505    1
+## y_pred[21]  3841    1
+## y_pred[22]  3432    1
+## y_pred[23]  3919    1
+## y_pred[24]  3814    1
+## y_pred[25]  3828    1
+## y_pred[26]  3793    1
+## y_pred[27]  3778    1
+## y_pred[28]  4052    1
+## y_pred[29]  4096    1
+## y_pred[30]  3820    1
+## y_pred[31]  3352    1
+## y_pred[32]  3583    1
+## y_pred[33]  3970    1
+## y_pred[34]  3628    1
+## y_pred[35]  3789    1
+## y_pred[36]  3968    1
+## y_pred[37]  3355    1
+## y_pred[38]  3092    1
+## y_pred[39]  3815    1
+## y_pred[40]  3738    1
+## y_pred[41]  4172    1
+## y_pred[42]  4290    1
+## y_pred[43]  3624    1
+## y_pred[44]  4023    1
+## y_pred[45]  3531    1
+## y_pred[46]  3976    1
+## y_pred[47]  3218    1
+## y_pred[48]  3811    1
+## y_pred[49]  3951    1
+## y_pred[50]  3826    1
+## lp__        1381    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Sat Feb  2 23:13:35 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:30:31 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -843,7 +1103,7 @@ Y[n] \sim \text{Binomial}(M[n], q[n])                 &amp; n = 1, 2, \dots, N \
 \end{array}
 \]</span></p>
 </div>
-<div class="section level1">
+<div id="確認收斂效果" class="section level1">
 <h1>確認收斂效果</h1>
 <pre class="r"><code>library(bayesplot)
 
@@ -886,133 +1146,437 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
 </div>
 </div>
 
-      </div>
+    </div>
 
-      
+    
+
+
+
 
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
+  <a class="badge badge-light" href="/tags/bayesian/">Bayesian</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  <a class="badge badge-light" href="/tags/medical-statistics/">Medical Statistics</a>
   
 </div>
 
 
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://wangcc.me/post/logistic-rstan/&amp;text=Rstan%20Wonderful%20R-%284%29" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://wangcc.me/post/logistic-rstan/&amp;t=Rstan%20Wonderful%20R-%284%29" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Rstan%20Wonderful%20R-%284%29&amp;body=https://wangcc.me/post/logistic-rstan/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://wangcc.me/post/logistic-rstan/&amp;title=Rstan%20Wonderful%20R-%284%29" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Rstan%20Wonderful%20R-%284%29%20https://wangcc.me/post/logistic-rstan/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://wangcc.me/post/logistic-rstan/&amp;title=Rstan%20Wonderful%20R-%284%29" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <img class="portrait mr-3" src="https://s.gravatar.com/avatar/eca3c74b8c4ce437424800c7bc74b67d?s=200')" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://wangcc.me/">Chaochen Wang 王　超辰</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">All models are wrong, but some are useful.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/outyousin" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.jp/citations?user=0J-5evgAAAAJ&amp;hl=ja" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/winterwang" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
 
     </div>
   </div>
 
-</article>
 
 
 
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
-    
-    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
-    
-    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
-    
-    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
-    
-    <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
-    
-  </ul>
-</div>
-
-
-
-<div class="container article-widget">
-  <nav>
-  <ul class="pager">
-    
-    <li class="previous"><a href="https://winterwang.github.io/post/rstan-wonderful-r3/"><span
-      aria-hidden="true">&larr;</span> Rstan Wonderful R-(3)</a></li>
-    
-
-    
-    <li class="next"><a href="https://winterwang.github.io/post/logistic-rstan2/">Rstan Wonderful R-(5) <span
-      aria-hidden="true">&rarr;</span></a></li>
-    
-  </ul>
-</nav>
-
-</div>
-
-
-<div class="article-container">
-  
 <section id="comments">
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
     
     
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "ccwang" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
 </section>
 
 
-</div>
 
-<footer class="site-footer">
-  <div class="container">
-    <p class="powered-by">
 
-      &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
 
-      Powered by the
-      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
-      <span class="pull-right" aria-hidden="true">
-        <a href="#" id="back_to_top">
-          <span class="button_icon">
-            <i class="fa fa-chevron-up fa-2x"></i>
-          </span>
-        </a>
-      </span>
-
-    </p>
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
+      
+      <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
+      
+      <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
+      
+      <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
+      
+      <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
+      
+    </ul>
   </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://ccwang.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
 </footer>
 
+  </div>
+  
 
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cite</h4>
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div>
-        <pre><code class="modal-body tex"></code></pre>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
-          <i class="fa fa-copy"></i> Copy
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
         </a>
-        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
-          <i class="fa fa-download"></i> Download
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
         </a>
         <div id="modal-error"></div>
       </div>
@@ -1020,51 +1584,5 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
   </div>
 </div>
 
-    
-
-    
-    
-    <script id="dsq-count-scr" src="//ccwang.disqus.com/count.js" async></script>
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/hugo-academic.js"></script>
-    
-
-    
-    
-      
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-      
-
-      
-
-      
-
-      <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
-    
-    
-
-  </body>
+</body>
 </html>
-

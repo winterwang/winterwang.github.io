@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.55.6" />
-  <meta name="author" content="王 超辰 (Chaochen Wang)">
-  <meta name="description" content="Assistant Professor">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/rstan-wonderful-r3/">
 
   
   
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Chaochen Wang 王　超辰">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Rstan 學習筆記 Chapter 5.1">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://wangcc.me/post/rstan-wonderful-r3/">
+
+  
 
 
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
   
 
   
@@ -24,108 +47,262 @@
   
   
     
-  
-  
-    
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
-  
-  
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-  <link rel="stylesheet" href="/styles.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-21867861-1', 'auto');
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
     
-  
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
 
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21867861-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-21867861-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/rstan-wonderful-r3/">
+  <link rel="canonical" href="https://wangcc.me/post/rstan-wonderful-r3/">
 
+  
+  
+  
+  
+    
+  
+  
   <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/rstan-wonderful-r3/">
-  <meta property="og:title" content="Rstan Wonderful R-(3) | Be ambitious">
-  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
-  <meta property="og:locale" content="en-us">
+  <meta property="og:site_name" content="Be Ambitious">
+  <meta property="og:url" content="https://wangcc.me/post/rstan-wonderful-r3/">
+  <meta property="og:title" content="Rstan Wonderful R-(3) | Be Ambitious">
+  <meta property="og:description" content="Rstan 學習筆記 Chapter 5.1"><meta property="og:image" content="https://wangcc.me/img/052816_bayesian-opener_free.jpg">
+  <meta property="twitter:image" content="https://wangcc.me/img/052816_bayesian-opener_free.jpg"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-01-22T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2019-01-22T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-01-22T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-01-22T00:00:00&#43;00:00">
   
 
   
 
-  <title>Rstan Wonderful R-(3) | Be ambitious</title>
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wangcc.me/post/rstan-wonderful-r3/"
+  },
+  "headline": "Rstan Wonderful R-(3)",
+  
+  "datePublished": "2019-01-22T00:00:00Z",
+  "dateModified": "2019-01-22T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Chaochen Wang 王　超辰"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Be Ambitious",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wangcc.me/img/icon-512.png"
+    }
+  },
+  "description": "Rstan 學習筆記 Chapter 5.1"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Rstan Wonderful R-(3) | Be Ambitious</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
 
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Be Ambitious</a>
       
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
       </button>
       
-      <a class="navbar-brand" href="/">Be ambitious</a>
-    </div>
 
     
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
 
       
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav ml-auto">
         
 
         
 
+        
+        
         
           
         
 
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
         <li class="nav-item">
-          <a href="/#about">
-            
-            <span>Home</span>
-            
-          </a>
+          <a class="nav-link " href="/#about"><span>Home</span></a>
         </li>
 
         
@@ -134,15 +311,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
         </li>
 
         
@@ -151,15 +340,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#posts">
-            
-            <span>Posts</span>
-            
-          </a>
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
         
@@ -168,15 +369,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#projects">
-            
-            <span>Projects</span>
-            
-          </a>
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
         
@@ -185,15 +398,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#teaching">
-            
-            <span>Teaching</span>
-            
-          </a>
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
         </li>
 
         
@@ -202,15 +427,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#slides">
-            
-            <span>Presentations/slides</span>
-            
-          </a>
+          <a class="nav-link " href="/#slides"><span>Slides</span></a>
         </li>
 
         
@@ -219,22 +456,50 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#contact">
-            
-            <span>Contact</span>
-            
-          </a>
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
         </li>
 
         
         
+
       
 
-      
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
       </ul>
 
     </div>
@@ -242,126 +507,121 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+  <article class="article">
 
   
+
+
+
+
+
+
+
+
+
 <div class="article-header">
-  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+  
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" alt="">
+  
+
+  
+</div>
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Rstan Wonderful R-(3)</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2019-01-22
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    11 min read
+  </span>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/rstan-wonderful-r3/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/bayesian/">Bayesian</a>, <a href="/categories/r-techniques/">R techniques</a>, <a href="/categories/statistics/">statistics</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </div>
 
 
 
   <div class="article-container">
-    <div class="article-inner">
-      <h1 itemprop="name">Rstan Wonderful R-(3)</h1>
 
+    <div class="article-style">
       
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2019-01-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Tue, Jan 22, 2019
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    18 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/rstan-wonderful-r3/#disqus_thread"></a>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/bayesian">Bayesian</a
-    >, 
-    
-    <a href="/categories/r-techniques">R techniques</a
-    >, 
-    
-    <a href="/categories/statistics">statistics</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Rstan%20Wonderful%20R-%283%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f&amp;title=Rstan%20Wonderful%20R-%283%29"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f&amp;title=Rstan%20Wonderful%20R-%283%29"
-         target="_blank" rel="noopener">
-        <i class="fa fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Rstan%20Wonderful%20R-%283%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2frstan-wonderful-r3%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  
-
-</div>
-
-
-      <div class="article-style" itemprop="articleBody">
-        
 
 <div id="TOC">
 <ul>
-<li><a href="#-multiple-regression">多重回歸 multiple regression</a><ul>
-<li><a href="#step-1.-">Step 1. 確認數據分佈</a></li>
-<li><a href="#step-2.-">Step 2. 寫下數學模型</a></li>
-<li><a href="#step-3.-">Step 3. 看圖確認模型擬合狀況</a></li>
-<li><a href="#step-4.-mcmc-">Step 4. MCMC 樣本的散點圖矩陣</a></li>
+<li><a href="#多重回歸-multiple-regression">多重回歸 multiple regression</a><ul>
+<li><a href="#step-1.-確認數據分佈">Step 1. 確認數據分佈</a></li>
+<li><a href="#step-2.-寫下數學模型">Step 2. 寫下數學模型</a></li>
+<li><a href="#step-3.-看圖確認模型擬合狀況">Step 3. 看圖確認模型擬合狀況</a></li>
+<li><a href="#step-4.-mcmc-樣本的散點圖矩陣">Step 4. MCMC 樣本的散點圖矩陣</a></li>
 </ul></li>
 </ul>
 </div>
 
-<div id="-multiple-regression" class="section level1">
+<div id="多重回歸-multiple-regression" class="section level1">
 <h1>多重回歸 multiple regression</h1>
 <p>本章使用的數據，大學生出勤記錄也是<a href="https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt">架空的數據</a>。</p>
 <p>有大學記錄了50名大學生的出勤狀況：</p>
@@ -390,14 +650,16 @@
 <li><span class="math inline">\(Y\)</span>: 是該學生一年內的出勤率</li>
 </ul>
 <p>在本次分析範例中，把<span class="math inline">\(Y\)</span>出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。</p>
-<div id="step-1.-" class="section level2">
+<div id="step-1.-確認數據分佈" class="section level2">
 <h2>Step 1. 確認數據分佈</h2>
 <pre class="r"><code># The following figure codes come from the authors website: 
 # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R
 library(ggplot2)
-library(GGally)
-
-set.seed(123)
+library(GGally)</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;GGally&#39;:
+##   method from   
+##   +.gg   ggplot2</code></pre>
+<pre class="r"><code>set.seed(123)
 d &lt;- read.csv(file=&#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&#39;, header = T)
 d$A &lt;- as.factor(d$A)
 
@@ -474,7 +736,7 @@ Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的�
 # print(ggp, left=0.3, bottom=0.3)
 # dev.off()</code></pre>
 </div>
-<div id="step-2.-" class="section level2">
+<div id="step-2.-寫下數學模型" class="section level2">
 <h2>Step 2. 寫下數學模型</h2>
 <p>Model can be written as (Model5-1):</p>
 <p><span class="math display">\[
@@ -546,8 +808,8 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 3.7e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.37 seconds.
+## Chain 1: Gradient evaluation took 1.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -564,9 +826,9 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.134662 seconds (Warm-up)
-## Chain 1:                0.131457 seconds (Sampling)
-## Chain 1:                0.266119 seconds (Total)
+## Chain 1:  Elapsed Time: 0.104243 seconds (Warm-up)
+## Chain 1:                0.106625 seconds (Sampling)
+## Chain 1:                0.210868 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 2).
@@ -589,15 +851,15 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.140699 seconds (Warm-up)
-## Chain 2:                0.155449 seconds (Sampling)
-## Chain 2:                0.296148 seconds (Total)
+## Chain 2:  Elapsed Time: 0.102678 seconds (Warm-up)
+## Chain 2:                0.109559 seconds (Sampling)
+## Chain 2:                0.212237 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 7e-06 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 3: Gradient evaluation took 6e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -614,15 +876,15 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.133523 seconds (Warm-up)
-## Chain 3:                0.131937 seconds (Sampling)
-## Chain 3:                0.26546 seconds (Total)
+## Chain 3:  Elapsed Time: 0.105573 seconds (Warm-up)
+## Chain 3:                0.105132 seconds (Sampling)
+## Chain 3:                0.210705 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-3&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 7e-06 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 4: Gradient evaluation took 6e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -639,229 +901,123 @@ fit &lt;- stan(file=&#39;stanfiles/model5-3.stan&#39;, data=data, seed=1234)</co
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.127764 seconds (Warm-up)
-## Chain 4:                0.118133 seconds (Sampling)
-## Chain 4:                0.245897 seconds (Total)
+## Chain 4:  Elapsed Time: 0.100771 seconds (Warm-up)
+## Chain 4:                0.094318 seconds (Sampling)
+## Chain 4:                0.195089 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: model5-3.
 ## 4 chains, each with iter=2000; warmup=1000; thin=1; 
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
-##              mean se_mean   sd   2.5%    25%    50%    75%  97.5% n_eff
-## b1           0.12    0.00 0.03   0.06   0.10   0.12   0.15   0.19  1844
-## b2          -0.14    0.00 0.01  -0.17  -0.15  -0.14  -0.13  -0.11  2973
-## b3           0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.43  1880
-## sigma        0.05    0.00 0.01   0.04   0.05   0.05   0.05   0.06  2478
-## mu[1]        0.24    0.00 0.02   0.20   0.22   0.24   0.25   0.27  1996
-## mu[2]        0.22    0.00 0.01   0.19   0.21   0.22   0.22   0.24  2809
-## mu[3]        0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.34  3531
-## mu[4]        0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2784
-## mu[5]        0.24    0.00 0.01   0.21   0.23   0.24   0.25   0.27  2468
-## mu[6]        0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3463
-## mu[7]        0.30    0.00 0.01   0.29   0.30   0.30   0.31   0.32  3039
-## mu[8]        0.22    0.00 0.01   0.19   0.21   0.22   0.23   0.24  2747
-## mu[9]        0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  3046
-## mu[10]       0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  3080
-## mu[11]       0.21    0.00 0.01   0.18   0.20   0.21   0.22   0.23  2942
-## mu[12]       0.35    0.00 0.01   0.33   0.34   0.35   0.35   0.37  3351
-## mu[13]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  3511
-## mu[14]       0.30    0.00 0.01   0.29   0.30   0.30   0.31   0.32  3039
-## mu[15]       0.30    0.00 0.01   0.28   0.29   0.30   0.31   0.32  2943
-## mu[16]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  3138
-## mu[17]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  3183
-## mu[18]       0.26    0.00 0.01   0.23   0.25   0.26   0.27   0.28  2136
-## mu[19]       0.42    0.00 0.02   0.39   0.41   0.42   0.44   0.46  2308
-## mu[20]       0.23    0.00 0.01   0.20   0.22   0.23   0.24   0.26  2511
-## mu[21]       0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2784
-## mu[22]       0.16    0.00 0.01   0.13   0.15   0.15   0.16   0.18  3387
-## mu[23]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.18  3337
-## mu[24]       0.21    0.00 0.01   0.19   0.20   0.21   0.22   0.24  2874
-## mu[25]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  3508
-## mu[26]       0.19    0.00 0.01   0.16   0.18   0.19   0.20   0.21  3373
-## mu[27]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.33  3393
-## mu[28]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.33  3393
-## mu[29]       0.38    0.00 0.01   0.36   0.38   0.38   0.39   0.41  2639
-## mu[30]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  3135
-## mu[31]       0.25    0.00 0.02   0.22   0.24   0.25   0.26   0.28  2340
-## mu[32]       0.10    0.00 0.02   0.06   0.09   0.10   0.11   0.13  2546
-## mu[33]       0.20    0.00 0.01   0.18   0.20   0.20   0.21   0.23  3046
-## mu[34]       0.18    0.00 0.01   0.16   0.17   0.18   0.19   0.20  3463
-## mu[35]       0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.35  3538
-## mu[36]       0.34    0.00 0.01   0.32   0.33   0.34   0.34   0.35  3504
-## mu[37]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.17  3310
-## mu[38]       0.30    0.00 0.01   0.28   0.30   0.30   0.31   0.32  2991
-## mu[39]       0.27    0.00 0.01   0.24   0.26   0.27   0.28   0.29  2259
-## mu[40]       0.27    0.00 0.01   0.24   0.26   0.27   0.27   0.29  2239
-## mu[41]       0.33    0.00 0.01   0.31   0.33   0.33   0.34   0.35  3530
-## mu[42]       0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3463
-## mu[43]       0.32    0.00 0.01   0.30   0.31   0.32   0.33   0.34  3482
-## mu[44]       0.36    0.00 0.01   0.34   0.36   0.36   0.37   0.39  2981
-## mu[45]       0.42    0.00 0.02   0.38   0.41   0.42   0.43   0.46  2336
-## mu[46]       0.29    0.00 0.01   0.27   0.29   0.29   0.30   0.31  2760
-## mu[47]       0.21    0.00 0.02   0.17   0.19   0.21   0.22   0.24  1907
-## mu[48]       0.37    0.00 0.01   0.34   0.36   0.37   0.38   0.39  2919
-## mu[49]       0.28    0.00 0.01   0.26   0.28   0.28   0.29   0.30  2527
-## mu[50]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  3138
-## y_pred[1]    0.24    0.00 0.06   0.13   0.20   0.24   0.27   0.34  3503
-## y_pred[2]    0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3779
-## y_pred[3]    0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  3944
-## y_pred[4]    0.12    0.00 0.05   0.01   0.08   0.12   0.16   0.23  3762
-## y_pred[5]    0.24    0.00 0.05   0.13   0.20   0.24   0.27   0.34  4038
-## y_pred[6]    0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.44  3457
-## y_pred[7]    0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  4030
-## y_pred[8]    0.22    0.00 0.05   0.11   0.18   0.22   0.26   0.33  3217
-## y_pred[9]    0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  3869
-## y_pred[10]   0.36    0.00 0.05   0.26   0.32   0.36   0.39   0.46  3884
-## y_pred[11]   0.21    0.00 0.05   0.11   0.17   0.21   0.25   0.31  3871
-## y_pred[12]   0.34    0.00 0.05   0.24   0.31   0.34   0.38   0.45  3866
-## y_pred[13]   0.17    0.00 0.05   0.07   0.13   0.17   0.21   0.27  4064
-## y_pred[14]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3869
-## y_pred[15]   0.30    0.00 0.05   0.20   0.26   0.30   0.33   0.40  3929
-## y_pred[16]   0.14    0.00 0.05   0.03   0.11   0.14   0.18   0.25  3900
-## y_pred[17]   0.31    0.00 0.05   0.21   0.27   0.31   0.35   0.41  4048
-## y_pred[18]   0.26    0.00 0.05   0.15   0.22   0.26   0.29   0.36  3705
-## y_pred[19]   0.42    0.00 0.05   0.32   0.39   0.42   0.46   0.53  3474
-## y_pred[20]   0.23    0.00 0.05   0.13   0.20   0.23   0.27   0.34  3792
-## y_pred[21]   0.12    0.00 0.05   0.01   0.08   0.12   0.15   0.23  3581
-## y_pred[22]   0.16    0.00 0.05   0.05   0.12   0.16   0.19   0.26  4075
-## y_pred[23]   0.15    0.00 0.05   0.04   0.12   0.15   0.19   0.26  3975
-## y_pred[24]   0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3489
-## y_pred[25]   0.17    0.00 0.05   0.06   0.14   0.17   0.20   0.27  3938
-## y_pred[26]   0.19    0.00 0.05   0.08   0.15   0.19   0.22   0.29  3955
-## y_pred[27]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  4075
-## y_pred[28]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  4110
-## y_pred[29]   0.38    0.00 0.05   0.28   0.35   0.38   0.42   0.49  3631
-## y_pred[30]   0.31    0.00 0.05   0.20   0.27   0.31   0.34   0.41  3865
-## y_pred[31]   0.25    0.00 0.05   0.14   0.21   0.25   0.28   0.35  3818
-## y_pred[32]   0.10    0.00 0.05  -0.01   0.06   0.10   0.14   0.20  3857
-## y_pred[33]   0.20    0.00 0.05   0.10   0.17   0.20   0.24   0.31  3304
-## y_pred[34]   0.18    0.00 0.05   0.08   0.14   0.18   0.22   0.28  3946
-## y_pred[35]   0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  4182
-## y_pred[36]   0.34    0.00 0.05   0.23   0.30   0.34   0.37   0.44  4022
-## y_pred[37]   0.15    0.00 0.05   0.05   0.12   0.15   0.19   0.25  3719
-## y_pred[38]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3655
-## y_pred[39]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3522
-## y_pred[40]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3742
-## y_pred[41]   0.33    0.00 0.05   0.23   0.30   0.33   0.37   0.44  3979
-## y_pred[42]   0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.44  3914
-## y_pred[43]   0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.43  4005
-## y_pred[44]   0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  3818
-## y_pred[45]   0.42    0.00 0.05   0.31   0.38   0.42   0.45   0.53  3443
-## y_pred[46]   0.29    0.00 0.05   0.19   0.26   0.29   0.33   0.40  3839
-## y_pred[47]   0.21    0.00 0.06   0.09   0.17   0.21   0.24   0.31  3611
-## y_pred[48]   0.37    0.00 0.05   0.26   0.33   0.37   0.40   0.47  3784
-## y_pred[49]   0.28    0.00 0.05   0.18   0.25   0.28   0.32   0.39  3745
-## y_pred[50]   0.14    0.00 0.05   0.03   0.10   0.14   0.17   0.24  3701
-## lp__       120.94    0.04 1.39 117.48 120.23 121.24 121.96 122.70  1407
-##            Rhat
-## b1            1
-## b2            1
-## b3            1
-## sigma         1
-## mu[1]         1
-## mu[2]         1
-## mu[3]         1
-## mu[4]         1
-## mu[5]         1
-## mu[6]         1
-## mu[7]         1
-## mu[8]         1
-## mu[9]         1
-## mu[10]        1
-## mu[11]        1
-## mu[12]        1
-## mu[13]        1
-## mu[14]        1
-## mu[15]        1
-## mu[16]        1
-## mu[17]        1
-## mu[18]        1
-## mu[19]        1
-## mu[20]        1
-## mu[21]        1
-## mu[22]        1
-## mu[23]        1
-## mu[24]        1
-## mu[25]        1
-## mu[26]        1
-## mu[27]        1
-## mu[28]        1
-## mu[29]        1
-## mu[30]        1
-## mu[31]        1
-## mu[32]        1
-## mu[33]        1
-## mu[34]        1
-## mu[35]        1
-## mu[36]        1
-## mu[37]        1
-## mu[38]        1
-## mu[39]        1
-## mu[40]        1
-## mu[41]        1
-## mu[42]        1
-## mu[43]        1
-## mu[44]        1
-## mu[45]        1
-## mu[46]        1
-## mu[47]        1
-## mu[48]        1
-## mu[49]        1
-## mu[50]        1
-## y_pred[1]     1
-## y_pred[2]     1
-## y_pred[3]     1
-## y_pred[4]     1
-## y_pred[5]     1
-## y_pred[6]     1
-## y_pred[7]     1
-## y_pred[8]     1
-## y_pred[9]     1
-## y_pred[10]    1
-## y_pred[11]    1
-## y_pred[12]    1
-## y_pred[13]    1
-## y_pred[14]    1
-## y_pred[15]    1
-## y_pred[16]    1
-## y_pred[17]    1
-## y_pred[18]    1
-## y_pred[19]    1
-## y_pred[20]    1
-## y_pred[21]    1
-## y_pred[22]    1
-## y_pred[23]    1
-## y_pred[24]    1
-## y_pred[25]    1
-## y_pred[26]    1
-## y_pred[27]    1
-## y_pred[28]    1
-## y_pred[29]    1
-## y_pred[30]    1
-## y_pred[31]    1
-## y_pred[32]    1
-## y_pred[33]    1
-## y_pred[34]    1
-## y_pred[35]    1
-## y_pred[36]    1
-## y_pred[37]    1
-## y_pred[38]    1
-## y_pred[39]    1
-## y_pred[40]    1
-## y_pred[41]    1
-## y_pred[42]    1
-## y_pred[43]    1
-## y_pred[44]    1
-## y_pred[45]    1
-## y_pred[46]    1
-## y_pred[47]    1
-## y_pred[48]    1
-## y_pred[49]    1
-## y_pred[50]    1
-## lp__          1
+##              mean se_mean   sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
+## b1           0.12    0.00 0.03   0.06   0.10   0.12   0.15   0.19  1844    1
+## b2          -0.14    0.00 0.01  -0.17  -0.15  -0.14  -0.13  -0.11  2973    1
+## b3           0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.43  1880    1
+## sigma        0.05    0.00 0.01   0.04   0.05   0.05   0.05   0.06  2478    1
+## mu[1]        0.24    0.00 0.02   0.20   0.22   0.24   0.25   0.27  1996    1
+## mu[2]        0.22    0.00 0.01   0.19   0.21   0.22   0.22   0.24  2809    1
+## mu[3]        0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.34  3531    1
+## mu[4]        0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2784    1
+## mu[5]        0.24    0.00 0.01   0.21   0.23   0.24   0.25   0.27  2468    1
+## mu[6]        0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3463    1
+## mu[7]        0.30    0.00 0.01   0.29   0.30   0.30   0.31   0.32  3039    1
+## mu[8]        0.22    0.00 0.01   0.19   0.21   0.22   0.23   0.24  2747    1
+## mu[9]        0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  3046    1
+## mu[10]       0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  3080    1
+## mu[11]       0.21    0.00 0.01   0.18   0.20   0.21   0.22   0.23  2942    1
+## mu[12]       0.35    0.00 0.01   0.33   0.34   0.35   0.35   0.37  3351    1
+## mu[13]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  3511    1
+## mu[14]       0.30    0.00 0.01   0.29   0.30   0.30   0.31   0.32  3039    1
+## mu[15]       0.30    0.00 0.01   0.28   0.29   0.30   0.31   0.32  2943    1
+## mu[16]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  3138    1
+## mu[17]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  3183    1
+## mu[18]       0.26    0.00 0.01   0.23   0.25   0.26   0.27   0.28  2136    1
+## mu[19]       0.42    0.00 0.02   0.39   0.41   0.42   0.44   0.46  2308    1
+## mu[20]       0.23    0.00 0.01   0.20   0.22   0.23   0.24   0.26  2511    1
+## mu[21]       0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2784    1
+## mu[22]       0.16    0.00 0.01   0.13   0.15   0.15   0.16   0.18  3387    1
+## mu[23]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.18  3337    1
+## mu[24]       0.21    0.00 0.01   0.19   0.20   0.21   0.22   0.24  2874    1
+## mu[25]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  3508    1
+## mu[26]       0.19    0.00 0.01   0.16   0.18   0.19   0.20   0.21  3373    1
+## mu[27]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.33  3393    1
+## mu[28]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.33  3393    1
+## mu[29]       0.38    0.00 0.01   0.36   0.38   0.38   0.39   0.41  2639    1
+## mu[30]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  3135    1
+## mu[31]       0.25    0.00 0.02   0.22   0.24   0.25   0.26   0.28  2340    1
+## mu[32]       0.10    0.00 0.02   0.06   0.09   0.10   0.11   0.13  2546    1
+## mu[33]       0.20    0.00 0.01   0.18   0.20   0.20   0.21   0.23  3046    1
+## mu[34]       0.18    0.00 0.01   0.16   0.17   0.18   0.19   0.20  3463    1
+## mu[35]       0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.35  3538    1
+## mu[36]       0.34    0.00 0.01   0.32   0.33   0.34   0.34   0.35  3504    1
+## mu[37]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.17  3310    1
+## mu[38]       0.30    0.00 0.01   0.28   0.30   0.30   0.31   0.32  2991    1
+## mu[39]       0.27    0.00 0.01   0.24   0.26   0.27   0.28   0.29  2259    1
+## mu[40]       0.27    0.00 0.01   0.24   0.26   0.27   0.27   0.29  2239    1
+## mu[41]       0.33    0.00 0.01   0.31   0.33   0.33   0.34   0.35  3530    1
+## mu[42]       0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3463    1
+## mu[43]       0.32    0.00 0.01   0.30   0.31   0.32   0.33   0.34  3482    1
+## mu[44]       0.36    0.00 0.01   0.34   0.36   0.36   0.37   0.39  2981    1
+## mu[45]       0.42    0.00 0.02   0.38   0.41   0.42   0.43   0.46  2336    1
+## mu[46]       0.29    0.00 0.01   0.27   0.29   0.29   0.30   0.31  2760    1
+## mu[47]       0.21    0.00 0.02   0.17   0.19   0.21   0.22   0.24  1907    1
+## mu[48]       0.37    0.00 0.01   0.34   0.36   0.37   0.38   0.39  2919    1
+## mu[49]       0.28    0.00 0.01   0.26   0.28   0.28   0.29   0.30  2527    1
+## mu[50]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  3138    1
+## y_pred[1]    0.24    0.00 0.06   0.13   0.20   0.24   0.27   0.34  3503    1
+## y_pred[2]    0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3779    1
+## y_pred[3]    0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  3944    1
+## y_pred[4]    0.12    0.00 0.05   0.01   0.08   0.12   0.16   0.23  3762    1
+## y_pred[5]    0.24    0.00 0.05   0.13   0.20   0.24   0.27   0.34  4038    1
+## y_pred[6]    0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.44  3457    1
+## y_pred[7]    0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  4030    1
+## y_pred[8]    0.22    0.00 0.05   0.11   0.18   0.22   0.26   0.33  3217    1
+## y_pred[9]    0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  3869    1
+## y_pred[10]   0.36    0.00 0.05   0.26   0.32   0.36   0.39   0.46  3884    1
+## y_pred[11]   0.21    0.00 0.05   0.11   0.17   0.21   0.25   0.31  3871    1
+## y_pred[12]   0.34    0.00 0.05   0.24   0.31   0.34   0.38   0.45  3866    1
+## y_pred[13]   0.17    0.00 0.05   0.07   0.13   0.17   0.21   0.27  4064    1
+## y_pred[14]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3869    1
+## y_pred[15]   0.30    0.00 0.05   0.20   0.26   0.30   0.33   0.40  3929    1
+## y_pred[16]   0.14    0.00 0.05   0.03   0.11   0.14   0.18   0.25  3900    1
+## y_pred[17]   0.31    0.00 0.05   0.21   0.27   0.31   0.35   0.41  4048    1
+## y_pred[18]   0.26    0.00 0.05   0.15   0.22   0.26   0.29   0.36  3705    1
+## y_pred[19]   0.42    0.00 0.05   0.32   0.39   0.42   0.46   0.53  3474    1
+## y_pred[20]   0.23    0.00 0.05   0.13   0.20   0.23   0.27   0.34  3792    1
+## y_pred[21]   0.12    0.00 0.05   0.01   0.08   0.12   0.15   0.23  3581    1
+## y_pred[22]   0.16    0.00 0.05   0.05   0.12   0.16   0.19   0.26  4075    1
+## y_pred[23]   0.15    0.00 0.05   0.04   0.12   0.15   0.19   0.26  3975    1
+## y_pred[24]   0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3489    1
+## y_pred[25]   0.17    0.00 0.05   0.06   0.14   0.17   0.20   0.27  3938    1
+## y_pred[26]   0.19    0.00 0.05   0.08   0.15   0.19   0.22   0.29  3955    1
+## y_pred[27]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  4075    1
+## y_pred[28]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  4110    1
+## y_pred[29]   0.38    0.00 0.05   0.28   0.35   0.38   0.42   0.49  3631    1
+## y_pred[30]   0.31    0.00 0.05   0.20   0.27   0.31   0.34   0.41  3865    1
+## y_pred[31]   0.25    0.00 0.05   0.14   0.21   0.25   0.28   0.35  3818    1
+## y_pred[32]   0.10    0.00 0.05  -0.01   0.06   0.10   0.14   0.20  3857    1
+## y_pred[33]   0.20    0.00 0.05   0.10   0.17   0.20   0.24   0.31  3304    1
+## y_pred[34]   0.18    0.00 0.05   0.08   0.14   0.18   0.22   0.28  3946    1
+## y_pred[35]   0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  4182    1
+## y_pred[36]   0.34    0.00 0.05   0.23   0.30   0.34   0.37   0.44  4022    1
+## y_pred[37]   0.15    0.00 0.05   0.05   0.12   0.15   0.19   0.25  3719    1
+## y_pred[38]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3655    1
+## y_pred[39]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3522    1
+## y_pred[40]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3742    1
+## y_pred[41]   0.33    0.00 0.05   0.23   0.30   0.33   0.37   0.44  3979    1
+## y_pred[42]   0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.44  3914    1
+## y_pred[43]   0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.43  4005    1
+## y_pred[44]   0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  3818    1
+## y_pred[45]   0.42    0.00 0.05   0.31   0.38   0.42   0.45   0.53  3443    1
+## y_pred[46]   0.29    0.00 0.05   0.19   0.26   0.29   0.33   0.40  3839    1
+## y_pred[47]   0.21    0.00 0.06   0.09   0.17   0.21   0.24   0.31  3611    1
+## y_pred[48]   0.37    0.00 0.05   0.26   0.33   0.37   0.40   0.47  3784    1
+## y_pred[49]   0.28    0.00 0.05   0.18   0.25   0.28   0.32   0.39  3745    1
+## y_pred[50]   0.14    0.00 0.05   0.03   0.10   0.14   0.17   0.24  3701    1
+## lp__       120.94    0.04 1.39 117.48 120.23 121.24 121.96 122.70  1407    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 24 00:02:26 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:29:20 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -895,7 +1051,7 @@ Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plo
 <li><code>b2</code>的事後均值是<span class="math inline">\(-0.14\)</span>，所以，同樣地，<span class="math inline">\(Score\)</span>相同的兩名學生，喜歡打工的學生比不喜歡打工的學生出勤率平均要低 <span class="math inline">\(0.14\)</span>。</li>
 </ul>
 </div>
-<div id="step-3.-" class="section level2">
+<div id="step-3.-看圖確認模型擬合狀況" class="section level2">
 <h2>Step 3. 看圖確認模型擬合狀況</h2>
 <p>下圖繪製了上面貝葉斯多重線性回歸模型計算獲得的事後貝葉斯預測區間，和觀測值<span class="math inline">\(Y\)</span>出勤率之間的直觀關係：</p>
 <pre class="r"><code>source(&quot;commonRstan.R&quot;)
@@ -1029,7 +1185,7 @@ Figure 6: 每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相�
 </p>
 </div>
 </div>
-<div id="step-4.-mcmc-" class="section level2">
+<div id="step-4.-mcmc-樣本的散點圖矩陣" class="section level2">
 <h2>Step 4. MCMC 樣本的散點圖矩陣</h2>
 <pre class="r"><code>library(ggplot2)
 library(GGally)
@@ -1098,133 +1254,437 @@ Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的
 </div>
 </div>
 
-      </div>
+    </div>
 
-      
+    
+
+
+
 
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
+  <a class="badge badge-light" href="/tags/bayesian/">Bayesian</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  <a class="badge badge-light" href="/tags/medical-statistics/">Medical Statistics</a>
   
 </div>
 
 
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://wangcc.me/post/rstan-wonderful-r3/&amp;text=Rstan%20Wonderful%20R-%283%29" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://wangcc.me/post/rstan-wonderful-r3/&amp;t=Rstan%20Wonderful%20R-%283%29" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Rstan%20Wonderful%20R-%283%29&amp;body=https://wangcc.me/post/rstan-wonderful-r3/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://wangcc.me/post/rstan-wonderful-r3/&amp;title=Rstan%20Wonderful%20R-%283%29" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Rstan%20Wonderful%20R-%283%29%20https://wangcc.me/post/rstan-wonderful-r3/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://wangcc.me/post/rstan-wonderful-r3/&amp;title=Rstan%20Wonderful%20R-%283%29" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <img class="portrait mr-3" src="https://s.gravatar.com/avatar/eca3c74b8c4ce437424800c7bc74b67d?s=200')" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://wangcc.me/">Chaochen Wang 王　超辰</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">All models are wrong, but some are useful.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/outyousin" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.jp/citations?user=0J-5evgAAAAJ&amp;hl=ja" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/winterwang" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
 
     </div>
   </div>
 
-</article>
 
 
 
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
-    
-    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
-    
-    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
-    
-    <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
-    
-    <li><a href="/post/construction-of-a-hypothesis-test/">徒手打造一個假設檢驗</a></li>
-    
-  </ul>
-</div>
-
-
-
-<div class="container article-widget">
-  <nav>
-  <ul class="pager">
-    
-    <li class="previous"><a href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/"><span
-      aria-hidden="true">&larr;</span> Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
-    
-
-    
-    <li class="next"><a href="https://winterwang.github.io/post/logistic-rstan/">Rstan Wonderful R-(4) <span
-      aria-hidden="true">&rarr;</span></a></li>
-    
-  </ul>
-</nav>
-
-</div>
-
-
-<div class="article-container">
-  
 <section id="comments">
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
     
     
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "ccwang" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
 </section>
 
 
-</div>
 
-<footer class="site-footer">
-  <div class="container">
-    <p class="powered-by">
 
-      &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
 
-      Powered by the
-      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
-      <span class="pull-right" aria-hidden="true">
-        <a href="#" id="back_to_top">
-          <span class="button_icon">
-            <i class="fa fa-chevron-up fa-2x"></i>
-          </span>
-        </a>
-      </span>
-
-    </p>
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
+      
+      <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
+      
+      <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
+      
+      <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
+      
+      <li><a href="/post/construction-of-a-hypothesis-test/">徒手打造一個假設檢驗</a></li>
+      
+    </ul>
   </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://ccwang.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
 </footer>
 
+  </div>
+  
 
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cite</h4>
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div>
-        <pre><code class="modal-body tex"></code></pre>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
-          <i class="fa fa-copy"></i> Copy
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
         </a>
-        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
-          <i class="fa fa-download"></i> Download
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
         </a>
         <div id="modal-error"></div>
       </div>
@@ -1232,51 +1692,5 @@ Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的
   </div>
 </div>
 
-    
-
-    
-    
-    <script id="dsq-count-scr" src="//ccwang.disqus.com/count.js" async></script>
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/hugo-academic.js"></script>
-    
-
-    
-    
-      
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-      
-
-      
-
-      
-
-      <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
-    
-    
-
-  </body>
+</body>
 </html>
-

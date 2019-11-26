@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.55.6" />
-  <meta name="author" content="王 超辰 (Chaochen Wang)">
-  <meta name="description" content="Assistant Professor">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/">
 
   
   
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Chaochen Wang 王　超辰">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Rstan 學習筆記 Chapter 4.4">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://wangcc.me/post/simple-linear-regression-using-rstan/">
+
+  
 
 
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
   
 
   
@@ -24,108 +47,262 @@
   
   
     
-  
-  
-    
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
-  
-  
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-  <link rel="stylesheet" href="/styles.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-21867861-1', 'auto');
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
     
-  
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
 
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21867861-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-21867861-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/">
+  <link rel="canonical" href="https://wangcc.me/post/simple-linear-regression-using-rstan/">
 
+  
+  
+  
+  
+    
+  
+  
   <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="og:site_name" content="Be ambitious">
-  <meta property="og:url" content="https://winterwang.github.io/post/simple-linear-regression-using-rstan/">
-  <meta property="og:title" content="Simple linear regression using Rstan--Rstan Wonderful R-(2) | Be ambitious">
-  <meta property="og:description" content=""><meta property="og:image" content="https://winterwang.github.io/img/052816_bayesian-opener_free.jpg">
-  <meta property="og:locale" content="en-us">
+  <meta property="og:site_name" content="Be Ambitious">
+  <meta property="og:url" content="https://wangcc.me/post/simple-linear-regression-using-rstan/">
+  <meta property="og:title" content="Simple linear regression using Rstan--Rstan Wonderful R-(2) | Be Ambitious">
+  <meta property="og:description" content="Rstan 學習筆記 Chapter 4.4"><meta property="og:image" content="https://wangcc.me/img/052816_bayesian-opener_free.jpg">
+  <meta property="twitter:image" content="https://wangcc.me/img/052816_bayesian-opener_free.jpg"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-01-15T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2019-01-15T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-01-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-01-15T00:00:00&#43;00:00">
   
 
   
 
-  <title>Simple linear regression using Rstan--Rstan Wonderful R-(2) | Be ambitious</title>
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wangcc.me/post/simple-linear-regression-using-rstan/"
+  },
+  "headline": "Simple linear regression using Rstan--Rstan Wonderful R-(2)",
+  
+  "datePublished": "2019-01-15T00:00:00Z",
+  "dateModified": "2019-01-15T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Chaochen Wang 王　超辰"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Be Ambitious",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wangcc.me/img/icon-512.png"
+    }
+  },
+  "description": "Rstan 學習筆記 Chapter 4.4"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Simple linear regression using Rstan--Rstan Wonderful R-(2) | Be Ambitious</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
 
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Be Ambitious</a>
       
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
       </button>
       
-      <a class="navbar-brand" href="/">Be ambitious</a>
-    </div>
 
     
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
 
       
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav ml-auto">
         
 
         
 
+        
+        
         
           
         
 
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
         <li class="nav-item">
-          <a href="/#about">
-            
-            <span>Home</span>
-            
-          </a>
+          <a class="nav-link " href="/#about"><span>Home</span></a>
         </li>
 
         
@@ -134,15 +311,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
         </li>
 
         
@@ -151,15 +340,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#posts">
-            
-            <span>Posts</span>
-            
-          </a>
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
         
@@ -168,15 +369,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#projects">
-            
-            <span>Projects</span>
-            
-          </a>
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
         
@@ -185,15 +398,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#teaching">
-            
-            <span>Teaching</span>
-            
-          </a>
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
         </li>
 
         
@@ -202,15 +427,27 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#slides">
-            
-            <span>Presentations/slides</span>
-            
-          </a>
+          <a class="nav-link " href="/#slides"><span>Slides</span></a>
         </li>
 
         
@@ -219,22 +456,50 @@
         
 
         
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
           
         
 
         <li class="nav-item">
-          <a href="/#contact">
-            
-            <span>Contact</span>
-            
-          </a>
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
         </li>
 
         
         
+
       
 
-      
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
       </ul>
 
     </div>
@@ -242,124 +507,119 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+  <article class="article">
 
   
+
+
+
+
+
+
+
+
+
 <div class="article-header">
-  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" itemprop="image">
+  
+  
+  <img src="/img/052816_bayesian-opener_free.jpg" class="article-banner" alt="">
+  
+
+  
+</div>
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Simple linear regression using Rstan--Rstan Wonderful R-(2)</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2019-01-15
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    15 min read
+  </span>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/simple-linear-regression-using-rstan/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r-techniques/">R techniques</a>, <a href="/categories/statistics/">statistics</a>, <a href="/categories/bayesian/">Bayesian</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </div>
 
 
 
   <div class="article-container">
-    <div class="article-inner">
-      <h1 itemprop="name">Simple linear regression using Rstan--Rstan Wonderful R-(2)</h1>
 
+    <div class="article-style">
       
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2019-01-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Tue, Jan 15, 2019
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    23 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="https://winterwang.github.io/post/simple-linear-regression-using-rstan/#disqus_thread"></a>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/r-techniques">R techniques</a
-    >, 
-    
-    <a href="/categories/statistics">statistics</a
-    >, 
-    
-    <a href="/categories/bayesian">Bayesian</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f&amp;title=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f&amp;title=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29"
-         target="_blank" rel="noopener">
-        <i class="fa fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29&amp;body=https%3a%2f%2fwinterwang.github.io%2fpost%2fsimple-linear-regression-using-rstan%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  
-
-</div>
-
-
-      <div class="article-style" itemprop="articleBody">
-        
 
 <div id="TOC">
 <ul>
-<li><a href="#step-1-">Step 1, 確認數據分佈</a></li>
-<li><a href="#step-2-">Step 2, 描述線性模型</a></li>
-<li><a href="#step-3-stan">Step 3, 寫下Stan模型</a></li>
-<li><a href="#step-4-stan">Step 4, 診斷Stan貝葉斯模型的收斂程度</a></li>
-<li><a href="#step-5mcmc">Step 5，修改MCMC條件設定</a></li>
-<li><a href="#step-6-">Step 6, 並行（平行）計算的設定</a></li>
-<li><a href="#step-7-">Step 7, 計算貝葉斯可信區間和貝葉斯預測區間</a></li>
-<li><a>練習題</a></li>
+<li><a href="#step-1-確認數據分佈">Step 1, 確認數據分佈</a></li>
+<li><a href="#step-2-描述線性模型">Step 2, 描述線性模型</a></li>
+<li><a href="#step-3-寫下stan模型">Step 3, 寫下Stan模型</a></li>
+<li><a href="#step-4-診斷stan貝葉斯模型的收斂程度">Step 4, 診斷Stan貝葉斯模型的收斂程度</a></li>
+<li><a href="#step-5修改mcmc條件設定">Step 5，修改MCMC條件設定</a></li>
+<li><a href="#step-6-並行平行計算的設定">Step 6, 並行（平行）計算的設定</a></li>
+<li><a href="#step-7-計算貝葉斯可信區間和貝葉斯預測區間">Step 7, 計算貝葉斯可信區間和貝葉斯預測區間</a></li>
+<li><a href="#練習題">練習題</a></li>
 </ul>
 </div>
 
@@ -392,7 +652,7 @@
 <ul>
 <li>借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。</li>
 </ul>
-<div id="step-1-" class="section level2">
+<div id="step-1-確認數據分佈" class="section level2">
 <h2>Step 1, 確認數據分佈</h2>
 <pre class="r"><code>Salary &lt;- read.table(&quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&quot;, 
                      sep = &quot;,&quot;, header = T)
@@ -416,7 +676,7 @@ Figure 1: 橫軸爲 <span class="math inline">\(X\)</span>，縱軸爲 <span cla
 </div>
 <p>從這個散點圖的特徵可以看出年收入確實似乎和年齡呈線性正相關。</p>
 </div>
-<div id="step-2-" class="section level2">
+<div id="step-2-描述線性模型" class="section level2">
 <h2>Step 2, 描述線性模型</h2>
 <p>這個簡單線性回歸模型的數學表達式可以描述如下：</p>
 <p><span class="math display">\[
@@ -480,7 +740,7 @@ Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色
 </p>
 </div>
 </div>
-<div id="step-3-stan" class="section level2">
+<div id="step-3-寫下stan模型" class="section level2">
 <h2>Step 3, 寫下Stan模型</h2>
 <pre class="stan"><code>data {
     int N; 
@@ -507,8 +767,8 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 8e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 1: Gradient evaluation took 7e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -525,9 +785,9 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.072158 seconds (Warm-up)
-## Chain 1:                0.04332 seconds (Sampling)
-## Chain 1:                0.115478 seconds (Total)
+## Chain 1:  Elapsed Time: 0.066103 seconds (Warm-up)
+## Chain 1:                0.038316 seconds (Sampling)
+## Chain 1:                0.104419 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 2).
@@ -550,9 +810,9 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.065082 seconds (Warm-up)
-## Chain 2:                0.043787 seconds (Sampling)
-## Chain 2:                0.108869 seconds (Total)
+## Chain 2:  Elapsed Time: 0.060925 seconds (Warm-up)
+## Chain 2:                0.040855 seconds (Sampling)
+## Chain 2:                0.10178 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 3).
@@ -575,9 +835,9 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.058978 seconds (Warm-up)
-## Chain 3:                0.039954 seconds (Sampling)
-## Chain 3:                0.098932 seconds (Total)
+## Chain 3:  Elapsed Time: 0.055785 seconds (Warm-up)
+## Chain 3:                0.038069 seconds (Sampling)
+## Chain 3:                0.093854 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 4).
@@ -600,27 +860,22 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.061095 seconds (Warm-up)
-## Chain 4:                0.045731 seconds (Sampling)
-## Chain 4:                0.106826 seconds (Total)
+## Chain 4:  Elapsed Time: 0.057673 seconds (Warm-up)
+## Chain 4:                0.04921 seconds (Sampling)
+## Chain 4:                0.106883 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>print(fit)</code></pre>
 <pre><code>## Inference for Stan model: 5b73686886069c0bad70513d4ea4141a.
 ## 4 chains, each with iter=2000; warmup=1000; thin=1; 
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
-##          mean se_mean    sd    2.5%     25%     50%    75%  97.5% n_eff
-## a     -121.53    2.05 75.97 -270.45 -167.02 -120.34 -73.00  26.46  1379
-## b       21.96    0.05  1.69   18.71   20.84   21.93  23.00  25.30  1350
-## sigma   85.09    0.37 15.38   61.62   73.63   83.07  94.33 121.28  1697
-## lp__   -93.63    0.04  1.31  -96.87  -94.24  -93.29 -92.66 -92.13  1045
-##       Rhat
-## a        1
-## b        1
-## sigma    1
-## lp__     1
+##          mean se_mean    sd    2.5%     25%     50%    75%  97.5% n_eff Rhat
+## a     -121.53    2.05 75.97 -270.45 -167.02 -120.34 -73.00  26.46  1379    1
+## b       21.96    0.05  1.69   18.71   20.84   21.93  23.00  25.30  1350    1
+## sigma   85.09    0.37 15.38   61.62   73.63   83.07  94.33 121.28  1697    1
+## lp__   -93.63    0.04  1.31  -96.87  -94.24  -93.29 -92.66 -92.13  1045    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 17 15:50:00 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:06:39 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -639,12 +894,11 @@ fit &lt;- sampling(model4_5, data, seed = 1234) </code></pre>
 </ul></li>
 </ul>
 </div>
-<div id="step-4-stan" class="section level2">
+<div id="step-4-診斷stan貝葉斯模型的收斂程度" class="section level2">
 <h2>Step 4, 診斷Stan貝葉斯模型的收斂程度</h2>
 <pre class="r"><code>library(ggmcmc)
 
-ggmcmc(ggs(fit, inc_warmup = TRUE, stan_include_auxiliar = TRUE), plot = &quot;traceplot&quot;, dev_type_html = &quot;png&quot;, 
-       file = &quot;trace.html&quot;)</code></pre>
+ggmcmc(ggs(fit, inc_warmup = TRUE, stan_include_auxiliar = TRUE), plot = &quot;traceplot&quot;, dev_type_html = &quot;png&quot;,        file = &quot;trace.html&quot;)</code></pre>
 <p>上面的代碼，會自動生成四個模型參數的軌跡MCMC鏈式圖報告。</p>
 <div class="figure" style="text-align: center"><span id="fig:step4"></span>
 <img src="/img/traceplot-model4-5.png" alt="用ggmcmc函數製作而成的MCMC鏈式圖報告。" width="80%" />
@@ -684,7 +938,7 @@ Figure 6: 用 bayesplot包數繪製的事後樣本密度分佈圖。
 </p>
 </div>
 </div>
-<div id="step-5mcmc" class="section level2">
+<div id="step-5修改mcmc條件設定" class="section level2">
 <h2>Step 5，修改MCMC條件設定</h2>
 <p>進行貝葉斯模型擬合的過程中，常常需要不停地修改模型的條件，例如縮短warm-up等。下面的Rstan代碼可以實現簡便地頻繁修改MCMC條件設定：</p>
 <pre class="r"><code># library(rstan) uncomment if run for the first time
@@ -702,8 +956,8 @@ fit2 &lt;- sampling(
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 5e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 1: Gradient evaluation took 4e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -720,15 +974,15 @@ fit2 &lt;- sampling(
 ## Chain 1: Iteration: 900 / 1000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 1000 / 1000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.032778 seconds (Warm-up)
-## Chain 1:                0.027433 seconds (Sampling)
-## Chain 1:                0.060211 seconds (Total)
+## Chain 1:  Elapsed Time: 0.031364 seconds (Warm-up)
+## Chain 1:                0.020284 seconds (Sampling)
+## Chain 1:                0.051648 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 4e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Gradient evaluation took 3e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -745,9 +999,9 @@ fit2 &lt;- sampling(
 ## Chain 2: Iteration: 900 / 1000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 1000 / 1000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.037233 seconds (Warm-up)
-## Chain 2:                0.027168 seconds (Sampling)
-## Chain 2:                0.064401 seconds (Total)
+## Chain 2:  Elapsed Time: 0.027437 seconds (Warm-up)
+## Chain 2:                0.031304 seconds (Sampling)
+## Chain 2:                0.058741 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;5b73686886069c0bad70513d4ea4141a&#39; NOW (CHAIN 3).
@@ -770,9 +1024,9 @@ fit2 &lt;- sampling(
 ## Chain 3: Iteration: 900 / 1000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 1000 / 1000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.043306 seconds (Warm-up)
-## Chain 3:                0.029513 seconds (Sampling)
-## Chain 3:                0.072819 seconds (Total)
+## Chain 3:  Elapsed Time: 0.037999 seconds (Warm-up)
+## Chain 3:                0.032879 seconds (Sampling)
+## Chain 3:                0.070878 seconds (Total)
 ## Chain 3:</code></pre>
 <pre class="r"><code>print(fit2)</code></pre>
 <pre><code>## Inference for Stan model: 5b73686886069c0bad70513d4ea4141a.
@@ -780,11 +1034,11 @@ fit2 &lt;- sampling(
 ## post-warmup draws per chain=400, total post-warmup draws=1200.
 ## 
 ##         mean se_mean    sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
-## b      21.99    0.07  1.68  18.79  20.94  21.96  23.00  25.47   622 1.01
-## sigma  85.70    0.55 16.23  61.47  74.32  83.42  93.80 126.71   874 1.01
-## lp__  -93.72    0.06  1.40 -97.45 -94.40 -93.38 -92.64 -92.13   642 1.00
+## b      21.87    0.07  1.72  18.43  20.76  21.89  23.00  25.13   694    1
+## sigma  85.13    0.53 15.70  60.14  74.45  82.93  93.48 119.94   887    1
+## lp__  -93.68    0.05  1.34 -97.05 -94.29 -93.39 -92.70 -92.16   601    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Thu Jan 17 15:50:04 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:06:44 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -796,7 +1050,7 @@ fit2 &lt;- sampling(
 <li><code>thin</code>，通常只需要保持默認值 1。和WinBUGS, JAGS相比Stan算法採集的事後樣本自相關比較低。</li>
 </ul>
 </div>
-<div id="step-6-" class="section level2">
+<div id="step-6-並行平行計算的設定" class="section level2">
 <h2>Step 6, 並行（平行）計算的設定</h2>
 <p>如果你寫出來的貝葉斯模型需要很長時間的計算和收斂，可以充分利用你的計算機的多核計算，把每條MCMC鏈單獨進行計算加速這個過程：</p>
 <pre class="r"><code>parallel::detectCores() #我的桌上型電腦有8個核可以用於平行計算</code></pre>
@@ -805,7 +1059,7 @@ fit2 &lt;- sampling(
 <pre class="r"><code>rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())</code></pre>
 </div>
-<div id="step-7-" class="section level2">
+<div id="step-7-計算貝葉斯可信區間和貝葉斯預測區間" class="section level2">
 <h2>Step 7, 計算貝葉斯可信區間和貝葉斯預測區間</h2>
 <p>這一步就又回到一開始提出的研究問題上來，我們來計算基本年收的貝葉斯可信區間和貝葉斯預測區間。</p>
 <pre class="r"><code>ms &lt;- rstan::extract(fit)
@@ -816,13 +1070,13 @@ quantile(ms$b, probs = c(0.025, 0.975))</code></pre>
 <pre class="r"><code>d_mcmc &lt;- data.frame(a = ms$a, b = ms$b, sigma = ms$sigma)
 
 head(d_mcmc)</code></pre>
-<pre><code>##            a        b    sigma
-## 1  -35.53766 20.67385 82.67516
-## 2 -163.53803 22.48624 62.91622
-## 3  -60.86149 20.44636 70.66507
-## 4 -134.79928 22.74275 63.11801
-## 5 -159.15523 22.39544 63.89505
-## 6 -196.94649 24.17285 72.84033</code></pre>
+<pre><code>##             a        b    sigma
+## 1 -188.336995 23.54553 78.05735
+## 2 -158.530408 22.41580 79.71338
+## 3 -208.500067 24.04350 92.61271
+## 4 -138.796486 22.10719 66.83120
+## 5   -5.871562 19.36954 75.66852
+## 6  -55.023869 20.74697 66.57393</code></pre>
 <pre class="r"><code>p1 &lt;- ggplot(d_mcmc, aes(x = a, y = b)) + 
  geom_point(shape = 1, size = 4)
 
@@ -847,13 +1101,13 @@ y50_base &lt;- ms$a + ms$b*50
 y50 &lt;- rnorm(n = N_mcmc, mean = y50_base, sd = ms$sigma)
 d_mcmc &lt;- data.frame(a = ms$a, b = ms$b, sigma = ms$sigma, y50_base, y50)
 head(d_mcmc)</code></pre>
-<pre><code>##            a        b    sigma  y50_base       y50
-## 1  -35.53766 20.67385 82.67516  998.1549  985.4279
-## 2 -163.53803 22.48624 62.91622  960.7742 1033.5019
-## 3  -60.86149 20.44636 70.66507  961.4563  981.6609
-## 4 -134.79928 22.74275 63.11801 1002.3380 1003.7707
-## 5 -159.15523 22.39544 63.89505  960.6167  999.0094
-## 6 -196.94649 24.17285 72.84033 1011.6960 1110.6892</code></pre>
+<pre><code>##             a        b    sigma y50_base       y50
+## 1 -188.336995 23.54553 78.05735 988.9397  911.2037
+## 2 -158.530408 22.41580 79.71338 962.2597 1015.4449
+## 3 -208.500067 24.04350 92.61271 993.6750 1043.2207
+## 4 -138.796486 22.10719 66.83120 966.5631  935.2792
+## 5   -5.871562 19.36954 75.66852 962.6053  890.3167
+## 6  -55.023869 20.74697 66.57393 982.3246 1014.2237</code></pre>
 <pre class="r"><code># the following codes are also available from the author&#39;s page:
 # https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap04/fig4-8.R
 # library(ggplot2)
@@ -906,7 +1160,7 @@ Figure 9: MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（
 </div>
 <pre class="r"><code># ggsave(file=&#39;output/fig4-8-right.png&#39;, plot=p, dpi=300, w=4, h=3)</code></pre>
 </div>
-<div class="section level2">
+<div id="練習題" class="section level2">
 <h2>練習題</h2>
 <p>用模擬數據來嘗試進行貝葉斯t檢驗</p>
 <pre class="r"><code>set.seed(123)
@@ -977,22 +1231,16 @@ model {
 }
 </code></pre>
 <p>R代碼如下：</p>
-<pre class="r"><code>library(rstan)</code></pre>
-<pre><code>## Loading required package: StanHeaders</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## rstan (Version 2.19.2, GitRev: 2e1f913d3ca3)</code></pre>
-<pre><code>## For execution on a local, multicore CPU with excess RAM we recommend calling
-## options(mc.cores = parallel::detectCores()).
-## To avoid recompilation of unchanged Stan programs, we recommend calling
-## rstan_options(auto_write = TRUE)</code></pre>
-<pre class="r"><code>data &lt;- list(N1=N1, N2=N2, Y1=Y1, Y2=Y2)
-exe13 &lt;- stan_model(file = &quot;stanfiles/ex3.stan&quot;)
-fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
+<pre class="r"><code>library(rstan)
+data &lt;- list(N1=N1, N2=N2, Y1=Y1, Y2=Y2)
+exe13 &lt;- stan_model(file = &quot;stanfiles/ex3.stan&quot;)</code></pre>
+<pre><code>## recompiling to avoid crashing R session</code></pre>
+<pre class="r"><code>fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 1.2e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.12 seconds.
+## Chain 1: Gradient evaluation took 9e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1009,15 +1257,15 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.028607 seconds (Warm-up)
-## Chain 1:                0.054547 seconds (Sampling)
-## Chain 1:                0.083154 seconds (Total)
+## Chain 1:  Elapsed Time: 0.021914 seconds (Warm-up)
+## Chain 1:                0.017258 seconds (Sampling)
+## Chain 1:                0.039172 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 5e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1034,15 +1282,15 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.031224 seconds (Warm-up)
-## Chain 2:                0.028645 seconds (Sampling)
-## Chain 2:                0.059869 seconds (Total)
+## Chain 2:  Elapsed Time: 0.024198 seconds (Warm-up)
+## Chain 2:                0.058766 seconds (Sampling)
+## Chain 2:                0.082964 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 3e-06 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1059,15 +1307,15 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.029029 seconds (Warm-up)
-## Chain 3:                0.022823 seconds (Sampling)
-## Chain 3:                0.051852 seconds (Total)
+## Chain 3:  Elapsed Time: 0.021824 seconds (Warm-up)
+## Chain 3:                0.020478 seconds (Sampling)
+## Chain 3:                0.042302 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex3&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 4e-06 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 4: Gradient evaluation took 5e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1084,9 +1332,9 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.028439 seconds (Warm-up)
-## Chain 4:                0.023076 seconds (Sampling)
-## Chain 4:                0.051515 seconds (Total)
+## Chain 4:  Elapsed Time: 0.037682 seconds (Warm-up)
+## Chain 4:                0.021954 seconds (Sampling)
+## Chain 4:                0.059636 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: ex3.
@@ -1094,12 +1342,12 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##         mean se_mean   sd    2.5%    25%    50%    75%  97.5% n_eff Rhat
-## mu1    -0.24    0.01 0.80   -1.83  -0.77  -0.23   0.29   1.34  3539    1
-## mu2     1.62    0.02 1.02   -0.38   0.95   1.63   2.28   3.61  3707    1
-## sigma   4.48    0.01 0.47    3.67   4.16   4.45   4.76   5.53  3401    1
-## lp__  -97.75    0.03 1.26 -101.02 -98.31 -97.41 -96.82 -96.32  1744    1
+## mu1    -0.24    0.01 0.83   -1.90  -0.79  -0.23   0.32   1.36  3550    1
+## mu2     1.62    0.02 1.00   -0.29   0.93   1.62   2.28   3.62  3606    1
+## sigma   4.49    0.01 0.46    3.69   4.17   4.44   4.77   5.52  3499    1
+## lp__  -97.74    0.03 1.27 -100.95 -98.33 -97.40 -96.83 -96.33  1896    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Fri Jul 12 00:33:36 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:27:48 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -1109,7 +1357,7 @@ fit &lt;- sampling(exe13, data=data, seed=1234)</code></pre>
 <pre class="r"><code>ms &lt;- extract(fit)
 prob &lt;- mean(ms$mu1 &lt; ms$mu2)  #=&gt; 0.932
 prob</code></pre>
-<pre><code>## [1] 0.92425</code></pre>
+<pre><code>## [1] 0.932</code></pre>
 <p>所以可以認爲地一組均值，小於第二組均值的事後概率是93.2%</p>
 <ol start="5" style="list-style-type: decimal">
 <li>如果不能認爲兩組的方差相等的話，模型又該改成什麼樣子？</li>
@@ -1142,14 +1390,14 @@ model {
 <p>下面的代碼相當於實施Welch的t檢驗：</p>
 <pre class="r"><code>library(rstan)
 data &lt;- list(N1=N1, N2=N2, Y1=Y1, Y2=Y2)
-exe15 &lt;- stan_model(file = &quot;stanfiles/ex5.stan&quot;)
-
-fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
+exe15 &lt;- stan_model(file = &quot;stanfiles/ex5.stan&quot;)</code></pre>
+<pre><code>## recompiling to avoid crashing R session</code></pre>
+<pre class="r"><code>fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 1.4e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.14 seconds.
+## Chain 1: Gradient evaluation took 9e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1166,15 +1414,15 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.033263 seconds (Warm-up)
-## Chain 1:                0.028866 seconds (Sampling)
-## Chain 1:                0.062129 seconds (Total)
+## Chain 1:  Elapsed Time: 0.023394 seconds (Warm-up)
+## Chain 1:                0.028188 seconds (Sampling)
+## Chain 1:                0.051582 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 5e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 2: Gradient evaluation took 6e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1191,15 +1439,15 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.036074 seconds (Warm-up)
-## Chain 2:                0.105409 seconds (Sampling)
-## Chain 2:                0.141483 seconds (Total)
+## Chain 2:  Elapsed Time: 0.032678 seconds (Warm-up)
+## Chain 2:                0.037585 seconds (Sampling)
+## Chain 2:                0.070263 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 5e-06 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1216,15 +1464,15 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.034937 seconds (Warm-up)
-## Chain 3:                0.03105 seconds (Sampling)
-## Chain 3:                0.065987 seconds (Total)
+## Chain 3:  Elapsed Time: 0.027502 seconds (Warm-up)
+## Chain 3:                0.019927 seconds (Sampling)
+## Chain 3:                0.047429 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;ex5&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 5e-06 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 4: Gradient evaluation took 4e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1241,9 +1489,9 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.037299 seconds (Warm-up)
-## Chain 4:                0.033115 seconds (Sampling)
-## Chain 4:                0.070414 seconds (Total)
+## Chain 4:  Elapsed Time: 0.023821 seconds (Warm-up)
+## Chain 4:                0.019475 seconds (Sampling)
+## Chain 4:                0.043296 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: ex5.
@@ -1251,149 +1499,453 @@ fit &lt;- sampling(exe15, data=data, seed=1234)</code></pre>
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##          mean se_mean   sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
-## mu1     -0.25    0.02 0.97  -2.15  -0.89  -0.24   0.39   1.71  3914    1
-## mu2      1.64    0.01 0.80   0.11   1.12   1.64   2.18   3.25  4249    1
-## sigma1   5.12    0.01 0.69   3.99   4.64   5.03   5.54   6.70  3525    1
-## sigma2   3.64    0.01 0.65   2.66   3.18   3.54   3.98   5.16  3837    1
-## lp__   -95.32    0.04 1.47 -98.99 -96.03 -94.97 -94.25 -93.51  1603    1
+## mu1     -0.24    0.02 0.93  -2.07  -0.87  -0.23   0.39   1.62  3671    1
+## mu2      1.64    0.01 0.85  -0.06   1.09   1.63   2.19   3.33  3657    1
+## sigma1   5.12    0.01 0.69   3.98   4.63   5.04   5.53   6.68  3808    1
+## sigma2   3.63    0.01 0.65   2.63   3.16   3.54   3.99   5.15  3226    1
+## lp__   -95.37    0.03 1.44 -98.86 -96.13 -95.04 -94.28 -93.52  1732    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Fri Jul 12 00:34:12 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:28:31 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
-<pre class="r"><code>ms &lt;- extract(fit)
+<pre class="r"><code>ms &lt;- rstan::extract(fit)
 prob &lt;- mean(ms$mu1 &lt; ms$mu2)  #=&gt; 0.93725
 prob</code></pre>
-<pre><code>## [1] 0.9365</code></pre>
+<pre><code>## [1] 0.93725</code></pre>
 </div>
 
-      </div>
+    </div>
 
-      
+    
+
+
+
 
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/bayesian">Bayesian</a>
+  <a class="badge badge-light" href="/tags/bayesian/">Bayesian</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/medical-statistics">Medical Statistics</a>
+  <a class="badge badge-light" href="/tags/medical-statistics/">Medical Statistics</a>
   
 </div>
 
 
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://wangcc.me/post/simple-linear-regression-using-rstan/&amp;text=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://wangcc.me/post/simple-linear-regression-using-rstan/&amp;t=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29&amp;body=https://wangcc.me/post/simple-linear-regression-using-rstan/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://wangcc.me/post/simple-linear-regression-using-rstan/&amp;title=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29%20https://wangcc.me/post/simple-linear-regression-using-rstan/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://wangcc.me/post/simple-linear-regression-using-rstan/&amp;title=Simple%20linear%20regression%20using%20Rstan--Rstan%20Wonderful%20R-%282%29" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <img class="portrait mr-3" src="https://s.gravatar.com/avatar/eca3c74b8c4ce437424800c7bc74b67d?s=200')" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://wangcc.me/">Chaochen Wang 王　超辰</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">All models are wrong, but some are useful.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/outyousin" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.jp/citations?user=0J-5evgAAAAJ&amp;hl=ja" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/winterwang" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
 
     </div>
   </div>
 
-</article>
 
 
 
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
-    
-    <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
-    
-    <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
-    
-    <li><a href="/post/construction-of-a-hypothesis-test/">徒手打造一個假設檢驗</a></li>
-    
-    <li><a href="/post/approximate-log-likelihood-ratios/">二次方程近似法求對數似然比 approximate log-likelihood ratios</a></li>
-    
-  </ul>
-</div>
-
-
-
-<div class="container article-widget">
-  <nav>
-  <ul class="pager">
-    
-    <li class="previous"><a href="https://winterwang.github.io/post/2018-12-todo/"><span
-      aria-hidden="true">&larr;</span> 2018-12 todo</a></li>
-    
-
-    
-    <li class="next"><a href="https://winterwang.github.io/post/rstan-wonderful-r3/">Rstan Wonderful R-(3) <span
-      aria-hidden="true">&rarr;</span></a></li>
-    
-  </ul>
-</nav>
-
-</div>
-
-
-<div class="article-container">
-  
 <section id="comments">
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
     
     
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ccwang" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "ccwang" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
 </section>
 
 
-</div>
 
-<footer class="site-footer">
-  <div class="container">
-    <p class="powered-by">
 
-      &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
 
-      Powered by the
-      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
-      <span class="pull-right" aria-hidden="true">
-        <a href="#" id="back_to_top">
-          <span class="button_icon">
-            <i class="fa fa-chevron-up fa-2x"></i>
-          </span>
-        </a>
-      </span>
-
-    </p>
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
+      
+      <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
+      
+      <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
+      
+      <li><a href="/post/construction-of-a-hypothesis-test/">徒手打造一個假設檢驗</a></li>
+      
+      <li><a href="/post/approximate-log-likelihood-ratios/">二次方程近似法求對數似然比 approximate log-likelihood ratios</a></li>
+      
+    </ul>
   </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://ccwang.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2017-2019 Chaochen Wang | 王超辰 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
 </footer>
 
+  </div>
+  
 
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cite</h4>
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div>
-        <pre><code class="modal-body tex"></code></pre>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
-          <i class="fa fa-copy"></i> Copy
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
         </a>
-        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
-          <i class="fa fa-download"></i> Download
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
         </a>
         <div id="modal-error"></div>
       </div>
@@ -1401,51 +1953,5 @@ prob</code></pre>
   </div>
 </div>
 
-    
-
-    
-    
-    <script id="dsq-count-scr" src="//ccwang.disqus.com/count.js" async></script>
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/hugo-academic.js"></script>
-    
-
-    
-    
-      
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-      
-
-      
-
-      
-
-      <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
-    
-    
-
-  </body>
+</body>
 </html>
-

@@ -37,6 +37,22 @@
     </item>
     
     <item>
+      <title>Bayesian</title>
+      <link>https://wangcc.me/tags/bayesian/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Medical Statistics</title>
+      <link>https://wangcc.me/tags/medical-statistics/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/medical-statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>chrononutrition</title>
       <link>https://wangcc.me/tags/chrononutrition/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
@@ -61,18 +77,26 @@
     </item>
     
     <item>
+      <title>learning notes</title>
+      <link>https://wangcc.me/tags/learning-notes/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/learning-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>LSHTM</title>
       <link>https://wangcc.me/tags/lshtm/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/lshtm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Medical Statistics</title>
-      <link>https://wangcc.me/tags/medical-statistics/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/medical-statistics/</guid>
+      <title>R</title>
+      <link>https://wangcc.me/tags/r/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/r/</guid>
       <description></description>
     </item>
     
@@ -93,18 +117,50 @@
     </item>
     
     <item>
-      <title>learning notes</title>
-      <link>https://wangcc.me/tags/learning-notes/</link>
-      <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/learning-notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Statistics</title>
       <link>https://wangcc.me/tags/statistics/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inference</title>
+      <link>https://wangcc.me/tags/inference/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clinical Trial</title>
+      <link>https://wangcc.me/tags/clinical-trial/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/clinical-trial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>basic mathematics</title>
+      <link>https://wangcc.me/tags/basic-mathematics/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/basic-mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probability</title>
+      <link>https://wangcc.me/tags/probability/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linear algebra</title>
+      <link>https://wangcc.me/tags/linear-algebra/</link>
+      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/linear-algebra/</guid>
       <description></description>
     </item>
     
@@ -137,22 +193,6 @@
       <link>https://wangcc.me/tags/saitama/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/saitama/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>basic mathematics</title>
-      <link>https://wangcc.me/tags/basic-mathematics/</link>
-      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/basic-mathematics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linear algebra</title>
-      <link>https://wangcc.me/tags/linear-algebra/</link>
-      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/linear-algebra/</guid>
       <description></description>
     </item>
     
@@ -257,14 +297,6 @@
       <link>https://wangcc.me/tags/leaflet/</link>
       <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/leaflet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://wangcc.me/tags/r/</link>
-      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/r/</guid>
       <description></description>
     </item>
     
