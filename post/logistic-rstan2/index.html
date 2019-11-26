@@ -743,8 +743,8 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000801 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 8.01 seconds.
+## Chain 1: Gradient evaluation took 0.000882 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 8.82 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -761,15 +761,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 10.246 seconds (Warm-up)
-## Chain 1:                10.2042 seconds (Sampling)
-## Chain 1:                20.4502 seconds (Total)
+## Chain 1:  Elapsed Time: 10.175 seconds (Warm-up)
+## Chain 1:                9.91225 seconds (Sampling)
+## Chain 1:                20.0872 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 0.000482 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 4.82 seconds.
+## Chain 2: Gradient evaluation took 0.000481 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 4.81 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -786,15 +786,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 9.88978 seconds (Warm-up)
-## Chain 2:                10.6792 seconds (Sampling)
-## Chain 2:                20.569 seconds (Total)
+## Chain 2:  Elapsed Time: 9.50031 seconds (Warm-up)
+## Chain 2:                10.1304 seconds (Sampling)
+## Chain 2:                19.6307 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 0.000474 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 4.74 seconds.
+## Chain 3: Gradient evaluation took 0.000467 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 4.67 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -811,15 +811,15 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 9.92416 seconds (Warm-up)
-## Chain 3:                11.069 seconds (Sampling)
-## Chain 3:                20.9931 seconds (Total)
+## Chain 3:  Elapsed Time: 9.76009 seconds (Warm-up)
+## Chain 3:                10.4794 seconds (Sampling)
+## Chain 3:                20.2395 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;myex4&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 0.000502 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 5.02 seconds.
+## Chain 4: Gradient evaluation took 0.000714 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 7.14 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -836,9 +836,9 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 9.75029 seconds (Warm-up)
-## Chain 4:                11.4305 seconds (Sampling)
-## Chain 4:                21.1808 seconds (Total)
+## Chain 4:  Elapsed Time: 9.27456 seconds (Warm-up)
+## Chain 4:                11.3889 seconds (Sampling)
+## Chain 4:                20.6635 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit1</code></pre>
 <pre><code>## Inference for Stan model: myex4.
@@ -5660,7 +5660,7 @@ fit1 &lt;- stan(file=&#39;stanfiles/myex4.stan&#39;, data=data, pars=c(&#39;b&#3
 ## q[2396]  3086    1
 ## lp__     1673    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Nov 26 15:32:51 2019.
+## Samples were drawn using NUTS(diag_e) at Tue Nov 26 18:02:43 2019.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -6007,15 +6007,13 @@ Figure 5: 把計算獲得的事後概率的中央值作爲每名學生是否出�
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/logistic-rstan/">Rstan Wonderful R-(4)</a></li>
+      <li><a href="/post/summer-project-schedule/">Summer Project Schedule</a></li>
       
-      <li><a href="/post/rstan-wonderful-r3/">Rstan Wonderful R-(3)</a></li>
+      <li><a href="/post/inverse-matrix/">「統計解析のための線形代数」復習筆記22</a></li>
       
-      <li><a href="/post/simple-linear-regression-using-rstan/">Simple linear regression using Rstan--Rstan Wonderful R-(2)</a></li>
+      <li><a href="/post/unconditional/">無條件 offer, CAS, 和宿舍抽籤結果</a></li>
       
-      <li><a href="/post/rstan-wonderful-r/">Rstan Wonderful R-(1)</a></li>
-      
-      <li><a href="/post/words-notes-and-sentences-that-may-be-useful/">Words, notes, and sentences that may be useful </a></li>
+      <li><a href="/post/2017-03-16/">留學筆記</a></li>
       
     </ul>
   </div>

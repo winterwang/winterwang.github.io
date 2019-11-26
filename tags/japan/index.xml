@@ -18,17 +18,6 @@
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/home-before-completion/</guid>
       <description>&lt;p&gt;日本蓋房子的速度還是很快的。&lt;/p&gt;
-
-&lt;p&gt;我這一轉眼馬上就要搬新家了，結果發現自己太多都還沒有準備。&lt;/p&gt;
-
-&lt;p&gt;這篇日誌本來上個月12日就想更新上傳的，結果遇到去愛爾蘭發表，參加日本疫学会若手の会，等等都被我用來當作自己懶惰拖延更新的藉口。&lt;/p&gt;
-
-&lt;p&gt;其實最大的障礙是，&lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34;&gt;Blogdown&lt;/a&gt; 上最流行的學術主題 &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt; 經歷了數次重大更新之後，增加了夜間和日間模式的主題樣式，讓人十分心動，所以更新主題搬家花去了太多時間（因爲我對一些CSS文件和進行了修改然而我自己又不完全記得具體改了哪些，所以需要一個個再在更新後的主題中加上去）。最想吐嘈的是新的學術主題 &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;和之前的版本在整體結構，和許多設計上雖然做了很多改進，但是某些語言也進行了本質的修改，例如在個人主頁中介紹自己研究項目 &lt;code&gt;project&lt;/code&gt; 的部分的開頭，原先都是用下面的加號的形式包括進來各種選項。但是現在最新的主題中不再支持過去的格式轉而要求全部以標準 Rmarkdown 的開頭部分一樣的形式用三個減號 &lt;code&gt;---&lt;/code&gt; 來包含全部的選項。類似這樣的巨大修改，但是又需要對每個文檔進行調整的部分實在是多的數不勝數。將來更新的學術主題可能只會愈來越複雜繁瑣，年紀大了實在是經不起這麼大的折騰。但是欣慰的是如今默認增加了一個 &lt;code&gt;update_academic.sh&lt;/code&gt; 文件，下次更新或許能用上 (T_T)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-
-+++
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
