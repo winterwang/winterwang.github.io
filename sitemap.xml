@@ -443,12 +443,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/conference/</loc>
+    <loc>https://wangcc.me/categories/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/conference/</loc>
+    <loc>https://wangcc.me/tags/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -699,7 +699,12 @@
   
   <url>
     <loc>https://wangcc.me/tags/linear-algebra/</loc>
-    <lastmod>2017-02-08T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-10/</loc>
+    <lastmod>2017-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1188,12 +1193,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/test/</loc>
+    <loc>https://wangcc.me/categories/test/</loc>
     <lastmod>2016-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/test/</loc>
+    <loc>https://wangcc.me/tags/test/</loc>
     <lastmod>2016-05-27T00:00:00+00:00</lastmod>
   </url>
   
