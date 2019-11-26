@@ -443,12 +443,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/conference/</loc>
+    <loc>https://wangcc.me/tags/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/conference/</loc>
+    <loc>https://wangcc.me/categories/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -485,6 +485,21 @@
   <url>
     <loc>https://wangcc.me/post/unconditional/</loc>
     <lastmod>2017-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/linear-algebra/</loc>
+    <lastmod>2017-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-07-07/</loc>
+    <lastmod>2017-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-07-06/</loc>
+    <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -628,8 +643,18 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/post/2017-04-02/</loc>
+    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/post/2017-03-16/</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-03-15/</loc>
+    <lastmod>2017-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -640,6 +665,21 @@
   <url>
     <loc>https://wangcc.me/post/dictation2017-03-13/</loc>
     <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-03-13/</loc>
+    <lastmod>2017-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-03-11/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-03-08/</loc>
+    <lastmod>2017-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -698,8 +738,53 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/linear-algebra/</loc>
-    <lastmod>2017-02-10T00:00:00+00:00</lastmod>
+    <loc>https://wangcc.me/post/2017-03-01/</loc>
+    <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-28/</loc>
+    <lastmod>2017-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-22/</loc>
+    <lastmod>2017-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-21/</loc>
+    <lastmod>2017-02-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-19/</loc>
+    <lastmod>2017-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-18/</loc>
+    <lastmod>2017-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-17/</loc>
+    <lastmod>2017-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-16/</loc>
+    <lastmod>2017-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-15/</loc>
+    <lastmod>2017-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/2017-02-12-t/</loc>
+    <lastmod>2017-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
