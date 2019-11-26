@@ -1,267 +1,232 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linear algebra on Be ambitious</title>
-    <link>https://winterwang.github.io/tags/linear-algebra/</link>
-    <description>Recent content in linear algebra on Be ambitious</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017-2019 Chaochen Wang | 王超辰</copyright>
-    <lastBuildDate>Sat, 30 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://winterwang.github.io/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Matrix Revisions</title>
-      <link>https://winterwang.github.io/post/matrix-revision/</link>
-      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/matrix-revision/</guid>
-      <description>統計學中常用的簡單數學規則 (2)</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 28</title>
-      <link>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</link>
-      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/plus-equations-and-matrix-multiplication/</guid>
-      <description>第5章　行列式 determinant P97-99 加法算式與矩陣的積</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 27</title>
-      <link>https://winterwang.github.io/post/homogeneouse-linear-equations/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/homogeneouse-linear-equations/</guid>
-      <description>第5章　行列式 determinant P94-96 同次連立一次方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 26</title>
-      <link>https://winterwang.github.io/post/elementary-row-operations/</link>
-      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/elementary-row-operations/</guid>
-      <description>第5章　行列式 determinant P92-93 行變形法解連立方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://winterwang.github.io/post/cramers-formula/</link>
-      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/cramers-formula/</guid>
-      <description>第5章　行列式 determinant P91-92 克萊姆法則法解連立方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>https://winterwang.github.io/post/inverse-matrix-method/</link>
-      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/inverse-matrix-method/</guid>
-      <description>第5章　行列式 determinant P90-91 逆矩陣法解連立一次方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記 23</title>
-      <link>https://winterwang.github.io/post/linear-simultaneous-equation/</link>
-      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/linear-simultaneous-equation/</guid>
-      <description>第5章　行列式 determinant P89-90 連立一次方程式</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>https://winterwang.github.io/post/2017-07-07/</link>
-      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-07-07/</guid>
-      <description>第5章　行列式 determinant P85-87 行的基本變形</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記20</title>
-      <link>https://winterwang.github.io/post/2017-07-06/</link>
-      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-07-06/</guid>
-      <description>第5章　行列式 determinant P84-85 逆矩陣</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://winterwang.github.io/post/2017-04-02/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-04-02/</guid>
-      <description>第5章　行列式 determinant P80-83</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>https://winterwang.github.io/post/2017-03-15/</link>
-      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-15/</guid>
-      <description>第5章　行列式 determinant P73-79</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>https://winterwang.github.io/post/2017-03-13/</link>
-      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-13/</guid>
-      <description>第4章　矩陣 matrix P70-72</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記16</title>
-      <link>https://winterwang.github.io/post/2017-03-11/</link>
-      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-11/</guid>
-      <description>第4章　矩陣 matrix P68-69</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記15</title>
-      <link>https://winterwang.github.io/post/2017-03-08/</link>
-      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-08/</guid>
-      <description>第4章　矩陣 matrix P63-68</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>https://winterwang.github.io/post/2017-03-01/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-03-01/</guid>
-      <description>第4章　矩陣 matrix P60</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記13</title>
-      <link>https://winterwang.github.io/post/2017-02-28/</link>
-      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-28/</guid>
-      <description>第4章　矩陣 matrix P57-59</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記12</title>
-      <link>https://winterwang.github.io/post/2017-02-22/</link>
-      <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-22/</guid>
-      <description>第4章　矩陣 matrix P53-56</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記11</title>
-      <link>https://winterwang.github.io/post/2017-02-21/</link>
-      <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-21/</guid>
-      <description>第4章　矩陣 matrix P46-52</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記10</title>
-      <link>https://winterwang.github.io/post/2017-02-19/</link>
-      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-19/</guid>
-      <description>第3章　向量 vector P39-45</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記9</title>
-      <link>https://winterwang.github.io/post/2017-02-18/</link>
-      <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-18/</guid>
-      <description>第3章　向量 vector P34-38</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記8</title>
-      <link>https://winterwang.github.io/post/2017-02-17/</link>
-      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-17/</guid>
-      <description>第3章　向量 vector P31-34</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記7</title>
-      <link>https://winterwang.github.io/post/2017-02-16/</link>
-      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-16/</guid>
-      <description>第2章　統計の基礎 P26-30</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記6</title>
-      <link>https://winterwang.github.io/post/2017-02-15/</link>
-      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-15/</guid>
-      <description>第2章　統計の基礎 P22-25</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記5</title>
-      <link>https://winterwang.github.io/post/2017-02-13/</link>
-      <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-13/</guid>
-      <description>第2章　統計の基礎 P19-22</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記4</title>
-      <link>https://winterwang.github.io/post/2017-02-12-t/</link>
-      <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-12-t/</guid>
-      <description>第1章　数学の基礎 P15-17</description>
-    </item>
-    
-    <item>
-      <title>「統計解析のための線形代数」復習筆記3</title>
-      <link>https://winterwang.github.io/post/2017-02-10/</link>
-      <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-10/</guid>
-      <description>第1章　数学の基礎 P11-14</description>
-    </item>
+    <title>linear algebra | Be Ambitious</title>
+    <link>https://wangcc.me/tags/linear-algebra/</link>
+      <atom:link href="https://wangcc.me/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <description>linear algebra</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 08 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>linear algebra</title>
+      <link>https://wangcc.me/tags/linear-algebra/</link>
+    </image>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記2</title>
-      <link>https://winterwang.github.io/post/2017-02-08/</link>
+      <link>https://wangcc.me/post/2017-02-08/</link>
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-08/</guid>
-      <description>第1章　数学の基礎 P6-10</description>
+      <guid>https://wangcc.me/post/2017-02-08/</guid>
+      <description>
+
+
+&lt;div id=&#34;偏微分&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;偏微分&lt;/h2&gt;
+&lt;div id=&#34;個變量的函數的微分&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;1個變量的函數的微分&lt;/h3&gt;
+&lt;div id=&#34;公式&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;公式：&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(f(a)\)&lt;/span&gt; 關於變量 &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; 的微分，被定義爲： &lt;span class=&#34;math inline&#34;&gt;\(\lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}\)&lt;/span&gt; , 寫作 &lt;span class=&#34;math inline&#34;&gt;\(\frac{df}{da}\)&lt;/span&gt;, 具有下列性質：
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(f(a) = a^n\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(\frac{df}{da} = na^{n-1}\)&lt;/span&gt; &lt;strong&gt;重要&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{d}{da}\left\{kf(a)+lg(a)\right\}=k\frac{df}{da}+l\frac{dg}{da}\)&lt;/span&gt; &lt;strong&gt;(&lt;span class=&#34;math inline&#34;&gt;\(k,l\)&lt;/span&gt; 是常數)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{d}{da}\left\{f(a) \cdot g(a)\right\}=\frac{df}{da}g(a)+f{a}\frac{dg}{da}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\frac{d}{da}\left\{\frac{f(a)}{g(a)}\right\}=\frac{\frac{df}{da}g(a)-f(a)\frac{dg}{da}}{\left\{g(a)\right\}^2}\)&lt;/span&gt;, 特別的有，&lt;span class=&#34;math inline&#34;&gt;\(\frac{d}{da}\left\{\frac{1}{g(a)}\right\}=-\frac{\frac{dg}{da}}{\left\{g(a)\right\}^2}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(y=f(b), b=g(a)\)&lt;/span&gt; 時， &lt;span class=&#34;math inline&#34;&gt;\(\frac{dy}{da}=\frac{dy}{db}\frac{db}{da}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2次（2階）微分 【二階導數】:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(f(a)\)&lt;/span&gt; 關於常數 &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; 的微分 &lt;span class=&#34;math inline&#34;&gt;\(\frac{df}{da}\)&lt;/span&gt; 的二次微分表示爲： &lt;span class=&#34;math inline&#34;&gt;\(\frac{d^2f}{da^2}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;多個變量的函數的微分&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;多個變量的函數的微分&lt;/h3&gt;
+&lt;div id=&#34;偏微分-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;偏微分&lt;/h4&gt;
+&lt;p&gt;包含了 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個獨立變量 &lt;span class=&#34;math inline&#34;&gt;\(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n\)&lt;/span&gt;的函數，即多變量函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1, a_2,a_3,\cdots,a_i,\cdots,a_n)\)&lt;/span&gt; 關於 &lt;span class=&#34;math inline&#34;&gt;\(a_i (i=1,2,\cdots,n)\)&lt;/span&gt; 的偏微分 &lt;em&gt;(partial differentiation)&lt;/em&gt; 的定義是，把 &lt;span class=&#34;math inline&#34;&gt;\(a_i\)&lt;/span&gt; 以外的獨立變量當做常數（定数），將函數 &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; 對變量 &lt;span class=&#34;math inline&#34;&gt;\(a_i\)&lt;/span&gt; 求微分，寫作： &lt;span class=&#34;math inline&#34;&gt;\(\frac{\partial F}{\partial a_i}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;以下爲了便於說明，以三個變量爲例。&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)=a_1+a_2+a_3=\sum\limits_{i=1}^3a_i\)&lt;/span&gt; 對於三個獨立變量分別求偏微分：
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial F}{\partial a_1}=1，\frac{\partial F}{\partial a_2}=1， \frac{\partial F}{\partial a_3}=1\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)=a_1b_1+a_2b_2+a_3b_3=\sum\limits_{i=1}^3a_ib_i\)&lt;/span&gt; 對於三個獨立變量分別求偏微分：
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial F}{\partial a_1}=b_1，\frac{\partial F}{\partial a_2}=b_2， \frac{\partial F}{\partial a_3}=b_3\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)=a_1^2+a_2^2+a_3^2=a_1\cdot a_1+a_2\cdot a_2+a_3\cdot a_3\\=\sum\limits_{i=1}^3a_i^2=\sum\limits_{i=1}^3a_i\cdot a_i \;對三個變量分別求偏微分：\)&lt;/span&gt;　
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial F}{\partial a_1}=2a_1，\frac{\partial F}{\partial a_2}=2a_2， \frac{\partial F}{\partial a_3}=2a_3\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)=\lambda_1a_1^2+\lambda_2a_2^2+\lambda_3a_3^2=a_1\cdot\lambda_1\cdot a_1+a_2\cdot\lambda_2\cdot a_2+a_3\cdot\lambda_3\cdot a_3\\=\sum\limits_{i=1}^3\lambda_ia_i^2=\sum\limits_{i=1}^3a_i\cdot\lambda_i\cdot a_i \; 對三個變量分別求偏微分：\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial F}{\partial a_1}=2\lambda_1a_1，\frac{\partial F}{\partial a_2}=2\lambda_2a_2， \frac{\partial F}{\partial a_3}=2\lambda_3a_3\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,a_3)=(b_1-\lambda a_1)^2+(b_2-\lambda a_2)^2+(b_3-\lambda a_3)^2\\=\sum\limits_{i=1}^3(b_i-\lambda a_i)^2=\sum\limits_{i=1}^3(b_i-\lambda a_i)(b_i-\lambda a_i)\;對三個變量求偏微分：\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial F}{\partial a_1}=-2\lambda(b_1-\lambda a_1)，\frac{\partial F}{\partial a_2}=-2\lambda(b_2-\lambda a_2)， \frac{\partial F}{\partial a_3}=-2\lambda(b_3-\lambda a_3)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F = a_{11}x_1y_1 + a_{12}x_1y_2 + a_{13}x_1y_3 \\ \;\;\;\;\;\;+a_{21}x_2y_1+a_{22}x_2y_2+a_{23}x_2y_3\\ \;\;\;\;\;\;+a_{31}x_3y_1+a_{32}x_3y_2+a_{33}x_3y_3\\ \;\;\;=\sum\limits_{i=1}^3\sum\limits_{i=1}^3a_{ij}x_iy_j\;對三個變量求偏微分：\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(F(x_1,x_2,x_3)\)&lt;/span&gt;, 即視爲 &lt;span class=&#34;math inline&#34;&gt;\(x_1,x_2,x_3\)&lt;/span&gt; 的函數的時候：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+ \frac{\partial F}{\partial x_1}=a_{11}y_1+a_{12}y_2+a_{13}y_3=\sum_{j=1}^3a_{1j}y_j \\
+ \frac{\partial F}{\partial x_2}=a_{21}y_1+a_{22}y_2+a_{23}y_3=\sum_{j=1}^3a_{2j}y_j \\
+ \frac{\partial F}{\partial x_3}=a_{31}y_1+a_{32}y_2+a_{33}y_3=\sum_{j=1}^3a_{3j}y_j \\
+ 將上面三個式子總結一下就是: \\
+ \frac{\partial F}{\partial x_i}=\sum_{j=1}^3a_{ij}y_j (i=1,2,3)
+ \]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(F(y_1,y_2,y_3)\)&lt;/span&gt;, 即視爲 &lt;span class=&#34;math inline&#34;&gt;\(y_1,y_2,y_3\)&lt;/span&gt; 的函數的時候：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+ \frac{\partial F}{\partial y_1}=a_{11}x_1+a_{21}x_2+a_{31}x_3=\sum_{i=1}^3a_{i1}x_i \\
+ \frac{\partial F}{\partial y_2}=a_{12}x_1+a_{22}x_2+a_{32}x_3=\sum_{i=1}^3a_{i2}x_i \\
+ \frac{\partial F}{\partial y_3}=a_{13}x_1+a_{32}x_2+a_{33}x_3=\sum_{i=1}^3a_{i3}x_i \\
+ 將上面三個式子總結一下就是: \\
+ \frac{\partial F}{\partial x_i}=\sum_{i=1}^3a_{ij}x_i (j=1,2,3)
+ \]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;=a_{11}x_1^2+2a_{12}x_1x_2+2a_{13}x_1x_3+a_{22}x_2^2+2a_{23}x_2x_3+a_{33}x_3^2\\ \;\;\;\;\;\;\;\;\;\;\;\;=\sum\limits_{i=1}^3a_{ii}x_i^2+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&amp;lt;j}a_{ij}x_ix_j\\ \;\;\;\;\;\;\;\;\;\;\;\;==\sum\limits_{i=1}^3x_ia_{ii}x_i+2\mathop{\sum\limits^3\sum\limits^3}\limits_{i&amp;lt;j}x_ia_{ij}x_j\;對三個變量求偏微分：\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial F}{\partial x_1}=2(a_{11}x_1+a_{12}x_2+a_{13}x_3)\\
+\frac{\partial F}{\partial x_2}=2(a_{12}x_1+a_{22}x_2+a_{23}x_3)\\
+\frac{\partial F}{\partial x_3}=2(a_{13}x_1+a_{23}x_2+a_{33}x_3)\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(x_1,x_2,x_3)=a_{11}x_1x_1+a_{12}x_1x_2+a_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{12}x_2x_1+a_{12}x_2x_2+a_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+a_{13}x_3x_1+a_{23}x_3x_2+a_{33}x_3x_3\\ G(x_1,x_2,x_3)=b_{11}x_1x_1+b_{12}x_1x_2+b_{13}x_1x_3 \\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{12}x_2x_1+b_{12}x_2x_2+b_{23}x_2x_3\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;+b_{13}x_3x_1+b_{23}x_3x_2+b_{33}x_3x_3\\\;對三個變量求偏微分：\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\frac{\partial}{\partial x_1}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_1}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_1}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{11}x_1+a_{12}x_2+a_{13}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{11}x_1+b_{12}x_2+b_{13}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\\
+\frac{\partial}{\partial x_2}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_2}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_2}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{12}x_1+a_{22}x_2+a_{23}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{12}x_1+b_{22}x_2+b_{23}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\frac{\partial}{\partial x_3}(\frac{F}{G})=\frac{\frac{\partial F}{\partial x_3}G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\frac{\partial G}{\partial x_3}}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+=2\cdot \frac{(a_{13}x_1+a_{23}x_2+a_{33}x_3)\cdot G(x_1,x_2,x_3)-F(x_1,x_2,x_3)\cdot (b_{13}x_1+b_{23}x_2+b_{33}x_3)}{\left\{G(x_1,x_2,x_3)\right\}^2}\\
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;次2階偏微分-二階導數&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;2次（2階）偏微分 【二階導數】:&lt;/h4&gt;
+&lt;p&gt;函數 &lt;span class=&#34;math inline&#34;&gt;\(F(a_1,a_2,\cdots,a_n)\)&lt;/span&gt; 對 &lt;span class=&#34;math inline&#34;&gt;\(a_i\)&lt;/span&gt; 取偏微分 &lt;span class=&#34;math inline&#34;&gt;\(\frac{\partial F}{\partial a_i}\)&lt;/span&gt; 時，記作 &lt;span class=&#34;math inline&#34;&gt;\(\frac{\partial^2 F}{\partial a_i^2}\)&lt;/span&gt; ; 取變量 &lt;span class=&#34;math inline&#34;&gt;\(a_j\)&lt;/span&gt; 的偏微分時記作 &lt;span class=&#34;math inline&#34;&gt;\(\frac{\partial^2 F}{\partial a_i\partial a_j}\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\frac{\partial^2 F}{\partial a_j\partial a_i}\)&lt;/span&gt;。 這些都被稱爲是函數 &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; 的2次（2階）偏微分。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>「統計解析のための線形代数」復習筆記1</title>
-      <link>https://winterwang.github.io/post/2017-02-06/</link>
+      <link>https://wangcc.me/post/2017-02-06/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://winterwang.github.io/post/2017-02-06/</guid>
-      <description>第1章　数学の基礎 P1-5</description>
+      <guid>https://wangcc.me/post/2017-02-06/</guid>
+      <description>
+
+
+&lt;div id=&#34;和記號sum&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;和記號&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt; 的性質 (1)
+&lt;strong&gt;下標(添字)&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(x_1 + x_2 + x_3 + \dots + x_n\)&lt;/span&gt; 記作如下:&lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^{n}x_i\]&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^{n}x_i\)&lt;/span&gt; 中的&lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; 稱爲&lt;code&gt;dummy index&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以簡略寫爲：&lt;span class=&#34;math inline&#34;&gt;\(\sum x\)&lt;/span&gt; 或者 &lt;span class=&#34;math inline&#34;&gt;\(\sum_1 x_i\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\sum x_i\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt; 的性質 (2)
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:1&#34;&gt;\[\begin{equation}
+\sum_{i=1}^{n}(ax_i + by_i)= a\sum_{i=1}^{n}x_i + b\sum_{i=1}^{n}y_i \tag{1}
+\end{equation}\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^{n}ax_i = a\sum_{i=1}^{n}x_i\)&lt;/span&gt; &lt;code&gt;常數(定数)可以提前&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^{n}a = na\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^{n}1 = n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^{n}(ax_i+b) = a\sum_{i=1}^{n}x_i + nb\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;公式&lt;a href=&#34;#eq:1&#34;&gt;(1)&lt;/a&gt;的應用:
+&lt;span class=&#34;math display&#34;&gt;\[
+  \begin{aligned}
+  \sum_{i=1}^{n}(ax_i -by_i)^2 &amp;amp;= \sum_{i=1}^{n}(a^2x_i^2 - 2abx_iy_i + b^2y_i^2) \\
+   &amp;amp;= \sum_{i=1}^{n}a^2x_i^2 -\sum_{i=1}^{n}2abx_iy_i + \sum_{i=1}^{n}b^2y_i^2 \\
+   &amp;amp;= a^2\sum_{i=1}^{n}x_i^2 - 2ab\sum_{i=1}^{n}x_iy_i + b^2\sum_{i=1}^{n}y_i^2
+  \end{aligned}
+  \]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;但是，乘法或平方有如下性質，計算方差(分散)或者相關系數時需要注意：&lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^{n}x_i^2 \neq (\sum_{i=1}^{n}x_i)^2\]&lt;/span&gt; 以及 &lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^{n}x_iy_i \neq (\sum_{i=1}^{n}x_i)(\sum_{i=1}^{n}y_i)\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;自然數的冪運算之和(冪[べき]乗の和)的公式:
+&lt;span class=&#34;math display&#34;&gt;\[
+  \begin{aligned}
+  1+2+3+\dots+n &amp;amp;= \sum_{t=1}^{n}t = \frac{n(n+1)}{2}\\
+  1^2+2^2+3^2+\dots+n^2 &amp;amp;= \sum_{t=1}^{n}t^2 = \frac{n(n+1)(2n+1)}{6} \\
+  1^3+2^3+3^3+\dots+n^3 &amp;amp;= \sum_{t=1}^{n}t^3 = {\frac{n(n+1)}{2}}^2 \\
+  1^4+2^4+3^4+\dots+n^4 &amp;amp;= \sum_{t=1}^{n}t^4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}
+  \end{aligned}
+  \]&lt;/span&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    上面的公式將會應用在時間序列分析，斯皮尔曼等级相关系数(スピアマンの順位相関係数)的定義公式的推導。
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sum式子變形成普通計算式&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;式子變形成普通計算式：&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^{n}f_{ij} = f_{i1} + f_{i2} + f_{i3} + \dots + f_{in}\]&lt;/span&gt; 此式子也常寫作&lt;span class=&#34;math inline&#34;&gt;\(f_{i+}\)&lt;/span&gt;, 或者&lt;span class=&#34;math inline&#34;&gt;\(f_{i\cdot}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^{m}f_{ij} = f_{1i} + f_{2i} + f_{3i} + \dots + f_{mj}\]&lt;/span&gt; 此式子也常寫作&lt;span class=&#34;math inline&#34;&gt;\(f_{+j}\)&lt;/span&gt;, 或者&lt;span class=&#34;math inline&#34;&gt;\(f_{\cdot j}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math display&#34;&gt;\[\sum_{i=1}^{2}\sum_{j=1}^{3}x_{ij} = \sum_{i=1}^{2}(\sum_{i=j}^{3}x_{ij}) = \sum_{i=1}^{2}(x_{i1} + x_{i2} + x_{i3}) = (x_{11} + x_{12} + x_{13}) + (x_{21} + x_{22} + x_{23})\]&lt;/span&gt; 此式子也可以寫作&lt;span class=&#34;math inline&#34;&gt;\(x_{++}\)&lt;/span&gt;, 或者&lt;span class=&#34;math inline&#34;&gt;\(x_{\cdot\cdot}\)&lt;/span&gt;。另外，中間的式子如果是&lt;span class=&#34;math inline&#34;&gt;\(\sum_{j=1}^{3}(\sum_{i=1}^{2}x_{ij})\)&lt;/span&gt;也可以成立，過程如下：&lt;span class=&#34;math display&#34;&gt;\[\sum_{j=1}^{3}(\sum_{i=1}^{2}x_{ij})=\sum_{j=1}^{3}(x_{1j} + x_{2j}) = (x_{11} + x_{21}) + (x_{12} + x_{22}) + (x_{13} + x_{23})\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math display&#34;&gt;\[
+  \begin{aligned}
+  \sum_{i=1}^2\sum_{j=1}^2a_{ij}x_ix_j &amp;amp;= \sum_{i=1}^2(\sum_{j=1}^2a_{ij}x_ix_j) \\
+  &amp;amp;= \sum_{i=1}^2({\sum_{j=1}^2a_{ij}x_j)x_i} \\
+  &amp;amp;= \sum_{i=1}^2(a_{i1}x_1 + a_{i2}x_2)x_i \\
+  &amp;amp;= (a_{11}x_1 + a_{12}x_2)x_1 + (a_{21}x_1 + a_{22}x_2)x_2 \\
+  &amp;amp;= a_{11}x_1^2 + (a_{12} + a_{21})x_1x_2 + a_{22}x_2^2
+  \end{aligned}
+  \]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math display&#34;&gt;\[
+  \begin{aligned}
+  \sum_{k=1}^3\left\{(\sum_{i=1}^2b_ix_{ik})(\sum_{j=1}^2b_jx_{jk})\right\} &amp;amp;= \sum_{k=1}^3\left\{(b_1x_{1k} + b_2x_{2k})(b_1x_{1k} + b_2x_{2k})\right\} \\
+  &amp;amp;= \sum_{k=1}^3(b_1x_{1k} + b_2x_{2k})^2 \\
+  &amp;amp;= (b_1x_{11} + b_2x_{21})^2 + (b_1x_{12} + b_2x_{22})^2 + (b_1x_{13} + b_2x_{23})^2
+  \end{aligned}
+  \]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\sum\limits^3\sum\limits^3}\limits_{i&amp;lt;j}e_{ij}\)&lt;/span&gt; 會變成怎樣的式子呢？ 滿足 &lt;span class=&#34;math inline&#34;&gt;\(i&amp;lt;j (i = 1,2,3; j = 1,2,3)\)&lt;/span&gt; 條件的 &lt;span class=&#34;math inline&#34;&gt;\(i,j\)&lt;/span&gt;, 有且僅有 &lt;span class=&#34;math inline&#34;&gt;\((1,2),(1,3),(2,3)\)&lt;/span&gt;,故 &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\sum\limits^3\sum\limits^3}\limits_{i&amp;lt;j}e_{ij} = e_{12} + e_{13} + e_{23}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol start=&#34;7&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;那麼&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\sum\limits^3\sum\limits^3}\limits_{i\neq j}e_{ij}\)&lt;/span&gt;又會變成怎樣的式子呢？ 滿足 &lt;span class=&#34;math inline&#34;&gt;\(i\neq j (i = 1,2,3; j = 1,2,3)\)&lt;/span&gt; 的 &lt;span class=&#34;math inline&#34;&gt;\((i,j)\)&lt;/span&gt; 有6種組合:&lt;span class=&#34;math inline&#34;&gt;\((1,2),(2,1),(1,3),(3,1),(2,3),(3,2)\)&lt;/span&gt;, 故&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\sum\limits^3\sum\limits^3}\limits_{i\neq j}e_{ij} = e_{12} + e_{21} + e_{13} + e_{31} + e_{23} + e_{32}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;加法算式變形爲sum&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;加法算式變形爲&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;在多元變量分析(多変量解析)中，與前項相比，加法算式變形成爲&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;式子更加重要。也就是說，以前項計算爲例的話，作爲答案的計算式如果放在題幹，反向求解&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;式的過程更加常用。簡單練習一下吧：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;將計算式&lt;span class=&#34;math inline&#34;&gt;\(a_1x_1^2 + a_2x_2^2 + a_3x_3^2 + a_4x_4^2 + a_5x_5^2\)&lt;/span&gt;改寫成&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;式：
+&lt;ul&gt;
+&lt;li&gt;先寫下：&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;再寫各個單元的共通部分&lt;span class=&#34;math inline&#34;&gt;\((a,x^2)\)&lt;/span&gt;： &lt;span class=&#34;math inline&#34;&gt;\(\sum ax^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;各單元不同的僅爲下標： &lt;span class=&#34;math inline&#34;&gt;\(\sum a_ix_i^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;注意到下標的變化規律爲&lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;到&lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;之間的整數，故在&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;符號的上部寫上&lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;，下部寫上&lt;span class=&#34;math inline&#34;&gt;\(i=1\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=1}^5a_ix_i^2\)&lt;/span&gt; (答)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;將計算式&lt;span class=&#34;math inline&#34;&gt;\(f_2(x_2 - \bar{x})^2 + f_3(x_3 - \bar{x})^2 + f_4(x_4 - \bar{x})^2 + f_5(x_5 - \bar{x})^2\)&lt;/span&gt;改寫成&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;式：
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum f(x-\bar{x})^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum f_i(x_i - \bar{x})^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum\limits_{i=2}^5f_i(x_i - \bar{x})^2\)&lt;/span&gt; (答)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;提問&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;提問：&lt;/h2&gt;
+&lt;div id=&#34;我們現在了解了可以使用簡單的sum符號來表達復雜有規律的加法算式請問有沒有相應的記號來代表乘法&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;我們現在了解了可以使用簡單的&lt;span class=&#34;math inline&#34;&gt;\(\sum\)&lt;/span&gt;符號來表達復雜有規律的加法算式。請問有沒有相應的記號來代表乘法？&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;當然有用希臘字母pi的大寫pi來表示例如-x_1x_2x_3x_4x_5-prod_i15x_i-x_1x_2x_3dots-x_n-prod_i1nx_i&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;當然有。用希臘字母&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;的大寫&lt;span class=&#34;math inline&#34;&gt;\(\Pi\)&lt;/span&gt;來表示。例如： &lt;span class=&#34;math display&#34;&gt;\[x_1x_2x_3x_4x_5 = \prod_{i=1}^5x_i\]&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[x_1x_2x_3\dots x_n = \prod_{i=1}^nx_i\]&lt;/span&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;乘法記號可以證明下面的等式成立-prod_i1nx_i2-prod_i1nx_i2-logprod_i1nx_i-prod_i1nlog-x_i&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;乘法記號可以證明下面的等式成立： &lt;span class=&#34;math display&#34;&gt;\[\prod_{i=1}^nx_i^2 = (\prod_{i=1}^nx_i)^2\]&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[\log(\prod_{i=1}^nx_i) = \prod_{i=1}^n\log x_i\]&lt;/span&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>
