@@ -5,7 +5,7 @@
     <link>https://wangcc.me/categories/</link>
       <atom:link href="https://wangcc.me/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2019 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Categories</title>
@@ -15,7 +15,7 @@
     <item>
       <title>life</title>
       <link>https://wangcc.me/categories/life/</link>
-      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/life/</guid>
       <description></description>
     </item>
@@ -23,7 +23,7 @@
     <item>
       <title>thoughts</title>
       <link>https://wangcc.me/categories/thoughts/</link>
-      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/thoughts/</guid>
       <description></description>
     </item>
