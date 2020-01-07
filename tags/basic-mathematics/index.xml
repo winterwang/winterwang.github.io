@@ -272,6 +272,206 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
     </item>
     
     <item>
+      <title>Matrix Revisions</title>
+      <link>https://wangcc.me/post/matrix-revision/</link>
+      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/matrix-revision/</guid>
+      <description>
+
+
+&lt;div id=&#34;basic-definition-and-notations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Basic Definition and notations:&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;An &lt;span class=&#34;math inline&#34;&gt;\(m\times n\)&lt;/span&gt; &lt;strong&gt;matrix &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;&lt;/strong&gt; is a rectangular array of numbers with &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; rows and &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; columns.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;elements&lt;/strong&gt; of a matrix &lt;span class=&#34;math inline&#34;&gt;\(A_{m\times n}\)&lt;/span&gt; are &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;order&lt;/strong&gt; of a matrix is the number of rows by the number of columns, i.e. &lt;span class=&#34;math inline&#34;&gt;\(m\times n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;column vector&lt;/strong&gt; with &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; elements, &lt;span class=&#34;math inline&#34;&gt;\(y = \left( \begin{array}{c} y_1\\ y_2\\ \vdots\\ y_n \end{array} \right)\)&lt;/span&gt;, is a matrix with only one column i.e. an &lt;span class=&#34;math inline&#34;&gt;\(m\times 1\)&lt;/span&gt; matrix.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;row vector&lt;/strong&gt; with &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; elements, &lt;span class=&#34;math inline&#34;&gt;\(x=(x_1,x_2,x_3, \cdots, x_n)\)&lt;/span&gt;, is a matrix with only one row, i.e. an &lt;span class=&#34;math inline&#34;&gt;\(1\times n\)&lt;/span&gt; matrix.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transposed matrix&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(A^T\)&lt;/span&gt; (or &lt;span class=&#34;math inline&#34;&gt;\(A&amp;#39;\)&lt;/span&gt;) arises from the matrix &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; by interchanging the column vectors and the row vectors i.e. &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}^T = a_{ji}\)&lt;/span&gt; (so a column vector is converted into a row vector and vise versa)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A partitioned matrix&lt;/strong&gt; is a matrix written in terms of sub-matrices. &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} A_{11} &amp;amp; A_{12}\\ A_{21} &amp;amp; A_{22}\\ \end{array} \right)\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(A_{11},A_{12},A_{21},A_{22}\)&lt;/span&gt; are sub-matrices&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_{11}, A_{21}\)&lt;/span&gt; have the same number of columns, so do &lt;span class=&#34;math inline&#34;&gt;\(A_{12}, A_{22}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A_{11}, A_{12}\)&lt;/span&gt; have the same number of rows, so do &lt;span class=&#34;math inline&#34;&gt;\(A_{21}, A_{22}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;partitioning is not restricted to dividing a matrix into just four sub-matrices&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A square matrix&lt;/strong&gt; has exactly as many rows as it has columns i.e. the order of the matrix is &lt;span class=&#34;math inline&#34;&gt;\(n\times n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The main diagonal&lt;/strong&gt; (or leading diagnonal) of a square matrix &lt;span class=&#34;math inline&#34;&gt;\(A (n\times n)\)&lt;/span&gt; are the elements lying on the diagnoal &lt;strong&gt;from top left to bottom right.&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(a_{11},a_{22},a_{33},\cdots,a_{nn}\)&lt;/span&gt; i.e. all &lt;span class=&#34;math inline&#34;&gt;\(a_{ii}, i= 1,\cdots, n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;The trace &lt;/strong&gt; of a square matrix is the sum of the diagonal elements &lt;span class=&#34;math inline&#34;&gt;\(tr(A)=a_{11}+a_{22}+\cdots+a_{nn}=\sum_{i=1}^na_{ii}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;special-matrices&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Special matrices&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;A symmetric matrix&lt;/strong&gt; is a square matrix for which the following is true for all the off diagonal elements. &lt;span class=&#34;math inline&#34;&gt;\(a_{ij}=a_{ji}\)&lt;/span&gt; i.e. &lt;span class=&#34;math inline&#34;&gt;\(A^T=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagonal matrix&lt;/strong&gt; is a square matrix having zero for all the non-diagonal elements i.e. &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{c} a_{11} &amp;amp; \cdots &amp;amp; 0\\ \vdots &amp;amp; \ddots &amp;amp; \vdots\\ 0 &amp;amp; \cdots &amp;amp; a_{nn} \end{array} \right)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zero matrix&lt;/strong&gt; (null matrix) is a matrix whose all elements are zero&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Identity matrix&lt;/strong&gt; (or unit matrix) is a diagonal matrix having all diagonal elements equal to 1 and off diagonal elements equal to zero. i.e. &lt;span class=&#34;math inline&#34;&gt;\(I=\left( \begin{array}{c} 1 &amp;amp; \cdots &amp;amp; 0\\ \vdots &amp;amp; \ddots &amp;amp; \vdots\\ 0 &amp;amp; \cdots &amp;amp; 1 \end{array} \right)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“Summing vector”&lt;/strong&gt; is a vector whose every element is 1 i.e. &lt;span class=&#34;math inline&#34;&gt;\(1_{n}=(1\cdots1)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“J matrix”&lt;/strong&gt; is a matrix (not necessarily square) whose every element is 1 i.e. &lt;span class=&#34;math inline&#34;&gt;\(J_{m\times n}=\left( \begin{array}{c} 1 &amp;amp; 1 &amp;amp; \cdots &amp;amp; 1\\ 1 &amp;amp; 1 &amp;amp; \cdots &amp;amp; 1 \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\\ 1 &amp;amp; 1 &amp;amp; \cdots &amp;amp; 1 \end{array} \right)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;basic-operations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Basic Operations&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Addition (Substraction)&lt;/strong&gt; can take place only when the matrices involved are of the same order.
+i.e. Two matrices can be added (subtracted) only if they have the same numbers of rows and the same numbers of columns.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A+B=B+A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A+B)+C=A+(B+C)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A+0=0+A=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A+(-A)=0\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((A+B)^T=A^T+B^T\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Multiplication by scalar:&lt;/strong&gt;
+- &lt;span class=&#34;math inline&#34;&gt;\(cA=Ac\)&lt;/span&gt;
+- &lt;span class=&#34;math inline&#34;&gt;\(c(dA)=(cd)A\)&lt;/span&gt;
+- &lt;span class=&#34;math inline&#34;&gt;\((c\pm d)A=cA\pm dA\)&lt;/span&gt;
+- &lt;span class=&#34;math inline&#34;&gt;\(c(A\pm B)=cA \pm cB\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multiplication of an &lt;span class=&#34;math inline&#34;&gt;\(2\times2\)&lt;/span&gt; matrix by a column vector which has 2 rows yields a column vector with &lt;span class=&#34;math inline&#34;&gt;\(2\)&lt;/span&gt; rows.&lt;/strong&gt;
+&lt;span class=&#34;math display&#34;&gt;\[Ax=\left(
+\begin{array}{c}
+a_{11} &amp;amp; a_{12}\\
+a_{21} &amp;amp; a_{22}\\
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11}x_1+a_{12}x_2\\
+a_{21}x_1+a_{22}x_2\\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;generally&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Generally:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Multiplication of an &lt;span class=&#34;math inline&#34;&gt;\(m\times n\)&lt;/span&gt; matrix&lt;/strong&gt; by a &lt;strong&gt;column vector&lt;/strong&gt; which has &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; rows &lt;strong&gt;yields a column vector&lt;/strong&gt; with &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; rows.
+&lt;span class=&#34;math display&#34;&gt;\[Ax=\left(
+\begin{array}{c}
+a_{11} &amp;amp; \cdots &amp;amp; a_{1n} \\
+\vdots &amp;amp; \ddots &amp;amp; \vdots \\
+a_{m1} &amp;amp; \cdots &amp;amp; a_{mn}
+\end{array}
+\right)\left(
+\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots \\
+x_{n}
+\end{array}
+\right)=\left(
+\begin{array}{c}
+a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n\\
+\vdots \\
+a_{m1}x_{1}+a_{m2}x_2+\cdots+a_{mn}x_n
+\end{array}
+\right)=y \\
+i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-02-22/&#34;&gt;Multiplication of matrices&lt;/a&gt;:&lt;/strong&gt; The product &lt;span class=&#34;math inline&#34;&gt;\(AB=C\)&lt;/span&gt; is &lt;strong&gt;defined only when &lt;span class=&#34;math inline&#34;&gt;\(A_{m\times r}\)&lt;/span&gt; has exactly as many columns as &lt;span class=&#34;math inline&#34;&gt;\(B_{r\times n}\)&lt;/span&gt; has rows&lt;/strong&gt;. And the elements of &lt;span class=&#34;math inline&#34;&gt;\(C_{m\times n}\)&lt;/span&gt; are given as
+&lt;span class=&#34;math display&#34;&gt;\[c_{ij}=\sum_{l=1}^na_{il}b_{lj}, \;\; i=1,\cdots,m \; and \; j=1,\cdots, n\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(AB \neq BA\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((AB)C=A(BC)=ABC\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A(B+C)=AB+AC\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((B+C)A=BA+CA\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(IA=AI=A\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;further-definitions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Further definitions&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;&lt;strong&gt;The determinant&lt;/strong&gt;&lt;/a&gt; of a second order square matrix is &lt;span class=&#34;math inline&#34;&gt;\(det(A)=|A|=\begin{vmatrix} a_{11} &amp;amp; a_{12} \\ a_{21} &amp;amp; a_{22} \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;The inverse of a matrix&lt;/a&gt;&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt; if it exists, is a matrix whose product with &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is the identity matrix i.e. &lt;span class=&#34;math inline&#34;&gt;\(AA^{-1}=A^{-1}A=I\)&lt;/span&gt;. (&lt;strong&gt;Note: both &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(A^{-1}\)&lt;/span&gt; have to be square&lt;/strong&gt;) For second order matrices:&lt;span class=&#34;math inline&#34;&gt;\(A^{-1}=\frac{1}{det(A)}\left( \begin{array}{c} a_{22} &amp;amp; -a_{12}\\ -a_{21} &amp;amp; a_{11}\\ \end{array} \right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;Singular or non-invertible matrix&lt;/a&gt;&lt;/strong&gt;: &lt;span class=&#34;math inline&#34;&gt;\(det(A)=0\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Idempotent matrices(冪等矩陣)&lt;/strong&gt; are square and the following is true: &lt;span class=&#34;math inline&#34;&gt;\(AA=A^2=A\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://winterwang.github.io/post/2017-03-08/&#34;&gt;Orthogonal matrices&lt;/a&gt;&lt;/strong&gt; have the following property: &lt;span class=&#34;math inline&#34;&gt;\(AA^T=A^TA=I\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 25</title>
+      <link>https://wangcc.me/post/cramers-formula/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/cramers-formula/</guid>
+      <description>
+
+
+&lt;div id=&#34;克萊姆法則-cramers-formula&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;克萊姆法則 Cramer’s Formula&lt;/h3&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;（&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;）時 連立一次方程式：&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 的解可以寫作：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[a_j=\frac{|X_j|}{|X|} (j=1,2,\cdots, n)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中： &lt;span class=&#34;math inline&#34;&gt;\(|X_j|\)&lt;/span&gt; 爲矩陣 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第 &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; 列替換爲 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 以後的矩陣的行列式。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div id=&#34;練習-解下列連立一次方程式&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
+\begin{array}{ll}
+a_1+2a_2+a_3  = 2\\
+2a_1+a_2+a_3  = 3\\
+a_1+a_2+2a_3  = 3
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;解&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \\
+2 &amp;amp; 1 &amp;amp; 1 \\
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3 \\
+\end{array}
+\right), \underline{y}=\left(
+\begin{array}{c}
+2 \\
+3 \\
+3 \\
+\end{array}
+\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中 &lt;span class=&#34;math inline&#34;&gt;\(|X|=-4\)&lt;/span&gt; &lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;(三次行列式的計算)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第一列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:
+&lt;span class=&#34;math display&#34;&gt;\[|X_1|=\begin{vmatrix}
+2 &amp;amp; 2 &amp;amp;  1\\
+3 &amp;amp; 1 &amp;amp;  1\\
+3 &amp;amp; 1 &amp;amp;  2\\
+\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第二列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_2|=\begin{vmatrix}
+1 &amp;amp; 2 &amp;amp;  1\\
+2 &amp;amp; 3 &amp;amp;  1\\
+1 &amp;amp; 3 &amp;amp;  2\\
+\end{vmatrix}=0\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的第三列置換成 &lt;span class=&#34;math inline&#34;&gt;\(\underline{y}\)&lt;/span&gt; 則:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[|X_3|=\begin{vmatrix}
+1 &amp;amp; 2 &amp;amp;  2\\
+2 &amp;amp; 1 &amp;amp;  3\\
+1 &amp;amp; 1 &amp;amp;  3\\
+\end{vmatrix}=-4\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore a_1=\frac{|X_1|}{|X|}=1, \\
+a_2=\frac{|X_2|}{|X|}=0, \\
+a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
       <link>https://wangcc.me/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
