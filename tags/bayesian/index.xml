@@ -6096,5 +6096,90 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
 </description>
     </item>
     
+    <item>
+      <title>Rstan Wonderful R-(1)</title>
+      <link>https://wangcc.me/post/rstan-wonderful-r/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/rstan-wonderful-r/</guid>
+      <description>
+
+
+&lt;p&gt;P16&lt;/p&gt;
+&lt;p&gt;事後分布 &lt;span class=&#34;math inline&#34;&gt;\(p(\theta | Y)\)&lt;/span&gt;の値が最大になる点&lt;span class=&#34;math inline&#34;&gt;\(\theta^*\)&lt;/span&gt;を事後確率最大推定値 (maximum a posteriori estimate)と呼ぶ．略してMAP推定値 (MAP estimate)．&lt;/p&gt;
+&lt;p&gt;我們把能夠將事後概率分布取極大值的參數點 &lt;span class=&#34;math inline&#34;&gt;\(\theta^*\)&lt;/span&gt; 稱爲事後概率的最大似然估計值 (maximum a posteriori estimate)，簡稱 MAP估計值 (MAP estimate)。&lt;/p&gt;
+&lt;p&gt;P19&lt;/p&gt;
+&lt;p&gt;統計建模的一般順序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;確定分析目的&lt;/li&gt;
+&lt;li&gt;確定數據分布&lt;/li&gt;
+&lt;li&gt;想象數據產生本身的機制：思考數據與數據之間可能的關系&lt;/li&gt;
+&lt;li&gt;寫下你所認爲的數據模型的數學表達式&lt;/li&gt;
+&lt;li&gt;用 R 模擬(simulation)並確認前一步寫下的數學模型的性質，特點&lt;/li&gt;
+&lt;li&gt;用 Stan 實際進行模型參數的推斷&lt;/li&gt;
+&lt;li&gt;獲得推斷結果，解釋其事後概率分布的意義，繪制易於理解的模型示意圖&lt;/li&gt;
+&lt;li&gt;繪制成功之後的模型示意圖和最先使用的模型之間進行比對，重新查缺補漏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;P23&lt;/p&gt;
+&lt;p&gt;ただいたずらにモデルを複雑化させるのは解釈のしにくさを招く．&lt;/p&gt;
+&lt;p&gt;P30&lt;/p&gt;
+&lt;p&gt;最初にmodel ブロックの尤度の部分（と事前分布の部分）を書く．その尤度の部分に登場した変数のうち，データの変数をdataブロックに，残りの変数をparametersブロックに書いていく．&lt;/p&gt;
+&lt;p&gt;Stan的基本文法構成&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+ 數據描述
+}
+
+parameters {
+ 想要進行MCMC事後樣本採集的參數描述
+}
+
+model {
+ p(Y|theta) 似然的描述
+ 先驗概率分布 p(theta) 的描述
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把下面的模型&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Y[n] &amp;amp; \sim \text{Normal}(\mu, 1) \;\; n = 1, \dots, N \\
+\mu  &amp;amp; \sim \text{Normal}(0, 100)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;翻譯成爲 Stan 模型語言是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N;
+  real Y[N];
+}
+
+parameters {
+  real mu;
+}
+
+model {
+  for (n in 1:N) {
+    Y[n] ~ normal(mu, 1);
+  }
+  mu ~ normal(0, 100);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中我們按照實際模型書寫的順序 model -&amp;gt; data -&amp;gt; parameter 來逐個解釋：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;model&lt;/code&gt; 模塊中 &lt;code&gt;for (n in 1:N)&lt;/code&gt; 開始的循環部分（三行）對應數學模型的 $Y[n] (, 1) n = 1, , N $　部分。&lt;/li&gt;
+&lt;li&gt;Stan 語言中，每一行描述的結尾需要用分號 &lt;code&gt;;&lt;/code&gt; 來結束。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mu ~ normal(0,100)&lt;/code&gt; 則對應數學模型中寫的先驗概率 &lt;span class=&#34;math inline&#34;&gt;\(\mu \sim \text{Normal}(0, 100)\)&lt;/span&gt; 部分。這裏給均值的先驗概率分佈是一個方差很大的無信息先驗概率分佈 (noninformative prior)。事實上在 Stan 軟件語言中，如果不特別指出先驗概率分佈，系統會默認給參數以無信息的先驗概率分佈，這樣即使沒有這一行，模型也是可以跑的。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data&lt;/code&gt; 模塊中寫明的是 &lt;code&gt;model&lt;/code&gt; 模塊中描述的模型將要使用的數據。它包括宣示數據的個數（樣本量 &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;），以及數據本身。其中 &lt;code&gt;int N&lt;/code&gt; 意爲樣本量的數量是整數個 (integer)，&lt;code&gt;real Y[N]&lt;/code&gt; 則宣示實數有 N 個作爲數據。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parameter&lt;/code&gt; 模塊是告訴軟件需要採樣且關注的未知參數 (parameter) 是 &lt;code&gt;mu&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在 Stan 語言中，還可以和其他語言一樣爲模型加註解釋的文字，只需要在想要做註釋的文字最開始的部分增加 &lt;code&gt;//&lt;/code&gt;，如果註釋的文字超過一行，那麼在註釋的模塊前後加上 &lt;code&gt;/*&lt;/code&gt; 和 &lt;code&gt;*/&lt;/code&gt; 即可。&lt;/li&gt;
+&lt;li&gt;另外，目前爲止主流的貝葉斯模型軟件中使用精確度 (precision) ，也就是方差的倒數來描述正態分佈 &lt;code&gt;normal(mean, 1/variance)&lt;/code&gt; ，但是在Stan的語法中使用的是 &lt;code&gt;normal(mean, sd)&lt;/code&gt;，也就是用標準差來描述正態分佈。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;寫Stan（或者說寫大多數的代碼）時，請遵守以下的原則：&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;適當縮進，以便於閱讀；&lt;/li&gt;
+&lt;li&gt;表示數據的部分用大寫字母，表示參數的部分，用小寫字母；&lt;/li&gt;
+&lt;li&gt;每個部分之間至少使用一個空行加以區分；&lt;/li&gt;
+&lt;li&gt;請不要用&lt;code&gt;camelCase&lt;/code&gt;這樣的方式（單詞之間用大寫隔開），請在單詞之間用下劃線 &lt;code&gt;camel_case&lt;/code&gt; 的標記方法；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;或者&lt;code&gt;=&lt;/code&gt;前後用一個字符大小的空格來隔開。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最低限度的話，也請依照1,2兩個標準來書寫你的Stan代碼。不爲他人，也爲自己將來再讀代碼時能快速理解其涵義。往Stan的官方論壇投稿時，也必須遵守它們在手冊裏提供的 “Stan Program Style Guide” 代碼書寫規則，也是對其他寫，讀代碼的人的尊重。&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

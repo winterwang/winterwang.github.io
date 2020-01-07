@@ -233,6 +233,11 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/post/rstan-wonderful-r/</loc>
+    <lastmod>2018-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/post/2018-11-todo/</loc>
     <lastmod>2018-11-05T00:00:00+00:00</lastmod>
   </url>
@@ -438,6 +443,16 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/tags/inference/</loc>
+    <lastmod>2017-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/log-likelihood-ratio/</loc>
+    <lastmod>2017-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/publication/journal-article/hpylorimeta/</loc>
     <lastmod>2017-10-27T00:00:00+00:00</lastmod>
   </url>
@@ -459,6 +474,16 @@
   
   <url>
     <loc>https://wangcc.me/tags/basic-mathematics/</loc>
+    <lastmod>2017-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/central-limit-theory/</loc>
+    <lastmod>2017-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/probability/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -468,8 +493,18 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/post/normal-distribution/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/post/probability2-4/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/probability-gambling/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
