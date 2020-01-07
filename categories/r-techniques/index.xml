@@ -5,12 +5,395 @@
     <link>https://wangcc.me/categories/r-techniques/</link>
       <atom:link href="https://wangcc.me/categories/r-techniques/index.xml" rel="self" type="application/rss+xml" />
     <description>R techniques</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 03 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>R techniques</title>
       <link>https://wangcc.me/categories/r-techniques/</link>
     </image>
+    
+    <item>
+      <title>泊松回歸模型的貝葉斯Stan實現</title>
+      <link>https://wangcc.me/post/poisson-stan/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/poisson-stan/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#分析目的數據和選擇-poisson-回歸模型的原因&#34;&gt;分析目的，數據，和選擇 Poisson 回歸模型的原因&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#想象模型機制&#34;&gt;想象模型機制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#寫下數學模型表達式&#34;&gt;寫下數學模型表達式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#把數學模型翻譯成-stan-模型代碼&#34;&gt;把數學模型翻譯成 Stan 模型代碼&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#運行結果的解釋&#34;&gt;運行結果的解釋&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;分析目的數據和選擇-poisson-回歸模型的原因&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;分析目的，數據，和選擇 Poisson 回歸模型的原因&lt;/h1&gt;
+&lt;p&gt;我們這裏使用&lt;a href=&#34;https://wangcc.me/post/logistic-rstan/&#34;&gt;之前擬合貝葉斯邏輯回歸模型&lt;/a&gt;時使用的相同的數據來展示如何跑貝葉斯泊松回歸模型。&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, sep = &amp;quot;,&amp;quot;, header = T)
+head(d)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   PersonID A Score  M  Y
+## 1        1 0    69 43 38
+## 2        2 1   145 56 40
+## 3        3 0   125 32 24
+## 4        4 1    86 45 33
+## 5        5 1   158 33 23
+## 6        6 0   133 61 60&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PersonID&lt;/code&gt;: 是學生的編號；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A&lt;/code&gt;, &lt;code&gt;Score&lt;/code&gt;: 用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 &lt;code&gt;A&lt;/code&gt;，和表示對學習本身是否喜歡的評分 (滿分200)；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M&lt;/code&gt;: 過去三個月內，該名學生一共需要上課的總課時數；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;: 過去三個月內，該名學生實際上出勤的課時數。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這一次我們希望通過分析泊松回歸來回答「&lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;Score&lt;/code&gt; 對總課時數 &lt;code&gt;M&lt;/code&gt; 具體有多大的影響？」這個問題。&lt;a href=&#34;https://wangcc.me/post/logistic-rstan/&#34;&gt;之前擬合貝葉斯邏輯回歸模型&lt;/a&gt;時，使用的結果變量是 &lt;code&gt;Y&lt;/code&gt;，也就是實際出勤課時數。但是本小節我們用 &lt;code&gt;M&lt;/code&gt; 作爲結果變量。因爲總課時數是學生自己選課時的結果，也就是說學生本身的態度（是否喜歡打工，是否熱愛學習），可能本身左右了他/她到底會選多少課。背景知識假設是：喜歡多去打工的學生，選課可能態度消極，總課時數從開始可能就選的少。那麼像總選課時數這樣的非負（計數型）離散變量作爲結果變量的時候，&lt;strong&gt;泊松回歸模型是我們的第一選擇。&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;想象模型機制&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;想象模型機制&lt;/h2&gt;
+&lt;p&gt;如果使用&lt;a href=&#34;https://wangcc.me/post/rstan-wonderful-r3/&#34;&gt;上上節介紹的多重線性回歸模型&lt;/a&gt;，那麼模型的預測變量的分佈便可能取到負數，這樣就不符合實際情況下“總選課時數”是非負（計數型）離散變量這一事實。這就需要把預測變量 &lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;Score&lt;/code&gt; 相加的線性模型 &lt;span class=&#34;math inline&#34;&gt;\((b_1 + b_2A + b_3Score)\)&lt;/span&gt;，通過數學轉換限制在非負數範圍。假設平均總課時數是 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;，我們認爲它服從均值是 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 的泊松分佈。關於泊松分佈的詳細知識，期望值和方差的推導可以參考&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/poisson.html&#34;&gt;學習筆記&lt;/a&gt;。另外，非貝葉斯版本的一般性傳統泊松回歸模型可以參照學習筆記的&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/poisson-regression.html&#34;&gt;廣義線性回歸的泊松回歸模型章節&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;對泊松回歸模型略有瞭解的話應該很自然地想到，把結果變量限制在非負數範圍的標準鏈接方程是 &lt;span class=&#34;math inline&#34;&gt;\(\log(\lambda)\)&lt;/span&gt;，或者在 Stan 模型中，我們更自然地把線性模型部分寫在指數模型中: &lt;span class=&#34;math inline&#34;&gt;\(\exp(b_1 + b_2A + b_3Score)\)&lt;/span&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;寫下數學模型表達式&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;寫下數學模型表達式&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda[n] &amp;amp; = \exp(b_1 + b_2A[n] + b_3Score[n]) &amp;amp; n = 1, \dots, N \\
+M[n]       &amp;amp; \sim \text{Poisson}(\lambda[n])     &amp;amp; n = 1, \dots, N
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;，是該數據中學生的人數；&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;，是每名學生的標籤/編號（下標）；&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(b_1, b_2, b_3\)&lt;/span&gt; 是我們感興趣的參數。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;把數學模型翻譯成-stan-模型代碼&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;把數學模型翻譯成 Stan 模型代碼&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N; 
+  int&amp;lt;lower=0, upper=1&amp;gt; A[N]; 
+  real&amp;lt;lower=0, upper=1&amp;gt; Score[N]; 
+  int&amp;lt;lower=0&amp;gt; M[N];
+}
+
+parameters {
+  real b[3]; 
+}
+
+transformed parameters {
+  real lambda[N];
+  for (n in 1:N) {
+    lambda[n] = exp(b[1] + b[2]*A[n] + b[3]*Score[n]);
+  }
+}
+
+model {
+  for (n in 1:N) {
+    M[n] ~ poisson(lambda[n]); 
+  }
+}
+
+generated quantities {
+  int m_pred[N]; 
+  for (n in 1:N) {
+    m_pred[n] = poisson_rng(M[n], q[n]);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;值得一提的是，在 Stan 中，提供了 &lt;code&gt;poisson_log(x)&lt;/code&gt; 分佈函數，其實它等價於使用 &lt;code&gt;poisson(exp(x))&lt;/code&gt;。除了更加接近我們熟悉的泊松回歸模型的數學表達式，避免了 &lt;code&gt;exp&lt;/code&gt; 指數運算，計算結果穩定。於是我們還可以把上面的模型修改成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N; 
+  int&amp;lt;lower=0, upper=1&amp;gt; A[N]; 
+  real&amp;lt;lower=0, upper=1&amp;gt; Score[N]; 
+  int&amp;lt;lower=0&amp;gt; M[N];
+}
+
+parameters {
+  real b[3]; 
+}
+
+transformed parameters {
+  real lambda[N];
+  for (n in 1:N) {
+    lambda[n] = b[1] + b[2]*A[n] + b[3]*Score[n]；
+  }
+}
+
+model {
+  for (n in 1:N) {
+    M[n] ~ poisson_log(lambda[n]); 
+  }
+}
+
+generated quantities {
+  int m_pred[N]; 
+  for (n in 1:N) {
+    m_pred[n] = poisson_log_rng(M[n], q[n]);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;運行它的代碼如下：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: StanHeaders&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: ggplot2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## rstan (Version 2.19.2, GitRev: 2e1f913d3ca3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## For execution on a local, multicore CPU with excess RAM we recommend calling
+## options(mc.cores = parallel::detectCores()).
+## To avoid recompilation of unchanged Stan programs, we recommend calling
+## rstan_options(auto_write = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data &amp;lt;- list(N=nrow(d), A=d$A, Score=d$Score/200, M=d$M)
+# fit &amp;lt;- stan(file=&amp;#39;model/model5-6.stan&amp;#39;, data=data, seed=1234)
+fit &amp;lt;- stan(file=&amp;#39;stanfiles/model5-6b.stan&amp;#39;, data=data, seed=1234, pars = c(&amp;quot;b&amp;quot;, &amp;quot;lambda&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;model5-6b&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.3e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.101417 seconds (Warm-up)
+## Chain 1:                0.11273 seconds (Sampling)
+## Chain 1:                0.214147 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-6b&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 9e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.103552 seconds (Warm-up)
+## Chain 2:                0.113478 seconds (Sampling)
+## Chain 2:                0.21703 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-6b&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 6e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.106149 seconds (Warm-up)
+## Chain 3:                0.103742 seconds (Sampling)
+## Chain 3:                0.209891 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-6b&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 7e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.10037 seconds (Warm-up)
+## Chain 4:                0.11621 seconds (Sampling)
+## Chain 4:                0.21658 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: model5-6b.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##               mean se_mean   sd    2.5%     25%     50%     75%   97.5% n_eff
+## b[1]          3.58    0.00 0.10    3.38    3.51    3.58    3.64    3.76  1187
+## b[2]          0.26    0.00 0.04    0.18    0.24    0.26    0.29    0.35  1831
+## b[3]          0.29    0.00 0.15    0.01    0.19    0.29    0.39    0.58  1227
+## lambda[1]     3.68    0.00 0.05    3.58    3.65    3.68    3.71    3.77  1276
+## lambda[2]     4.05    0.00 0.03    3.98    4.03    4.05    4.07    4.12  2189
+## lambda[3]     3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81  2467
+## lambda[4]     3.97    0.00 0.04    3.88    3.94    3.97    3.99    4.05  1735
+## lambda[5]     4.07    0.00 0.04    3.99    4.04    4.07    4.10    4.15  1793
+## lambda[6]     3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83  2509
+## lambda[7]     3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1991
+## lambda[8]     4.05    0.00 0.03    3.98    4.03    4.06    4.08    4.12  2102
+## lambda[9]     3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85  2282
+## lambda[10]    3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85  2305
+## lambda[11]    4.05    0.00 0.03    3.98    4.02    4.05    4.07    4.11  2347
+## lambda[12]    3.78    0.00 0.03    3.72    3.76    3.78    3.80    3.83  2465
+## lambda[13]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07  2499
+## lambda[14]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1991
+## lambda[15]    3.73    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1910
+## lambda[16]    3.98    0.00 0.04    3.91    3.96    3.98    4.01    4.05  2088
+## lambda[17]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80  2122
+## lambda[18]    3.70    0.00 0.04    3.61    3.67    3.70    3.72    3.78  1360
+## lambda[19]    3.85    0.00 0.05    3.74    3.81    3.85    3.88    3.95  1653
+## lambda[20]    4.07    0.00 0.04    3.99    4.04    4.07    4.09    4.14  1835
+## lambda[21]    3.97    0.00 0.04    3.88    3.94    3.97    3.99    4.05  1735
+## lambda[22]    4.00    0.00 0.03    3.93    3.98    4.00    4.02    4.06  2298
+## lambda[23]    3.99    0.00 0.03    3.93    3.97    3.99    4.02    4.06  2252
+## lambda[24]    4.05    0.00 0.03    3.98    4.03    4.05    4.07    4.11  2283
+## lambda[25]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07  2483
+## lambda[26]    4.03    0.00 0.03    3.97    4.01    4.03    4.05    4.09  2548
+## lambda[27]    3.75    0.00 0.03    3.69    3.73    3.75    3.77    3.80  2321
+## lambda[28]    3.75    0.00 0.03    3.69    3.73    3.75    3.77    3.80  2321
+## lambda[29]    3.81    0.00 0.04    3.73    3.78    3.81    3.84    3.89  1971
+## lambda[30]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80  2077
+## lambda[31]    4.08    0.00 0.04    4.00    4.05    4.08    4.11    4.17  1672
+## lambda[32]    3.95    0.00 0.05    3.85    3.92    3.95    3.98    4.04  1571
+## lambda[33]    4.04    0.00 0.03    3.98    4.02    4.04    4.06    4.10  2409
+## lambda[34]    4.02    0.00 0.03    3.96    4.00    4.02    4.04    4.08  2554
+## lambda[35]    3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81  2482
+## lambda[36]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.82  2516
+## lambda[37]    3.99    0.00 0.03    3.93    3.97    3.99    4.02    4.06  2229
+## lambda[38]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1950
+## lambda[39]    3.71    0.00 0.04    3.63    3.68    3.71    3.73    3.78  1437
+## lambda[40]    3.70    0.00 0.04    3.63    3.68    3.70    3.73    3.78  1424
+## lambda[41]    3.76    0.00 0.03    3.71    3.75    3.76    3.78    3.82  2512
+## lambda[42]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83  2509
+## lambda[43]    3.75    0.00 0.03    3.70    3.74    3.75    3.77    3.81  2404
+## lambda[44]    3.79    0.00 0.03    3.72    3.77    3.79    3.82    3.86  2236
+## lambda[45]    3.84    0.00 0.05    3.74    3.81    3.84    3.88    3.95  1683
+## lambda[46]    3.73    0.00 0.03    3.67    3.71    3.73    3.75    3.79  1772
+## lambda[47]    3.65    0.00 0.06    3.53    3.61    3.65    3.69    3.77  1222
+## lambda[48]    3.79    0.00 0.04    3.73    3.77    3.79    3.82    3.86  2191
+## lambda[49]    3.72    0.00 0.03    3.65    3.70    3.72    3.74    3.79  1613
+## lambda[50]    3.98    0.00 0.04    3.91    3.96    3.98    4.01    4.05  2088
+## lp__       6896.53    0.03 1.28 6893.17 6895.97 6896.87 6897.45 6897.95  1452
+##            Rhat
+## b[1]          1
+## b[2]          1
+## b[3]          1
+## lambda[1]     1
+## lambda[2]     1
+## lambda[3]     1
+## lambda[4]     1
+## lambda[5]     1
+## lambda[6]     1
+## lambda[7]     1
+## lambda[8]     1
+## lambda[9]     1
+## lambda[10]    1
+## lambda[11]    1
+## lambda[12]    1
+## lambda[13]    1
+## lambda[14]    1
+## lambda[15]    1
+## lambda[16]    1
+## lambda[17]    1
+## lambda[18]    1
+## lambda[19]    1
+## lambda[20]    1
+## lambda[21]    1
+## lambda[22]    1
+## lambda[23]    1
+## lambda[24]    1
+## lambda[25]    1
+## lambda[26]    1
+## lambda[27]    1
+## lambda[28]    1
+## lambda[29]    1
+## lambda[30]    1
+## lambda[31]    1
+## lambda[32]    1
+## lambda[33]    1
+## lambda[34]    1
+## lambda[35]    1
+## lambda[36]    1
+## lambda[37]    1
+## lambda[38]    1
+## lambda[39]    1
+## lambda[40]    1
+## lambda[41]    1
+## lambda[42]    1
+## lambda[43]    1
+## lambda[44]    1
+## lambda[45]    1
+## lambda[46]    1
+## lambda[47]    1
+## lambda[48]    1
+## lambda[49]    1
+## lambda[50]    1
+## lp__          1
+## 
+## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:46:49 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;運行結果的解釋&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;運行結果的解釋&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;...{省略}...
+              mean se_mean   sd    2.5%     25%     50%     75%   97.5% n_eff Rhat
+b[1]          3.58    0.00 0.09    3.38    3.51    3.58    3.64    3.76  1373    1
+b[2]          0.26    0.00 0.04    0.18    0.24    0.26    0.29    0.35  1797    1
+b[3]          0.29    0.00 0.15    0.00    0.20    0.29    0.39    0.59  1422    1
+lambda[1]     3.68    0.00 0.05    3.58    3.65    3.68    3.71    3.77  1510    1
+...{省略}...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我們把計算獲得的事後概率分佈均值放入前面寫下的數學表達式:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda[n] &amp;amp; = \exp(3.58 + 0.26A[n] + 0.29Score[n]/200) &amp;amp; n = 1, \dots, N \\
+M[n]       &amp;amp; \sim \text{Poisson}(\lambda[n])     &amp;amp; n = 1, \dots, N
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;例如說，&lt;code&gt;Score = 150&lt;/code&gt; 和 &lt;code&gt;Score = 50&lt;/code&gt; 的兩名學生，如果對打工喜好態度相同的話，他們之間選課的總課時數之比爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\frac{M_\text{Score = 150}}{M_\text{Score = 50}} &amp;amp; = \frac{\exp(3.58 + 0.26A + 0.29\times\frac{150}{200})}{\exp(3.58 + 0.26A + 0.29\times\frac{50}{200})} \\ 
+&amp;amp; = \exp(0.29\times\frac{150-50}{200}) \approx 1.16
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;也就是熱愛學習分數 &lt;code&gt;Score&lt;/code&gt; 達到150的人和只有50的人相比，選課總課時數平均多 16%。相似地，喜歡打工 &lt;code&gt;A = 1&lt;/code&gt; 的學生和不喜歡打工 &lt;code&gt;A = 0&lt;/code&gt; 的學生選課總課時數之比爲 &lt;span class=&#34;math inline&#34;&gt;\(\exp(0.26)\approx1.30\)&lt;/span&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Rstan Wonderful R-(5)</title>
@@ -5162,6 +5545,551 @@ p&lt;/code&gt;&lt;/pre&gt;
 &lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic2-rstan_files/figure-html/validity-of-model1-1.png&#34; alt=&#34;把計算獲得的事後概率的中央值作爲每名學生是否出勤的概率預測(x 軸)，和實際觀察的出勤結果(y 軸)，繪製的散點圖。其中，灰色的小提琴圖其實是根據獲得的事後概率的中央值的概率密度曲線，繪製的上下對稱的圖形，形似小提琴。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: 把計算獲得的事後概率的中央值作爲每名學生是否出勤的概率預測(x 軸)，和實際觀察的出勤結果(y 軸)，繪製的散點圖。其中，灰色的小提琴圖其實是根據獲得的事後概率的中央值的概率密度曲線，繪製的上下對稱的圖形，形似小提琴。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rstan Wonderful R-(4)</title>
+      <link>https://wangcc.me/post/logistic-rstan/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/logistic-rstan/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#邏輯回歸模型的-rstan-貝葉斯實現&#34;&gt;邏輯回歸模型的 Rstan 貝葉斯實現&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#確定分析目的&#34;&gt;確定分析目的&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#確認數據分佈&#34;&gt;確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#寫下數學模型表達式&#34;&gt;寫下數學模型表達式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#確認收斂效果&#34;&gt;確認收斂效果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;邏輯回歸模型的-rstan-貝葉斯實現&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;邏輯回歸模型的 Rstan 貝葉斯實現&lt;/h1&gt;
+&lt;p&gt;本小節使用的&lt;a href=&#34;https://raw.githubusercontent.com/MatsuuraKentaro/RStanBook/master/chap05/input/data-attendance-2.txt&#34;&gt;數據&lt;/a&gt;，和前一節的出勤率數據很類似:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;quot;, 
+                     sep = &amp;quot;,&amp;quot;, header = T)
+head(d)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   PersonID A Score  M  Y
+## 1        1 0    69 43 38
+## 2        2 1   145 56 40
+## 3        3 0   125 32 24
+## 4        4 1    86 45 33
+## 5        5 1   158 33 23
+## 6        6 0   133 61 60&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PersonID&lt;/code&gt;: 是學生的編號；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A&lt;/code&gt;, &lt;code&gt;Score&lt;/code&gt;: 和之前一樣用來預測出勤率的兩個預測變量，分別是表示是否喜歡打工的 &lt;code&gt;A&lt;/code&gt;，和表示對學習本身是否喜歡的評分 (滿分200)；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M&lt;/code&gt;: 過去三個月內，該名學生一共需要上課的總課時數；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;: 過去三個月內，該名學生實際上出勤的課時數。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;確定分析目的&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;確定分析目的&lt;/h1&gt;
+&lt;p&gt;需要回答的問題依然是，&lt;span class=&#34;math inline&#34;&gt;\(A, Score\)&lt;/span&gt; 分別在多大程度上預測學生的出勤率？另外，我們希望知道的是，當需要修的課時數固定的事後，這兩個預測變量能準確提供 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的多少信息？&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;確認數據分佈&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;確認數據分佈&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(GGally)
+
+set.seed(1)
+d &amp;lt;- d[, -1]
+# d &amp;lt;- read.csv(file=&amp;#39;input/data-attendance-2.txt&amp;#39;)[,-1]
+d$A &amp;lt;- as.factor(d$A)
+d &amp;lt;- transform(d, ratio=Y/M)
+N_col &amp;lt;- ncol(d)
+ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;)
+
+for(i in 1:N_col) {
+  x &amp;lt;- d[,i]
+  p &amp;lt;- ggplot(data.frame(x, A=d$A), aes(x))
+  p &amp;lt;- p + theme_bw(base_size=14)
+  p &amp;lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+  if (class(x) == &amp;#39;factor&amp;#39;) {
+    p &amp;lt;- p + geom_bar(aes(fill=A), color=&amp;#39;grey20&amp;#39;)
+  } else {
+    bw &amp;lt;- (max(x)-min(x))/10
+    p &amp;lt;- p + geom_histogram(aes(fill=A), color=&amp;#39;grey20&amp;#39;, binwidth=bw)
+    p &amp;lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&amp;#39;density&amp;#39;)
+  }
+  p &amp;lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=colnames(d)[i]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  p &amp;lt;- p + scale_fill_manual(values=alpha(c(&amp;#39;white&amp;#39;, &amp;#39;grey40&amp;#39;), 0.5))
+  ggp &amp;lt;- putPlot(ggp, p, i, i)
+}
+
+zcolat &amp;lt;- seq(-1, 1, length=81)
+zcolre &amp;lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
+
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &amp;lt;- as.numeric(d[,i])
+    y &amp;lt;- as.numeric(d[,j])
+    r &amp;lt;- cor(x, y, method=&amp;#39;spearman&amp;#39;, use=&amp;#39;pairwise.complete.obs&amp;#39;)
+    zcol &amp;lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &amp;lt;- ifelse(abs(r) &amp;lt; 0.4, &amp;#39;grey20&amp;#39;, &amp;#39;white&amp;#39;)
+    ell &amp;lt;- ellipse::ellipse(r, level=0.95, type=&amp;#39;l&amp;#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &amp;lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &amp;lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &amp;lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &amp;lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &amp;lt;- d[,j]
+    y &amp;lt;- d[,i]
+    p &amp;lt;- ggplot(data.frame(x, y, gr=d$A), aes(x=x, y=y, fill=gr, shape=gr))
+    p &amp;lt;- p + theme_bw(base_size=14)
+    p &amp;lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+    if (class(x) == &amp;#39;factor&amp;#39;) {
+      p &amp;lt;- p + geom_boxplot(aes(group=x), alpha=3/6, outlier.size=0, fill=&amp;#39;white&amp;#39;)
+      p &amp;lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
+    } else {
+      p &amp;lt;- p + geom_point(size=2)
+    }
+    p &amp;lt;- p + scale_shape_manual(values=c(21, 24))
+    p &amp;lt;- p + scale_fill_manual(values=alpha(c(&amp;#39;white&amp;#39;, &amp;#39;grey40&amp;#39;), 0.5))
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+ggp&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic-rstan_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，相比之前增加了 $ratio = Y/M$ 列。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 三個變量的分佈觀察圖，相比之前增加了 &lt;span class=&#34;math inline&#34;&gt;\(ratio = Y/M\)&lt;/span&gt; 列。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;從圖 &lt;a href=&#34;#fig:step1&#34;&gt;1&lt;/a&gt; 還可以看出，由於總課時數越多，學生實際出勤的課時數也會越多所以 &lt;span class=&#34;math inline&#34;&gt;\(M, Y\)&lt;/span&gt; 兩者之間理應有很強的正相關。另外可能可以推測的是 &lt;span class=&#34;math inline&#34;&gt;\(Ratio\)&lt;/span&gt; 和是否愛學習的分數之間大概有可能有正相關，和是否喜歡打工之間大概可能有負相關。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;寫下數學模型表達式&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;寫下數學模型表達式&lt;/h1&gt;
+&lt;p&gt;在 Stan 的語法中，使用的是反邏輯函數 (inverse logit): &lt;code&gt;inv_logit&lt;/code&gt; 來描述下面的邏輯回歸模型 5-4。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+q[n] = \text{inv_logit}(b_1 + b_2 A[n] + b_3Score[n]) &amp;amp; n = 1, 2, \dots, N \\
+Y[n] \sim \text{Binomial}(M[n], q[n])                 &amp;amp; n = 1, 2, \dots, N \\
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;上面的數學模型，可以被翻譯成下面的 Stan 語言:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N; 
+  int&amp;lt;lower=0, upper=1&amp;gt; A[N]; 
+  real&amp;lt;lower=0, upper=1&amp;gt; Score[N]; 
+  int&amp;lt;lower=0&amp;gt; M[N];
+  int&amp;lt;lower=0&amp;gt; Y[N];
+}
+
+parameters {
+  real b1; 
+  real b2; 
+  real b3;
+}
+
+transformed parameters {
+  real q[N];
+  for (n in 1:N) {
+    q[n] = inv_logit(b1 + b2*A[n] + b3*Score[n]);
+  }
+}
+
+model {
+  for (n in 1:N) {
+    Y[n] ~ binomial(M[n], q[n]); 
+  }
+}
+
+generated quantities {
+  real y_pred[N]; 
+  for (n in 1:N) {
+    y_pred[n] = binomial_rng(M[n], q[n]);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面的 R 代碼用來實現對上面 Stan 模型的擬合:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+d &amp;lt;- read.csv(file=&amp;#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-2.txt&amp;#39;, header = T)
+data &amp;lt;- list(N=nrow(d), A=d$A, Score=d$Score/200, M=d$M, Y=d$Y)
+fit &amp;lt;- stan(file=&amp;#39;stanfiles/model5-4.stan&amp;#39;, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;model5-4&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.5e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.15 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.129287 seconds (Warm-up)
+## Chain 1:                0.13611 seconds (Sampling)
+## Chain 1:                0.265397 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-4&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 8e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.131371 seconds (Warm-up)
+## Chain 2:                0.133643 seconds (Sampling)
+## Chain 2:                0.265014 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-4&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 8e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.128284 seconds (Warm-up)
+## Chain 3:                0.133711 seconds (Sampling)
+## Chain 3:                0.261995 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-4&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 8e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.128226 seconds (Warm-up)
+## Chain 4:                0.140913 seconds (Sampling)
+## Chain 4:                0.269139 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: model5-4.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##                mean se_mean   sd     2.5%      25%      50%      75%    97.5%
+## b1             0.09    0.01 0.22    -0.37    -0.05     0.09     0.24     0.53
+## b2            -0.62    0.00 0.09    -0.80    -0.68    -0.62    -0.56    -0.44
+## b3             1.90    0.01 0.36     1.19     1.67     1.90     2.13     2.64
+## q[1]           0.68    0.00 0.02     0.63     0.66     0.68     0.69     0.72
+## q[2]           0.70    0.00 0.02     0.67     0.69     0.70     0.71     0.73
+## q[3]           0.78    0.00 0.01     0.76     0.77     0.78     0.79     0.80
+## q[4]           0.57    0.00 0.02     0.53     0.56     0.57     0.59     0.62
+## q[5]           0.73    0.00 0.02     0.69     0.71     0.73     0.74     0.76
+## q[6]           0.79    0.00 0.01     0.77     0.79     0.80     0.80     0.82
+## q[7]           0.76    0.00 0.01     0.73     0.75     0.76     0.77     0.78
+## q[8]           0.70    0.00 0.02     0.67     0.69     0.70     0.72     0.74
+## q[9]           0.81    0.00 0.01     0.79     0.81     0.81     0.82     0.84
+## q[10]          0.81    0.00 0.01     0.79     0.80     0.81     0.82     0.84
+## q[11]          0.69    0.00 0.02     0.66     0.68     0.69     0.70     0.72
+## q[12]          0.80    0.00 0.01     0.78     0.79     0.80     0.81     0.82
+## q[13]          0.64    0.00 0.01     0.62     0.63     0.64     0.65     0.67
+## q[14]          0.76    0.00 0.01     0.73     0.75     0.76     0.77     0.78
+## q[15]          0.76    0.00 0.01     0.73     0.75     0.76     0.76     0.78
+## q[16]          0.60    0.00 0.02     0.57     0.59     0.60     0.61     0.64
+## q[17]          0.76    0.00 0.01     0.74     0.76     0.76     0.77     0.79
+## q[18]          0.70    0.00 0.02     0.66     0.69     0.71     0.72     0.74
+## q[19]          0.86    0.00 0.02     0.83     0.85     0.86     0.87     0.89
+## q[20]          0.72    0.00 0.02     0.69     0.71     0.72     0.73     0.76
+## q[21]          0.57    0.00 0.02     0.53     0.56     0.57     0.59     0.62
+## q[22]          0.62    0.00 0.02     0.59     0.61     0.62     0.63     0.65
+## q[23]          0.62    0.00 0.02     0.59     0.61     0.62     0.63     0.65
+## q[24]          0.70    0.00 0.02     0.67     0.69     0.70     0.71     0.73
+## q[25]          0.64    0.00 0.01     0.61     0.63     0.64     0.65     0.67
+## q[26]          0.67    0.00 0.01     0.64     0.66     0.67     0.68     0.69
+## q[27]          0.77    0.00 0.01     0.75     0.76     0.77     0.78     0.79
+## q[28]          0.77    0.00 0.01     0.75     0.76     0.77     0.78     0.79
+## q[29]          0.83    0.00 0.01     0.81     0.83     0.84     0.84     0.86
+## q[30]          0.76    0.00 0.01     0.74     0.75     0.76     0.77     0.79
+## q[31]          0.74    0.00 0.02     0.70     0.73     0.74     0.75     0.78
+## q[32]          0.54    0.00 0.03     0.49     0.53     0.54     0.56     0.60
+## q[33]          0.69    0.00 0.01     0.66     0.68     0.69     0.70     0.72
+## q[34]          0.66    0.00 0.01     0.63     0.65     0.66     0.67     0.69
+## q[35]          0.78    0.00 0.01     0.76     0.78     0.78     0.79     0.81
+## q[36]          0.79    0.00 0.01     0.77     0.78     0.79     0.80     0.81
+## q[37]          0.62    0.00 0.02     0.58     0.60     0.62     0.63     0.65
+## q[38]          0.76    0.00 0.01     0.73     0.75     0.76     0.77     0.78
+## q[39]          0.72    0.00 0.02     0.68     0.71     0.72     0.73     0.75
+## q[40]          0.72    0.00 0.02     0.68     0.70     0.72     0.73     0.75
+## q[41]          0.79    0.00 0.01     0.76     0.78     0.79     0.80     0.81
+## q[42]          0.79    0.00 0.01     0.77     0.79     0.80     0.80     0.82
+## q[43]          0.78    0.00 0.01     0.75     0.77     0.78     0.79     0.80
+## q[44]          0.82    0.00 0.01     0.79     0.81     0.82     0.83     0.84
+## q[45]          0.86    0.00 0.02     0.83     0.85     0.86     0.87     0.89
+## q[46]          0.75    0.00 0.01     0.72     0.74     0.75     0.76     0.77
+## q[47]          0.64    0.00 0.03     0.57     0.62     0.64     0.66     0.70
+## q[48]          0.82    0.00 0.01     0.79     0.81     0.82     0.83     0.84
+## q[49]          0.74    0.00 0.01     0.71     0.73     0.74     0.75     0.76
+## q[50]          0.60    0.00 0.02     0.57     0.59     0.60     0.61     0.64
+## y_pred[1]     29.19    0.05 3.21    23.00    27.00    29.00    31.00    35.00
+## y_pred[2]     39.25    0.06 3.56    32.00    37.00    39.00    42.00    46.00
+## y_pred[3]     25.07    0.04 2.38    20.00    24.00    25.00    27.00    29.00
+## y_pred[4]     25.76    0.06 3.43    19.00    23.00    26.00    28.00    32.00
+## y_pred[5]     23.89    0.04 2.62    19.00    22.00    24.00    26.00    29.00
+## y_pred[6]     48.46    0.05 3.24    42.00    46.00    49.00    51.00    54.00
+## y_pred[7]     37.21    0.05 3.10    31.00    35.00    37.00    39.00    43.00
+## y_pred[8]     53.44    0.07 4.12    45.00    51.00    54.00    56.00    61.00
+## y_pred[9]     63.52    0.06 3.54    56.00    61.00    64.00    66.00    70.00
+## y_pred[10]    51.98    0.05 3.21    45.00    50.00    52.00    54.00    58.00
+## y_pred[11]    23.50    0.05 2.73    18.00    22.00    24.00    25.00    29.00
+## y_pred[12]    35.26    0.04 2.68    30.00    33.00    35.00    37.00    40.00
+## y_pred[13]    34.17    0.06 3.53    27.00    32.00    34.00    37.00    41.00
+## y_pred[14]    30.39    0.04 2.73    25.00    29.00    30.00    32.00    35.00
+## y_pred[15]    42.23    0.05 3.23    36.00    40.00    42.00    44.00    48.00
+## y_pred[16]    35.48    0.06 3.88    28.00    33.00    36.00    38.00    43.00
+## y_pred[17]    28.97    0.04 2.69    23.00    27.00    29.00    31.00    34.00
+## y_pred[18]    31.67    0.05 3.12    25.00    30.00    32.00    34.00    38.00
+## y_pred[19]    38.81    0.04 2.39    34.00    37.00    39.00    40.00    43.00
+## y_pred[20]    55.48    0.07 4.26    47.00    53.00    56.00    58.00    63.00
+## y_pred[21]    40.16    0.07 4.39    32.00    37.00    40.00    43.00    49.00
+## y_pred[22]    47.97    0.08 4.48    39.00    45.00    48.00    51.00    56.03
+## y_pred[23]    38.94    0.06 3.89    32.00    36.00    39.00    42.00    46.00
+## y_pred[24]    47.35    0.06 3.87    40.00    45.00    47.00    50.00    55.00
+## y_pred[25]    32.10    0.06 3.42    25.00    30.00    32.00    34.00    39.00
+## y_pred[26]    34.02    0.05 3.38    27.00    32.00    34.00    36.00    40.00
+## y_pred[27]    22.42    0.04 2.29    18.00    21.00    23.00    24.00    27.00
+## y_pred[28]    28.59    0.04 2.57    23.00    27.00    29.00    30.00    33.00
+## y_pred[29]    15.08    0.02 1.59    12.00    14.00    15.00    16.00    18.00
+## y_pred[30]    37.37    0.05 3.02    31.00    35.00    37.00    39.00    43.00
+## y_pred[31]    55.42    0.07 4.05    47.00    53.00    56.00    58.00    63.00
+## y_pred[32]     6.50    0.03 1.75     3.00     5.00     7.00     8.00    10.00
+## y_pred[33]    15.82    0.04 2.24    11.00    14.00    16.00    17.00    20.00
+## y_pred[34]    24.33    0.05 2.88    19.00    22.00    24.00    26.00    30.00
+## y_pred[35]    46.26    0.05 3.27    39.00    44.00    46.00    49.00    52.00
+## y_pred[36]    43.51    0.05 3.06    37.00    41.75    44.00    46.00    49.00
+## y_pred[37]    54.28    0.08 4.82    45.00    51.00    54.00    58.00    63.00
+## y_pred[38]    35.60    0.05 3.04    29.00    34.00    36.00    38.00    41.00
+## y_pred[39]    15.84    0.04 2.19    11.00    14.00    16.00    17.00    20.00
+## y_pred[40]    29.39    0.05 2.98    23.00    27.00    29.00    31.00    35.00
+## y_pred[41]    45.05    0.05 3.14    39.00    43.00    45.00    47.00    51.00
+## y_pred[42]    25.43    0.04 2.34    21.00    24.00    26.00    27.00    30.00
+## y_pred[43]    41.18    0.05 3.07    35.00    39.00    41.00    43.00    47.00
+## y_pred[44]    25.37    0.03 2.16    21.00    24.00    25.00    27.00    29.00
+## y_pred[45]    19.76    0.03 1.74    16.00    19.00    20.00    21.00    23.00
+## y_pred[46]    38.21    0.05 3.19    32.00    36.00    38.00    40.00    44.00
+## y_pred[47]    14.09    0.04 2.37     9.00    12.00    14.00    16.00    18.00
+## y_pred[48]    31.20    0.04 2.41    26.00    30.00    31.00    33.00    36.00
+## y_pred[49]    16.90    0.03 2.12    12.00    16.00    17.00    18.00    21.00
+## y_pred[50]    40.34    0.07 4.25    32.00    37.00    40.00    43.00    48.00
+## lp__       -1389.32    0.03 1.20 -1392.42 -1389.91 -1389.01 -1388.42 -1387.95
+##            n_eff Rhat
+## b1          1443    1
+## b2          2052    1
+## b3          1519    1
+## q[1]        1523    1
+## q[2]        2412    1
+## q[3]        2751    1
+## q[4]        2023    1
+## q[5]        2065    1
+## q[6]        2718    1
+## q[7]        2352    1
+## q[8]        2345    1
+## q[9]        2443    1
+## q[10]       2467    1
+## q[11]       2561    1
+## q[12]       2648    1
+## q[13]       3089    1
+## q[14]       2352    1
+## q[15]       2267    1
+## q[16]       2372    1
+## q[17]       2483    1
+## q[18]       1617    1
+## q[19]       1891    1
+## q[20]       2106    1
+## q[21]       2023    1
+## q[22]       2727    1
+## q[23]       2642    1
+## q[24]       2484    1
+## q[25]       3065    1
+## q[26]       3059    1
+## q[27]       2648    1
+## q[28]       2648    1
+## q[29]       2149    1
+## q[30]       2439    1
+## q[31]       1948    1
+## q[32]       1839    1
+## q[33]       2682    1
+## q[34]       3131    1
+## q[35]       2757    1
+## q[36]       2743    1
+## q[37]       2600    1
+## q[38]       2309    1
+## q[39]       1707    1
+## q[40]       1691    1
+## q[41]       2757    1
+## q[42]       2718    1
+## q[43]       2713    1
+## q[44]       2398    1
+## q[45]       1913    1
+## q[46]       2111    1
+## q[47]       1470    1
+## q[48]       2354    1
+## q[49]       1919    1
+## q[50]       2372    1
+## y_pred[1]   3738    1
+## y_pred[2]   3669    1
+## y_pred[3]   3582    1
+## y_pred[4]   3362    1
+## y_pred[5]   3706    1
+## y_pred[6]   3914    1
+## y_pred[7]   3706    1
+## y_pred[8]   3447    1
+## y_pred[9]   3934    1
+## y_pred[10]  3907    1
+## y_pred[11]  3488    1
+## y_pred[12]  4354    1
+## y_pred[13]  3685    1
+## y_pred[14]  3854    1
+## y_pred[15]  3715    1
+## y_pred[16]  3841    1
+## y_pred[17]  3972    1
+## y_pred[18]  3780    1
+## y_pred[19]  3683    1
+## y_pred[20]  3505    1
+## y_pred[21]  3841    1
+## y_pred[22]  3432    1
+## y_pred[23]  3919    1
+## y_pred[24]  3814    1
+## y_pred[25]  3828    1
+## y_pred[26]  3793    1
+## y_pred[27]  3778    1
+## y_pred[28]  4052    1
+## y_pred[29]  4096    1
+## y_pred[30]  3820    1
+## y_pred[31]  3352    1
+## y_pred[32]  3583    1
+## y_pred[33]  3970    1
+## y_pred[34]  3628    1
+## y_pred[35]  3789    1
+## y_pred[36]  3968    1
+## y_pred[37]  3355    1
+## y_pred[38]  3092    1
+## y_pred[39]  3815    1
+## y_pred[40]  3738    1
+## y_pred[41]  4172    1
+## y_pred[42]  4290    1
+## y_pred[43]  3624    1
+## y_pred[44]  4023    1
+## y_pred[45]  3531    1
+## y_pred[46]  3976    1
+## y_pred[47]  3218    1
+## y_pred[48]  3811    1
+## y_pred[49]  3951    1
+## y_pred[50]  3826    1
+## lp__        1381    1
+## 
+## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:48:25 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把獲得的參數事後樣本的均值代入上面的數學模型中可得:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+q[n] = \text{inv_logit}(0.09 - 0.62 A[n] + 1.90Score[n]) &amp;amp; n = 1, 2, \dots, N \\
+Y[n] \sim \text{Binomial}(M[n], q[n])                 &amp;amp; n = 1, 2, \dots, N \\
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;確認收斂效果&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;確認收斂效果&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
+
+color_scheme_set(&amp;quot;mix-brightblue-gray&amp;quot;)
+
+posterior2 &amp;lt;- rstan::extract(fit, inc_warmup = TRUE, permuted = FALSE)
+
+p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0, pars = c(&amp;quot;b1&amp;quot;, &amp;quot;b2&amp;quot;, &amp;quot;b3&amp;quot;, &amp;quot;lp__&amp;quot;),
+                facet_args = list(nrow = 2, labeller = label_parsed))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step53&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic-rstan_files/figure-html/step53-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ms &amp;lt;- rstan::extract(fit)
+
+d_qua &amp;lt;- t(apply(ms$y_pred, 2, quantile, prob=c(0.1, 0.5, 0.9)))
+colnames(d_qua) &amp;lt;- c(&amp;#39;p10&amp;#39;, &amp;#39;p50&amp;#39;, &amp;#39;p90&amp;#39;)
+d_qua &amp;lt;- data.frame(d, d_qua)
+d_qua$A &amp;lt;- as.factor(d_qua$A)
+
+p &amp;lt;- ggplot(data=d_qua, aes(x=Y, y=p50, ymin=p10, ymax=p90, shape=A, fill=A))
+p &amp;lt;- p + theme_bw(base_size=18) + theme(legend.key.height=grid::unit(2.5,&amp;#39;line&amp;#39;))
+p &amp;lt;- p + coord_fixed(ratio=1, xlim=c(5, 70), ylim=c(5, 70))
+p &amp;lt;- p + geom_pointrange(size=0.8, color=&amp;#39;grey5&amp;#39;)
+p &amp;lt;- p + geom_abline(aes(slope=1, intercept=0), color=&amp;#39;black&amp;#39;, alpha=3/5, linetype=&amp;#39;31&amp;#39;)
+p &amp;lt;- p + scale_shape_manual(values=c(21, 24))
+p &amp;lt;- p + scale_fill_manual(values=c(&amp;#39;white&amp;#39;, &amp;#39;grey70&amp;#39;))
+p &amp;lt;- p + labs(x=&amp;#39;Observed&amp;#39;, y=&amp;#39;Predicted&amp;#39;)
+p &amp;lt;- p + scale_x_continuous(breaks=seq(from=0, to=70, by=20))
+p &amp;lt;- p + scale_y_continuous(breaks=seq(from=0, to=70, by=20))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig58&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic-rstan_files/figure-html/fig58-1.png&#34; alt=&#34;觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

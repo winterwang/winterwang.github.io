@@ -21,6 +21,265 @@
     </item>
     
     <item>
+      <title>你買的彩票中獎概率到底有多少？</title>
+      <link>https://wangcc.me/post/probability3/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/probability3/</guid>
+      <description>
+
+
+&lt;div id=&#34;二項分佈的概念-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;二項分佈的概念 Binomial distribution&lt;/h3&gt;
+&lt;p&gt;二項分佈在醫學研究中至關重要，一組二項分佈的數據，指的通常是 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 次相互獨立的&lt;a href=&#34;https://winterwang.github.io/post/probability2-4/&#34;&gt;成功率爲 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 的伯努利實驗&lt;/a&gt; (&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; independent Bernoulli trials) 中成功的次數。&lt;/p&gt;
+&lt;p&gt;當 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 服從二項分佈，記爲 &lt;span class=&#34;math inline&#34;&gt;\(X \sim binomial(n, \pi)\)&lt;/span&gt; 或&lt;span class=&#34;math inline&#34;&gt;\(X \sim bin(n, \pi)\)&lt;/span&gt;。它的(第 &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; 次實驗的)概率被定義爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=x) &amp;amp;= ^nC_x\pi^x(1-\pi)^{n-x} \\
+       &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
+       &amp;amp; for\;\; x = 0,1,2,\dots,n
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;二項分佈的期望和方差&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;二項分佈的期望和方差&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(E(X)\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;若 &lt;span class=&#34;math inline&#34;&gt;\(X \sim bin(n,\pi)\)&lt;/span&gt;，那麼 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 就是這一系列獨立伯努利實驗中成功的次數。&lt;/li&gt;
+&lt;li&gt;用 &lt;span class=&#34;math inline&#34;&gt;\(X_i, i =1,\dots, n\)&lt;/span&gt; 標記每個相互獨立的伯努利實驗。&lt;/li&gt;
+&lt;li&gt;那麼我們可以知道 &lt;span class=&#34;math inline&#34;&gt;\(X=\sum_{i=1}^nX_i\)&lt;/span&gt;。
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align} E(X) &amp;amp;= E(\sum_{i=1}^nX_i)\\
+                   &amp;amp;= E(X_1+X_2+\cdots+X_n) \\
+                   &amp;amp;= E(X_1)+E(X_2)+\cdots+E(X_n)\\
+                   &amp;amp;= \sum_{i=1}^nE(X_i)\\
+                   &amp;amp;= \sum_{i=1}^n\pi \\
+                   &amp;amp;= n\pi
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;方差 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X) &amp;amp;= Var(\sum_{i=1}^nX_i) \\
+      &amp;amp;= Var(X_i+X_2+\cdots+X_n) \\
+      &amp;amp;= Var(X_i)+Var(X_2)+\cdots+Var(X_n) \\
+      &amp;amp;= \sum_{i=1}^nVar(X_i) \\
+      &amp;amp;= n\pi(1-\pi) \\
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;超幾何分佈-hypergeometric-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;超幾何分佈 hypergeometric distribution&lt;/h3&gt;
+&lt;p&gt;假設我們從總人數爲 &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; 的人羣中，採集一個樣本 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;。假如已知在總體人羣中(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; 人患有某種疾病。請問採集的樣本 &lt;span class=&#34;math inline&#34;&gt;\(X=n\)&lt;/span&gt; 中患有這種疾病的人，服從怎樣的分佈？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;從人羣(&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt;)中取出樣本(&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;)，有 &lt;span class=&#34;math inline&#34;&gt;\(^NC_n\)&lt;/span&gt; 種方法。&lt;/li&gt;
+&lt;li&gt;從患病人羣(&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;)中取出患有該病的人(&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;)有 &lt;span class=&#34;math inline&#34;&gt;\(^MC_x\)&lt;/span&gt; 種方法。&lt;/li&gt;
+&lt;li&gt;樣本中不患病的人(&lt;span class=&#34;math inline&#34;&gt;\(n-x\)&lt;/span&gt;)被採樣的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{N-M}C_{n-x}\)&lt;/span&gt; 種。&lt;/li&gt;
+&lt;li&gt;採集一次 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 人作爲樣本的概率都一樣。因此：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(X=x)=\frac{\binom{M}{x}\binom{N-M}{n-x}}{\binom{N}{n}}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;樂透中獎概率問題&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;樂透中獎概率問題：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;從數字 &lt;span class=&#34;math inline&#34;&gt;\(1\sim59\)&lt;/span&gt; 中選取 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個任意號碼&lt;/li&gt;
+&lt;li&gt;開獎時從 &lt;span class=&#34;math inline&#34;&gt;\(59\)&lt;/span&gt; 個號碼球中隨機抽取 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個&lt;/li&gt;
+&lt;li&gt;如果六個號碼全部猜中(不分順序)，你可以成爲百萬富翁。請問一次猜中全部 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個號碼的概率是多少？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;從 &lt;span class=&#34;math inline&#34;&gt;\(59\)&lt;/span&gt; 個號碼中隨機取出任意 &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; 個號碼的方法有 &lt;span class=&#34;math inline&#34;&gt;\(^{59}C_6\)&lt;/span&gt; 種。
+&lt;span class=&#34;math display&#34;&gt;\[^{59}C_6=\frac{59!}{6!(59-6)!}=45,057,474\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;每次選取六個號碼做爲一組的可能性相同，所以，你買了一組樂透號碼，能中獎的概率就是 &lt;span class=&#34;math inline&#34;&gt;\(1/45,057,474 = 0.00000002219\)&lt;/span&gt;。你還會再去買彩票麼？&lt;/p&gt;
+&lt;div id=&#34;如果我只想中其中的-3-個號碼概率有多大&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;如果我只想中其中的 &lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt; 個號碼，概率有多大？&lt;/h4&gt;
+&lt;p&gt;用超幾何分佈的概率公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=3) &amp;amp;= \frac{^6C_3\times ^{53}C_3}{^{59}C_6} \\
+       &amp;amp;= 0.010
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;你有 &lt;span class=&#34;math inline&#34;&gt;\(1\%\)&lt;/span&gt; 的可能中獎。換句話說，如果中三個以上的數字算中獎的話，你買的彩票中獎的概率低於 &lt;span class=&#34;math inline&#34;&gt;\(1\%\)&lt;/span&gt;。是不是覺得下次送錢給博彩公司的時候還不如跟我一起喝一杯咖啡划算？&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;泊松分佈-poisson-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;泊松分佈 Poisson Distribution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當一個事件，在一段時間 (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) 中可能發生的次數是 &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; 。那麼我們可以認爲，經過時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;，該時間發生的期望次數是 &lt;span class=&#34;math inline&#34;&gt;\(E(X)=\lambda T\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;利用微分思想，將這段時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 等分成 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 個時間段，當 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt; 直到每個微小的時間段內最多發生一次該事件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那麼&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每個微小的時間段，可以視爲是一個伯努利實驗（有事件發生或者沒有）&lt;/li&gt;
+&lt;li&gt;那麼這整段時間 &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; 內發生的事件可以視爲是一個二項分佈實驗。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;令 &lt;span class=&#34;math inline&#34;&gt;\(X=\)&lt;/span&gt; 一次事件發生時所經過的所有時間段。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(X \sim Bin(n, \pi)\)&lt;/span&gt;，其中 &lt;span class=&#34;math inline&#34;&gt;\(n\rightarrow\infty\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; 爲時間段。&lt;/li&gt;
+&lt;li&gt;在每個分割好的時間段內，事件發生的概率都是：&lt;span class=&#34;math inline&#34;&gt;\(\pi=\frac{\lambda T}{n}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;期望 &lt;span class=&#34;math inline&#34;&gt;\(\mu=\lambda T \Rightarrow \pi=\mu/n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;所以 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 的概率方程就是：
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(X=x) &amp;amp;= \binom{n}{x}\pi^x(1-\pi)^{n-x} \\
+     &amp;amp;= \binom{n}{x}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+     &amp;amp;= \frac{n!}{x!(n-x)!}(\frac{\mu}{n})^x(1-\frac{\mu}{n})^{n-x} \\
+     &amp;amp;=\frac{n!}{n^x(n-x)!}\frac{\mu^x}{x!}(1-\frac{\mu}{n})^{n-x}\\
+當 n\rightarrow\infty   &amp;amp;\; x \ll n (x遠小於n) 時\\
+\frac{n!}{n^x(n-x)!} &amp;amp;=\frac{n(n-1)\dots(n-x+1)}{n^x} \rightarrow 1\\
+(1-\frac{\mu}{n})^{n-x} &amp;amp;\approx  (1-\frac{\mu}{n})^n \rightarrow e^{-\mu}\\
+所以 我們可&amp;amp;以得到泊松分佈的概率公式：   \\
+P(X=x) &amp;amp;\rightarrow \frac{\mu^x}{x!}e^{-\mu}
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;當數據服從泊松分佈時，記爲 &lt;span class=&#34;math inline&#34;&gt;\(X\sim Poisson(\mu=\lambda T)\;\; or\;\; X\sim Poi(\mu)\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;證明泊松分佈的參數特徵&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;證明泊松分佈的參數特徵：&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(E(X)=\mu\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X)  &amp;amp;=  \sum_{x=0}^\infty xP(X=x) \\
+      &amp;amp;=  \sum_{x=0}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
+      &amp;amp;= 0+ \sum_{x=1}^\infty x\frac{\mu^x}{x!}e^{-\mu} \\
+      &amp;amp;=  \sum_{x=1}^\infty \frac{\mu^x}{(x-1)!}e^{-\mu} \\
+      &amp;amp;=  \mu\sum_{x=1}^\infty \frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
+這個時候我們用i&amp;amp;=x-1 替換掉所有的 x \\
+      &amp;amp;=  \mu\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu} \\
+注意到右半部分 &amp;amp;\sum_{i=0}^\infty \frac{\mu^{i}}{i!}e^{-\mu}=1 是一個\\泊松分佈的所有&amp;amp;概率和 \\
+      &amp;amp;= \mu
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(x)=\mu\)&lt;/span&gt;
+爲了找到 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)\)&lt;/span&gt;，我們用公式 &lt;span class=&#34;math inline&#34;&gt;\(Var(X)=E(X^2)-E(X)^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我們需要找到 &lt;span class=&#34;math inline&#34;&gt;\(E(X^2)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X^2) &amp;amp;= \sum_{x=0}^\infty x^2\frac{\mu^x}{x!}e^{-\mu} \\
+       &amp;amp;= \mu \sum_{x=1}^\infty x\frac{\mu^{x-1}}{(x-1)!}e^{-\mu} \\
+這個時候我們用i&amp;amp;=x-1 替換掉所有的 x \\
+       &amp;amp;= \mu \sum_{i=0}^\infty (i+1)\frac{\mu^{i}}{i!}e^{-\mu} \\
+       &amp;amp;= \mu(\sum_{i=0}^\infty i\frac{\mu^i}{i!}e^{-\mu} + \sum_{i=0}^\infty \frac{\mu^i}{i!}e^{-\mu}) \\
+       &amp;amp;= \mu(E(X)+1) \\
+       &amp;amp;= \mu^2+\mu \\
+因此，代入上面&amp;amp;提到的方差公式： \\
+Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
+       &amp;amp;= \mu^2 + \mu -\mu^2 \\
+       &amp;amp;= \mu
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>概率論2</title>
+      <link>https://wangcc.me/post/probability2-4/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/probability2-4/</guid>
+      <description>
+
+
+&lt;div id=&#34;bayes-理論的概念&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bayes 理論的概念&lt;/h3&gt;
+&lt;p&gt;許多時候，我們需要將概率中的條件相互對調。
+例如：
+在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有多大的概率是一個菸民？也就是要求 &lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;這裏先引入貝葉斯的概念：&lt;/p&gt;
+&lt;p&gt;我們可以將 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)\)&lt;/span&gt; 寫成：
+&lt;span class=&#34;math display&#34;&gt;\[P(A\cap S)=P(A|S)P(S)\\or\\
+P(A\cap S)=P(S|A)P(A)\]&lt;/span&gt;
+這兩個等式是完全等價的。我們將他們連起來：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)P(A)=P(A|S)P(S)\\
+\Rightarrow P(S|A)=\frac{P(A|S)P(S)}{P(A)}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;是不是看起來又像是寫了一堆&lt;strong&gt;廢話&lt;/strong&gt;？
+沒錯，你看出來是一堆廢話的時候，證明你也同意這背後的簡單邏輯。&lt;/p&gt;
+&lt;p&gt;再繼續，我們可以利用另外一個&lt;strong&gt;廢話&lt;/strong&gt;：&lt;span class=&#34;math inline&#34;&gt;\(\because S+\bar{S}=1\\ \therefore P(A)=P(A\cap S)+P(A\cap\bar{S})\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;用上面的公式替換掉 &lt;span class=&#34;math inline&#34;&gt;\(P(A\cap S)+P(A\cap\bar{S}） \\ \therefore P(A)=P(A|S)P(S)+P(A|\bar{S})P(\bar{S})\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可以得到&lt;strong&gt;貝葉斯理論公式&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Selection_073.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
+        &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
+        &amp;amp;= 0.24
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以我們的結論就是，在已知該人羣中有20%的人有吸菸習慣(&lt;span class=&#34;math inline&#34;&gt;\(P(S)\)&lt;/span&gt;)，吸菸的人有9%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|S)\)&lt;/span&gt;)，不吸菸的人有7%的概率有哮喘(&lt;span class=&#34;math inline&#34;&gt;\(P(A|\bar{S})\)&lt;/span&gt;)的前提下，有個人前來門診，發現是哮喘患者，那麼這個人有24% 的概率是一個菸民(&lt;span class=&#34;math inline&#34;&gt;\(P(S|A)\)&lt;/span&gt;)。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;期望-expectation-或均值-or-mean-和-方差-variance&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;期望 Expectation (或均值 or mean) 和 方差 Variance&lt;/h3&gt;
+&lt;p&gt;期望（或均值）是用來描述一組數據中心位置的指標（另一個是中位數 Median）。
+對於離散型隨機變量 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; (discrete random variables)，它的期望被定義爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[E(X)=\sum_x xP(X=x)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;所以就是將所有 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 可能取到的值乘以相應的概率後求和。這個期望（或均值）常常用希臘字母 &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; 來標記。&lt;/p&gt;
+&lt;p&gt;方差 Variance 是衡量一組數據變化幅度(dispersion/variability)的指標之一。 方差的定義是：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X)=E((X-\mu)^2)\\其中，\mu=E(x)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;實際上我們更加常用的是它的另外一個公式：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X)=E(X^2)-E(X)^2\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;證明-上面兩個方差公式相等&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;證明 上面兩個方差公式相等&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(x)  &amp;amp;= E((X-\mu)^2) \\
+        &amp;amp;= E(X^2-2X\mu+\mu^2)\\
+        &amp;amp;= E(X^2) - 2\mu E(X) + \mu^2\\
+        &amp;amp;= E(X^2) - 2\mu^2 + \mu^2 \\
+        &amp;amp;= E(X^2) - \mu^2 \\
+        &amp;amp;= E(X^2) - E(X)^2
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;方差的性質&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;方差的性質：&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(X+b)=Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(aX)=a^2Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Var(aX+b)=a^2Var(X)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;伯努利分佈-bernoulli-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;伯努利分佈 Bernoulli distribution&lt;/h3&gt;
+&lt;p&gt;伯努利分佈，說的就是一個簡單的二分變量 (1, 0)，它取1時的概率如果是 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;。那麼我們可以計算這個分佈的期望值:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(X) &amp;amp;=\sum_x xP(X=x) \\
+     &amp;amp;=1\times\pi + 0\times(1-\pi)\\
+     &amp;amp;=\pi
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;由於 &lt;span class=&#34;math inline&#34;&gt;\(x=x^2\)&lt;/span&gt;，因爲 &lt;span class=&#34;math inline&#34;&gt;\(x=0,1\)&lt;/span&gt;, 所以 &lt;span class=&#34;math inline&#34;&gt;\(E[X^2]=E[X]\)&lt;/span&gt;，那麼方差爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X) &amp;amp;=E[X^2]-E[X]^2 \\
+       &amp;amp;=E[X]-E[X]^2 \\
+       &amp;amp;=\pi - \pi^2 \\
+       &amp;amp;=\pi(1-\pi)
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;證明xy-爲互爲獨立的隨機離散變量時-a-exyexey-b-varxyvarxvary&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;證明，&lt;span class=&#34;math inline&#34;&gt;\(X,Y\)&lt;/span&gt; 爲互爲獨立的隨機離散變量時，&lt;br&gt;a) &lt;span class=&#34;math inline&#34;&gt;\(E(XY)=E(X)E(Y)\)&lt;/span&gt; ; &lt;br&gt;b) &lt;span class=&#34;math inline&#34;&gt;\(Var(X+Y)=Var(X)+Var(Y)\)&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;strong&gt;證明&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E(XY) &amp;amp;= \sum_x\sum_y xyP(X=x, Y=y) \\
+\because &amp;amp;\; X,Y are\;independent\;to\;each\;other \\
+\therefore &amp;amp;= \sum_x\sum_y xyP(X=x)P(Y=y)\\
+      &amp;amp;=\sum_x xP(X=x)\sum_y yP(Y=y)\\
+      &amp;amp;=E(X)E(Y)
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;strong&gt;證明&lt;/strong&gt;
+根據方差的定義：
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
+    &amp;amp; \; Expand \\
+    &amp;amp;=E(X^2+2XY+Y^2)-(E(X)+E(Y))^2\\
+    &amp;amp;=E(X^2)+E(Y^2)+2E(XY)\\
+    &amp;amp;\;\;\; - E(X)^2-E(Y)^2-2E(X)E(Y)\\
+    &amp;amp;\; We\;just\;showed\; E(XY)=E(X)E(Y)\\
+    &amp;amp;=E(X^2)-E(X)^2+E(Y^2)-E(Y)^2 \\
+    &amp;amp;=Var(X)+Var(Y)
+\end{align}\]&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
       <link>https://wangcc.me/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>

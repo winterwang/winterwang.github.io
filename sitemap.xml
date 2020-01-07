@@ -123,12 +123,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/sorrow/</loc>
+    <loc>https://wangcc.me/tags/sorrow/</loc>
     <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/sorrow/</loc>
+    <loc>https://wangcc.me/categories/sorrow/</loc>
     <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -140,6 +140,36 @@
   <url>
     <loc>https://wangcc.me/post/base-of-the-house-done/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/bayesian/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/bayesian/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/medical-statistics/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/r-techniques/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/statistics/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/poisson-stan/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -178,33 +208,13 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/bayesian/</loc>
-    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/bayesian/</loc>
-    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/medical-statistics/</loc>
-    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/r-techniques/</loc>
-    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/post/logistic-rstan2/</loc>
     <lastmod>2019-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/statistics/</loc>
-    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
+    <loc>https://wangcc.me/post/logistic-rstan/</loc>
+    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -448,6 +458,21 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/tags/basic-mathematics/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/probability3/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/probability2-4/</loc>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/post/first-impression-of-london2/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
@@ -495,11 +520,6 @@
   <url>
     <loc>https://wangcc.me/tags/saitama/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/basic-mathematics/</loc>
-    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -37,17 +37,9 @@
     </item>
     
     <item>
-      <title>diary</title>
-      <link>https://wangcc.me/categories/diary/</link>
-      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/diary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bayesian</title>
       <link>https://wangcc.me/categories/bayesian/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/bayesian/</guid>
       <description></description>
     </item>
@@ -55,7 +47,7 @@
     <item>
       <title>R techniques</title>
       <link>https://wangcc.me/categories/r-techniques/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/r-techniques/</guid>
       <description></description>
     </item>
@@ -63,8 +55,16 @@
     <item>
       <title>statistics</title>
       <link>https://wangcc.me/categories/statistics/</link>
-      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diary</title>
+      <link>https://wangcc.me/categories/diary/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/categories/diary/</guid>
       <description></description>
     </item>
     
