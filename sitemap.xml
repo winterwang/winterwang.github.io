@@ -98,6 +98,36 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/tags/bayesian/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/bayesian/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/medical-statistics/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/r-techniques/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/statistics/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/multilevel-model-rstan/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/post/entrance-done/</loc>
     <lastmod>2019-08-15T00:00:00+00:00</lastmod>
   </url>
@@ -140,31 +170,6 @@
   <url>
     <loc>https://wangcc.me/post/base-of-the-house-done/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/bayesian/</loc>
-    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/bayesian/</loc>
-    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/medical-statistics/</loc>
-    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/r-techniques/</loc>
-    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/statistics/</loc>
-    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -570,6 +575,11 @@
   <url>
     <loc>https://wangcc.me/post/cramers-formula/</loc>
     <lastmod>2017-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/inverse-matrix-method/</loc>
+    <lastmod>2017-08-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>

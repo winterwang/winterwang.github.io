@@ -29,17 +29,9 @@
     </item>
     
     <item>
-      <title>sorrow</title>
-      <link>https://wangcc.me/categories/sorrow/</link>
-      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/categories/sorrow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bayesian</title>
       <link>https://wangcc.me/categories/bayesian/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/bayesian/</guid>
       <description></description>
     </item>
@@ -47,7 +39,7 @@
     <item>
       <title>R techniques</title>
       <link>https://wangcc.me/categories/r-techniques/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/r-techniques/</guid>
       <description></description>
     </item>
@@ -55,8 +47,16 @@
     <item>
       <title>statistics</title>
       <link>https://wangcc.me/categories/statistics/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sorrow</title>
+      <link>https://wangcc.me/categories/sorrow/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/categories/sorrow/</guid>
       <description></description>
     </item>
     

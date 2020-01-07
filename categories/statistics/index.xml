@@ -5,12 +5,700 @@
     <link>https://wangcc.me/categories/statistics/</link>
       <atom:link href="https://wangcc.me/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     <description>statistics</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 16 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>statistics</title>
       <link>https://wangcc.me/categories/statistics/</link>
     </image>
+    
+    <item>
+      <title>等級線性回歸模型的 Rstan 貝葉斯實現</title>
+      <link>https://wangcc.me/post/multilevel-model-rstan/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/multilevel-model-rstan/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#多層等級線性回歸模型混合效應模型-multilevelmixed-effect-regression-model&#34;&gt;多層(等級)線性回歸模型/混合效應模型 multilevel/mixed effect regression model&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#適用於等級線性回歸模型的數據&#34;&gt;適用於等級線性回歸模型的數據&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#確認數據分佈&#34;&gt;確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#如果不考慮組間公司間差異&#34;&gt;如果不考慮組間(公司間)差異&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#如果要考慮組間差異&#34;&gt;如果要考慮組間差異&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#等級線性回歸的貝葉斯實現&#34;&gt;等級線性回歸的貝葉斯實現&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#模型機制-mechanism&#34;&gt;模型機制 mechanism&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;多層等級線性回歸模型混合效應模型-multilevelmixed-effect-regression-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;多層(等級)線性回歸模型/混合效應模型 multilevel/mixed effect regression model&lt;/h2&gt;
+&lt;p&gt;關於等級線性回歸的基本知識和概念，請參考&lt;a href=&#34;https://wangcc.me/LSHTMlearningnote/Hierarchical.html&#34;&gt;讀書筆記58-60章節&lt;/a&gt;。簡單來說，等級線性回歸通過給數據內部可能存在或者已知存在的結構或者層級增加隨機截距或者隨機斜率的方式來輔助解釋組間差異和組內的差異。&lt;/p&gt;
+&lt;div id=&#34;適用於等級線性回歸模型的數據&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;適用於等級線性回歸模型的數據&lt;/h3&gt;
+&lt;p&gt;本章節使用的數據是四家大公司40名社員的年齡和年收入數據：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- read.csv(file=&amp;#39;../../static/files/data-salary-2.txt&amp;#39;)
+d&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##     X   Y KID
+## 1   7 457   1
+## 2  10 482   1
+## 3  16 518   1
+## 4  25 535   1
+## 5   5 427   1
+## 6  25 603   1
+## 7  26 610   1
+## 8  18 484   1
+## 9  17 508   1
+## 10  1 380   1
+## 11  5 453   1
+## 12  4 391   1
+## 13 19 559   1
+## 14 10 453   1
+## 15 21 517   1
+## 16 12 553   2
+## 17 17 653   2
+## 18 22 763   2
+## 19  9 538   2
+## 20 18 708   2
+## 21 21 740   2
+## 22  6 437   2
+## 23 15 646   2
+## 24  4 422   2
+## 25  7 444   2
+## 26 10 504   2
+## 27  2 376   2
+## 28 15 522   3
+## 29 27 623   3
+## 30 14 515   3
+## 31 18 542   3
+## 32 20 529   3
+## 33 18 540   3
+## 34 11 411   3
+## 35 26 666   3
+## 36 22 641   3
+## 37 25 592   3
+## 38 28 722   4
+## 39 24 726   4
+## 40 22 728   4&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X&lt;/code&gt;: 社員年齡減去23獲得的數據（23歲是大部分人大學畢業入職時的年齡）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;: 年收入（萬日元）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;KID&lt;/code&gt;: 公司編號&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我們認爲，年收入 &lt;code&gt;Y&lt;/code&gt;，是基本平均年收入和隨機誤差（服從均值爲零，方差是 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2\)&lt;/span&gt; 的正態分佈）之和。且基本平均年收入和年齡成正比（年功序列型企業）。但是呢，因爲不同的公司入職時的基本收入可能不同，且可能隨着年齡增加而增長薪水的速度可能也不一樣。那麼由於不同公司所造成的差異，可以被認爲是組間差異。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;確認數據分佈&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;確認數據分佈&lt;/h3&gt;
+&lt;p&gt;這次分析的目的是要瞭解「每個公司&lt;code&gt;KID&lt;/code&gt;內隨着年齡的增加而增長的薪水幅度是多少」，那麼我們要在結果報告中體現的就是每家公司的基本年收入，新入職時的年收入，以及隨着年齡增長而上升的薪水的事後分佈。&lt;/p&gt;
+&lt;p&gt;我們先來看把四家公司職員放在一起時的整體圖形：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+
+d$KID &amp;lt;- as.factor(d$KID)
+res_lm &amp;lt;- lm(Y ~ X, data=d)
+coef &amp;lt;- as.numeric(res_lm$coefficients)
+
+p &amp;lt;- ggplot(d, aes(X, Y, shape=KID))
+p &amp;lt;- p + theme_bw(base_size=18)
+p &amp;lt;- p + geom_abline(intercept=coef[1], slope=coef[2], size=2, alpha=0.3)
+p &amp;lt;- p + geom_point(size=2)
+p &amp;lt;- p + scale_shape_manual(values=c(16, 2, 4, 9))
+p &amp;lt;- p + labs(x=&amp;#39;X (age-23)&amp;#39;, y=&amp;#39;Y (10,000 Yen/year)&amp;#39;)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig8-1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-1-1.png&#34; alt=&#34;年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;從總體的散點圖 &lt;a href=&#34;#fig:fig8-1&#34;&gt;1&lt;/a&gt; 來看，似乎年收入確實是隨着年齡增長而呈現直線增加的趨勢。但是公司編號 &lt;code&gt;KID = 4&lt;/code&gt; 的三名社員薪水似乎是在同一水平的並無明顯變化。這一點可以把四家公司社員的數據分開來看更加清晰:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- ggplot(d, aes(X, Y, shape=KID))
+p &amp;lt;- p + theme_bw(base_size=20)
+p &amp;lt;- p + geom_abline(intercept=coef[1], slope=coef[2], size=2, alpha=0.3)
+p &amp;lt;- p + facet_wrap(~KID)
+p &amp;lt;- p + geom_line(stat=&amp;#39;smooth&amp;#39;, method=&amp;#39;lm&amp;#39;, se=FALSE, size=1, color=&amp;#39;black&amp;#39;, linetype=&amp;#39;31&amp;#39;, alpha=0.8)
+p &amp;lt;- p + geom_point(size=3)
+p &amp;lt;- p + scale_shape_manual(values=c(16, 2, 4, 9))
+p &amp;lt;- p + labs(x=&amp;#39;X (age-23)&amp;#39;, y=&amp;#39;Y (10,000 Yen/year)&amp;#39;)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig8-2&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-2-1.png&#34; alt=&#34;年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: 年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;如果不考慮組間公司間差異&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;如果不考慮組間(公司間)差異&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;模型的數學描述&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+              Y[n] &amp;amp; = y_{\text{base}}[n] + \varepsilon[n] &amp;amp; n = 1, \dots, N \\
+y_{\text{base}}[n] &amp;amp; = a + bX[n]                           &amp;amp; n = 1, \dots, N \\
+    \varepsilon[n] &amp;amp; \sim \text{Normal}(0, \sigma_Y^2)     &amp;amp; n = 1, \dots, N \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;當然，如果你想，模型可以直接簡化成：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Y[n] \sim \text{Normal}(a + bX[n], \sigma^2_Y) \;\;\;\;\;\; n = 1, \dots, N \\
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;上述簡化版的模型，翻譯成Stan語言如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N;
+  real X[N];
+  real Y[N];
+}
+
+parameters{
+  real a;
+  real b;
+  real&amp;lt;lower = 0&amp;gt; s_Y;
+}
+
+model {
+  for (n in 1 : N)
+  Y[n] = normal(a + b * X[n], s_Y);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面的 R 代碼用來實現對上面 Stan 模型的擬合:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+d &amp;lt;- read.csv(file=&amp;#39;../../static/files/data-salary-2.txt&amp;#39;)
+d$KID &amp;lt;- as.factor(d$KID)
+
+data &amp;lt;- list(N=nrow(d), X=d$X, Y=d$Y)
+fit &amp;lt;- stan(file=&amp;#39;stanfiles/model8-1.stan&amp;#39;, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;model8-1&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 9e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.051415 seconds (Warm-up)
+## Chain 1:                0.036278 seconds (Sampling)
+## Chain 1:                0.087693 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model8-1&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.054178 seconds (Warm-up)
+## Chain 2:                0.03123 seconds (Sampling)
+## Chain 2:                0.085408 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model8-1&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.055162 seconds (Warm-up)
+## Chain 3:                0.033103 seconds (Sampling)
+## Chain 3:                0.088265 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model8-1&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 4e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.056718 seconds (Warm-up)
+## Chain 4:                0.03356 seconds (Sampling)
+## Chain 4:                0.090278 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: model8-1.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##         mean se_mean    sd    2.5%     25%     50%     75%   97.5% n_eff Rhat
+## a     376.97    0.58 24.54  329.21  360.86  377.27  393.00  425.66  1811    1
+## b      10.99    0.03  1.41    8.25   10.07   10.98   11.94   13.78  1865    1
+## s_Y    68.85    0.19  8.21   54.92   63.07   68.08   73.79   86.74  1938    1
+## lp__ -184.12    0.03  1.29 -187.39 -184.69 -183.79 -183.17 -182.66  1450    1
+## 
+## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:55:40 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;現在有更加方便的 &lt;code&gt;rstanarm&lt;/code&gt; 包可以幫助我們省去寫 Stan 模型的過程：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstanarm)
+
+rstanarm_results = stan_glm(Y ~ X, data=d, iter=2000, warmup=1000, cores=4)
+summary(rstanarm_results, probs=c(.025, .975), digits=3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Model Info:
+##  function:     stan_glm
+##  family:       gaussian [identity]
+##  formula:      Y ~ X
+##  algorithm:    sampling
+##  sample:       4000 (posterior sample size)
+##  priors:       see help(&amp;#39;prior_summary&amp;#39;)
+##  observations: 40
+##  predictors:   2
+## 
+## Estimates:
+##               mean    sd      2.5%    97.5%
+## (Intercept) 376.287  23.966 329.948 423.392
+## X            11.028   1.413   8.243  13.842
+## sigma        67.884   8.214  54.036  86.018
+## 
+## Fit Diagnostics:
+##            mean    sd      2.5%    97.5%
+## mean_PPD 547.732  14.914 517.835 576.914
+## 
+## The mean_ppd is the sample average posterior predictive distribution of the outcome variable (for details see help(&amp;#39;summary.stanreg&amp;#39;)).
+## 
+## MCMC diagnostics
+##               mcse  Rhat  n_eff
+## (Intercept)   0.416 0.999 3319 
+## X             0.024 1.000 3490 
+## sigma         0.145 1.000 3217 
+## mean_PPD      0.234 1.000 4047 
+## log-posterior 0.029 1.000 1758 
+## 
+## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看到強制不同公司社員的年收入來自同一個正態分佈時，方差顯得非常的大。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;如果要考慮組間差異&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;如果要考慮組間差異&lt;/h3&gt;
+&lt;p&gt;我們認爲每家公司社員新入職時的起點薪水不同(截距不同-隨機截距)，進入公司之後隨年齡增加的薪水幅度也不同(斜率不同-隨機斜率)。因此，用 &lt;span class=&#34;math inline&#34;&gt;\(a[1]\sim a[K], K = 1, 2, 3, 4\)&lt;/span&gt; 表示每家公司的截距，用 &lt;span class=&#34;math inline&#34;&gt;\(b[1] \sim b[K], K = 1, 2, 3, 4\)&lt;/span&gt; 表示每家公司薪水上升的斜率。那麼每家公司的薪水年齡線性回歸模型可以寫作是 &lt;span class=&#34;math inline&#34;&gt;\(a[K] + b[K] X, K = 1, 2, 3, 4\)&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模型數學描述&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Y[n] \sim \text{Normal}(a[\text{KID[n]}] + b[\text{KID}[n]] X[n], \sigma^2_Y) \\ n = 1, \dots, N
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;上述模型的 Stan 譯文如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N;
+  int K;
+  real X[N];
+  real Y[N];
+  int&amp;lt;lower = 1, upper = K&amp;gt; KID[N];
+}
+
+parameters {
+  real a[K];
+  real b[K];
+  real&amp;lt;lower = 0&amp;gt; s_Y; 
+}
+
+model {
+  for (n in 1:N)
+  Y[n] ~ normal(a[KID[n]] + b[KID[n]] * X[n], s_Y);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面的 R 代碼用來實現上面貝葉斯多組不同截距不同斜率線性回歸模型的擬合:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+d &amp;lt;- read.csv(file=&amp;#39;../../static/files/data-salary-2.txt&amp;#39;)
+
+data &amp;lt;- list(N=nrow(d), X=d$X, Y=d$Y, KID = d$KID, K = 4)
+fit &amp;lt;- stan(file=&amp;#39;stanfiles/model8-2.stan&amp;#39;, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;model8-2&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.12 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.291379 seconds (Warm-up)
+## Chain 1:                0.247714 seconds (Sampling)
+## Chain 1:                0.539093 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model8-2&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.307839 seconds (Warm-up)
+## Chain 2:                0.19135 seconds (Sampling)
+## Chain 2:                0.499189 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model8-2&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 5e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.345166 seconds (Warm-up)
+## Chain 3:                0.177124 seconds (Sampling)
+## Chain 3:                0.52229 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model8-2&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 4e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.325194 seconds (Warm-up)
+## Chain 4:                0.206306 seconds (Sampling)
+## Chain 4:                0.5315 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: model8-2.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##         mean se_mean     sd    2.5%     25%     50%     75%   97.5% n_eff Rhat
+## a[1]  387.11    0.27  14.17  359.31  377.78  387.20  396.47  415.13  2828    1
+## a[2]  329.03    0.33  16.43  296.89  317.97  328.89  340.33  360.46  2517    1
+## a[3]  314.11    0.75  34.43  246.03  291.69  313.70  335.87  382.48  2129    1
+## a[4]  748.39    2.88 153.50  446.07  643.82  746.53  853.26 1054.33  2834    1
+## b[1]    7.52    0.02   0.87    5.82    6.92    7.52    8.10    9.26  2604    1
+## b[2]   19.82    0.02   1.21   17.47   19.01   19.82   20.63   22.20  2438    1
+## b[3]   12.44    0.03   1.70    9.08   11.34   12.44   13.57   15.82  2595    1
+## b[4]   -0.93    0.12   6.20  -13.37   -5.14   -0.91    3.22   11.19  2827    1
+## s_Y    27.17    0.07   3.58   21.23   24.68   26.82   29.30   35.16  2695    1
+## lp__ -148.01    0.06   2.40 -153.78 -149.35 -147.61 -146.26 -144.55  1414    1
+## 
+## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:56:32 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;等級線性回歸的貝葉斯實現&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;等級線性回歸的貝葉斯實現&lt;/h2&gt;
+&lt;div id=&#34;模型機制-mechanism&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;模型機制 mechanism&lt;/h3&gt;
+&lt;p&gt;如果我們認爲每家公司的起點薪水 &lt;span class=&#34;math inline&#34;&gt;\(a[k]\)&lt;/span&gt; 服從正態分佈，且該正態分佈的平均值是全體公司的起點薪水的均值 &lt;span class=&#34;math inline&#34;&gt;\(a_\mu\)&lt;/span&gt;，方差是 &lt;span class=&#34;math inline&#34;&gt;\(\sigma^2_a\)&lt;/span&gt;。類似地，假設每家公司內隨着年齡增長而增加薪水的幅度 &lt;span class=&#34;math inline&#34;&gt;\(b[k]\)&lt;/span&gt; 也服從某個正態分佈，均值和方差分別是 &lt;span class=&#34;math inline&#34;&gt;\(b_\mu, \sigma^2_b\)&lt;/span&gt;。這樣我們就不僅僅是允許了各家公司的薪水年齡回歸直線擁有不同的斜率和截距，還對這些隨機斜率和截距的前概率分佈進行了設定。&lt;/p&gt;
+&lt;p&gt;此時，隨機效應模型的數學表達式就可以寫成下面這樣:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Y[n] &amp;amp;\sim \text{Normal}(a[\text{KID[n]}] + b[\text{KID}[n]] X[n], \sigma^2_Y) &amp;amp; n = 1, \dots, N \\
+a[k] &amp;amp;= a_\mu + a_\varepsilon[k]   &amp;amp; k = 1, \dots, K \\
+a_\varepsilon[k] &amp;amp; \sim \text{Normal}(0, \sigma^2_a) &amp;amp; k = 1, \dots, K \\
+b[k] &amp;amp; = b_\mu + b_\varepsilon[k]  &amp;amp; k = 1, \dots, K \\
+b_\varepsilon[k] &amp;amp;\sim \text{Normal}(0, \sigma^2_b) &amp;amp; k = 1, \dots, K
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;rstanarm&lt;/code&gt; 包可以使用下面的代碼實現&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstanarm)
+M1_stanlmer &amp;lt;- stan_lmer(formula = Y ~ X  + (X | KID), 
+                            data = d,
+                            seed = 1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;continuous&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 8.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.81 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 5.02763 seconds (Warm-up)
+## Chain 1:                1.63677 seconds (Sampling)
+## Chain 1:                6.6644 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;continuous&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 1.6e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.16 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 6.86217 seconds (Warm-up)
+## Chain 2:                2.63666 seconds (Sampling)
+## Chain 2:                9.49883 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;continuous&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 1.7e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.17 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 4.64937 seconds (Warm-up)
+## Chain 3:                2.72015 seconds (Sampling)
+## Chain 3:                7.36952 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;continuous&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 2e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.2 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 5.35582 seconds (Warm-up)
+## Chain 4:                2.13219 seconds (Sampling)
+## Chain 4:                7.488 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(M1_stanlmer, digits = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## stan_lmer
+##  family:       gaussian [identity]
+##  formula:      Y ~ X + (X | KID)
+##  observations: 40
+## ------
+##             Median MAD_SD
+## (Intercept) 359.02  15.02
+## X            12.80   2.98
+## 
+## Auxiliary parameter(s):
+##       Median MAD_SD
+## sigma 30.00   3.58 
+## 
+## Error terms:
+##  Groups   Name        Std.Dev. Corr 
+##  KID      (Intercept) 23.94         
+##           X            8.76    -0.26
+##  Residual             30.28         
+## Num. levels: KID 4 
+## 
+## ------
+## * For help interpreting the printed output see ?print.stanreg
+## * For info on the priors used see ?prior_summary.stanreg&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(M1_stanlmer, 
+        pars = c(&amp;quot;(Intercept)&amp;quot;, &amp;quot;X&amp;quot;,&amp;quot;sigma&amp;quot;, 
+                 &amp;quot;Sigma[KID:(Intercept),(Intercept)]&amp;quot;,
+                 &amp;quot;Sigma[KID:X,(Intercept)]&amp;quot;, &amp;quot;Sigma[KID:X,X]&amp;quot;),
+        probs = c(0.025, 0.975),
+        digits = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Model Info:
+##  function:     stan_lmer
+##  family:       gaussian [identity]
+##  formula:      Y ~ X + (X | KID)
+##  algorithm:    sampling
+##  sample:       4000 (posterior sample size)
+##  priors:       see help(&amp;#39;prior_summary&amp;#39;)
+##  observations: 40
+##  groups:       KID (4)
+## 
+## Estimates:
+##                                      mean    sd      2.5%    97.5%
+## (Intercept)                         358.72   18.63  322.31  394.35
+## X                                    12.59    3.97    3.57   20.91
+## sigma                                30.28    3.82   23.76   38.95
+## Sigma[KID:(Intercept),(Intercept)]  572.98 1381.86    1.70 3803.32
+## Sigma[KID:X,(Intercept)]            -54.05  190.09 -444.45  144.95
+## Sigma[KID:X,X]                       76.74  130.06    6.91  412.48
+## 
+## MCMC diagnostics
+##                                    mcse  Rhat  n_eff
+## (Intercept)                         0.38  1.00 2464 
+## X                                   0.14  1.00  771 
+## sigma                               0.08  1.00 2032 
+## Sigma[KID:(Intercept),(Intercept)] 33.93  1.01 1659 
+## Sigma[KID:X,(Intercept)]            4.80  1.00 1569 
+## Sigma[KID:X,X]                      4.34  1.01  898 
+## 
+## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;和非貝葉斯版本的概率論隨機效應線性回歸模型的結果相對比一下：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(lme4)
+M1 &amp;lt;- lmer(formula = Y ~ X  + (X | KID), 
+           data = d, 
+           REML = TRUE)
+summary(M1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Linear mixed model fit by REML [&amp;#39;lmerMod&amp;#39;]
+## Formula: Y ~ X + (X | KID)
+##    Data: d
+## 
+## REML criterion at convergence: 387.2
+## 
+## Scaled residuals: 
+##      Min       1Q   Median       3Q      Max 
+## -2.36969 -0.51837 -0.03545  0.76358  1.87881 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev. Corr 
+##  KID      (Intercept) 503.78   22.445        
+##           X            28.53    5.341   -1.00
+##  Residual             833.95   28.878        
+## Number of obs: 40, groups:  KID, 4
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept)  358.207     15.383  23.286
+## X             13.067      2.741   4.767
+## 
+## Correlation of Fixed Effects:
+##   (Intr)
+## X -0.848
+## convergence code: 0
+## boundary (singular) fit: see ?isSingular&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>泊松回歸模型的貝葉斯Stan實現</title>
@@ -7930,6 +8618,93 @@ a_3 \\
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\therefore a_1=\frac{|X_1|}{|X|}=1, \\
 a_2=\frac{|X_2|}{|X|}=0, \\
 a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「統計解析のための線形代数」復習筆記 24</title>
+      <link>https://wangcc.me/post/inverse-matrix-method/</link>
+      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/inverse-matrix-method/</guid>
+      <description>
+
+
+&lt;div id=&#34;逆矩陣法解連立一次方程式&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;逆矩陣法解連立一次方程式&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; 為&lt;a href=&#34;https://winterwang.github.io/post/2017-07-06/&#34;&gt;正則矩陣&lt;/a&gt;時(&lt;span class=&#34;math inline&#34;&gt;\(|X|\neq0\)&lt;/span&gt;)，給 &lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt; 等式兩邊同時乘以 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt;，可以得到 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}X\underline{a}=X^{-1}\underline{y}\rightarrow E\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。由此方法可以得到 &lt;span class=&#34;math inline&#34;&gt;\(\underline{a}=X^{-1}\underline{y}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div id=&#34;練習-解下列連立一次方程式&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;練習 解下列連立一次方程式&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\left\{
+\begin{array}{ll}
+a_1+2a_2+a_3  = 2\\
+2a_1+a_2+a_3  = 3\\
+a_1+a_2+2a_3  = 3
+\end{array}
+\right.
+\end{align}\]&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;解&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;解&lt;/h4&gt;
+&lt;p&gt;元連立方程式可以寫作&lt;span class=&#34;math inline&#34;&gt;\(X\underline{a}=\underline{y}\)&lt;/span&gt;，其中
+&lt;span class=&#34;math display&#34;&gt;\[X=\left(
+\begin{array}{c}
+1 &amp;amp; 2 &amp;amp; 1 \\
+2 &amp;amp; 1 &amp;amp; 1 \\
+1 &amp;amp; 1 &amp;amp; 2
+\end{array}
+\right), \underline{a}=\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+a_3 \\
+\end{array}
+\right), \underline{y}=\left(
+\begin{array}{c}
+2 \\
+3 \\
+3 \\
+\end{array}
+\right)\]&lt;/span&gt;
+之前我們已經用&lt;a href=&#34;https://winterwang.github.io/post/2017-07-07/&#34;&gt;行的基本變形法&lt;/a&gt;和&lt;a href=&#34;https://winterwang.github.io/post/inverse-matrix/&#34;&gt;逆矩陣法&lt;/a&gt;分別計算過了 &lt;span class=&#34;math inline&#34;&gt;\(X^{-1}\)&lt;/span&gt; ：
+&lt;span class=&#34;math display&#34;&gt;\[X^{-1}=\left(\begin{array}{c}
+-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; -3/4\\
+\end{array}\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\therefore\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\underline{a} &amp;amp; =X^{-1}\underline{y} \\
+&amp;amp; =\left(\begin{array}{c}
+-1/4 &amp;amp; 3/4 &amp;amp; -1/4\\
+3/4 &amp;amp; -1/4 &amp;amp; -1/4\\
+-1/4 &amp;amp; -1/4 &amp;amp; 3/4\\
+\end{array}\right)\left(
+\begin{array}{c}
+2 \\
+3 \\
+3 \\
+\end{array}
+\right)\\
+&amp;amp;=\left(
+\begin{array}{c}
+-1/4\times2+3/4\times3-1/4\times3 \\
+3/4\times1+(-1/4)\times3-1/4\times3 \\
+-1/4\times2-1/4\times3+3/4\times3 \\
+\end{array}
+\right) \\
+&amp;amp; = \left(
+\begin{array}{c}
+1 \\
+0 \\
+1 \\
+\end{array}
+\right)
+\end{align} \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
