@@ -98,12 +98,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/bayesian/</loc>
+    <loc>https://wangcc.me/categories/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/bayesian/</loc>
+    <loc>https://wangcc.me/tags/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -153,12 +153,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/sorrow/</loc>
+    <loc>https://wangcc.me/tags/sorrow/</loc>
     <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/sorrow/</loc>
+    <loc>https://wangcc.me/categories/sorrow/</loc>
     <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -220,6 +220,11 @@
   <url>
     <loc>https://wangcc.me/post/logistic-rstan/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/simple-linear-regression-using-rstan/</loc>
+    <lastmod>2019-01-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -613,12 +618,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/dictation/</loc>
+    <loc>https://wangcc.me/tags/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/dictation/</loc>
+    <loc>https://wangcc.me/categories/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   

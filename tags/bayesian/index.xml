@@ -6785,6 +6785,846 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
     </item>
     
     <item>
+      <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>
+      <link>https://wangcc.me/post/simple-linear-regression-using-rstan/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/simple-linear-regression-using-rstan/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#step-1-確認數據分佈&#34;&gt;Step 1, 確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-2-描述線性模型&#34;&gt;Step 2, 描述線性模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-3-寫下stan模型&#34;&gt;Step 3, 寫下Stan模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-4-診斷stan貝葉斯模型的收斂程度&#34;&gt;Step 4, 診斷Stan貝葉斯模型的收斂程度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-5修改mcmc條件設定&#34;&gt;Step 5，修改MCMC條件設定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-6-並行平行計算的設定&#34;&gt;Step 6, 並行（平行）計算的設定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-7-計算貝葉斯可信區間和貝葉斯預測區間&#34;&gt;Step 7, 計算貝葉斯可信區間和貝葉斯預測區間&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#練習題&#34;&gt;練習題&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&#34;&gt;數據 data-salary.txt&lt;/a&gt;是架空的。&lt;/p&gt;
+&lt;p&gt;某公司社員的年齡 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;（歲），和年收入 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;（萬日元）的數據如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;X,Y
+24,472
+24,403
+26,454
+32,575
+33,546
+35,781
+38,750
+40,601
+40,814
+43,792
+43,745
+44,837
+48,868
+52,988
+56,1092
+56,1007
+57,1233
+58,1202
+59,1123
+59,1314
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;年收入 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 被認爲是由基本年收 &lt;span class=&#34;math inline&#34;&gt;\(y_{base}\)&lt;/span&gt; 和其他影響因素 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 構成。由於該公司是典型的年功序列式的日本傳統企業，所以基本年收本身和社員年齡成正比例。 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 則被認爲是由該員工當年的業績等隨機誤差造成的，但是所有員工的 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; 的均值被認爲是零。&lt;/p&gt;
+&lt;p&gt;g分析目的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;借用這個數據來分析並回答如下的問題：在該公司如果採用了一名50歲的員工，他/她的年收入的預期值會是多少。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;step-1-確認數據分佈&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 1, 確認數據分佈&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Salary &amp;lt;- read.table(&amp;quot;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap04/input/data-salary.txt&amp;quot;, 
+                     sep = &amp;quot;,&amp;quot;, header = T)
+library(ggplot2)
+
+ggplot(Salary, aes(x = X, y = Y)) + 
+  geom_point(shape = 1, size = 4)  + theme(plot.subtitle = element_text(vjust = 1), 
+    plot.caption = element_text(vjust = 1), 
+    axis.line = element_line(colour = &amp;quot;bisque4&amp;quot;, 
+        size = 0.2, linetype = &amp;quot;solid&amp;quot;), 
+    axis.ticks = element_line(size = 0.7), 
+    axis.title = element_text(size = 16), 
+    axis.text = element_text(size = 16, colour = &amp;quot;gray0&amp;quot;), 
+    panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) +
+  scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 橫軸爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，縱軸爲 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的散點圖
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;從這個散點圖的特徵可以看出年收入確實似乎和年齡呈線性正相關。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2-描述線性模型&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 2, 描述線性模型&lt;/h2&gt;
+&lt;p&gt;這個簡單線性回歸模型的數學表達式可以描述如下：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+Y[n]        = y_{base}[n] + \varepsilon [n]&amp;amp;  n = 1,2,\dots,N \\
+y_{base}[n] = a + bX[n]                    &amp;amp;  n = 1,2,\dots,N \\
+\varepsilon[n] \sim \text{Normal}(0, \sigma) &amp;amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;同樣的模型你可以簡化描述成爲：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Y[n] \sim \text{Normal}(a + bX[n], \sigma)\;\; n = 1,2,\dots,N
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;那麼如果一個統計師只有經過傳統概率論觀點的訓練，他/她會在R裏面這樣來分析這個數據：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;res_lm &amp;lt;- lm(Y ~ X, data = Salary)
+summary(res_lm)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Y ~ X, data = Salary)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -155.471  -51.523   -6.663   52.822  141.349 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept) -119.697     68.148  -1.756    0.096 .  
+## X             21.904      1.518  14.428 2.47e-11 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 79.1 on 18 degrees of freedom
+## Multiple R-squared:  0.9204, Adjusted R-squared:  0.916 
+## F-statistic: 208.2 on 1 and 18 DF,  p-value: 2.466e-11&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# 用這個線性回歸模型來對上面模型中的參數作出預測：
+
+X_new &amp;lt;- data.frame(X=23:60)
+conf_95 &amp;lt;- predict(res_lm, X_new, interval = &amp;quot;confidence&amp;quot;, level = 0.95)
+pred_95 &amp;lt;- predict(res_lm, X_new, interval = &amp;quot;prediction&amp;quot;, level = 0.95)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;temp_var &amp;lt;- predict(res_lm, interval=&amp;quot;prediction&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in predict.lm(res_lm, interval = &amp;quot;prediction&amp;quot;): predictions on current data refer to _future_ responses&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;new_df &amp;lt;- cbind(Salary, temp_var)
+
+ggplot(new_df, aes(x = X, y = Y)) + 
+  geom_point(shape = 1, size = 4)  + theme(plot.subtitle = element_text(vjust = 1), 
+    plot.caption = element_text(vjust = 1), 
+    axis.line = element_line(colour = &amp;quot;bisque4&amp;quot;, 
+        size = 0.2, linetype = &amp;quot;solid&amp;quot;), 
+    axis.ticks = element_line(size = 0.7), 
+    axis.title = element_text(size = 16), 
+    axis.text = element_text(size = 16, colour = &amp;quot;gray0&amp;quot;), 
+    panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) + 
+  geom_smooth(method = lm, se=TRUE, size = 0.3)+
+  scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400)) +
+   geom_line(aes(y=lwr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)+
+    geom_line(aes(y=upr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step2&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3-寫下stan模型&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 3, 寫下Stan模型&lt;/h2&gt;
+&lt;pre class=&#34;stan&#34;&gt;&lt;code&gt;data {
+    int N; 
+    real X[N]; 
+    real Y[N];
+}
+
+parameters {
+    real a;
+    real b;
+    real&amp;lt;lower=0&amp;gt; sigma;
+}
+
+model {
+    for(n in 1:N) {
+        Y[n] ~ normal(a + b*X[n], sigma);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;參數部分 &lt;code&gt;real&amp;lt;lower=0&amp;gt; sigma&lt;/code&gt; 的代碼表示標準差不可採集負數作爲樣本。&lt;/p&gt;
+&lt;p&gt;實際運行上面的Stan代碼：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+data &amp;lt;- list(N=nrow(Salary), X=Salary$X, Y = Salary$Y)
+fit &amp;lt;- sampling(model4_5, data, seed = 1234) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.087971 seconds (Warm-up)
+## Chain 1:                0.057222 seconds (Sampling)
+## Chain 1:                0.145193 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.094807 seconds (Warm-up)
+## Chain 2:                0.050914 seconds (Sampling)
+## Chain 2:                0.145721 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.085013 seconds (Warm-up)
+## Chain 3:                0.050383 seconds (Sampling)
+## Chain 3:                0.135396 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 3e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.095625 seconds (Warm-up)
+## Chain 4:                0.050903 seconds (Sampling)
+## Chain 4:                0.146528 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(fit)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: 5b73686886069c0bad70513d4ea4141a.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##          mean se_mean    sd    2.5%     25%     50%    75%  97.5% n_eff Rhat
+## a     -124.19    2.16 73.83 -270.62 -173.33 -125.17 -74.17  20.01  1164 1.01
+## b       22.01    0.05  1.65   18.86   20.88   22.00  23.09  25.25  1236 1.01
+## sigma   84.64    0.42 15.31   60.75   73.66   83.09  93.21 117.33  1345 1.00
+## lp__   -93.62    0.04  1.28  -96.78  -94.21  -93.32 -92.70 -92.17  1055 1.01
+## 
+## Samples were drawn using NUTS(diag_e) at Wed Jan  8 21:57:28 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;輸出結果的前三行，是該次MCMC的設定條件，其中模型名稱是Rmarkdown文件中隨機產生的。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第二行則說明的是該次MCMC進行了4條鏈的採樣，每條鏈2000次，其中前1000次被當作是 burn-in (或者叫 warmup)。可以看到一共獲得了4000個事後樣本。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接下來的五行是參數的事後樣本的事後分析總結，一共有11列。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第1列是參數名稱，最後一個 &lt;code&gt;lp__&lt;/code&gt;是Stan特有的算法得到的產物，具體解釋爲對數事後概率 (log posterior)，當然它也需要得到收斂才行。&lt;/li&gt;
+&lt;li&gt;第2列是獲得的4000個參數的事後樣本的事後平均值(posterior mean)。例如&lt;code&gt;b&lt;/code&gt;（回歸直線的斜率）的事後平均值是21.96，也就是說年齡每增加一歲，基本年收入平均增加21.96萬日元。你可以和之前的概率論算法相比較(&lt;code&gt;b = 21.904&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;第3列&lt;code&gt;se_mean&lt;/code&gt;是事後平均值的標準誤(standard error of posterior mean)。說白了是MCMC事後樣本的方差除以第10列的有效樣本量&lt;code&gt;n_eff&lt;/code&gt;之後取根號獲得的值。&lt;/li&gt;
+&lt;li&gt;第4列&lt;code&gt;sd&lt;/code&gt;是MCMC事後樣本的標準差(standard deviation of posterior MCMC sample)。&lt;/li&gt;
+&lt;li&gt;第5-9列是MCMC事後樣本的四分位點。也就是貝葉斯統計算法獲得的事後可信區間。&lt;/li&gt;
+&lt;li&gt;第10列&lt;code&gt;n_eff&lt;/code&gt;是Stan在基於事後樣本自相關程度來判斷的有效事後樣本量大小。爲了有效地計算和繪製事後分佈的統計量，這個有效樣本量需要至少有100個以上吧（作者觀點）。如果報告給出的事後有效樣本量過小的話也是模型收斂不佳的表現之一。&lt;/li&gt;
+&lt;li&gt;第11列&lt;code&gt;Rhat&lt;/code&gt;&lt;span class=&#34;math inline&#34;&gt;\((\hat R)\)&lt;/span&gt;是主要用於判斷模型是否達到收斂的重要指標，每個參數都會被計算一個&lt;code&gt;Rhat&lt;/code&gt;值。當MCMC鏈條數在3以上，且同時所有的模型參數的 &lt;code&gt;Rhat &amp;lt; 1.1&lt;/code&gt;的話，可以認爲模型達到了良好的收斂。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-4-診斷stan貝葉斯模型的收斂程度&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 4, 診斷Stan貝葉斯模型的收斂程度&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggmcmc)
+
+ggmcmc(ggs(fit, inc_warmup = TRUE, stan_include_auxiliar = TRUE), plot = &amp;quot;traceplot&amp;quot;, dev_type_html = &amp;quot;png&amp;quot;, 
+       file = &amp;quot;trace.html&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面的代碼，會自動生成四個模型參數的軌跡MCMC鏈式圖報告。&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step4&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/img/traceplot-model4-5.png&#34; alt=&#34;用ggmcmc函數製作而成的MCMC鏈式圖報告。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: 用ggmcmc函數製作而成的MCMC鏈式圖報告。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
+
+color_scheme_set(&amp;quot;mix-brightblue-gray&amp;quot;)
+
+posterior2 &amp;lt;- rstan::extract(fit, inc_warmup = TRUE, permuted = FALSE)
+
+p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0,
+                facet_args = list(nrow = 2, labeller = label_parsed))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step41&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step41-1.png&#34; alt=&#34;用 bayesplot包數繪製的MCMC鏈式圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_acf_bar(posterior2)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step42&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step42-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 5: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_dens_overlay(posterior2, color_chains = T)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step43&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step43-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本密度分佈圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 6: 用 bayesplot包數繪製的事後樣本密度分佈圖。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-5修改mcmc條件設定&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 5，修改MCMC條件設定&lt;/h2&gt;
+&lt;p&gt;進行貝葉斯模型擬合的過程中，常常需要不停地修改模型的條件，例如縮短warm-up等。下面的Rstan代碼可以實現簡便地頻繁修改MCMC條件設定：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# library(rstan) uncomment if run for the first time
+data &amp;lt;- list(N=nrow(Salary), X=Salary$X, Y = Salary$Y)
+fit2 &amp;lt;- sampling(
+    model4_5, 
+    data = data, 
+    pars = c(&amp;quot;b&amp;quot;, &amp;quot;sigma&amp;quot;), 
+    init = function(){
+      list(a = runif(1, -10, 10), b = runif(1, 0, 10), sigma = 10)
+    },
+    seed = 123,
+    chains = 3, iter = 1000, warmup = 200, thin = 2
+) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 6e-06 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 1: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 201 / 1000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 300 / 1000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 400 / 1000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 500 / 1000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.058525 seconds (Warm-up)
+## Chain 1:                0.037574 seconds (Sampling)
+## Chain 1:                0.096099 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 2: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 201 / 1000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 300 / 1000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 400 / 1000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 500 / 1000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.042212 seconds (Warm-up)
+## Chain 2:                0.032959 seconds (Sampling)
+## Chain 2:                0.075171 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;5b73686886069c0bad70513d4ea4141a&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 5e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 3: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 3: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 3: Iteration: 201 / 1000 [ 20%]  (Sampling)
+## Chain 3: Iteration: 300 / 1000 [ 30%]  (Sampling)
+## Chain 3: Iteration: 400 / 1000 [ 40%]  (Sampling)
+## Chain 3: Iteration: 500 / 1000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.044149 seconds (Warm-up)
+## Chain 3:                0.033624 seconds (Sampling)
+## Chain 3:                0.077773 seconds (Total)
+## Chain 3:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(fit2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: 5b73686886069c0bad70513d4ea4141a.
+## 3 chains, each with iter=1000; warmup=200; thin=2; 
+## post-warmup draws per chain=400, total post-warmup draws=1200.
+## 
+##         mean se_mean    sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
+## b      21.93    0.07  1.70  18.79  20.78  21.91  23.03  25.63   608 1.00
+## sigma  85.42    0.54 16.03  61.11  74.10  82.71  94.28 125.01   876 1.00
+## lp__  -93.68    0.07  1.38 -97.06 -94.30 -93.29 -92.66 -92.16   405 1.01
+## 
+## Samples were drawn using NUTS(diag_e) at Wed Jan  8 21:57:32 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中&lt;code&gt;fit&lt;/code&gt;的最後一行是修改各種條件的示例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;chains&lt;/code&gt;至少要三條；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iter&lt;/code&gt;一開始可以設定在500~1000左右，確定模型可以收斂以後，再加大這個數值以獲得穩定的事後統計量，多多益善；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;warmup&lt;/code&gt;，也就MCMC採樣開始後多少樣本可以丟棄。這個數值需要參考trace plot；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thin&lt;/code&gt;，通常只需要保持默認值 1。和WinBUGS, JAGS相比Stan算法採集的事後樣本自相關比較低。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-6-並行平行計算的設定&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 6, 並行（平行）計算的設定&lt;/h2&gt;
+&lt;p&gt;如果你寫出來的貝葉斯模型需要很長時間的計算和收斂，可以充分利用你的計算機的多核計算，把每條MCMC鏈單獨進行計算加速這個過程：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parallel::detectCores() #我的桌上型電腦有8個核可以用於平行計算&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 8&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但是平行計算時如果計算中出錯則由於每條鏈都是相互獨立地進行，報錯就減少了。所以如果要使用多核同時計算的話，建議先減少採樣數，確認不會報錯以後再用多核平行計算增加採樣量。&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-7-計算貝葉斯可信區間和貝葉斯預測區間&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 7, 計算貝葉斯可信區間和貝葉斯預測區間&lt;/h2&gt;
+&lt;p&gt;這一步就又回到一開始提出的研究問題上來，我們來計算基本年收的貝葉斯可信區間和貝葉斯預測區間。&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ms &amp;lt;- rstan::extract(fit)
+
+quantile(ms$b, probs = c(0.025, 0.975))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##     2.5%    97.5% 
+## 18.86184 25.25032&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_mcmc &amp;lt;- data.frame(a = ms$a, b = ms$b, sigma = ms$sigma)
+
+head(d_mcmc)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            a        b     sigma
+## 1 -128.32245 21.95225  63.50481
+## 2 -150.52013 22.34740  94.10192
+## 3 -162.53822 21.63535 104.07732
+## 4 -104.41856 22.29088  71.17637
+## 5  -41.59076 20.22659  75.16675
+## 6 -170.65722 23.30889  65.64865&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(d_mcmc, aes(x = a, y = b)) + 
+ geom_point(shape = 1, size = 4)
+
+ggExtra::ggMarginal(
+  p = p1,
+  type = &amp;#39;density&amp;#39;,
+  margins = &amp;#39;both&amp;#39;,
+  size = 4,
+  colour = &amp;#39;black&amp;#39;,
+  fill = &amp;#39;#2D077A&amp;#39;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step71&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step71-1.png&#34; alt=&#34;MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 7: MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;從圖&lt;a href=&#34;#fig:step71&#34;&gt;7&lt;/a&gt;中可觀察到該貝葉斯線性模型獲得的事後模型參數樣本中，截距&lt;code&gt;a&lt;/code&gt;，和斜率&lt;code&gt;b&lt;/code&gt;之間呈極強的負相關關係。也就是說，截距是工資的起點（年齡爲0歲時），這個起點的理論值越低，斜率越大（歲年齡增加工資上升的速度越大）。&lt;/p&gt;
+&lt;p&gt;根據上面分析的結果，下面的R代碼可以計算一名50歲的人被這家公司採用的時候，她/他的預期基本年收入的分佈（中獲得的MCMC樣本），和她/他的預期總年收的預測分佈（中獲得的MCMC樣本）。&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;N_mcmc &amp;lt;- length(ms$lp__)
+y50_base &amp;lt;- ms$a + ms$b*50
+y50 &amp;lt;- rnorm(n = N_mcmc, mean = y50_base, sd = ms$sigma)
+d_mcmc &amp;lt;- data.frame(a = ms$a, b = ms$b, sigma = ms$sigma, y50_base, y50)
+head(d_mcmc)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            a        b     sigma  y50_base       y50
+## 1 -128.32245 21.95225  63.50481  969.2902 1064.1377
+## 2 -150.52013 22.34740  94.10192  966.8499 1040.8142
+## 3 -162.53822 21.63535 104.07732  919.2291  933.8784
+## 4 -104.41856 22.29088  71.17637 1010.1256 1047.1721
+## 5  -41.59076 20.22659  75.16675  969.7389  968.3444
+## 6 -170.65722 23.30889  65.64865  994.7872  996.1507&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# the following codes are also available from the author&amp;#39;s page:
+# https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap04/fig4-8.R
+# library(ggplot2)
+source(&amp;#39;commonRstan.R&amp;#39;)
+
+# load(&amp;#39;output/result-model4-5.RData&amp;#39;)
+ms &amp;lt;- rstan::extract(fit)
+
+X_new &amp;lt;- 23:60
+N_X &amp;lt;- length(X_new)
+N_mcmc &amp;lt;- length(ms$lp__)
+
+set.seed(1234)
+y_base_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+for (i in 1:N_X) {
+  y_base_mcmc[,i] &amp;lt;- ms$a + ms$b * X_new[i]
+  y_mcmc[,i] &amp;lt;- rnorm(n=N_mcmc, mean=y_base_mcmc[,i], sd=ms$sigma)
+}
+
+customize.ggplot.axis &amp;lt;- function(p) {
+  p &amp;lt;- p + labs(x=&amp;#39;X&amp;#39;, y=&amp;#39;Y&amp;#39;)
+  p &amp;lt;- p + scale_y_continuous(breaks=seq(from=200, to=1400, by=400))
+  p &amp;lt;- p + coord_cartesian(xlim=c(22, 61), ylim=c(200, 1400))
+  return(p)
+}
+
+d_est &amp;lt;- data.frame.quantile.mcmc(x=X_new, y_mcmc=y_base_mcmc)
+p &amp;lt;- ggplot.5quantile(data=d_est)
+p &amp;lt;- p + geom_point(data=Salary, aes(x=X, y=Y), shape=1, size=3)
+p &amp;lt;- customize.ggplot.axis(p)
+# ggsave(file=&amp;#39;output/fig4-8-left.png&amp;#39;, plot=p, dpi=300, w=4, h=3)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step72&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step72-1.png&#34; alt=&#34;MCMC樣本計算獲得的基本年收的貝葉斯可信區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 8: MCMC樣本計算獲得的基本年收的貝葉斯可信區間。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_est &amp;lt;- data.frame.quantile.mcmc(x=X_new, y_mcmc=y_mcmc)
+p &amp;lt;- ggplot.5quantile(data=d_est)
+p &amp;lt;- p + geom_point(data=Salary, aes(x=X, y=Y), shape=1, size=3)
+p &amp;lt;- customize.ggplot.axis(p)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step73&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step73-1.png&#34; alt=&#34;MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 9: MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ggsave(file=&amp;#39;output/fig4-8-right.png&amp;#39;, plot=p, dpi=300, w=4, h=3)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;練習題&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;練習題&lt;/h2&gt;
+&lt;p&gt;用模擬數據來嘗試進行貝葉斯t檢驗&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+N1 &amp;lt;- 30
+N2 &amp;lt;- 20
+Y1 &amp;lt;- rnorm(n=N1, mean=0, sd=5)
+Y2 &amp;lt;- rnorm(n=N2, mean=1, sd=4)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;請繪製上面代碼生成的兩組數據的示意圖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- data.frame(group=1, Y=Y1)
+d2 &amp;lt;- data.frame(group=2, Y=Y2)
+d &amp;lt;- rbind(d1, d2)
+d$group &amp;lt;- as.factor(d$group)
+
+p &amp;lt;- ggplot(data=d, aes(x=group, y=Y, group=group, col=group))
+p &amp;lt;- p + geom_boxplot(outlier.size=0)
+p &amp;lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:exe11&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/exe11-1.png&#34; alt=&#34;隨機生成的兩組數據的散點圖和箱式圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 10: 隨機生成的兩組數據的散點圖和箱式圖。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#ggsave(file=&amp;#39;fig-ex1.png&amp;#39;, plot=p, dpi=300, w=4, h=3)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;寫下相當於t檢驗的數學式，表示各組之間方差或者標準差如果相等時，均值比較的檢驗模型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;hypotheses:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;observations in each group follow a normal distribution&lt;/li&gt;
+&lt;li&gt;all observations are independent&lt;/li&gt;
+&lt;li&gt;The two population variance/standard deviations are known (and can be considered equal)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\text{H}_0: \mu_2 - \mu_1 = 0 \\
+\text{H}_1: \mu_2 - \mu_1 \neq 0 \\ 
+\text{If H}_0 \text{ is true, then:} \\
+Z=\frac{\bar{Y_2} - \bar{Y_1}}{\sqrt{(\sigma_2^2/n_2) + (\sigma_1^2/n_1)}} \\
+\text{follows a standard normal distribution with zero mean} \\
+\Rightarrow \text{ if two variances are considered the same}\\ 
+Y_1[n] \sim N(\mu_1, \sigma) \;\; n = 1,2,\dots,N \\
+Y_2[n] \sim N(\mu_2, \sigma) \;\; n = 1,2,\dots,N
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;寫下上一步模型的Stan代碼，並嘗試在R裏運行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Stan代碼如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N1;
+  int N2;
+  real Y1[N1];
+  real Y2[N2];
+}
+
+parameters {
+  real mu1;
+  real mu2;
+  real&amp;lt;lower=0&amp;gt; sigma;
+}
+
+model {
+  for (n in 1:N1)
+    Y1[n] ~ normal(mu1, sigma);
+  for (n in 1:N2)
+    Y2[n] ~ normal(mu2, sigma);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;R代碼如下：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+data &amp;lt;- list(N1=N1, N2=N2, Y1=Y1, Y2=Y2)
+exe13 &amp;lt;- stan_model(file = &amp;quot;stanfiles/ex3.stan&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## recompiling to avoid crashing R session&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- sampling(exe13, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.7e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.17 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.028613 seconds (Warm-up)
+## Chain 1:                0.05236 seconds (Sampling)
+## Chain 1:                0.080973 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 3e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.029935 seconds (Warm-up)
+## Chain 2:                0.02831 seconds (Sampling)
+## Chain 2:                0.058245 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.027918 seconds (Warm-up)
+## Chain 3:                0.022479 seconds (Sampling)
+## Chain 3:                0.050397 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;ex3&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 3e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.026779 seconds (Warm-up)
+## Chain 4:                0.021119 seconds (Sampling)
+## Chain 4:                0.047898 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: ex3.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##         mean se_mean   sd    2.5%    25%    50%    75%  97.5% n_eff Rhat
+## mu1    -0.24    0.01 0.80   -1.83  -0.77  -0.23   0.29   1.34  3539    1
+## mu2     1.62    0.02 1.02   -0.38   0.95   1.63   2.28   3.61  3707    1
+## sigma   4.48    0.01 0.47    3.67   4.16   4.45   4.76   5.53  3401    1
+## lp__  -97.75    0.03 1.26 -101.02 -98.31 -97.41 -96.82 -96.32  1744    1
+## 
+## Samples were drawn using NUTS(diag_e) at Wed Jan  8 22:05:00 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;從獲取到的事後參數的MCMC樣本計算 &lt;span class=&#34;math inline&#34;&gt;\(\text{Prob}[\mu_1 &amp;lt; \mu_2]\)&lt;/span&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ms &amp;lt;- extract(fit)
+prob &amp;lt;- mean(ms$mu1 &amp;lt; ms$mu2)  #=&amp;gt; 0.932
+prob&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.92425&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;所以可以認爲地一組均值，小於第二組均值的事後概率是93.2%&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;如果不能認爲兩組的方差相等的話，模型又該改成什麼樣子？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Y_1[n] \sim N(\mu_1, \sigma_1) \;\; n = 1,2,\dots,N \\
+Y_2[n] \sim N(\mu_2, \sigma_2) \;\; n = 1,2,\dots,N
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N1;
+  int N2;
+  real Y1[N1];
+  real Y2[N2];
+}
+
+parameters {
+  real mu1;
+  real mu2;
+  real&amp;lt;lower=0&amp;gt; sigma1;
+  real&amp;lt;lower=0&amp;gt; sigma2;
+}
+
+model {
+  for (n in 1:N1)
+    Y1[n] ~ normal(mu1, sigma1);
+  for (n in 1:N2)
+    Y2[n] ~ normal(mu2, sigma2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面的代碼相當於實施Welch的t檢驗：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+data &amp;lt;- list(N1=N1, N2=N2, Y1=Y1, Y2=Y2)
+exe15 &amp;lt;- stan_model(file = &amp;quot;stanfiles/ex5.stan&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## recompiling to avoid crashing R session&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit &amp;lt;- sampling(exe15, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;ex5&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.1 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.030397 seconds (Warm-up)
+## Chain 1:                0.024678 seconds (Sampling)
+## Chain 1:                0.055075 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;ex5&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 3e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Error in sampler$call_sampler(args_list[[i]]) : 
+##   c++ exception (unknown reason)
+## character(0)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## error occurred during calling the sampler; sampling not done&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Stan model &amp;#39;ex5&amp;#39; does not contain samples.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ms &amp;lt;- rstan::extract(fit)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Stan model &amp;#39;ex5&amp;#39; does not contain samples.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;prob &amp;lt;- mean(ms$mu1 &amp;lt; ms$mu2)  #=&amp;gt; 0.93725
+prob&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rstan Wonderful R-(1)</title>
       <link>https://wangcc.me/post/rstan-wonderful-r/</link>
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
