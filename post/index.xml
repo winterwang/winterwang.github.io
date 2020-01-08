@@ -7739,6 +7739,659 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
     </item>
     
     <item>
+      <title>Rstan Wonderful R-(3)</title>
+      <link>https://wangcc.me/post/rstan-wonderful-r3/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/rstan-wonderful-r3/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#多重回歸-multiple-regression&#34;&gt;多重回歸 multiple regression&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#step-1.-確認數據分佈&#34;&gt;Step 1. 確認數據分佈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-2.-寫下數學模型&#34;&gt;Step 2. 寫下數學模型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-3.-看圖確認模型擬合狀況&#34;&gt;Step 3. 看圖確認模型擬合狀況&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-4.-mcmc-樣本的散點圖矩陣&#34;&gt;Step 4. MCMC 樣本的散點圖矩陣&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;多重回歸-multiple-regression&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;多重回歸 multiple regression&lt;/h1&gt;
+&lt;p&gt;本章使用的數據，大學生出勤記錄也是&lt;a href=&#34;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&#34;&gt;架空的數據&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;有大學記錄了50名大學生的出勤狀況：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A,Score,Y
+0,69,0.286
+1,145,0.196
+0,125,0.261
+1,86,0.109
+1,158,0.23
+0,133,0.35
+0,111,0.33
+1,147,0.194
+0,146,0.413
+0,145,0.36
+1,141,0.225
+0,137,0.423
+1,118,0.186
+0,111,0.287
+...
+0,99,0.268
+1,99,0.234&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;: 是學生大學二年級時進行的問卷調查時回答是否喜歡打零工的結果（0:不喜歡打工；1:喜歡打工）&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;: 是大學二年級時進行的問卷調查時計算的該學生對學習是否感興趣的數值評分(200分滿分，分數越高，該學生越熱愛學習)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;: 是該學生一年內的出勤率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在本次分析範例中，把&lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;出勤率當作是連續型結果變量，我們來用Stan實施多重回歸分析，回答學生喜歡打零工與否，和學生對學習的熱情程度兩個變量能解釋多少出勤率。&lt;/p&gt;
+&lt;div id=&#34;step-1.-確認數據分佈&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 1. 確認數據分佈&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# The following figure codes come from the authors website: 
+# https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/fig5-1.R
+library(ggplot2)
+library(GGally)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Registered S3 method overwritten by &amp;#39;GGally&amp;#39;:
+##   method from   
+##   +.gg   ggplot2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(123)
+d &amp;lt;- read.csv(file=&amp;#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&amp;#39;, header = T)
+d$A &amp;lt;- as.factor(d$A)
+
+N_col &amp;lt;- ncol(d)
+ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;)
+
+for(i in 1:N_col) {
+  x &amp;lt;- d[,i]
+  p &amp;lt;- ggplot(data.frame(x, A=d$A), aes(x))
+  p &amp;lt;- p + theme_bw(base_size=14)
+  p &amp;lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+  if (class(x) == &amp;#39;factor&amp;#39;) {
+    p &amp;lt;- p + geom_bar(aes(fill=A), color=&amp;#39;grey5&amp;#39;)
+  } else {
+    bw &amp;lt;- (max(x)-min(x))/10
+    p &amp;lt;- p + geom_histogram(binwidth=bw, aes(fill=A), color=&amp;#39;grey5&amp;#39;) #繪製柱狀圖
+    p &amp;lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&amp;#39;density&amp;#39;) #添加概率密度曲線
+  }
+  p &amp;lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=colnames(d)[i]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  p &amp;lt;- p + scale_fill_manual(values=alpha(c(&amp;#39;white&amp;#39;, &amp;#39;grey40&amp;#39;), 0.5))
+  ggp &amp;lt;- putPlot(ggp, p, i, i)
+}
+
+zcolat &amp;lt;- seq(-1, 1, length=81)
+zcolre &amp;lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
+
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &amp;lt;- as.numeric(d[,i])
+    y &amp;lt;- as.numeric(d[,j])
+    r &amp;lt;- cor(x, y, method=&amp;#39;spearman&amp;#39;, use=&amp;#39;pairwise.complete.obs&amp;#39;)
+    zcol &amp;lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &amp;lt;- ifelse(abs(r) &amp;lt; 0.4, &amp;#39;grey20&amp;#39;, &amp;#39;white&amp;#39;)
+    ell &amp;lt;- ellipse::ellipse(r, level=0.95, type=&amp;#39;l&amp;#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &amp;lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &amp;lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &amp;lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &amp;lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &amp;lt;- d[,j]
+    y &amp;lt;- d[,i]
+    p &amp;lt;- ggplot(data.frame(x, y, gr=d$A), aes(x=x, y=y, fill=gr, shape=gr))
+    p &amp;lt;- p + theme_bw(base_size=14)
+    p &amp;lt;- p + theme(axis.text.x=element_text(angle=40, vjust=1, hjust=1))
+    if (class(x) == &amp;#39;factor&amp;#39;) {
+      p &amp;lt;- p + geom_boxplot(aes(group=x), alpha=3/6, outlier.size=0, fill=&amp;#39;white&amp;#39;)
+      p &amp;lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
+    } else {
+      p &amp;lt;- p + geom_point(size=2)
+    }
+    p &amp;lt;- p + scale_shape_manual(values=c(21, 24))
+    p &amp;lt;- p + scale_fill_manual(values=alpha(c(&amp;#39;white&amp;#39;, &amp;#39;grey40&amp;#39;), 0.5))
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+ggp&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# png(file=&amp;#39;output/fig5-1.png&amp;#39;, w=1600, h=1600, res=300)
+# print(ggp, left=0.3, bottom=0.3)
+# dev.off()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2.-寫下數學模型&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 2. 寫下數學模型&lt;/h2&gt;
+&lt;p&gt;Model can be written as (Model5-1):&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+Y[n]        = b_1 + b_2A[n] + b_3Sore[n] + \varepsilon [n]&amp;amp;  n = 1,2,\dots,N \\
+\varepsilon[n] \sim \text{Normal}(0, \sigma) &amp;amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; 表示學生的人數，&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;則是學生編號的下標；&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(b_1\)&lt;/span&gt; 是回歸直線的截距；&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(b_2\)&lt;/span&gt; 是&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;保持不變時，&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;從&lt;span class=&#34;math inline&#34;&gt;\(0\rightarrow 1\)&lt;/span&gt;時出勤率的變化(增加，或者減少)；&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(b_3\)&lt;/span&gt; 是&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;保持不變時，&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;增加一個單位時出勤率的變化(增加，或者減少)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model can also be written as (Model5-2):&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+Y[n]       \sim \text{Normal}(b_1 + b_2A[n] + b_3Score[n], \sigma) &amp;amp;  n = 1,2,\dots,N \\
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果認爲&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;和&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;所能預測的出勤率有一個基礎的均值 &lt;span class=&#34;math inline&#34;&gt;\(\mu[n]\)&lt;/span&gt;，剩下的每名學生的出勤率服從這個均值和標準差爲 &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; 的正態分佈，那麼模型又可以繼續改寫成爲下面的 Model 5-3:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+\mu[n]        = b_1 + b_2A[n] + b_3Sore[n] &amp;amp;  n = 1,2,\dots,N \\
+Y[n] \sim \text{Normal}(\mu[n], \sigma) &amp;amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;下面的 Stan 模型是按照 Model 5-3 寫的，它的模型參數有四個，&lt;span class=&#34;math inline&#34;&gt;\(b_1, b_2, b_3, \sigma\)&lt;/span&gt;，&lt;span class=&#34;math inline&#34;&gt;\(\mu[n]\)&lt;/span&gt;通過 &lt;code&gt;transformed parameter&lt;/code&gt; 計算獲得:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data {
+  int N; 
+  int&amp;lt;lower=0, upper=1&amp;gt; A[N];
+  real&amp;lt;lower=0, upper=1&amp;gt; Score[N];
+  real&amp;lt;lower=0, upper=1&amp;gt; Y[N];
+}
+
+parameters {
+  real b1; 
+  real b2;
+  real b3;
+  real&amp;lt;lower=0&amp;gt; sigma;
+}
+
+transformed parameters {
+  real mu[N];
+  for (n in 1:N) {
+    mu[n] = b1 + b2*A[n] + b3*Score[n];
+  }
+}
+
+model {
+  for (n in 1:N) {
+    Y[n] ~ normal(mu[n], sigma);
+  }
+}
+
+generated quantities {
+  real y_pred[N];
+  for (n in 1:N) {
+    y_pred[n] = normal_rng(mu[n], sigma);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面的 R 代碼用來實現對上面 Stan 模型的擬合:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
+d &amp;lt;- read.csv(file=&amp;#39;https://raw.githubusercontent.com/winterwang/RStanBook/master/chap05/input/data-attendance-1.txt&amp;#39;, header = T)
+data &amp;lt;- list(N=nrow(d), A=d$A, Score=d$Score/200, Y=d$Y)
+fit &amp;lt;- stan(file=&amp;#39;stanfiles/model5-3.stan&amp;#39;, data=data, seed=1234)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## SAMPLING FOR MODEL &amp;#39;model5-3&amp;#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.2 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.116273 seconds (Warm-up)
+## Chain 1:                0.117482 seconds (Sampling)
+## Chain 1:                0.233755 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-3&amp;#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 8e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.08 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.114043 seconds (Warm-up)
+## Chain 2:                0.109094 seconds (Sampling)
+## Chain 2:                0.223137 seconds (Total)
+## Chain 2: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-3&amp;#39; NOW (CHAIN 3).
+## Chain 3: 
+## Chain 3: Gradient evaluation took 6e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.06 seconds.
+## Chain 3: Adjust your expectations accordingly!
+## Chain 3: 
+## Chain 3: 
+## Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 3: 
+## Chain 3:  Elapsed Time: 0.114931 seconds (Warm-up)
+## Chain 3:                0.10347 seconds (Sampling)
+## Chain 3:                0.218401 seconds (Total)
+## Chain 3: 
+## 
+## SAMPLING FOR MODEL &amp;#39;model5-3&amp;#39; NOW (CHAIN 4).
+## Chain 4: 
+## Chain 4: Gradient evaluation took 7e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
+## Chain 4: Adjust your expectations accordingly!
+## Chain 4: 
+## Chain 4: 
+## Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+## Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+## Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+## Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+## Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+## Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+## Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+## Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+## Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+## Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+## Chain 4: 
+## Chain 4:  Elapsed Time: 0.121109 seconds (Warm-up)
+## Chain 4:                0.115413 seconds (Sampling)
+## Chain 4:                0.236522 seconds (Total)
+## Chain 4:&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Stan model: model5-3.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##              mean se_mean   sd   2.5%    25%    50%    75%  97.5% n_eff Rhat
+## b1           0.12    0.00 0.03   0.06   0.10   0.12   0.15   0.19  1707    1
+## b2          -0.14    0.00 0.02  -0.18  -0.15  -0.14  -0.13  -0.11  2308    1
+## b3           0.32    0.00 0.05   0.22   0.29   0.32   0.36   0.42  1747    1
+## sigma        0.05    0.00 0.01   0.04   0.05   0.05   0.06   0.06  2065    1
+## mu[1]        0.24    0.00 0.02   0.20   0.22   0.24   0.25   0.27  1827    1
+## mu[2]        0.22    0.00 0.01   0.19   0.21   0.22   0.22   0.24  2610    1
+## mu[3]        0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.35  3101    1
+## mu[4]        0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2251    1
+## mu[5]        0.24    0.00 0.01   0.21   0.23   0.24   0.25   0.27  2377    1
+## mu[6]        0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3091    1
+## mu[7]        0.30    0.00 0.01   0.28   0.30   0.30   0.31   0.32  2666    1
+## mu[8]        0.22    0.00 0.01   0.19   0.21   0.22   0.23   0.24  2572    1
+## mu[9]        0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  2841    1
+## mu[10]       0.36    0.00 0.01   0.34   0.35   0.36   0.37   0.38  2863    1
+## mu[11]       0.21    0.00 0.01   0.18   0.20   0.21   0.22   0.23  2684    1
+## mu[12]       0.35    0.00 0.01   0.33   0.34   0.35   0.35   0.37  3032    1
+## mu[13]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.20  2864    1
+## mu[14]       0.30    0.00 0.01   0.28   0.30   0.30   0.31   0.32  2666    1
+## mu[15]       0.30    0.00 0.01   0.28   0.29   0.30   0.31   0.32  2592    1
+## mu[16]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  2477    1
+## mu[17]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  2777    1
+## mu[18]       0.26    0.00 0.01   0.23   0.25   0.26   0.27   0.28  1935    1
+## mu[19]       0.42    0.00 0.02   0.39   0.41   0.42   0.44   0.46  2192    1
+## mu[20]       0.23    0.00 0.01   0.20   0.22   0.23   0.24   0.26  2413    1
+## mu[21]       0.12    0.00 0.02   0.09   0.11   0.12   0.13   0.15  2251    1
+## mu[22]       0.16    0.00 0.01   0.13   0.15   0.16   0.16   0.18  2714    1
+## mu[23]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.18  2653    1
+## mu[24]       0.21    0.00 0.01   0.19   0.20   0.21   0.22   0.24  2647    1
+## mu[25]       0.17    0.00 0.01   0.15   0.16   0.17   0.18   0.19  2855    1
+## mu[26]       0.19    0.00 0.01   0.16   0.18   0.19   0.20   0.21  2867    1
+## mu[27]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.34  2994    1
+## mu[28]       0.32    0.00 0.01   0.30   0.31   0.32   0.32   0.34  2994    1
+## mu[29]       0.38    0.00 0.01   0.36   0.38   0.38   0.39   0.41  2507    1
+## mu[30]       0.31    0.00 0.01   0.29   0.30   0.31   0.31   0.33  2740    1
+## mu[31]       0.25    0.00 0.02   0.22   0.24   0.25   0.26   0.28  2266    1
+## mu[32]       0.10    0.00 0.02   0.07   0.09   0.10   0.11   0.13  2090    1
+## mu[33]       0.20    0.00 0.01   0.18   0.20   0.20   0.21   0.23  2737    1
+## mu[34]       0.18    0.00 0.01   0.16   0.17   0.18   0.19   0.20  2885    1
+## mu[35]       0.33    0.00 0.01   0.31   0.32   0.33   0.33   0.35  3109    1
+## mu[36]       0.34    0.00 0.01   0.32   0.33   0.34   0.34   0.36  3109    1
+## mu[37]       0.15    0.00 0.01   0.13   0.14   0.15   0.16   0.18  2622    1
+## mu[38]       0.30    0.00 0.01   0.28   0.30   0.30   0.31   0.32  2629    1
+## mu[39]       0.27    0.00 0.01   0.24   0.26   0.27   0.28   0.29  2033    1
+## mu[40]       0.27    0.00 0.01   0.24   0.26   0.27   0.27   0.29  2016    1
+## mu[41]       0.33    0.00 0.01   0.31   0.33   0.33   0.34   0.35  3117    1
+## mu[42]       0.34    0.00 0.01   0.32   0.33   0.34   0.35   0.36  3091    1
+## mu[43]       0.32    0.00 0.01   0.30   0.31   0.32   0.33   0.34  3059    1
+## mu[44]       0.36    0.00 0.01   0.34   0.36   0.36   0.37   0.39  2796    1
+## mu[45]       0.42    0.00 0.02   0.38   0.41   0.42   0.43   0.45  2220    1
+## mu[46]       0.29    0.00 0.01   0.27   0.29   0.29   0.30   0.31  2445    1
+## mu[47]       0.21    0.00 0.02   0.17   0.19   0.21   0.22   0.25  1757    1
+## mu[48]       0.37    0.00 0.01   0.34   0.36   0.37   0.37   0.39  2752    1
+## mu[49]       0.28    0.00 0.01   0.26   0.28   0.28   0.29   0.31  2253    1
+## mu[50]       0.14    0.00 0.01   0.11   0.13   0.14   0.15   0.17  2477    1
+## y_pred[1]    0.24    0.00 0.05   0.13   0.20   0.24   0.27   0.34  3502    1
+## y_pred[2]    0.22    0.00 0.05   0.11   0.18   0.21   0.25   0.32  3776    1
+## y_pred[3]    0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  4029    1
+## y_pred[4]    0.12    0.00 0.05   0.01   0.08   0.12   0.16   0.23  3814    1
+## y_pred[5]    0.24    0.00 0.05   0.13   0.20   0.23   0.27   0.35  3842    1
+## y_pred[6]    0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.45  4033    1
+## y_pred[7]    0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3727    1
+## y_pred[8]    0.22    0.00 0.05   0.11   0.18   0.22   0.25   0.32  3946    1
+## y_pred[9]    0.36    0.00 0.05   0.26   0.32   0.36   0.39   0.47  3768    1
+## y_pred[10]   0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.46  3771    1
+## y_pred[11]   0.21    0.00 0.05   0.11   0.17   0.21   0.25   0.31  3793    1
+## y_pred[12]   0.35    0.00 0.05   0.24   0.31   0.35   0.38   0.45  3946    1
+## y_pred[13]   0.17    0.00 0.05   0.07   0.14   0.17   0.21   0.28  3833    1
+## y_pred[14]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3925    1
+## y_pred[15]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  3654    1
+## y_pred[16]   0.14    0.00 0.05   0.03   0.10   0.14   0.18   0.25  3850    1
+## y_pred[17]   0.31    0.00 0.05   0.20   0.27   0.31   0.34   0.41  3951    1
+## y_pred[18]   0.26    0.00 0.05   0.15   0.22   0.26   0.29   0.37  4036    1
+## y_pred[19]   0.42    0.00 0.06   0.31   0.39   0.42   0.46   0.53  3723    1
+## y_pred[20]   0.23    0.00 0.05   0.13   0.20   0.23   0.27   0.34  3819    1
+## y_pred[21]   0.12    0.00 0.05   0.01   0.08   0.12   0.15   0.23  3751    1
+## y_pred[22]   0.15    0.00 0.05   0.05   0.12   0.15   0.19   0.26  3798    1
+## y_pred[23]   0.15    0.00 0.05   0.05   0.12   0.15   0.19   0.26  3729    1
+## y_pred[24]   0.21    0.00 0.05   0.11   0.18   0.21   0.25   0.32  4087    1
+## y_pred[25]   0.17    0.00 0.05   0.07   0.13   0.17   0.20   0.27  3712    1
+## y_pred[26]   0.19    0.00 0.05   0.08   0.15   0.19   0.22   0.29  3800    1
+## y_pred[27]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  3845    1
+## y_pred[28]   0.32    0.00 0.05   0.21   0.28   0.32   0.35   0.42  3892    1
+## y_pred[29]   0.38    0.00 0.05   0.28   0.35   0.38   0.42   0.49  3995    1
+## y_pred[30]   0.31    0.00 0.05   0.20   0.27   0.31   0.34   0.41  3878    1
+## y_pred[31]   0.25    0.00 0.05   0.14   0.21   0.25   0.28   0.35  3631    1
+## y_pred[32]   0.10    0.00 0.06  -0.01   0.06   0.10   0.14   0.21  3584    1
+## y_pred[33]   0.20    0.00 0.05   0.10   0.17   0.20   0.24   0.31  3110    1
+## y_pred[34]   0.18    0.00 0.05   0.08   0.15   0.18   0.22   0.29  3853    1
+## y_pred[35]   0.33    0.00 0.05   0.22   0.29   0.33   0.36   0.43  4012    1
+## y_pred[36]   0.34    0.00 0.05   0.23   0.30   0.34   0.37   0.44  4012    1
+## y_pred[37]   0.15    0.00 0.05   0.04   0.11   0.15   0.19   0.25  4071    1
+## y_pred[38]   0.30    0.00 0.05   0.20   0.27   0.30   0.34   0.41  4043    1
+## y_pred[39]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3757    1
+## y_pred[40]   0.27    0.00 0.05   0.16   0.23   0.27   0.30   0.37  3630    1
+## y_pred[41]   0.33    0.00 0.05   0.22   0.30   0.33   0.37   0.44  3497    1
+## y_pred[42]   0.34    0.00 0.05   0.24   0.30   0.34   0.37   0.45  4219    1
+## y_pred[43]   0.32    0.00 0.05   0.22   0.29   0.32   0.35   0.43  4143    1
+## y_pred[44]   0.36    0.00 0.05   0.26   0.33   0.36   0.40   0.47  4066    1
+## y_pred[45]   0.42    0.00 0.05   0.31   0.38   0.42   0.46   0.53  3410    1
+## y_pred[46]   0.29    0.00 0.05   0.19   0.26   0.29   0.33   0.40  4211    1
+## y_pred[47]   0.21    0.00 0.06   0.10   0.17   0.21   0.24   0.32  3319    1
+## y_pred[48]   0.37    0.00 0.05   0.26   0.33   0.37   0.40   0.47  3699    1
+## y_pred[49]   0.28    0.00 0.05   0.18   0.25   0.28   0.32   0.39  4135    1
+## y_pred[50]   0.14    0.00 0.05   0.03   0.10   0.14   0.17   0.24  3753    1
+## lp__       120.89    0.04 1.47 117.17 120.14 121.24 121.98 122.70  1620    1
+## 
+## Samples were drawn using NUTS(diag_e) at Wed Jan  8 22:23:46 2020.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上述代碼中值得注意的是我們對 &lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt; 進行了全部除以 &lt;span class=&#34;math inline&#34;&gt;\(200\)&lt;/span&gt; 的數據縮放調整 (scaling)。這樣有助於我們的模型在進行 MCMC 計算時加速其達到收斂時所需要的時間。&lt;/p&gt;
+&lt;p&gt;把計算獲得的事後模型參數平均值代入模型 Model 5-3:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{array}{l}
+\mu[n]        = 0.12 - 0.14A[n] + 0.32Sore[n] &amp;amp;  n = 1,2,\dots,N \\
+Y[n] \sim \text{Normal}(\mu[n], 0.05) &amp;amp; n = 1,2,\dots,N \\ 
+\end{array}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;從輸出的結果報告來看，所有的 &lt;code&gt;Rhat&lt;/code&gt; 都小於1.1，可以認爲採樣已經達到收斂效果，再來確認一下軌跡圖：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(bayesplot)
+
+color_scheme_set(&amp;quot;mix-brightblue-gray&amp;quot;)
+
+posterior2 &amp;lt;- rstan::extract(fit, inc_warmup = TRUE, permuted = FALSE)
+
+p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0, pars = c(&amp;quot;b1&amp;quot;, &amp;quot;b2&amp;quot;, &amp;quot;b3&amp;quot;, &amp;quot;sigma&amp;quot;, &amp;quot;lp__&amp;quot;),
+                facet_args = list(nrow = 2, labeller = label_parsed))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step53&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step53-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;收斂效果很不錯，下面來解釋回歸係數的事後均值的涵義：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;b3&lt;/code&gt;的事後均值是&lt;span class=&#34;math inline&#34;&gt;\(0.32\)&lt;/span&gt;，所以，&lt;span class=&#34;math inline&#34;&gt;\(Score=150\)&lt;/span&gt;和&lt;span class=&#34;math inline&#34;&gt;\(Score=50\)&lt;/span&gt;的兩名學生，當他們同時都是喜歡或者同時都不喜歡打工時，&lt;span class=&#34;math inline&#34;&gt;\(Score = 150\)&lt;/span&gt;的學生的出勤率平均比 &lt;span class=&#34;math inline&#34;&gt;\(Score = 50\)&lt;/span&gt; 的學生的出勤率高 &lt;span class=&#34;math inline&#34;&gt;\(0.32 \times (150-50)/200 = 0.16\)&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;b2&lt;/code&gt;的事後均值是&lt;span class=&#34;math inline&#34;&gt;\(-0.14\)&lt;/span&gt;，所以，同樣地，&lt;span class=&#34;math inline&#34;&gt;\(Score\)&lt;/span&gt;相同的兩名學生，喜歡打工的學生比不喜歡打工的學生出勤率平均要低 &lt;span class=&#34;math inline&#34;&gt;\(0.14\)&lt;/span&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3.-看圖確認模型擬合狀況&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 3. 看圖確認模型擬合狀況&lt;/h2&gt;
+&lt;p&gt;下圖繪製了上面貝葉斯多重線性回歸模型計算獲得的事後貝葉斯預測區間，和觀測值&lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt;出勤率之間的直觀關係：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;source(&amp;quot;commonRstan.R&amp;quot;)
+
+ms &amp;lt;- rstan::extract(fit)
+
+Score_new &amp;lt;- 50:200
+N_X &amp;lt;- length(Score_new)
+N_mcmc &amp;lt;- length(ms$lp__)
+
+set.seed(1234)
+y_base_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_base_a0_mcmc &amp;lt;- as.data.frame(matrix(nrow = N_mcmc, ncol = N_X))
+y_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+y_a0_mcmc &amp;lt;- as.data.frame(matrix(nrow=N_mcmc, ncol=N_X))
+
+for (i in 1:N_X) {
+  y_base_mcmc[,i] &amp;lt;- ms$b1 + ms$b2 + ms$b3 * Score_new[i]/200
+  y_base_a0_mcmc[] &amp;lt;- ms$b1 + ms$b2*0 + ms$b3 * Score_new[i]/200
+  y_mcmc[,i] &amp;lt;- rnorm(n=N_mcmc, mean=y_base_mcmc[,i], sd=ms$sigma)
+  y_a0_mcmc[,i] &amp;lt;- rnorm(n=N_mcmc, mean=y_base_a0_mcmc[,i], sd=ms$sigma)
+}
+
+customize.ggplot.axis &amp;lt;- function(p) {
+  p &amp;lt;- p + labs(x=&amp;#39;Score&amp;#39;, y=&amp;#39;Y&amp;#39;)
+  p &amp;lt;- p + scale_y_continuous(breaks=seq(from=-0.2, to=0.8, by=0.2))
+  p &amp;lt;- p + coord_cartesian(xlim=c(50, 200), ylim=c(-0.2, 0.6))
+  return(p)
+}
+
+d_est &amp;lt;- data.frame.quantile.mcmc(x=Score_new, y_mcmc=y_mcmc)
+d_esta0 &amp;lt;- data.frame.quantile.mcmc(x=Score_new, y_mcmc=y_a0_mcmc)
+# p &amp;lt;- ggplot.5quantile(data=d_est)
+# p2 &amp;lt;- ggplot.5quantile(data = d_esta0)
+# p &amp;lt;- p + geom_point(data=d[d$A==1, ], aes(x=Score, y=Y), shape=24, size=5)
+# p2 &amp;lt;- p2 + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=1, size=5)
+# p &amp;lt;- customize.ggplot.axis(p)
+# p2 &amp;lt;- customize.ggplot.axis(p2)
+
+visuals = rbind(d_est,d_esta0)
+visuals$A=c(rep(1,151),rep(0,151)) # 151 points of each flavour
+
+qn &amp;lt;- colnames(visuals)[-1]
+p &amp;lt;- ggplot(data=visuals, aes(x=X, y=p50, group = A))
+p &amp;lt;- p + my_theme()
+p &amp;lt;- p + geom_ribbon(aes_string(ymin=qn[1], ymax=qn[5]), fill=&amp;#39;black&amp;#39;, alpha=1/6)
+p &amp;lt;- p + geom_ribbon(aes_string(ymin=qn[2], ymax=qn[4]), fill=&amp;#39;black&amp;#39;, alpha=2/6)
+p &amp;lt;- p + geom_line(size=1)
+p &amp;lt;- p + geom_point(data=d[d$A==1, ], aes(x=Score, y=Y), shape=24, size=5)
+p &amp;lt;- p + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=20, size=5)
+p &amp;lt;- customize.ggplot.axis(p)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig52&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig52-1.png&#34; alt=&#34;黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: 黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;上述觀察預測值區間和實際觀測之間的關係的視覺化圖形，在多重線性回歸模型只有兩個預測變量的事後還較爲容易獲得，當模型中有三個或以上的預測變量時，可視化變得困難重重。&lt;/p&gt;
+&lt;p&gt;此時我們推薦繪製“實際觀測值和預測值”，以及模型給出的每個預測值的隨機誤差&lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt;分佈範圍，相結合的圖形來判斷模型擬合程度。&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d_qua &amp;lt;- t(apply(ms$y_pred, 2, quantile, prob=c(0.1, 0.5, 0.9)))
+colnames(d_qua) &amp;lt;- c(&amp;#39;p10&amp;#39;, &amp;#39;p50&amp;#39;, &amp;#39;p90&amp;#39;)
+d_qua &amp;lt;- data.frame(d, d_qua)
+d_qua$A &amp;lt;- as.factor(d_qua$A)
+
+p &amp;lt;- ggplot(data=d_qua, aes(x=Y, y=p50, ymin=p10, ymax=p90, shape=A, fill=A))
+p &amp;lt;- p + theme_bw(base_size=18) + theme(legend.key.height=grid::unit(2.5,&amp;#39;line&amp;#39;))
+p &amp;lt;- p + coord_fixed(ratio=1, xlim=c(0, 0.5), ylim=c(0, 0.5))
+p &amp;lt;- p + geom_pointrange(size=0.8, color=&amp;#39;grey5&amp;#39;)
+p &amp;lt;- p + geom_abline(aes(slope=1, intercept=0), color=&amp;#39;black&amp;#39;, alpha=3/5, linetype=&amp;#39;31&amp;#39;)
+p &amp;lt;- p + scale_shape_manual(values=c(21, 24))
+p &amp;lt;- p + scale_fill_manual(values=c(&amp;#39;white&amp;#39;, &amp;#39;grey70&amp;#39;))
+p &amp;lt;- p + labs(x=&amp;#39;Observed&amp;#39;, y=&amp;#39;Predicted&amp;#39;)
+p &amp;lt;- p + scale_x_continuous(breaks=seq(from=0, to=0.5, by=0.1))
+p &amp;lt;- p + scale_y_continuous(breaks=seq(from=0, to=0.5, by=0.1))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig53&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig53-1.png&#34; alt=&#34;觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;從上圖中可以看出，大多數的觀測點和預測點以及預測的80%區間基本都在 &lt;span class=&#34;math inline&#34;&gt;\(y = x\)&lt;/span&gt; 這條對角線上。大致可以認爲本次貝葉斯多重線性回歸擬合效果尚且能夠接受。&lt;/p&gt;
+&lt;p&gt;隨機誤差 &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon[n]\)&lt;/span&gt; 被認爲服從 &lt;span class=&#34;math inline&#34;&gt;\(\text{Normal}(0, \sigma)\)&lt;/span&gt; 的正態分佈。從模型中可以計算獲得每個學生出勤率的預測值和實際觀測值之間的差，這就是隨機誤差。貝葉斯框架之下，我們實際獲得的會是每名學生隨機誤差的分佈：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;N_mcmc &amp;lt;- length(ms$lp__)
+
+d_noise &amp;lt;- data.frame(t(-t(ms$mu) + d$Y))
+colnames(d_noise) &amp;lt;- paste0(&amp;#39;noise&amp;#39;, 1:nrow(d))
+d_est &amp;lt;- data.frame(mcmc=1:N_mcmc, d_noise)
+d_melt &amp;lt;- reshape2::melt(d_est, id=c(&amp;#39;mcmc&amp;#39;), variable.name=&amp;#39;X&amp;#39;)
+
+d_mode &amp;lt;- data.frame(t(apply(d_noise, 2, function(x) {
+  dens &amp;lt;- density(x)
+  mode_i &amp;lt;- which.max(dens$y)
+  mode_x &amp;lt;- dens$x[mode_i]
+  mode_y &amp;lt;- dens$y[mode_i]
+  c(mode_x, mode_y)
+})))
+colnames(d_mode) &amp;lt;- c(&amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;)
+
+p &amp;lt;- ggplot()
+p &amp;lt;- p + theme_bw(base_size=18)
+p &amp;lt;- p + geom_line(data=d_melt, aes(x=value, group=X), stat=&amp;#39;density&amp;#39;, color=&amp;#39;black&amp;#39;, alpha=0.4)
+p &amp;lt;- p + geom_segment(data=d_mode, aes(x=X, xend=X, y=Y, yend=0), color=&amp;#39;black&amp;#39;, linetype=&amp;#39;dashed&amp;#39;, alpha=0.4)
+p &amp;lt;- p + geom_rug(data=d_mode, aes(x=X), sides=&amp;#39;b&amp;#39;)
+p &amp;lt;- p + labs(x=&amp;#39;value&amp;#39;, y=&amp;#39;density&amp;#39;)
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig54left&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54left-1.png&#34; alt=&#34;每名學生的出勤率隨機誤差的分佈&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 5: 每名學生的出勤率隨機誤差的分佈
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;實際上我們只需要選取每名學生模型計算獲得的事後隨機誤差的代表值，比如可以是平均值，中央值，或者是MAP值（事後確率最大推定値，maximum a posteriori estimate），來觀察就可以了：&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;s_dens &amp;lt;- density(ms$s)
+s_MAP &amp;lt;- s_dens$x[which.max(s_dens$y)]
+bw &amp;lt;- 0.01
+p &amp;lt;- ggplot(data=d_mode, aes(x=X))
+p &amp;lt;- p + theme_bw(base_size=18)
+p &amp;lt;- p + geom_histogram(binwidth=bw, color=&amp;#39;black&amp;#39;, fill=&amp;#39;white&amp;#39;)
+p &amp;lt;- p + geom_density(eval(bquote(aes(y=..count..*.(bw)))), alpha=0.5, color=&amp;#39;black&amp;#39;, fill=&amp;#39;gray20&amp;#39;)
+p &amp;lt;- p + stat_function(fun=function(x) nrow(d)*bw*dnorm(x, mean=0, sd=s_MAP), linetype=&amp;#39;dashed&amp;#39;)
+p &amp;lt;- p + labs(x=&amp;#39;value&amp;#39;, y=&amp;#39;count&amp;#39;)
+p &amp;lt;- p + xlim(range(density(d_mode$X)$x))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 2 rows containing missing values (geom_bar).&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig54right&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54right-1.png&#34; alt=&#34;每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 6: 每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-4.-mcmc-樣本的散點圖矩陣&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step 4. MCMC 樣本的散點圖矩陣&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(GGally)
+library(hexbin)
+
+
+d &amp;lt;- data.frame(b1=ms$b1, b2=ms$b2, b3=ms$b3, sigma=ms$sigma, mu1=ms$mu[,1], mu50=ms$mu[,50], lp__=ms$lp__)
+N_col &amp;lt;- ncol(d)
+ggp &amp;lt;- ggpairs(d, upper=&amp;#39;blank&amp;#39;, diag=&amp;#39;blank&amp;#39;, lower=&amp;#39;blank&amp;#39;)
+
+label_list &amp;lt;- list(b1=&amp;#39;b1&amp;#39;, b2=&amp;#39;b2&amp;#39;, b3=&amp;#39;b3&amp;#39;, sigma=&amp;#39;sigma&amp;#39;, mu1=&amp;#39;mu[1]&amp;#39;, mu50=&amp;#39;mu[50]&amp;#39;, lp__=&amp;#39;lp__&amp;#39;)
+for(i in 1:N_col) {
+  x &amp;lt;- d[,i]
+  bw &amp;lt;- (max(x)-min(x))/10
+  p &amp;lt;- ggplot(data.frame(x), aes(x))
+  p &amp;lt;- p + theme_bw(base_size=14)
+  p &amp;lt;- p + theme(axis.text.x=element_text(angle=60, vjust=1, hjust=1))
+  p &amp;lt;- p + geom_histogram(binwidth=bw, fill=&amp;#39;white&amp;#39;, color=&amp;#39;grey5&amp;#39;)
+  p &amp;lt;- p + geom_line(eval(bquote(aes(y=..count..*.(bw)))), stat=&amp;#39;density&amp;#39;)
+  p &amp;lt;- p + geom_label(data=data.frame(x=-Inf, y=Inf, label=label_list[[colnames(d)[i]]]), aes(x=x, y=y, label=label), hjust=0, vjust=1)
+  ggp &amp;lt;- putPlot(ggp, p, i, i)
+}
+
+zcolat &amp;lt;- seq(-1, 1, length=81)
+zcolre &amp;lt;- c(zcolat[1:40]+1, rev(zcolat[41:81]))
+
+for(i in 1:(N_col-1)) {
+  for(j in (i+1):N_col) {
+    x &amp;lt;- as.numeric(d[,i])
+    y &amp;lt;- as.numeric(d[,j])
+    r &amp;lt;- cor(x, y, method=&amp;#39;spearman&amp;#39;, use=&amp;#39;pairwise.complete.obs&amp;#39;)
+    zcol &amp;lt;- lattice::level.colors(r, at=zcolat, col.regions=grey(zcolre))
+    textcol &amp;lt;- ifelse(abs(r) &amp;lt; 0.4, &amp;#39;grey20&amp;#39;, &amp;#39;white&amp;#39;)
+    ell &amp;lt;- ellipse::ellipse(r, level=0.95, type=&amp;#39;l&amp;#39;, npoints=50, scale=c(.2, .2), centre=c(.5, .5))
+    p &amp;lt;- ggplot(data.frame(ell), aes(x=x, y=y))
+    p &amp;lt;- p + theme_bw() + theme(
+      plot.background=element_blank(),
+      panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+      panel.border=element_blank(), axis.ticks=element_blank()
+    )
+    p &amp;lt;- p + geom_polygon(fill=zcol, color=zcol)
+    p &amp;lt;- p + geom_text(data=NULL, x=.5, y=.5, label=100*round(r, 2), size=6, col=textcol)
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+
+for(j in 1:(N_col-1)) {
+  for(i in (j+1):N_col) {
+    x &amp;lt;- d[,j]
+    y &amp;lt;- d[,i]
+    p &amp;lt;- ggplot(data.frame(x, y), aes(x=x, y=y))
+    p &amp;lt;- p + theme_bw(base_size=14)
+    p &amp;lt;- p + theme(axis.text.x=element_text(angle=60, vjust=1, hjust=1))
+    p &amp;lt;- p + geom_hex()
+    p &amp;lt;- p + scale_fill_gradientn(colours=gray.colors(7, start=0.1, end=0.9))
+    ggp &amp;lt;- putPlot(ggp, p, i, j)
+  }
+}
+ggp&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig55&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig55-1.png&#34; alt=&#34;MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>
       <link>https://wangcc.me/post/simple-linear-regression-using-rstan/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>

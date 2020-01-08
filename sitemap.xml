@@ -223,6 +223,11 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/post/rstan-wonderful-r3/</loc>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/post/simple-linear-regression-using-rstan/</loc>
     <lastmod>2019-01-15T00:00:00+00:00</lastmod>
   </url>
@@ -618,12 +623,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/dictation/</loc>
+    <loc>https://wangcc.me/categories/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/dictation/</loc>
+    <loc>https://wangcc.me/tags/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
