@@ -5,7 +5,7 @@
     <link>https://wangcc.me/tags/</link>
       <atom:link href="https://wangcc.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Tags</title>
@@ -13,9 +13,17 @@
     </image>
     
     <item>
+      <title>sorrow</title>
+      <link>https://wangcc.me/tags/sorrow/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/sorrow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>偶爾感慨</title>
       <link>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
-      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
     </item>
@@ -57,14 +65,6 @@
       <link>https://wangcc.me/tags/chrononutrition/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/chrononutrition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sorrow</title>
-      <link>https://wangcc.me/tags/sorrow/</link>
-      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/sorrow/</guid>
       <description></description>
     </item>
     
