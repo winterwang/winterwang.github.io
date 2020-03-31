@@ -5,7 +5,7 @@
     <link>https://wangcc.me/authors/</link>
       <atom:link href="https://wangcc.me/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Authors</title>
@@ -13,10 +13,50 @@
     </image>
     
     <item>
+      <title>Atsuhiko Hirasawa</title>
+      <link>https://wangcc.me/authors/atsuhiko-hirasawa/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/atsuhiko-hirasawa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Chaochen Wang</title>
       <link>https://wangcc.me/authors/chaochen-wang/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/authors/chaochen-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Masataka Deie</title>
+      <link>https://wangcc.me/authors/masataka-deie/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/masataka-deie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shogo Kikuchi</title>
+      <link>https://wangcc.me/authors/shogo-kikuchi/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/shogo-kikuchi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tatsunori Ikemoto</title>
+      <link>https://wangcc.me/authors/tatsunori-ikemoto/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/tatsunori-ikemoto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Young-Chang Arai</title>
+      <link>https://wangcc.me/authors/young-chang-arai/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/authors/young-chang-arai/</guid>
       <description></description>
     </item>
     
@@ -177,14 +217,6 @@
       <link>https://wangcc.me/authors/shinichi-ohkawa/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/authors/shinichi-ohkawa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shogo Kikuchi</title>
-      <link>https://wangcc.me/authors/shogo-kikuchi/</link>
-      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/authors/shogo-kikuchi/</guid>
       <description></description>
     </item>
     

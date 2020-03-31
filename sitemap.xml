@@ -3,8 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wangcc.me/publication_types/2/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication/journal-article/cfa_locomo/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/atsuhiko-hirasawa/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/masataka-deie/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication_types/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/shogo-kikuchi/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/tatsunori-ikemoto/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/young-chang-arai/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -58,12 +108,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/sorrow/</loc>
+    <loc>https://wangcc.me/categories/sorrow/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/sorrow/</loc>
+    <loc>https://wangcc.me/tags/sorrow/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,32 +163,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/publication_types/2/</loc>
-    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/</loc>
-    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
-    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/publication/journal-article/ch_ndnsrp/</loc>
     <lastmod>2019-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/authors/luigi-palla/</loc>
-    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/publication_types/</loc>
     <lastmod>2019-10-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -273,12 +303,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/to-do/</loc>
+    <loc>https://wangcc.me/tags/to-do/</loc>
     <lastmod>2018-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/to-do/</loc>
+    <loc>https://wangcc.me/categories/to-do/</loc>
     <lastmod>2018-12-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -389,11 +419,6 @@
   
   <url>
     <loc>https://wangcc.me/authors/shinichi-ohkawa/</loc>
-    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/shogo-kikuchi/</loc>
     <lastmod>2018-09-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -658,12 +683,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/dictation/</loc>
+    <loc>https://wangcc.me/categories/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/dictation/</loc>
+    <loc>https://wangcc.me/tags/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
