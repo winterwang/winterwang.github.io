@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life | Be Ambitious</title>
+    <link>/tags/life/</link>
+      <atom:link href="/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <description>life</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 16 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>life</title>
+      <link>/tags/life/</link>
+    </image>
+    
+    <item>
+      <title>Tomorrw in Nagoya</title>
+      <link>/gallery/20200517/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      <guid>/gallery/20200517/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/IMG_4548.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/IMG_4548.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
