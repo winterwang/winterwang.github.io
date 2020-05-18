@@ -5,12 +5,28 @@
     <link>https://wangcc.me/tags/</link>
       <atom:link href="https://wangcc.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://wangcc.me/tags/</link>
     </image>
+    
+    <item>
+      <title>休閒</title>
+      <link>https://wangcc.me/tags/%E4%BC%91%E9%96%92/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/%E4%BC%91%E9%96%92/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>海邊</title>
+      <link>https://wangcc.me/tags/%E6%B5%B7%E9%82%8A/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/%E6%B5%B7%E9%82%8A/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>偶爾感慨</title>

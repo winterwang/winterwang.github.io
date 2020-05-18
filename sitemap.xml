@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wangcc.me/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/gallery/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E4%BC%91%E9%96%92/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E6%B5%B7%E9%82%8A/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/gallery/20200518/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/publication_types/2/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
@@ -19,11 +49,6 @@
   
   <url>
     <loc>https://wangcc.me/authors/</loc>
-    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -69,11 +94,6 @@
   
   <url>
     <loc>https://wangcc.me/post/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/</loc>
     <lastmod>2020-02-24T14:44:45+09:00</lastmod>
   </url>
   
@@ -178,12 +198,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/bayesian/</loc>
+    <loc>https://wangcc.me/tags/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/bayesian/</loc>
+    <loc>https://wangcc.me/categories/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -618,12 +638,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/conference/</loc>
+    <loc>https://wangcc.me/categories/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/conference/</loc>
+    <loc>https://wangcc.me/tags/conference/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -683,12 +703,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/dictation/</loc>
+    <loc>https://wangcc.me/categories/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/dictation/</loc>
+    <loc>https://wangcc.me/tags/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   

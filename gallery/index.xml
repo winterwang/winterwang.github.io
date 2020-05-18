@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gallery | Be Ambitious</title>
+    <title>Galleries | Be Ambitious</title>
     <link>https://wangcc.me/gallery/</link>
       <atom:link href="https://wangcc.me/gallery/index.xml" rel="self" type="application/rss+xml" />
-    <description>Gallery</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright>
+    <description>Galleries</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
-      <title>Gallery</title>
+      <title>Galleries</title>
       <link>https://wangcc.me/gallery/</link>
     </image>
+    
+    <item>
+      <title>藍天，白雲，沙灘</title>
+      <link>https://wangcc.me/gallery/20200518/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/gallery/20200518/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/PastedGraphic6.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_4923.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_4946.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_4959.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_4962.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_4971.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在家裏悶了太多日子，今日海邊的風分外清爽，海水也分外的清澈，天空湛藍而美好。&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
