@@ -83,6 +83,21 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/post/coronainjapan/</loc>
+    <lastmod>2020-04-28T13:42:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/corona/</loc>
+    <lastmod>2020-04-28T13:42:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/post/</loc>
+    <lastmod>2020-04-28T13:42:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/publication_types/2/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
@@ -135,11 +150,6 @@
   <url>
     <loc>https://wangcc.me/authors/young-chang-arai/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/post/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
   </url>
   
   <url>
@@ -1744,10 +1754,6 @@
   
   <url>
     <loc>https://wangcc.me/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/talk/</loc>
   </url>
   
 </urlset>
