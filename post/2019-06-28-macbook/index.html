@@ -627,32 +627,19 @@
 
     <div class="article-style">
       <p>這些年習慣了折騰Ubuntu之後，突然切換回高大上的 Macbook Pro，真心不太適應。</p>
-
-<p>首先吐槽花了兩天時間才搞定家裏和學校的打印機聯接設定。真是不曉得昨天早上和晚上為啥死都連不上的佳能打印機驅動，今天重新打開電腦之後就突然能接上了。果然&rdquo;重新啟動&rdquo;永遠是最有有效的招數。其實完全不知道未重啟之前到底電腦的哪根筋沒有接好。</p>
-
-<p>接下來讓人不可思議的是 MacOS 沒有OpenBUGS。經過放狗搜索之後找到了<a href="https://oliviergimenez.github.io/post/run_openbugs_on_mac/" target="_blank">在蘋果電腦上安裝 OpenBUGS 的方法</a>。簡單總結就是下載 Wine 之後用 wine 來跑OpenBUGES，介面風格像80年代的筆電一樣：</p>
-
-<p><img src="/post/2019-06-28-testpost_files/wineOpenBUGS.png" alt="wineOpenBUGS" /></p>
-
-<p>即使最終能夠使用OpenBUGS的介面進行運算之後，在Ubuntu和Windows都能自動識別並連結OpenBUGS引擎的 <a href="https://cran.r-project.org/web/packages/BRugs/index.html" target="_blank">Brugs</a> 包竟然還是無法下載識別MCMC引擎。所以下載了勉強能夠使用 R2OpenBUGS 包計算，但是還需要用下面繁瑣的設定：</p>
-
+<p>首先吐槽花了兩天時間才搞定家裏和學校的打印機聯接設定。真是不曉得昨天早上和晚上為啥死都連不上的佳能打印機驅動，今天重新打開電腦之後就突然能接上了。果然&quot;重新啟動&quot;永遠是最有有效的招數。其實完全不知道未重啟之前到底電腦的哪根筋沒有接好。</p>
+<p>接下來讓人不可思議的是 MacOS 沒有OpenBUGS。經過放狗搜索之後找到了<a href="https://oliviergimenez.github.io/post/run_openbugs_on_mac/">在蘋果電腦上安裝 OpenBUGS 的方法</a>。簡單總結就是下載 Wine 之後用 wine 來跑OpenBUGES，介面風格像80年代的筆電一樣：</p>
+<p><img src="/post/2019-06-28-testpost_files/wineOpenBUGS.png" alt="wineOpenBUGS"></p>
+<p>即使最終能夠使用OpenBUGS的介面進行運算之後，在Ubuntu和Windows都能自動識別並連結OpenBUGS引擎的 <a href="https://cran.r-project.org/web/packages/BRugs/index.html">Brugs</a> 包竟然還是無法下載識別MCMC引擎。所以下載了勉強能夠使用 R2OpenBUGS 包計算，但是還需要用下面繁瑣的設定：</p>
 <pre><code>WINE=&quot;/usr/local/bin/wine&quot;
 WINEPATH=&quot;/usr/local/bin/winepath&quot;
 OpenBUGS.pgm=&quot;/Users/{user.name}/Wine\ Files/drive_c/Program\ Files/OpenBUGS/OpenBUGS323/OpenBUGS.exe&quot;
-</code></pre>
-
-<p>於是，我的學習筆記大概率估計是只能在Ubuntu上更新了。</p>
-
+</code></pre><p>於是，我的學習筆記大概率估計是只能在Ubuntu上更新了。</p>
 <p>還有要吐槽的一個事情就是，StataIC 版本在Ubuntu下可以使用命令行直接在終端呼叫Stata引擎進行統計分析並且輸出結果，十分方便。而且設定了路徑之後可以直接在Rstudio裡面加入Stata引擎，使得Rmarkdown的代碼部分可以自由地在R和Stata之間切換。但是Mac版本的StataIC竟然沒有命令行的安裝方式。繼續放狗查詢才知道，必須是StataSE或者StataMP版本才可以。這是另一條讓我滾回Ubuntu的理由嗎？</p>
-
 <p>Mac電腦現在在我眼裡已經爛得只剩下顏值了。</p>
-
-<p><img src="/post/2019-06-28-testpost_files/IMG_20190627_102846.jpg" alt="" /></p>
-
-<p>這兩天折騰安裝各種軟件之時，發現Texlive 2019的Mac版本安裝完畢之後佔據將近6個G的硬盤空間。於是狠狠心刪除了之後換上輕巧簡潔的 <a href="https://yihui.name/tinytex/" target="_blank">TinyTex</a>，發現整個世界都純淨了。</p>
-
+<p><img src="/post/2019-06-28-testpost_files/IMG_20190627_102846.jpg" alt=""></p>
+<p>這兩天折騰安裝各種軟件之時，發現Texlive 2019的Mac版本安裝完畢之後佔據將近6個G的硬盤空間。於是狠狠心刪除了之後換上輕巧簡潔的 <a href="https://yihui.name/tinytex/">TinyTex</a>，發現整個世界都純淨了。</p>
 <p>只需要在Rmd文檔的YAML部分加入下面這段代碼，一份日語（中文）英文混合的PDF文檔即可在Rstudio中編譯完成，從安裝到完成第一個日語文檔的編譯，基本上僅僅耗時十分鐘左右。好評！</p>
-
 <pre><code>---
 title: &quot;日本語&quot;
 header-includes:
@@ -663,9 +650,7 @@ output:
   pdf_document: 
     latex_engine: xelatex 
 ---
-</code></pre>
-
-<p><img src="/post/2019-06-28-testpost_files/TinyTexJap.png" alt="" /></p>
+</code></pre><p><img src="/post/2019-06-28-testpost_files/TinyTexJap.png" alt=""></p>
 
     </div>
 
@@ -1058,7 +1043,7 @@ output:
   
 
   <p class="powered-by">
-    &copy; 2017-2020 Chaochen Wang | 王超辰 &middot; 
+    © 2017-2020 Chaochen Wang | 王超辰 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

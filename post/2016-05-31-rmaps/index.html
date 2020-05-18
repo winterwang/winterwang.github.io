@@ -622,23 +622,15 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<p>今日仰視<a href="https://github.com/ramnathv/slidify" target="_blank">slidify</a>作者<a href="https://github.com/ramnathv" target="_blank">Ramnath Vaidyanathan</a>的github頁面發現超酷的<a href="https://github.com/ramnathv/rMaps" target="_blank">rMaps</a>包，抄過來在自己電腦上實驗一下。</p>
-
+      <p>今日仰視<a href="https://github.com/ramnathv/slidify">slidify</a>作者<a href="https://github.com/ramnathv">Ramnath Vaidyanathan</a>的github頁面發現超酷的<a href="https://github.com/ramnathv/rMaps">rMaps</a>包，抄過來在自己電腦上實驗一下。</p>
 <h4 id="下載">下載</h4>
-
 <pre><code>  require(devtools)
   install_github('ramnathv/rCharts@dev')
   install_github('ramnathv/rMaps')
 </code></pre>
-
-<h4 id="繪制美國2010年的各州的犯罪率-crime-rates-per-100-000-by-state-at-2010">繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010</h4>
-
-<iframe chart_1="" height="500" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/mymap.html"></iframe>
-
+<h4 id="繪制美國2010年的各州的犯罪率-crime-rates-per-100000-by-state-at-2010">繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010</h4>
+<!-- raw HTML omitted -->
 <p>利用以下的R編碼在Rstudio裏實現上圖效果</p>
-
 <pre><code>  library(rMaps)
   map &lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010))
   map
@@ -649,41 +641,25 @@
   ## Your gist has been published
   ## View chart at http://rcharts.github.io/viewer/***** # &lt;- 會出現生成的網頁版可互動地圖鏈接
 </code></pre>
-
 <p>你也可以用下面的編碼將網頁保存爲獨立的html文件(注意：無網絡連接時可能無法正常顯示)</p>
-
 <pre><code>  map$save(&quot;mymap.html&quot;, cdn = TRUE) # &lt;- 引號中爲保存的目標文件名稱
 </code></pre>
-
 <h4 id="繪制1960-2010年每年的各州犯罪率-crime-rates-per-100-000-by-state-from-1960-2010">繪制1960-2010年每年的各州犯罪率 Crime Rates (per 100, 000) by State from 1960-2010</h4>
-
-<h4 id="帶滑動條的可互動地圖-animated-choropleth">帶滑動條的可互動地圖/Animated Choropleth</h4>
-
+<h4 id="帶滑動條的可互動地圖animated-choropleth">帶滑動條的可互動地圖/Animated Choropleth</h4>
 <p>編碼:</p>
-
 <pre><code>  ichoropleth(Crime ~ State, data = violent_crime, animate = &quot;Year&quot;)
 </code></pre>
-
-<p>效果:(你可以拖動左上角的滑動條顯示每年的各州犯罪率，<strong>越來越高，今年老川上臺估計全線飄高。。。</strong>)
-<iframe chart_1="" height="500" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/map_bar.html"></iframe></p>
-
-<h4 id="上圖的自動播放版-animated-choropleth-注意左上角出現播放按鈕">上圖的自動播放版/Animated Choropleth(注意左上角出現播放按鈕)</h4>
-
+<p>效果:(你可以拖動左上角的滑動條顯示每年的各州犯罪率，<strong>越來越高，今年老川上臺估計全線飄高。。。</strong>)</p>
+<!-- raw HTML omitted -->
+<h4 id="上圖的自動播放版animated-choropleth注意左上角出現播放按鈕">上圖的自動播放版/Animated Choropleth(注意左上角出現播放按鈕)</h4>
 <p>編碼:</p>
-
 <pre><code>    ichoropleth(Crime ~ State, data = violent_crime, animate = &quot;Year&quot;, play = TRUE)
 </code></pre>
-
 <p>效果:</p>
-
-<iframe chart_1="" height="500" width="720" id="iframe-" class="rChart datamaps" seamless="" scrolling="no" src="/fig/map_play.html"></iframe>
-
+<!-- raw HTML omitted -->
 <h5 id="以下为2016年6月2日更新">以下为2016年6月2日更新</h5>
-
-<h4 id="普通青年用的-伦敦市区-地图">普通青年用的(伦敦市区)地图：</h4>
-
+<h4 id="普通青年用的伦敦市区地图">普通青年用的(伦敦市区)地图：</h4>
 <p>代码:</p>
-
 <pre><code>  map &lt;- Leaflet$new()
   map$setView(c(51.505, -0.09), zoom = 13)
   map$tileLayer(provider = 'Stamen.Watercolor') # &lt;- 地图颜色为水彩效果
@@ -708,16 +684,10 @@
       map
       map$save('mychart.html', cdn = TRUE)
 </code></pre>
-
-<p>黑白色圖:
-<iframe chart_1="" height="410" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/stamenLondon.html"></iframe>
-一般色彩圖:
-<iframe chart_1="" height="410" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/normalLondon.html"></iframe></p>
-
+<p>黑白色圖:</p>
+<!-- raw HTML omitted -->
 <h4 id="以下爲自娛自樂">以下爲自娛自樂</h4>
-
 <p>編碼:</p>
-
 <pre><code>    L2 &lt;- Leaflet$new()
     L2$setView(c(35.175776,  137.040663), 13)
     L2$tileLayer(provider = &quot;OpenStreetMap&quot;)
@@ -727,10 +697,8 @@
     )
     L2
 </code></pre>
-
-<p>效果:
-<iframe chart_1="" height="400" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="
-/fig/nagakute.html"></iframe></p>
+<p>效果:</p>
+<!-- raw HTML omitted -->
 
     </div>
 
@@ -1110,7 +1078,7 @@
   
 
   <p class="powered-by">
-    &copy; 2017-2020 Chaochen Wang | 王超辰 &middot; 
+    © 2017-2020 Chaochen Wang | 王超辰 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

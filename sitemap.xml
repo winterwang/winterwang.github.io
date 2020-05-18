@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://wangcc.me/tags/gallery/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
   </url>
   
   <url>
@@ -73,6 +73,16 @@
   </url>
   
   <url>
+    <loc>https://wangcc.me/tags/%E8%87%AA%E5%A8%9B%E8%87%AA%E6%A8%82/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E8%87%AA%E6%88%91%E9%9A%94%E9%9B%A2/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/publication_types/2/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
@@ -104,6 +114,11 @@
   
   <url>
     <loc>https://wangcc.me/publication_types/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -213,12 +228,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/bayesian/</loc>
+    <loc>https://wangcc.me/tags/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/bayesian/</loc>
+    <loc>https://wangcc.me/categories/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -338,12 +353,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/to-do/</loc>
+    <loc>https://wangcc.me/tags/to-do/</loc>
     <lastmod>2018-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/to-do/</loc>
+    <loc>https://wangcc.me/categories/to-do/</loc>
     <lastmod>2018-12-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -718,12 +733,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/dictation/</loc>
+    <loc>https://wangcc.me/tags/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/dictation/</loc>
+    <loc>https://wangcc.me/categories/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -1024,6 +1039,11 @@
   
   <url>
     <loc>https://wangcc.me/post/2017-01-07-ielts-test/</loc>
+    <lastmod>2017-02-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/r/</loc>
     <lastmod>2017-02-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -1463,11 +1483,6 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/r/</loc>
-    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/tags/rmaps/</loc>
     <lastmod>2016-05-31T00:00:00+00:00</lastmod>
   </url>
@@ -1729,15 +1744,6 @@
   
   <url>
     <loc>https://wangcc.me/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/post/trace/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/publication/</loc>
   </url>
   
   <url>
