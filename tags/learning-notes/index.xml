@@ -991,7 +991,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    要記住，協方差只能用於評價&lt;!-- raw HTML omitted --&gt;(X,Y)&lt;!-- raw HTML omitted --&gt;之間的線性關係 (Linear Association)。
+    要記住，協方差只能用於評價&lt;span class=&#34;math inline&#34;&gt;(X,Y)&lt;/span&gt;之間的線性關係 (Linear Association)。
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
@@ -1382,7 +1382,7 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
       <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
 $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
 &lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
-&lt;p&gt;其中:&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;其中:&lt;br&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$adj(A)$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;餘因子矩陣&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;$A_{ij}$ 爲&lt;a href=&#34;https://winterwang.github.io/post/2017-03-15/&#34;&gt;餘因子&lt;/a&gt;&lt;/li&gt;
@@ -1400,7 +1400,7 @@ x_{11} &amp;amp; x_{12} &amp;amp; x_{13} \newline
 x_{21} &amp;amp; x_{22} &amp;amp; x_{23} \newline
 x_{31} &amp;amp; x_{32} &amp;amp; x_{33}
 \end{array}\right)$$
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;元素 $x_{ij}$ 的餘因子 $X_{ij}(i,j=1,2,3)$ 爲：&lt;/p&gt;
 &lt;p&gt;$$X_{11}=(-1)^{1+1}\left|
 \begin{array}{c}

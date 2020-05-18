@@ -629,7 +629,7 @@
   install_github('ramnathv/rMaps')
 </code></pre>
 <h4 id="繪制美國2010年的各州的犯罪率-crime-rates-per-100000-by-state-at-2010">繪制美國2010年的各州的犯罪率 Crime Rates (per 100,000) by State at 2010</h4>
-<!-- raw HTML omitted -->
+<iframe chart_1="" height="500" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/mymap.html"></iframe>
 <p>利用以下的R編碼在Rstudio裏實現上圖效果</p>
 <pre><code>  library(rMaps)
   map &lt;- ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010))
@@ -650,13 +650,13 @@
 <pre><code>  ichoropleth(Crime ~ State, data = violent_crime, animate = &quot;Year&quot;)
 </code></pre>
 <p>效果:(你可以拖動左上角的滑動條顯示每年的各州犯罪率，<strong>越來越高，今年老川上臺估計全線飄高。。。</strong>)</p>
-<!-- raw HTML omitted -->
+<iframe chart_1="" height="500" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/map_bar.html"></iframe>
 <h4 id="上圖的自動播放版animated-choropleth注意左上角出現播放按鈕">上圖的自動播放版/Animated Choropleth(注意左上角出現播放按鈕)</h4>
 <p>編碼:</p>
 <pre><code>    ichoropleth(Crime ~ State, data = violent_crime, animate = &quot;Year&quot;, play = TRUE)
 </code></pre>
 <p>效果:</p>
-<!-- raw HTML omitted -->
+<iframe chart_1="" height="500" width="720" id="iframe-" class="rChart datamaps" seamless="" scrolling="no" src="/fig/map_play.html"></iframe>
 <h5 id="以下为2016年6月2日更新">以下为2016年6月2日更新</h5>
 <h4 id="普通青年用的伦敦市区地图">普通青年用的(伦敦市区)地图：</h4>
 <p>代码:</p>
@@ -685,7 +685,9 @@
       map$save('mychart.html', cdn = TRUE)
 </code></pre>
 <p>黑白色圖:</p>
-<!-- raw HTML omitted -->
+<iframe chart_1="" height="410" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/stamenLondon.html"></iframe>
+一般色彩圖:
+<iframe chart_1="" height="410" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="/fig/normalLondon.html"></iframe>
 <h4 id="以下爲自娛自樂">以下爲自娛自樂</h4>
 <p>編碼:</p>
 <pre><code>    L2 &lt;- Leaflet$new()
@@ -698,7 +700,8 @@
     L2
 </code></pre>
 <p>效果:</p>
-<!-- raw HTML omitted -->
+<iframe chart_1="" height="400" width="720" id="iframe-" class="rChart datamaps " seamless="" scrolling="no" src="
+/fig/nagakute.html"></iframe>
 
     </div>
 

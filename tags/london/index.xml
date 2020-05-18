@@ -1081,7 +1081,7 @@ LogLR
 &lt;h2&gt;Basic Operations&lt;/h2&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    &lt;!-- raw HTML omitted --&gt;Addition (Substraction)&lt;!-- raw HTML omitted --&gt; can take place only when the matrices involved are of the same order. i.e.
+    &lt;strong&gt;Addition (Substraction)&lt;/strong&gt; can take place only when the matrices involved are of the same order. i.e.
 Two matrices can be added (subtracted) only if they have the same numbers of rows and the same numbers of columns.
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1228,7 +1228,11 @@ UCL是以前高中同班同學待過（一個已經回廈門），和正在待�
 &lt;p&gt;這個叫做 &lt;a href=&#34;http://www.marriott.com/hotels/travel/lonpr-st-pancras-renaissance-hotel-london/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2&#34;&gt;St. Pancras Renaissance Hotel London&lt;/a&gt;，中文名應該是聖潘克拉斯萬麗酒店。如果你玩過&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%BA%E5%AE%A2%E6%95%99%E6%A2%9D%EF%BC%9A%E6%A2%9F%E9%9B%84&#34;&gt;刺客信條梟雄&lt;/a&gt;。一定會對這樣的建築印象深刻。&lt;/p&gt;
 &lt;p&gt;郵局內部真的是破爛不堪，連中國三線城市的郵政儲蓄營業廳都不如，櫃檯工作的好多是黑人和印度人，口音很重，態度蠻橫。要做好心理準備。而且標識十分不明，你必須問周圍的人我現在排的隊是幹什麼的。&lt;/p&gt;
 &lt;p&gt;領完我的BRP卡之後，又往回走，到宿舍以南步行也是10分鐘左右，進入大英博物館。從正門走時，因為每個進入大英博物館的人如果有帶包都要打開給警備員查看。所以入口處隊伍非常的長。後來聽說從後門走的話人就少很多。不過這天不是週末，所以我得以很快的通過安檢進入博物館。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;最重要的是，大英博物館是免費的！&lt;/strong&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;p&gt;大英博物館外觀：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_0123.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;進入大英博物館的玄關以後，視野一下子就開闊起來:&lt;/p&gt;
@@ -1336,16 +1340,20 @@ UCL是以前高中同班同學待過（一個已經回廈門），和正在待�
       <description>&lt;p&gt;來說說7月31日去大阪交簽證材料的事情。&lt;/p&gt;
 &lt;p&gt;那叫一個鬱悶。
 總之，我在日本還是第一次遇見如此糟糕的接待。另外，大阪的簽證辦理中心，非常不好找，建議第一次去的人挑一個不那麼熱的日子去。這樣也不會像我一樣在馬路上被曬成狗。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;center&gt;
+&lt;div class=&#34;google-maps&#34;&gt;
+&lt;iframe src=&#34;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6562.23754229744!2d135.49993028993563!3d34.67695175141651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x58d2656af250486b!2zVkZTIEdMT0JBTCDjg5PjgrbnlLPoq4vjgrvjg7Pjgr_jg7w!5e0!3m2!1sen!2sjp!4v1501653424481&#34; width=&#34;350&#34; height=&#34;300&#34; frameborder=&#34;0&#34; style=&#34;border:0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;br&gt;
 &lt;p&gt;當然我才不會告訴你我早上起晚了差點趕不上我訂的火車票（9：00）。而且近鐵列車的城市快線 &lt;a href=&#34;http://www.kintetsu.co.jp/gyoumu/meihan/culture/timetable/timetable_weekday.html&#34;&gt;(urban liner)&lt;/a&gt; 開得不是很平穩，我半路感覺暈車不適還跑去洗手間把早飯吐了以後才能舒服一點得繼續坐到大阪難波車站。從難波車站再換乘御堂筋線到心斎橋，之後就出車站步行差不多10個被暴曬的街區到VFS簽證代理處。不過並非領事館或者大使館，所以我想應該不會像美國領事館那樣戒備森嚴。結果上到10樓VFS辦公室的地方，有提示語告訴我先按門鈴讓保安檢查攜帶行李。按了門鈴，出來一個身材矮小的保安問我預約的時間和簽證申請種類。我把我的預約郵件在手機上打開給他看確認以後才肯帶我進門。&lt;/p&gt;
 &lt;p&gt;進去之後就能看到一個還沒有我辦公室大的房間被隔板隔開成幾個部分。保安同學說不能用手機拍照，攜帶的筆記本拿出來給他確認關機。然後材料拿出來先交給保安。他又煞有介事地讓我把揹包每一層都打開給他看確認我沒帶炸彈。這些都搞定了以後又像機場安檢一樣全身掃描一遍確認我身上沒有綁着炸彈。。。&lt;/p&gt;
 &lt;p&gt;此時已經比我預約的時間晚了10分鐘。當然我不怪他。他只是認真完成任務。之後讓我在等待區域等待。不久之後來了一個接待員用機器人一樣的語調和口吻告訴我說：“把所有的材料按照不同類別分好類，一定要使用牆壁上掛着的那些分類用的不同顏色的紙張。” 我擡頭一看牆壁上掛着的文件架子上有紅色藍色黃色等不同顏色的A4紙。她又接着機械地說：“如果你發現自己不知道怎麼歸類整理這些文檔的話，我也可以幫你，但是要收取1920日元的服務費。” 我艹，連看文件整理都要收費，我心想。接待員小姐估計聽見我的心裏話了，漫不經心地又說，“你當然可以自己整理，不過責任自負喲。”&lt;/p&gt;
 &lt;p&gt;你這是在威脅我嗎？我心裏又想。後來才在他們的&lt;a href=&#34;http://www.vfsglobal.co.uk/japan/user_pay_services.html#15&#34;&gt;網站&lt;/a&gt;上看到這樣的收費提示：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Application and Document Checks&lt;!-- raw HTML omitted --&gt;
-The Application and Document Checks service is for applicants who have already applied and have printed out their application form to check that an application is complete before sending it to the UK Visas and Immigration in Manila.&lt;!-- raw HTML omitted --&gt;
-The service will be charged an additional fee of JPY 1,920 per applicant. The fee can only be paid at Visa Application Centre in person by cash.&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Application and Document Checks&lt;br&gt;
+The Application and Document Checks service is for applicants who have already applied and have printed out their application form to check that an application is complete before sending it to the UK Visas and Immigration in Manila.&lt;br&gt;
+The service will be charged an additional fee of JPY 1,920 per applicant. The fee can only be paid at Visa Application Centre in person by cash.&lt;br&gt;
 VFS staff will check mandatory required documents have been submitted, but not the actual content of the documents.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我想省這點錢來着，看着他們的分類文件，毫無提示，簡直就像在嘲諷我“你真的是個PhD嗎？”。隨便分類了以後我想就試試看算了去交材料時，她才說，你這個沒有清單表格不行，你這裏有一張是絕對不能使用的。我心裏十萬頭草泥馬奔騰而過，這些事你們爲啥不能寫在通知預約的郵件裏面呢？爲啥不能算在網上交的簽證費用裏面呢？&lt;/p&gt;
@@ -1374,11 +1382,11 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;/blockquote&gt;
 &lt;p&gt;我原以爲我開的三個證明完全足夠了吧。結果過了一個月告訴我說：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Your documents didn’t meet the requirements because: &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Your documents didn’t meet the requirements because: &lt;br&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;The salary expectancy is not admissible &lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
-&lt;li&gt;The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. &lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;The salary expectancy is not admissible &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;The statement you have provided only shows the balance on a single day and we therefore recommend a bank letter to show funds held for 28 days. Please find attached an example bank letter. &lt;br&gt;&lt;/li&gt;
 &lt;li&gt;The bank statements did not include the bank name and logo.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!&lt;/p&gt;
@@ -1410,7 +1418,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;li&gt;我能獲得現在工作的大學的經費（其實就是保留職位，工資照發）支持的條件是，最長的出差/留學不能超過一年。&lt;/li&gt;
 &lt;li&gt;上面這個條件是最硬的了，沒有銀子，啥都辦不成是吧。美國的碩士基本都是兩年，而且每年的學費都是英國的兩倍左右。真是羨慕嫉妒自費去英美讀書的大陸籍學生們，你們都是行走的美金符號 $。&lt;/li&gt;
 &lt;li&gt;加上美國目前爲止去了3-4次了，對北美大陸除了加拿大(溫哥華)印象非常好以外，美帝給人的感覺就是一個自由化了的中國大陸。沒有任何親切感，或者吸引我個人再去長久居住的地方。當然去美國的機會以後可能還有。故覺得去正在經歷激盪變幻莫測歷史的英國也是不錯的選擇。脫歐愈演愈烈，不知道英國會不會有什麼波瀾壯闊的變化，如果能碰巧做個見證人，也是不錯的。將來可以跟我兒子說，看當年大英帝國被踢出歐萌的時候，爸爸在那親眼看着呢。&lt;/li&gt;
-&lt;li&gt;另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/7754267&#34;&gt;文章&lt;/a&gt;^[Pocock, S. J. Life as an academic medical statistician and how to survive it. Statist. Med. 14, 209–222 (1995).] 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：&lt;!-- raw HTML omitted --&gt;我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。&lt;/li&gt;
+&lt;li&gt;另外就是大學的選擇了。當然可選擇的大學有很多，奈何我之前跟大學申請這個例外項目的時候說的是倫敦大學。因此什麼劍橋牛津都是浮雲了。還好我沒明確說，其實倫敦大學底下一大堆大學，UCL和LSHTM是我的申請重點。因爲論醫學統計學課程，大家可以參考這篇&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/7754267&#34;&gt;文章&lt;/a&gt;^[Pocock, S. J. Life as an academic medical statistician and how to survive it. Statist. Med. 14, 209–222 (1995).] 。儘管時間有點久遠，但是英國國內大學有開設醫學統計課程的大概就那麼幾個，估計沒什麼太大變化，摘錄Pro. Pocock總結的各家特色如下：&lt;br&gt;我們可以看到，從最上面的劍橋大學，到最下面的LSHTM(有人翻譯成倫敦衛校😅)按照教學內容偏重理論還是實際進行了排序。所以，LSHTM最偏重實際應用的名氣，是由來已久的。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1424,7 +1432,7 @@ VFS staff will check mandatory required documents have been submitted, but not t
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Theory&lt;!-- raw HTML omitted --&gt; (偏重理論)&lt;/td&gt;
+&lt;td&gt;Theory&lt;br&gt; (偏重理論)&lt;/td&gt;
 &lt;td&gt;Cambridge&lt;/td&gt;
 &lt;td&gt;Mathematical Statistics&lt;/td&gt;
 &lt;/tr&gt;

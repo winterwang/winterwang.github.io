@@ -631,10 +631,12 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
-<li><a href="#分析目的數據和選擇-poisson-回歸模型的原因">分析目的，數據，和選擇 Poisson 回歸模型的原因</a><ul>
+<li><a href="#分析目的數據和選擇-poisson-回歸模型的原因">分析目的，數據，和選擇 Poisson 回歸模型的原因</a>
+<ul>
 <li><a href="#想象模型機制">想象模型機制</a></li>
 <li><a href="#寫下數學模型表達式">寫下數學模型表達式</a></li>
 <li><a href="#把數學模型翻譯成-stan-模型代碼">把數學模型翻譯成 Stan 模型代碼</a></li>
@@ -750,7 +752,7 @@ generated quantities {
 <pre class="r"><code>library(rstan)</code></pre>
 <pre><code>## Loading required package: StanHeaders</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## rstan (Version 2.19.2, GitRev: 2e1f913d3ca3)</code></pre>
+<pre><code>## rstan (Version 2.19.3, GitRev: 2e1f913d3ca3)</code></pre>
 <pre><code>## For execution on a local, multicore CPU with excess RAM we recommend calling
 ## options(mc.cores = parallel::detectCores()).
 ## To avoid recompilation of unchanged Stan programs, we recommend calling
@@ -761,8 +763,8 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 1.3e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.
+## Chain 1: Gradient evaluation took 2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.2 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -779,15 +781,15 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.101417 seconds (Warm-up)
-## Chain 1:                0.11273 seconds (Sampling)
-## Chain 1:                0.214147 seconds (Total)
+## Chain 1:  Elapsed Time: 0.113057 seconds (Warm-up)
+## Chain 1:                0.111411 seconds (Sampling)
+## Chain 1:                0.224468 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 9e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
+## Chain 2: Gradient evaluation took 7e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.07 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -804,9 +806,9 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.103552 seconds (Warm-up)
-## Chain 2:                0.113478 seconds (Sampling)
-## Chain 2:                0.21703 seconds (Total)
+## Chain 2:  Elapsed Time: 0.107243 seconds (Warm-up)
+## Chain 2:                0.125844 seconds (Sampling)
+## Chain 2:                0.233087 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 3).
@@ -829,9 +831,9 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.106149 seconds (Warm-up)
-## Chain 3:                0.103742 seconds (Sampling)
-## Chain 3:                0.209891 seconds (Total)
+## Chain 3:  Elapsed Time: 0.111618 seconds (Warm-up)
+## Chain 3:                0.122729 seconds (Sampling)
+## Chain 3:                0.234347 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;model5-6b&#39; NOW (CHAIN 4).
@@ -854,9 +856,9 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.10037 seconds (Warm-up)
-## Chain 4:                0.11621 seconds (Sampling)
-## Chain 4:                0.21658 seconds (Total)
+## Chain 4:  Elapsed Time: 0.116266 seconds (Warm-up)
+## Chain 4:                0.114301 seconds (Sampling)
+## Chain 4:                0.230567 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: model5-6b.
@@ -864,60 +866,60 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##               mean se_mean   sd    2.5%     25%     50%     75%   97.5% n_eff
-## b[1]          3.58    0.00 0.10    3.38    3.51    3.58    3.64    3.76  1187
-## b[2]          0.26    0.00 0.04    0.18    0.24    0.26    0.29    0.35  1831
-## b[3]          0.29    0.00 0.15    0.01    0.19    0.29    0.39    0.58  1227
-## lambda[1]     3.68    0.00 0.05    3.58    3.65    3.68    3.71    3.77  1276
-## lambda[2]     4.05    0.00 0.03    3.98    4.03    4.05    4.07    4.12  2189
-## lambda[3]     3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81  2467
-## lambda[4]     3.97    0.00 0.04    3.88    3.94    3.97    3.99    4.05  1735
-## lambda[5]     4.07    0.00 0.04    3.99    4.04    4.07    4.10    4.15  1793
-## lambda[6]     3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83  2509
-## lambda[7]     3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1991
-## lambda[8]     4.05    0.00 0.03    3.98    4.03    4.06    4.08    4.12  2102
-## lambda[9]     3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85  2282
-## lambda[10]    3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85  2305
-## lambda[11]    4.05    0.00 0.03    3.98    4.02    4.05    4.07    4.11  2347
-## lambda[12]    3.78    0.00 0.03    3.72    3.76    3.78    3.80    3.83  2465
-## lambda[13]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07  2499
-## lambda[14]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1991
-## lambda[15]    3.73    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1910
-## lambda[16]    3.98    0.00 0.04    3.91    3.96    3.98    4.01    4.05  2088
-## lambda[17]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80  2122
-## lambda[18]    3.70    0.00 0.04    3.61    3.67    3.70    3.72    3.78  1360
-## lambda[19]    3.85    0.00 0.05    3.74    3.81    3.85    3.88    3.95  1653
-## lambda[20]    4.07    0.00 0.04    3.99    4.04    4.07    4.09    4.14  1835
-## lambda[21]    3.97    0.00 0.04    3.88    3.94    3.97    3.99    4.05  1735
-## lambda[22]    4.00    0.00 0.03    3.93    3.98    4.00    4.02    4.06  2298
-## lambda[23]    3.99    0.00 0.03    3.93    3.97    3.99    4.02    4.06  2252
-## lambda[24]    4.05    0.00 0.03    3.98    4.03    4.05    4.07    4.11  2283
-## lambda[25]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07  2483
-## lambda[26]    4.03    0.00 0.03    3.97    4.01    4.03    4.05    4.09  2548
-## lambda[27]    3.75    0.00 0.03    3.69    3.73    3.75    3.77    3.80  2321
-## lambda[28]    3.75    0.00 0.03    3.69    3.73    3.75    3.77    3.80  2321
-## lambda[29]    3.81    0.00 0.04    3.73    3.78    3.81    3.84    3.89  1971
-## lambda[30]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.80  2077
-## lambda[31]    4.08    0.00 0.04    4.00    4.05    4.08    4.11    4.17  1672
-## lambda[32]    3.95    0.00 0.05    3.85    3.92    3.95    3.98    4.04  1571
-## lambda[33]    4.04    0.00 0.03    3.98    4.02    4.04    4.06    4.10  2409
-## lambda[34]    4.02    0.00 0.03    3.96    4.00    4.02    4.04    4.08  2554
-## lambda[35]    3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81  2482
-## lambda[36]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.82  2516
-## lambda[37]    3.99    0.00 0.03    3.93    3.97    3.99    4.02    4.06  2229
-## lambda[38]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  1950
-## lambda[39]    3.71    0.00 0.04    3.63    3.68    3.71    3.73    3.78  1437
-## lambda[40]    3.70    0.00 0.04    3.63    3.68    3.70    3.73    3.78  1424
-## lambda[41]    3.76    0.00 0.03    3.71    3.75    3.76    3.78    3.82  2512
-## lambda[42]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83  2509
-## lambda[43]    3.75    0.00 0.03    3.70    3.74    3.75    3.77    3.81  2404
-## lambda[44]    3.79    0.00 0.03    3.72    3.77    3.79    3.82    3.86  2236
-## lambda[45]    3.84    0.00 0.05    3.74    3.81    3.84    3.88    3.95  1683
-## lambda[46]    3.73    0.00 0.03    3.67    3.71    3.73    3.75    3.79  1772
-## lambda[47]    3.65    0.00 0.06    3.53    3.61    3.65    3.69    3.77  1222
-## lambda[48]    3.79    0.00 0.04    3.73    3.77    3.79    3.82    3.86  2191
-## lambda[49]    3.72    0.00 0.03    3.65    3.70    3.72    3.74    3.79  1613
-## lambda[50]    3.98    0.00 0.04    3.91    3.96    3.98    4.01    4.05  2088
-## lp__       6896.53    0.03 1.28 6893.17 6895.97 6896.87 6897.45 6897.95  1452
+## b[1]          3.58    0.00 0.09    3.41    3.52    3.58    3.64    3.77  1323
+## b[2]          0.26    0.00 0.04    0.18    0.23    0.26    0.29    0.34  1775
+## b[3]          0.29    0.00 0.14    0.00    0.19    0.28    0.39    0.57  1332
+## lambda[1]     3.68    0.00 0.05    3.59    3.65    3.68    3.71    3.77  1470
+## lambda[2]     4.05    0.00 0.03    3.98    4.03    4.05    4.07    4.11  2285
+## lambda[3]     3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81  2639
+## lambda[4]     3.97    0.00 0.04    3.89    3.94    3.97    3.99    4.04  1687
+## lambda[5]     4.07    0.00 0.04    3.99    4.04    4.07    4.10    4.14  1976
+## lambda[6]     3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83  2604
+## lambda[7]     3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  2297
+## lambda[8]     4.05    0.00 0.03    3.98    4.03    4.05    4.08    4.12  2232
+## lambda[9]     3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85  2312
+## lambda[10]    3.79    0.00 0.03    3.72    3.77    3.79    3.81    3.85  2337
+## lambda[11]    4.04    0.00 0.03    3.98    4.02    4.04    4.07    4.11  2392
+## lambda[12]    3.78    0.00 0.03    3.72    3.76    3.78    3.80    3.83  2530
+## lambda[13]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07  2518
+## lambda[14]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  2297
+## lambda[15]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  2230
+## lambda[16]    3.98    0.00 0.03    3.92    3.96    3.99    4.01    4.05  1959
+## lambda[17]    3.74    0.00 0.03    3.69    3.72    3.74    3.76    3.80  2396
+## lambda[18]    3.70    0.00 0.04    3.62    3.67    3.70    3.72    3.77  1587
+## lambda[19]    3.84    0.00 0.05    3.74    3.81    3.84    3.88    3.95  1687
+## lambda[20]    4.07    0.00 0.04    3.99    4.04    4.07    4.09    4.14  2017
+## lambda[21]    3.97    0.00 0.04    3.89    3.94    3.97    3.99    4.04  1687
+## lambda[22]    4.00    0.00 0.03    3.94    3.98    4.00    4.02    4.06  2226
+## lambda[23]    3.99    0.00 0.03    3.93    3.97    4.00    4.02    4.06  2164
+## lambda[24]    4.05    0.00 0.03    3.98    4.02    4.05    4.07    4.11  2339
+## lambda[25]    4.01    0.00 0.03    3.95    3.99    4.01    4.03    4.07  2493
+## lambda[26]    4.03    0.00 0.03    3.97    4.01    4.03    4.05    4.08  2626
+## lambda[27]    3.75    0.00 0.03    3.69    3.73    3.75    3.77    3.80  2540
+## lambda[28]    3.75    0.00 0.03    3.69    3.73    3.75    3.77    3.80  2540
+## lambda[29]    3.81    0.00 0.04    3.73    3.78    3.81    3.84    3.89  1979
+## lambda[30]    3.74    0.00 0.03    3.69    3.72    3.74    3.76    3.80  2363
+## lambda[31]    4.08    0.00 0.04    3.99    4.05    4.08    4.11    4.16  1853
+## lambda[32]    3.95    0.00 0.05    3.85    3.92    3.95    3.98    4.04  1544
+## lambda[33]    4.04    0.00 0.03    3.98    4.02    4.04    4.06    4.10  2469
+## lambda[34]    4.02    0.00 0.03    3.96    4.00    4.02    4.04    4.08  2616
+## lambda[35]    3.76    0.00 0.03    3.70    3.74    3.76    3.78    3.81  2645
+## lambda[36]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.82  2630
+## lambda[37]    3.99    0.00 0.03    3.93    3.97    3.99    4.01    4.06  2134
+## lambda[38]    3.74    0.00 0.03    3.68    3.72    3.74    3.76    3.79  2263
+## lambda[39]    3.71    0.00 0.04    3.64    3.68    3.71    3.73    3.78  1689
+## lambda[40]    3.71    0.00 0.04    3.63    3.68    3.71    3.73    3.78  1672
+## lambda[41]    3.76    0.00 0.03    3.71    3.75    3.76    3.78    3.82  2645
+## lambda[42]    3.77    0.00 0.03    3.71    3.75    3.77    3.79    3.83  2604
+## lambda[43]    3.75    0.00 0.03    3.70    3.74    3.75    3.77    3.81  2602
+## lambda[44]    3.79    0.00 0.03    3.72    3.77    3.79    3.82    3.86  2264
+## lambda[45]    3.84    0.00 0.05    3.74    3.81    3.84    3.88    3.94  1711
+## lambda[46]    3.73    0.00 0.03    3.67    3.71    3.73    3.75    3.79  2100
+## lambda[47]    3.65    0.00 0.06    3.54    3.61    3.65    3.69    3.77  1390
+## lambda[48]    3.79    0.00 0.03    3.73    3.77    3.79    3.82    3.86  2216
+## lambda[49]    3.72    0.00 0.03    3.66    3.70    3.72    3.74    3.78  1911
+## lambda[50]    3.98    0.00 0.03    3.92    3.96    3.99    4.01    4.05  1959
+## lp__       6896.60    0.03 1.18 6893.47 6896.04 6896.91 6897.47 6897.96  1368
 ##            Rhat
 ## b[1]          1
 ## b[2]          1
@@ -974,7 +976,7 @@ fit &lt;- stan(file=&#39;stanfiles/model5-6b.stan&#39;, data=data, seed=1234, pa
 ## lambda[50]    1
 ## lp__          1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:46:49 2020.
+## Samples were drawn using NUTS(diag_e) at Mon May 18 16:57:44 2020.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>

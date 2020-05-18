@@ -631,16 +631,19 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
-<li><a href="#多層等級線性回歸模型混合效應模型-multilevelmixed-effect-regression-model">多層(等級)線性回歸模型/混合效應模型 multilevel/mixed effect regression model</a><ul>
+<li><a href="#多層等級線性回歸模型混合效應模型-multilevelmixed-effect-regression-model">多層(等級)線性回歸模型/混合效應模型 multilevel/mixed effect regression model</a>
+<ul>
 <li><a href="#適用於等級線性回歸模型的數據">適用於等級線性回歸模型的數據</a></li>
 <li><a href="#確認數據分佈">確認數據分佈</a></li>
 <li><a href="#如果不考慮組間公司間差異">如果不考慮組間(公司間)差異</a></li>
 <li><a href="#如果要考慮組間差異">如果要考慮組間差異</a></li>
 </ul></li>
-<li><a href="#等級線性回歸的貝葉斯實現">等級線性回歸的貝葉斯實現</a><ul>
+<li><a href="#等級線性回歸的貝葉斯實現">等級線性回歸的貝葉斯實現</a>
+<ul>
 <li><a href="#模型機制-mechanism">模型機制 mechanism</a></li>
 </ul></li>
 </ul>
@@ -786,8 +789,8 @@ fit &lt;- stan(file=&#39;stanfiles/model8-1.stan&#39;, data=data, seed=1234)</co
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;model8-1&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 9e-06 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.09 seconds.
+## Chain 1: Gradient evaluation took 1.3e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -804,15 +807,15 @@ fit &lt;- stan(file=&#39;stanfiles/model8-1.stan&#39;, data=data, seed=1234)</co
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.051415 seconds (Warm-up)
-## Chain 1:                0.036278 seconds (Sampling)
-## Chain 1:                0.087693 seconds (Total)
+## Chain 1:  Elapsed Time: 0.076557 seconds (Warm-up)
+## Chain 1:                0.043822 seconds (Sampling)
+## Chain 1:                0.120379 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;model8-1&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 4e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Gradient evaluation took 5e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -829,15 +832,15 @@ fit &lt;- stan(file=&#39;stanfiles/model8-1.stan&#39;, data=data, seed=1234)</co
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.054178 seconds (Warm-up)
-## Chain 2:                0.03123 seconds (Sampling)
-## Chain 2:                0.085408 seconds (Total)
+## Chain 2:  Elapsed Time: 0.080947 seconds (Warm-up)
+## Chain 2:                0.043589 seconds (Sampling)
+## Chain 2:                0.124536 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;model8-1&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 4e-06 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 3: Gradient evaluation took 3e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.03 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -854,15 +857,15 @@ fit &lt;- stan(file=&#39;stanfiles/model8-1.stan&#39;, data=data, seed=1234)</co
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.055162 seconds (Warm-up)
-## Chain 3:                0.033103 seconds (Sampling)
-## Chain 3:                0.088265 seconds (Total)
+## Chain 3:  Elapsed Time: 0.077026 seconds (Warm-up)
+## Chain 3:                0.043674 seconds (Sampling)
+## Chain 3:                0.1207 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;model8-1&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 4e-06 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 4: Gradient evaluation took 5e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -879,9 +882,9 @@ fit &lt;- stan(file=&#39;stanfiles/model8-1.stan&#39;, data=data, seed=1234)</co
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.056718 seconds (Warm-up)
-## Chain 4:                0.03356 seconds (Sampling)
-## Chain 4:                0.090278 seconds (Total)
+## Chain 4:  Elapsed Time: 0.082446 seconds (Warm-up)
+## Chain 4:                0.035819 seconds (Sampling)
+## Chain 4:                0.118265 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: model8-1.
@@ -889,12 +892,12 @@ fit &lt;- stan(file=&#39;stanfiles/model8-1.stan&#39;, data=data, seed=1234)</co
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##         mean se_mean    sd    2.5%     25%     50%     75%   97.5% n_eff Rhat
-## a     376.97    0.58 24.54  329.21  360.86  377.27  393.00  425.66  1811    1
-## b      10.99    0.03  1.41    8.25   10.07   10.98   11.94   13.78  1865    1
-## s_Y    68.85    0.19  8.21   54.92   63.07   68.08   73.79   86.74  1938    1
-## lp__ -184.12    0.03  1.29 -187.39 -184.69 -183.79 -183.17 -182.66  1450    1
+## a     376.15    0.63 24.41  328.86  359.80  376.18  392.66  423.88  1483    1
+## b      11.05    0.04  1.41    8.27   10.12   11.02   12.02   13.78  1527    1
+## s_Y    68.42    0.21  8.26   54.41   62.59   67.64   73.53   86.73  1538    1
+## lp__ -184.12    0.03  1.31 -187.60 -184.70 -183.76 -183.18 -182.66  1391    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:55:40 2020.
+## Samples were drawn using NUTS(diag_e) at Mon May 18 16:58:23 2020.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -916,23 +919,23 @@ summary(rstanarm_results, probs=c(.025, .975), digits=3)</code></pre>
 ## 
 ## Estimates:
 ##               mean    sd      2.5%    97.5%
-## (Intercept) 376.287  23.966 329.948 423.392
-## X            11.028   1.413   8.243  13.842
-## sigma        67.884   8.214  54.036  86.018
+## (Intercept) 376.371  24.615 328.532 423.842
+## X            11.030   1.401   8.387  13.793
+## sigma        68.159   8.136  54.474  86.401
 ## 
 ## Fit Diagnostics:
 ##            mean    sd      2.5%    97.5%
-## mean_PPD 547.732  14.914 517.835 576.914
+## mean_PPD 548.026  15.100 517.682 577.179
 ## 
 ## The mean_ppd is the sample average posterior predictive distribution of the outcome variable (for details see help(&#39;summary.stanreg&#39;)).
 ## 
 ## MCMC diagnostics
 ##               mcse  Rhat  n_eff
-## (Intercept)   0.416 0.999 3319 
-## X             0.024 1.000 3490 
-## sigma         0.145 1.000 3217 
-## mean_PPD      0.234 1.000 4047 
-## log-posterior 0.029 1.000 1758 
+## (Intercept)   0.397 1.000 3836 
+## X             0.022 1.001 3940 
+## sigma         0.146 1.000 3112 
+## mean_PPD      0.245 1.000 3795 
+## log-posterior 0.029 1.001 1788 
 ## 
 ## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</code></pre>
 <p>可以看到強制不同公司社員的年收入來自同一個正態分佈時，方差顯得非常的大。</p>
@@ -975,8 +978,8 @@ fit &lt;- stan(file=&#39;stanfiles/model8-2.stan&#39;, data=data, seed=1234)</co
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;model8-2&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 1.2e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.12 seconds.
+## Chain 1: Gradient evaluation took 1.7e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.17 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -993,15 +996,15 @@ fit &lt;- stan(file=&#39;stanfiles/model8-2.stan&#39;, data=data, seed=1234)</co
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.291379 seconds (Warm-up)
-## Chain 1:                0.247714 seconds (Sampling)
-## Chain 1:                0.539093 seconds (Total)
+## Chain 1:  Elapsed Time: 0.450551 seconds (Warm-up)
+## Chain 1:                0.267262 seconds (Sampling)
+## Chain 1:                0.717813 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;model8-2&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 4e-06 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 2: Gradient evaluation took 5e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1018,9 +1021,9 @@ fit &lt;- stan(file=&#39;stanfiles/model8-2.stan&#39;, data=data, seed=1234)</co
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.307839 seconds (Warm-up)
-## Chain 2:                0.19135 seconds (Sampling)
-## Chain 2:                0.499189 seconds (Total)
+## Chain 2:  Elapsed Time: 0.414798 seconds (Warm-up)
+## Chain 2:                0.262094 seconds (Sampling)
+## Chain 2:                0.676892 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;model8-2&#39; NOW (CHAIN 3).
@@ -1043,15 +1046,15 @@ fit &lt;- stan(file=&#39;stanfiles/model8-2.stan&#39;, data=data, seed=1234)</co
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.345166 seconds (Warm-up)
-## Chain 3:                0.177124 seconds (Sampling)
-## Chain 3:                0.52229 seconds (Total)
+## Chain 3:  Elapsed Time: 0.440107 seconds (Warm-up)
+## Chain 3:                0.288008 seconds (Sampling)
+## Chain 3:                0.728115 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;model8-2&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 4e-06 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
+## Chain 4: Gradient evaluation took 5e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1068,9 +1071,9 @@ fit &lt;- stan(file=&#39;stanfiles/model8-2.stan&#39;, data=data, seed=1234)</co
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.325194 seconds (Warm-up)
-## Chain 4:                0.206306 seconds (Sampling)
-## Chain 4:                0.5315 seconds (Total)
+## Chain 4:  Elapsed Time: 0.447923 seconds (Warm-up)
+## Chain 4:                0.259137 seconds (Sampling)
+## Chain 4:                0.70706 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>fit</code></pre>
 <pre><code>## Inference for Stan model: model8-2.
@@ -1078,18 +1081,18 @@ fit &lt;- stan(file=&#39;stanfiles/model8-2.stan&#39;, data=data, seed=1234)</co
 ## post-warmup draws per chain=1000, total post-warmup draws=4000.
 ## 
 ##         mean se_mean     sd    2.5%     25%     50%     75%   97.5% n_eff Rhat
-## a[1]  387.11    0.27  14.17  359.31  377.78  387.20  396.47  415.13  2828    1
-## a[2]  329.03    0.33  16.43  296.89  317.97  328.89  340.33  360.46  2517    1
-## a[3]  314.11    0.75  34.43  246.03  291.69  313.70  335.87  382.48  2129    1
-## a[4]  748.39    2.88 153.50  446.07  643.82  746.53  853.26 1054.33  2834    1
-## b[1]    7.52    0.02   0.87    5.82    6.92    7.52    8.10    9.26  2604    1
-## b[2]   19.82    0.02   1.21   17.47   19.01   19.82   20.63   22.20  2438    1
-## b[3]   12.44    0.03   1.70    9.08   11.34   12.44   13.57   15.82  2595    1
-## b[4]   -0.93    0.12   6.20  -13.37   -5.14   -0.91    3.22   11.19  2827    1
-## s_Y    27.17    0.07   3.58   21.23   24.68   26.82   29.30   35.16  2695    1
-## lp__ -148.01    0.06   2.40 -153.78 -149.35 -147.61 -146.26 -144.55  1414    1
+## a[1]  387.16    0.28  14.18  359.00  377.67  387.06  396.34  415.21  2560    1
+## a[2]  328.45    0.32  16.66  295.74  317.60  328.68  339.52  361.24  2649    1
+## a[3]  314.06    0.66  34.62  246.26  290.04  314.33  337.91  381.39  2725    1
+## a[4]  751.09    3.10 157.77  440.06  643.83  752.64  857.32 1063.97  2598    1
+## b[1]    7.51    0.02   0.87    5.79    6.94    7.51    8.10    9.19  2381    1
+## b[2]   19.88    0.02   1.23   17.51   19.07   19.88   20.70   22.32  2545    1
+## b[3]   12.45    0.03   1.69    9.16   11.28   12.45   13.60   15.75  2661    1
+## b[4]   -1.04    0.12   6.36  -13.54   -5.34   -1.06    3.39   11.43  2616    1
+## s_Y    27.32    0.07   3.57   21.48   24.77   26.95   29.43   35.38  2858    1
+## lp__ -148.07    0.07   2.38 -153.72 -149.41 -147.68 -146.36 -144.57  1311    1
 ## 
-## Samples were drawn using NUTS(diag_e) at Tue Jan  7 14:56:32 2020.
+## Samples were drawn using NUTS(diag_e) at Mon May 18 16:59:02 2020.
 ## For each parameter, n_eff is a crude measure of effective sample size,
 ## and Rhat is the potential scale reduction factor on split chains (at 
 ## convergence, Rhat=1).</code></pre>
@@ -1118,8 +1121,8 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 8.1e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.81 seconds.
+## Chain 1: Gradient evaluation took 0.000116 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.16 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1136,15 +1139,15 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 5.02763 seconds (Warm-up)
-## Chain 1:                1.63677 seconds (Sampling)
-## Chain 1:                6.6644 seconds (Total)
+## Chain 1:  Elapsed Time: 7.72361 seconds (Warm-up)
+## Chain 1:                3.71292 seconds (Sampling)
+## Chain 1:                11.4365 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 1.6e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.16 seconds.
+## Chain 2: Gradient evaluation took 2.5e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.25 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1161,15 +1164,15 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 6.86217 seconds (Warm-up)
-## Chain 2:                2.63666 seconds (Sampling)
-## Chain 2:                9.49883 seconds (Total)
+## Chain 2:  Elapsed Time: 5.67096 seconds (Warm-up)
+## Chain 2:                2.07953 seconds (Sampling)
+## Chain 2:                7.75049 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 1.7e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.17 seconds.
+## Chain 3: Gradient evaluation took 4.2e-05 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.42 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1186,15 +1189,15 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 4.64937 seconds (Warm-up)
-## Chain 3:                2.72015 seconds (Sampling)
-## Chain 3:                7.36952 seconds (Total)
+## Chain 3:  Elapsed Time: 7.81475 seconds (Warm-up)
+## Chain 3:                3.88969 seconds (Sampling)
+## Chain 3:                11.7044 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 2e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.2 seconds.
+## Chain 4: Gradient evaluation took 3.7e-05 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.37 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1211,9 +1214,9 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 5.35582 seconds (Warm-up)
-## Chain 4:                2.13219 seconds (Sampling)
-## Chain 4:                7.488 seconds (Total)
+## Chain 4:  Elapsed Time: 11.2964 seconds (Warm-up)
+## Chain 4:                2.51584 seconds (Sampling)
+## Chain 4:                13.8122 seconds (Total)
 ## Chain 4:</code></pre>
 <pre class="r"><code>print(M1_stanlmer, digits = 2)</code></pre>
 <pre><code>## stan_lmer
@@ -1222,18 +1225,18 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 ##  observations: 40
 ## ------
 ##             Median MAD_SD
-## (Intercept) 359.02  15.02
-## X            12.80   2.98
+## (Intercept) 358.76  15.31
+## X            12.71   3.11
 ## 
 ## Auxiliary parameter(s):
 ##       Median MAD_SD
-## sigma 30.00   3.58 
+## sigma 29.93   3.79 
 ## 
 ## Error terms:
 ##  Groups   Name        Std.Dev. Corr 
-##  KID      (Intercept) 23.94         
-##           X            8.76    -0.26
-##  Residual             30.28         
+##  KID      (Intercept) 24.36         
+##           X            9.26    -0.15
+##  Residual             30.32         
 ## Num. levels: KID 4 
 ## 
 ## ------
@@ -1258,21 +1261,21 @@ M1_stanlmer &lt;- stan_lmer(formula = Y ~ X  + (X | KID),
 ## 
 ## Estimates:
 ##                                      mean    sd      2.5%    97.5%
-## (Intercept)                         358.72   18.63  322.31  394.35
-## X                                    12.59    3.97    3.57   20.91
-## sigma                                30.28    3.82   23.76   38.95
-## Sigma[KID:(Intercept),(Intercept)]  572.98 1381.86    1.70 3803.32
-## Sigma[KID:X,(Intercept)]            -54.05  190.09 -444.45  144.95
-## Sigma[KID:X,X]                       76.74  130.06    6.91  412.48
+## (Intercept)                         357.39   18.40  312.29  390.14
+## X                                    12.40    4.06    2.50   19.81
+## sigma                                30.32    3.91   23.68   38.98
+## Sigma[KID:(Intercept),(Intercept)]  593.52 1322.20    1.72 3794.51
+## Sigma[KID:X,(Intercept)]            -34.16  170.47 -375.20  302.16
+## Sigma[KID:X,X]                       85.70  170.48    6.74  481.62
 ## 
 ## MCMC diagnostics
 ##                                    mcse  Rhat  n_eff
-## (Intercept)                         0.38  1.00 2464 
-## X                                   0.14  1.00  771 
-## sigma                               0.08  1.00 2032 
-## Sigma[KID:(Intercept),(Intercept)] 33.93  1.01 1659 
-## Sigma[KID:X,(Intercept)]            4.80  1.00 1569 
-## Sigma[KID:X,X]                      4.34  1.01  898 
+## (Intercept)                         1.20  1.01  233 
+## X                                   0.25  1.02  267 
+## sigma                               0.08  1.00 2545 
+## Sigma[KID:(Intercept),(Intercept)] 65.01  1.01  414 
+## Sigma[KID:X,(Intercept)]            8.90  1.01  367 
+## Sigma[KID:X,X]                     10.07  1.01  287 
 ## 
 ## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</code></pre>
 <p>和非貝葉斯版本的概率論隨機效應線性回歸模型的結果相對比一下：</p>
@@ -1288,19 +1291,19 @@ summary(M1)</code></pre>
 ## REML criterion at convergence: 387.2
 ## 
 ## Scaled residuals: 
-##      Min       1Q   Median       3Q      Max 
-## -2.36969 -0.51837 -0.03545  0.76358  1.87881 
+##     Min      1Q  Median      3Q     Max 
+## -2.3697 -0.5184 -0.0355  0.7635  1.8788 
 ## 
 ## Random effects:
 ##  Groups   Name        Variance Std.Dev. Corr 
-##  KID      (Intercept) 503.78   22.445        
-##           X            28.53    5.341   -1.00
-##  Residual             833.95   28.878        
+##  KID      (Intercept) 504.00   22.450        
+##           X            28.54    5.342   -1.00
+##  Residual             833.94   28.878        
 ## Number of obs: 40, groups:  KID, 4
 ## 
 ## Fixed effects:
 ##             Estimate Std. Error t value
-## (Intercept)  358.207     15.383  23.286
+## (Intercept)  358.207     15.385  23.283
 ## X             13.067      2.741   4.767
 ## 
 ## Correlation of Fixed Effects:
