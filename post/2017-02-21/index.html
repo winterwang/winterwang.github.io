@@ -623,6 +623,7 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="矩陣的定義" class="section level2">
@@ -632,7 +633,6 @@
 <p><span id="thm:unnamed-chunk-1" class="theorem"><strong>Theorem 1  (matrix)  </strong></span>將<span class="math inline">\(m\times n\)</span> 個數 <span class="math inline">\(a_{ij} (i=1,2,\cdots,m; j=1,2,\cdots,n)\)</span>, 寫成縱 <span class="math inline">\(m\)</span> 行， 橫 <span class="math inline">\(n\)</span> 列的長方形或者正方形，左右用圓括號或者方括號包含在內。我們稱之爲 <span class="math inline">\(m\times n\)</span> <strong>矩陣(matrix)</strong>，或者 <span class="math inline">\((m, n)\)</span> 矩陣。 <span class="math inline">\(m\times n\)</span> 或者 <span class="math inline">\((m,n)\)</span> 被稱爲是這個矩陣的類型。我們常用大寫字母來標記一個矩陣，如下面的矩陣我們標記爲 <span class="math inline">\(A\)</span>。 如果要特別明示矩陣的類型，可以寫作 <span class="math inline">\(\mathop{A}_{m\times n}, \mathop{A}_{(m, n)}, \; A(m\times n)\)</span>。兩個矩陣如果行數相等，列數也相等，我們稱他們爲類型相同的矩陣。構成矩陣的一個個數 <span class="math inline">\(a_{11},a_{12},\cdots,a_{mn}\)</span> 被叫做矩陣的成分(component, element, entry)。</p>
 第<span class="math inline">\(i\)</span>行，第<span class="math inline">\(j\)</span>列交叉的地方的成分，<span class="math inline">\(a_{ij}\)</span> 被叫做 <span class="math inline">\((i,j)\)</span> 成分。矩陣有時候也會寫成 <span class="math inline">\(A=(a_{ij})\)</span>
 </div>
-
 <p><span class="math inline">\(\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2j} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn}\\ \end{array} \right), \\ \left[ \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2j} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn}\\ \end{array} \right]\)</span></p>
 <ul>
 <li><p>矩陣 <span class="math inline">\(\mathop{A}_{m\times n}\)</span> 可以被看做是：<br>
@@ -658,7 +658,6 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 2  (matrix plus or minus)  </strong></span>類型(type)相同的矩陣之間的加減法運算，被定義爲各個對應成分的加減法結果作成分的矩陣。
 </div>
-
 <p>對於<span class="math inline">\(A=\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\ \end{array} \right),\\ B=\left( \begin{array}{c} b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n}\\ b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}\\ \end{array} \right)\)</span> <br>
 有：<span class="math inline">\(A\pm B=\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\ \end{array} \right)\\ \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\pm \left( \begin{array}{c} b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n}\\ b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}\\ \end{array} \right)\\ \;\;\;\;\;\;\;\;\;\;=\left( \begin{array}{c} a_{11}\pm b_{11} &amp; a_{12}\pm b_{12} &amp; \cdots &amp; a_{1n}\pm b_{1n}\\ a_{21}\pm b_{21} &amp; a_{22}\pm b_{22} &amp; \cdots &amp; a_{2n}\pm b_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1}\pm b_{m1} &amp; a_{m2}\pm b_{m2} &amp; \cdots &amp; a_{mn}\pm b_{mn}\\ \end{array} \right)(復号同順)\)</span></p>
 <ol style="list-style-type: decimal">
@@ -674,7 +673,6 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-3" class="theorem"><strong>Theorem 3  (matrix equal)  </strong></span>類型相同的兩個矩陣 <span class="math inline">\(A,B\)</span>，如果他們對應的所有成分，一一相等，我們說這兩個矩陣是相等的。即：<span class="math inline">\(A=B\)</span>。
 </div>
-
 <p>對於<span class="math inline">\(A=\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\ \end{array} \right),\\ B=\left( \begin{array}{c} b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n}\\ b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}\\ \end{array} \right)\)</span><br>
 如果有：<br>
 <span class="math inline">\(a_{11}=b_{11},a_{12}=b_{12},\cdots,a_{mn}=b_{mn}\)</span><br>
@@ -689,7 +687,6 @@
 <span class="math inline">\(\left( \begin{array}{c} 0 &amp; 0 &amp; \cdots &amp; 0\\ 0 &amp; 0 &amp; \cdots &amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ 0 &amp; 0 &amp; \cdots &amp; 0\\ \end{array} \right)\)</span><br>
 被稱爲<strong>零矩陣(zero matrix, null matrix)</strong>。寫作：<span class="math inline">\(\large 0, \mathop{\large 0}_{m\times n}, \mathop{\large 0}_{(m,n)}\)</span>。要注意與標量的 <span class="math inline">\(0\)</span> 區分。
 </div>
-
 </div>
 <div id="矩陣的標量倍數運算" class="section level3">
 <h3>矩陣的標量倍數運算</h3>
@@ -697,7 +694,6 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-5" class="theorem"><strong>Theorem 5  (scalar times)  </strong></span>矩陣 <span class="math inline">\(A\)</span> 的所有的成分，均乘以一個標量 <span class="math inline">\(k\)</span>，獲得新的矩陣的過程被稱爲矩陣的標量倍數運算。 寫作 <span class="math inline">\(kA\)</span>。
 </div>
-
 <p>對於 <span class="math inline">\(A=\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\ \end{array} \right)\)</span>，<br>
 有：<span class="math inline">\(kA = k\left( \begin{array}{c} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\ \end{array} \right)\\ =\left( \begin{array}{c} ka_{11} &amp; ka_{12} &amp; \cdots &amp; ka_{1n}\\ ka_{21} &amp; ka_{22} &amp; \cdots &amp; ka_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ ka_{m1} &amp; ka_{m2} &amp; \cdots &amp; ka_{mn}\\ \end{array} \right)\)</span></p>
 <p>特別的，當 <span class="math inline">\(k=-1\)</span> 時， <span class="math inline">\((-1)A=-A\)</span>，<span class="math inline">\(k=0\)</span> 時，<span class="math inline">\(0A=\Large 0\)</span>。注意 <span class="math inline">\(\Large 0\)</span> 是與 <span class="math inline">\(A\)</span> 類型相同的零矩陣，而非標量 <span class="math inline">\(0\)</span>。</p>

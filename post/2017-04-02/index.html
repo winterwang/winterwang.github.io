@@ -623,22 +623,23 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="行列式的性質" class="section level2">
 <h2>行列式的性質</h2>
 <p>具體的行列式的值，可以通過以下介紹的行列式性質，儘量簡潔地求解。本節也是爲了簡易示範，僅僅使用3次行列式作例子。4次以上的行列式性質依然相同，依此類推即可。</p>
 <ol style="list-style-type: decimal">
-<li>轉置矩陣的行列式，與轉置前的行列式一致。即：<span class="math inline">\(|A^t|=|A|\)</span>。 <br>
-<span class="math inline">\(|A|=\begin{vmatrix}  1 &amp; 2 &amp; 3 \\  4 &amp; 5 &amp; 6 \\  7 &amp; 8 &amp; 9 \\ \end{vmatrix}\)</span></li>
-<li>任意一列（或者任意一行）若乘以 <span class="math inline">\(\lambda\)</span> 倍，那麼這個矩陣的行列式結果也將是乘以 <span class="math inline">\(\lambda\)</span> 倍。<br>
+<li><p>轉置矩陣的行列式，與轉置前的行列式一致。即：<span class="math inline">\(|A^t|=|A|\)</span>。 <br>
+<span class="math inline">\(|A|=\begin{vmatrix}  1 &amp; 2 &amp; 3 \\  4 &amp; 5 &amp; 6 \\  7 &amp; 8 &amp; 9 \\ \end{vmatrix}\)</span></p></li>
+<li><p>任意一列（或者任意一行）若乘以 <span class="math inline">\(\lambda\)</span> 倍，那麼這個矩陣的行列式結果也將是乘以 <span class="math inline">\(\lambda\)</span> 倍。<br>
 <span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ \lambda a_{21} &amp;\lambda a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span><br>
-<span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; \lambda a_{13}\\ a_{21} &amp; a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span></li>
+<span class="math inline">\(|A|=\begin{vmatrix} a_{11} &amp; a_{12} &amp; \lambda a_{13}\\ a_{21} &amp; a_{22} &amp; \lambda a_{23}\\ a_{31} &amp; a_{32} &amp; \lambda a_{33}\\ \end{vmatrix}\\ \;\;\;\;=|A|=\lambda \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span></p></li>
 <li><p>任意一列（或者任意一行）的各成分乘以 <span class="math inline">\(\lambda\)</span> 倍，與其他任意一列（或者任意一行）的各成分進行加運算（或者減運算）獲得的矩陣的行列式與原矩陣的行列式相同。<br>
 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21}\pm \lambda a_{11} &amp; a_{22}\pm \lambda a_{12} &amp; a_{23}\pm \lambda a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}，\\ \begin{vmatrix} a_{11} &amp; a_{12}\pm \lambda a_{11} &amp; a_{13}\\ a_{21} &amp; a_{22}\pm \lambda a_{21} &amp; a_{23}\\ a_{31} &amp; a_{32}\pm \lambda a_{31} &amp; a_{33}\\ \end{vmatrix},\)</span> <br>
 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} \pm \frac{a_{11}}{\lambda} &amp; a_{22}\pm \frac{a_{12}}{\lambda} &amp; a_{23}\pm \frac{a_{13}}{\lambda}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}, \\ \begin{vmatrix} a_{11} &amp; a_{12}\pm \frac{a_{11}}{\lambda} &amp; a_{13}\\ a_{21} &amp; a_{22}\pm \frac{a_{21}}{\lambda} &amp; a_{23}\\ a_{31} &amp; a_{32}\pm \frac{a_{31}}{\lambda} &amp; a_{33}\\ \end{vmatrix}\)</span><br>
 上述行列式與行列式 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> 結果相同。</p></li>
-<li>符合下列條件時，行列式的值爲 <span class="math inline">\(0\)</span>
+<li><p>符合下列條件時，行列式的值爲 <span class="math inline">\(0\)</span></p>
 <ul>
 <li>任意一行（或者列）的全部成分均爲 <span class="math inline">\(0\)</span> 時。</li>
 <li>矩陣中若有兩行（或者兩列）的對應成分全部相同時。</li>
@@ -646,10 +647,10 @@
 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ 0 &amp; 0 &amp; 0\\ \end{vmatrix}=0\\ \begin{vmatrix} a &amp; b &amp; c\\ a &amp; b &amp; c\\ d &amp; e &amp; f\\ \end{vmatrix}=0\\ \begin{vmatrix} a &amp; b &amp; c\\ ka &amp; kb &amp; kc\\ d &amp; e &amp; f\\ \end{vmatrix}=0\)</span><br>
 由於上面的後兩條成立，所以當矩陣中任意兩列（或者兩行）的對應成分幾乎相等，或者比值無限接近時，行列式的值也可以說就接近爲 <span class="math inline">\(0\)</span>。此性質與多重線性迴歸的多重共線性有直接關係。</li>
 </ul></li>
-<li>一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）<br>
-<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp; a_{22} &amp; a_{23}\\ a_{11} &amp; a_{12} &amp; a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> （第一行和第二行對調成分）</li>
-<li>對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積<br>
-<span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ 0 &amp; a_{22} &amp; 0\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ 0 &amp; a_{22} &amp; a_{23}\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; 0\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)</span></li>
+<li><p>一個矩陣中其中兩列（或者兩行）的成分交換以後獲得的矩陣，其行列式值爲原矩陣的行列式的值的相反數。（即符號相反）<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=-\begin{vmatrix} a_{21} &amp; a_{22} &amp; a_{23}\\ a_{11} &amp; a_{12} &amp; a_{13}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}\)</span> （第一行和第二行對調成分）</p></li>
+<li><p>對角矩陣，上三角矩陣，下三角矩陣的行列式的值，等於對角成分的積<br>
+<span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ 0 &amp; a_{22} &amp; 0\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; a_{12} &amp; a_{13}\\ 0 &amp; a_{22} &amp; a_{23}\\ 0 &amp; 0 &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33},\\ \begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; 0\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}a_{22}a_{33}\)</span></p></li>
 <li><p>矩陣中如果有任意一行（或列），衹有一個成分為非零成分，可以將該矩陣的行列式降次：<br>
 <span class="math inline">\(\begin{vmatrix} a_{11} &amp; 0 &amp; 0\\ a_{21} &amp; a_{22} &amp; a_{23}\\ a_{31} &amp; a_{32} &amp; a_{33}\\ \end{vmatrix}=a_{11}(-1)^{1+1}\begin{vmatrix} a_{22} &amp; a_{23} \\ a_{32} &amp; a_{33} \end{vmatrix}\)</span> <br>
 <br>

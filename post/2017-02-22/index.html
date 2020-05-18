@@ -623,6 +623,7 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="矩陣乘法運算" class="section level2">
@@ -633,7 +634,6 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-1" class="theorem"><strong>Theorem 1  (matrix multiplication)  </strong></span>兩個矩陣 <span class="math inline">\(A, B\)</span> ，只有 <span class="math inline">\(A\)</span> 的列數和 <span class="math inline">\(B\)</span> 的行數相等(這種特徵又被稱爲：矩陣 <span class="math inline">\(A,B\)</span> <strong>可整合的</strong>，conformable)時，才有定義：<span class="math inline">\(AB\)</span>。<span class="math inline">\(AB\)</span> 則爲新的矩陣，類型爲 <span class="math inline">\(A\)</span> 的行數， <span class="math inline">\(B\)</span>的列數。即：<span class="math inline">\(A_{k\times l}, \; B_{m\times n}\)</span> 且 <span class="math inline">\(l=m\)</span> 時才能計算乘積: <span class="math inline">\(AB_{k\times n}\)</span>。
 </div>
-
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(A_{2\times3}=\left( \begin{array}{c} 4 &amp; 6 &amp; 8\\ 2 &amp; 1 &amp; 3\\ \end{array} \right),\; B_{3\times2}=\left( \begin{array}{c} 0 &amp; 8\\ 2 &amp; -1\\ 9 &amp; 4 \\ \end{array} \right)\)</span> 時，<br>
 “<span class="math inline">\(A\)</span>的列數” <span class="math inline">\(=\)</span> “<span class="math inline">\(B\)</span> 的行數” <span class="math inline">\(= 3\)</span>，因此積 <span class="math inline">\(AB\)</span> 被定義，類型是 <span class="math inline">\((2,2)\)</span> <br>
@@ -659,7 +659,6 @@
 <div class="theorem">
 <span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 2  (matrix multiplication component)  </strong></span>兩個矩陣 <span class="math inline">\(A_{k\times l}, \; B_{m\times n}\)</span> 的積有被定義時，矩陣 <span class="math inline">\(AB_{k\times n}\)</span> 的任意成分<span class="math inline">\((i,j)\)</span>，被定義爲：<strong>“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(i\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(j\)</span> 列向量的內積”</strong>。
 </div>
-
 <p>故：<br>
 <span class="math inline">\(AB\)</span> 的 <span class="math inline">\((1,1)\)</span> 成分是，“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(1\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(1\)</span> 列向量的內積”<br>
 <span class="math inline">\(AB\)</span> 的 <span class="math inline">\((1,2)\)</span> 成分是，“<span class="math inline">\(A\)</span> 的第 <span class="math inline">\(1\)</span> 行向量與 <span class="math inline">\(B\)</span>的第 <span class="math inline">\(2\)</span> 列向量的內積”<br>

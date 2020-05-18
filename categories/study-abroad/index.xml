@@ -244,6 +244,7 @@ Hot spiced beef, pepperoni, mozzarella, tomato, green pepper, red onion and Taba
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/log-likelihood-ratio/</guid>
       <description>
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://wangcc.me/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
@@ -332,7 +333,6 @@ omitting&amp;amp;\;terms\;not\;in\;\mu \\
 &lt;div class=&#34;theorem&#34;&gt;
 &lt;span id=&#34;thm:unnamed-chunk-2&#34; class=&#34;theorem&#34;&gt;&lt;strong&gt;Theorem 1  &lt;/strong&gt;&lt;/span&gt;如果 &lt;span class=&#34;math inline&#34;&gt;\(X_1,\cdots,X_n\stackrel{i.i.d}{\sim}f(x|\theta)\)&lt;/span&gt;。 那麼當重複多次從參數爲 &lt;span class=&#34;math inline&#34;&gt;\(\theta_0\)&lt;/span&gt; 的總體中取樣時，那麼統計量 &lt;span class=&#34;math inline&#34;&gt;\(-2llr(\theta_0)\)&lt;/span&gt; 會漸進於自由度爲 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; 的卡方分佈： &lt;span class=&#34;math display&#34;&gt;\[-2llr(\theta_0)=-2\{\ell(\theta_0)-\ell(\hat{\theta})\}\xrightarrow[n\rightarrow\infty]{}\;\sim \mathcal{X}_1^2\]&lt;/span&gt;
 &lt;/div&gt;
-
 &lt;/div&gt;
 &lt;div id=&#34;似然比信賴區間&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;似然比信賴區間&lt;/h3&gt;
@@ -1182,6 +1182,7 @@ LogLR
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/central-limit-theory/</guid>
       <description>
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
@@ -1257,6 +1258,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/probability3/</guid>
       <description>
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;二項分佈的概念-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
@@ -1401,6 +1403,7 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/normal-distribution/</guid>
       <description>
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;概率密度曲線-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
@@ -1479,6 +1482,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/probability2-4/</guid>
       <description>
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;bayes-理論的概念&#34; class=&#34;section level3&#34;&gt;
@@ -1594,6 +1598,7 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/probability-gambling/</guid>
       <description>
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;

@@ -623,6 +623,7 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="向量的內積-inner-product" class="section level2">
@@ -632,7 +633,6 @@
 <span id="thm:unnamed-chunk-1" class="theorem"><strong>Theorem 1  (vectors inner product)  </strong></span>向量的<strong>內積</strong>運算，僅限定於維度相同的兩個向量之間。一個向量爲橫向量寫在左側，一個向量爲列向量寫在右側，兩個向量的相對應成分一一相乘，然後將各成分乘積相加的過程，我們稱之爲內積(inner product, scalar product)運算。內積運算結果通常不會是向量，而是標量(scalar)，或正或負，或爲零。向量 <span class="math inline">\(\underline{a}\)</span> 與向量 <span class="math inline">\(\underline{b}\)</span> 的內積寫作：<span class="math inline">\(\underline{a}^t\underline{b}, \underline{b}^t\underline{a}\)</span> 或者寫作： <span class="math inline">\(\underline{a}\cdot\underline{b}, (\underline{a},\underline{b}), &lt;\underline{a},\underline{b}&gt;\)</span>。內積爲 <span class="math inline">\(0\)</span> 的向量我們稱他們爲正交向量(orthogonal)，寫作：<span class="math inline">\(\underline{a}\perp\underline{b}\)</span>。
 內積，與和記號: <span class="math inline">\(\sum\)</span> 有緊密聯系。我們常常會把 <span class="math inline">\(\sum\)</span> 式子/量寫成向量的內積形式。
 </div>
-
 <div id="練習" class="section level3">
 <h3>練習</h3>
 <ol style="list-style-type: decimal">
@@ -670,7 +670,6 @@
 <p><span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 2  (vector length)  </strong></span>向量 <span class="math inline">\(\underline{a}\)</span> 的內積 <span class="math inline">\(\underline{a}^t\underline{a}\)</span> 的平方根中，非負的量，我們稱之爲向量 <span class="math inline">\(\underline{a}\)</span> 的<strong>長度</strong>或者<strong>大小</strong>。也就是：<span class="math inline">\(\sqrt{\underline{a}^t\underline{a}}\)</span>。記作：<span class="math inline">\(\| \underline{a} \|\)</span>。</p>
 兩個向量 <span class="math inline">\(\underline{a}, \underline{b}\)</span> 類型(type：大小，維度)相同時，他們的差 <span class="math inline">\(\underline{a}-\underline{b}\)</span> 依然是向量，這個新向量的長度爲：<span class="math inline">\(\| \underline{a}-\underline{b} \| = \sqrt{(\underline{a}-\underline{b})^t(\underline{a}-\underline{b})}\)</span>
 </div>
-
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\underline{x}=\left( \begin{array}{c} x_1\\ x_2\\ x_3 \end{array} \right)\)</span> 的長度爲： <span class="math inline">\(\| \underline{x} \| =\sqrt{\underline{x}^t\underline{x}}=\sqrt{x_1^2+x_2^2+x_3^2}\)</span></p></li>
 <li><p><span class="math inline">\(\underline{a}=(a_1,a_2,a_3)\)</span> 的長度爲： <span class="math inline">\(\| \underline{a} \| =\sqrt{\underline{a}\underline{a}^t}=\sqrt{a_1^2+a_2^2+a_3^2}\)</span></p></li>
@@ -697,7 +696,6 @@
 <p><span id="thm:unnamed-chunk-3" class="theorem"><strong>Theorem 3  (normalize)  </strong></span>長度不爲 <span class="math inline">\(0\)</span> 的任意向量 <span class="math inline">\(\underline{a}(\neq\underline{0})\)</span>，如果將它轉變成長度爲 <span class="math inline">\(1\)</span> 的向量 <span class="math inline">\(\underline{e}_{\underline{a}}\)</span>。這個過程被叫做向量的正規化(normalize)。通常只要將向量 <span class="math inline">\(\underline{a}\)</span> 除以他的長度 <span class="math inline">\(\| \underline{a} \|\)</span> 即可。</p>
 <span class="math inline">\(\underline{e}_{\underline{a}}=\frac{\underline{a}}{\| \underline{a} \|}=\frac{1}{\| \underline{a} \|}\underline{a}\)</span>
 </div>
-
 <p>例如：</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\underline{a}=\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)\)</span>， 則有 <span class="math inline">\(\underline{e}_{\underline{a}}=\frac{1}{\sqrt{a_1^2+a_2^2+a_3^2}}\left( \begin{array}{c} a_1\\ a_2\\ a_3 \end{array} \right)\)</span></p></li>
