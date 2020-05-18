@@ -4,22 +4,27 @@
   
   <url>
     <loc>https://wangcc.me/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/gallery/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/gallery/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/tags/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/tags/%E4%BC%91%E9%96%92/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
   </url>
   
   <url>
@@ -30,6 +35,41 @@
   <url>
     <loc>https://wangcc.me/gallery/20200518/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/diary/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/gallery/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/japan/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/life/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/gallery/nagakute/</loc>
+    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
   </url>
   
   <url>
@@ -83,27 +123,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/diary/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/post/</loc>
     <lastmod>2020-02-24T14:44:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/categories/thoughts/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
     <lastmod>2020-02-24T14:44:45+09:00</lastmod>
   </url>
   
@@ -158,16 +183,6 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/japan/</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/life/</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/post/move-to-new-home/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -198,12 +213,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/bayesian/</loc>
+    <loc>https://wangcc.me/categories/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/bayesian/</loc>
+    <loc>https://wangcc.me/tags/bayesian/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -703,12 +718,12 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/tags/dictation/</loc>
+    <loc>https://wangcc.me/categories/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/dictation/</loc>
+    <loc>https://wangcc.me/tags/dictation/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   

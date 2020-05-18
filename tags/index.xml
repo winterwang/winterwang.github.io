@@ -13,6 +13,14 @@
     </image>
     
     <item>
+      <title>Gallery</title>
+      <link>https://wangcc.me/tags/gallery/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>休閒</title>
       <link>https://wangcc.me/tags/%E4%BC%91%E9%96%92/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
@@ -29,9 +37,17 @@
     </item>
     
     <item>
+      <title>Japan</title>
+      <link>https://wangcc.me/tags/japan/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/tags/japan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>偶爾感慨</title>
       <link>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
-      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</guid>
       <description></description>
     </item>
@@ -49,14 +65,6 @@
       <link>https://wangcc.me/tags/experience/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/tags/experience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Japan</title>
-      <link>https://wangcc.me/tags/japan/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/tags/japan/</guid>
       <description></description>
     </item>
     
