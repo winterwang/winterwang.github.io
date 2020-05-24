@@ -4,22 +4,72 @@
   
   <url>
     <loc>https://wangcc.me/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/diary/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/experience/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/gallery/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/tags/gallery/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/gallery/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/japan/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/life/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://wangcc.me/tags/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/categories/thoughts/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/gallery/newipadpro/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/tags/%E8%87%AA%E5%A8%9B%E8%87%AA%E6%A8%82/</loc>
+    <lastmod>2020-05-24T13:33:11+09:00</lastmod>
   </url>
   
   <url>
@@ -38,42 +88,7 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/diary/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/gallery/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/japan/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/categories/life/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/gallery/nagakute/</loc>
-    <lastmod>2020-05-18T11:48:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/%E8%87%AA%E5%A8%9B%E8%87%AA%E6%A8%82/</loc>
     <lastmod>2020-05-18T11:48:14+09:00</lastmod>
   </url>
   
@@ -153,11 +168,6 @@
   </url>
   
   <url>
-    <loc>https://wangcc.me/categories/thoughts/</loc>
-    <lastmod>2020-02-24T14:44:45+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/post/qihuanrizhi/</loc>
     <lastmod>2020-02-24T14:44:45+09:00</lastmod>
   </url>
@@ -200,11 +210,6 @@
   <url>
     <loc>https://wangcc.me/post/newhome3month/</loc>
     <lastmod>2020-02-04T11:53:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/tags/experience/</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
