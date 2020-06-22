@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thoughts | Be Ambitious</title>
+    <link>/tags/thoughts/</link>
+      <atom:link href="/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    <description>thoughts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>thoughts</title>
+      <link>/tags/thoughts/</link>
+    </image>
+    
+    <item>
+      <title>Remember HongKong&#39;s fight</title>
+      <link>/post/rememberhongkong-sfight/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/post/rememberhongkong-sfight/</guid>
+      <description>&lt;p&gt;一年前的這一天，&lt;a href=&#34;https://wangcc.me/post/do-you-hear-people-sing/&#34;&gt;我們目睹了這個城市的集體哭泣&lt;/a&gt;。
+你是否還曾經記得這個哼唱着「你是否聽見人民的歌聲」的小女孩的清甜歌聲。&lt;/p&gt;
+&lt;video width=auto height=auto controls allowfullscreen&gt;
+  &lt;source src=&#34;/video/IMG_8129.mov&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;video width=auto height=auto controls allowfullscreen&gt;
+  &lt;source src=&#34;/video/telegram_video.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
