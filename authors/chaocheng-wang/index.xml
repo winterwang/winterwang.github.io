@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chaocheng Wang | Be Ambitious</title>
-    <link>https://wangcc.me/authors/chaocheng-wang/</link>
-      <atom:link href="https://wangcc.me/authors/chaocheng-wang/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/chaocheng-wang/</link>
+      <atom:link href="/authors/chaocheng-wang/index.xml" rel="self" type="application/rss+xml" />
     <description>Chaocheng Wang</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 25 Nov 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Chaocheng Wang</title>
-      <link>https://wangcc.me/authors/chaocheng-wang/</link>
+      <link>/authors/chaocheng-wang/</link>
     </image>
     
     <item>
       <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
-      <link>https://wangcc.me/publication/journal-article/esophageal/</link>
+      <link>/publication/journal-article/esophageal/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/esophageal/</guid>
+      <guid>/publication/journal-article/esophageal/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;purpose&#34;&gt;PURPOSE:&lt;/h3&gt;
 &lt;p&gt;The extremely high incidence of esophageal cancer in certain rural areas of China has prompted significant intellectual curiosity and research efforts both in China and abroad.&lt;/p&gt;

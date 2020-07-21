@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Listening | Be Ambitious</title>
-    <link>https://wangcc.me/tags/listening/</link>
-      <atom:link href="https://wangcc.me/tags/listening/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/listening/</link>
+      <atom:link href="/tags/listening/index.xml" rel="self" type="application/rss+xml" />
     <description>Listening</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 12 Jun 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Listening</title>
-      <link>https://wangcc.me/tags/listening/</link>
+      <link>/tags/listening/</link>
     </image>
     
     <item>
       <title>溫度，污染，和電費</title>
-      <link>https://wangcc.me/post/2017-06-12/</link>
+      <link>/post/2017-06-12/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-06-12/</guid>
-      <description>&lt;audio src=&#34;https://wangcc.me/mp3/170503ACPollution.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2017-06-12/</guid>
+      <description>&lt;audio src=&#34;/mp3/170503ACPollution.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -44,17 +44,17 @@ Your browser does not support the audio element.
     
     <item>
       <title>男人的魅力來自女人</title>
-      <link>https://wangcc.me/post/2017-05-31/</link>
+      <link>/post/2017-05-31/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-05-31/</guid>
+      <guid>/post/2017-05-31/</guid>
       <description>&lt;p&gt;昨日說到&lt;a href=&#34;https://winterwang.github.io/post/2017-05-30/&#34;&gt;BBC新聞聽寫在滬江外語學習之死&lt;/a&gt;。於是去跟他們客服詢問了一下。得到如下答覆：
-&lt;img src=&#34;https://wangcc.me/img/bbcdownagain.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/bbcdownagain.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;好吧，內容優化，就是潔淨咱們的大天朝局域網唄，正準備學習外語的小朋友們怎麼能看到BBC，VOA上面對偉大祖國的描述嘛。曾經一直認爲，學習外語是爲了增進與他國的交流，互通有無，如今卻深刻體會到學習外語的真實作用是瞭解真實的中國，瞭解那個我來自的地方。&lt;/p&gt;
 &lt;p&gt;最近&lt;a href=&#34;http://wasai.org/&#34;&gt;新聞酸菜館&lt;/a&gt;也變成了只賣酸菜的館，内容優化那叫一個好！&lt;/p&gt;
-&lt;p&gt;今天的聽寫講的是刊登在進化心理學雜誌上的一篇&lt;a href=&#34;https://wangcc.me/files/menwomen.pdf&#34;&gt;論文&lt;/a&gt;。說有伴的男人更受歡迎。科學家認爲女生更青睞有伴的男人，特別是伴侶如果美豔如花魅力四射，即使他們本身長相一般。也許是因爲這些男人如果不能用外表吸引人，那一定是富有內涵，或者是富可敵國的。總之一句話，男人被另一個女人證明了自己的價值，那女性便可省去自己去試錯的時間和精力成本。&lt;/p&gt;
+&lt;p&gt;今天的聽寫講的是刊登在進化心理學雜誌上的一篇&lt;a href=&#34;/files/menwomen.pdf&#34;&gt;論文&lt;/a&gt;。說有伴的男人更受歡迎。科學家認爲女生更青睞有伴的男人，特別是伴侶如果美豔如花魅力四射，即使他們本身長相一般。也許是因爲這些男人如果不能用外表吸引人，那一定是富有內涵，或者是富可敵國的。總之一句話，男人被另一個女人證明了自己的價值，那女性便可省去自己去試錯的時間和精力成本。&lt;/p&gt;
 &lt;p&gt;听写于：2017-5-31 11:24	用时：19:27
 正确率：93%	错词：14个&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/menwomen.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/menwomen.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -80,19 +80,19 @@ Your browser does not support the audio element.
     
     <item>
       <title>遺傳物質的橫向傳遞</title>
-      <link>https://wangcc.me/post/2017-05-30/</link>
+      <link>/post/2017-05-30/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-05-30/</guid>
+      <guid>/post/2017-05-30/</guid>
       <description>&lt;p&gt;今日要祭奠BBC新聞聽寫在滬江外語學習之死。
 幾周未見，今日登錄滬江準備聽聽久違的BBC。結果發現節目已經被下架：
-&lt;img src=&#34;https://wangcc.me/img/bbcdown.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;/img/bbcdown.png&#34; alt=&#34;&#34;&gt;
 然後我點擊其他訂閱的節目，結果一大半都**“被下架”**。細看過去全是外語新聞類，政治類的節目。現在連外語學習也已經進入了莫談國是的狀態了嗎？ 可憐的孩子們今後還有什麼資源可以學習英語呢？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/newsdown.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/newsdown.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;悲哀。&lt;/p&gt;
 &lt;p&gt;連馬里蘭的空氣新鮮不新鮮都已經被上升到乳滑不乳滑了。我等草民還是閉嘴爲上策。親愛的朋友們，你們今天都健身了嗎？&lt;strong&gt;一切都只是剛剛開始。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;听写于：2017-5-30 11:34	用时：19:08
 正确率：93%	错词：10个&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/horizontalDNA.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/horizontalDNA.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -117,10 +117,10 @@ Your browser does not support the audio element.
     
     <item>
       <title>绝知此事要躬行</title>
-      <link>https://wangcc.me/post/dictation2017-03-13/</link>
+      <link>/post/dictation2017-03-13/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/dictation2017-03-13/</guid>
-      <description>&lt;audio src=&#34;https://wangcc.me/mp3/lifeonmars.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/dictation2017-03-13/</guid>
+      <description>&lt;audio src=&#34;/mp3/lifeonmars.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -149,12 +149,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>IELTs test 雅思考試感受與我的成績</title>
-      <link>https://wangcc.me/post/2017-01-07-ielts-test/</link>
+      <link>/post/2017-01-07-ielts-test/</link>
       <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-01-07-ielts-test/</guid>
+      <guid>/post/2017-01-07-ielts-test/</guid>
       <description>&lt;p&gt;今年1月7日周六，我在日本名古屋市參加了人生第一次，但願是唯一一次的雅思考試。
 就是如下圖的這個叫做TKP名古屋駅前カンファレンスセンター，這建築物名字翻譯成人話其實就是“名古屋車站前TKP會議中心”，之前接待臺灣友人時被問道：“爲什麼日本人有時候用漢字，有時候又用片假名或者平假名。”答曰：“任性。”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IELTS.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/IELTS.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;回到雅思考試話題上來。爲什麼一把年紀了還要考雅思？其實說實話，我肯定不是那日考雅思中最老的，看到一個大叔估計50+，我也才快30而已。不老不老。回想當年剛畢業時好多人吭哧吭哧考雅思或者託福，我也跟風（裸）考了一次託福（好像不到80分，iBT，慘不忍睹），當然我自己精心準備的考試是日本語能力測試的2級與1級。如今已經在日本獲得博士學位，留校工作快2年了，爲啥又要去靠雅思捏？答案很簡單，&lt;strong&gt;又想出國了&lt;/strong&gt;。記得之前有一次有點小尷尬的經歷，好像是去愛知縣政府的時候，坐八谷老師的車，一邊聊天，他問道：“哎呀，小王，你沒有考慮以後留學去嗎？” 我楞了一下，過了十幾秒，他好似也意識到了什麼，又說道：“對哦，現在已經在留學了。” 此事後來常被我拿來在酒桌上開玩笑，看我的日語還是很地道的嘛，老師都忘記我是留學生了。&lt;/p&gt;
 &lt;p&gt;所以上文我說又想&lt;strong&gt;出國&lt;/strong&gt;，出的是&lt;strong&gt;日本國&lt;/strong&gt;，有點終於要“衝出亞洲，走向世界”的豪情萬丈了。其實我這次追求的是，從一個島國，去另一個島國。試問東瀛到英吉利的距離有多遠？答曰：相隔一次雅思考試的時間，需要一份個人陳述的鋪墊，還要有兩封推薦信的含情脈脈，最終也還不一定能夠買到這張出發的船票。所以我的第一件事就是，花1個月的時間，從早到晚幾乎每日10個小時以上的精力投入，1小時菲律賓外教的口語模考課，3篇劍橋閱讀，1次真題聽力，大小作文每周各練習2-3篇，然後重頭戲我覺得是堅持每天一片聽寫，目標是雅思成績overall大於等於7。終於等到1月7日這天，檢驗我的魔鬼訓練成果的日子。&lt;/p&gt;
 &lt;p&gt;日本的雅思考點很少，聽說大陸光上海就6個考點，而且今年的考試費用是1980RMB，真是那啥人傻錢多劍橋速來，考點每年一個的增加，費用也是每年100的上漲。我在的名古屋考點，把名古屋周圍地區的考生都包括了（愛知縣，三重縣，岐阜縣，靜岡縣，說不定還有其他縣市的趕過來），我考試那天也才80個人左右，我還看到有人拖着行李箱從外地趕來考試。全日本考點不知道有沒有超過10個。考試全程感覺周圍的人都好牛逼，不知道是他們提前放棄了還是真的寫的比我還快啊。早晨考完聽力閱讀作文以後是12點半，其實1點開始就有考口語的，只是考官人數有限，口語考試我被安排在了最後一個，輪到我時已經是晚上6點。&lt;/p&gt;
@@ -182,7 +182,7 @@ Your browser does not support the audio element.
 &lt;/ol&gt;
 &lt;p&gt;考口語的時候，我的感覺十分緊張，而且在Part3有部分語無倫次。不過結束以後我還跟考官握了握手說我很享受跟你的對話。(I really enjoyed our talk, have a good night!)&lt;/p&gt;
 &lt;p&gt;2周以後的1月21日是出分的日子，從中午開始我就不停的上網站刷新，結果一直都提示沒有可顯示的成績。後來到了晚上7點半，刷出了成績：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IELTSresults.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/IELTSresults.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Overall 8分的成績還是挺滿意的，1個多月非人的生活終於可以結束了。結果信心滿滿的去登錄London School of Hygiene and Tropical Medicine的報名網站的時候，悲催的是人家關於英文能力的問題只有一個：&lt;strong&gt;你的雅思成績總分是否大於7，請回答是或者否。。。。。。。。。。。。。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;所以其實語言考試這玩意兒根本不能說明任何問題。它只提供了本人可以進行英文交流的能力證明，沒有哪個大學會因爲你的英語成績雅思或者託福滿分，就錄取你的。&lt;/p&gt;
 </description>
@@ -190,13 +190,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>布克獎</title>
-      <link>https://wangcc.me/post/2017-1-5/</link>
+      <link>/post/2017-1-5/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-1-5/</guid>
+      <guid>/post/2017-1-5/</guid>
       <description>&lt;p&gt;听写于：2017-1-5 9:35	用时：26:08
 正确率：88%	错词：26个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/booker.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/booker.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/booker.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/booker.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -225,13 +225,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>企業的社會責任</title>
-      <link>https://wangcc.me/post/2017-1-4/</link>
+      <link>/post/2017-1-4/</link>
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-1-4/</guid>
+      <guid>/post/2017-1-4/</guid>
       <description>&lt;p&gt;听写于：2017-1-4 10:8	用时：19:19
 正确率：91%	错词：17个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/amazon.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/amazon.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/amazon.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/amazon.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -254,13 +254,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>蛻變</title>
-      <link>https://wangcc.me/post/2017-1-3/</link>
+      <link>/post/2017-1-3/</link>
       <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-1-3/</guid>
+      <guid>/post/2017-1-3/</guid>
       <description>&lt;p&gt;听写于：2017-1-3 11:52	用时：16:56
 正确率：94%	错词：12个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/tuibian.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/tuibian.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/tuibian.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/tuibian.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -285,13 +285,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>宗教與食品</title>
-      <link>https://wangcc.me/post/2017-1-2/</link>
+      <link>/post/2017-1-2/</link>
       <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-1-2/</guid>
+      <guid>/post/2017-1-2/</guid>
       <description>&lt;p&gt;听写于：2017-1-2 10:01	用时：21:24
 正确率：93%	错词：14个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/religiousfood.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/religious.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/religiousfood.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/religious.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -318,14 +318,14 @@ Your browser does not support the audio element.
     
     <item>
       <title>望子成龍</title>
-      <link>https://wangcc.me/post/2017-1-1/</link>
+      <link>/post/2017-1-1/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-1-1/</guid>
+      <guid>/post/2017-1-1/</guid>
       <description>&lt;p&gt;听写于：2017-1-1 10:23	用时：14:03
 正确率：93%	错词：16个&lt;/p&gt;
 &lt;p&gt;概述：许多父母都对自己的孩子寄予厚望，愿意把宝宝的小动作解读为过人的天赋，但是有多少望子女成龙凤的父母能如愿以偿呢？也要有点“舍得孩子才能套着狼”的精神吧。新年BBC第一弹，祝大家元气满满！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/dominique_moceanu.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/dominique_moceanu.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/dominique_moceanu.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/dominique_moceanu.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -348,15 +348,15 @@ Your browser does not support the audio element.
     
     <item>
       <title>蓬勃的生活 Life, Animated</title>
-      <link>https://wangcc.me/post/2016-12-31/</link>
+      <link>/post/2016-12-31/</link>
       <pubDate>Sat, 31 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-31/</guid>
+      <guid>/post/2016-12-31/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.com/news/entertainment-arts-36671208&#34;&gt;Documentary follows autistic boy obsessed with Disney&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;听写于：2016-12-31 10:44	用时：19:00
 正确率：95%	错词：12个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Owen.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Owen.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;概括：《蓬勃的生活》根据Ron Suskind同名小说改编，是一部穿插动画与真实影像的纪录片，体现了自闭症儿童的家庭在照顾特殊孩子上所遭遇的困难。Suskind的儿子Owen三岁时不再说话，Suskind夫妇和Owen两岁的弟弟一直在与自闭症作斗争，想要维系他们与Owen的感情，而此时Owen唯一的爱好就是迪士尼动画电影。&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/Owen.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/Owen.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -375,13 +375,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>1型糖尿病患者减肥要小心</title>
-      <link>https://wangcc.me/post/2016-12-30/</link>
+      <link>/post/2016-12-30/</link>
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-30/</guid>
+      <guid>/post/2016-12-30/</guid>
       <description>&lt;p&gt;听写于：2016-12-30 16:37	用时：21:04
 正确率：95%	错词：13个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/diabetes.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/diabetes.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/diabetes.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/diabetes.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -413,14 +413,14 @@ Your browser does not support the audio element.
     
     <item>
       <title>夏威夷的天堂生活</title>
-      <link>https://wangcc.me/post/2016-12-29/</link>
+      <link>/post/2016-12-29/</link>
       <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-29/</guid>
+      <guid>/post/2016-12-29/</guid>
       <description>&lt;p&gt;听写于：2016-12-29 10:51	用时：24:29
 正确率：90%	错词：22个&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/2012/01/16/movies/awardsseason/feisty-host-and-feisty-winners-on-golden-globes.html?_r=1&amp;amp;scp=2&amp;amp;sq=the%20descendants&amp;amp;st=cse&#34;&gt;影片《后裔》以度假胜地夏威夷为背景，讲述中年男子处理突如其来的家庭危机，乔治克鲁尼凭借该片获得第69届金球奖最佳男主角。&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/hawaii.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/hawaii.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/hawaii.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/hawaii.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -452,13 +452,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>跟蹤和騷擾</title>
-      <link>https://wangcc.me/post/2016-12-28/</link>
+      <link>/post/2016-12-28/</link>
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-28/</guid>
+      <guid>/post/2016-12-28/</guid>
       <description>&lt;p&gt;听写于：2016-12-28 11:45	用时：22:35
 正确率：88%	错词：31个&lt;/p&gt;
 &lt;p&gt;概述：跟踪与骚扰的区别，前者对受害人的精神伤害更大&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/stalker.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/stalker.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -482,13 +482,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>零是偶数还是奇数</title>
-      <link>https://wangcc.me/post/2016-12-27/</link>
+      <link>/post/2016-12-27/</link>
       <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-27/</guid>
+      <guid>/post/2016-12-27/</guid>
       <description>&lt;p&gt;听写于：2016-12-27 22:40	用时：17:55
 正确率：92%	错词：20个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/zero.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/zero.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/zero.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/zero.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -515,13 +515,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>生物鍾</title>
-      <link>https://wangcc.me/post/2016-12-26/</link>
+      <link>/post/2016-12-26/</link>
       <pubDate>Mon, 26 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-26/</guid>
+      <guid>/post/2016-12-26/</guid>
       <description>&lt;p&gt;听写于：2016-12-26 11:48	用时：20:02
 正确率：91%	错词：16个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/biologicalclock.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/biologicalclock.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/biologicalclock.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/biologicalclock.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -547,13 +547,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>東德情節</title>
-      <link>https://wangcc.me/post/2016-12-25/</link>
+      <link>/post/2016-12-25/</link>
       <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-25/</guid>
+      <guid>/post/2016-12-25/</guid>
       <description>&lt;p&gt;听写于：2016-12-25 13:1	用时：24:53
 正确率：88%	错词：23个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/GDR.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/GDR.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/GDR.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/GDR.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -584,13 +584,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>天注定</title>
-      <link>https://wangcc.me/post/2016-12-22/</link>
+      <link>/post/2016-12-22/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-22/</guid>
+      <guid>/post/2016-12-22/</guid>
       <description>&lt;p&gt;听写于：2016-12-22 11:40	用时：19:38
 正确率：91%	错词：17个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/atouchofsin.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/atouchofsin.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/atouchofsin.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/atouchofsin.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -620,11 +620,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>足球運動員掙多少錢?</title>
-      <link>https://wangcc.me/post/2016-12-21/</link>
+      <link>/post/2016-12-21/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-21/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/footballplayer.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/footballplayer.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-21/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/footballplayer.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/footballplayer.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -649,11 +649,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>人民幣可靠麼?</title>
-      <link>https://wangcc.me/post/2016-12-20/</link>
+      <link>/post/2016-12-20/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-20/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/renminbi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/renminbi.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-20/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/renminbi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/renminbi.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -678,11 +678,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>總統的COI</title>
-      <link>https://wangcc.me/post/2016-12-19/</link>
+      <link>/post/2016-12-19/</link>
       <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-19/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/coitrump.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/coitrump.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-19/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/coitrump.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/coitrump.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -709,13 +709,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>兩百萬</title>
-      <link>https://wangcc.me/post/2016-12-18/</link>
+      <link>/post/2016-12-18/</link>
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-18/</guid>
+      <guid>/post/2016-12-18/</guid>
       <description>&lt;p&gt;概述：从小我们就被教育要拾金不昧，但是现实生活中有便宜可占的时候，你会怎么做呢？澳大利亚有位“lucky dog”，把银行当钱包，自称“年轻无知，糊里糊涂”透支了2百万澳元。。。做人还是要诚实啊&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/luke-moore.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/luke-moore.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.ibtimes.co.uk/australian-man-spent-1-5m-over-two-years-due-bank-glitch-somehow-got-away-it-1596081&#34;&gt;Australian man spent $1.5m over two years due to bank glitch and somehow got away with it&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/twomillions.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/twomillions.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -743,11 +743,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>澤國江山入戰圖</title>
-      <link>https://wangcc.me/post/2016-12-17/</link>
+      <link>/post/2016-12-17/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-17/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Taliban.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/Taliban.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-17/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/Taliban.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/Taliban.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -783,11 +783,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>輪回轉世</title>
-      <link>https://wangcc.me/post/2016-12-16/</link>
+      <link>/post/2016-12-16/</link>
       <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-16/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Buddhist.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/Buddhist.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-16/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/Buddhist.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/Buddhist.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -822,12 +822,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>強奸不犯法 喪盡天良的摩洛哥法律</title>
-      <link>https://wangcc.me/post/2016-12-15/</link>
+      <link>/post/2016-12-15/</link>
       <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-15/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/morocco.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+      <guid>/post/2016-12-15/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/morocco.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.bbc.com/news/world-africa-17416426&#34;&gt;摩洛哥刑法规定强奸犯与受害者结婚可免除刑责，16岁少女自杀一石激起千层浪. Morocco protest against rape-marriage law&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/morocco.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/morocco.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -855,12 +855,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>也門飢荒</title>
-      <link>https://wangcc.me/post/2016-12-14/</link>
+      <link>/post/2016-12-14/</link>
       <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-14/</guid>
+      <guid>/post/2016-12-14/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/n3ct0bxp&#34;&gt;Yemen Starving&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Yemen.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/Yemen.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Yemen.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/Yemen.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -885,12 +885,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>Troublemaker</title>
-      <link>https://wangcc.me/post/2016-12-13/</link>
+      <link>/post/2016-12-13/</link>
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-13/</guid>
+      <guid>/post/2016-12-13/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p01s60xs&#34;&gt;Ukraine&amp;rsquo;s Tiny &amp;lsquo;Troublemaker&amp;rsquo;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/troublemaker.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/troublemaker.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/troublemaker.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/troublemaker.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -933,12 +933,12 @@ Tetiana Mykolayivna Chornovol is a Ukrainian journalist and civic activist, one 
     
     <item>
       <title>人性與戰爭</title>
-      <link>https://wangcc.me/post/2016-12-12/</link>
+      <link>/post/2016-12-12/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-12/</guid>
+      <guid>/post/2016-12-12/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.com/news/world-13687796&#34;&gt;How soldiers deal with the job of killing&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/soldiers.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/soldiers.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/soldiers.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/soldiers.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -967,11 +967,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>亂局中的伊斯坦布爾(Istanbul)</title>
-      <link>https://wangcc.me/post/2016-12-11/</link>
+      <link>/post/2016-12-11/</link>
       <pubDate>Sun, 11 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-11/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/istanbul.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/istanbul.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-11/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/istanbul.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/istanbul.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1008,11 +1008,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>默片《拿破侖》</title>
-      <link>https://wangcc.me/post/2016-12-10/</link>
+      <link>/post/2016-12-10/</link>
       <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-10/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/napoleon.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/napoleon.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-10/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/napoleon.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/napoleon.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1039,12 +1039,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>對話總統演講撰稿人</title>
-      <link>https://wangcc.me/post/2016-12-9/</link>
+      <link>/post/2016-12-9/</link>
       <pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-9/</guid>
+      <guid>/post/2016-12-9/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p04h4616&#34;&gt;Speech Writer to the President&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/speechwriter.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/speechwriter.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/speechwriter.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/speechwriter.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1072,11 +1072,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>不可能的故事</title>
-      <link>https://wangcc.me/post/2016-12-8/</link>
+      <link>/post/2016-12-8/</link>
       <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-8/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/slavery.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/slavery.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-8/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/slavery.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/slavery.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1111,11 +1111,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>撒謊</title>
-      <link>https://wangcc.me/post/2016-12-7/</link>
+      <link>/post/2016-12-7/</link>
       <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-7/</guid>
+      <guid>/post/2016-12-7/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://ting.hujiang.com/bbc/163725085737/&#34;&gt;概述：对朋友撒了一个谎，需要用更多的谎言来圆它。所以，朋友之间还是坦诚一点比较好。&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/honest.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/honest.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1150,11 +1150,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>老年性瞬間失憶</title>
-      <link>https://wangcc.me/post/2016-12-6/</link>
+      <link>/post/2016-12-6/</link>
       <pubDate>Tue, 06 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-6/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/memory.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/memory.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-6/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/memory.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/memory.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1183,11 +1183,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>川普閉關鎖國</title>
-      <link>https://wangcc.me/post/2016-12-5/</link>
+      <link>/post/2016-12-5/</link>
       <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-5/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/trump.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/trump.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-5/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/trump.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/trump.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1216,12 +1216,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>命運不是天注定</title>
-      <link>https://wangcc.me/post/2016-12-4/</link>
+      <link>/post/2016-12-4/</link>
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-4/</guid>
+      <guid>/post/2016-12-4/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.ozy.com/true-story/how-a-team-of-unclean-cleaners-fought-caste-with-cricket/65120&#34;&gt;HOW A TEAM OF &amp;lsquo;UNCLEAN CLEANERS&amp;rsquo; FOUGHT CASTE WITH CRICKET&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Bombay.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/Bombay.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Bombay.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/Bombay.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1250,11 +1250,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>《大洋之光》</title>
-      <link>https://wangcc.me/post/2016-12-3/</link>
+      <link>/post/2016-12-3/</link>
       <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-3/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/light_between_oceans.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/lightoceans.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-3/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/light_between_oceans.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/lightoceans.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1281,11 +1281,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>控制野豬新方法</title>
-      <link>https://wangcc.me/post/2016-12-2/</link>
+      <link>/post/2016-12-2/</link>
       <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-2/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/pigs.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/boar.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/pigs.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/boar.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1318,11 +1318,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>時間的錯覺</title>
-      <link>https://wangcc.me/post/2016-12-1/</link>
+      <link>/post/2016-12-1/</link>
       <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-12-1/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/time.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/time.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-12-1/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/time.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/time.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1359,12 +1359,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>救贖</title>
-      <link>https://wangcc.me/post/2016-11-30/</link>
+      <link>/post/2016-11-30/</link>
       <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-30/</guid>
+      <guid>/post/2016-11-30/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/b07x2zcw&#34;&gt;Trevor McDonald on Redemption&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/redemption.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/redemption.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/redemption.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/redemption.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1395,11 +1395,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>敘利亞難民危機</title>
-      <link>https://wangcc.me/post/2016-11-29/</link>
+      <link>/post/2016-11-29/</link>
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-29/</guid>
+      <guid>/post/2016-11-29/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://ting.hujiang.com/bbc/163721381109/&#34;&gt;Crisis in Syria&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/syria.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/syria.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1428,10 +1428,10 @@ Your browser does not support the audio element.
     
     <item>
       <title>一春夢雨常飄瓦</title>
-      <link>https://wangcc.me/post/2016-11-28/</link>
+      <link>/post/2016-11-28/</link>
       <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-28/</guid>
-      <description>&lt;audio src=&#34;https://wangcc.me/mp3/vietnam.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-11-28/</guid>
+      <description>&lt;audio src=&#34;/mp3/vietnam.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1461,12 +1461,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>身份竊賊</title>
-      <link>https://wangcc.me/post/2016-11-27/</link>
+      <link>/post/2016-11-27/</link>
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-27/</guid>
+      <guid>/post/2016-11-27/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p04gcck2&#34;&gt;The Secret Fraudster in my Family&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/axton.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/axton.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/axton.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/axton.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1499,12 +1499,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>一弦一柱思華年</title>
-      <link>https://wangcc.me/post/2016-11-25/</link>
+      <link>/post/2016-11-25/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-25/</guid>
+      <guid>/post/2016-11-25/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p041mfj1&#34;&gt;Cultural Inclusion and Exclusion&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/pokemon.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/pokemon.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/pokemon.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/pokemon.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1539,12 +1539,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>空城澹月華</title>
-      <link>https://wangcc.me/post/2016-11-24/</link>
+      <link>/post/2016-11-24/</link>
       <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-24/</guid>
+      <guid>/post/2016-11-24/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://ting.hujiang.com/bbc/163719561871/&#34;&gt;Sir Edward Burnett Tylor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/tylor.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/tylor.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/tylor.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/tylor.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1580,12 +1580,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>異口同聲</title>
-      <link>https://wangcc.me/post/2016-11-23/</link>
+      <link>/post/2016-11-23/</link>
       <pubDate>Wed, 23 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-23/</guid>
+      <guid>/post/2016-11-23/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://ting.hujiang.com/bbc/163663271177/&#34;&gt;雙胞胎一起講話有點瘮人&amp;hellip;..&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/twins.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/twins.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/twins.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/twins.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1617,11 +1617,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>大草原上的農業</title>
-      <link>https://wangcc.me/post/2016-11-22/</link>
+      <link>/post/2016-11-22/</link>
       <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-22/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/cow.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/cow.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-11-22/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/cow.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/cow.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1646,12 +1646,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>另類保鏢</title>
-      <link>https://wangcc.me/post/2016-11-21/</link>
+      <link>/post/2016-11-21/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-21/</guid>
+      <guid>/post/2016-11-21/</guid>
       <description>&lt;p&gt;(俄國人的口音真難懂(⊙o⊙))&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/bodyguard.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/bodyguard.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/bodyguard.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/bodyguard.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1682,11 +1682,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>物換星移幾度秋</title>
-      <link>https://wangcc.me/post/2016-11-19/</link>
+      <link>/post/2016-11-19/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-19/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/cyclical.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/cyclical.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-11-19/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/cyclical.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/cyclical.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1718,12 +1718,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>意大利地震成因</title>
-      <link>https://wangcc.me/post/2016-11-18/</link>
+      <link>/post/2016-11-18/</link>
       <pubDate>Fri, 18 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-18/</guid>
+      <guid>/post/2016-11-18/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://ting.hujiang.com/bbc/163717832061/&#34;&gt;Italy&amp;rsquo;s devastating earthquake&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/italy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/italy.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/italy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/italy.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1765,12 +1765,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>地籟風聲急</title>
-      <link>https://wangcc.me/post/2016-11-17/</link>
+      <link>/post/2016-11-17/</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-17/</guid>
+      <guid>/post/2016-11-17/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/articles/1zQVVqWYnyfmQWm47bK5Pjl/fight-for-life-gold-winner&#34;&gt;Fight for life by Sofia Zambuto&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/fightforlife.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/fightforlife.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/fightforlife.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/fightforlife.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1807,12 +1807,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>鐵馬冰河入夢來</title>
-      <link>https://wangcc.me/post/2016-11-16/</link>
+      <link>/post/2016-11-16/</link>
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-16/</guid>
+      <guid>/post/2016-11-16/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/b080xzpc&#34;&gt;The Book that Changed Me Episode 5 of 5&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/thepeopleswar.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/thepeopleswar.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/thepeopleswar.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/thepeopleswar.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1840,12 +1840,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>唯一生還</title>
-      <link>https://wangcc.me/post/2016-11-15/</link>
+      <link>/post/2016-11-15/</link>
       <pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-15/</guid>
+      <guid>/post/2016-11-15/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p04fhk9z&#34;&gt;&amp;lsquo;Miracle Girl&amp;rsquo;: Aircrash Sole Survivor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/survival.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/survival.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/survival.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/survival.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1875,12 +1875,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>天價北京房</title>
-      <link>https://wangcc.me/post/2016-11-14/</link>
+      <link>/post/2016-11-14/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-14/</guid>
+      <guid>/post/2016-11-14/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p04dst07&#34;&gt;Beijing&amp;rsquo;s Property Problem&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/beijing.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/propertybeijing.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/beijing.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;audio src=&#34;/mp3/propertybeijing.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1914,12 +1914,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>日以作夜</title>
-      <link>https://wangcc.me/post/2016-11-12/</link>
+      <link>/post/2016-11-12/</link>
       <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-12/</guid>
+      <guid>/post/2016-11-12/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/b08015rw&#34;&gt;Jacqueline Bisset&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Jacqueline_Bisset.jpg&#34; alt=&#34;&#34;&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/nocturnal.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Jacqueline_Bisset.jpg&#34; alt=&#34;&#34;&gt;
+&lt;audio src=&#34;/mp3/nocturnal.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;&lt;/p&gt;
@@ -1958,13 +1958,13 @@ Your browser does not support the audio element.
     
     <item>
       <title>歐盟加拿大籤署自由貿易協定</title>
-      <link>https://wangcc.me/post/2016-11-11/</link>
+      <link>/post/2016-11-11/</link>
       <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-11/</guid>
+      <guid>/post/2016-11-11/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p04dntqj&#34;&gt;Canada and EU sign free trade deal&lt;/a&gt;&lt;br&gt;
-&lt;img src=&#34;https://wangcc.me/img/Canada-Europe-Trade-Agreement.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;/img/Canada-Europe-Trade-Agreement.jpg&#34; alt=&#34;&#34;&gt;
 &lt;br&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mpp3/canadian-EU.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mpp3/canadian-EU.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -1999,12 +1999,12 @@ Your browser does not support the audio element.
     
     <item>
       <title>用愛治愈傷痛</title>
-      <link>https://wangcc.me/post/2016-11-10/</link>
+      <link>/post/2016-11-10/</link>
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-11-10/</guid>
+      <guid>/post/2016-11-10/</guid>
       <description>&lt;p&gt;&lt;strong&gt;爲了準備IELTS雅思英語考試, 此篇文章之後的聽寫計劃盡量加入BBC英音的音頻資料.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/programmes/p04bsysm&#34;&gt;Aleppo&amp;rsquo;s underground orphanage&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/aleppos&#39;s underground orphanage.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/aleppos&#39;s underground orphanage.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2033,11 +2033,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>挑食的蚊子</title>
-      <link>https://wangcc.me/post/2016-10-13/</link>
+      <link>/post/2016-10-13/</link>
       <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-10-13/</guid>
+      <guid>/post/2016-10-13/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/farmed-trout-bred-to-fatten-up-fast/&#34;&gt;Farmed Trout Bred to Fatten Up Fast&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160706VeggieFish.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160706VeggieFish.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2068,11 +2068,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>吃魚油的魚</title>
-      <link>https://wangcc.me/post/2016-10-7/</link>
+      <link>/post/2016-10-7/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-10-7/</guid>
+      <guid>/post/2016-10-7/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/farmed-trout-bred-to-fatten-up-fast/&#34;&gt;Farmed Trout Bred to Fatten Up Fast&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160706VeggieFish.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160706VeggieFish.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2103,11 +2103,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>絲綢之路上的傳染病</title>
-      <link>https://wangcc.me/post/2016-10-6/</link>
+      <link>/post/2016-10-6/</link>
       <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-10-6/</guid>
+      <guid>/post/2016-10-6/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/silk-road-transported-goods-and-disease/&#34;&gt;Silk Road Transported Goods&amp;ndash;and Disease&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160729SilkRoadDisease.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160729SilkRoadDisease.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2148,10 +2148,10 @@ Your browser does not support the audio element.
     
     <item>
       <title>近親繁殖讓鳥兒不會唱歌</title>
-      <link>https://wangcc.me/post/2016-08-11/</link>
+      <link>/post/2016-08-11/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-08-11/</guid>
-      <description>&lt;audio src=&#34;https://wangcc.me/mp3/160726InbredSongbirds.mp3&#34; controls=&#34;controls&#34;&gt;
+      <guid>/post/2016-08-11/</guid>
+      <description>&lt;audio src=&#34;/mp3/160726InbredSongbirds.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2185,11 +2185,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>婚后易发胖</title>
-      <link>https://wangcc.me/post/2016-8-10/</link>
+      <link>/post/2016-8-10/</link>
       <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-8-10/</guid>
+      <guid>/post/2016-8-10/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/married-couples-pack-on-more-pounds/&#34;&gt;Married Couples Pack On More Pounds&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160503MarriedWeight.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160503MarriedWeight.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2221,11 +2221,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>科學與神學的融合之旅</title>
-      <link>https://wangcc.me/post/2016-8-5/</link>
+      <link>/post/2016-8-5/</link>
       <pubDate>Fri, 05 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-8-5/</guid>
+      <guid>/post/2016-8-5/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/evolution-ed-defenders-make-rapids-progress-in-grand-canyon/&#34;&gt;Evolution Ed Defenders Make Rapids Progress in Grand Canyon&lt;/a&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160711ReidGrandCanyon.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160711ReidGrandCanyon.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2260,11 +2260,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>彩票中獎概率之謎</title>
-      <link>https://wangcc.me/post/2016-8-4-powerball/</link>
+      <link>/post/2016-8-4-powerball/</link>
       <pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-8-4-powerball/</guid>
+      <guid>/post/2016-8-4-powerball/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/powerball-lottery-winning-made-inevitable-if-not-easy/&#34;&gt;Powerball Lottery Winning Made Inevitable (If Not Easy)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160111LotteryOdds.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160111LotteryOdds.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2297,11 +2297,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>肠道菌减肥计划</title>
-      <link>https://wangcc.me/post/2016-08-03-gutbacteria/</link>
+      <link>/post/2016-08-03-gutbacteria/</link>
       <pubDate>Wed, 03 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-08-03-gutbacteria/</guid>
+      <guid>/post/2016-08-03-gutbacteria/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/fat-gets-gut-bacteria-working-against-the-waistline/&#34;&gt;Fat Gets Gut Bacteria Working against the Waistline&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160615MicrobesAppetite.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160615MicrobesAppetite.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2338,11 +2338,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>花蜜專家</title>
-      <link>https://wangcc.me/post/2016-08-02-honey/</link>
+      <link>/post/2016-08-02-honey/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-08-02-honey/</guid>
+      <guid>/post/2016-08-02-honey/</guid>
       <description>&lt;p&gt;正確率：87%&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/pollen expert.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/pollen expert.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 &lt;/audio&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.scientificamerican.com/podcast/episode/bees-rank-pollen-by-taste/&#34;&gt;Bees Rank Pollen by Taste&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -2382,11 +2382,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>肠道菌群的抗病展望</title>
-      <link>https://wangcc.me/post/2016-3-8/</link>
+      <link>/post/2016-3-8/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-3-8/</guid>
+      <guid>/post/2016-3-8/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/gut-microbes-lessen-mice-malarial-malaise/&#34;&gt;Gut Microbes Lessen Mice Malarial Malaise&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160212MalariaMicrobiome.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160212MalariaMicrobiome.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2419,11 +2419,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>磕药是种流行病</title>
-      <link>https://wangcc.me/post/2016-3-4/</link>
+      <link>/post/2016-3-4/</link>
       <pubDate>Fri, 04 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-3-4/</guid>
+      <guid>/post/2016-3-4/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/opioid-epidemic-gets-treatment-prescription/&#34;&gt;Opioid Epidemic Gets Treatment Prescription&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160217OpioidEpidemic.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160217OpioidEpidemic.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2458,11 +2458,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>每逢佳节胖三斤</title>
-      <link>https://wangcc.me/post/2016-3-1/</link>
+      <link>/post/2016-3-1/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-3-1/</guid>
+      <guid>/post/2016-3-1/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/super-bowl-sunday-s-food-needs-work/&#34;&gt;Super Bowl Sunday&amp;rsquo;s Food Needs Work&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160206SuperBowlSnax.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160206SuperBowlSnax.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2503,11 +2503,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>甜菜汁的好处</title>
-      <link>https://wangcc.me/post/2016-2-25/</link>
+      <link>/post/2016-2-25/</link>
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-2-25/</guid>
+      <guid>/post/2016-2-25/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/beet-juice-could-help-body-beat-altitude/&#34;&gt;Beet Juice Could Help Body Beat Altitude&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/151021BeetJuiceAltitude.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/151021BeetJuiceAltitude.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2542,11 +2542,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>枪支自杀与公共健康</title>
-      <link>https://wangcc.me/post/2016-2-22/</link>
+      <link>/post/2016-2-22/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-2-22/</guid>
+      <guid>/post/2016-2-22/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/suicide-differences-by-region-related-to-gun-availability/&#34;&gt;Suicide Differences by Region Related to Gun Availability&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160128GunViolence.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160128GunViolence.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2576,11 +2576,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>抗氧化物的实际功效还不明</title>
-      <link>https://wangcc.me/post/2016-2-18/</link>
+      <link>/post/2016-2-18/</link>
       <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-2-18/</guid>
+      <guid>/post/2016-2-18/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/antioxidant-use-still-small-mixed-bag/&#34;&gt;Antioxidant Use Still Small Mixed Bag&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160201AntioxidantsDiet.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160201AntioxidantsDiet.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2612,11 +2612,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>咖啡机的隐患</title>
-      <link>https://wangcc.me/post/2016-2-2/</link>
+      <link>/post/2016-2-2/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-2-2/</guid>
+      <guid>/post/2016-2-2/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/espresso-machines-brew-a-microbiome-of-their-own/&#34;&gt;Espresso Machines Brew a Microbiome of Their Own&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/151201CoffeemakerMicrobiome.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/151201CoffeemakerMicrobiome.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2651,11 +2651,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>調整飲食習慣永遠都不晚</title>
-      <link>https://wangcc.me/post/2016-2-15/</link>
+      <link>/post/2016-2-15/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2016-2-15/</guid>
+      <guid>/post/2016-2-15/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/healthful-diet-switch-helps-even-late-in-life/&#34;&gt;Healthful Diet Switch Helps Even Late in Life&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/160119LateLifeDietBenefits.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/160119LateLifeDietBenefits.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2678,11 +2678,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>暴饮暴食有原因</title>
-      <link>https://wangcc.me/post/2015-9-18/</link>
+      <link>/post/2015-9-18/</link>
       <pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2015-9-18/</guid>
+      <guid>/post/2015-9-18/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/overeating-due-to-stress-13-11-17/&#34;&gt;Overeating Due to Stress?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/sa_p_podcast_131117.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/sa_p_podcast_131117.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;
@@ -2713,11 +2713,11 @@ Your browser does not support the audio element.
     
     <item>
       <title>化妆品广告的科学依据</title>
-      <link>https://wangcc.me/post/2015-9-16/</link>
+      <link>/post/2015-9-16/</link>
       <pubDate>Wed, 16 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2015-9-16/</guid>
+      <guid>/post/2015-9-16/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://www.scientificamerican.com/podcast/episode/cosmetic-ads-science-claims-lack-foundation/&#34;&gt;Cosmetic Ads&amp;rsquo; Science Claims Lack Foundation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;audio src=&#34;https://wangcc.me/mp3/150825CosmeticsAds.mp3&#34; controls=&#34;controls&#34;&gt;
+&lt;audio src=&#34;/mp3/150825CosmeticsAds.mp3&#34; controls=&#34;controls&#34;&gt;
 Your browser does not support the audio element.
 你的瀏覽器不支持音頻播放。請使用chrome科學上網。
 &lt;/audio&gt;

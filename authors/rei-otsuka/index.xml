@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rei Otsuka | Be Ambitious</title>
-    <link>https://wangcc.me/authors/rei-otsuka/</link>
-      <atom:link href="https://wangcc.me/authors/rei-otsuka/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/rei-otsuka/</link>
+      <atom:link href="/authors/rei-otsuka/index.xml" rel="self" type="application/rss+xml" />
     <description>Rei Otsuka</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 31 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Rei Otsuka</title>
-      <link>https://wangcc.me/authors/rei-otsuka/</link>
+      <link>/authors/rei-otsuka/</link>
     </image>
     
     <item>
       <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>https://wangcc.me/publication/journal-article/fhdm2/</link>
+      <link>/publication/journal-article/fhdm2/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/fhdm2/</guid>
+      <guid>/publication/journal-article/fhdm2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;To investigate differences in the association of parental history of diabetes with the risk of type 2 diabetes mellitus (T2DM) in the offspring according to the sex of the parent and the offspring&amp;rsquo;s body weight.&lt;/p&gt;
@@ -31,9 +31,9 @@
     
     <item>
       <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/bfskip/</link>
+      <link>/publication/journal-article/bfskip/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/bfskip/</guid>
+      <guid>/publication/journal-article/bfskip/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
 &lt;p&gt;Skipping breakfast has been suspected as a risk factor for type 2 diabetes (T2DM), but the associations are not entirely consistent across ethnicities or sexes, and the issue has not been adequately addressed in the Japanese population.&lt;/p&gt;
@@ -48,9 +48,9 @@
     
     <item>
       <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <link>/publication/journal-article/liverfat/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <guid>/publication/journal-article/liverfat/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
 &lt;p&gt;To examine the association of intrahepatic fat with homeostasis model assessment-insulin resistance (HOMA-IR), a marker of insulin resistance, in Japanese adults, and whether intrahepatic fat is associated with insulin resistance independent of waist circumference and other measures of obesity.&lt;/p&gt;
@@ -65,9 +65,9 @@
     
     <item>
       <title>Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers.</title>
-      <link>https://wangcc.me/publication/journal-article/uemuradietary/</link>
+      <link>/publication/journal-article/uemuradietary/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/uemuradietary/</guid>
+      <guid>/publication/journal-article/uemuradietary/</guid>
       <description>&lt;h2 id=&#34;要-約&#34;&gt;要 約&lt;/h2&gt;
 &lt;h3 id=&#34;目的&#34;&gt;目的:&lt;/h3&gt;
 &lt;p&gt;アメリカ心臓協会(AHA)は、心血管疾患による死亡率を 10 年間で 20%減少させることを目標として、心血管健康度(AHA 指標)を 2010 年に定めた。本研究の目的は、日本人の一集団において、AHA 指標の中の食事・栄養素摂取に関する 5 項目と健診成績との関連を調べることである。&lt;/p&gt;

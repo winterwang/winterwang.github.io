@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JACC Study Group | Be Ambitious</title>
-    <link>https://wangcc.me/authors/jacc-study-group/</link>
-      <atom:link href="https://wangcc.me/authors/jacc-study-group/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/jacc-study-group/</link>
+      <atom:link href="/authors/jacc-study-group/index.xml" rel="self" type="application/rss+xml" />
     <description>JACC Study Group</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 01 May 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>JACC Study Group</title>
-      <link>https://wangcc.me/authors/jacc-study-group/</link>
+      <link>/authors/jacc-study-group/</link>
     </image>
     
     <item>
       <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>https://wangcc.me/publication/journal-article/jaccseaweed/</link>
+      <link>/publication/journal-article/jaccseaweed/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccseaweed/</guid>
+      <guid>/publication/journal-article/jaccseaweed/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Excess intake of iodine is a suspected risk factor for thyroid cancer. Previous epidemiological research from Japan reported that daily intake of seaweed was associated with a four-fold higher risk in postmenopausal women, whereas others reported a null association. A major source of iodine intake in Japan is from edible seaweeds, and it is reported to be among the highest in the world. We examined the association between seaweed intake frequency and the risk of thyroid cancer in women in the Japan Collaborative Cohort Study followed from 1988 to 2009. Seaweed intake, together with other lifestyle-related information was collected using a self-administered questionnaire at baseline. Seaweed intake frequency was categorized as follows: 1–2 times/week or less, 3–4 times/week, and almost daily. Hazard ratios and the 95% confidence intervals of thyroid cancer incidence according to seaweed intake frequency were estimated using Cox proportional hazards regression. During 447 876 person-years of follow-up (n=35 687), 94 new cases of thyroid cancer were identified. The crude incidence rate was 20.9 per 100 000 person-years. The hazard ratio of thyroid cancer in women who consumed seaweed daily compared with women who ate it 1–2 times/week or less was 1.15 (95% confidence interval: 0.69–1.90, P for trend=0.59). Further analyses did not indicate any association between seaweed intake and the risk of thyroid cancer on statistically adjusting for potential confounding variables as well as on stratification by menopausal status. The present study did not find an association between seaweed intake and thyroid cancer incidence in premenopausal or in postmenopausal women.&lt;/p&gt;
 </description>

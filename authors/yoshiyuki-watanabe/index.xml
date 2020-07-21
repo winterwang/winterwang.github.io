@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yoshiyuki Watanabe | Be Ambitious</title>
-    <link>https://wangcc.me/authors/yoshiyuki-watanabe/</link>
-      <atom:link href="https://wangcc.me/authors/yoshiyuki-watanabe/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/yoshiyuki-watanabe/</link>
+      <atom:link href="/authors/yoshiyuki-watanabe/index.xml" rel="self" type="application/rss+xml" />
     <description>Yoshiyuki Watanabe</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 16 Jan 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Yoshiyuki Watanabe</title>
-      <link>https://wangcc.me/authors/yoshiyuki-watanabe/</link>
+      <link>/authors/yoshiyuki-watanabe/</link>
     </image>
     
     <item>
       <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</link>
+      <link>/publication/journal-article/jaccstress_colorectal/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</guid>
+      <guid>/publication/journal-article/jaccstress_colorectal/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Colorectal cancer is the third most common cancer worldwide, and many risk factors for colorectal cancer have been established. However, it remains uncertain whether psychological stress contributes to the onset of colorectal cancer. Therefore, we conducted a large-scale prospective cohort study to confirm the association between perceived stress and colorectal cancer incidence. We identified 680 cases of colon cancer and 330 cases of rectal cancer during a maximum of 21-year follow-up of 61,563 Japanese men and women. Cox regression analysis adjusted for potential confounders revealed a significant association of perceived stress with rectal cancer incidence but not with colon cancer incidence. This finding is partly consistent with that from only one previous study that addressed an association between perceived stress and the risk of colorectal cancer. However, studies on this topic are sparse and warrant further exploration.&lt;/p&gt;
 </description>
@@ -24,9 +24,9 @@
     
     <item>
       <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
-      <link>https://wangcc.me/publication/journal-article/jaccbreast/</link>
+      <link>/publication/journal-article/jaccbreast/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccbreast/</guid>
+      <guid>/publication/journal-article/jaccbreast/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Breast cancer is the most common cancer in women. However, it remains unproven whether psychological factors have an influence on breast cancer incidence. In our earlier study, subjects possessing two personality traits, decisiveness and “ikigai” (a Japanese word meaning something that makes one’s life worth living), showed a significantly lower risk of developing breast cancer, although no psychological factors have been convincingly demonstrated to have an influence on breast cancer development in other studies. Therefore, we conducted this follow-up analysis to confirm the association between breast cancer incidence and psychological traits, using the final dataset of a large-scale prospective cohort study in Japan. We identified 209 cases of incident breast cancer out of a maximum 21-year follow-up of 29,098 Japanese women. Cox proportional hazard regression analysis, adjusted for the same potential confounders used in our previous study, did not reveal any significant relationships between breast cancer incidence and four psychological traits: having “ikigai”, decisiveness, ease of anger arousal, and perceived stress. Our finding is consistent with previous studies, and suggests that the psychological traits are unlikely to be an important risk factor for breast cancer.&lt;/p&gt;
 </description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Akiko Tamakoshi | Be Ambitious</title>
-    <link>https://wangcc.me/authors/akiko-tamakoshi/</link>
-      <atom:link href="https://wangcc.me/authors/akiko-tamakoshi/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/akiko-tamakoshi/</link>
+      <atom:link href="/authors/akiko-tamakoshi/index.xml" rel="self" type="application/rss+xml" />
     <description>Akiko Tamakoshi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 06 Mar 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Akiko Tamakoshi</title>
-      <link>https://wangcc.me/authors/akiko-tamakoshi/</link>
+      <link>/authors/akiko-tamakoshi/</link>
     </image>
     
     <item>
       <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccmatsunaga/</link>
+      <link>/publication/journal-article/jaccmatsunaga/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccmatsunaga/</guid>
+      <guid>/publication/journal-article/jaccmatsunaga/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Background and aims&lt;/strong&gt; Coronary heart disease (CHD) and stroke have common risk factors, but some of these differ in the magnitude or direction of associations between CHD and stroke. We assessed whether the impact of each risk factor differed between CHD and stroke mortality in Asians.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt; In total, 104,910 subjects aged 40–79 years without histories of cancer, CHD and stroke at baseline were followed between 1988 and 2009. Competing-risks analysis was used to test for differences in the associations of each risk factor with two endpoints (CHD and stroke). Population attributable fractions (PAFs) were also calculated for these endpoints to estimate the population impact of each risk factor.&lt;/p&gt;
@@ -27,9 +27,9 @@
     
     <item>
       <title>Perceived Stress and Colorectal Cancer Incidence: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</link>
+      <link>/publication/journal-article/jaccstress_colorectal/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccstress_colorectal/</guid>
+      <guid>/publication/journal-article/jaccstress_colorectal/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Colorectal cancer is the third most common cancer worldwide, and many risk factors for colorectal cancer have been established. However, it remains uncertain whether psychological stress contributes to the onset of colorectal cancer. Therefore, we conducted a large-scale prospective cohort study to confirm the association between perceived stress and colorectal cancer incidence. We identified 680 cases of colon cancer and 330 cases of rectal cancer during a maximum of 21-year follow-up of 61,563 Japanese men and women. Cox regression analysis adjusted for potential confounders revealed a significant association of perceived stress with rectal cancer incidence but not with colon cancer incidence. This finding is partly consistent with that from only one previous study that addressed an association between perceived stress and the risk of colorectal cancer. However, studies on this topic are sparse and warrant further exploration.&lt;/p&gt;
 </description>
@@ -37,9 +37,9 @@
     
     <item>
       <title>The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women</title>
-      <link>https://wangcc.me/publication/journal-article/jaccbreast/</link>
+      <link>/publication/journal-article/jaccbreast/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccbreast/</guid>
+      <guid>/publication/journal-article/jaccbreast/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Breast cancer is the most common cancer in women. However, it remains unproven whether psychological factors have an influence on breast cancer incidence. In our earlier study, subjects possessing two personality traits, decisiveness and “ikigai” (a Japanese word meaning something that makes one’s life worth living), showed a significantly lower risk of developing breast cancer, although no psychological factors have been convincingly demonstrated to have an influence on breast cancer development in other studies. Therefore, we conducted this follow-up analysis to confirm the association between breast cancer incidence and psychological traits, using the final dataset of a large-scale prospective cohort study in Japan. We identified 209 cases of incident breast cancer out of a maximum 21-year follow-up of 29,098 Japanese women. Cox proportional hazard regression analysis, adjusted for the same potential confounders used in our previous study, did not reveal any significant relationships between breast cancer incidence and four psychological traits: having “ikigai”, decisiveness, ease of anger arousal, and perceived stress. Our finding is consistent with previous studies, and suggests that the psychological traits are unlikely to be an important risk factor for breast cancer.&lt;/p&gt;
 </description>
@@ -47,9 +47,9 @@
     
     <item>
       <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>https://wangcc.me/publication/journal-article/jaccseaweed/</link>
+      <link>/publication/journal-article/jaccseaweed/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccseaweed/</guid>
+      <guid>/publication/journal-article/jaccseaweed/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Excess intake of iodine is a suspected risk factor for thyroid cancer. Previous epidemiological research from Japan reported that daily intake of seaweed was associated with a four-fold higher risk in postmenopausal women, whereas others reported a null association. A major source of iodine intake in Japan is from edible seaweeds, and it is reported to be among the highest in the world. We examined the association between seaweed intake frequency and the risk of thyroid cancer in women in the Japan Collaborative Cohort Study followed from 1988 to 2009. Seaweed intake, together with other lifestyle-related information was collected using a self-administered questionnaire at baseline. Seaweed intake frequency was categorized as follows: 1–2 times/week or less, 3–4 times/week, and almost daily. Hazard ratios and the 95% confidence intervals of thyroid cancer incidence according to seaweed intake frequency were estimated using Cox proportional hazards regression. During 447 876 person-years of follow-up (n=35 687), 94 new cases of thyroid cancer were identified. The crude incidence rate was 20.9 per 100 000 person-years. The hazard ratio of thyroid cancer in women who consumed seaweed daily compared with women who ate it 1–2 times/week or less was 1.15 (95% confidence interval: 0.69–1.90, P for trend=0.59). Further analyses did not indicate any association between seaweed intake and the risk of thyroid cancer on statistically adjusting for potential confounding variables as well as on stratification by menopausal status. The present study did not find an association between seaweed intake and thyroid cancer incidence in premenopausal or in postmenopausal women.&lt;/p&gt;
 </description>

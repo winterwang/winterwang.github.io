@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Esayas Haregot Hilawe | Be Ambitious</title>
-    <link>https://wangcc.me/authors/esayas-haregot-hilawe/</link>
-      <atom:link href="https://wangcc.me/authors/esayas-haregot-hilawe/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/esayas-haregot-hilawe/</link>
+      <atom:link href="/authors/esayas-haregot-hilawe/index.xml" rel="self" type="application/rss+xml" />
     <description>Esayas Haregot Hilawe</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Esayas Haregot Hilawe</title>
-      <link>https://wangcc.me/authors/esayas-haregot-hilawe/</link>
+      <link>/authors/esayas-haregot-hilawe/</link>
     </image>
     
     <item>
       <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://wangcc.me/publication/journal-article/palau/</link>
+      <link>/publication/journal-article/palau/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/palau/</guid>
+      <guid>/publication/journal-article/palau/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Palaustudy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Palaustudy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>https://wangcc.me/publication/journal-article/steppalau/</link>
+      <link>/publication/journal-article/steppalau/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/steppalau/</guid>
+      <guid>/publication/journal-article/steppalau/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;We aimed to investigate the prevalence and predictors of diabetes and prediabetes among adults in Palau. We used data of 1915 adults, aged 25 to 64 years, who participated in the World Health Organization’s (WHO) STEPwise Approach to Risk Factor Surveillance (STEPS) study in Palau. Information on behavioral risk factors of NCDs and physical and biochemical measurements were obtained using standard methods of the WHO. The diagnosis of diabetes and prediabetes was based on the recent American Diabetes Association criteria. Predictors of the prevalence of diabetes and prediabetes were identified using multinomial logistic regression analysis. The overall age-standardized prevalence of prediabetes and diabetes were 40.4% (43.6% for men, 37.4% for women) and 17.7% (18.6% for men, 17% for women), respectively. Old age, overall obesity (high BMI), central obesity (large waist circumference or waist-hip ratio), hypertension and hypertriglyceridemia were significant predictors of prediabetes and/or diabetes. Diabetes occurred at a younger age in “obese” individuals than that of their “non-obese” counterparts. We confirmed that prediabetes and diabetes are highly prevalent in Palau affecting 40% and 18% adults, respectively. Introducing public health interventions to reduce and prevent obesity as early as possible could prove useful to curb the problem.&amp;rdquo;&lt;/p&gt;
 </description>
@@ -35,9 +35,9 @@
     
     <item>
       <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>https://wangcc.me/publication/journal-article/fhdm2/</link>
+      <link>/publication/journal-article/fhdm2/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/fhdm2/</guid>
+      <guid>/publication/journal-article/fhdm2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;To investigate differences in the association of parental history of diabetes with the risk of type 2 diabetes mellitus (T2DM) in the offspring according to the sex of the parent and the offspring&amp;rsquo;s body weight.&lt;/p&gt;
@@ -52,9 +52,9 @@
     
     <item>
       <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/bfskip/</link>
+      <link>/publication/journal-article/bfskip/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/bfskip/</guid>
+      <guid>/publication/journal-article/bfskip/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
 &lt;p&gt;Skipping breakfast has been suspected as a risk factor for type 2 diabetes (T2DM), but the associations are not entirely consistent across ethnicities or sexes, and the issue has not been adequately addressed in the Japanese population.&lt;/p&gt;
@@ -69,9 +69,9 @@
     
     <item>
       <title>Smoking and Diabetes: Is the Association Mediated by Adiponectin, Leptin, or C-reactive Protein?</title>
-      <link>https://wangcc.me/publication/journal-article/smmd/</link>
+      <link>/publication/journal-article/smmd/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/smmd/</guid>
+      <guid>/publication/journal-article/smmd/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; Although the association between cigarette smoking and risk of type 2 diabetes is well established, its mechanisms are yet to be clarified. This study examined the possible mediating effects of adiponectin, leptin, and C-reactive protein (CRP) concentrations on the smoking-diabetes association.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt; Between 2002 and 2011, we followed 3338 Japanese workers, aged 35–66 years, who were enrolled in the second Aichi workers’ cohort study. We used multivariable-adjusted Cox regression models to determine the hazard ratios and respective 95% confidence intervals (CIs) of the association between smoking status and risk of diabetes. A multiple mediation model with bootstrapping was used to estimate the magnitude and the respective bias-corrected (BC) 95% CIs of the indirect effects of smoking on diabetes through the three biomarkers.&lt;/p&gt;
@@ -82,9 +82,9 @@
     
     <item>
       <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
-      <link>https://wangcc.me/publication/journal-article/globalobesity/</link>
+      <link>/publication/journal-article/globalobesity/</link>
       <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/globalobesity/</guid>
+      <guid>/publication/journal-article/globalobesity/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Although the global prevalence of both the overweight and obese is on the rise, there are variations among regions or countries, and sexes. Approximately half or more than half of the population are overweight/obese defined as body mass index $\geqslant$ 25 $kg/m^2$in the Americas (61.1%), Europe (54.8%), and Eastern Mediterranean (46.0%) according to the World Health Organization, while a much lower prevalence is observed in Africa (26.9%), South-East Asia (13.7%), and the Western Pacific (25.4%). Females are more likely to be overweight/obese in the Eastern Mediterranean, Africa, South-East Asia and the majority of countries in the Americas and Western Pacific but not in the most of the countries in Europe. These region-sex-ethnicity differences in prevalence may be a clue to the causes of the obesity epidemic. Epidemiological studies done in the USA, Europe, and Asia found that higher BMI was significantly associated with increased incidence of coronary artery disease (CAD) and ischemic stroke, but the association with hemorrhagic stroke incidence was not always consistent. The association of BMI with CAD and ischemic stroke was generally independent of known mediators, which would indicate the importance of controlling or preventing overweight/obesity for the prevention of cardiovascular disease.&lt;/p&gt;
 </description>

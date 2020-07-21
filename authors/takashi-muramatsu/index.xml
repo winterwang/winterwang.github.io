@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Takashi Muramatsu | Be Ambitious</title>
-    <link>https://wangcc.me/authors/takashi-muramatsu/</link>
-      <atom:link href="https://wangcc.me/authors/takashi-muramatsu/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/takashi-muramatsu/</link>
+      <atom:link href="/authors/takashi-muramatsu/index.xml" rel="self" type="application/rss+xml" />
     <description>Takashi Muramatsu</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Takashi Muramatsu</title>
-      <link>https://wangcc.me/authors/takashi-muramatsu/</link>
+      <link>/authors/takashi-muramatsu/</link>
     </image>
     
     <item>
       <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <link>/publication/journal-article/liverfat/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <guid>/publication/journal-article/liverfat/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
 &lt;p&gt;To examine the association of intrahepatic fat with homeostasis model assessment-insulin resistance (HOMA-IR), a marker of insulin resistance, in Japanese adults, and whether intrahepatic fat is associated with insulin resistance independent of waist circumference and other measures of obesity.&lt;/p&gt;
@@ -31,9 +31,9 @@
     
     <item>
       <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
-      <link>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</link>
+      <link>/publication/journal-article/blood-c3_liverfat/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</guid>
+      <guid>/publication/journal-article/blood-c3_liverfat/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.&lt;/p&gt;

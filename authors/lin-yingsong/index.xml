@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lin, Yingsong | Be Ambitious</title>
-    <link>https://wangcc.me/authors/lin-yingsong/</link>
-      <atom:link href="https://wangcc.me/authors/lin-yingsong/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/lin-yingsong/</link>
+      <atom:link href="/authors/lin-yingsong/index.xml" rel="self" type="application/rss+xml" />
     <description>Lin, Yingsong</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Lin, Yingsong</title>
-      <link>https://wangcc.me/authors/lin-yingsong/</link>
+      <link>/authors/lin-yingsong/</link>
     </image>
     
     <item>
       <title>Rapid urine antibody test for Helicobacter pylori infection in adolescents</title>
-      <link>https://wangcc.me/publication/journal-article/okuda/</link>
+      <link>/publication/journal-article/okuda/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/okuda/</guid>
+      <guid>/publication/journal-article/okuda/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Helicobacter pylori infection is associated with gastric cancer; thus, early diagnosis and treatment are crucial. Since &lt;em&gt;H. pylori&lt;/em&gt; infection in adolescents or young adults shows few symptoms, screening tests are necessary for this population. In this study, the accuracy of the rapid urine-&lt;em&gt;H. pylori&lt;/em&gt; antibody (u-HpAb) test was evaluated and compared to that of urine and serum &lt;em&gt;H. pylori&lt;/em&gt; enzyme-linked immunosorbent assays (u-HpELISA and s-HpELISA, respectively) in junior high school students.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;&lt;/p&gt;

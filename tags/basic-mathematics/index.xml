@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>basic mathematics | Be Ambitious</title>
-    <link>https://wangcc.me/tags/basic-mathematics/</link>
-      <atom:link href="https://wangcc.me/tags/basic-mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/basic-mathematics/</link>
+      <atom:link href="/tags/basic-mathematics/index.xml" rel="self" type="application/rss+xml" />
     <description>basic mathematics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 19 Oct 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>basic mathematics</title>
-      <link>https://wangcc.me/tags/basic-mathematics/</link>
+      <link>/tags/basic-mathematics/</link>
     </image>
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>https://wangcc.me/post/central-limit-theory/</link>
+      <link>/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/central-limit-theory/</guid>
+      <guid>/post/central-limit-theory/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_0522.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/IMG_0522.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
 &lt;p&gt;這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。&lt;/p&gt;
 &lt;p&gt;今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。&lt;/p&gt;
@@ -90,11 +90,11 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
     
     <item>
       <title>你買的彩票中獎概率到底有多少？</title>
-      <link>https://wangcc.me/post/probability3/</link>
+      <link>/post/probability3/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/probability3/</guid>
+      <guid>/post/probability3/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;二項分佈的概念-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
@@ -235,11 +235,11 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
     
     <item>
       <title>正態分佈</title>
-      <link>https://wangcc.me/post/normal-distribution/</link>
+      <link>/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/normal-distribution/</guid>
+      <guid>/post/normal-distribution/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;概率密度曲線-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
@@ -268,7 +268,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
   stat_function(fun = dnorm,
                 xlim = c(-1.3,0.4),
                 geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;：
 &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -301,7 +301,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
 &lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
 &lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
@@ -314,11 +314,11 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
     
     <item>
       <title>概率論2</title>
-      <link>https://wangcc.me/post/probability2-4/</link>
+      <link>/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/probability2-4/</guid>
+      <guid>/post/probability2-4/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;bayes-理論的概念&#34; class=&#34;section level3&#34;&gt;
@@ -340,7 +340,7 @@ P(A\cap S)=P(S|A)P(A)\]&lt;/span&gt;
 &lt;p&gt;可以得到&lt;strong&gt;貝葉斯理論公式&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Selection_073.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Selection_073.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
         &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
@@ -430,11 +430,11 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
     
     <item>
       <title>Matrix Revisions</title>
-      <link>https://wangcc.me/post/matrix-revision/</link>
+      <link>/post/matrix-revision/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/matrix-revision/</guid>
+      <guid>/post/matrix-revision/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;basic-definition-and-notations&#34; class=&#34;section level2&#34;&gt;
@@ -556,11 +556,11 @@ i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>https://wangcc.me/post/cramers-formula/</link>
+      <link>/post/cramers-formula/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/cramers-formula/</guid>
+      <guid>/post/cramers-formula/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;克萊姆法則-cramers-formula&#34; class=&#34;section level3&#34;&gt;
@@ -632,11 +632,11 @@ a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>https://wangcc.me/post/inverse-matrix-method/</link>
+      <link>/post/inverse-matrix-method/</link>
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/inverse-matrix-method/</guid>
+      <guid>/post/inverse-matrix-method/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;逆矩陣法解連立一次方程式&#34; class=&#34;section level3&#34;&gt;
@@ -720,9 +720,9 @@ a_3 \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>https://wangcc.me/post/inverse-matrix/</link>
+      <link>/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/inverse-matrix/</guid>
+      <guid>/post/inverse-matrix/</guid>
       <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
 $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
 &lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
@@ -882,11 +882,11 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
     
     <item>
       <title>「統計解析のための線形代数」復習筆記21</title>
-      <link>https://wangcc.me/post/2017-07-07/</link>
+      <link>/post/2017-07-07/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-07-07/</guid>
+      <guid>/post/2017-07-07/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;行的基本變形&#34; class=&#34;section level2&#34;&gt;
@@ -1010,11 +1010,11 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
     
     <item>
       <title>「統計解析のための線形代数」復習筆記20</title>
-      <link>https://wangcc.me/post/2017-07-06/</link>
+      <link>/post/2017-07-06/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-07-06/</guid>
+      <guid>/post/2017-07-06/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;逆矩陣&#34; class=&#34;section level2&#34;&gt;
@@ -1069,11 +1069,11 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
     
     <item>
       <title>「統計解析のための線形代数」復習筆記19</title>
-      <link>https://wangcc.me/post/2017-04-02/</link>
+      <link>/post/2017-04-02/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-04-02/</guid>
+      <guid>/post/2017-04-02/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;行列式的性質&#34; class=&#34;section level2&#34;&gt;
@@ -1163,11 +1163,11 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
     
     <item>
       <title>「統計解析のための線形代数」復習筆記18</title>
-      <link>https://wangcc.me/post/2017-03-15/</link>
+      <link>/post/2017-03-15/</link>
       <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-03-15/</guid>
+      <guid>/post/2017-03-15/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;行列式的定義與計算&#34; class=&#34;section level2&#34;&gt;
@@ -1216,7 +1216,7 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
 以方程&lt;a href=&#34;#eq:determinant2&#34;&gt;(&lt;strong&gt;??&lt;/strong&gt;)&lt;/a&gt;的定義計算：&lt;br&gt;
 &lt;span class=&#34;math inline&#34;&gt;\(\begin{vmatrix}  a_{11} &amp;amp; a_{12}\\  a_{21} &amp;amp; a_{22}\\  \end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}\)&lt;/span&gt;&lt;br&gt;
 此公式可以用下列 &lt;strong&gt;示意圖(薩呂法則, Sarrus’ rule)&lt;/strong&gt; 來記憶:
-　&lt;img src=&#34;https://wangcc.me/img/sarrus.png&#34; /&gt;&lt;br&gt;
+　&lt;img src=&#34;/img/sarrus.png&#34; /&gt;&lt;br&gt;
 也就是，沿着右下方向將所有成分相乘以後用加號 &lt;span class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; 號連接起來，沿着左下的方向的所有成分則相乘以後用減號 &lt;span class=&#34;math inline&#34;&gt;\(-\)&lt;/span&gt; 號連接起來。最後將這兩者相加獲得行列式的值。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;練習： 求 &lt;span class=&#34;math inline&#34;&gt;\(A=\left( \begin{array}{} 4 &amp;amp; 2\\ 1 &amp;amp; 3\\ \end{array} \right)\)&lt;/span&gt; 的行列式和餘因子矩陣。&lt;/p&gt;
@@ -1242,7 +1242,7 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
      &amp;amp;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;-a_{12}a_{21}a_{33}-a_{13}a_{22}a_{31}
 \end{align}\]&lt;/span&gt;&lt;br&gt;
 我們也可以利用薩呂法則（下圖）來記住計算過程：&lt;br&gt;
-&lt;img src=&#34;https://wangcc.me/img/sarrus33.png&#34; /&gt;&lt;br&gt;
+&lt;img src=&#34;/img/sarrus33.png&#34; /&gt;&lt;br&gt;
 另外，可以得到如下的餘因子：&lt;br&gt;
 &lt;span class=&#34;math inline&#34;&gt;\(A_{11}=\begin{vmatrix}a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}, A_{12}=-\begin{vmatrix}a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix}, A_{13}=\begin{vmatrix}a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\ A_{21}=-\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33}\\\end{vmatrix}, A_{22}=\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33}\\\end{vmatrix}, A_{23}=-\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32}\\\end{vmatrix}\\ A_{31}=\begin{vmatrix}a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23}\\\end{vmatrix}, A_{32}=-\begin{vmatrix}a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23}\\\end{vmatrix}, A_{33}=\begin{vmatrix}a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22}\\\end{vmatrix}\)&lt;/span&gt;&lt;br&gt;
 因此餘因子矩陣爲：&lt;br&gt;
@@ -1290,11 +1290,11 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     
     <item>
       <title>「統計解析のための線形代数」復習筆記17</title>
-      <link>https://wangcc.me/post/2017-03-13/</link>
+      <link>/post/2017-03-13/</link>
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-03-13/</guid>
+      <guid>/post/2017-03-13/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;正定半正定-正值半正值&#34; class=&#34;section level2&#34;&gt;
@@ -1332,11 +1332,11 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     
     <item>
       <title>「統計解析のための線形代数」復習筆記16</title>
-      <link>https://wangcc.me/post/2017-03-11/</link>
+      <link>/post/2017-03-11/</link>
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-03-11/</guid>
+      <guid>/post/2017-03-11/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;二次型形式&#34; class=&#34;section level2&#34;&gt;
@@ -1362,11 +1362,11 @@ A_{(n-1)\times(n-1)}, 假設行列式 |A| 有被定義
     
     <item>
       <title>「統計解析のための線形代数」復習筆記15</title>
-      <link>https://wangcc.me/post/2017-03-08/</link>
+      <link>/post/2017-03-08/</link>
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-03-08/</guid>
+      <guid>/post/2017-03-08/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;單位矩陣&#34; class=&#34;section level2&#34;&gt;
@@ -1466,11 +1466,11 @@ a_{n1}&amp;amp; a_{n2} &amp;amp; \cdots   &amp;amp; a_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記14</title>
-      <link>https://wangcc.me/post/2017-03-01/</link>
+      <link>/post/2017-03-01/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-03-01/</guid>
+      <guid>/post/2017-03-01/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;ul&gt;
@@ -1620,11 +1620,11 @@ a_{11} &amp;amp; 0  &amp;amp; 0 &amp;amp; \cdots  &amp;amp; 0\\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記13</title>
-      <link>https://wangcc.me/post/2017-02-28/</link>
+      <link>/post/2017-02-28/</link>
       <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-28/</guid>
+      <guid>/post/2017-02-28/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;連立一次方程式與矩陣向量的積&#34; class=&#34;section level2&#34;&gt;
@@ -1721,11 +1721,11 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記12</title>
-      <link>https://wangcc.me/post/2017-02-22/</link>
+      <link>/post/2017-02-22/</link>
       <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-22/</guid>
+      <guid>/post/2017-02-22/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;矩陣乘法運算&#34; class=&#34;section level2&#34;&gt;
@@ -1811,11 +1811,11 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記11</title>
-      <link>https://wangcc.me/post/2017-02-21/</link>
+      <link>/post/2017-02-21/</link>
       <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-21/</guid>
+      <guid>/post/2017-02-21/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;矩陣的定義&#34; class=&#34;section level2&#34;&gt;
@@ -1904,11 +1904,11 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記10</title>
-      <link>https://wangcc.me/post/2017-02-19/</link>
+      <link>/post/2017-02-19/</link>
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-19/</guid>
+      <guid>/post/2017-02-19/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;向量的內積-inner-product&#34; class=&#34;section level2&#34;&gt;
@@ -1992,11 +1992,11 @@ a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
     
     <item>
       <title>「統計解析のための線形代数」復習筆記9</title>
-      <link>https://wangcc.me/post/2017-02-18/</link>
+      <link>/post/2017-02-18/</link>
       <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-18/</guid>
+      <guid>/post/2017-02-18/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;特殊向量&#34; class=&#34;section level2&#34;&gt;
@@ -2123,11 +2123,11 @@ ka_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記8</title>
-      <link>https://wangcc.me/post/2017-02-17/</link>
+      <link>/post/2017-02-17/</link>
       <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-17/</guid>
+      <guid>/post/2017-02-17/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;向量-vector&#34; class=&#34;section level2&#34;&gt;
@@ -2179,11 +2179,11 @@ ka_n
     
     <item>
       <title>「統計解析のための線形代数」復習筆記7</title>
-      <link>https://wangcc.me/post/2017-02-16/</link>
+      <link>/post/2017-02-16/</link>
       <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-16/</guid>
+      <guid>/post/2017-02-16/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;分解平方和-1&#34; class=&#34;section level2&#34;&gt;
@@ -2363,11 +2363,11 @@ S_T &amp;amp; = \sum_{i=1}^n(z_{i1}-\bar{z})^2+\sum_{i=1}^m(z_{i2}-\bar{z})^2\\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記6</title>
-      <link>https://wangcc.me/post/2017-02-15/</link>
+      <link>/post/2017-02-15/</link>
       <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-15/</guid>
+      <guid>/post/2017-02-15/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;數據的變換&#34; class=&#34;section level2&#34;&gt;
@@ -2546,11 +2546,11 @@ s_{z_{12}} &amp;amp; = \frac{S_{z_{12}}}{n} \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記5</title>
-      <link>https://wangcc.me/post/2017-02-13/</link>
+      <link>/post/2017-02-13/</link>
       <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-13/</guid>
+      <guid>/post/2017-02-13/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;ul&gt;
@@ -3128,11 +3128,11 @@ cm
     
     <item>
       <title>「統計解析のための線形代数」復習筆記4</title>
-      <link>https://wangcc.me/post/2017-02-12-t/</link>
+      <link>/post/2017-02-12-t/</link>
       <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-12-t/</guid>
+      <guid>/post/2017-02-12-t/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;連立方程式-simultaneous-equations&#34; class=&#34;section level2&#34;&gt;
@@ -3179,11 +3179,11 @@ cm
     
     <item>
       <title>「統計解析のための線形代数」復習筆記3</title>
-      <link>https://wangcc.me/post/2017-02-10/</link>
+      <link>/post/2017-02-10/</link>
       <pubDate>Fri, 10 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-10/</guid>
+      <guid>/post/2017-02-10/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;函數的最大值最小值問題&#34; class=&#34;section level2&#34;&gt;
@@ -3225,11 +3225,11 @@ cm
     
     <item>
       <title>「統計解析のための線形代数」復習筆記2</title>
-      <link>https://wangcc.me/post/2017-02-08/</link>
+      <link>/post/2017-02-08/</link>
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-08/</guid>
+      <guid>/post/2017-02-08/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;偏微分&#34; class=&#34;section level2&#34;&gt;
@@ -3317,11 +3317,11 @@ cm
     
     <item>
       <title>「統計解析のための線形代数」復習筆記1</title>
-      <link>https://wangcc.me/post/2017-02-06/</link>
+      <link>/post/2017-02-06/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/2017-02-06/</guid>
+      <guid>/post/2017-02-06/</guid>
       <description>
-&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;和記號sum&#34; class=&#34;section level2&#34;&gt;

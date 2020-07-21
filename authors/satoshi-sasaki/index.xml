@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Satoshi Sasaki | Be Ambitious</title>
-    <link>https://wangcc.me/authors/satoshi-sasaki/</link>
-      <atom:link href="https://wangcc.me/authors/satoshi-sasaki/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/satoshi-sasaki/</link>
+      <atom:link href="/authors/satoshi-sasaki/index.xml" rel="self" type="application/rss+xml" />
     <description>Satoshi Sasaki</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 01 Feb 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Satoshi Sasaki</title>
-      <link>https://wangcc.me/authors/satoshi-sasaki/</link>
+      <link>/authors/satoshi-sasaki/</link>
     </image>
     
     <item>
       <title>Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers.</title>
-      <link>https://wangcc.me/publication/journal-article/uemuradietary/</link>
+      <link>/publication/journal-article/uemuradietary/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/uemuradietary/</guid>
+      <guid>/publication/journal-article/uemuradietary/</guid>
       <description>&lt;h2 id=&#34;要-約&#34;&gt;要 約&lt;/h2&gt;
 &lt;h3 id=&#34;目的&#34;&gt;目的:&lt;/h3&gt;
 &lt;p&gt;アメリカ心臓協会(AHA)は、心血管疾患による死亡率を 10 年間で 20%減少させることを目標として、心血管健康度(AHA 指標)を 2010 年に定めた。本研究の目的は、日本人の一集団において、AHA 指標の中の食事・栄養素摂取に関する 5 項目と健診成績との関連を調べることである。&lt;/p&gt;

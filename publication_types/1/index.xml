@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1 | Be Ambitious</title>
-    <link>https://wangcc.me/publication_types/1/</link>
-      <atom:link href="https://wangcc.me/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/1/</link>
+      <atom:link href="/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>1</title>
-      <link>https://wangcc.me/publication_types/1/</link>
+      <link>/publication_types/1/</link>
     </image>
     
     <item>
       <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
-      <link>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</link>
+      <link>/publication/journal-article/blood-c3_liverfat/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</guid>
+      <guid>/publication/journal-article/blood-c3_liverfat/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.&lt;/p&gt;

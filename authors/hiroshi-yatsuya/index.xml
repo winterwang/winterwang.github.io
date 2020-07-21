@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hiroshi Yatsuya | Be Ambitious</title>
-    <link>https://wangcc.me/authors/hiroshi-yatsuya/</link>
-      <atom:link href="https://wangcc.me/authors/hiroshi-yatsuya/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/hiroshi-yatsuya/</link>
+      <atom:link href="/authors/hiroshi-yatsuya/index.xml" rel="self" type="application/rss+xml" />
     <description>Hiroshi Yatsuya</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Hiroshi Yatsuya</title>
-      <link>https://wangcc.me/authors/hiroshi-yatsuya/</link>
+      <link>/authors/hiroshi-yatsuya/</link>
     </image>
     
     <item>
       <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>https://wangcc.me/publication/journal-article/palau/</link>
+      <link>/publication/journal-article/palau/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/palau/</guid>
+      <guid>/publication/journal-article/palau/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Palaustudy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/Palaustudy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/jaccmatsunaga/</link>
+      <link>/publication/journal-article/jaccmatsunaga/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccmatsunaga/</guid>
+      <guid>/publication/journal-article/jaccmatsunaga/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Background and aims&lt;/strong&gt; Coronary heart disease (CHD) and stroke have common risk factors, but some of these differ in the magnitude or direction of associations between CHD and stroke. We assessed whether the impact of each risk factor differed between CHD and stroke mortality in Asians.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt; In total, 104,910 subjects aged 40–79 years without histories of cancer, CHD and stroke at baseline were followed between 1988 and 2009. Competing-risks analysis was used to test for differences in the associations of each risk factor with two endpoints (CHD and stroke). Population attributable fractions (PAFs) were also calculated for these endpoints to estimate the population impact of each risk factor.&lt;/p&gt;
@@ -38,9 +38,9 @@
     
     <item>
       <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>https://wangcc.me/publication/journal-article/steppalau/</link>
+      <link>/publication/journal-article/steppalau/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/steppalau/</guid>
+      <guid>/publication/journal-article/steppalau/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;We aimed to investigate the prevalence and predictors of diabetes and prediabetes among adults in Palau. We used data of 1915 adults, aged 25 to 64 years, who participated in the World Health Organization’s (WHO) STEPwise Approach to Risk Factor Surveillance (STEPS) study in Palau. Information on behavioral risk factors of NCDs and physical and biochemical measurements were obtained using standard methods of the WHO. The diagnosis of diabetes and prediabetes was based on the recent American Diabetes Association criteria. Predictors of the prevalence of diabetes and prediabetes were identified using multinomial logistic regression analysis. The overall age-standardized prevalence of prediabetes and diabetes were 40.4% (43.6% for men, 37.4% for women) and 17.7% (18.6% for men, 17% for women), respectively. Old age, overall obesity (high BMI), central obesity (large waist circumference or waist-hip ratio), hypertension and hypertriglyceridemia were significant predictors of prediabetes and/or diabetes. Diabetes occurred at a younger age in “obese” individuals than that of their “non-obese” counterparts. We confirmed that prediabetes and diabetes are highly prevalent in Palau affecting 40% and 18% adults, respectively. Introducing public health interventions to reduce and prevent obesity as early as possible could prove useful to curb the problem.&amp;rdquo;&lt;/p&gt;
 </description>
@@ -48,9 +48,9 @@
     
     <item>
       <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>https://wangcc.me/publication/journal-article/jaccseaweed/</link>
+      <link>/publication/journal-article/jaccseaweed/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/jaccseaweed/</guid>
+      <guid>/publication/journal-article/jaccseaweed/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Excess intake of iodine is a suspected risk factor for thyroid cancer. Previous epidemiological research from Japan reported that daily intake of seaweed was associated with a four-fold higher risk in postmenopausal women, whereas others reported a null association. A major source of iodine intake in Japan is from edible seaweeds, and it is reported to be among the highest in the world. We examined the association between seaweed intake frequency and the risk of thyroid cancer in women in the Japan Collaborative Cohort Study followed from 1988 to 2009. Seaweed intake, together with other lifestyle-related information was collected using a self-administered questionnaire at baseline. Seaweed intake frequency was categorized as follows: 1–2 times/week or less, 3–4 times/week, and almost daily. Hazard ratios and the 95% confidence intervals of thyroid cancer incidence according to seaweed intake frequency were estimated using Cox proportional hazards regression. During 447 876 person-years of follow-up (n=35 687), 94 new cases of thyroid cancer were identified. The crude incidence rate was 20.9 per 100 000 person-years. The hazard ratio of thyroid cancer in women who consumed seaweed daily compared with women who ate it 1–2 times/week or less was 1.15 (95% confidence interval: 0.69–1.90, P for trend=0.59). Further analyses did not indicate any association between seaweed intake and the risk of thyroid cancer on statistically adjusting for potential confounding variables as well as on stratification by menopausal status. The present study did not find an association between seaweed intake and thyroid cancer incidence in premenopausal or in postmenopausal women.&lt;/p&gt;
 </description>
@@ -58,9 +58,9 @@
     
     <item>
       <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>https://wangcc.me/publication/journal-article/fhdm2/</link>
+      <link>/publication/journal-article/fhdm2/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/fhdm2/</guid>
+      <guid>/publication/journal-article/fhdm2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;To investigate differences in the association of parental history of diabetes with the risk of type 2 diabetes mellitus (T2DM) in the offspring according to the sex of the parent and the offspring&amp;rsquo;s body weight.&lt;/p&gt;
@@ -75,9 +75,9 @@
     
     <item>
       <title>Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study</title>
-      <link>https://wangcc.me/publication/journal-article/bfskip/</link>
+      <link>/publication/journal-article/bfskip/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/bfskip/</guid>
+      <guid>/publication/journal-article/bfskip/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
 &lt;p&gt;Skipping breakfast has been suspected as a risk factor for type 2 diabetes (T2DM), but the associations are not entirely consistent across ethnicities or sexes, and the issue has not been adequately addressed in the Japanese population.&lt;/p&gt;
@@ -92,9 +92,9 @@
     
     <item>
       <title>Smoking and Diabetes: Is the Association Mediated by Adiponectin, Leptin, or C-reactive Protein?</title>
-      <link>https://wangcc.me/publication/journal-article/smmd/</link>
+      <link>/publication/journal-article/smmd/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/smmd/</guid>
+      <guid>/publication/journal-article/smmd/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; Although the association between cigarette smoking and risk of type 2 diabetes is well established, its mechanisms are yet to be clarified. This study examined the possible mediating effects of adiponectin, leptin, and C-reactive protein (CRP) concentrations on the smoking-diabetes association.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt; Between 2002 and 2011, we followed 3338 Japanese workers, aged 35–66 years, who were enrolled in the second Aichi workers’ cohort study. We used multivariable-adjusted Cox regression models to determine the hazard ratios and respective 95% confidence intervals (CIs) of the association between smoking status and risk of diabetes. A multiple mediation model with bootstrapping was used to estimate the magnitude and the respective bias-corrected (BC) 95% CIs of the indirect effects of smoking on diabetes through the three biomarkers.&lt;/p&gt;
@@ -105,9 +105,9 @@
     
     <item>
       <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
-      <link>https://wangcc.me/publication/journal-article/globalobesity/</link>
+      <link>/publication/journal-article/globalobesity/</link>
       <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/globalobesity/</guid>
+      <guid>/publication/journal-article/globalobesity/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Although the global prevalence of both the overweight and obese is on the rise, there are variations among regions or countries, and sexes. Approximately half or more than half of the population are overweight/obese defined as body mass index $\geqslant$ 25 $kg/m^2$in the Americas (61.1%), Europe (54.8%), and Eastern Mediterranean (46.0%) according to the World Health Organization, while a much lower prevalence is observed in Africa (26.9%), South-East Asia (13.7%), and the Western Pacific (25.4%). Females are more likely to be overweight/obese in the Eastern Mediterranean, Africa, South-East Asia and the majority of countries in the Americas and Western Pacific but not in the most of the countries in Europe. These region-sex-ethnicity differences in prevalence may be a clue to the causes of the obesity epidemic. Epidemiological studies done in the USA, Europe, and Asia found that higher BMI was significantly associated with increased incidence of coronary artery disease (CAD) and ischemic stroke, but the association with hemorrhagic stroke incidence was not always consistent. The association of BMI with CAD and ischemic stroke was generally independent of known mediators, which would indicate the importance of controlling or preventing overweight/obesity for the prevention of cardiovascular disease.&lt;/p&gt;
 </description>
@@ -115,9 +115,9 @@
     
     <item>
       <title>Independent association of liver fat accumulation with insulin resistance.</title>
-      <link>https://wangcc.me/publication/journal-article/liverfat/</link>
+      <link>/publication/journal-article/liverfat/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/liverfat/</guid>
+      <guid>/publication/journal-article/liverfat/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
 &lt;p&gt;To examine the association of intrahepatic fat with homeostasis model assessment-insulin resistance (HOMA-IR), a marker of insulin resistance, in Japanese adults, and whether intrahepatic fat is associated with insulin resistance independent of waist circumference and other measures of obesity.&lt;/p&gt;
@@ -132,9 +132,9 @@
     
     <item>
       <title>Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers.</title>
-      <link>https://wangcc.me/publication/journal-article/uemuradietary/</link>
+      <link>/publication/journal-article/uemuradietary/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/uemuradietary/</guid>
+      <guid>/publication/journal-article/uemuradietary/</guid>
       <description>&lt;h2 id=&#34;要-約&#34;&gt;要 約&lt;/h2&gt;
 &lt;h3 id=&#34;目的&#34;&gt;目的:&lt;/h3&gt;
 &lt;p&gt;アメリカ心臓協会(AHA)は、心血管疾患による死亡率を 10 年間で 20%減少させることを目標として、心血管健康度(AHA 指標)を 2010 年に定めた。本研究の目的は、日本人の一集団において、AHA 指標の中の食事・栄養素摂取に関する 5 項目と健診成績との関連を調べることである。&lt;/p&gt;
@@ -149,9 +149,9 @@
     
     <item>
       <title>Positive association between high‐sensitivity C‐reactive protein and incidence of type 2 diabetes mellitus in Japanese workers: 6‐year follow‐up</title>
-      <link>https://wangcc.me/publication/journal-article/crpdm2/</link>
+      <link>/publication/journal-article/crpdm2/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/crpdm2/</guid>
+      <guid>/publication/journal-article/crpdm2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
 &lt;p&gt;Elevated high-sensitivity C-reactive protein (hs-CRP), a marker of low-grade systemic inflammation, may be involved in the etiology of type 2 diabetes mellitus (T2DM). However, whether inflammation precedes development of T2DM independent of cigarette smoking and obesity remains to be confirmed.&lt;/p&gt;
@@ -166,9 +166,9 @@
     
     <item>
       <title>Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men</title>
-      <link>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</link>
+      <link>/publication/journal-article/blood-c3_liverfat/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/publication/journal-article/blood-c3_liverfat/</guid>
+      <guid>/publication/journal-article/blood-c3_liverfat/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;We aimed to determine whether complement 3 (C3) is positively related to the degree of liver fat content in healthy Japanese adults.&lt;/p&gt;

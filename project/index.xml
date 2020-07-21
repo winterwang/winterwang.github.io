@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects | Be Ambitious</title>
-    <link>https://wangcc.me/project/</link>
-      <atom:link href="https://wangcc.me/project/index.xml" rel="self" type="application/rss+xml" />
+    <link>/project/</link>
+      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://wangcc.me/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Projects</title>
-      <link>https://wangcc.me/project/</link>
+      <link>/project/</link>
     </image>
     
     <item>
       <title>Chrononutrition</title>
-      <link>https://wangcc.me/project/chronon/</link>
+      <link>/project/chronon/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/project/chronon/</guid>
+      <guid>/project/chronon/</guid>
       <description>&lt;p&gt;We applied unsupervised learning technique on the NDNS RP dataset.
 More details will be released asap.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/compo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/compo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Medical Statistics@LSHTM</title>
-      <link>https://wangcc.me/project/lshtmlearningnote/</link>
+      <link>/project/lshtmlearningnote/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/project/lshtmlearningnote/</guid>
+      <guid>/project/lshtmlearningnote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aichi Workers&#39; Cohort Study</title>
-      <link>https://wangcc.me/project/aichi/</link>
+      <link>/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/project/aichi/</guid>
+      <guid>/project/aichi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>the JACC Study</title>
-      <link>https://wangcc.me/project/jacc/</link>
+      <link>/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/project/jacc/</guid>
+      <guid>/project/jacc/</guid>
       <description></description>
     </item>
     
