@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>8 | Be Ambitious</title>
-    <link>/publication_types/8/</link>
-      <atom:link href="/publication_types/8/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/publication_types/8/</link>
+      <atom:link href="https://wangcc.me/publication_types/8/index.xml" rel="self" type="application/rss+xml" />
     <description>8</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 25 Nov 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>8</title>
-      <link>/publication_types/8/</link>
+      <link>https://wangcc.me/publication_types/8/</link>
     </image>
     
     <item>
       <title>Esophageal cancer in high-risk areas of China: research progress and challenges</title>
-      <link>/publication/journal-article/esophageal/</link>
+      <link>https://wangcc.me/publication/journal-article/esophageal/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/esophageal/</guid>
+      <guid>https://wangcc.me/publication/journal-article/esophageal/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;purpose&#34;&gt;PURPOSE:&lt;/h3&gt;
 &lt;p&gt;The extremely high incidence of esophageal cancer in certain rural areas of China has prompted significant intellectual curiosity and research efforts both in China and abroad.&lt;/p&gt;
@@ -31,9 +31,9 @@
     
     <item>
       <title>Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence</title>
-      <link>/publication/journal-article/globalobesity/</link>
+      <link>https://wangcc.me/publication/journal-article/globalobesity/</link>
       <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/globalobesity/</guid>
+      <guid>https://wangcc.me/publication/journal-article/globalobesity/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Although the global prevalence of both the overweight and obese is on the rise, there are variations among regions or countries, and sexes. Approximately half or more than half of the population are overweight/obese defined as body mass index $\geqslant$ 25 $kg/m^2$in the Americas (61.1%), Europe (54.8%), and Eastern Mediterranean (46.0%) according to the World Health Organization, while a much lower prevalence is observed in Africa (26.9%), South-East Asia (13.7%), and the Western Pacific (25.4%). Females are more likely to be overweight/obese in the Eastern Mediterranean, Africa, South-East Asia and the majority of countries in the Americas and Western Pacific but not in the most of the countries in Europe. These region-sex-ethnicity differences in prevalence may be a clue to the causes of the obesity epidemic. Epidemiological studies done in the USA, Europe, and Asia found that higher BMI was significantly associated with increased incidence of coronary artery disease (CAD) and ischemic stroke, but the association with hemorrhagic stroke incidence was not always consistent. The association of BMI with CAD and ischemic stroke was generally independent of known mediators, which would indicate the importance of controlling or preventing overweight/obesity for the prevention of cardiovascular disease.&lt;/p&gt;
 </description>

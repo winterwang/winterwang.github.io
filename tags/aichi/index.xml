@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aichi | Be Ambitious</title>
-    <link>/tags/aichi/</link>
-      <atom:link href="/tags/aichi/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/tags/aichi/</link>
+      <atom:link href="https://wangcc.me/tags/aichi/index.xml" rel="self" type="application/rss+xml" />
     <description>Aichi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 13 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>Aichi</title>
-      <link>/tags/aichi/</link>
+      <link>https://wangcc.me/tags/aichi/</link>
     </image>
     
     <item>
       <title>歡迎家庭新成員-雅馬哈鋼琴</title>
-      <link>/gallery/piano-come-to-home/</link>
+      <link>https://wangcc.me/gallery/piano-come-to-home/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/gallery/piano-come-to-home/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/IMG_5115.jpeg&#34; alt=&#34;&#34;&gt;
+      <guid>https://wangcc.me/gallery/piano-come-to-home/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_5115.jpeg&#34; alt=&#34;&#34;&gt;
 我家的妹妹開心地背上 Hello Kitty 的小書包。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/IMG_5137.jpeg&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_5137.jpeg&#34; alt=&#34;&#34;&gt;
 上週六帶着大兒子去看鋼琴，名古屋調律中心的鋼琴擺滿了三四棟樓的每一個房間。簡直是目不暇接。兒子開心極了。不知道要選哪個。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/IMG_5141.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_5141.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;訂了鋼琴回家的路上，不小心被警察蜀黍抓到違章右轉。唉，全黨是破財消災。
-&lt;img src=&#34;/img/IMG_0079.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_0079.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;鋼琴入住我們家這天，天氣很好，搬鋼琴的夥計還能說出我家小黑板上寫的“白日依山盡，黃河入海流”。人才真是不可貌相。不過看他們搬的過程，深感這位新成員的體量還是相當沉重。&lt;/p&gt;
 &lt;video width=auto height=auto controls allowfullscreen&gt;
-  &lt;source src=&#34;/video/IMG_5147.mov&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;https://wangcc.me/video/IMG_5147.mov&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;p&gt;選中了這臺標準的雅馬哈鋼琴，小孩玩耍的房間頓時格調倍增。
-&lt;img src=&#34;/img/IMG_5151.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://wangcc.me/img/IMG_5151.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;video width=auto height=auto controls allowfullscreen&gt;
-  &lt;source src=&#34;/video/IMG_5154.mov&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;https://wangcc.me/video/IMG_5154.mov&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;p&gt;孩子們多了一個可以發出美妙旋律的大夥伴，妹妹興奮地給認真彈琴的哥哥搗亂哈哈。&lt;/p&gt;
 </description>
@@ -39,9 +39,9 @@
     
     <item>
       <title>Aichi Workers&#39; Cohort Study</title>
-      <link>/project/aichi/</link>
+      <link>https://wangcc.me/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>/project/aichi/</guid>
+      <guid>https://wangcc.me/project/aichi/</guid>
       <description></description>
     </item>
     

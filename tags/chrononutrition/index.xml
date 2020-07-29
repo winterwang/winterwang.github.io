@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>chrononutrition | Be Ambitious</title>
-    <link>/tags/chrononutrition/</link>
-      <atom:link href="/tags/chrononutrition/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/tags/chrononutrition/</link>
+      <atom:link href="https://wangcc.me/tags/chrononutrition/index.xml" rel="self" type="application/rss+xml" />
     <description>chrononutrition</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>chrononutrition</title>
-      <link>/tags/chrononutrition/</link>
+      <link>https://wangcc.me/tags/chrononutrition/</link>
     </image>
     
     <item>
       <title>Chrononutrition</title>
-      <link>/project/chronon/</link>
+      <link>https://wangcc.me/project/chronon/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>/project/chronon/</guid>
+      <guid>https://wangcc.me/project/chronon/</guid>
       <description>&lt;p&gt;We applied unsupervised learning technique on the NDNS RP dataset.
 More details will be released asap.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/compo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/compo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     

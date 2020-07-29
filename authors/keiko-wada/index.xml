@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keiko Wada | Be Ambitious</title>
-    <link>/authors/keiko-wada/</link>
-      <atom:link href="/authors/keiko-wada/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/authors/keiko-wada/</link>
+      <atom:link href="https://wangcc.me/authors/keiko-wada/index.xml" rel="self" type="application/rss+xml" />
     <description>Keiko Wada</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 31 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>Keiko Wada</title>
-      <link>/authors/keiko-wada/</link>
+      <link>https://wangcc.me/authors/keiko-wada/</link>
     </image>
     
     <item>
       <title>Association between parental history of diabetes and the incidence of type 2 diabetes mellitus differs according to the sex of the parent and offspring’s body weight: A finding from a Japanese worksite-based cohort study</title>
-      <link>/publication/journal-article/fhdm2/</link>
+      <link>https://wangcc.me/publication/journal-article/fhdm2/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/fhdm2/</guid>
+      <guid>https://wangcc.me/publication/journal-article/fhdm2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;objective&#34;&gt;Objective:&lt;/h3&gt;
 &lt;p&gt;To investigate differences in the association of parental history of diabetes with the risk of type 2 diabetes mellitus (T2DM) in the offspring according to the sex of the parent and the offspring&amp;rsquo;s body weight.&lt;/p&gt;
@@ -31,9 +31,9 @@
     
     <item>
       <title>Positive association between high‐sensitivity C‐reactive protein and incidence of type 2 diabetes mellitus in Japanese workers: 6‐year follow‐up</title>
-      <link>/publication/journal-article/crpdm2/</link>
+      <link>https://wangcc.me/publication/journal-article/crpdm2/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/crpdm2/</guid>
+      <guid>https://wangcc.me/publication/journal-article/crpdm2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background:&lt;/h3&gt;
 &lt;p&gt;Elevated high-sensitivity C-reactive protein (hs-CRP), a marker of low-grade systemic inflammation, may be involved in the etiology of type 2 diabetes mellitus (T2DM). However, whether inflammation precedes development of T2DM independent of cigarette smoking and obesity remains to be confirmed.&lt;/p&gt;

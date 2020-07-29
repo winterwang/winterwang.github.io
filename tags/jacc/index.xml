@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JACC | Be Ambitious</title>
-    <link>/tags/jacc/</link>
-      <atom:link href="/tags/jacc/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/tags/jacc/</link>
+      <atom:link href="https://wangcc.me/tags/jacc/index.xml" rel="self" type="application/rss+xml" />
     <description>JACC</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>JACC</title>
-      <link>/tags/jacc/</link>
+      <link>https://wangcc.me/tags/jacc/</link>
     </image>
     
     <item>
       <title>the JACC Study</title>
-      <link>/project/jacc/</link>
+      <link>https://wangcc.me/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>/project/jacc/</guid>
+      <guid>https://wangcc.me/project/jacc/</guid>
       <description></description>
     </item>
     

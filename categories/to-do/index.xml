@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>To do | Be Ambitious</title>
-    <link>/categories/to-do/</link>
-      <atom:link href="/categories/to-do/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/categories/to-do/</link>
+      <atom:link href="https://wangcc.me/categories/to-do/index.xml" rel="self" type="application/rss+xml" />
     <description>To do</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>To do</title>
-      <link>/categories/to-do/</link>
+      <link>https://wangcc.me/categories/to-do/</link>
     </image>
     
     <item>
       <title>2018-12 todo</title>
-      <link>/post/2018-12-todo/</link>
+      <link>https://wangcc.me/post/2018-12-todo/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>/post/2018-12-todo/</guid>
+      <guid>https://wangcc.me/post/2018-12-todo/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;2018-12-03
 &lt;ul&gt;
@@ -50,9 +50,9 @@
     
     <item>
       <title>2018-11 todo</title>
-      <link>/post/2018-11-todo/</link>
+      <link>https://wangcc.me/post/2018-11-todo/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>/post/2018-11-todo/</guid>
+      <guid>https://wangcc.me/post/2018-11-todo/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;2018-11-05
 &lt;ul&gt;
@@ -156,9 +156,9 @@
     
     <item>
       <title>2018_10 todo</title>
-      <link>/post/2018-10-todo/</link>
+      <link>https://wangcc.me/post/2018-10-todo/</link>
       <pubDate>Tue, 02 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>/post/2018-10-todo/</guid>
+      <guid>https://wangcc.me/post/2018-10-todo/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;2018-10-02 ~ 2018-10-17
 &lt;ul&gt;
@@ -237,9 +237,9 @@
     
     <item>
       <title>Summer Project Schedule</title>
-      <link>/post/summer-project-schedule/</link>
+      <link>https://wangcc.me/post/summer-project-schedule/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>/post/summer-project-schedule/</guid>
+      <guid>https://wangcc.me/post/summer-project-schedule/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Data analysis finish by 2018-07-&lt;del&gt;24&lt;/del&gt;31&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Paper structure confirm by 2018-08-01&lt;/del&gt;&lt;/li&gt;
@@ -375,9 +375,9 @@
     
     <item>
       <title>Todo 2018 June-September</title>
-      <link>/post/todo-2018-june/</link>
+      <link>https://wangcc.me/post/todo-2018-june/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>/post/todo-2018-june/</guid>
+      <guid>https://wangcc.me/post/todo-2018-june/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 大塚敏美財団メールを返信する&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;PCA analysis learning&lt;/del&gt;&lt;/li&gt;
@@ -471,9 +471,9 @@
     
     <item>
       <title>To do list 2018 May</title>
-      <link>/post/todotest/</link>
+      <link>https://wangcc.me/post/todotest/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      <guid>/post/todotest/</guid>
+      <guid>https://wangcc.me/post/todotest/</guid>
       <description>&lt;p&gt;試試看用 &lt;a href=&#34;https://shrektan.com/post/2018/04/02/blogdown-todo/&#34;&gt;Blogdown 來管理自己的待辦事項&lt;/a&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Causal inference 作業&lt;/del&gt;

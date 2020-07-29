@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hiroshi Yatsuya (八谷 寛) | Be Ambitious</title>
-    <link>/authors/hiroshi-yatsuya-%E5%85%AB%E8%B0%B7-%E5%AF%9B/</link>
-      <atom:link href="/authors/hiroshi-yatsuya-%E5%85%AB%E8%B0%B7-%E5%AF%9B/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/authors/hiroshi-yatsuya-%E5%85%AB%E8%B0%B7-%E5%AF%9B/</link>
+      <atom:link href="https://wangcc.me/authors/hiroshi-yatsuya-%E5%85%AB%E8%B0%B7-%E5%AF%9B/index.xml" rel="self" type="application/rss+xml" />
     <description>Hiroshi Yatsuya (八谷 寛)</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 05 Jan 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>Hiroshi Yatsuya (八谷 寛)</title>
-      <link>/authors/hiroshi-yatsuya-%E5%85%AB%E8%B0%B7-%E5%AF%9B/</link>
+      <link>https://wangcc.me/authors/hiroshi-yatsuya-%E5%85%AB%E8%B0%B7-%E5%AF%9B/</link>
     </image>
     
     <item>
       <title>Milk drinking and mortality: findings from the Japan Collaborative Cohort Study</title>
-      <link>/publication/journal-article/milk/</link>
+      <link>https://wangcc.me/publication/journal-article/milk/</link>
       <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/milk/</guid>
+      <guid>https://wangcc.me/publication/journal-article/milk/</guid>
       <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
 &lt;h4 id=&#34;background&#34;&gt;BACKGROUND:&lt;/h4&gt;
 &lt;p&gt;Findings regarding the association between milk consumption and all-cause mortality reported by studies carried out in Western populations have been inconsistent. However, no studies have been conducted in Japan on this issue. The present study aimed to investigate the association of milk drinking with all-cause, cardiovascular, and cancer mortality in Japan.&lt;/p&gt;

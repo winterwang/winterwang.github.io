@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Medical Statistics | Be Ambitious</title>
-    <link>/tags/medical-statistics/</link>
-      <atom:link href="/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/tags/medical-statistics/</link>
+      <atom:link href="https://wangcc.me/tags/medical-statistics/index.xml" rel="self" type="application/rss+xml" />
     <description>Medical Statistics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Fri, 16 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>Medical Statistics</title>
-      <link>/tags/medical-statistics/</link>
+      <link>https://wangcc.me/tags/medical-statistics/</link>
     </image>
     
     <item>
       <title>等級線性回歸模型的 Rstan 貝葉斯實現</title>
-      <link>/post/multilevel-model-rstan/</link>
+      <link>https://wangcc.me/post/multilevel-model-rstan/</link>
       <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>/post/multilevel-model-rstan/</guid>
+      <guid>https://wangcc.me/post/multilevel-model-rstan/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -110,7 +110,7 @@ p &amp;lt;- p + scale_shape_manual(values=c(16, 2, 4, 9))
 p &amp;lt;- p + labs(x=&amp;#39;X (age-23)&amp;#39;, y=&amp;#39;Y (10,000 Yen/year)&amp;#39;)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig8-1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-1-1.png&#34; alt=&#34;年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-1-1.png&#34; alt=&#34;年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 年齡和年收入的散點圖，不同點的形狀代表不同的公司編號。
 &lt;/p&gt;
@@ -126,7 +126,7 @@ p &amp;lt;- p + scale_shape_manual(values=c(16, 2, 4, 9))
 p &amp;lt;- p + labs(x=&amp;#39;X (age-23)&amp;#39;, y=&amp;#39;Y (10,000 Yen/year)&amp;#39;)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig8-2&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-2-1.png&#34; alt=&#34;年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-08-16-multilevel-model-rstan_files/figure-html/fig8-2-1.png&#34; alt=&#34;年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 年齡和年收入的散點圖，不同的公司在四個平面中展示,黑色點線是每家公司數據單獨使用線性回歸時獲得的直線。
 &lt;/p&gt;
@@ -705,11 +705,11 @@ summary(M1)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>泊松回歸模型的貝葉斯Stan實現</title>
-      <link>/post/poisson-stan/</link>
+      <link>https://wangcc.me/post/poisson-stan/</link>
       <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>/post/poisson-stan/</guid>
+      <guid>https://wangcc.me/post/poisson-stan/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1090,11 +1090,11 @@ M[n]       &amp;amp; \sim \text{Poisson}(\lambda[n])     &amp;amp; n = 1, \dots,
     
     <item>
       <title>Rstan Wonderful R-(5)</title>
-      <link>/post/logistic-rstan2/</link>
+      <link>https://wangcc.me/post/logistic-rstan2/</link>
       <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/post/logistic-rstan2/</guid>
+      <guid>https://wangcc.me/post/logistic-rstan2/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -6163,7 +6163,7 @@ p &amp;lt;- mcmc_trace(posterior5.5, n_warmup = 0, pars = c(&amp;quot;b[1]&amp;q
 
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:chapter5-5&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plot)。
 &lt;/p&gt;
@@ -6171,7 +6171,7 @@ Figure 1: 用 bayesplot包數繪製的模型5-5的MCMC鏈式軌跡圖 (trace plo
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_acf_bar(posterior5.5, pars = c(&amp;quot;b[1]&amp;quot;, &amp;quot;b[2]&amp;quot;, &amp;quot;b[3]&amp;quot;,   &amp;quot;lp__&amp;quot;))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:chapter5-5-acf&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-acf-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic2-rstan_files/figure-html/chapter5-5-acf-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。
 &lt;/p&gt;
@@ -6179,7 +6179,7 @@ Figure 2: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)�
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_dens_overlay(posterior5.5, pars = c(&amp;quot;b[1]&amp;quot;, &amp;quot;b[2]&amp;quot;, &amp;quot;b[3]&amp;quot;, &amp;quot;OR1&amp;quot;,  &amp;quot;OR2&amp;quot;, &amp;quot;lp__&amp;quot;), color_chains = T)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step5-5-density&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic2-rstan_files/figure-html/step5-5-density-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本密度分佈圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic2-rstan_files/figure-html/step5-5-density-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本密度分佈圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: 用 bayesplot包數繪製的事後樣本密度分佈圖。
 &lt;/p&gt;
@@ -6211,7 +6211,7 @@ p &amp;lt;- p + scale_y_continuous(breaks=seq(0, 1, 0.2))
 p &amp;lt;- p + xlim(30, 200)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:validity-of-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic2-rstan_files/figure-html/validity-of-model-1.png&#34; alt=&#34;不喜歡打工，且天氣晴天的情況下，分數在 30-200 點之間的學生的出勤概率 q 和它的 80% 可信區間範圍。圖中黑色實線是預測概率的事後分佈的中央值，灰色帶是可信區間範圍。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic2-rstan_files/figure-html/validity-of-model-1.png&#34; alt=&#34;不喜歡打工，且天氣晴天的情況下，分數在 30-200 點之間的學生的出勤概率 q 和它的 80% 可信區間範圍。圖中黑色實線是預測概率的事後分佈的中央值，灰色帶是可信區間範圍。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: 不喜歡打工，且天氣晴天的情況下，分數在 30-200 點之間的學生的出勤概率 q 和它的 80% 可信區間範圍。圖中黑色實線是預測概率的事後分佈的中央值，灰色帶是可信區間範圍。
 &lt;/p&gt;
@@ -6236,7 +6236,7 @@ p &amp;lt;- p + scale_color_manual(values=c(&amp;#39;grey5&amp;#39;, &amp;#39;gr
 p &amp;lt;- p + labs(x=&amp;#39;Y&amp;#39;, y=&amp;#39;q&amp;#39;)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:validity-of-model1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic2-rstan_files/figure-html/validity-of-model1-1.png&#34; alt=&#34;把計算獲得的事後概率的中央值作爲每名學生是否出勤的概率預測(x 軸)，和實際觀察的出勤結果(y 軸)，繪製的散點圖。其中，灰色的小提琴圖其實是根據獲得的事後概率的中央值的概率密度曲線，繪製的上下對稱的圖形，形似小提琴。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic2-rstan_files/figure-html/validity-of-model1-1.png&#34; alt=&#34;把計算獲得的事後概率的中央值作爲每名學生是否出勤的概率預測(x 軸)，和實際觀察的出勤結果(y 軸)，繪製的散點圖。其中，灰色的小提琴圖其實是根據獲得的事後概率的中央值的概率密度曲線，繪製的上下對稱的圖形，形似小提琴。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: 把計算獲得的事後概率的中央值作爲每名學生是否出勤的概率預測(x 軸)，和實際觀察的出勤結果(y 軸)，繪製的散點圖。其中，灰色的小提琴圖其實是根據獲得的事後概率的中央值的概率密度曲線，繪製的上下對稱的圖形，形似小提琴。
 &lt;/p&gt;
@@ -6247,11 +6247,11 @@ Figure 5: 把計算獲得的事後概率的中央值作爲每名學生是否出�
     
     <item>
       <title>Rstan Wonderful R-(4)</title>
-      <link>/post/logistic-rstan/</link>
+      <link>https://wangcc.me/post/logistic-rstan/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/logistic-rstan/</guid>
+      <guid>https://wangcc.me/post/logistic-rstan/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -6362,7 +6362,7 @@ for(j in 1:(N_col-1)) {
 
 ggp&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic-rstan_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，相比之前增加了 $ratio = Y/M$ 列。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic-rstan_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，相比之前增加了 $ratio = Y/M$ 列。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 三個變量的分佈觀察圖，相比之前增加了 &lt;span class=&#34;math inline&#34;&gt;\(ratio = Y/M\)&lt;/span&gt; 列。
 &lt;/p&gt;
@@ -6758,7 +6758,7 @@ p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0, pars = c(&amp;quot;b1&amp;quot;
                 facet_args = list(nrow = 2, labeller = label_parsed))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step53&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic-rstan_files/figure-html/step53-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic-rstan_files/figure-html/step53-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
 &lt;/p&gt;
@@ -6782,7 +6782,7 @@ p &amp;lt;- p + scale_x_continuous(breaks=seq(from=0, to=70, by=20))
 p &amp;lt;- p + scale_y_continuous(breaks=seq(from=0, to=70, by=20))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig58&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-27-logistic-rstan_files/figure-html/fig58-1.png&#34; alt=&#34;觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-27-logistic-rstan_files/figure-html/fig58-1.png&#34; alt=&#34;觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。
 &lt;/p&gt;
@@ -6793,11 +6793,11 @@ Figure 3: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預�
     
     <item>
       <title>Rstan Wonderful R-(3)</title>
-      <link>/post/rstan-wonderful-r3/</link>
+      <link>https://wangcc.me/post/rstan-wonderful-r3/</link>
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/rstan-wonderful-r3/</guid>
+      <guid>https://wangcc.me/post/rstan-wonderful-r3/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -6915,7 +6915,7 @@ for(j in 1:(N_col-1)) {
 
 ggp&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step1-1.png&#34; alt=&#34;三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 三個變量的分佈觀察圖，對角線上是三個變量各自的柱狀圖 (histogram) 和計算獲得的概率密度函數曲線；左下角三個圖是三個變量的箱式圖和散點圖；右上角三個圖是三個變量兩兩計算獲得的 Spearman 秩相關乘以100之後的數值。對角線上及左下角三個圖中數據點和形狀的不同分別表示學生喜歡(三角形)和不喜歡(圓形)打工。右上角表示秩相關的數值越接近0，顏色越白圖形越接近圓形，相關係數的絕對值越接近1，則顏色越深，橢圓越細長。
 &lt;/p&gt;
@@ -7228,7 +7228,7 @@ p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0, pars = c(&amp;quot;b1&amp;quot;
                 facet_args = list(nrow = 2, labeller = label_parsed))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step53&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step53-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/step53-1.png&#34; alt=&#34;用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 用 bayesplot包數繪製的模型5-3的MCMC鏈式軌跡圖 (trace plot)。
 &lt;/p&gt;
@@ -7293,7 +7293,7 @@ p &amp;lt;- p + geom_point(data=d[d$A==0, ], aes(x=Score, y=Y), shape=20, size=5
 p &amp;lt;- customize.ggplot.axis(p)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig52&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig52-1.png&#34; alt=&#34;黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig52-1.png&#34; alt=&#34;黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: 黑色原點(不喜歡打工)，和無色三角形(喜歡打工)的學生的出勤率，和模型計算獲得的貝葉斯事後預測區間。黑色線是中位數，灰色帶是50%預測區間和95%預測區間。
 &lt;/p&gt;
@@ -7317,7 +7317,7 @@ p &amp;lt;- p + scale_x_continuous(breaks=seq(from=0, to=0.5, by=0.1))
 p &amp;lt;- p + scale_y_continuous(breaks=seq(from=0, to=0.5, by=0.1))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig53&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig53-1.png&#34; alt=&#34;觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig53-1.png&#34; alt=&#34;觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: 觀測值(x)，和預測值(y)的散點圖，以及預測值的80%預測區間。
 &lt;/p&gt;
@@ -7348,7 +7348,7 @@ p &amp;lt;- p + geom_rug(data=d_mode, aes(x=X), sides=&amp;#39;b&amp;#39;)
 p &amp;lt;- p + labs(x=&amp;#39;value&amp;#39;, y=&amp;#39;density&amp;#39;)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig54left&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54left-1.png&#34; alt=&#34;每名學生的出勤率隨機誤差的分佈&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54left-1.png&#34; alt=&#34;每名學生的出勤率隨機誤差的分佈&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: 每名學生的出勤率隨機誤差的分佈
 &lt;/p&gt;
@@ -7367,7 +7367,7 @@ p &amp;lt;- p + xlim(range(density(d_mode$X)$x))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: Removed 2 rows containing missing values (geom_bar).&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig54right&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54right-1.png&#34; alt=&#34;每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig54right-1.png&#34; alt=&#34;每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: 每名學生事後出勤率隨機誤差的MAP值的柱狀圖，和相應的概率密度函數（灰色鐘罩），點狀虛線是均值爲0，標準差是模型計算的事後隨機誤差標準差的 MAP 值的正態分佈的形狀。
 &lt;/p&gt;
@@ -7434,7 +7434,7 @@ for(j in 1:(N_col-1)) {
 }
 ggp&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:fig55&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig55-1.png&#34; alt=&#34;MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-22-rstan-wonderful-r-multi-lm_files/figure-html/fig55-1.png&#34; alt=&#34;MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的柱狀圖和相應的概率密度曲線。右上角是各個參數事後樣本之間的 Spearman 秩相關係數。左下角是兩兩的散點圖。
 &lt;/p&gt;
@@ -7446,11 +7446,11 @@ Figure 7: MCMC樣本的事後矩陣。對角線上是各個參數事後樣本的
     
     <item>
       <title>Simple linear regression using Rstan--Rstan Wonderful R-(2)</title>
-      <link>/post/simple-linear-regression-using-rstan/</link>
+      <link>https://wangcc.me/post/simple-linear-regression-using-rstan/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/simple-linear-regression-using-rstan/</guid>
+      <guid>https://wangcc.me/post/simple-linear-regression-using-rstan/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -7511,7 +7511,7 @@ ggplot(Salary, aes(x = X, y = Y)) +
     panel.background = element_rect(fill = &amp;quot;gray98&amp;quot;)) +
   scale_y_continuous(limits = c(200, 1400), breaks = c(200, 600, 1000, 1400))&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step1-1.png&#34; alt=&#34;橫軸爲 $X$，縱軸爲 $Y$ 的散點圖&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: 橫軸爲 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;，縱軸爲 &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; 的散點圖
 &lt;/p&gt;
@@ -7576,7 +7576,7 @@ ggplot(new_df, aes(x = X, y = Y)) +
    geom_line(aes(y=lwr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)+
     geom_line(aes(y=upr), color = &amp;quot;red&amp;quot;, linetype = &amp;quot;dashed&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step2&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step2-1.png&#34; alt=&#34;用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: 用簡單線性回歸模型計算的基本年收的信賴區間(灰色陰影)和預測區間(紅色點線)。
 &lt;/p&gt;
@@ -7759,7 +7759,7 @@ p &amp;lt;- mcmc_trace(posterior2, n_warmup = 0,
                 facet_args = list(nrow = 2, labeller = label_parsed))
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step41&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step41-1.png&#34; alt=&#34;用 bayesplot包數繪製的MCMC鏈式圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step41-1.png&#34; alt=&#34;用 bayesplot包數繪製的MCMC鏈式圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
 &lt;/p&gt;
@@ -7767,7 +7767,7 @@ Figure 4: 用 bayesplot包數繪製的MCMC鏈式圖。
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_acf_bar(posterior2)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step42&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step42-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step42-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)。
 &lt;/p&gt;
@@ -7775,7 +7775,7 @@ Figure 5: 用 bayesplot包數繪製的事後樣本自相關圖(autocorrelation)�
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p &amp;lt;- mcmc_dens_overlay(posterior2, color_chains = T)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step43&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step43-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本密度分佈圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step43-1.png&#34; alt=&#34;用 bayesplot包數繪製的事後樣本密度分佈圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: 用 bayesplot包數繪製的事後樣本密度分佈圖。
 &lt;/p&gt;
@@ -7932,7 +7932,7 @@ ggExtra::ggMarginal(
   fill = &amp;#39;#2D077A&amp;#39;
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step71&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step71-1.png&#34; alt=&#34;MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step71-1.png&#34; alt=&#34;MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: MCMC樣本的兩個模型參數的事後散點圖，及它們之間的邊緣分佈密度圖。
 &lt;/p&gt;
@@ -7985,7 +7985,7 @@ p &amp;lt;- customize.ggplot.axis(p)
 # ggsave(file=&amp;#39;output/fig4-8-left.png&amp;#39;, plot=p, dpi=300, w=4, h=3)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step72&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step72-1.png&#34; alt=&#34;MCMC樣本計算獲得的基本年收的貝葉斯可信區間。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step72-1.png&#34; alt=&#34;MCMC樣本計算獲得的基本年收的貝葉斯可信區間。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: MCMC樣本計算獲得的基本年收的貝葉斯可信區間。
 &lt;/p&gt;
@@ -7996,7 +7996,7 @@ p &amp;lt;- p + geom_point(data=Salary, aes(x=X, y=Y), shape=1, size=3)
 p &amp;lt;- customize.ggplot.axis(p)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:step73&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step73-1.png&#34; alt=&#34;MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/step73-1.png&#34; alt=&#34;MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: MCMC樣本計算獲得的預期總年收的貝葉斯預測區間。（顏色較深的是50%預測區間帶，黑線是事後樣本的中央值）
 &lt;/p&gt;
@@ -8024,7 +8024,7 @@ p &amp;lt;- p + geom_boxplot(outlier.size=0)
 p &amp;lt;- p + geom_point(position=position_jitter(w=0.4, h=0), size=2)
 p&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:exe11&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/exe11-1.png&#34; alt=&#34;隨機生成的兩組數據的散點圖和箱式圖。&#34; width=&#34;80%&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2019-01-15-simple-linear-regression-using-rstan_files/figure-html/exe11-1.png&#34; alt=&#34;隨機生成的兩組數據的散點圖和箱式圖。&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 10: 隨機生成的兩組數據的散點圖和箱式圖。
 &lt;/p&gt;
@@ -8368,11 +8368,11 @@ prob&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Rstan Wonderful R-(1)</title>
-      <link>/post/rstan-wonderful-r/</link>
+      <link>https://wangcc.me/post/rstan-wonderful-r/</link>
       <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>/post/rstan-wonderful-r/</guid>
+      <guid>https://wangcc.me/post/rstan-wonderful-r/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;P16&lt;/p&gt;
@@ -8454,9 +8454,9 @@ model {
     
     <item>
       <title>Summer Project Schedule</title>
-      <link>/post/summer-project-schedule/</link>
+      <link>https://wangcc.me/post/summer-project-schedule/</link>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>/post/summer-project-schedule/</guid>
+      <guid>https://wangcc.me/post/summer-project-schedule/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Data analysis finish by 2018-07-&lt;del&gt;24&lt;/del&gt;31&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Paper structure confirm by 2018-08-01&lt;/del&gt;&lt;/li&gt;
@@ -8592,12 +8592,12 @@ model {
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
-      <link>/post/log-likelihood-ratio/</link>
+      <link>https://wangcc.me/post/log-likelihood-ratio/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>/post/log-likelihood-ratio/</guid>
+      <guid>https://wangcc.me/post/log-likelihood-ratio/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;對數似然比-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
@@ -8626,7 +8626,7 @@ axis(2, at=seq(-10, 0, 2), las=2)
 title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
 abline(h=0, lty=2)
 segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;正態分佈數據的最大似然和對數似然比&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
 &lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
@@ -8713,7 +8713,7 @@ text(0.9, -1, &amp;quot;-1.92&amp;quot;)
 arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
 arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
 title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;以正態分佈數據爲例&#34; class=&#34;section level4&#34;&gt;
@@ -8741,7 +8741,7 @@ note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 &lt;div id=&#34;解&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;解&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  L(\pi|3) &amp;amp;= \binom{10}{3}\pi^3(1-\pi)^{10-3} \\  omitting\;&amp;amp;terms\;not\;in\;\mu \\  \Rightarrow \ell(\pi|3) &amp;amp;= log[\pi^3(1-\pi)^7] \\  &amp;amp;= 3log\pi+7log(1-\pi)\\  \Rightarrow \ell^\prime(\pi|3)&amp;amp;= \frac{3}{\pi}-\frac{7}{1-\pi} \\  let \; \ell^\prime&amp;amp; =0\\  &amp;amp;\frac{3}{\pi}-\frac{7}{1-\pi} = 0 \\  &amp;amp;\frac{3-10\pi}{\pi(1-\pi)} = 0 \\  \Rightarrow MLE &amp;amp;= \hat\pi = 0.3 \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;計算似然比，並作圖，注意方程圖形未變，&lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸的變化；取對數似然比，並作圖&lt;/li&gt;
 &lt;/ol&gt;
@@ -8753,7 +8753,7 @@ note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 grid(NA, 5, lwd = 1)
 axis(2, at=seq(0,1,0.2), las=2)
 title(main = &amp;quot;Binomial likelihood ratio function\n 3 out of 10 subjects&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;logLR &amp;lt;- log(L/max(L))
 plot(pi, logLR, type = &amp;quot;l&amp;quot;, ylim = c(-4, 0),yaxt=&amp;quot;n&amp;quot;, col=&amp;quot;darkblue&amp;quot;,
      frame.plot = FALSE, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
@@ -8762,14 +8762,14 @@ axis(2, at=seq(-4,0,1), las=2)
 title(main = &amp;quot;Binomial log-likelihood ratio function\n 3 out of 10 subjects&amp;quot;)
 abline(h=-1.92, lty=1, col=&amp;quot;red&amp;quot;)
 axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q2&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Q2&lt;/h4&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;與上面用同樣的模型，但是觀察人數變爲 &lt;span class=&#34;math inline&#34;&gt;\(100\)&lt;/span&gt; 人 患病人數爲 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt; 人，試作對數似然比方程之圖形，與上圖對比：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;可以看出，兩組數據的 MLE 都是一致的， &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.3\)&lt;/span&gt;，但是對數似然比方程圖形在 樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n=100\)&lt;/span&gt; 時比 &lt;span class=&#34;math inline&#34;&gt;\(n=10\)&lt;/span&gt; 時窄很多，由此產生的似然比信賴區間也就窄很多（精確很多）。所以對數似然比方程的曲率（二階導數），反映了觀察獲得數據提供的對總體參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 推斷過程中的信息量。而且當樣本量較大時，對數似然比方程也更加接近左右對稱的二次方程曲線。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q3&#34; class=&#34;section level4&#34;&gt;
@@ -8779,7 +8779,7 @@ axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;解-1&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;解&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  d = 8, \;p &amp;amp;= 160\; person\cdot year \\  \Rightarrow D\sim Poi(\mu &amp;amp;=\lambda p) \\  L(\lambda|data) &amp;amp;= Prob(D=d=8) \\  &amp;amp;= e^{-\mu}\frac{\mu^d}{d!} \\  &amp;amp;= e^{-\lambda p}\frac{\lambda^d p^d}{d!} \\  omitting&amp;amp;\;terms\;not\;in\;\lambda \\  &amp;amp;= e^{-\lambda p}\lambda^d \\ \Rightarrow \ell(\lambda|data)&amp;amp;= log(e^{-\lambda p}\lambda^d) \\  &amp;amp;= d\cdot log(\lambda)-\lambda p \\  &amp;amp; = 8\times log(\lambda) - 160\times\lambda \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
-&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
 &lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -9530,15 +9530,15 @@ LogLR
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>/post/central-limit-theory/</link>
+      <link>https://wangcc.me/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/central-limit-theory/</guid>
+      <guid>https://wangcc.me/post/central-limit-theory/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/IMG_0522.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_0522.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
 &lt;p&gt;這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。&lt;/p&gt;
 &lt;p&gt;今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。&lt;/p&gt;
@@ -9606,11 +9606,11 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
     
     <item>
       <title>你買的彩票中獎概率到底有多少？</title>
-      <link>/post/probability3/</link>
+      <link>https://wangcc.me/post/probability3/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/probability3/</guid>
+      <guid>https://wangcc.me/post/probability3/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;二項分佈的概念-binomial-distribution&#34; class=&#34;section level3&#34;&gt;
@@ -9751,11 +9751,11 @@ Var(X) &amp;amp;= E(X^2) - E(X)^2 \\
     
     <item>
       <title>正態分佈</title>
-      <link>/post/normal-distribution/</link>
+      <link>https://wangcc.me/post/normal-distribution/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/normal-distribution/</guid>
+      <guid>https://wangcc.me/post/normal-distribution/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;概率密度曲線-probability-density-function-pdf&#34; class=&#34;section level3&#34;&gt;
@@ -9784,7 +9784,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
   stat_function(fun = dnorm,
                 xlim = c(-1.3,0.4),
                 geom = &amp;quot;area&amp;quot;,fill=&amp;quot;#00688B&amp;quot;, alpha= 0.2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;注意：整個方程的曲線下面積等於 &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt;：
 &lt;span class=&#34;math display&#34;&gt;\[\int_{-\infty}^\infty f(x)dx=1\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -9817,7 +9817,7 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
 &lt;li&gt;它的累積分佈方程 (cumulative distribution function， CDF)，是將概率密度方程 (PDF) 積分以後獲得的方程。通常我們記爲 &lt;span class=&#34;math inline&#34;&gt;\(\Phi(z)\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;再看一下標準正態分佈的概率密度方程曲線：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-10-11-normal-distribution_files/figure-html/normal%20distribution%20graph2-1.png&#34; width=&#34;528&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;95% 的曲線下面積在標準差 standard deviation &lt;span class=&#34;math inline&#34;&gt;\(-1.96\sim1.96\)&lt;/span&gt; 之間的區域。&lt;/li&gt;
 &lt;li&gt;而且，&lt;span class=&#34;math inline&#34;&gt;\(\phi(-x)=1-\phi(x)\)&lt;/span&gt;&lt;/li&gt;
@@ -9830,11 +9830,11 @@ p + annotate(&amp;quot;text&amp;quot;, x=2, y=0.3, parse=TRUE, label=&amp;quot;f
     
     <item>
       <title>概率論2</title>
-      <link>/post/probability2-4/</link>
+      <link>https://wangcc.me/post/probability2-4/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/probability2-4/</guid>
+      <guid>https://wangcc.me/post/probability2-4/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;bayes-理論的概念&#34; class=&#34;section level3&#34;&gt;
@@ -9856,7 +9856,7 @@ P(A\cap S)=P(S|A)P(A)\]&lt;/span&gt;
 &lt;p&gt;可以得到&lt;strong&gt;貝葉斯理論公式&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(S|A)=\frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;回到上面說到的哮喘人中有多少比例吸菸的問題。可以繼續使用概率樹來方便的計算：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/Selection_073.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Selection_073.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 P(S|A) &amp;amp;= \frac{P(A|S)P(S)}{P(A|S)P(S)+P(A|\bar{S})P(\bar{S})} \\
         &amp;amp;= \frac{0.09\times0.2}{0.09\times0.2+0.07\times0.8} \\
@@ -9946,11 +9946,11 @@ Var(X+Y) &amp;amp;= E((X+Y)^2)-E(X+Y)^2 \\
     
     <item>
       <title>Matrix Revisions</title>
-      <link>/post/matrix-revision/</link>
+      <link>https://wangcc.me/post/matrix-revision/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>/post/matrix-revision/</guid>
+      <guid>https://wangcc.me/post/matrix-revision/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;basic-definition-and-notations&#34; class=&#34;section level2&#34;&gt;
@@ -10072,11 +10072,11 @@ i.e. y_i=\sum_{j=1}^na_{ij}x_j, \; i=1,\cdots, m\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 25</title>
-      <link>/post/cramers-formula/</link>
+      <link>https://wangcc.me/post/cramers-formula/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>/post/cramers-formula/</guid>
+      <guid>https://wangcc.me/post/cramers-formula/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;克萊姆法則-cramers-formula&#34; class=&#34;section level3&#34;&gt;
@@ -10148,11 +10148,11 @@ a_3=\frac{|X_3|}{|X|}=1\]&lt;/span&gt;&lt;/p&gt;
     
     <item>
       <title>「統計解析のための線形代数」復習筆記 24</title>
-      <link>/post/inverse-matrix-method/</link>
+      <link>https://wangcc.me/post/inverse-matrix-method/</link>
       <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>/post/inverse-matrix-method/</guid>
+      <guid>https://wangcc.me/post/inverse-matrix-method/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;逆矩陣法解連立一次方程式&#34; class=&#34;section level3&#34;&gt;
@@ -10236,9 +10236,9 @@ a_3 \\
     
     <item>
       <title>「統計解析のための線形代数」復習筆記22</title>
-      <link>/post/inverse-matrix/</link>
+      <link>https://wangcc.me/post/inverse-matrix/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>/post/inverse-matrix/</guid>
+      <guid>https://wangcc.me/post/inverse-matrix/</guid>
       <description>&lt;p&gt;正方形矩陣 $A$ 的行列式滿足 $|A| \neq 0$ 時，逆矩陣可以表達爲(當 $|A|=0$ 時，正方形矩陣 $A$ 沒有逆矩陣)：
 $$A^{-1}=\frac{1}{|A|}adj(A)=\frac{1}{|A|}(A_{ij})^t$$&lt;/p&gt;
 &lt;p&gt;$$=\frac{1}{|A|}\lbrace(-1)^{i+j}D_{ij}\rbrace^t$$&lt;/p&gt;
@@ -10398,13 +10398,13 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
     
     <item>
       <title>無條件 offer, CAS, 和宿舍抽籤結果</title>
-      <link>/post/unconditional/</link>
+      <link>https://wangcc.me/post/unconditional/</link>
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>/post/unconditional/</guid>
+      <guid>https://wangcc.me/post/unconditional/</guid>
       <description>&lt;p&gt;言而總之，總而言之，我的4月5月6月7月在無盡的等待中度過。期間投稿了一篇論文。和西山一起進行了磕磕絆絆的GWAS數據分析。&lt;/p&gt;
 &lt;p&gt;本來以爲我的 offer 條件僅僅衹是把我原先名古屋大學的博士學位證書，中英文的原本郵寄給 LSHTM 負責確認就可以了。&lt;/p&gt;
 &lt;p&gt;結果6月8日那天收到郵件催促我快點滿足 offer 條件：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/fig/meetingcondition.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/meetingcondition.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;可以看到資金證明是我必須提供的條件。所以，我立刻開始著手資金的準備，存款全部移到一個賬戶中去，然後開了一個存款證明。結果就是這個新開的存款證明，後來拖了我一個多月的腿。差點害我以爲可能這次留學計劃就要泡湯了。我原本告訴 LSHTM 的簽證詢問小組（visa-enquiries）說，我的生活費由我的大學支付的工資來做擔保，然後大學還有資助我的一部分旅費和住宿費。因此我還要求我工作的大學給我速速給我開具了上述證明。結果後來被證明這些都不如一張自己賬戶上有錢的證明來得簡單。&lt;/p&gt;
 &lt;p&gt;因爲英國留學簽證(Tier 4 student)對 sponsor (資金贊助者)極爲嚴格：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -10421,26 +10421,26 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 &lt;/ol&gt;
 &lt;p&gt;不知道爲什麽，未來的工資單證明不被接受，然後資金證明必須證明說我擁有足夠的資金并且保持了4周時間。而且還要求資金證明上面有銀行的logo。WTF!&lt;/p&gt;
 &lt;p&gt;這些都好說。可是日本的銀行，&lt;strong&gt;沒有&lt;/strong&gt;這種類型的證明書（我也是第一次知道日本銀行不給開這樣子的證明）。所以許多人的解決辦法是讓銀行開一個月的流水賬單，要命的是這個證明不能開英文的，然後再去找翻譯公司翻譯流水。當然我也可以這麽辦。衹是，當我知道我的三個證明書都不能作爲有效的資金證明的時候，我離7月31日祗剩下不到2周時間了。在此奉勸后來者，一定要先準備好自己的資金證明書。最好能按照下面的樣本，讓銀行開具類似的證明書：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/fig/bankstatement.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/bankstatement.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;我在接到證明書不滿足條件的郵件的第二天，立刻去了銀行，接待我的銀行經理先是打報告給總部請示。毫無意外被擋回來。說如果是客人自己要求的樣式的證明書，無法給加銀行logo，也不能蓋章，衹能簽字。在我一個多小時的軟磨硬泡以後，經理鬆動了。竟然主動想辦法，她提議說，可以辦理bank statement，不過我看了他們給的bank statement樣本也是一個時間點的賬戶存款而已，無法滿足28天的資金維持證明。看我面有難色，日本人經理還是挺善解人意的，說，我可以把日期改成，從xx月xx日-xx月xx日（28天）的最低資金證明。這樣就能解決問題了。而且bank statement本身自帶銀行logo。謝天謝地，一項死板不能變通的日本人讓我從此刮目相看。解決了我的燃眉之急。也不必再去找翻譯公司翻譯賬戶流水了。有驚無險。第二天我拿到開好的證明，立刻掃描PDF郵件發給LSHTM，期待他們能馬上給開來 CAS (Confirmation of Acceptance of Studies)。等了一周，還是左等不來右等不來，距離7月31日還剩下不到10天了。終於無法忍耐等待的我，打電話去倫敦詢問我的情況。對方接電話的是個年輕女聲，優雅的倫敦音告訴我，不要着急，先無視學校的提醒滿足條件的郵件吧。我們會儘快看你的檔案。無奈我衹好作罷，挂了電話繼續等待。&lt;/p&gt;
 &lt;p&gt;結果第二天晚上就收到了確認函，說你的CAS很快就能發給你了。oh yeah！半夜裏我就收到了發來的新鮮剛出爐的CAS號碼以及新的無條件錄取證明：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/fig/uncon.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/InkedCAS_LI.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/fig/uncon.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;我很早以前就在&lt;a href=&#34;https://www.visa4uk.fco.gov.uk/home/welcome&#34;&gt;visa4uk&lt;/a&gt;上註冊好了全部的信息，就等着學校發來 CAS 的文件了。於是我再花了半個小時把 CAS 上的內容填寫到簽證申請的網站上去。在申請的網站上，會中途跳出來讓你支付一年醫療保險的頁面（£150），付完保險費以後會收到自己的保險號碼。估計以後在英國如果需要看病的話報自己的保險號碼就OK了。於是乎我以迅雷不及掩耳之勢立刻預約了7月31日去大阪的簽證申請中心遞交簽證材料。&lt;/p&gt;
 &lt;p&gt;等待去辦簽證的過程中，又收到好消息，宿舍抽籤中了。於是我就成了倫敦準市民之一拉。哈哈哈哈。今兒真高興阿，今兒真高興。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/gif/shuang.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/gif/shuang.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;我抽中的是&lt;a href=&#34;http://halls.london.ac.uk/international-hall&#34;&gt;International Hall&lt;/a&gt;的單人間。仔細閱讀了條款後發現，每週2百鎊的房租確實有點小貴，但是呢，確是包了早餐晚餐和週末的四餐的。我想這將會大大減輕時間和金錢的成本。畢竟只有一年的留學時間。將就將就吧，每天都是炸魚和薯條估計吃一週就會讓人瘋了誒。。。先做好心理準備。對伙食不應有太高期待。&lt;/p&gt;
 &lt;p&gt;萬事具備，&lt;del&gt;只差簽證了。&lt;/del&gt; 於是就到了預約機票的時候，查了半天各種中介的網站，結果都是什麼中轉三四次的，要不就是繞地球一大圈的，才能有價格比較便宜的。索性打電話去日本航空詢問有沒有給留學生準備的往返一年，時間靈活的機票。果然不問不知道，一問嚇一跳阿，電話接線員小哥樂呵呵:-)說，哎呀你這電話打的太是時候了，我們日本航空正好最近上線了歐洲航線的特價機票，而且專門針對你這樣要待三個月以上的客戶。一問價格，我的媽呀，出發行程已定，歸程未定的叫做半靈活機票 (semi-flexi)，日本航空的這個折扣價爲12萬日元。比全日空便宜了一半，比其他的可疑航空減少了飛行時間，還有什麼好說的，果斷就訂了。結果呢，準備付錢了小哥告訴我說，您現在先別付定金，我這裏已經幫你把機票預留好了，您等8月1日以後再上網站上打開訂單支付，因爲8月1日後的燃油稅機場時用費等雜費由於匯率等變化會再便宜一萬日元左右。&lt;strong&gt;W!T!F!&lt;/strong&gt; 感動得熱淚盈眶有沒有，簡直就想穿過電話線去擁抱這位小哥了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/jal.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/jal.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;這一週簡直了，從前幾個月的無盡等待到讓人懷疑人生，懷疑自己還能不能去英國，瞬間轉到材料全備齊，訂了飛機票，而且還額外中了一個獎學金（日本的財團）。快要樂不攏嘴了。。。&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>留學筆記</title>
-      <link>/post/2017-03-16/</link>
+      <link>https://wangcc.me/post/2017-03-16/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>/post/2017-03-16/</guid>
+      <guid>https://wangcc.me/post/2017-03-16/</guid>
       <description>&lt;h2 id=&#34;尋找並確定合適自己的大學合適的課程&#34;&gt;尋找並確定合適自己的大學，合適的課程&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;英國，還是美國？ 這是一個問題
@@ -10518,9 +10518,9 @@ A^{-1} &amp;amp;= \frac{1}{(-1)}\left(
 &lt;h2 id=&#34;3個月突擊雅思8分&#34;&gt;3個月突擊，雅思8分&lt;/h2&gt;
 &lt;p&gt;我以前考過兩次託福。都是裸考。一次是大學期間跟風考的，大夥兒都忙忙碌碌，準備考研啦，準備託福GRE出國拉，所以我也想說考一個，看看這些英語考試都考什麼內容。如果您來我這裏想瞭解託福雅思考試的祕籍，抱歉出門左轉去&lt;a href=&#34;https://www.hujiang.com/&#34;&gt;滬江外語&lt;/a&gt;吧。我每日也都是用的他家的APP和資源（主要是聽寫BBC新聞）。另外推薦一個背單詞的軟件：&lt;a href=&#34;https://www.baicizhan.com/&#34;&gt;百詞斬&lt;/a&gt;。&lt;a href=&#34;https://www.shanbay.com/&#34;&gt;扇貝單詞&lt;/a&gt;也不錯。不過個人還是對百詞斬比較偏愛。也許是先入爲主吧。第一次打開時，設置自己的背誦單詞表（雅思詞彙）然後設定好時間，和背詞計劃。我是設定了每日100個單詞。每天堅持一百個，直到考試前一天。百詞斬的app會再每天第一次打開app的時候提醒，並且複習昨天或者最近背誦過的生詞。感覺他們應該是用了一些算法的，大約是根據個人背誦單詞的記錄（傳說中的記憶曲線？），以及錯誤次數來選出每天複習的詞彙的，這一點百詞斬很厲害。&lt;/p&gt;
 &lt;p&gt;除了背單詞，就是尋找合適的老師練習寫作和口語了。在此我就不去給某寶作廣告了。我找了兩個雅思作文老師練習，每天都有寫作的作業，一天 task 1 第二天 task 2 這樣。有的老師只提供作文修改和點評，有的還會給你上課，當然費用就比前一種稍微貴一些。能提供授課服務的老師基本上就是具有新東方，環球雅思等授課經驗的作文老師。作文老師推薦的教材可以在此介紹一下:
-&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34;&gt;&lt;img src=&#34;/img/ieltswriting.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://book.douban.com/subject/11596223/&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/ieltswriting.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;至於口語，某寶上的口語外教中介等類似商品就更多了。基本上應該都是菲律賓的口語老師。一開始我也抱着忐忑的心情預約試聽了以下，擔心菲律賓的口語老師可能會有類似印度人的難懂口音。後來的事實證明自己完全是多慮了。至少在我聽課的那幾位菲律賓的外教的口音都較爲純正。況且每個人的口音（應該）都是天生的/後天跟父母學的，不必擔心自己上了幾天口語可就變成怪怪的阿三口音。另外記得以前看過文章說英語母語者能辨別很多不同的口音，所以關鍵不是口音影響一個人的表達，而是你到底真的會不會表達。而且如果你的有點異國口音的英語常常還會被認爲很有趣，很性感，或者很有特點。個人認爲典型的中國人的口音其實多數情況下不太性感，但是你也可以變得像下面這個人一樣風趣幽默（點擊圖片可以看到他講的中式腔調的英語笑話，老外一樣被逗得一樂一樂的）:
-&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34;&gt;&lt;img src=&#34;/img/joewong.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=JTE0-UY9_T0&#34;&gt;&lt;img src=&#34;https://wangcc.me/img/joewong.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 於是我的口語課就固定爲每天早晨9點鐘開始一個小時，和老師練習過去口語考過的題目。各種常見/不常見話題的切磋和準備。許多話題是根本想不到的。比如，“請描述一次你參加過的婚禮”，或者“請用英語講一個中國歷史上的有趣的故事”這樣的題目，讓我用中文來講述我還要愣上個1分鐘，更不要說在分秒必爭的口語考試中被問道這樣的題目，基本就等於告訴你回去準備再交錢考試了。&lt;/p&gt;
 &lt;p&gt;備考雅思是一段辛苦的過程。堅持每日練習才能保持良好的考試/競技狀態，口語和作文是中國人的短板。聽力和寫作常常有不少人（包括我）可以拿到接近滿分。我一開始備考時也是覺得要把過去劍橋雅思的4-11套&lt;a href=&#34;https://book.douban.com/subject/1479127/&#34;&gt;全真練習題&lt;/a&gt;全部過一邊，題海戰術嘛。後來被寫作的老師敲了警鐘。他說：「聽力和閱讀如果每天都花過多的時間去做的話，對於你來說提高很有限，因爲你都只有錯很少的題目，只是自己刷高分滿足自己的虛榮心而已。到頭來短板的作文和口語都沒有時間練習的話，總分還是上不去。」於是我聽從了寫作老師的話，改爲三四天做一套聽力和閱讀。當然每次都是用考試時的標準來。所以其實一直到了考前，我也沒有把4-11的所有過去試題都練習完。只是挑着做了一些。關於考場的真實感受和我的考分。可以看我之前的&lt;a href=&#34;https://winterwang.github.io/post/2017-01-07-ielts-test/&#34;&gt;文章&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;1個月集中文件準備&#34;&gt;1個月集中，文件準備&lt;/h2&gt;

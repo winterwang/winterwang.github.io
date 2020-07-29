@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>inference | Be Ambitious</title>
-    <link>/tags/inference/</link>
-      <atom:link href="/tags/inference/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/tags/inference/</link>
+      <atom:link href="https://wangcc.me/tags/inference/index.xml" rel="self" type="application/rss+xml" />
     <description>inference</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 05 Nov 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>inference</title>
-      <link>/tags/inference/</link>
+      <link>https://wangcc.me/tags/inference/</link>
     </image>
     
     <item>
       <title>對數似然比 Log-likelihood ratio</title>
-      <link>/post/log-likelihood-ratio/</link>
+      <link>https://wangcc.me/post/log-likelihood-ratio/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>/post/log-likelihood-ratio/</guid>
+      <guid>https://wangcc.me/post/log-likelihood-ratio/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;對數似然比-log-likelihood-ratio&#34; class=&#34;section level3&#34;&gt;
@@ -48,7 +48,7 @@ axis(2, at=seq(-10, 0, 2), las=2)
 title(main = &amp;quot;Binomial log-likelihood ratio&amp;quot;)
 abline(h=0, lty=2)
 segments(x0=0.4, y0=-10, x1=0.4, y1=0, lty = 2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;正態分佈數據的最大似然和對數似然比&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;正態分佈數據的最大似然和對數似然比&lt;/h4&gt;
 &lt;p&gt;假設單個樣本 &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 是來自一組服從正態分佈數據的觀察值：&lt;span class=&#34;math inline&#34;&gt;\(Y\sim N(\mu, \tau^2)\)&lt;/span&gt;&lt;/p&gt;
@@ -135,7 +135,7 @@ text(0.9, -1, &amp;quot;-1.92&amp;quot;)
 arrows(0.8, -1.92, 0.8, 0, lty = 1, length = 0.08)
 arrows( 0.8, 0, 0.8, -1.92, lty = 1, length = 0.08)
 title(main = &amp;quot;Log-likelihood ratio for binomial example, \n with 95% likelihood confidence interval shown&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;從上圖中可以讀出，&lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; 對數似然比信賴區間就是 &lt;span class=&#34;math inline&#34;&gt;\((0.15, 0.7)\)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;以正態分佈數據爲例&#34; class=&#34;section level4&#34;&gt;
@@ -163,7 +163,7 @@ note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 &lt;div id=&#34;解&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;解&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  L(\pi|3) &amp;amp;= \binom{10}{3}\pi^3(1-\pi)^{10-3} \\  omitting\;&amp;amp;terms\;not\;in\;\mu \\  \Rightarrow \ell(\pi|3) &amp;amp;= log[\pi^3(1-\pi)^7] \\  &amp;amp;= 3log\pi+7log(1-\pi)\\  \Rightarrow \ell^\prime(\pi|3)&amp;amp;= \frac{3}{\pi}-\frac{7}{1-\pi} \\  let \; \ell^\prime&amp;amp; =0\\  &amp;amp;\frac{3}{\pi}-\frac{7}{1-\pi} = 0 \\  &amp;amp;\frac{3-10\pi}{\pi(1-\pi)} = 0 \\  \Rightarrow MLE &amp;amp;= \hat\pi = 0.3 \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;計算似然比，並作圖，注意方程圖形未變，&lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; 軸的變化；取對數似然比，並作圖&lt;/li&gt;
 &lt;/ol&gt;
@@ -175,7 +175,7 @@ note: \;\sqrt{3.84}=1.96\]&lt;/span&gt;&lt;/p&gt;
 grid(NA, 5, lwd = 1)
 axis(2, at=seq(0,1,0.2), las=2)
 title(main = &amp;quot;Binomial likelihood ratio function\n 3 out of 10 subjects&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;logLR &amp;lt;- log(L/max(L))
 plot(pi, logLR, type = &amp;quot;l&amp;quot;, ylim = c(-4, 0),yaxt=&amp;quot;n&amp;quot;, col=&amp;quot;darkblue&amp;quot;,
      frame.plot = FALSE, ylab = &amp;quot;&amp;quot;, xlab = &amp;quot;\U03C0&amp;quot;)
@@ -184,14 +184,14 @@ axis(2, at=seq(-4,0,1), las=2)
 title(main = &amp;quot;Binomial log-likelihood ratio function\n 3 out of 10 subjects&amp;quot;)
 abline(h=-1.92, lty=1, col=&amp;quot;red&amp;quot;)
 axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q2&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Q2&lt;/h4&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;與上面用同樣的模型，但是觀察人數變爲 &lt;span class=&#34;math inline&#34;&gt;\(100\)&lt;/span&gt; 人 患病人數爲 &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt; 人，試作對數似然比方程之圖形，與上圖對比：&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;可以看出，兩組數據的 MLE 都是一致的， &lt;span class=&#34;math inline&#34;&gt;\(\hat\pi=0.3\)&lt;/span&gt;，但是對數似然比方程圖形在 樣本量爲 &lt;span class=&#34;math inline&#34;&gt;\(n=100\)&lt;/span&gt; 時比 &lt;span class=&#34;math inline&#34;&gt;\(n=10\)&lt;/span&gt; 時窄很多，由此產生的似然比信賴區間也就窄很多（精確很多）。所以對數似然比方程的曲率（二階導數），反映了觀察獲得數據提供的對總體參數 &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; 推斷過程中的信息量。而且當樣本量較大時，對數似然比方程也更加接近左右對稱的二次方程曲線。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;q3&#34; class=&#34;section level4&#34;&gt;
@@ -201,7 +201,7 @@ axis(4, at=-1.92, las=0)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;解-1&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;解&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\begin{aligned}  d = 8, \;p &amp;amp;= 160\; person\cdot year \\  \Rightarrow D\sim Poi(\mu &amp;amp;=\lambda p) \\  L(\lambda|data) &amp;amp;= Prob(D=d=8) \\  &amp;amp;= e^{-\mu}\frac{\mu^d}{d!} \\  &amp;amp;= e^{-\lambda p}\frac{\lambda^d p^d}{d!} \\  omitting&amp;amp;\;terms\;not\;in\;\lambda \\  &amp;amp;= e^{-\lambda p}\lambda^d \\ \Rightarrow \ell(\lambda|data)&amp;amp;= log(e^{-\lambda p}\lambda^d) \\  &amp;amp;= d\cdot log(\lambda)-\lambda p \\  &amp;amp; = 8\times log(\lambda) - 160\times\lambda \end{aligned}\)&lt;/span&gt;&lt;/p&gt;
-&lt;img src=&#34;/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;https://wangcc.me/post/2017-11-05-log-likelihood-ratio_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;480&#34; /&gt;
 &lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -952,15 +952,15 @@ LogLR
     
     <item>
       <title>偉大的中心極限定理</title>
-      <link>/post/central-limit-theory/</link>
+      <link>https://wangcc.me/post/central-limit-theory/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/central-limit-theory/</guid>
+      <guid>https://wangcc.me/post/central-limit-theory/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;最近明顯可以感覺到課程的步驟開始加速。看我的課表：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/IMG_0522.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_0522.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;手機畫面太小了。早上都是9點半開始，下午基本都是到5點。週一更慘，到7點。週二-週五中午都被統計中心的講座佔據。簡直是非人的生活。&lt;/p&gt;
 &lt;p&gt;這周概率論基礎結束。中心極限定理講完以後我們正式進入了 Inference 統計推斷的課程。我們花了一天時間講什麼是樣本估計 (Estimation)，什麼是參數精確度 (Precision)，什麼是自由度 (degree of freedom)，怎樣進行不偏的估計 (unbiased inference)。然後還有似然方程 (likelihood function)。&lt;/p&gt;
 &lt;p&gt;今天的更新還是簡單的把概率論掃尾一下。感受一下中心極限定理的偉大。&lt;/p&gt;
@@ -1028,17 +1028,17 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
     
     <item>
       <title>你會用概率論來賭博嗎？</title>
-      <link>/post/probability-gambling/</link>
+      <link>https://wangcc.me/post/probability-gambling/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/probability-gambling/</guid>
+      <guid>https://wangcc.me/post/probability-gambling/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://wangcc.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;轉眼我已經進入課程的第二週了，總體來說，我們一半的時間都在電腦房練習 Stata 的數據清理和簡單的描述統計 (descriptive statistics)。從我個人的經驗來說，數據分析的過程，其實一大半的時間是消耗在 data cleaning 上的，即使手頭拿到了所謂的乾淨的數據，到真正要分析的時候就會發現一大堆的問題在裏面，需要重新整理，重新添加標記以使之變得更加讓人類可以讀懂。電腦是機器，他是不管你的數據是否乾淨的。只要你放了數據進去，邏輯還可以，沒有編程上的語法錯誤，它總歸會出來一些報告和結果的。如果就這麼直接用的話，大部分的人就會掉進陷阱。畢竟數據不光會說出事實真相，&lt;strong&gt;更多的情況下還會把真相給掩蓋住了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我的其餘大部分時間都用在了複習高等數學的微積分上了。感覺好似回到了高中時代。其實大學的時候線性代數得分還是接近滿分的。後來多年不用，生疏了。剛打開複習的書的時候，許多微分積分的規則都已經忘記。通過這一週的辛苦練習，終於是找回了一點狀態。如果你也想有空的時候複習以下高中數學知識，這本書可以推薦給你：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.amazon.co.uk/gp/product/0471827223/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&#34;&gt;Quick Calculus: Short Manual of Self-instruction&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/Selection_070.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Selection_070.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;上面這本書的內容可以一邊閱讀，一邊練習。實在是複習的一本好書。我花了一週的課餘時間，從頭到尾把裏面的習題和解答全部完成。收穫很大。感覺年輕時的數學思維又開始在大腦裏復甦了。一身輕鬆。&lt;/p&gt;
 &lt;p&gt;下面想介紹一下上週學習的概率的基礎問題。&lt;/p&gt;
 &lt;div id=&#34;首先是最基礎的三個概率的公理&#34; class=&#34;section level3&#34;&gt;
@@ -1052,7 +1052,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 不用擔心，我也是這麼覺得的。因爲所有人都認同的道理，才能成爲公理 (axiom)，因爲它們是不需要證明的自然而然形成的人人都接受的觀念。&lt;code&gt;(axiom: a saying that is widely accepted on its own merits; its truth is assumed to be self-evident)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然而，正是這樣顯而易見的道理，確是拿來建築理論的基石，千萬不能小看了他們。例如，我們看下面這個看似也應該成爲公理的公式，你能證明嗎：&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(P(A_1\cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/venngram.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/venngram.png&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;證明&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;證明：&lt;/h4&gt;
 &lt;p&gt;先考慮 &lt;span class=&#34;math inline&#34;&gt;\(A_1 \cup A_2\)&lt;/span&gt; 是什麼（拆分成三個互斥事件）&lt;/p&gt;
@@ -1085,7 +1085,7 @@ Var(X+Y) &amp;amp;= E[((X+Y)-E(X+Y))^2] \\
 &lt;div id=&#34;賭博問題&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;賭博問題&lt;/h2&gt;
 &lt;p&gt;終於來到本次話題的重點了。我要扣題了哦。語文老師快在此加分。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/Selection_071.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Selection_071.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;假設你在一個電視遊戲節目。有上圖一樣的三扇門。其中一扇門後面有一輛保時捷，另兩扇門後面則是&lt;a href=&#34;https://winterwang.github.io/post/black-meal/&#34;&gt;(味道奇特的)山羊&lt;/a&gt;。遊戲規則是主持人會讓你先選擇其中一扇門（先不打開你選的這扇門）。主持人隨後打開另外兩扇門中的一扇沒有保時捷的門。主持人問你，你要堅持選擇之前選中的那扇門，還是要改變主意換一扇門去猜是否可以猜中保時捷。
 請問，堅持選擇之前選中的門猜中保時捷的概率高，還是主持人打開一扇門以後改變主意猜中保時捷的概率更高呢？&lt;/p&gt;
 &lt;p&gt;答案明天揭曉。&lt;/p&gt;

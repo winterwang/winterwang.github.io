@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hiroyasu Iso | Be Ambitious</title>
-    <link>/authors/hiroyasu-iso/</link>
-      <atom:link href="/authors/hiroyasu-iso/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://wangcc.me/authors/hiroyasu-iso/</link>
+      <atom:link href="https://wangcc.me/authors/hiroyasu-iso/index.xml" rel="self" type="application/rss+xml" />
     <description>Hiroyasu Iso</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://wangcc.me/img/icon-192.png</url>
       <title>Hiroyasu Iso</title>
-      <link>/authors/hiroyasu-iso/</link>
+      <link>https://wangcc.me/authors/hiroyasu-iso/</link>
     </image>
     
     <item>
       <title>Descriptive Epidemiology of Hypertension and Its Association With Obesity: Based on the WHO STEPwise Approach to Surveillance in Palau</title>
-      <link>/publication/journal-article/palau/</link>
+      <link>https://wangcc.me/publication/journal-article/palau/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/palau/</guid>
+      <guid>https://wangcc.me/publication/journal-article/palau/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;The rise of noncommunicable diseases is a serious health burden for Palau. This study described the prevalence of hypertension, and assessed its association with obesity. Surveys following the WHO STEPwise approach to surveillance were conducted in 2529 adults. Multivariate prevalence ratios (PR) of hypertension for body mass index (BMI) categories were calculated by logistic regression models using conditional standardization procedure. Age- and sex-specified analyses were performed. Overall prevalence of obesity and hypertension were 40.4% and 46.8%, respectively. Prevalence of hypertension was positively associated with BMI. However, overweight men had as high prevalence of hypertension as the obese (multivariable-adjusted PR was 1.84 for overweight and 1.91 for obese compared with nonoverweight). The association between hypertension and BMI was similar across age groups. The prevalence of hypertension in women increased gradually with the increase of BMI whereas that in men reached a plateau already in the overweight.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/Palaustudy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Palaustudy.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Similarities and differences between coronary heart disease and stroke in the associations with cardiovascular risk factors: The Japan Collaborative Cohort Study</title>
-      <link>/publication/journal-article/jaccmatsunaga/</link>
+      <link>https://wangcc.me/publication/journal-article/jaccmatsunaga/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/jaccmatsunaga/</guid>
+      <guid>https://wangcc.me/publication/journal-article/jaccmatsunaga/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Background and aims&lt;/strong&gt; Coronary heart disease (CHD) and stroke have common risk factors, but some of these differ in the magnitude or direction of associations between CHD and stroke. We assessed whether the impact of each risk factor differed between CHD and stroke mortality in Asians.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt; In total, 104,910 subjects aged 40–79 years without histories of cancer, CHD and stroke at baseline were followed between 1988 and 2009. Competing-risks analysis was used to test for differences in the associations of each risk factor with two endpoints (CHD and stroke). Population attributable fractions (PAFs) were also calculated for these endpoints to estimate the population impact of each risk factor.&lt;/p&gt;
@@ -38,9 +38,9 @@
     
     <item>
       <title>Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey</title>
-      <link>/publication/journal-article/steppalau/</link>
+      <link>https://wangcc.me/publication/journal-article/steppalau/</link>
       <pubDate>Mon, 16 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/steppalau/</guid>
+      <guid>https://wangcc.me/publication/journal-article/steppalau/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;We aimed to investigate the prevalence and predictors of diabetes and prediabetes among adults in Palau. We used data of 1915 adults, aged 25 to 64 years, who participated in the World Health Organization’s (WHO) STEPwise Approach to Risk Factor Surveillance (STEPS) study in Palau. Information on behavioral risk factors of NCDs and physical and biochemical measurements were obtained using standard methods of the WHO. The diagnosis of diabetes and prediabetes was based on the recent American Diabetes Association criteria. Predictors of the prevalence of diabetes and prediabetes were identified using multinomial logistic regression analysis. The overall age-standardized prevalence of prediabetes and diabetes were 40.4% (43.6% for men, 37.4% for women) and 17.7% (18.6% for men, 17% for women), respectively. Old age, overall obesity (high BMI), central obesity (large waist circumference or waist-hip ratio), hypertension and hypertriglyceridemia were significant predictors of prediabetes and/or diabetes. Diabetes occurred at a younger age in “obese” individuals than that of their “non-obese” counterparts. We confirmed that prediabetes and diabetes are highly prevalent in Palau affecting 40% and 18% adults, respectively. Introducing public health interventions to reduce and prevent obesity as early as possible could prove useful to curb the problem.&amp;rdquo;&lt;/p&gt;
 </description>
@@ -48,9 +48,9 @@
     
     <item>
       <title>Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study.</title>
-      <link>/publication/journal-article/jaccseaweed/</link>
+      <link>https://wangcc.me/publication/journal-article/jaccseaweed/</link>
       <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/jaccseaweed/</guid>
+      <guid>https://wangcc.me/publication/journal-article/jaccseaweed/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Excess intake of iodine is a suspected risk factor for thyroid cancer. Previous epidemiological research from Japan reported that daily intake of seaweed was associated with a four-fold higher risk in postmenopausal women, whereas others reported a null association. A major source of iodine intake in Japan is from edible seaweeds, and it is reported to be among the highest in the world. We examined the association between seaweed intake frequency and the risk of thyroid cancer in women in the Japan Collaborative Cohort Study followed from 1988 to 2009. Seaweed intake, together with other lifestyle-related information was collected using a self-administered questionnaire at baseline. Seaweed intake frequency was categorized as follows: 1–2 times/week or less, 3–4 times/week, and almost daily. Hazard ratios and the 95% confidence intervals of thyroid cancer incidence according to seaweed intake frequency were estimated using Cox proportional hazards regression. During 447 876 person-years of follow-up (n=35 687), 94 new cases of thyroid cancer were identified. The crude incidence rate was 20.9 per 100 000 person-years. The hazard ratio of thyroid cancer in women who consumed seaweed daily compared with women who ate it 1–2 times/week or less was 1.15 (95% confidence interval: 0.69–1.90, P for trend=0.59). Further analyses did not indicate any association between seaweed intake and the risk of thyroid cancer on statistically adjusting for potential confounding variables as well as on stratification by menopausal status. The present study did not find an association between seaweed intake and thyroid cancer incidence in premenopausal or in postmenopausal women.&lt;/p&gt;
 </description>
