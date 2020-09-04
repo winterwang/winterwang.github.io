@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loic Le Marchand | Be Ambitious</title>
+    <link>https://wangcc.me/authors/loic-le-marchand/</link>
+      <atom:link href="https://wangcc.me/authors/loic-le-marchand/index.xml" rel="self" type="application/rss+xml" />
+    <description>Loic Le Marchand</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 24 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Loic Le Marchand</title>
+      <link>https://wangcc.me/authors/loic-le-marchand/</link>
+    </image>
+    
+    <item>
+      <title>Genome-wide association meta-analysis identifies GP2 gene risk variants for pancreatic cancer</title>
+      <link>https://wangcc.me/publication/journal-article/gwasgp2/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/gwasgp2/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Pancreatic cancer is the fourth leading cause of cancer-related deaths in Japan. To identify risk loci, we perform a meta-analysis of three genome-wide association studies comprising 2,039 pancreatic cancer patients and 32,592 controls in the Japanese population. Here, we identify 3 (13q12.2, 13q22.1, and 16p12.3) genome-wide significant loci ($P &amp;lt; 5.0 \times 10^{−8}$), of which 16p12.3 has not been reported in the Western population. The lead single nucleotide polymorphism (SNP) at 16p12.3 is rs78193826 (odds ratio = 1.46, 95% confidence interval = 1.29-1.66, $P = 4.28 \times 10^{−9}$), an Asian-specific, nonsynonymous glycoprotein 2 (GP2) gene variant. Associations between selected GP2 gene variants and pancreatic cancer are replicated in 10,822 additional cases and controls of East Asian origin. Functional analyses using cell lines provide supporting evidence of the effect of rs78193826 on KRAS activity. These findings suggest that GP2 gene variants are probably associated with pancreatic cancer susceptibility in populations of East Asian ancestry.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

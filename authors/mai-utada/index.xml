@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mai Utada | Be Ambitious</title>
+    <link>https://wangcc.me/authors/mai-utada/</link>
+      <atom:link href="https://wangcc.me/authors/mai-utada/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mai Utada</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Mai Utada</title>
+      <link>https://wangcc.me/authors/mai-utada/</link>
+    </image>
+    
+    <item>
+      <title>Smoking and colorectal cancer: A pooled analysis of 10 population‐based cohort studies in Japan</title>
+      <link>https://wangcc.me/publication/journal-article/smkcolocan_pool/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/smkcolocan_pool/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Smoking has been consistently associated with the risk of colorectal cancer (CRC) in Western populations; however, evidence is limited and inconsistent in Asian people. To assess the association of smoking status, smoking intensity and smoking cessation with colorectal risk in the Japanese population, we performed a pooled analysis of 10 population‐based cohort studies. Study‐specific hazard ratios (HRs) and 95% confidence intervals (CIs) were estimated using Cox&amp;rsquo;s proportional hazards model and then pooled using a random‐effects model. Among 363409 participants followed up for 2666004 person‐years, 9232 incident CRCs were identified. In men, compared with never smokers, ever smokers showed higher risk of CRC. The HRs (95% CI) were 1.19 (1.10‐1.29) for CRC, 1.19 (1.09‐1.30) for colon cancer, 1.28 (1.13‐1.46) for distal colon cancer and 1.21 (1.07‐1.36) for rectal cancer. Smoking was associated with risk of CRC in a dose‐response manner. In women, compared with never smokers, ever smokers showed increased risk of distal colon cancer (1.47 [1.19‐1.82]). There was no evidence of a significant gender difference in the association of smoking and CRC risk. Our results confirm that smoking is associated with an increased risk of CRC, both overall and subsites, in Japanese men and distal colon cancer in Japanese women.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
