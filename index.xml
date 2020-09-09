@@ -5,12 +5,22 @@
     <link>https://wangcc.me/</link>
       <atom:link href="https://wangcc.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Be Ambitious</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 17 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Be Ambitious</title>
       <link>https://wangcc.me/</link>
     </image>
+    
+    <item>
+      <title>Milk Intake and Stroke Mortality in the Japan Collaborative Cohort Study—A Bayesian Survival Analysis.</title>
+      <link>https://wangcc.me/publication/journal-article/jaccbayes/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/jaccbayes/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The aim of this study was to further examine the relationship between milk intake and stroke mortality among the Japanese population. We used data from the Japan Collaborative Cohort (JACC) Study (total number of participants = 110,585, age range: 40–79) to estimate the posterior acceleration factors (AF) as well as the hazard ratios (HR) comparing individuals with different milk intake frequencies against those who never consumed milk at the study baseline. These estimations were computed through a series of Bayesian survival models that employed a Markov Chain Monte Carlo simulation process. In total, 100,000 posterior samples were generated separately through four independent chains after model convergency was confirmed. Posterior probabilites that daily milk consumers had lower hazard or delayed mortality from strokes compared to non-consumers was 99.0% and 78.0% for men and women, respectively. Accordingly, the estimated posterior means of AF and HR for daily milk consumers were 0.88 (95% Credible Interval, CrI: 0.81, 0.96) and 0.80 (95% CrI: 0.69, 0.93) for men and 0.97 (95% CrI: 0.88, 1.10) and 0.95 (95% CrI: 0.80, 1.17) for women. In conclusion, data from the JACC study provided strong evidence that daily milk intake among Japanese men was associated with delayed and lower risk of mortality from stroke especially cerebral infarction.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>玩水樂在其中</title>
