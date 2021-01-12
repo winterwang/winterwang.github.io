@@ -5,7 +5,7 @@
     <link>https://wangcc.me/tags/lshtm/</link>
       <atom:link href="https://wangcc.me/tags/lshtm/index.xml" rel="self" type="application/rss+xml" />
     <description>LSHTM</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2020 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 24 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 24 Jun 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>LSHTM</title>
@@ -75,7 +75,7 @@
 &lt;/li&gt;
 &lt;li&gt;2018-07-04
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;&amp;quot;consider separating weekdays from weekends if we are not averaging the four days?&amp;ldquo;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;&amp;ldquo;consider separating weekdays from weekends if we are not averaging the four days?&amp;quot;&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;2018-07-05
@@ -92,7 +92,7 @@
 &lt;/li&gt;
 &lt;li&gt;2018-07-07~09
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;&amp;quot;Maybe we should try with the threshold at 25% only as per the existing guidelines (although those are per meal)?&amp;ldquo;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;&amp;ldquo;Maybe we should try with the threshold at 25% only as per the existing guidelines (although those are per meal)?&amp;quot;&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;2018-07-10
