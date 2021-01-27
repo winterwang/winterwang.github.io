@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mizoue Tetsuya | Be Ambitious</title>
+    <link>https://wangcc.me/authors/mizoue-tetsuya/</link>
+      <atom:link href="https://wangcc.me/authors/mizoue-tetsuya/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mizoue Tetsuya</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Mizoue Tetsuya</title>
+      <link>https://wangcc.me/authors/mizoue-tetsuya/</link>
+    </image>
+    
+    <item>
+      <title>Alcohol consumption and breast cancer risk in Japan: a pooled analysis of eight population-based cohort studies</title>
+      <link>https://wangcc.me/publication/journal-article/2021alcbreast_pool/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/2021alcbreast_pool/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Although alcohol consumption is reported to increase the incidence of breast cancer in European studies, evidence for an association between alcohol and breast cancer in Asian populations is insufficient. We conducted a pooled analysis of eight large-scale population-based prospective cohort studies in Japan to evaluate the association between alcohol (both frequency and amount) and breast cancer risk with categorization by menopausal status at baseline and at diagnosis. Estimated hazard ratios (HR) and 95% confidence intervals were calculated in the individual cohorts and combined using random-effects models. Among 158,164 subjects with 2,369,252 person-years of follow-up, 2,208 breast cancer cases were newly diagnosed. Alcohol consumption had a significant association with a higher risk of breast cancer in both women who were premenopausal at baseline (regular drinker compared to non-drinker: HR 1.37, 1.04-1.81, ≥23g/day compared to 0g/day: HR 1.74, 1.25-2.43, P for trend per frequency category: P=0.017) and those who were premenopausal at diagnosis (≥23g/day compared to 0g/day: HR 1.89, 1.04-3.43, P for trend per frequency category: P=0.032). In contrast, no significant association was seen in women who were postmenopausal at baseline or at diagnosis, despite a substantial number of subjects and long follow-up period. Our results revealed that frequent and high alcohol consumption are both risk factors for Asian premenopausal breast cancer, similarly to previous studies in Western countries. The lack of a clear association in postmenopausal women in this study warrants larger investigation in Asia.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
