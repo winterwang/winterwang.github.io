@@ -3,27 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wangcc.me/publication_types/2/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/luigi-palla/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication_types/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/publication/journal-article/ca_ndnsrp/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wangcc.me/authors/suzana-almoosawi/</loc>
+    <lastmod>2021-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wangcc.me/authors/wang-chaochen/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wangcc.me/publication_types/2/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wangcc.me/publication/journal-article/2021alcbreast_pool/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -69,16 +99,6 @@
   
   <url>
     <loc>https://wangcc.me/authors/ozasa-kotaro/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/publication_types/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/publication/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -184,11 +204,6 @@
   
   <url>
     <loc>https://wangcc.me/authors/akiko-tamakoshi/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -924,16 +939,6 @@
   
   <url>
     <loc>https://wangcc.me/publication/journal-article/ch_ndnsrp/</loc>
-    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/luigi-palla/</loc>
-    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wangcc.me/authors/suzana-almoosawi/</loc>
     <lastmod>2019-10-10T00:00:00+00:00</lastmod>
   </url>
   

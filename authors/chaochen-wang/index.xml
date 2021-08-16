@@ -5,12 +5,23 @@
     <link>https://wangcc.me/authors/chaochen-wang/</link>
       <atom:link href="https://wangcc.me/authors/chaochen-wang/index.xml" rel="self" type="application/rss+xml" />
     <description>Chaochen Wang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Chaochen Wang</title>
       <link>https://wangcc.me/authors/chaochen-wang/</link>
     </image>
+    
+    <item>
+      <title>Relationships between food groups and eating time slots according to diabetes status in adults from the UK National Diet and Nutrition Survey (2008-2017)</title>
+      <link>https://wangcc.me/publication/journal-article/ca_ndnsrp/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/ca_ndnsrp/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Time of eating has been shown to be associated with diabetes and obesity but little is known about less healthy foods and specific time of their intake over the 24 hours of the day. In this study, we aimed to identify potential relationships between foods and their eating time, and see whether these associations may vary by diabetes status. The National Diet and Nutrition Survey (NDNS) including 6802 adults (age &amp;gt;= 19 years old) collected 749,026 food recordings by a 4-day-diary. The contingency table cross-classifying 60 food groups with 7 pre-defined eating time slots (6-9am, 9am-12pm, 12-2pm, 2-5pm, 8-10pm, 10pm-6am) was analyzed by Correspondence Analysis (CA). CA biplots displaying the associations were generated for all adults and separately by diabetes status (self-reported, pre-diabetes, undiagnosed-diabetes, and non-diabetics) to visually explore the associations between food groups and time of eating across diabetes strata. For selected food groups, odds ratios (OR, 99% confidence intervals, CI) were derived of consuming unhealthy foods at evening/night (8 pm-6 am) vs. earlier time in the day, by logistic regression models with generalized estimating equations. The biplots suggested positive associations between evening/night and consumption of puddings, regular soft drinks, sugar confectioneries, chocolates, beers, ice cream, biscuits, and crisps for all adults in the UK. The OR (99% CIs) of consuming these foods at evening/night were respectively 1.43 (1.06, 1.94), 1.72 (1.44, 2.05), 1.84 (1.31, 2.59), 3.08 (2.62, 3.62), 7.26 (5.91, 8.92), 2.45 (1.84, 3.25), 1.90 (1.68, 2.16), 1.49 (1.22, 1.82) vs. earlier time in the day adjusted for age, sex, body mass index, and social-economic levels. Stratified biplots found that sweetened beverages, sugar-confectioneries appeared more strongly associated with evening/night among un-diagnosed diabetics. Foods consumed in the evening/night time tend to be highly processed, easily accessible, and rich in added sugar or saturated fat. Individuals with undiagnosed diabetes are more likely to consume unhealthy foods at night. Further longitudinal studies are required to ascertain the causal direction of the association between late-eating and diabetes status.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/winterwang/TestReDOC/raw/master/Submit/Frontier/manuscript/Fig1_big.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Milk Intake and Stroke Mortality in the Japan Collaborative Cohort Study—A Bayesian Survival Analysis.</title>
