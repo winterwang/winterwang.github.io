@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sasakabe, Tae | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/authors/sasakabe-tae/</link>
+      <atom:link href="https://wangcc.me/authors/sasakabe-tae/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sasakabe, Tae</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Sasakabe, Tae</title>
+      <link>https://wangcc.me/authors/sasakabe-tae/</link>
+    </image>
+    
+    <item>
+      <title>Lifetime incidence risk for gastric cancer in the Helicobacter pylori-infected and uninfected population in Japan: A Monte Carlo simulation study [accepted]</title>
+      <link>https://wangcc.me/publication/journal-article/lifetimegastriccancer/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/lifetimegastriccancer/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
