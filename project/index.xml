@@ -5,12 +5,28 @@
     <link>https://wangcc.me/project/</link>
       <atom:link href="https://wangcc.me/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 17 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 02 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Projects</title>
       <link>https://wangcc.me/project/</link>
     </image>
+    
+    <item>
+      <title>H. pylori related researches</title>
+      <link>https://wangcc.me/project/hpylori/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/hpylori/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pooled/meta analysis or systematic review papers</title>
+      <link>https://wangcc.me/project/pool_meta/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/pool_meta/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Chrononutrition</title>
@@ -36,15 +52,26 @@ More details will be released asap.&lt;/p&gt;
       <link>https://wangcc.me/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/project/aichi/</guid>
-      <description></description>
+      <description>&lt;p&gt;You may find more information/pictures from the homepage of the Aichi Worker&amp;rsquo;s Cohort Study: &lt;a href=&#34;http://koei-nagoya.blogspot.jp/&#34;&gt;http://koei-nagoya.blogspot.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>the JACC Study</title>
+      <title>Health researches I joined in Palau</title>
+      <link>https://wangcc.me/project/palau/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/palau/</guid>
+      <description>&lt;p&gt;You may find more information/pictures from the homepage of &lt;a href=&#34;https://sites.google.com/view/intnl-health/about-us/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E8%AA%BF%E6%9F%BB/palau&#34;&gt;the department of Public Health and Health System at the Nagoya University&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>the Japan Collaborative Cohort (JACC) Study</title>
       <link>https://wangcc.me/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/project/jacc/</guid>
-      <description></description>
+      <description>&lt;p&gt;You may find more information from the home page of the JACC project: &lt;a href=&#34;http://publichealth.med.hokudai.ac.jp/jacc/index.html&#34;&gt;http://publichealth.med.hokudai.ac.jp/jacc/index.html&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

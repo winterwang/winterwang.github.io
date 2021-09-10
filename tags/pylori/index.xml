@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pylori | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/tags/pylori/</link>
+      <atom:link href="https://wangcc.me/tags/pylori/index.xml" rel="self" type="application/rss+xml" />
+    <description>pylori</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 02 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>pylori</title>
+      <link>https://wangcc.me/tags/pylori/</link>
+    </image>
+    
+    <item>
+      <title>H. pylori related researches</title>
+      <link>https://wangcc.me/project/hpylori/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/hpylori/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

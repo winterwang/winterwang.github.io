@@ -5,7 +5,7 @@
     <link>https://wangcc.me/</link>
       <atom:link href="https://wangcc.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Chaochen Wang - Be Ambitious</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 02 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Chaochen Wang - Be Ambitious</title>
@@ -13,11 +13,21 @@
     </image>
     
     <item>
-      <title>Lifetime incidence risk for gastric cancer in the Helicobacter pylori-infected and uninfected population in Japan: A Monte Carlo simulation study [accepted]</title>
+      <title>H. pylori related researches</title>
+      <link>https://wangcc.me/project/hpylori/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/hpylori/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lifetime incidence risk for gastric cancer in the Helicobacter pylori-infected and uninfected population in Japan: A Monte Carlo simulation study</title>
       <link>https://wangcc.me/publication/journal-article/lifetimegastriccancer/</link>
       <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/publication/journal-article/lifetimegastriccancer/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;Helicobacter pylori (H. pylori) infection is considered the leading cause of gastric cancer. Gastric cancer is currently a common cancer with high incidence and mortality rates, but it is expected that the incidence rate will gradually decrease as the H. pylori infection prevalence decreases in the future. When evaluating the effectiveness of gastric cancer prevention strategies, it is essential to note the differences in long-term cumulative risks between H. pylori-infected and uninfected populations, but this has not yet been precisely evaluated. In our study, we aimed to estimate the cumulative incidence risks of developing gastric cancer from birth to 85 years among H. pylori-infected and uninfected populations by using population-based cancer registry data and birth year-specific H. pylori infection prevalence rates. Death from gastric cancer and other causes of death were considered in the estimations of the adjusted cumulative incidence risks stratified by sex and H. pylori infection status. After performing 5000 Monte Carlo simulations with repeated random sampling using observed cancer incidence in selected three prefectures (Fukui, Nagasaki, Yamagata) of prefectural population-based cancer registry in Japan, the mean adjusted cumulative incidence risk for gastric cancer in the H. pylori-infected population was 17.0% for males and 7.7% for females and 1.0% for males and 0.5% for females in the uninfected population. These results calculated with Japanese cancer registry data may be useful in considering and evaluating future prevention strategies for gastric cancer in Japan.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -224,6 +234,14 @@
 &lt;p&gt;&lt;a href=&#34;https://github.blog/2020-07-16-github-archive-program-the-journey-of-the-worlds-open-source-code-to-the-arctic/&#34;&gt;GitHub 竟然啓動了把開源數據存儲在北極凍土1000年的計劃&lt;/a&gt;。驚覺我的代碼也被放入全部人類 21 TB的代碼中，1000年以後，世界會是什麼樣的呢？又會有誰會有興趣在這21TB的數據中閱讀到我寫下的那些信息呢？突然有種自己的一部分被存儲了1000年的感覺。將來閱讀的人類（那時候還有沒有人類？），會知道1000年前的世界是多麼的操蛋嗎？快告訴我，1000年後的中國（還叫不叫拆那？）是不是已經擁有了免於恐懼的自由了呢？&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/IMG_0130.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Pooled/meta analysis or systematic review papers</title>
+      <link>https://wangcc.me/project/pool_meta/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/pool_meta/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -16416,15 +16434,26 @@ cm
       <link>https://wangcc.me/project/aichi/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/project/aichi/</guid>
-      <description></description>
+      <description>&lt;p&gt;You may find more information/pictures from the homepage of the Aichi Worker&amp;rsquo;s Cohort Study: &lt;a href=&#34;http://koei-nagoya.blogspot.jp/&#34;&gt;http://koei-nagoya.blogspot.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>the JACC Study</title>
+      <title>Health researches I joined in Palau</title>
+      <link>https://wangcc.me/project/palau/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/project/palau/</guid>
+      <description>&lt;p&gt;You may find more information/pictures from the homepage of &lt;a href=&#34;https://sites.google.com/view/intnl-health/about-us/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E8%AA%BF%E6%9F%BB/palau&#34;&gt;the department of Public Health and Health System at the Nagoya University&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>the Japan Collaborative Cohort (JACC) Study</title>
       <link>https://wangcc.me/project/jacc/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/project/jacc/</guid>
-      <description></description>
+      <description>&lt;p&gt;You may find more information from the home page of the JACC project: &lt;a href=&#34;http://publichealth.med.hokudai.ac.jp/jacc/index.html&#34;&gt;http://publichealth.med.hokudai.ac.jp/jacc/index.html&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
