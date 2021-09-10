@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chaochen Wang | Chaochen Wang - Be Ambitious</title>
+    <title>**Chaochen Wang** | Chaochen Wang - Be Ambitious</title>
     <link>https://wangcc.me/authors/chaochen-wang/</link>
       <atom:link href="https://wangcc.me/authors/chaochen-wang/index.xml" rel="self" type="application/rss+xml" />
-    <description>Chaochen Wang</description>
+    <description>**Chaochen Wang**</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
-      <title>Chaochen Wang</title>
+      <title>**Chaochen Wang**</title>
       <link>https://wangcc.me/authors/chaochen-wang/</link>
     </image>
     
@@ -76,6 +76,23 @@
 &lt;p&gt;This study aims at combining time and quantity of carbohydrate (CH) intake in the definition of eating patterns in UK adults and investigating the association of the derived patterns with type 2 diabetes (T2D). The National Diet and Nutrition Survey (NDNS) Rolling Program included 6155 adults in the UK. Time of the day was categorized into 7 pre-defined time slots: 6–9 am, 9–12 noon, 12–2 pm, 2–5 pm, 5–8 pm, 8–10 pm, and 10 pm–6 am. Responses for CH intake were categorized into: no energy intake, CH &amp;lt;50% or ≥50% of total energy. Non-parametric multilevel latent class analysis (MLCA) was applied to identify eating patterns of CH consumption across day-time, as a novel method accounting for the repeated measurements of intake over 3–4 days nested within individuals. Survey-designed multivariable regression was used to assess the associations of CH eating patterns with T2D. Three CH eating day patterns (low, high CH percentage and regular meal CH intake day) emerged from 24,483 observation days; based on which three classes of CH eaters were identified and characterized as: low (28.1%), moderate (28.8%) and high (43.1%) CH eaters. On average, low-CH eaters consumed the highest amount of total energy intake (7985.8 kJ) and had higher percentages of energy contributed by fat and alcohol, especially after 8 pm. Moderate-CH eaters consumed the lowest amount of total energy (7341.8 kJ) while they tended to have their meals later in the day. High-CH eaters consumed most of their carbohydrates and energy earlier in the day and within the time slots of 6–9 am, 12–2 pm and 5–8 pm, which correspond to traditional mealtimes. The high-CH eaters profile had the highest daily intake of CH and fiber and the lowest intake of protein and fat. Low-CH eaters had greater odds than high-CH eaters of having T2D in self-reported but not in previously undiagnosed diabetics. Further research using prospective longitudinal studies is warranted to ascertain the direction of causality in the association of CH patterns with type 2 diabetes.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wangcc.me/img/Figure3colored.png&#34; alt=&#34;&#34;&gt;
 The compositions (%) and absolute (kJ) energy consumption within each time slot by individual level carbohydrate eating classes: A, low carbohydrate eaters (LCE); B, moderate carbohydrate eaters (MCE); C, high carbohydrate eaters (HCE).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparison of the detection of Helicobacter pylori infection by commercially available serological testing kits and the 13C-urea breath test</title>
+      <link>https://wangcc.me/publication/journal-article/2019kawai/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/2019kawai/</guid>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Serum Helicobacter pylori (H. pylori) antibody kits (LZ and LIA) using the latex agglutination immunoassay method are commercially available, but few studies have been performed to determine their diagnostic accuracy or to compare their results with those of enzyme-linked immunosorbent assay (ELISA) kits (EP and EIA).&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;p&gt;Sera were obtained from 213 hospital outpatients with dyspeptic symptoms. The serological results were compared with the result of the 13C-urea breath test (UBT) which seems to be reliable.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Of the 213 subjects, 154 were diagnosed as positive for H. pylori infection according to the UBT. The sensitivities and specificities of these tests were 97.4% and 76.3%, 98.1% and 78.0%, 99.4% and 74.6%, and 98.1% and 71.2% for the EP, LZ, EIA and LIA tests, respectively. When the 13 subjects whose seropositive results of the four kits were completely opposite to the negative results of the UBT were excluded, the specificities of evaluated kits were all higher than 90%. The concordance rate between the EP and EIA tests was 98.1% (Spearman&amp;rsquo;s rank correlation coefficient = 0.83) and that between the LZ and LIA tests was 97.1% (correlation coefficient = 0.91). The LZ gave higher antibody titer value than EP (p &amp;lt; 0.0001, Z = 9.82; Wilcoxon signed-rank test), and EIA gave higher value than LIA (p &amp;lt; 0.0001, Z = 6.43; Wilcoxon signed-rank test).&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;The latex immunoassay method provided the same reliability to ELISA in terms of the diagnostic accuracy for current H. pylori infection, although we should take into account the titer value differences by each test method in practical use.&lt;/p&gt;
 </description>
     </item>
     
