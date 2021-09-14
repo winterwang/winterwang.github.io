@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eiko Saito | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/authors/eiko-saito/</link>
+      <atom:link href="https://wangcc.me/authors/eiko-saito/index.xml" rel="self" type="application/rss+xml" />
+    <description>Eiko Saito</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 13 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Eiko Saito</title>
+      <link>https://wangcc.me/authors/eiko-saito/</link>
+    </image>
+    
+    <item>
+      <title>Low-intensity cigarette smoking and mortality risks: a pooled analysis of prospective cohort studies in Japan [accepted]</title>
+      <link>https://wangcc.me/publication/journal-article/2021lowintensity_pool/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/2021lowintensity_pool/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Background: Increasing proportions of smokers in Japan smoke less than 10 cigarettes per day (CPD). Yet, the health risks of low-intensity smoking in Asia are poorly understood.&lt;/p&gt;
+&lt;p&gt;Methods: We performed a pooled analysis of 410,294 adults from nine population-based prospective cohort studies participating in the Japan Cohort Consortium. Cigarette use data were collected at each study baseline in 1983-1994. Study specific hazard ratios (HRs) and 95% confidence intervals (CIs) for all-cause and cause-specific mortality were calculated using multivariable-adjusted Cox regression by CPD among current smokers and by age at cessation among former smokers with never smokers as the referent group. Pooled HRs and CIs were computed using a random effect model.&lt;/p&gt;
+&lt;p&gt;Results: The smoking prevalence was 54.5% in men and 7.4% in women. About 15.5% of male and 50.4% of female current smokers smoked 1-10 CPD (low-intensity). Both male and female low-intensity smokers had higher all-cause mortality risks than never smokers. Risks were further higher with increasing CPD in a dose-response manner. HRs (95% CIs) were 1.27 (0.97-1.66), 1.45 (1.33-1.59), and 1.49 (1.38-1.62) for 1-2, 3-5, and 6-10 CPD, respectively, in men; 1.28 (1.01-1.62), 1.49 (1.34-1.66), and 1.68 (1.55-1.81) for 1-2, 3-5, and 6-10 CPD, respectively, in women. Similar associations were observed for smoking-related causes of death. Among former low-intensity smokers, younger age at cessation was associated with lower mortality risk.&lt;/p&gt;
+&lt;p&gt;Conclusions: Smoking very low amounts was associated with increased mortality risks in Japan. All smokers should quit, even if they smoke very few cigarettes per day.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
