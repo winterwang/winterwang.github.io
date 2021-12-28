@@ -5,12 +5,22 @@
     <link>https://wangcc.me/publication_types/2/</link>
       <atom:link href="https://wangcc.me/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 13 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>2</title>
       <link>https://wangcc.me/publication_types/2/</link>
     </image>
+    
+    <item>
+      <title>Burden of cancer attributable to infection in Japan in 2015</title>
+      <link>https://wangcc.me/publication/journal-article/2021infectionpaf/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/2021infectionpaf/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Population attributable fraction (PAF) offers a means to quantify cancer burden that is attributable to a specific etiological factor. To better characterize the current cancer burden due to infection in the Japanese population, we estimated the PAF for cancer incidence and mortality in 2015 that could be attributable to infectious agents, including Helicobacter pylori (&lt;em&gt;H. pylori&lt;/em&gt;), Hepatitis B and C (HBV/HCV), Human papillomavirus virus (HPV), Epstein-Barr virus, and human T-lymphotropic virus type 1. We estimated the PAFs for each infectious agent on the basis of representative data on prevalence and risk-outcome associations assuming a latency period of 10 years. Overall, 16.6% of cancer cases in 2015 in Japan were attributable to the infectious agents included in this analysis. The estimated PAF was slightly higher in men (18.1%) than in women (14.7%). The highest proportion of cancer deaths attributable to infectious agents was observed for H. pylori infection, followed by HBV/HCV, and HPV infection. Our findings corroborated with previous estimates that &lt;em&gt;H. pylori&lt;/em&gt; and HBV/HCV infections were the two most important infectious agents in the Japanese population. Strategies focusing on eradication of infectious agents among infected individuals or primary prevention through vaccination could decrease the burden of infection-related cancers.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Low-intensity cigarette smoking and mortality risks: a pooled analysis of prospective cohort studies in Japan</title>
