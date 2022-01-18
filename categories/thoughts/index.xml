@@ -5,7 +5,7 @@
     <link>https://wangcc.me/categories/thoughts/</link>
       <atom:link href="https://wangcc.me/categories/thoughts/index.xml" rel="self" type="application/rss+xml" />
     <description>thoughts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2021 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>thoughts</title>
@@ -883,7 +883,7 @@ WHO他們已經絞盡腦汁了唉。。。太拆臺了。&lt;/p&gt;
 &lt;p&gt;我這一轉眼馬上就要搬新家了，結果發現自己太多都還沒有準備。&lt;/p&gt;
 &lt;p&gt;這篇日誌本來上個月12日就想更新上傳的，結果遇到去愛爾蘭發表，參加日本疫学会若手の会，等等都被我用來當作自己懶惰拖延更新的藉口。&lt;/p&gt;
 &lt;p&gt;其實最大的障礙是，&lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;Blogdown&lt;/a&gt; 上最流行的學術主題 &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;Academic&lt;/a&gt; 經歷了數次重大更新之後，增加了夜間和日間模式的主題樣式，讓人十分心動，所以更新主題搬家花去了太多時間（因爲我對一些CSS文件和進行了修改然而我自己又不完全記得具體改了哪些，所以需要一個個再在更新後的主題中加上去）。最想吐嘈的是新的學術主題 &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;Academic&lt;/a&gt;和之前的版本在整體結構，和許多設計上雖然做了很多改進，但是某些語言也進行了本質的修改，例如在個人主頁中介紹自己研究項目 &lt;code&gt;project&lt;/code&gt; 的部分的開頭，原先都是用下面的加號的形式包括進來各種選項。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+++
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+++
 
 +++
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;但是現在最新的主題中不再支持過去的格式轉而要求全部以標準 Rmarkdown 的開頭部分一樣的形式用三個減號 &lt;code&gt;---&lt;/code&gt; 來包含全部的選項。類似這樣的巨大修改，但是又需要對每個文檔進行調整的部分實在是多的數不勝數。將來更新的學術主題可能只會愈來越複雜繁瑣，年紀大了實在是經不起這麼大的折騰。但是欣慰的是如今默認增加了一個 &lt;code&gt;update_academic.sh&lt;/code&gt; 文件，下次更新或許能用上 (T_T)。&lt;/p&gt;
@@ -1364,7 +1364,7 @@ WHO他們已經絞盡腦汁了唉。。。太拆臺了。&lt;/p&gt;
 &lt;p&gt;在鄙人的觀察下，該論文估計是沒戲了，但是這個偏倚的類型卻是我這個流行病學博士僧未曾聽說過的。算是這篇屎一樣的論文中唯一的發光點。&lt;/p&gt;
 &lt;p&gt;原來這種偏倚最常見於樣本均採集自醫院樣本的病例對照研究。&lt;/p&gt;
 &lt;p&gt;如果我們使用均來自於醫院的樣本作爲病例對照研究的對象，那麼我們需要假設，我們研究A疾病患者被收治到醫院內的概率，不會被該疾病可能的 risk factor 影響。但是，這種前提很多時候是無法被滿足的。特別是當A疾病的 risk factor 本身是另一種疾病的時候。理由很簡單，一名同時患有兩種疾病的患者去醫院報道的概率，顯然是要高於只有一種疾病的患者的。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;When we take the sample we have to assume that the chance of admission to hospital for the disease is not affected by the presence or absence of the risk factor for that disease. This may not be the case, especially if the risk factor is another disease. This is because people are more likely to be hospitalized if they have two diseases, rather than only one.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;When we take the sample we have to assume that the chance of admission to hospital for the disease is not affected by the presence or absence of the risk factor for that disease. This may not be the case, especially if the risk factor is another disease. This is because people are more likely to be hospitalized if they have two diseases, rather than only one.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如本文開頭使用的圖片中所提示的那樣，Sacket (1979)^[Sackett, D.L. (1979). Bias in analytic research. Journal of Chronic Diseases 32, 51-63.] 當年從一般社區人羣中採集了2784名樣本進行調查，看這些研究對象中呼吸道系統疾病，和身體機能嚴重下降(locomotor disease)之間是否存在相關性。然後，他又對同一樣本中，過去半年內住院過的患者進行了相同的分析。結果顯示，如果只看住院的患者數據，作者會作出&amp;quot;患有呼吸道疾病，有較高概率導致身體機能嚴重下降。&amp;ldquo;這樣的結論。也就是兩種疾病之間存在相關性。但是如果看右半側全體社區人羣數據的話，兩種疾病之間並無顯著的關係。顯然後者才是正確的結論。前者之所以會推導出錯誤的結論，純粹是因爲同時患有兩種疾病的人，比起只有呼吸系統疾病，或者只有身體機能下降的患者有更高的概率&lt;strong&gt;住院&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;回頭想起我們曾經做過那麼多院內病例對照研究，不禁感到細思極恐。。。。。。&lt;/p&gt;
 </description>

@@ -631,7 +631,7 @@
 <p>接下來讓人不可思議的是 MacOS 沒有OpenBUGS。經過放狗搜索之後找到了<a href="https://oliviergimenez.github.io/post/run_openbugs_on_mac/">在蘋果電腦上安裝 OpenBUGS 的方法</a>。簡單總結就是下載 Wine 之後用 wine 來跑OpenBUGES，介面風格像80年代的筆電一樣：</p>
 <p><img src="/post/2019-06-28-testpost_files/wineOpenBUGS.png" alt="wineOpenBUGS"></p>
 <p>即使最終能夠使用OpenBUGS的介面進行運算之後，在Ubuntu和Windows都能自動識別並連結OpenBUGS引擎的 <a href="https://cran.r-project.org/web/packages/BRugs/index.html">Brugs</a> 包竟然還是無法下載識別MCMC引擎。所以下載了勉強能夠使用 R2OpenBUGS 包計算，但是還需要用下面繁瑣的設定：</p>
-<pre><code>WINE=&quot;/usr/local/bin/wine&quot;
+<pre tabindex="0"><code>WINE=&quot;/usr/local/bin/wine&quot;
 WINEPATH=&quot;/usr/local/bin/winepath&quot;
 OpenBUGS.pgm=&quot;/Users/{user.name}/Wine\ Files/drive_c/Program\ Files/OpenBUGS/OpenBUGS323/OpenBUGS.exe&quot;
 </code></pre><p>於是，我的學習筆記大概率估計是只能在Ubuntu上更新了。</p>
@@ -640,7 +640,7 @@ OpenBUGS.pgm=&quot;/Users/{user.name}/Wine\ Files/drive_c/Program\ Files/OpenBUG
 <p><img src="/post/2019-06-28-testpost_files/IMG_20190627_102846.jpg" alt=""></p>
 <p>這兩天折騰安裝各種軟件之時，發現Texlive 2019的Mac版本安裝完畢之後佔據將近6個G的硬盤空間。於是狠狠心刪除了之後換上輕巧簡潔的 <a href="https://yihui.name/tinytex/">TinyTex</a>，發現整個世界都純淨了。</p>
 <p>只需要在Rmd文檔的YAML部分加入下面這段代碼，一份日語（中文）英文混合的PDF文檔即可在Rstudio中編譯完成，從安裝到完成第一個日語文檔的編譯，基本上僅僅耗時十分鐘左右。好評！</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 title: &quot;日本語&quot;
 header-includes:
   - \usepackage{xltxtra}
@@ -1010,7 +1010,7 @@ output:
     
     
     
-    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+    <script src="/js/academic.min.b59fdb6275ef5e6e2859c30582fc271a.js"></script>
 
     
 
@@ -1026,7 +1026,7 @@ output:
   
 
   <p class="powered-by">
-    © 2017-2021 Chaochen Wang | 王超辰 &middot; 
+    © 2017-2022 Chaochen Wang | 王超辰 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
