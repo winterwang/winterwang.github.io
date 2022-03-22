@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>calligraphy | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/categories/calligraphy/</link>
+      <atom:link href="https://wangcc.me/categories/calligraphy/index.xml" rel="self" type="application/rss+xml" />
+    <description>calligraphy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>calligraphy</title>
+      <link>https://wangcc.me/categories/calligraphy/</link>
+    </image>
+    
+    <item>
+      <title>手寫日記</title>
+      <link>https://wangcc.me/post/hand-writing/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/hand-writing/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-11-iPadHandWriting_files/IMG_1100.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

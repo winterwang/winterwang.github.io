@@ -5,12 +5,21 @@
     <link>https://wangcc.me/tags/thoughts/</link>
       <atom:link href="https://wangcc.me/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
     <description>thoughts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>thoughts</title>
       <link>https://wangcc.me/tags/thoughts/</link>
     </image>
+    
+    <item>
+      <title>手寫日記</title>
+      <link>https://wangcc.me/post/hand-writing/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/hand-writing/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-11-iPadHandWriting_files/IMG_1100.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>香港安息</title>
