@@ -5,7 +5,7 @@
     <link>https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/</link>
       <atom:link href="https://wangcc.me/tags/%E5%81%B6%E7%88%BE%E6%84%9F%E6%85%A8/index.xml" rel="self" type="application/rss+xml" />
     <description>偶爾感慨</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>偶爾感慨</title>
@@ -13,9 +13,63 @@
     </image>
     
     <item>
+      <title>吃麵</title>
+      <link>https://wangcc.me/post/ichiran/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/ichiran/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-21-iPadHandWriting_files/IMG_1145.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>烤鴨</title>
+      <link>https://wangcc.me/post/kaoya/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/kaoya/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-19iPadHandWriting_files/IMG_1146.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>瞎BB</title>
+      <link>https://wangcc.me/post/saygoodbyeagain2/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/saygoodbyeagain2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-18-iPadHandWriting_files/IMG_1144.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>徹底告別</title>
+      <link>https://wangcc.me/post/saygoodbyeagain/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/saygoodbyeagain/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-17-iPadHandWriting_files/IMG_1143.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>不務正業2</title>
+      <link>https://wangcc.me/post/buwuzhengye2/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/buwuzhengye2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-14-iPadHandWriting_files/IMG_1142.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>不務正業</title>
+      <link>https://wangcc.me/post/buwuzhengye/</link>
+      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/buwuzhengye/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-13-iPadHandWriting_files/IMG_1141.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>手寫日記</title>
       <link>https://wangcc.me/post/hand-writing/</link>
-      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://wangcc.me/post/hand-writing/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2022-03-11-iPadHandWriting_files/IMG_1100.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
@@ -1218,9 +1272,9 @@ WHO他們已經絞盡腦汁了唉。。。太拆臺了。&lt;/p&gt;
 &lt;p&gt;接下來讓人不可思議的是 MacOS 沒有OpenBUGS。經過放狗搜索之後找到了&lt;a href=&#34;https://oliviergimenez.github.io/post/run_openbugs_on_mac/&#34;&gt;在蘋果電腦上安裝 OpenBUGS 的方法&lt;/a&gt;。簡單總結就是下載 Wine 之後用 wine 來跑OpenBUGES，介面風格像80年代的筆電一樣：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wangcc.me/post/2019-06-28-testpost_files/wineOpenBUGS.png&#34; alt=&#34;wineOpenBUGS&#34;&gt;&lt;/p&gt;
 &lt;p&gt;即使最終能夠使用OpenBUGS的介面進行運算之後，在Ubuntu和Windows都能自動識別並連結OpenBUGS引擎的 &lt;a href=&#34;https://cran.r-project.org/web/packages/BRugs/index.html&#34;&gt;Brugs&lt;/a&gt; 包竟然還是無法下載識別MCMC引擎。所以下載了勉強能夠使用 R2OpenBUGS 包計算，但是還需要用下面繁瑣的設定：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;WINE=&amp;quot;/usr/local/bin/wine&amp;quot;
-WINEPATH=&amp;quot;/usr/local/bin/winepath&amp;quot;
-OpenBUGS.pgm=&amp;quot;/Users/{user.name}/Wine\ Files/drive_c/Program\ Files/OpenBUGS/OpenBUGS323/OpenBUGS.exe&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;WINE=&amp;#34;/usr/local/bin/wine&amp;#34;
+WINEPATH=&amp;#34;/usr/local/bin/winepath&amp;#34;
+OpenBUGS.pgm=&amp;#34;/Users/{user.name}/Wine\ Files/drive_c/Program\ Files/OpenBUGS/OpenBUGS323/OpenBUGS.exe&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;於是，我的學習筆記大概率估計是只能在Ubuntu上更新了。&lt;/p&gt;
 &lt;p&gt;還有要吐槽的一個事情就是，StataIC 版本在Ubuntu下可以使用命令行直接在終端呼叫Stata引擎進行統計分析並且輸出結果，十分方便。而且設定了路徑之後可以直接在Rstudio裡面加入Stata引擎，使得Rmarkdown的代碼部分可以自由地在R和Stata之間切換。但是Mac版本的StataIC竟然沒有命令行的安裝方式。繼續放狗查詢才知道，必須是StataSE或者StataMP版本才可以。這是另一條讓我滾回Ubuntu的理由嗎？&lt;/p&gt;
 &lt;p&gt;Mac電腦現在在我眼裡已經爛得只剩下顏值了。&lt;/p&gt;
@@ -1228,7 +1282,7 @@ OpenBUGS.pgm=&amp;quot;/Users/{user.name}/Wine\ Files/drive_c/Program\ Files/Ope
 &lt;p&gt;這兩天折騰安裝各種軟件之時，發現Texlive 2019的Mac版本安裝完畢之後佔據將近6個G的硬盤空間。於是狠狠心刪除了之後換上輕巧簡潔的 &lt;a href=&#34;https://yihui.name/tinytex/&#34;&gt;TinyTex&lt;/a&gt;，發現整個世界都純淨了。&lt;/p&gt;
 &lt;p&gt;只需要在Rmd文檔的YAML部分加入下面這段代碼，一份日語（中文）英文混合的PDF文檔即可在Rstudio中編譯完成，從安裝到完成第一個日語文檔的編譯，基本上僅僅耗時十分鐘左右。好評！&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---
-title: &amp;quot;日本語&amp;quot;
+title: &amp;#34;日本語&amp;#34;
 header-includes:
   - \usepackage{xltxtra}
   - \usepackage{zxjatype}
@@ -1497,7 +1551,7 @@ output:
 &lt;p&gt;天氣雖然好，大風讓愛丁堡城堡關閉了遊客參觀，但是並不妨礙我們感受這座古老城市的藝術氣息：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.ed.ac.uk/visit/museums-galleries/anatomical&#34;&gt;麥克尤恩大禮堂(McEwan Hall, The University of Edinburgh)&lt;/a&gt;
 &lt;img src=&#34;https://wangcc.me/post/2018-06-24-scotland-highland-road-trip_files/IMG_20180614_134359.jpg&#34; alt=&#34;Edingburgh0001&#34; width=&#34;100%&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.stgilescathedral.org.uk/&#34;&gt;聖基爾斯大教堂(St Giles&#39; Cathedral)&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.stgilescathedral.org.uk/&#34;&gt;聖基爾斯大教堂(St Giles&amp;rsquo; Cathedral)&lt;/a&gt;
 &lt;img src=&#34;https://wangcc.me/post/2018-06-24-scotland-highland-road-trip_files/IMG_20180614_104806.jpg&#34; alt=&#34;Edinburgh0002&#34; width=&#34;100%&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.edinburghmuseums.org.uk/venue/scott-monument&#34;&gt;斯科特紀念塔(Scott Monument)&lt;/a&gt;
 &lt;img src=&#34;https://wangcc.me/post/2018-06-24-scotland-highland-road-trip_files/IMG_20180614_152250.jpg&#34; alt=&#34;scott tower&#34; width=&#34;100%&#34;/&gt;&lt;/p&gt;
