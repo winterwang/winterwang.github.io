@@ -23,7 +23,7 @@ Hiramatsu, K., Barrett, A., Miyata, Y. et al. Current Status, Challenges, and Fu
 &lt;h2 id=&#34;關鍵信息-key-message&#34;&gt;關鍵信息 Key message&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;支持美國 FDA 對於 RWD 的定義: 真是世界數據，簡稱 RWD，指的是和患者健康狀況相關聯的任何數據，包含在爲患者提供醫療服務過程中產生的日常收集獲得的各種來源的數據：&lt;/p&gt;
+&lt;p&gt;支持美國 FDA 對於 RWD 的定義: 真實世界數據，簡稱 RWD，指的是和患者健康狀況相關聯的任何數據，包含在爲患者提供醫療服務過程中產生的日常收集獲得的各種來源的數據：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;電子病例，electronic health records (EHR)&lt;/li&gt;
 &lt;li&gt;醫療保險給付資料，claims and billing activities&lt;/li&gt;
@@ -33,7 +33,7 @@ Hiramatsu, K., Barrett, A., Miyata, Y. et al. Current Status, Challenges, and Fu
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;RWE 被定義爲：通過分析RWD獲得的真是世界研究證據，evidence derived from analysis of RWD&lt;/p&gt;
+&lt;p&gt;RWE 被定義爲：通過分析RWD獲得的真實世界研究證據，evidence derived from analysis of RWD&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在日本，該領域的挑戰是獲得相關數據的途徑 access，還有各種數據庫之間的聯動 linkage。此外，目前爲止並沒有公認的分析這些RWD的方法學手段。&lt;/p&gt;
