@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading notes | Chaochen Wang - Be Ambitious</title>
-    <link>https://wangcc.me/categories/reading-notes/</link>
-      <atom:link href="https://wangcc.me/categories/reading-notes/index.xml" rel="self" type="application/rss+xml" />
-    <description>Reading notes</description>
+    <title>HTA | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/tags/hta/</link>
+      <atom:link href="https://wangcc.me/tags/hta/index.xml" rel="self" type="application/rss+xml" />
+    <description>HTA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 17 Sep 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
-      <title>Reading notes</title>
-      <link>https://wangcc.me/categories/reading-notes/</link>
+      <title>HTA</title>
+      <link>https://wangcc.me/tags/hta/</link>
     </image>
     
     <item>
@@ -26,36 +26,6 @@
 &lt;li&gt;1990年代初，加拿大，澳洲相繼把醫療技術的保險償付過程必須要經過經濟學評價的條件加入了國家醫療保險框架。之後英國成立了NICE，歐洲各國也相繼成立了類似的機構。各國的共同點是在醫療保險償付過程中把醫療經濟評價給出的成本效益分析結果考慮進來。亞洲的臺灣，韓國，泰國也相繼仿效。日本於2012年在厚生省成立第一次醫療成本效益分析專門部門。2016年試行HTA制度，2019年正式實施。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;價值爲本的醫療經濟學評價&#34;&gt;價值爲本的醫療經濟學評價&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>文獻閱讀 - 日本真實世界數據研究和真實世界證據的現狀，挑戰，和未來的期望</title>
-      <link>https://wangcc.me/post/japan-rwd-rwe/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://wangcc.me/post/japan-rwd-rwe/</guid>
-      <description>&lt;h2 id=&#34;論文標題-title-of-the-paper&#34;&gt;論文標題 Title of the paper&lt;/h2&gt;
-&lt;p&gt;今日閱讀此文：
-Hiramatsu, K., Barrett, A., Miyata, Y. et al. Current Status, Challenges, and Future Perspectives of Real-World Data and Real-World Evidence in Japan. Drugs - Real World Outcomes 8, 459–480 (2021). &lt;a href=&#34;https://doi.org/10.1007/s40801-021-00266-3&#34;&gt;https://doi.org/10.1007/s40801-021-00266-3&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;關鍵信息-key-message&#34;&gt;關鍵信息 Key message&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;支持美國 FDA 對於 RWD 的定義: 真實世界數據，簡稱 RWD，指的是和患者健康狀況相關聯的任何數據，包含在爲患者提供醫療服務過程中產生的日常收集獲得的各種來源的數據：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;電子病例，electronic health records (EHR)&lt;/li&gt;
-&lt;li&gt;醫療保險給付資料，claims and billing activities&lt;/li&gt;
-&lt;li&gt;產品，疾病的註冊登記記錄，product and disease registries&lt;/li&gt;
-&lt;li&gt;患者在任何環境下包括居家治療時產生的數據，patient-generated data including in home-use settings&lt;/li&gt;
-&lt;li&gt;其他能夠體現患者健康狀態的數據包括移動醫療儀器設備記錄的數據，data gathered from other sources that can inform on health status, such as mobile devices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;RWE 被定義爲：通過分析RWD獲得的真實世界研究證據，evidence derived from analysis of RWD&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在日本，該領域的挑戰是獲得相關數據的途徑 access，還有各種數據庫之間的聯動 linkage。此外，目前爲止並沒有公認的分析這些RWD的方法學手段。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     
