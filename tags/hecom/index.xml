@@ -5,12 +5,20 @@
     <link>https://wangcc.me/tags/hecom/</link>
       <atom:link href="https://wangcc.me/tags/hecom/index.xml" rel="self" type="application/rss+xml" />
     <description>hecom</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 17 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 24 Sep 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>hecom</title>
       <link>https://wangcc.me/tags/hecom/</link>
     </image>
+    
+    <item>
+      <title></title>
+      <link>https://wangcc.me/post/2022-09-24-basic-of-cost-effectiveness-analysis/</link>
+      <pubDate>Sat, 24 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/2022-09-24-basic-of-cost-effectiveness-analysis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>醫療技術評價 HTA簡單概念</title>

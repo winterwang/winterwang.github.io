@@ -5,12 +5,20 @@
     <link>https://wangcc.me/categories/journal-club/</link>
       <atom:link href="https://wangcc.me/categories/journal-club/index.xml" rel="self" type="application/rss+xml" />
     <description>Journal Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2022 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sat, 24 Sep 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://wangcc.me/img/icon-192.png</url>
       <title>Journal Club</title>
       <link>https://wangcc.me/categories/journal-club/</link>
     </image>
+    
+    <item>
+      <title></title>
+      <link>https://wangcc.me/post/2022-09-24-basic-of-cost-effectiveness-analysis/</link>
+      <pubDate>Sat, 24 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/post/2022-09-24-basic-of-cost-effectiveness-analysis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>文獻閱讀 - 日本真實世界數據研究和真實世界證據的現狀，挑戰，和未來的期望</title>
