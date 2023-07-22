@@ -2,10 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wangcc.me/categories/</loc>
-    <lastmod>2022-12-27T10:47:22+09:00</lastmod>
+    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication_types/2/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/hitoe-torisu-itakura/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication_types/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/satoshi-osaga/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/takao-hanada/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/takashi-matsuo/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/toshihiko-aranishi/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication/journal-article/il17trtsurvival/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/zhihong-cai/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/categories/</loc>
     <lastmod>2022-12-27T10:47:22+09:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/tags/experience/</loc>
@@ -134,15 +170,6 @@
     <loc>https://wangcc.me/post/hand-writing/</loc>
     <lastmod>2022-03-22T09:57:33+09:00</lastmod>
   </url><url>
-    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/publication_types/2/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/authors/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wangcc.me/publication/journal-article/2021infectionpaf/</loc>
     <lastmod>2021-12-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -162,12 +189,6 @@
     <lastmod>2021-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/authors/megumi-hori/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/publication_types/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/publication/</loc>
     <lastmod>2021-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/authors/sarah-k.-abe/</loc>

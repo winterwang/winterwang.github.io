@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hitoe Torisu-Itakura | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/authors/hitoe-torisu-itakura/</link>
+      <atom:link href="https://wangcc.me/authors/hitoe-torisu-itakura/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hitoe Torisu-Itakura</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2023 Chaochen Wang | 王超辰</copyright><lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Hitoe Torisu-Itakura</title>
+      <link>https://wangcc.me/authors/hitoe-torisu-itakura/</link>
+    </image>
+    
+    <item>
+      <title>Treatment persistence of interleukin-17 inhibitor class drugs among patients with psoriasis in Japan: a retrospective database study</title>
+      <link>https://wangcc.me/publication/journal-article/il17trtsurvival/</link>
+      <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/il17trtsurvival/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Background and objective&lt;/strong&gt;: Real-world evidence on persistence of interleukin-17 inhibitors (IL-17i) as a drug class among Japanese patients with psoriasis is lacking. Hence, we aimed to describe persistence rates of IL-17is among patients with psoriasis including psoriasis vulgaris (PsO), psoriatic arthritis (PsA), and generalized pustular psoriasis (GPP) or erythrodermic psoriasis (EP) in Japan.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;: We analyzed claims data from the Medical Data Vision database. Patients ≥15 years old with a psoriasis diagnosis and an IL-17i prescription between November 2016 and August 2020 were included and followed through August 2021. Persistence rates of the IL-17i class among patients with psoriasis and its subtypes (PsO, PsA, and GPP or EP), and persistence rates of ixekizumab, secukinumab, or brodalumab among patients with PsO or PsA were analyzed using Kaplan-Meier method. Analyses were conducted in the bio-naïve and bio-experienced subgroups.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;: The IL-17i class had &amp;gt;50% persistence rates up to 36 months among patients with psoriasis and its subtypes (PsO, PsA, and GPP or EP). 36-Month persistence rates for ixekizumab, secukinumab, and brodalumab were 46.2% to 57.7% in patients with PsO and 43.0% to 48.4% in patients with PsA. Across analyses, bio-naïve patients demonstrated similar or greater persistence rates than bio-experienced patients.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;: IL-17is&amp;rsquo; persistence rates over 36 months were &amp;gt;50% among patients with psoriasis and its subtypes (PsO, PsA, and GPP or EP) in Japan.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keywords&lt;/strong&gt;: IL-17 inhibitor; Psoriasis vulgaris; erythrodermic psoriasis; generalized pustular psoriasis; psoriatic arthritis; treatment persistence.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
