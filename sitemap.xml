@@ -2,10 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wangcc.me/categories/</loc>
-    <lastmod>2023-09-06T10:00:16+09:00</lastmod>
+    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication_types/2/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication/journal-article/adelphiuccd/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/hannah-knight/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/koji-matsuo/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/liane-gillespie-akar/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/masaru-tanaka/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/niamh-harvey/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication_types/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/publication/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/theresa-hunter-gibble/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/authors/tomoko-ishizuka/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wangcc.me/categories/</loc>
     <lastmod>2023-09-06T10:00:16+09:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/categories/diary/</loc>
@@ -32,22 +71,7 @@
     <loc>https://wangcc.me/tags/%E4%BC%91%E9%96%92/</loc>
     <lastmod>2023-09-06T10:00:16+09:00</lastmod>
   </url><url>
-    <loc>https://wangcc.me/authors/chaochen-wang/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/publication_types/2/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/authors/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wangcc.me/authors/hitoe-torisu-itakura/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/publication_types/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wangcc.me/publication/</loc>
     <lastmod>2023-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wangcc.me/authors/satoshi-osaga/</loc>
