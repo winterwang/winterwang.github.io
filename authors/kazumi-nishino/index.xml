@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kazumi Nishino | Chaochen Wang - Be Ambitious</title>
+    <link>https://wangcc.me/authors/kazumi-nishino/</link>
+      <atom:link href="https://wangcc.me/authors/kazumi-nishino/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kazumi Nishino</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2017-2025 Chaochen Wang | 王超辰</copyright><lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://wangcc.me/img/icon-192.png</url>
+      <title>Kazumi Nishino</title>
+      <link>https://wangcc.me/authors/kazumi-nishino/</link>
+    </image>
+    
+    <item>
+      <title>Real-world Evidence of Skin Disorder-related Events Management in Patients with Lung Cancer Prescribed the RELAY Regimen (Erlotinib Plus Ramucirumab) - A Retrospective Observational Study Using A Health Insurance Claims Database in Japan [Article in Japanese] 肺癌患者におけるRELAYレジメン(エルロチニブ&#43;ラムシルマブ)処方時の皮膚障害関連事象マネジメントの実態-日本のレセプトデータベースを用いた後ろ向き観察研究-</title>
+      <link>https://wangcc.me/publication/journal-article/2024relay/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wangcc.me/publication/journal-article/2024relay/</guid>
+      <description>&lt;h2 id=&#34;abstract-要旨&#34;&gt;Abstract 要旨&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;背景：&lt;/strong&gt; RELAYレジメン（エルロチニブ＋ラムシルマブ）は，EGFR遺伝子変異陽性の切除不能な進行・再発非小細胞肺癌治療に用いられるが，皮膚障害の発現が懸念される。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方法：&lt;/strong&gt; MDVデータベースを用いて，RELAYレジメン治療を受けた患者の特徴，テトラサイクリン系またはマクロライド系抗菌薬（以下，抗菌薬）の予防投与の有無，保湿薬やステロイド外用薬の処方状況を調査し，抗菌薬の予防投与の有無とRELAYレジメン開始後新たにレセプトに記録された皮膚障害関連事象との関連をロジスティック回帰モデルで分析した。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;結果：&lt;/strong&gt; 研究対象227名中，抗菌薬の予防投与群は67名（29.5％）で，主にテトラサイクリン系抗菌薬が処方されていた。予防投与群でRELAYレジメン開始前からの保湿薬の処方割合は高く，開始後新たに記録されたざ瘡様皮疹，皮膚乾燥，および皮膚炎の割合は低かった。保湿薬・ステロイド外用薬の有無等を因子に含む多変量モデルで，抗菌薬の予防投与なしに対する予防投与ありでのざ瘡様皮疹のオッズ比は有意に1を下回った。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;結論：&lt;/strong&gt; 抗菌薬の予防投与はRELAYレジメン治療に伴うざ瘡様皮疹の発現抑制に貢献すると考えられた。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Background：&lt;/strong&gt; The RELAY regimen（erlotinib＋ramucirumab）is used for the　treatment of EGFR-mutated, unresectable, advanced or recurrent non-small cell lung　cancer；however, the onset of skin disorders is concerning.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methods：&lt;/strong&gt; Using the Medical Data Vision database, we described the characteristics　of patients treated with the RELAY regimen, including prior use of tetracycline or macrolide antibiotics, and the prescription status of moisturizing agents and topical steroids. Furthermore, we used logistic regression models to analyze the association between prior antibiotic use and skin disorder-related events newly recorded in health insurance claims after the start of the RELAY regimen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results：&lt;/strong&gt; Of 227 patients, 67 patients（29.5％）had received prior antibiotics, primarily tetracyclines. In patients with prior antibiotic use, the prescription rate of moisturizers before the start of the RELAY regimen was high, and the rates of newly recorded dermatitis acneiform, dry skin, and dermatitis after the start of the RELAY regimen were low. In a multivariate model that includes factors such as the presence or absence of moisturizers or topical steroids, the odds ratio of dermatitis acneiform with prior antibiotic use was significantly lower than 1 when no prior antibiotic use was set as the reference.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusions：&lt;/strong&gt; Prior antibiotic use may contribute to the suppression of dermatitis acneiform in patients with lung cancer treated with the RELAY regimen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key words：&lt;/strong&gt; EGFR inhibitor, prior antibiotic use, non-small cell lung cancer, ramucirumab, health insurance claims database&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
