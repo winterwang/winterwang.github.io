@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: false
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -27,16 +27,11 @@ jobs:
         with:
           r-version: 'latest'
 
-      - name: Install R packages cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/R
-          key: ${{ runner.os }}-R-${{ hashFiles('**/DESCRIPTION') }}
-          restore-keys: ${{ runner.os }}-R-
-
       - name: Install blogdown
         run: |
           Rscript -e "install.packages('blogdown'); blogdown::install_hugo(version='0.58.3')"
+
+      # (Optional) If later you add renv or DESCRIPTION file, reinstate caching before installing packages.
 
       - name: Build site (Hugo only)
         run: |
