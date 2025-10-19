@@ -1,3 +1,3 @@
-[submodule "redo2"]
-	path = public
+# Legacy submodule reference to public (deployment repo) removed.
+# Using modern CI/CD (GitHub Actions or Netlify) so keep this file empty or delete it.
 	url = git@github.com:winterwang/winterwang.github.io.git
