@@ -1,5 +1,14 @@
+public/
 .idea/
 .Rproj.user/
 .Rhistory
 .DS_Store
-public/
+
+# Hugo generated cache (can be safely regenerated)
+resources/_gen/
+
+# (Legacy build output already ignored above: public/)
+
+# Local key files (do not commit)
+kWKJ47G5Dt8scL
+kWKJ47G5Dt8scL.pub
