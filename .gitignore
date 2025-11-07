@@ -5,7 +5,7 @@ public/
 .DS_Store
 
 # Hugo generated cache (can be safely regenerated)
-resources/_gen/
+resources/
 
 # (Legacy build output already ignored above: public/)
 
