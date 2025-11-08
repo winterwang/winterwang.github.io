@@ -1,79 +1,68 @@
-## Personal Site (Hugo + blogdown)
+# Personal Site (Hugo Blox + blogdown)
 
-This repository contains the source of my personal website hosted at https://wangcc.me/ and deployed via GitHub Actions to GitHub Pages.
+Source for [https://wangcc.me/](https://wangcc.me/), now running the Hugo Blox Tailwind theme with a few custom tweaks (sticky navigation, back-to-top button, Formspree contact form). Deployment is handled by GitHub Actions → GitHub Pages.
 
 ### Tech Stack
-- Hugo (currently legacy Academic theme, plan: migrate to latest Wowchemy)
-- R + blogdown for generating posts (R Markdown / plain Markdown)
-- GitHub Actions for continuous deployment (build + publish to Pages)
 
-### Typical Workflow
-1. Create or edit content under `content/` (e.g. daily diary posts in `content/post/`).
-2. Local preview (optional): in R console
-   ```r
-   blogdown::serve_site()
-   ```
-3. Commit & push changes to `main` (or feature branch + PR). GitHub Actions builds and deploys.
+- **Hugo Extended 0.152.2** (pinned in `.Rprofile` for blogdown).
+- **Hugo Blox Tailwind modules** vendored under `_vendor/`.
+- **Node.js 20 + Tailwind CLI** (installed via `npm ci`) for any future Tailwind customization.
+- **R + blogdown** for content authoring when working from RStudio.
 
-### Directory Overview (trimmed)
+### Local Workflow
+
+1. Install dependencies once per clone:
+
+  ```powershell
+  npm ci
+  ```
+
+  *(blogdown users: `blogdown::install_hugo(version = "0.152.2", extended = TRUE)`)*
+
+2. Preview locally:
+
+  - R workflow: `blogdown::serve_site()`
+  - CLI workflow: `hugo server --cleanDestinationDir --disableFastRender`
+
+3. Create/edit content under `content/`, commit, and push. The CI build produces the `public/` artefact—no need to commit it.
+
+### Project Layout (trimmed)
+
+```text
+content/                  # Markdown content (posts, gallery, projects, …)
+config/_default/          # Hugo config (menus, params, languages, module setup)
+assets/                   # Custom media (favicon) + future pipeline assets
+layouts/_partials/hooks/  # Custom head/body hook snippets (sticky nav, back-to-top)
+static/                   # Static files served verbatim
+_vendor/                  # Hugo Blox modules (checked in for reproducible builds)
+scripts/                  # Helper scripts (post generation, env bootstrap)
 ```
-content/          # Markdown content (posts, pages, gallery, etc.)
-config/           # Hugo/Wowchemy configuration (params, menus, languages)
-themes/academic/  # Legacy Academic theme (to be replaced)
-static/           # Static assets (images, files, media)
-resources/_gen/   # Hugo generated assets (ignored; safe to wipe)
-scripts/          # Helper scripts (e.g. Generate new post)
-```
 
-### Planned Cleanup / Modernization
-- Remove legacy deployment scripts (Netlify, manual deploy) now that GitHub Actions is used.
-- Prune large Rmd `_cache` and `_files` artifacts from version control; ensure they are ignored.
-- Migrate theme to Wowchemy (modern successor of Academic) on a separate branch:
-  - Create branch: `theme-upgrade`
-  - Bump Hugo to a recent extended version (>= 0.121+ recommended)
-  - Replace `themes/academic` with Wowchemy module import
-  - Adjust config: convert top-level `config.toml` into modular `config/_default/*.toml` (already partially modular) and add `module` section
-  - Test locally, then merge back after content shortcodes verified.
+### Custom Enhancements
 
-### Local Development (Windows)
-Install (once):
-```r
-install.packages("blogdown")
-blogdown::install_hugo(version = "0.58.3")  # legacy; will raise when upgrading theme
-```
-Serve:
-```r
-blogdown::serve_site()
-```
-Stop server: Ctrl + C (in R console) or `blogdown::stop_server()`.
+- `layouts/_partials/hooks/head-end/sticky-header.html`: pins the navbar, widens the biography block, updates footer year, and styles the contact form.
+- `layouts/_partials/hooks/body-end/back-to-top.html`: injects the floating “back to top” control.
+- `assets/media/icon.png`: restores the legacy favicon used before the theme migration.
 
-### Content Conventions
-- Daily posts: `content/post/YYYY-MM-DD-<slug>/index.md`
-- Use UTF-8, keep front matter minimal: `title`, `date`, optional `tags`, `categories`.
-- Media: place under the same bundle folder (`index.md` sibling) for relative linking.
+### Deployment Notes
 
-### Deployment
-GitHub Actions workflow builds Hugo site and publishes to Pages branch environment.
-No need to commit `public/`; that directory is excluded and generated in CI.
+- When we merge back to `master`, a GitHub Actions workflow will: `npm ci`, set up Hugo Extended 0.152.2, run `hugo --cleanDestinationDir --minify`, and publish the `public/` output to Pages.
+- To guarantee matching local/CI builds, keep `package-lock.json` committed and avoid editing files inside `_vendor/` manually.
+- The legacy `public/` folder remains ignored—never commit generated output.
 
-### Housekeeping Scripts (planned)
-- `scripts/Generate new post.r` – helper to scaffold a daily post.
-- (Future) `scripts/cleanup_caches.ps1` – prune old `_cache` folders.
+### Content Guidelines
 
-### Privacy & Analytics
-- Legacy UA Google Analytics ID present in config; Universal Analytics sunset. Will migrate to GA4 or self-hosted analytics (TBD).
+- Daily posts live in `content/post/` (bundle structure supported).
+- Front matter should stay minimal: `title`, `date`, optional `tags`/`categories`.
+- Media belongs inside the same bundle (relative paths stay stable across theme upgrades).
+
+### Maintenance Checklist
+
+- [ ] Add/confirm GitHub Actions workflow for Hugo Blox deployment.
+- [ ] Retire unused legacy scripts (`deploy.sh`, Netlify remnants) once new pipeline proves stable.
+- [ ] Audit Google Analytics integration for GA4 or alternative analytics.
+- [ ] Periodically clear `resources/_gen/` (safe to delete, regenerated automatically).
 
 ### License
-Content © Chaochen Wang. Theme code: MIT (Academic / Wowchemy). See `LICENSE.md` for base theme license.
 
-### Next (Theme Upgrade Checklist Draft)
-1. Create branch `theme-upgrade`.
-2. Update Hugo extended & blogdown.
-3. Introduce Wowchemy module import in `config/_default/`.
-4. Remove `themes/academic/` directory; run `hugo mod tidy`.
-5. Convert any deprecated shortcodes.
-6. Visual & functional regression test.
-7. Merge when stable.
-
----
-This README intentionally stripped vendor promotion text from the original Kickstart template.
+Content © Chaochen Wang. Hugo Blox modules follow the upstream MIT license—see `LICENSE.md` for the base theme license and attribution requirements.
