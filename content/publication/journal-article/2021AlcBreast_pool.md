@@ -1,6 +1,6 @@
 ---
 title: "Alcohol consumption and breast cancer risk in Japan: a pooled analysis of eight population-based cohort studies"
-authors: [Iwase Madoka, Matsuo Keitaro, Koyanagi Yuriko N., Ito Hidemi, Tamakoshi Akiko, "**Wang Chaochen**", Utada Mai, Ozasa Kotaro, Sugawara Yumi, Tsuji Ichiro, Sawada Norie, Tanaka Shiori, Nagata Chisato, Kitamura Yuri, Shimazu Taichi, Mizoue Tetsuya, Naito Mariko, Tanaka Keitaro, Inoue Manami]
+authors: [Iwase Madoka, Matsuo Keitaro, Koyanagi Yuriko N, Ito Hidemi, Tamakoshi Akiko, "**Wang Chaochen**", Utada Mai, Ozasa Kotaro, Sugawara Yumi, Tsuji Ichiro, Sawada Norie, Tanaka Shiori, Nagata Chisato, Kitamura Yuri, Shimazu Taichi, Mizoue Tetsuya, Naito Mariko, Tanaka Keitaro, Inoue Manami]
 date: "2021-01-26"
 featured: false
 publication_types: ["2"]

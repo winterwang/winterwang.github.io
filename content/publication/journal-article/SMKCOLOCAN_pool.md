@@ -1,6 +1,6 @@
 ---
 title: "Smoking and colorectal cancer: A pooled analysis of 10 population‐based cohort studies in Japan"
-authors: ["Shamima Akter", "Zobida Islam",  "Tetsuya Mizoue",  "Norie Sawada",  "Hikaru Ihira",  "Shoichiro Tsugane", "Yuriko N. Koyanagi",  "Hidemi Ito",  "**Chaochen Wang**",  "Akiko Tamakoshi",  "Keiko Wada",  "Chisato Nagata",  "Kenta Tanaka",  "Yuri Kitamura",  "Mai Utada",  "Kotaro Ozasa",  "Yumi Sugawara",  "Ichiro Tsuji",  "Taichi Shimazu",  "Keitaro Matsuo",  "Mariko Naito",  "Keitaro Tanaka",  "Manami Inoue"]
+authors: ["Shamima Akter", "Zobida Islam",  "Tetsuya Mizoue",  "Norie Sawada",  "Hikaru Ihira",  "Shoichiro Tsugane", "Yuriko N Koyanagi",  "Hidemi Ito",  "**Chaochen Wang**",  "Akiko Tamakoshi",  "Keiko Wada",  "Chisato Nagata",  "Kenta Tanaka",  "Yuri Kitamura",  "Mai Utada",  "Kotaro Ozasa",  "Yumi Sugawara",  "Ichiro Tsuji",  "Taichi Shimazu",  "Keitaro Matsuo",  "Mariko Naito",  "Keitaro Tanaka",  "Manami Inoue"]
 date: "2020-08-05"
 featured: false
 publication_types: ["2"]
