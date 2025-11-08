@@ -2,7 +2,7 @@
 title: "Chaochen Wang - Be Ambitious"
 type: landing
 sections:
-  - block: resume-biography-3
+  - block: resume-biography
     id: about
     content:
       username: admin
@@ -182,5 +182,23 @@ sections:
     content:
       title: "Contact"
       text: |
-        - 📧 Email: [chaochen.wang1@alumni.lshtm.ac.uk](mailto:chaochen.wang1@alumni.lshtm.ac.uk)
+        想聊聊嗎？留下你的名字、Email 和訊息，我會盡快回覆。 <br>
+        Want to chat? Leave your name, email, and message, and I’ll reply as soon as possible.
+
+        <form action="https://formspree.io/f/moqowdrz" method="POST" class="contact-form">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Your name" required />
+
+          <label for="contact-email">Email</label>
+          <input id="contact-email" type="email" name="email" placeholder="you@example.com" required />
+
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="How can I help?" required></textarea>
+
+          <button type="submit">
+            <span>Send Message</span>
+          </button>
+        </form>
+
+        <p>Form submissions are securely delivered via Formspree.</p>
 ---

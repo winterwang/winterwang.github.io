@@ -1,0 +1,25 @@
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+  <span style="font-size: 1.25rem; line-height: 1;">↑</span>
+</button>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('back-to-top');
+    if (!button) {
+      return;
+    }
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 400) {
+        button.classList.add('show');
+      } else {
+        button.classList.remove('show');
+      }
+    };
+
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
