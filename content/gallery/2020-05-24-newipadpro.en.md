@@ -3,7 +3,7 @@ title: 用iPad把家變成侏羅紀公園
 author: wangcc.me
 date: '2020-05-24'
 slug: newipadpro
-draft: yes
+draft: false
 categories:
   - diary
   - Gallery

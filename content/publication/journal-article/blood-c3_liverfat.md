@@ -12,14 +12,16 @@ selected: false
 title: "Positive Association between blood C3 Level and Liver Fat Content Quantified by 1H Magnetic Resonance Spectroscopy in Japanese Men"
 #url_code: ""
 #url_dataset: "#"
-url_pdf: "files/Positive_Association_between_blood_C3_Level_and_Li.pdf"
-url_slides: "files/2011_Hangzhou_C3.pdf"
 #url_video: "#"
 projects: [Aichi]
 
 links:
-  - name: Researchgate
-    url: 'https://www.researchgate.net/publication/263966934_Positive_Association_between_blood_C3_Level_and_Liver_Fat_Content_Quantified_by_1H_Magnetic_Resonance_Spectroscopy_in_Japanese_Men'
+- type: pdf
+  url: "files/Positive_Association_between_blood_C3_Level_and_Li.pdf"
+- type: slides
+  url: "files/2011_Hangzhou_C3.pdf"
+- name: Researchgate
+  url: 'https://www.researchgate.net/publication/263966934_Positive_Association_between_blood_C3_Level_and_Liver_Fat_Content_Quantified_by_1H_Magnetic_Resonance_Spectroscopy_in_Japanese_Men'
 ---
 
 ## Abstract

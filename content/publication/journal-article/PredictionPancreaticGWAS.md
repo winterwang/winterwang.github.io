@@ -12,7 +12,6 @@ selected: false
 title: "Prediction model for pancreatic cancer risk in the general Japanese population"
 #url_code: ""
 #url_dataset: "files/srep40363-s1.doc"
-url_pdf: "files/journal.pone.0203386.pdf"
 #url_project: "project/deep-learning/"
 #url_slides: "files/2011_Hangzhou_C3.pdf"
 #url_video: "#"
@@ -20,6 +19,8 @@ url_pdf: "files/journal.pone.0203386.pdf"
 links:
 - name: "PLoS ONE"
   url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0203386"
+- type: pdf
+  url: "files/journal.pone.0203386.pdf"
 
 ---
 

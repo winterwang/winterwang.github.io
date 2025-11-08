@@ -14,14 +14,16 @@ publication_types: ["2"]
 publication: PeerJ
 publication_short: PeerJ
 # selected = true
-url_dataset: https://github.com/winterwang/CFA-GLFS-locomo
-url_pdf: https://peerj.com/articles/9026.pdf
 # url_project: chronon/
 # projects: [chronon]
 commentable: true
 links:
 - name: PeerJ
   url: https://peerj.com/articles/9026/
+- type: dataset
+  url: https://github.com/winterwang/CFA-GLFS-locomo
+- type: pdf
+  url: https://peerj.com/articles/9026.pdf
 
 # url_poster: "https://github.com/winterwang/gemini/raw/master/poster.pdf"
 ---

@@ -11,14 +11,17 @@ publication_short: "Sci. Rep."
 featured: true
 title: "Changing trends in the prevalence of H. pylori infection in Japan (1908-2003): a systematic review and meta-regression analysis of 170,752 individuals"
 #url_code: ""
-url_dataset: "http://rpubs.com/winterwang/288338"
-url_pdf: "/files/hpylorimetaSciRep.pdf"
 #url_project: "project/deep-learning/"
 projects: [Hpylori, Pool_Meta]
-url_slides: "https://winterwang.github.io/For_Inoue_pylori/"
 #url_video: "#"
 
 links:
+- type: dataset
+  url: "http://rpubs.com/winterwang/288338"
+- type: pdf
+  url: "/files/hpylorimetaSciRep.pdf"
+- type: slides
+  url: "https://winterwang.github.io/For_Inoue_pylori/"
 - name: "Scientific Reports"
   url: "https://www.nature.com/articles/s41598-017-15490-7"
 ---

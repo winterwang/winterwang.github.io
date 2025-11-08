@@ -11,16 +11,18 @@ publication_short: "Sci. Rep."
 selected: false
 title: "The influence of personality and perceived stress on the development of breast cancer: 20-year follow-up of 29,098 Japanese women"
 #url_code: ""
-url_dataset: "files/srep32559-s1.pdf"
-url_pdf: "files/srep32559.pdf"
-# url_project: "project/JACC/"
 #url_slides: "files/2011_Hangzhou_C3.pdf"
 #url_video: "#"
-url_project: JACC/
 projects: [JACC]
 links:
 - name: "Scientific Reports"
   url: "http://www.nature.com/articles/srep32559"
+- type: pdf
+  url: "files/srep32559.pdf"
+- type: dataset
+  url: "files/srep32559-s1.pdf"
+- type: project
+  url: "JACC/"
 
 ---
 

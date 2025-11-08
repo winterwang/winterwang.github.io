@@ -9,13 +9,11 @@ publication: "European Journal of Cancer Prevention"
 publication_short: "Eur. J. Cancer. Prev."
 selected: false
 title: "Prospective study of seaweed consumption and thyroid cancer incidence in women: the Japan Collaborative Cohort Study."
-url_project: JACC/
 projects: [JACC]
 #url_code: ""
 # url_dataset: "files/Supplementary_Table_1s-4s_EJCP_ChaochenWang.pdf"
 #url_pdf: "files/srep40363.pdf"
 #url_project: "project/deep-learning/"
-url_slides: "files/Seaweed_thyroid.pdf"
 #url_video: "#"
 
 links:
@@ -23,6 +21,10 @@ links:
   url: http://publichealth.med.hokudai.ac.jp/jacc/160906JACC_HP_Added/wang2/index.html
 - name: PubMed
   url: "https://www.ncbi.nlm.nih.gov/pubmed/26011104"
+- type: project
+  url: "JACC/"
+- type: slides
+  url: "files/Seaweed_thyroid.pdf"
 ---
 
 

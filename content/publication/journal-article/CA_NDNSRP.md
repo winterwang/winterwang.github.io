@@ -11,16 +11,16 @@ publication_types: ["2"]
 publication: Frontiers
 publication_short: Front. Nutr.
 # selected = true
-url_dataset: https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6533#!/details
-# url_pdf: 
 # url_project: chronon/
 projects: [Chronon]
 commentable: true
 links:
+- type: dataset
+  url: https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6533#!/details
 - name: Front. Nutr.
   url: https://www.frontiersin.org/articles/10.3389/fnut.2021.692450/abstract
-
-url_poster: "https://github.com/winterwang/Poster_FENS2019/raw/master/poster.pdf"
+- type: poster
+  url: "https://github.com/winterwang/Poster_FENS2019/raw/master/poster.pdf"
 ---
 
 

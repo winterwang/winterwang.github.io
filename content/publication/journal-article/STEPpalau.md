@@ -11,7 +11,6 @@ selected: false
 title: "Prevalence and predictors of prediabetes and diabetes among adults in Palau: population-based national STEPS survey"
 #url_code: ""
 #url_dataset: "files/srep40363-s1.doc"
-url_pdf: "files/palauSTEPDM.pdf"
 #url_project: "project/deep-learning/"
 #url_slides: "files/2011_Hangzhou_C3.pdf"
 #url_video: "#"
@@ -20,6 +19,8 @@ projects: [Palau]
 links:
 - name: "PubMed"  
   url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5159473/"
+- type: pdf
+  url: "files/palauSTEPDM.pdf"
 
 ---
 

@@ -6,14 +6,12 @@ tags:
 date: "2020-07-17T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-# external_link: ""
+# links: []
 # image:
 #   caption: NDNSRP
   
 
 url_code: ""
-url_pdf: ""
-url_slides: ""
 url_video: ""
 
 # Slides (optional).

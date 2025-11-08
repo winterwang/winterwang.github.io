@@ -12,12 +12,14 @@ selected: false
 title: "Positive association between high‐sensitivity C‐reactive protein and incidence of type 2 diabetes mellitus in Japanese workers: 6‐year follow‐up"
 #url_code: ""
 #url_dataset: "#"
-url_pdf: "http://onlinelibrary.wiley.com/doi/10.1002/dmrr.2406/full"
 projects: [Aichi]
-url_slides: "files/CRPDM2.pdf"
 #url_video: "#"
 
 links:
+- type: pdf
+  url: "http://onlinelibrary.wiley.com/doi/10.1002/dmrr.2406/full"
+- type: slides
+  url: "files/CRPDM2.pdf"
 - name: "Researchgate"
   url: "https://www.researchgate.net/publication/235797508_Positive_association_between_high-sensitivity_C-reactive_protein_and_incidence_of_type_2_diabetes_mellitus_in_Japanese_workers_6-year_follow-up"
 

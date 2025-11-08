@@ -6,7 +6,7 @@ tags:
 date: "2017-02-02T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-# external_link: http://koei-nagoya.blogspot.jp/
+# links = [{ type = "site", url = "http://koei-nagoya.blogspot.jp/" }]
 # image:
 #   caption: Aichi
 ---
