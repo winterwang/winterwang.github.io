@@ -1,0 +1,18 @@
+{{- /* Local override: simplified sidebar to avoid nil pointer when $page.Fragments.Headings is nil. */ -}}
+{{- $page := .context | default . -}}
+<aside class="sidebar">
+  {{- /* Mobile/table-of-contents block only if headings available */ -}}
+  {{- $headings := $page.Fragments.Headings -}}
+  {{- if $headings }}
+  <div class="sidebar-toc mobile-toc">
+    <nav aria-label="Table of contents">
+      <ul>
+        {{- range $headings }}
+          <li><a href="#{{ .ID }}">{{ .Title }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+  {{- end }}
+  {{/* TODO: Add other sidebar widgets (author info, related content) if needed later. */}}
+</aside>
