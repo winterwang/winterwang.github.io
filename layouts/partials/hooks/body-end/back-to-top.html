@@ -2,24 +2,31 @@
   <span style="font-size: 1.25rem; line-height: 1;">↑</span>
 </button>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('back-to-top');
-    if (!button) {
-      return;
-    }
-
-    const toggleVisibility = () => {
-      if (window.scrollY > 400) {
-        button.classList.add('show');
-      } else {
-        button.classList.remove('show');
+  (function () {
+    const init = () => {
+      const button = document.getElementById('back-to-top');
+      if (!button) {
+        return;
       }
+
+      const toggleVisibility = () => {
+        const shouldShow = window.scrollY > 300;
+        button.classList.toggle('show', shouldShow);
+      };
+
+      toggleVisibility();
+      window.addEventListener('scroll', toggleVisibility, { passive: true });
+      window.addEventListener('resize', toggleVisibility, { passive: true });
+
+      button.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     };
 
-    toggleVisibility();
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-    button.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init, { once: true });
+    } else {
+      init();
+    }
+  })();
 </script>
