@@ -1,6 +1,6 @@
 # Personal Site (Hugo Blox + blogdown)
 
-Source for [https://wangcc.me/](https://wangcc.me/), now running the Hugo Blox Tailwind theme with a few custom tweaks (sticky navigation, back-to-top button, Formspree contact form). Deployment is handled by GitHub Actions → GitHub Pages.
+Source for [https://wangcc.me/](https://wangcc.me/), now running the Hugo Blox Builder framework (Tailwind theme) with custom tweaks including a custom biography block that displays interests and education sections, sticky navigation, back-to-top button, and Formspree contact form. Deployment is handled by GitHub Actions → GitHub Pages.
 
 ### Tech Stack
 
@@ -32,6 +32,7 @@ Source for [https://wangcc.me/](https://wangcc.me/), now running the Hugo Blox T
 content/                  # Markdown content (posts, gallery, projects, …)
 config/_default/          # Hugo config (menus, params, languages, module setup)
 assets/                   # Custom media (favicon) + future pipeline assets
+blox/                     # Custom Hugo Blox block overrides (resume-biography)
 layouts/_partials/hooks/  # Custom head/body hook snippets (sticky nav, back-to-top)
 static/                   # Static files served verbatim
 _vendor/                  # Hugo Blox modules (checked in for reproducible builds)
@@ -40,8 +41,9 @@ scripts/                  # Helper scripts (post generation, env bootstrap)
 
 ### Custom Enhancements
 
+- `blox/resume-biography/block.html`: custom override of the Hugo Blox resume-biography block that restores legacy Academic theme fields (interests, education) and properly handles `icon_pack` for social media icons.
 - `layouts/_partials/hooks/head-end/sticky-header.html`: pins the navbar, widens the biography block, updates footer year, and styles the contact form.
-- `layouts/_partials/hooks/body-end/back-to-top.html`: injects the floating “back to top” control.
+- `layouts/_partials/hooks/body-end/back-to-top.html`: injects the floating "back to top" control.
 - `assets/media/icon.png`: restores the legacy favicon used before the theme migration.
 
 ### Deployment Notes
@@ -53,11 +55,14 @@ scripts/                  # Helper scripts (post generation, env bootstrap)
 ### Content Guidelines
 
 - Daily posts live in `content/post/` (bundle structure supported).
-- Front matter should stay minimal: `title`, `date`, optional `tags`/`categories`.
+- Front matter should include `title`, `date`, and for proper Hugo Blox compatibility, add `type: post` and `layout: single`.
+- Author information is in `content/authors/admin/_index.md` - use `title:` field for name display (not `name:`).
+- Social icons require `icon_pack` field (e.g., `fas`, `fab`, `ai`) to display correctly.
 - Media belongs inside the same bundle (relative paths stay stable across theme upgrades).
 
 ### Maintenance Checklist
 
+- [x] Migrate from legacy Academic theme to Hugo Blox Builder framework.
 - [ ] Add/confirm GitHub Actions workflow for Hugo Blox deployment.
 - [ ] Retire unused legacy scripts (`deploy.sh`, Netlify remnants) once new pipeline proves stable.
 - [ ] Audit Google Analytics integration for GA4 or alternative analytics.
