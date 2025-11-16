@@ -12,7 +12,6 @@ selected: false
 title: "Global Trend in Overweight and Obesity and Its Association With Cardiovascular Disease Incidence"
 #url_code: "http://jlc.jst.go.jp/DN/JST.JSTAGE/circj/CJ-14-0850?lang=en&from=CrossRef&type=abstract"
 #url_dataset: "#"
-url_pdf: "files/GlobalObesity.pdf"
 #url_project: "project/Aichi/"
 #url_slides: "files/CRPDM2.pdf"
 #url_video: "#"
@@ -20,6 +19,10 @@ projects: [Pool_Meta]
 #[[url_custom]]
 #name: "Nagoya Repository"
 #url: "http://ir.nul.nagoya-u.ac.jp/jspui/handle/2237/22505"
+
+links:
+- type: pdf
+  url: "files/GlobalObesity.pdf"
 
 ---
 

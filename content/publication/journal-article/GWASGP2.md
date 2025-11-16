@@ -8,13 +8,14 @@ publication: Nature Communications
 publication_short: Nature Communications
 # selected = true
 # url_dataset: https://github.com/winterwang/CFA-GLFS-locomo
-url_pdf: https://www.nature.com/articles/s41467-020-16711-w.pdf
 # url_project: chronon/
 # projects: [chronon]
 commentable: true
 links:
 - name: Nature Communications
   url: https://www.nature.com/articles/s41467-020-16711-w
+- type: pdf
+  url: https://www.nature.com/articles/s41467-020-16711-w.pdf
 
 # url_poster: "https://github.com/winterwang/gemini/raw/master/poster.pdf"
 ---

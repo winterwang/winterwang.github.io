@@ -12,8 +12,11 @@ selected: false
 title: "Association between five dietary health metrics of the American Heart Association and results of health checkups in a cross-sectional study of Japanese workers."
 #url_code: ""
 #url_dataset: "#"
-url_pdf: "files/Uemura.pdf"
 projects: [Aichi]
+
+links:
+- type: pdf
+  url: "files/Uemura.pdf"
 
 #[[url_custom]]
 #name: "Nagoya Repository"

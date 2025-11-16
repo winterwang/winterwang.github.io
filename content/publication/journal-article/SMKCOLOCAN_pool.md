@@ -1,6 +1,6 @@
 ---
 title: "Smoking and colorectal cancer: A pooled analysis of 10 population‐based cohort studies in Japan"
-authors: ["Shamima Akter", "Zobida Islam",  "Tetsuya Mizoue",  "Norie Sawada",  "Hikaru Ihira",  "Shoichiro Tsugane", "Yuriko N. Koyanagi",  "Hidemi Ito",  "**Chaochen Wang**",  "Akiko Tamakoshi",  "Keiko Wada",  "Chisato Nagata",  "Kenta Tanaka",  "Yuri Kitamura",  "Mai Utada",  "Kotaro Ozasa",  "Yumi Sugawara",  "Ichiro Tsuji",  "Taichi Shimazu",  "Keitaro Matsuo",  "Mariko Naito",  "Keitaro Tanaka",  "Manami Inoue"]
+authors: ["Shamima Akter", "Zobida Islam",  "Tetsuya Mizoue",  "Norie Sawada",  "Hikaru Ihira",  "Shoichiro Tsugane", "Yuriko N Koyanagi",  "Hidemi Ito",  "**Chaochen Wang**",  "Akiko Tamakoshi",  "Keiko Wada",  "Chisato Nagata",  "Kenta Tanaka",  "Yuri Kitamura",  "Mai Utada",  "Kotaro Ozasa",  "Yumi Sugawara",  "Ichiro Tsuji",  "Taichi Shimazu",  "Keitaro Matsuo",  "Mariko Naito",  "Keitaro Tanaka",  "Manami Inoue"]
 date: "2020-08-05"
 featured: false
 publication_types: ["2"]
@@ -8,12 +8,13 @@ publication: International Journal of Cancer
 publication_short: Int. J. Cancer
 # selected = true
 # url_dataset: https://github.com/winterwang/CFA-GLFS-locomo
-url_pdf: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ijc.33248?download=true
 # url_project: chronon/
 # projects: [chronon]
 projects: [JACC, Pool_Meta]
 commentable: true
 links:
+- type: pdf
+  url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ijc.33248?download=true
 - name: International Journal of Cancer
   url: https://onlinelibrary.wiley.com/doi/full/10.1002/ijc.33248
 

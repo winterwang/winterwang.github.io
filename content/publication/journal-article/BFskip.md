@@ -12,13 +12,14 @@ selected : false
 title : "Breakfast Skipping is Positively Associated With Incidence of Type 2 Diabetes Mellitus: Evidence From the Aichi Workers’ Cohort Study"
 #url_code : ""
 #url_dataset : "#"
-url_pdf : "files/je-25-351.pdf"
+#url_video : "#"
 projects: [Aichi]
 # url_slides : "files/CRPDM2.pdf"
-#url_video : "#"
 links:
-  - name: Nagoya Repository
-    url: 'http://hdl.handle.net/2237/22505'
+- type: pdf
+  url: "files/je-25-351.pdf"
+- name: Nagoya Repository
+  url: 'http://hdl.handle.net/2237/22505'
 
 ---
 

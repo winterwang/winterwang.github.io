@@ -7,12 +7,15 @@ publication_types: ["2"]
 publication: Nutrients
 publication_short: Nutrients
 # selected = true
-url_dataset: https://github.com/winterwang/JACC_bayesian
-url_pdf: https://www.mdpi.com/2072-6643/12/9/2743/pdf
-url_project: JACC/
 projects: [JACC]
 commentable: true
 links:
+- type: dataset
+  url: https://github.com/winterwang/JACC_bayesian
+- type: pdf
+  url: https://www.mdpi.com/2072-6643/12/9/2743/pdf
+- type: project
+  url: JACC/
 - name: Nutrients
   url: https://www.mdpi.com/2072-6643/12/9/2743
 - name: Slides

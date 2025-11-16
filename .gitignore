@@ -1,11 +1,21 @@
-public/
+/public/
 .idea/
 .Rproj.user/
 .Rhistory
 .DS_Store
+Thumbs.db
+.hugo_build.lock
+.tools/
+node_modules/
+hugo-server.log
+
+# Dependency manifests should be tracked
+!package.json
+!package-lock.json
+
 
 # Hugo generated cache (can be safely regenerated)
-resources/
+/resources/
 
 # (Legacy build output already ignored above: public/)
 

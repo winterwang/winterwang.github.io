@@ -6,7 +6,7 @@ tags:
 date: "2017-02-02T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-# external_link: http://publichealth.med.hokudai.ac.jp/jacc/index.html
+# links = [{ type = "site", url = "http://publichealth.med.hokudai.ac.jp/jacc/index.html" }]
 # image:
 #   caption: JACC
 ---

@@ -1,0 +1,19 @@
+{{- /* Safe TOC override: avoid nil pointer on .Fragments.Headings */ -}}
+{{- $page := . -}}
+{{- $headings := slice -}}
+{{- with $page }}
+  {{- with .Fragments }}
+    {{- with .Headings }}
+      {{- $headings = . -}}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- if gt (len $headings) 0 }}
+<nav class="toc">
+  <ul>
+    {{- range $headings }}
+      <li><a href="#{{ .ID }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end }}

@@ -7,7 +7,6 @@ publication_types: ["2"]
 publication: Journal of Infection and Chemotherapy
 # publication_short: Int. J. Cancer
 selected: true
-url_pdf: 
 projects: [Hpylori]
 commentable: true
 links:

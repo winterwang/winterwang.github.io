@@ -7,7 +7,9 @@ tags:
 date: "2017-11-14T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://wangcc.me/LSHTMlearningnote
+links:
+  - type: site
+    url: https://wangcc.me/LSHTMlearningnote
 
 image:
   caption: stats

@@ -8,12 +8,13 @@ publication: International Journal of Cancer
 publication_short: Int. J. Cancer
 selected: true
 # url_dataset: https://github.com/winterwang/CFA-GLFS-locomo
-url_pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1002/ijc.33773
 projects: [Hpylori]
 # url_project: hpylori/
 # projects: [JACC]
 commentable: true
 links:
+- type: pdf
+  url: https://onlinelibrary.wiley.com/doi/epdf/10.1002/ijc.33773
 - name: International Journal of Cancer
   url: https://onlinelibrary.wiley.com/doi/10.1002/ijc.33773
 - name: 日本語紹介
