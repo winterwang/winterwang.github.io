@@ -65,7 +65,7 @@ scripts/                  # Helper scripts (post generation, env bootstrap)
 ### Maintenance Checklist
 
 - [x] Migrate from legacy Academic theme to Hugo Blox Builder framework.
-- [ ] Add/confirm GitHub Actions workflow for Hugo Blox deployment.
+- [x] Add/confirm GitHub Actions workflow for Hugo Blox deployment.
 - [ ] Retire unused legacy scripts (`deploy.sh`, Netlify remnants) once new pipeline proves stable.
 - [ ] Audit Google Analytics integration for GA4 or alternative analytics.
 - [ ] Periodically clear `resources/_gen/` (safe to delete, regenerated automatically).
