@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+
+  # Enable version updates for Go modules (only in root)
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+# Note: The .tools directory has been removed from git tracking
+# and is now in .gitignore, so Dependabot won't scan it anymore
