@@ -2,6 +2,8 @@
 
 Source for [https://wangcc.me/](https://wangcc.me/), now running the Hugo Blox Builder framework (Tailwind theme) with custom tweaks including a custom biography block that displays interests and education sections, sticky navigation, back-to-top button, and Formspree contact form. Deployment is handled by GitHub Actions → GitHub Pages.
 
+**Last updated:** November 16, 2025
+
 ### Tech Stack
 
 - **Hugo Extended 0.152.2** (pinned in `.Rprofile` for blogdown).
