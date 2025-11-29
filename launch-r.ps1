@@ -32,7 +32,7 @@ Write-Host "Project : $workspace"
 Write-Host "Starting R with working directory set to project folder..."
 Push-Location -LiteralPath $workspace
 # Path to R executable (adjust if version changes)
-$RExe = "C:\Users\GQAEC\AppData\Local\Programs\R\R\bin\R.exe"
+$RExe = "C:\Users\GQAEC\AppData\Local\Programs\R\R-4.5.2\bin\R.exe"
 if (-Not (Test-Path $RExe)) {
     Write-Error "R executable not found at $RExe. Update path in launch-r.ps1."
     exit 1

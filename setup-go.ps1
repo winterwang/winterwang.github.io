@@ -44,6 +44,37 @@ if (-not ($env:PATH -split ';' | Where-Object { $_ -eq $goBinPath })) {
 Write-Host "Go is ready to use. Go version:"
 go version
 
+# -----------------------------------------------------------------------------
+# Ensure Hugo Extended is available (portable install to avoid system deps)
+# -----------------------------------------------------------------------------
+$hugoVersion = "0.152.2"
+$hugoDir = Join-Path $installPath "hugo"
+$hugoExe = Join-Path $hugoDir "hugo.exe"
+$hugoZip = Join-Path $installPath "hugo_extended_${hugoVersion}_Windows-64bit.zip"
+$hugoUrl = "https://github.com/gohugoio/hugo/releases/download/v${hugoVersion}/hugo_extended_${hugoVersion}_Windows-64bit.zip"
+
+if (-not (Test-Path -Path $hugoExe)) {
+    Write-Host "Hugo Extended $hugoVersion not found. Downloading..."
+    Invoke-WebRequest -Uri $hugoUrl -OutFile $hugoZip
+    if (-not (Test-Path -Path $hugoDir)) { New-Item -ItemType Directory -Path $hugoDir | Out-Null }
+    Write-Host "Extracting Hugo to $hugoDir ..."
+    Expand-Archive -Path $hugoZip -DestinationPath $hugoDir -Force
+    Remove-Item $hugoZip -Force
+} else {
+    Write-Host "Hugo Extended already present at $hugoExe"
+}
+
+if (Test-Path -Path $hugoExe) {
+    $hugoParent = Split-Path -Parent $hugoExe
+    if (-not ($env:PATH -split ';' | Where-Object { $_ -eq $hugoParent })) {
+        $env:PATH = "$hugoParent;" + $env:PATH
+    }
+    Write-Host "Hugo version (expect Extended):"
+    & $hugoExe version
+} else {
+    Write-Warning "Hugo installation failed or hugo.exe not found."
+}
+
 # Ensure Node.js is available locally (portable install)
 $nodeVersion = "20.18.0"
 $nodeBaseName = "node-v$nodeVersion-win-x64"

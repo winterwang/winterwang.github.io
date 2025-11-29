@@ -1,0 +1,9 @@
+# From repo root
+$env:PATH = "$PWD\.tools\node-v20.18.0-win-x64;$PWD\node_modules\.bin;$env:PATH"
+
+# Verify
+node -v
+npm -v
+
+# Serve again
+.\.tools\hugo\hugo.exe server --cleanDestinationDir --disableFastRender
