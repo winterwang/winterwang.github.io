@@ -203,7 +203,29 @@ sections:
         <p>如果本站內容對你有幫助，歡迎請我喝杯咖啡（Buy me a coffee）：<a href="https://paypal.me/wangccme" target="_blank" rel="noopener">PayPal @wangccme</a>。<br>
         If this site has been useful to you, you can <a href="https://paypal.me/wangccme" target="_blank" rel="noopener">buy me a coffee via PayPal</a>.</p>
 
-        <p><a href="https://paypal.me/wangccme" target="_blank" rel="noopener"><img src="/img/paypal-wangccme-qr.png" alt="PayPal QR code for @wangccme" style="width: 160px; max-width: 100%; height: auto;" /></a></p>
+        <div class="support-options">
+          <div class="support-option">
+            <p class="support-option-title">PayPal.Me QR code</p>
+            <a href="https://paypal.me/wangccme" target="_blank" rel="noopener">
+              <img src="/img/paypal-wangccme-qr.png" alt="PayPal QR code for @wangccme" class="paypal-qr-code" />
+            </a>
+            <p class="support-option-note">適合手機掃碼或直接打開 PayPal.Me。</p>
+          </div>
+
+          <div class="support-option">
+            <p class="support-option-title">PayPal button</p>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LNXAE2JECE43Q&amp;currency_code=USD" target="_blank" rel="noopener" class="paypal-support-button">
+              <img src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" alt="Pay Now with PayPal" />
+            </a>
+            <p class="support-option-note">讀者可自行輸入支持金額，USD 為基準貨幣。</p>
+          </div>
+
+          <div class="support-option">
+            <p class="support-option-title">WeChat Pay QR code</p>
+            <img src="/img/wechat-pay-qr.png" alt="WeChat Pay QR code" class="wechat-qr-code" />
+            <p class="support-option-note">適合使用微信支付的讀者。</p>
+          </div>
+        </div>
 
         <p>Form submissions are securely delivered via Formspree.</p>
 ---
