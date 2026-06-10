@@ -200,5 +200,10 @@ sections:
           </button>
         </form>
 
+        <p>如果本站內容對你有幫助，歡迎請我喝杯咖啡（Buy me a coffee）：<a href="https://paypal.me/wangccme" target="_blank" rel="noopener">PayPal @wangccme</a>。<br>
+        If this site has been useful to you, you can <a href="https://paypal.me/wangccme" target="_blank" rel="noopener">buy me a coffee via PayPal</a>.</p>
+
+        <p><a href="https://paypal.me/wangccme" target="_blank" rel="noopener"><img src="/img/paypal-wangccme-qr.png" alt="PayPal QR code for @wangccme" style="width: 160px; max-width: 100%; height: auto;" /></a></p>
+
         <p>Form submissions are securely delivered via Formspree.</p>
 ---
