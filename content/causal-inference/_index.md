@@ -9,9 +9,11 @@ type: causal-inference
 
 目前規劃中的起點：
 
-- association 不是 causal effect。
+- [association 不是 causal effect](/causal-inference/0001-association-is-not-causal-effect/)。
 - Yule-Simpson paradox。
 - potential outcomes。
 - 從公式到圖，再到 practical interpretation。
 
-內容會逐步加入。
+## 已發布
+
+- [0001 - Association 還不是 Causal Effect](/causal-inference/0001-association-is-not-causal-effect/)：用 kidney stone 例子練習 risk difference，區分 association measure 與 causal effect 的第一個分界。
