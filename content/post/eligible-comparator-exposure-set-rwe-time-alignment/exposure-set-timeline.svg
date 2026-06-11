@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="title desc">
+  <title id="title">Exposure set timeline for not-yet-treated comparator selection</title>
+  <desc id="desc">A horizontal timeline showing Patient A starting Treatment X at month 6 and five candidate comparators excluded for outcome before time zero, disease duration mismatch, no visit opportunity, calendar time mismatch, and insufficient covariate lookback.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .axis { stroke: #243447; stroke-width: 2; }
+    .tick { stroke: #60758a; stroke-width: 1.5; }
+    .muted { fill: #52677a; font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .label { fill: #152536; font: 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 650; }
+    .small { fill: #405568; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .row-line { stroke: #d6e0ea; stroke-width: 2; }
+    .active { stroke: #1f6f8b; stroke-width: 4; stroke-linecap: round; }
+    .candidate { stroke: #6f8ba5; stroke-width: 4; stroke-linecap: round; }
+    .bad { stroke: #b64242; stroke-width: 4; stroke-linecap: round; }
+    .point { fill: #1f6f8b; }
+    .bad-point { fill: #b64242; }
+    .index-line { stroke: #183b56; stroke-width: 2.5; stroke-dasharray: 6 6; }
+    .tag { fill: #eef6f8; stroke: #bdd7e0; stroke-width: 1; }
+    .tag-bad { fill: #fff1f1; stroke: #efc2c2; stroke-width: 1; }
+    .tag-text { fill: #183b56; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 600; }
+    .bad-text { fill: #8d2f2f; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 600; }
+  </style>
+  <rect class="bg" x="0" y="0" width="980" height="540"/>
+
+  <text class="label" x="48" y="38">Exposure set at Patient A's Treatment X initiation</text>
+  <text class="muted" x="48" y="62">Comparators must be eligible at the same index time, not merely untreated sometime in the data.</text>
+
+  <line class="axis" x1="170" y1="105" x2="895" y2="105"/>
+  <line class="tick" x1="170" y1="95" x2="170" y2="115"/>
+  <line class="tick" x1="350" y1="95" x2="350" y2="115"/>
+  <line class="tick" x1="530" y1="95" x2="530" y2="115"/>
+  <line class="tick" x1="710" y1="95" x2="710" y2="115"/>
+  <line class="tick" x1="890" y1="95" x2="890" y2="115"/>
+  <text class="small" x="156" y="88">Month 0</text>
+  <text class="small" x="336" y="88">Month 3</text>
+  <text class="small" x="516" y="88">Month 6</text>
+  <text class="small" x="696" y="88">Month 9</text>
+  <text class="small" x="872" y="88">Month 12</text>
+
+  <line class="index-line" x1="530" y1="82" x2="530" y2="495"/>
+  <rect class="tag" x="463" y="123" width="134" height="26" rx="4"/>
+  <text class="tag-text" x="482" y="141">index time t</text>
+
+  <text class="label" x="48" y="178">Patient A</text>
+  <text class="small" x="48" y="199">starts Treatment X</text>
+  <line class="row-line" x1="170" y1="184" x2="895" y2="184"/>
+  <line class="active" x1="170" y1="184" x2="530" y2="184"/>
+  <circle class="point" cx="530" cy="184" r="7"/>
+  <rect class="tag" x="546" y="171" width="150" height="26" rx="4"/>
+  <text class="tag-text" x="561" y="189">initiation</text>
+
+  <text class="label" x="48" y="246">Candidate B</text>
+  <text class="small" x="48" y="267">outcome before t</text>
+  <line class="row-line" x1="170" y1="252" x2="895" y2="252"/>
+  <line class="bad" x1="170" y1="252" x2="430" y2="252"/>
+  <circle class="bad-point" cx="430" cy="252" r="7"/>
+  <rect class="tag-bad" x="448" y="239" width="174" height="26" rx="4"/>
+  <text class="bad-text" x="462" y="257">not outcome-free</text>
+
+  <text class="label" x="48" y="314">Candidate C</text>
+  <text class="small" x="48" y="335">disease duration differs</text>
+  <line class="row-line" x1="170" y1="320" x2="895" y2="320"/>
+  <line class="candidate" x1="330" y1="320" x2="895" y2="320"/>
+  <circle class="point" cx="330" cy="320" r="6"/>
+  <rect class="tag-bad" x="548" y="307" width="214" height="26" rx="4"/>
+  <text class="bad-text" x="562" y="325">different disease time</text>
+
+  <text class="label" x="48" y="382">Candidate D</text>
+  <text class="small" x="48" y="403">no visit near t</text>
+  <line class="row-line" x1="170" y1="388" x2="895" y2="388"/>
+  <line class="candidate" x1="170" y1="388" x2="895" y2="388"/>
+  <circle class="bad-point" cx="350" cy="388" r="5"/>
+  <circle class="bad-point" cx="710" cy="388" r="5"/>
+  <rect class="tag-bad" x="548" y="375" width="190" height="26" rx="4"/>
+  <text class="bad-text" x="562" y="393">no treatment chance</text>
+
+  <text class="label" x="48" y="450">Candidate E</text>
+  <text class="small" x="48" y="471">calendar mismatch</text>
+  <line class="row-line" x1="170" y1="456" x2="895" y2="456"/>
+  <line class="candidate" x1="170" y1="456" x2="430" y2="456"/>
+  <rect class="tag-bad" x="548" y="443" width="178" height="26" rx="4"/>
+  <text class="bad-text" x="562" y="461">wrong calendar era</text>
+
+  <text class="label" x="48" y="510">Candidate F</text>
+  <text class="small" x="48" y="531">short lookback</text>
+  <line class="row-line" x1="170" y1="504" x2="895" y2="504"/>
+  <line class="candidate" x1="430" y1="504" x2="895" y2="504"/>
+  <rect class="tag-bad" x="548" y="491" width="206" height="26" rx="4"/>
+  <text class="bad-text" x="562" y="509">insufficient covariates</text>
+</svg>
